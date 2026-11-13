@@ -574,7 +574,7 @@
         { src: 'critters/table-mountain.svg', lon: 18.4232, lat: -33.9628, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 南非：桌山
         { src: 'critters/darvaza-crater.svg', lon: 58.4396, lat: 40.2522, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 土庫曼：地獄之門
         // ── 第九批補充（太魯閣、雷門燈籠、雙層巴士、凱旋門） ──────────
-        { src: 'critters/taroko-gorge.svg', lon: 121.62, lat: 24.16, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 台灣：太魯閣峽谷
+        { src: 'critters/taroko-gorge.svg', lon: 121.62, lat: 24.16, mode: 'still', face: 'F', s: 0.85, sea: true, deco: true, landmark: true }, // 台灣：太魯閣峽谷
         { src: 'critters/kaminarimon-lantern.svg', lon: 139.296, lat: 36.581, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 日本：淺草寺雷門燈籠
         { src: 'critters/double-decker-bus.svg', lon: -1.5, lat: 52.3, mode: 'wander', s: 1.0, deco: true, maxDeg: 2 }, // 英國：紅色雙層巴士
         { src: 'critters/arc-de-triomphe.svg', lon: 2.295, lat: 48.8738, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 法國：凱旋門

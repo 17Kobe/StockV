@@ -32,8 +32,7 @@
   </linearGradient>
 </defs>
 
-<!-- 天空 / 薄霧 -->
-<rect x="0" y="0" width="80" height="80" fill="url(#trSky)"/>
+<!-- 天空部份鏤空（不鋪底色），讓圖示背景透明融入地圖，不要變成一塊實心方塊 -->
 
 <!-- 左側：兩道又高又窄的陡峭綠色峭壁，中間留出峽谷縫隙（太魯閣大理石峽谷的地形特徵） -->
 <path d="M16,80 L12,46 L8,24 L4,8 L2,8 L2,80 Z" fill="url(#trCliffL)" stroke="#355138" stroke-width="0.5"/>
