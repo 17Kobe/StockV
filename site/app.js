@@ -3616,9 +3616,6 @@
     // 若再加入某個市場會讓放大倍率低於 REGION_MIN_K，就跳過它（例如手機直式畫面的紐西蘭）。
     // 舊版用涵蓋整片海洋的經緯度框，加上上下兩條欄位吃掉高度，亞太、美洲幾乎沒有放大。
     function regionTransform(key) {
-        // 遊戲 filter 改成跟「亞太」同一套視角（縮到看得到實際市場內容，不要再退回太平洋置中的全球視角：
-        // 直式手機畫面比例窄，太平洋置中會讓畫面中間大半都是空白海洋）。只動遊戲模式，「全球」篩選維持原樣
-        if (key === 'game') key = 'asia';
         const world = () =>
             zoomB.constrain()(
                 d3.zoomIdentity,
@@ -3628,8 +3625,33 @@
                 ],
                 panExtent(),
             );
+        // 遊戲 filter：固定看歐亞大陸（大西洋在左、太平洋在右，緯度框在溫帶一帶，比亞太篩選再偏北一點）。
+        // 不借用「亞太」篩選的動態範圍——亞太會把中東、北非也納入，範圍太偏南、太寬。
+        // 遊戲模式旗幟卡片全部隱藏（見 gameMode），不用像一般篩選預留卡片空間，只扣掉頂部篩選列即可
+        if (key === 'game') {
+            const ins = overlayInsets();
+            const px = 20,
+                pb = 20;
+            const aw = Math.max(80, W - ins.l - ins.r - px * 2),
+                ah = Math.max(80, H - ins.t - ins.b - px - pb);
+            const p0 = projection([-20, 60]),
+                p1 = projection([150, -10]);
+            const bb = [Math.min(p0[0], p1[0]), Math.min(p0[1], p1[1]), Math.max(p0[0], p1[0]), Math.max(p0[1], p1[1])];
+            const k = Math.max(1, Math.min(REGION_MAX_K, Math.min(aw / (bb[2] - bb[0]), ah / (bb[3] - bb[1]))));
+            const cx = (bb[0] + bb[2]) / 2,
+                cy = (bb[1] + bb[3]) / 2;
+            const sx = ins.l + px + aw / 2,
+                sy = ins.t + px + ah / 2;
+            return zoomB.constrain()(
+                d3.zoomIdentity.translate(sx - k * cx, sy - k * cy).scale(k),
+                [
+                    [0, 0],
+                    [W, H],
+                ],
+                panExtent(),
+            );
+        }
         // 手機版全球：縮到最小，經度置中在太平洋（日本到美國西部）；下方兩欄旗幟列十大市值
-        // 遊戲 filter 已經在上面改成跟「亞太」同一套視角，不會掉到這裡
         if (key === 'all' && !desktopMQ.matches)
             return zoomB.constrain()(
                 d3.zoomIdentity.translate(W / 2 - projection([GLOBAL_LON, 0])[0], 0),
