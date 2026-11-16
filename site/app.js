@@ -3616,6 +3616,9 @@
     // 若再加入某個市場會讓放大倍率低於 REGION_MIN_K，就跳過它（例如手機直式畫面的紐西蘭）。
     // 舊版用涵蓋整片海洋的經緯度框，加上上下兩條欄位吃掉高度，亞太、美洲幾乎沒有放大。
     function regionTransform(key) {
+        // 遊戲 filter 改成跟「亞太」同一套視角（縮到看得到實際市場內容，不要再退回太平洋置中的全球視角：
+        // 直式手機畫面比例窄，太平洋置中會讓畫面中間大半都是空白海洋）。只動遊戲模式，「全球」篩選維持原樣
+        if (key === 'game') key = 'asia';
         const world = () =>
             zoomB.constrain()(
                 d3.zoomIdentity,
@@ -3626,8 +3629,8 @@
                 panExtent(),
             );
         // 手機版全球：縮到最小，經度置中在太平洋（日本到美國西部）；下方兩欄旗幟列十大市值
-        // 遊戲 filter 沒有自己對應的國家/主題，視角要跟全球一致，不然會掉回去下面沒特別調過的 world()
-        if ((key === 'all' || key === 'game') && !desktopMQ.matches)
+        // 遊戲 filter 已經在上面改成跟「亞太」同一套視角，不會掉到這裡
+        if (key === 'all' && !desktopMQ.matches)
             return zoomB.constrain()(
                 d3.zoomIdentity.translate(W / 2 - projection([GLOBAL_LON, 0])[0], 0),
                 [
@@ -3639,7 +3642,7 @@
         // 桌機版全球：世界縮到最小，畫面貼著南界（南緯 58 度）。市場集中在北緯 20～50 度，
         // 這樣美國、中國會落在畫面中上段，南半球（澳洲、智利、阿根廷）完整看得到，上方不會空出一大片北極。
         // 左邊界從日期變更線再往東移一點（西經 155 度），美洲不會貼著左緣，右邊的日本、紐西蘭也放得下
-        if (key === 'all' || key === 'game')
+        if (key === 'all')
             return zoomB.constrain()(
                 d3.zoomIdentity.translate(-projection([GLOBAL_LEFT_LON, 0])[0], H - projection([0, VIEW_S])[1]),
                 [
