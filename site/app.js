@@ -5651,12 +5651,32 @@
             'critters/angkor-wat.svg', 'critters/niagara-falls.svg', 'critters/titanic.svg',
             'critters/empire-state.svg', 'critters/acropolis.svg', 'critters/rushmore.svg',
         ]);
+        // 使用者指定「全球縮小視角一定要出現」的清單：優先度比 LOD_MEGA 還高，用來把原本被動物
+        // 隨機雜湊搶走的名額，換成這些世界知名地標 / 文化符號。跟 LOD_MEGA 共用同一批固定名額的邏輯，
+        // 差別只是這層的名額 = 清單全部數量（不受雜湊篩選），保證全部出現
+        const LOD_FORCE = new Set([
+            'critters/potala-palace.svg', 'critters/footballer-brazil.svg', 'critters/messi-football.svg',
+            'critters/neuschwanstein.svg', 'critters/fleet-columbus.svg', 'critters/napoleon-bonaparte.svg',
+            'critters/camel-caravan.svg', 'critters/hokkaido-king-crab.svg', 'critters/kremlin-moscow.svg',
+            'critters/shanghai.svg', 'critters/santa-sleigh.svg', 'people/viking.svg',
+            'critters/burj-khalifa.svg', 'critters/burj-al-arab.svg', 'critters/hongkong-skyline.svg',
+            'critters/banff.svg', 'critters/halong-bay.svg', 'critters/temple-of-heaven.svg',
+            'critters/ring-tailed-lemur.svg', 'critters/gyeongbokgung.svg', 'critters/treasure-ship.svg',
+        ]);
+        // 使用者指定「全球縮小視角不要出現」的清單：優先度最低，全球視角的名額幾乎都被上面幾層吃光，
+        // 這層通常拿不到名額而被收起來；放大地圖到名額不再受限時（budgetPool 沒超過 lodBudget）一樣會正常顯示
+        const LOD_DEMOTE = new Set([
+            'critters/beaver.svg', 'critters/red-crowned-crane.svg', 'animals/penguin.png',
+            'critters/rms-olympic.svg', 'critters/dhow.svg',
+        ]);
         const LOD_TIER2_CATS = new Set([
             '人物文化', '歷史', '歷史人物', '歷史人物／科學家', '體育／籃球', '體育／棒球',
             '體育／拳擊', '體育／賽車', '船艦', '科技', '神話傳說', '傳說生物',
         ]);
         const lodTips = window.CRITTER_TIPS || {};
         const critterPri = (c) => {
+            if (LOD_DEMOTE.has(c.d.src)) return 0;
+            if (LOD_FORCE.has(c.d.src)) return 5;
             if (LOD_MEGA.has(c.d.src)) return 4;
             if (c.d.landmark) return 3;
             const cat = lodTips[c.d.src] && lodTips[c.d.src][2];
@@ -5697,14 +5717,15 @@
         // 最早加入的那幾個佔滿名額，結果穩定、不會每幀閃爍
         const budgetPool = recs.filter((rec) => !rec.folk && !rec.hide);
         if (budgetPool.length > lodBudget) {
-            const byTier = { 4: [], 3: [], 2: [], 1: [] };
+            const byTier = { 5: [], 4: [], 3: [], 2: [], 1: [], 0: [] };
             for (const rec of budgetPool) byTier[critterPri(rec.c)].push(rec);
-            for (const tier of [4, 3, 2, 1]) byTier[tier].sort((a, b) => hash(a.c.d.src) - hash(b.c.d.src));
-            const SHARE = { 4: 0.48, 3: 0.3, 2: 0.14, 1: 0.08 };
+            for (const tier of [5, 4, 3, 2, 1, 0]) byTier[tier].sort((a, b) => hash(a.c.d.src) - hash(b.c.d.src));
+            // 第 5 層（使用者指定一定要出現的清單）名額 = 清單全部數量，不受雜湊篩選，一定全部顯示
+            const SHARE = { 5: 1, 4: 0.48, 3: 0.3, 2: 0.14, 1: 0.08, 0: 0 };
             let remaining = lodBudget,
                 carry = 0;
-            for (const tier of [4, 3, 2, 1]) {
-                const quota = Math.round(lodBudget * SHARE[tier]) + carry;
+            for (const tier of [5, 4, 3, 2, 1, 0]) {
+                const quota = tier === 5 ? byTier[5].length : Math.round(lodBudget * SHARE[tier]) + carry;
                 const take = Math.min(quota, byTier[tier].length, remaining);
                 byTier[tier].slice(take).forEach((rec) => (rec.hide = true));
                 remaining -= take;
