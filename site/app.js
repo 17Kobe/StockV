@@ -98,7 +98,7 @@
         { src: 'critters/tatara-yami.svg', lon: 163, lat: 7, mode: 'boat', face: 'F', s: 1.2, sea: true },
         { src: 'critters/tatara-yami.svg', lon: 56, lat: -14, mode: 'boat', face: 'F', s: 1.2, sea: true },
         // 日本黑船（1853 年培里艦隊開進浦賀、逼日本開國）
-        { src: 'critters/black-ship.svg', lon: 142, lat: 33.5, mode: 'boat', face: 'F', s: 1.4, sea: true, maxDeg: 1 },
+        { src: 'critters/black-ship.svg', lon: 146, lat: 30, mode: 'boat', face: 'F', s: 1.4, sea: true, maxDeg: 1 }, // 原座標跟東京鐵塔、迪士尼太近（全球視角互相遮擋，一直沒顯示），拉遠到太平洋上
         // 大航海時代的船隊：馬尼拉大帆船（太平洋）、鄭和寶船（印度洋）
         { src: 'critters/galleon-manila.svg', lon: -118, lat: 14, mode: 'boat', face: 'F', s: 1.3, sea: true },
         { src: 'critters/treasure-ship.svg', lon: 84, lat: 4, mode: 'boat', face: 'F', s: 1.4, sea: true },
@@ -195,7 +195,7 @@
         // ── 世界地標 ──────────────────────────────────────────────────
         { src: 'critters/jellyfish.svg', lon: 134.5, lat: 7.5, mode: 'bob', s: 0.9, sea: true, deco: true, landmark: true }, // 帛琉水母
         { src: 'critters/fuji.svg', lon: 138.3, lat: 34.4, mode: 'still', face: 'F', s: 1.2, deco: true, landmark: true }, // 富士山
-        { src: 'critters/great-wall.svg', lon: 117.2, lat: 40.7, mode: 'still', face: 'F', s: 1.2, deco: true, landmark: true }, // 萬里長城
+        { src: 'critters/great-wall.svg', lon: 112, lat: 42, mode: 'still', face: 'F', s: 1.2, deco: true, landmark: true }, // 萬里長城：原座標跟紫禁城只差 1.13 度，全球視角互相遮擋導致紫禁城一直不會顯示，拉到內蒙古邊境段長城
         { src: 'critters/opera-house.svg', lon: 152.5, lat: -34.8, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 雪梨歌劇院
         {
             src: 'critters/statue-liberty.svg',
@@ -529,6 +529,27 @@
         { src: 'critters/golden-monkey.svg', lon: 103.0, lat: 31.0, mode: 'wander', face: 'R', s: 0.9, deco: true, maxDeg: 2 }, // 中國：金絲猴森林跳躍（素材朝右畫）
         { src: 'critters/chameleon.svg', lon: 49.0, lat: -17.0, mode: 'still', face: 'F', s: 0.85, deco: true },      // 馬達加斯加：變色龍伸舌頭
         { src: 'critters/piranha.svg', lon: -60.0, lat: -2.0, mode: 'swim', face: 'R', s: 0.8, sea: true, deco: true }, // 南美：食人魚群游（素材朝右畫）
+        // ── 國家代表動物改成獨立裝飾項目（原本掛在旗幟卡片上，跟旗幟卡片脫勾）：跟其它裝飾動物
+        // 一樣受全球視角名額限制（見 LOD_DEMOTE），markets.json 對應的 "a" 欄位已拿掉 ──────────
+        { src: 'animals/deer.png', lon: 121.3, lat: 23.9, mode: 'wander', s: 0.9, deco: true, maxDeg: 2 }, // 台灣：鹿
+        { src: 'animals/deer.png', lon: 16.5, lat: 60.5, mode: 'wander', s: 0.9, deco: true, maxDeg: 2 }, // 瑞典：鹿
+        { src: 'animals/dog.png', lon: 139.5, lat: 35.8, mode: 'wander', s: 0.9, deco: true, maxDeg: 2 }, // 日本：柴犬
+        { src: 'animals/dragon.png', lon: 110.0, lat: 32.0, mode: 'wander', face: 'L', s: 1.0, deco: true, maxDeg: 2 }, // 中國：中國龍
+        { src: 'animals/ewe.png', lon: 173.5, lat: -41.5, mode: 'wander', s: 0.9, deco: true, maxDeg: 2 }, // 紐西蘭：美麗諾羊
+        { src: 'animals/hedgehog.png', lon: -1.5, lat: 52.0, mode: 'wander', s: 0.85, deco: true, maxDeg: 2 }, // 英國：歐洲刺蝟
+        { src: 'animals/badger.png', lon: 11.5, lat: 50.5, mode: 'wander', s: 0.9, deco: true, maxDeg: 2 }, // 德國：歐洲獾
+        { src: 'animals/rooster.png', lon: 3.5, lat: 47.2, mode: 'wander', face: 'R', s: 0.9, deco: true, maxDeg: 2 }, // 法國：高盧雄雞
+        { src: 'animals/goat.png', lon: 13.2, lat: 43.0, mode: 'wander', s: 0.9, deco: true, maxDeg: 2 }, // 義大利：阿爾卑斯山羊
+        { src: 'animals/cow.png', lon: 8.6, lat: 46.9, mode: 'wander', gait: 'heavy', s: 0.95, deco: true, maxDeg: 2 }, // 瑞士：瑞士乳牛
+        { src: 'animals/rabbit.png', lon: 5.3, lat: 52.1, mode: 'wander', s: 0.85, deco: true, maxDeg: 2 }, // 荷蘭：歐洲穴兔
+        { src: 'animals/turkey.png', lon: 34.0, lat: 39.0, mode: 'wander', s: 0.9, deco: true, maxDeg: 2 }, // 土耳其：火雞
+        { src: 'animals/eagle.png', lon: -100.0, lat: 40.0, mode: 'wander', s: 1.0, deco: true, maxDeg: 2 }, // 美國：白頭鷹
+        { src: 'animals/toucan.svg', lon: -58.0, lat: -8.0, mode: 'still', face: 'F', s: 0.85, deco: true }, // 巴西：巨嘴鳥
+        { src: 'animals/axolotl.svg', lon: -99.5, lat: 19.3, mode: 'wander', s: 0.9, deco: true, maxDeg: 1.5 }, // 墨西哥：六角恐龍（墨西哥市近郊湖泊）
+        { src: 'animals/penguin.png', lon: -68.0, lat: -45.0, mode: 'wander', gait: 'waddle', s: 0.85, deco: true, maxDeg: 2 }, // 阿根廷：企鵝（巴塔哥尼亞海岸）
+        { src: 'animals/alpaca.svg', lon: -69.5, lat: -27.0, mode: 'wander', s: 0.9, deco: true, maxDeg: 1.5 }, // 智利：草泥馬（安地斯山區）
+        { src: 'animals/horse.png', lon: 114.15, lat: 22.25, mode: 'wander', s: 0.95, deco: true, maxDeg: 1 }, // 香港：賽馬（原本掛在卡片上，脫鉤成獨立裝飾項目）
+        { src: 'animals/monkey.png', lon: 101.5, lat: 4.5, mode: 'wander', s: 0.85, deco: true, maxDeg: 2 }, // 馬來西亞：猴子（原本掛在卡片上，脫鉤成獨立裝飾項目，跟雙峰塔、婆羅洲長鼻猴拉開距離）
         // ── 第五批補充（地標 + 動物） ──────────────────────────────────
         { src: 'critters/atlantis.svg', lon: -24.0, lat: 36.0, mode: 'still', face: 'F', s: 1.2, sea: true, deco: true, landmark: true, noShadow: true }, // 亞特蘭提斯
         { src: 'critters/chocolate-hills.svg', lon: 124.14, lat: 9.83, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 菲律賓：巧克力山
@@ -541,7 +562,9 @@
         { src: 'critters/amazon-rainforest.svg', lon: -71.0, lat: -8.0, mode: 'still', face: 'F', s: 1.8, deco: true, landmark: true }, // 亞馬遜雨林
         // ── 第六批補充（股市重鎮地標 + 傳說生物 + 動物） ──────────────────
         { src: 'critters/merlion.svg', lon: 103.854, lat: 1.287, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 新加坡：魚尾獅
+        { src: 'critters/marina-bay-sands.svg', lon: 103.95, lat: 1.28, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 新加坡：濱海灣金沙酒店（跟魚尾獅座標太近會互相遮擋，拉開一點距離）
         { src: 'critters/petronas-towers.svg', lon: 101.712, lat: 3.158, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 馬來西亞：雙峰塔
+        { src: 'critters/boracay.svg', lon: 121.93, lat: 11.97, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 菲律賓：長灘島
         { src: 'critters/bran-castle.svg', lon: 25.367, lat: 45.514, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 羅馬尼亞：布蘭城堡
         { src: 'critters/djenne-mosque.svg', lon: -4.555, lat: 13.906, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 馬利：傑內大清真寺
         { src: 'critters/persepolis.svg', lon: 52.891, lat: 29.935, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 伊朗：波斯波利斯
@@ -559,10 +582,11 @@
         { src: 'critters/tower-bridge.svg', lon: -0.0754, lat: 51.5055, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 英國：倫敦塔橋
         { src: 'critters/venice-canal.svg', lon: 12.3155, lat: 45.4408, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 義大利：威尼斯水都
         { src: 'critters/empire-state.svg', lon: -73.9857, lat: 40.7484, mode: 'still', face: 'F', s: 1.2, deco: true, landmark: true }, // 美國：帝國大廈
+        { src: 'critters/washington-monument.svg', lon: -77.0365, lat: 38.8895, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 美國：華盛頓紀念碑（素材本來就有畫，之前漏了放進地圖清單，一直沒有顯示）
         { src: 'critters/hollywood-sign.svg', lon: -118.3215, lat: 34.1341, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 美國：好萊塢標誌
         { src: 'critters/alishan-train.svg', lon: 120.8025, lat: 23.5088, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 台灣：阿里山森林小火車
         { src: 'critters/itsukushima-torii.svg', lon: 132.32, lat: 34.296, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 日本：嚴島神社大鳥居
-        { src: 'critters/burj-al-arab.svg', lon: 53.884, lat: 24.35, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 阿聯：帆船飯店
+        { src: 'critters/burj-al-arab.svg', lon: 52.5, lat: 24.2, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 阿聯：帆船飯店：原座標跟哈里發塔只差 1.63 度，全球視角互相遮擋導致帆船飯店一直不會顯示，沿海岸拉遠一點
         { src: 'critters/hobbiton.svg', lon: 175.6818, lat: -37.8722, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 紐西蘭：哈比村
         { src: 'critters/dead-sea.svg', lon: 36.366, lat: 32, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 死海
         // ── 第八批補充（用戶列的世界地標） ──────────────────────────
@@ -783,11 +807,6 @@
         '🐧': ['penguin', 'F', 'waddle'],
         '🦙': ['alpaca', 'L', 'walk', 'svg'],
     };
-    // 全球縮小視角先收起來的「國家代表動物」：這些是各國旗幟自己配的動物（跟旗幟卡片要不要顯示
-    // 完整版的排版邏輯無關，純粹只是「縮到接近全球視角時先不要顯示」），放大地圖到 ANIMAL_DEMOTE_K
-    // 倍以上才出現，初始全球視角只看地標和旗幟，不會被滿地圖的動物搶走注意力
-    const ANIMAL_DEMOTE = new Set(['🦡', '🐓', '🦔', '🐕', '🦎', '🦌', '🐐', '🐑', '🦙', '🐇', '🐄', '🦃', '🦅', '🐉']);
-    const ANIMAL_DEMOTE_K = 3;
     const animalOf = (e) => {
         const a = ANIMALS[e];
         return a ? { src: `assets/animals/${a[0]}.${a[3] || 'png'}`, face: a[1] || 'L', gait: a[2] || 'walk' } : null;
@@ -2908,6 +2927,12 @@
                     scheduleLayout();
                 });
             } else body.append('text').attr('class', 'emoji').text(d.a);
+            // 沒有代表動物（d.a 空）：整塊走動區（光圈／陰影／emoji 備援）都不要顯示，也不要再接收滑鼠事件，
+            // 不然會留下一個看不出是什麼的空殼圖形，滑鼠移上去還會跳出「XX的代表動物」這種沒有內容的提示框
+            if (!info && !d.a) {
+                an.style('display', 'none');
+                s.style('pointer-events', 'none');
+            }
             const mood = wk.append('text').attr('class', 'mood');
             walkers.set(d.s, {
                 wk: wk.node(),
@@ -5342,14 +5367,12 @@
             const st = marketStatus(m),
                 q = state.quotes[m.s];
             const pct = q ? q.pct : 0;
-            // 這幾個國家代表動物在全球縮小視角先收起來，放大到 ANIMAL_DEMOTE_K 倍以上才正常顯示
-            const hideAnimal = ANIMAL_DEMOTE.has(m.a) && state.t.k < ANIMAL_DEMOTE_K;
             if (wk) {
-                wk.vis = !hideAnimal;
+                wk.vis = true;
                 wk.st = st;
                 wk.size = o.size;
             }
-            const an = s.select('.an').attrQ('class', 'an ' + st).styleQ('display', hideAnimal ? 'none' : null);
+            const an = s.select('.an').attrQ('class', 'an ' + st);
             const z = o.size * (m.aScale || 1);
             sizeFigure(an, an.select('.beast'), z);
             an.select('.emoji')
@@ -5640,7 +5663,7 @@
         // LOD_MIN 個（使用者自訂的「不會lag」基準值，可調），放大到 LOD_FULL_K 倍以上就不再限制數量
         // （畫面本來就塞不下那麼多，其它規則會自然篩掉）。只有一般裝飾物件會被這層限制，原住民小人
         // （folk）是另一套避讓邏輯，不受影響。
-        const LOD_MIN = 50;
+        const LOD_MIN = 70;
         const LOD_MAX = 150; // 放大再多也設一個上限：像這次東亞一帶塞了很多裝飾物，區域視角密度太高一樣會lag，
         // 不應該讓它完全不設限（之前是放大到 LOD_FULL_K 倍以上就直接 Infinity，密集地區反而完全不受控）
         const LOD_FULL_K = 6;
@@ -5669,12 +5692,26 @@
             'critters/burj-khalifa.svg', 'critters/burj-al-arab.svg', 'critters/hongkong-skyline.svg',
             'critters/banff.svg', 'critters/halong-bay.svg', 'critters/temple-of-heaven.svg',
             'critters/ring-tailed-lemur.svg', 'critters/gyeongbokgung.svg', 'critters/treasure-ship.svg',
+            // 第二批補充（前 50 → 前 70，多出來的名額換成這些）：紫禁城、帆船飯店已經在上面，不重複列
+            'critters/petronas-towers.svg', 'critters/panama-canal.svg', 'critters/caravel-dias.svg',
+            'critters/amazon-boat.svg', 'critters/yellowstone.svg', 'critters/sagrada-familia.svg',
+            'critters/louvre.svg', 'critters/berlin-wall.svg', 'critters/bagan.svg',
+            'critters/koala.svg', 'critters/great-barrier-reef.svg', 'critters/black-ship.svg',
+            'critters/tatara-yami.svg', 'critters/siberian-train.svg', 'critters/samarkand.svg',
+            'critters/nikola-tesla.svg', 'critters/harbin-ice-world.svg', 'critters/taipei101.svg',
+            'critters/boracay.svg', 'critters/marina-bay-sands.svg',
         ]);
         // 使用者指定「全球縮小視角不要出現」的清單：優先度最低，全球視角的名額幾乎都被上面幾層吃光，
         // 這層通常拿不到名額而被收起來；放大地圖到名額不再受限時（budgetPool 沒超過 lodBudget）一樣會正常顯示
         const LOD_DEMOTE = new Set([
             'critters/beaver.svg', 'critters/red-crowned-crane.svg', 'animals/penguin.png',
             'critters/rms-olympic.svg', 'critters/dhow.svg',
+            // 原本掛在旗幟卡片上的國家代表動物，現在獨立成裝飾項目，一樣排在最低優先度
+            'animals/deer.png', 'animals/dog.png', 'animals/dragon.png', 'animals/ewe.png',
+            'animals/hedgehog.png', 'animals/badger.png', 'animals/rooster.png', 'animals/goat.png',
+            'animals/cow.png', 'animals/rabbit.png', 'animals/turkey.png', 'animals/eagle.png',
+            'animals/toucan.svg', 'animals/axolotl.svg', 'animals/alpaca.svg',
+            'animals/horse.png', 'animals/monkey.png',
         ]);
         const LOD_TIER2_CATS = new Set([
             '人物文化', '歷史', '歷史人物', '歷史人物／科學家', '體育／籃球', '體育／棒球',
