@@ -783,6 +783,11 @@
         '🐧': ['penguin', 'F', 'waddle'],
         '🦙': ['alpaca', 'L', 'walk', 'svg'],
     };
+    // 全球縮小視角先收起來的「國家代表動物」：這些是各國旗幟自己配的動物（跟旗幟卡片要不要顯示
+    // 完整版的排版邏輯無關，純粹只是「縮到接近全球視角時先不要顯示」），放大地圖到 ANIMAL_DEMOTE_K
+    // 倍以上才出現，初始全球視角只看地標和旗幟，不會被滿地圖的動物搶走注意力
+    const ANIMAL_DEMOTE = new Set(['🦡', '🐓', '🦔', '🐕', '🦎', '🦌', '🐐', '🐑', '🦙', '🐇', '🐄', '🦃', '🦅', '🐉']);
+    const ANIMAL_DEMOTE_K = 3;
     const animalOf = (e) => {
         const a = ANIMALS[e];
         return a ? { src: `assets/animals/${a[0]}.${a[3] || 'png'}`, face: a[1] || 'L', gait: a[2] || 'walk' } : null;
@@ -5337,12 +5342,14 @@
             const st = marketStatus(m),
                 q = state.quotes[m.s];
             const pct = q ? q.pct : 0;
+            // 這幾個國家代表動物在全球縮小視角先收起來，放大到 ANIMAL_DEMOTE_K 倍以上才正常顯示
+            const hideAnimal = ANIMAL_DEMOTE.has(m.a) && state.t.k < ANIMAL_DEMOTE_K;
             if (wk) {
-                wk.vis = true;
+                wk.vis = !hideAnimal;
                 wk.st = st;
                 wk.size = o.size;
             }
-            const an = s.select('.an').attrQ('class', 'an ' + st);
+            const an = s.select('.an').attrQ('class', 'an ' + st).styleQ('display', hideAnimal ? 'none' : null);
             const z = o.size * (m.aScale || 1);
             sizeFigure(an, an.select('.beast'), z);
             an.select('.emoji')
