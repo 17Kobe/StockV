@@ -32,7 +32,7 @@ const hash = (s) => {
 };
 
 // 4) 複製 LOD 常數（跟 app.js 目前內容逐字一致）
-const LOD_MIN = 70;
+const LOD_MIN = 80;
 const LOD_MAX = 150;
 const LOD_FULL_K = 6;
 const k = 1; // 全球視角
@@ -63,6 +63,9 @@ const LOD_FORCE = new Set([
     'critters/tatara-yami.svg', 'critters/siberian-train.svg', 'critters/samarkand.svg',
     'critters/nikola-tesla.svg', 'critters/harbin-ice-world.svg', 'critters/taipei101.svg',
     'critters/boracay.svg', 'critters/marina-bay-sands.svg',
+    'critters/cactus-mexico.svg', 'critters/uluru.svg', 'critters/grand-palace.svg',
+    'critters/pompeii.svg', 'critters/pamukkale.svg', 'critters/greek-house.svg',
+    'critters/hanging-gardens.svg', 'critters/persepolis.svg', 'critters/kraken.svg',
 ]);
 const LOD_DEMOTE = new Set([
     'critters/beaver.svg', 'critters/red-crowned-crane.svg', 'animals/penguin.png',

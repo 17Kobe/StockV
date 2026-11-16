@@ -562,7 +562,7 @@
         { src: 'critters/amazon-rainforest.svg', lon: -71.0, lat: -8.0, mode: 'still', face: 'F', s: 1.8, deco: true, landmark: true }, // 亞馬遜雨林
         // ── 第六批補充（股市重鎮地標 + 傳說生物 + 動物） ──────────────────
         { src: 'critters/merlion.svg', lon: 103.854, lat: 1.287, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 新加坡：魚尾獅
-        { src: 'critters/marina-bay-sands.svg', lon: 103.95, lat: 1.28, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 新加坡：濱海灣金沙酒店（跟魚尾獅座標太近會互相遮擋，拉開一點距離）
+        { src: 'critters/marina-bay-sands.svg', lon: 105, lat: 4.3, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 新加坡：濱海灣金沙酒店：原座標離魚尾獅只差 0.1 度，幾乎完全疊在一起，拉到南海海域拉開距離
         { src: 'critters/petronas-towers.svg', lon: 101.712, lat: 3.158, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 馬來西亞：雙峰塔
         { src: 'critters/boracay.svg', lon: 121.93, lat: 11.97, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 菲律賓：長灘島
         { src: 'critters/bran-castle.svg', lon: 25.367, lat: 45.514, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 羅馬尼亞：布蘭城堡
@@ -5663,7 +5663,7 @@
         // LOD_MIN 個（使用者自訂的「不會lag」基準值，可調），放大到 LOD_FULL_K 倍以上就不再限制數量
         // （畫面本來就塞不下那麼多，其它規則會自然篩掉）。只有一般裝飾物件會被這層限制，原住民小人
         // （folk）是另一套避讓邏輯，不受影響。
-        const LOD_MIN = 70;
+        const LOD_MIN = 80;
         const LOD_MAX = 150; // 放大再多也設一個上限：像這次東亞一帶塞了很多裝飾物，區域視角密度太高一樣會lag，
         // 不應該讓它完全不設限（之前是放大到 LOD_FULL_K 倍以上就直接 Infinity，密集地區反而完全不受控）
         const LOD_FULL_K = 6;
@@ -5700,6 +5700,10 @@
             'critters/tatara-yami.svg', 'critters/siberian-train.svg', 'critters/samarkand.svg',
             'critters/nikola-tesla.svg', 'critters/harbin-ice-world.svg', 'critters/taipei101.svg',
             'critters/boracay.svg', 'critters/marina-bay-sands.svg',
+            // 第三批補充（前 70 → 前 80）：尼加拉瀑布本來就在 LOD_MEGA 保證顯示，不重複列
+            'critters/cactus-mexico.svg', 'critters/uluru.svg', 'critters/grand-palace.svg',
+            'critters/pompeii.svg', 'critters/pamukkale.svg', 'critters/greek-house.svg',
+            'critters/hanging-gardens.svg', 'critters/persepolis.svg', 'critters/kraken.svg',
         ]);
         // 使用者指定「全球縮小視角不要出現」的清單：優先度最低，全球視角的名額幾乎都被上面幾層吃光，
         // 這層通常拿不到名額而被收起來；放大地圖到名額不再受限時（budgetPool 沒超過 lodBudget）一樣會正常顯示
