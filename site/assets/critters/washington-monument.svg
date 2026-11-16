@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="wmStone" x1="0" x2="1">
+      <stop offset="0" stop-color="#f5f3ec"/>
+      <stop offset=".55" stop-color="#e3dfd3"/>
+      <stop offset="1" stop-color="#b8b2a1"/>
+    </linearGradient>
+    <linearGradient id="wmStoneDk" x1="0" x2="1">
+      <stop offset="0" stop-color="#d8d3c4"/>
+      <stop offset="1" stop-color="#9b9583"/>
+    </linearGradient>
+    <linearGradient id="wmGrass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fbf6a"/>
+      <stop offset="1" stop-color="#5c9440"/>
+    </linearGradient>
+  </defs>
+  <!-- 美國：華盛頓紀念碑（National Mall 大草坪上的白色方尖碑） -->
+  <rect x="0" y="112" width="128" height="16" fill="url(#wmGrass)"/>
+  <path d="M0 114 Q32 110 64 114 T128 114" stroke="#aee08a" stroke-width="1.2" fill="none" opacity=".7"/>
+  <!-- 碑身主體（略帶透視的四面方尖碑） -->
+  <path d="M50 112 L55 20 L73 20 L78 112 Z" fill="url(#wmStone)" stroke="#8f8974" stroke-width="1"/>
+  <path d="M55 20 L50 112 L58 112 L61 20 Z" fill="url(#wmStoneDk)" opacity=".55"/>
+  <!-- 頂端金字塔尖 -->
+  <path d="M55 20 L64 4 L73 20 Z" fill="url(#wmStone)" stroke="#8f8974" stroke-width="1"/>
+  <path d="M55 20 L64 4 L61 20 Z" fill="url(#wmStoneDk)" opacity=".6"/>
+  <!-- 碑身接縫線，營造石塊堆疊感 -->
+  <g stroke="#b7b19d" stroke-width=".6" opacity=".6">
+    <path d="M52 92 L76 92"/>
+    <path d="M52.6 72 L77 72"/>
+    <path d="M53.2 52 L77.6 52"/>
+    <path d="M54 34 L78 34"/>
+  </g>
+  <!-- 基座 -->
+  <rect x="46" y="110" width="36" height="6" rx="1" fill="url(#wmStoneDk)" stroke="#8f8974" stroke-width=".8"/>
+  <!-- 周圍小小的美國國旗，暗示環形旗陣 -->
+  <g>
+    <line x1="20" y1="118" x2="20" y2="104" stroke="#8f8974" stroke-width="1"/>
+    <path d="M20 104 L30 107 L20 110 Z" fill="#c23b3b">
+      <animate attributeName="d" values="M20 104 L30 107 L20 110 Z;M20 104 L29 106 L20 109 Z;M20 104 L30 107 L20 110 Z" dur="2.4s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  <g>
+    <line x1="108" y1="118" x2="108" y2="105" stroke="#8f8974" stroke-width="1"/>
+    <path d="M108 105 L98 108 L108 111 Z" fill="#3c5aa6">
+      <animate attributeName="d" values="M108 105 L98 108 L108 111 Z;M108 105 L99 107 L108 110 Z;M108 105 L98 108 L108 111 Z" dur="2.6s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>
