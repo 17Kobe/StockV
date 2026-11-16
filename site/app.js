@@ -471,6 +471,7 @@
         { src: 'critters/gassho-house.svg', lon: 136.9, lat: 36.2, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true },  // 白川鄉合掌造
         { src: 'critters/tulou.svg', lon: 117.1, lat: 24.7, mode: 'still', face: 'F', s: 1.2, deco: true, landmark: true },         // 福建土樓
         { src: 'critters/overwater-bungalow.svg', lon: 73.5, lat: 4.2, mode: 'bob', s: 1.0, sea: true, deco: true, landmark: true }, // 馬爾地夫水上屋
+        { src: 'critters/sigiriya.svg', lon: 80.76, lat: 7.96, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 斯里蘭卡：獅子岩
         { src: 'critters/windmill.svg', lon: 4.9, lat: 52.3, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true },        // 荷蘭風車
         { src: 'critters/great-blue-hole.svg', lon: -87.5, lat: 17.3, mode: 'still', face: 'F', s: 1.2, sea: true, deco: true, landmark: true }, // 大藍洞
         { src: 'critters/chernobyl.svg', lon: 30.1, lat: 51.4, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true },      // 車諾比
@@ -509,6 +510,7 @@
         { src: 'critters/colossus-rhodes.svg', lon: 28.227, lat: 36.451, mode: 'still', face: 'F', s: 1.2, sea: true, deco: true, landmark: true },       // 羅德島巨像
         // ── 第四批地標（用戶補充清單） ────────────────────────────────
         { src: 'critters/borobudur.svg', lon: 110.2, lat: -7.61, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true },         // 婆羅浮屠
+        { src: 'critters/bali.svg', lon: 115.19, lat: -8.41, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true },             // 印尼：峇里島
         { src: 'critters/potala-palace.svg', lon: 91.12, lat: 29.66, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true },     // 布達拉宮
         { src: 'critters/sagrada-familia.svg', lon: 2.17, lat: 41.4, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true },     // 聖家堂
         { src: 'critters/neuschwanstein.svg', lon: 10.75, lat: 47.56, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true },    // 新天鵝堡
@@ -628,6 +630,7 @@
         { src: 'critters/mississippi-steamboat.svg', lon: -90.07, lat: 29.95, mode: 'bob', s: 1.1, sea: true, deco: true }, // 美國：密西西比河蒸汽船
         { src: 'critters/american-bison.svg', lon: -101.0, lat: 43.5, mode: 'wander', s: 1.1, deco: true, maxDeg: 2 }, // 美國：美洲野牛
         { src: 'critters/messi-football.svg', lon: -58.4, lat: -35.0, mode: 'still', face: 'F', s: 1.0, deco: true }, // 阿根廷：梅西足球
+        { src: 'critters/buenos-aires-obelisk.svg', lon: -58.3816, lat: -34.6037, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 阿根廷：布宜諾斯艾利斯方尖碑
         { src: 'critters/gaucho.svg', lon: -64.5, lat: -37.5, mode: 'still', face: 'F', s: 1.0, deco: true }, // 阿根廷：高卓人
         { src: 'critters/moscow-red-square.svg', lon: 38.3, lat: 56.6, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 俄羅斯：莫斯科紅場
         { src: 'critters/russian-matryoshka.svg', lon: 48.0, lat: 57.5, mode: 'still', face: 'F', s: 1.0, deco: true }, // 俄羅斯：傳統套娃

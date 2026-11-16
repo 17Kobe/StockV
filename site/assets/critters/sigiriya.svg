@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+<defs>
+  <linearGradient id="sgJungle" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#4a8f4e"/>
+    <stop offset="1" stop-color="#2d5c32"/>
+  </linearGradient>
+  <linearGradient id="sgRock" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#c99a6a"/>
+    <stop offset="0.5" stop-color="#a3744a"/>
+    <stop offset="1" stop-color="#6e4b30"/>
+  </linearGradient>
+</defs>
+<!-- 天空部份鏤空（不鋪底色），底部叢林 -->
+<path d="M0,62 Q20,56 40,60 Q60,56 80,62 L80,80 L0,80 Z" fill="url(#sgJungle)"/>
+<g fill="#3a6f3e" opacity="0.7">
+  <circle cx="10" cy="60" r="5"/>
+  <circle cx="64" cy="58" r="6"/>
+  <circle cx="72" cy="64" r="4"/>
+</g>
+<!-- 獅子岩：從叢林中拔地而起的陡峭巨岩，是斯里蘭卡最具代表性的地標 -->
+<path d="M30,66 L34,30 Q40,10 46,30 L50,66 Z" fill="url(#sgRock)" stroke="#4a3220" stroke-width="0.6"/>
+<g stroke="#5c3f28" stroke-width="0.5" opacity="0.4" fill="none">
+  <path d="M35,32 L33,60"/>
+  <path d="M45,30 L47,62"/>
+</g>
+<!-- 山頂古代宮殿遺址 -->
+<g fill="#8a6a4a" stroke="#4a3220" stroke-width="0.5">
+  <rect x="35" y="12" width="4" height="6"/>
+  <rect x="40" y="10" width="4" height="8"/>
+</g>
+<!-- 半山腰的磚紅色獅爪門階梯，是獅子岩最具代表性的入口遺跡 -->
+<path d="M33,40 L37,36 L41,40 L39,44 L35,44 Z" fill="#a8432f" stroke="#5c1f14" stroke-width="0.5"/>
+<path d="M33,40 Q30,44 32,50" fill="none" stroke="#5c1f14" stroke-width="0.8"/>
+<path d="M41,40 Q44,44 42,50" fill="none" stroke="#5c1f14" stroke-width="0.8"/>
+</svg>

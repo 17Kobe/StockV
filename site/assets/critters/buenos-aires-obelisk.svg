@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+<defs>
+  <linearGradient id="obStone" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#f4f3ef"/>
+    <stop offset="0.5" stop-color="#e3e1da"/>
+    <stop offset="1" stop-color="#c7c4ba"/>
+  </linearGradient>
+  <linearGradient id="obPlaza" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#b9b9b9"/>
+    <stop offset="1" stop-color="#8d8d8d"/>
+  </linearGradient>
+</defs>
+<!-- 天空部份鏤空（不鋪底色），遠處城市天際線剪影 -->
+<g fill="#9aa0ab" opacity="0.45">
+  <rect x="4" y="46" width="6" height="18"/>
+  <rect x="12" y="40" width="5" height="24"/>
+  <rect x="64" y="42" width="6" height="22"/>
+  <rect x="71" y="48" width="5" height="16"/>
+</g>
+<!-- 9 de Julio 大道：世界最寬的大道，多線車道放射狀匯聚到方尖碑廣場 -->
+<path d="M0,80 L30,52 L50,52 L80,80 Z" fill="url(#obPlaza)"/>
+<g stroke="#e8e8e0" stroke-width="0.8" opacity="0.7">
+  <line x1="10" y1="80" x2="34" y2="54"/>
+  <line x1="24" y1="80" x2="38" y2="55"/>
+  <line x1="40" y1="80" x2="42" y2="54"/>
+  <line x1="56" y1="80" x2="46" y2="55"/>
+  <line x1="70" y1="80" x2="50" y2="54"/>
+</g>
+<!-- 方尖碑：細長白色混凝土尖塔，頂端收成金字塔尖，是布宜諾斯艾利斯最醒目的識別特徵 -->
+<polygon points="36,54 44,54 42,10 38,10" fill="url(#obStone)" stroke="#9d9a8f" stroke-width="0.5"/>
+<polygon points="38,10 42,10 40,2" fill="url(#obStone)" stroke="#9d9a8f" stroke-width="0.5"/>
+<rect x="33" y="54" width="14" height="4" fill="#d8d6cc" stroke="#9d9a8f" stroke-width="0.5"/>
+<!-- 阿根廷淺藍白旗幟 -->
+<g>
+  <line x1="24" y1="48" x2="24" y2="62" stroke="#7a7a72" stroke-width="1"/>
+  <path d="M24,49 L32,51 L24,53 Z" fill="#74acdf"/>
+</g>
+<!-- 兩輛小車增加比例感 -->
+<rect x="14" y="70" width="6" height="2.6" rx="1" fill="#2c3a40"/>
+<rect x="58" y="70" width="6" height="2.6" rx="1" fill="#6b1f1f"/>
+</svg>

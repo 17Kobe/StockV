@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+<defs>
+  <linearGradient id="baVolcano" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#9db3c8"/>
+    <stop offset="1" stop-color="#5c7a92"/>
+  </linearGradient>
+  <linearGradient id="baTerrace1" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8fc46a"/>
+    <stop offset="1" stop-color="#5a9a46"/>
+  </linearGradient>
+  <linearGradient id="baTerrace2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#d9c878"/>
+    <stop offset="1" stop-color="#b8a250"/>
+  </linearGradient>
+  <linearGradient id="baRoof" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#4a4038"/>
+    <stop offset="1" stop-color="#241f1a"/>
+  </linearGradient>
+</defs>
+<!-- 天空部份鏤空（不鋪底色），遠處阿貢火山剪影 -->
+<polygon points="20,34 34,8 48,34" fill="url(#baVolcano)" opacity="0.8"/>
+<!-- 層層梯田，峇里島最具代表性的地景 -->
+<path d="M0,40 Q40,32 80,40 L80,48 Q40,40 0,48 Z" fill="url(#baTerrace1)" stroke="#3f6b32" stroke-width="0.4"/>
+<path d="M0,48 Q40,40 80,48 L80,58 Q40,50 0,58 Z" fill="url(#baTerrace2)" stroke="#8a7536" stroke-width="0.4"/>
+<path d="M0,58 Q40,50 80,58 L80,68 Q40,60 0,68 Z" fill="url(#baTerrace1)" stroke="#3f6b32" stroke-width="0.4"/>
+<path d="M0,68 Q40,60 80,68 L80,80 L0,80 Z" fill="url(#baTerrace2)" stroke="#8a7536" stroke-width="0.4"/>
+<!-- 多層茅草屋頂的峇里島美廟（Meru）：黑色層疊屋頂是最醒目的識別特徵 -->
+<g>
+  <rect x="35" y="60" width="10" height="14" fill="#c9a86a" stroke="#6b5230" stroke-width="0.5"/>
+  <polygon points="32,60 48,60 44,52 36,52" fill="url(#baRoof)" stroke="#120f0c" stroke-width="0.4"/>
+  <polygon points="34,52 46,52 43,45 37,45" fill="url(#baRoof)" stroke="#120f0c" stroke-width="0.4"/>
+  <polygon points="36,45 44,45 41,38 39,38" fill="url(#baRoof)" stroke="#120f0c" stroke-width="0.4"/>
+  <polygon points="38,38 42,38 40,32" fill="#d4a63a"/>
+</g>
+<!-- 兩側的守護石獅 -->
+<g fill="#9a8560" stroke="#5c4a2e" stroke-width="0.4">
+  <circle cx="26" cy="68" r="3.2"/>
+  <circle cx="54" cy="68" r="3.2"/>
+</g>
+</svg>
