@@ -19,7 +19,7 @@
             href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Barlow+Semi+Condensed:wght@600;700&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="style.css?v=20251113b" />
+        <link rel="stylesheet" href="style.css?v=20251114a" />
     </head>
     <body>
         <!-- 左側直式圖層列（手機版變成底部導覽列），內容由 app.js 的 LAYERS 產生 -->
@@ -36,6 +36,8 @@
             <canvas id="aurora" aria-hidden="true"></canvas>
             <!-- 一般裝飾雲：在國界/旗幟/卡片下面，不擋內容 -->
             <canvas id="clouds" aria-hidden="true"></canvas>
+            <!-- 國界：獨立一張 SVG，和會動的動物分開光柵化（見 app.js buildSvg） -->
+            <svg id="borders" aria-hidden="true"></svg>
             <svg id="map" role="img" aria-label="世界股市地圖" data-i18n-aria="世界股市地圖"></svg>
             <!-- 煙火 / 烏雲等漲跌特效：在卡片上面也沒關係，烏雲有形成→消散的呼吸週期，不會一直擋住卡片 -->
             <canvas id="wfx" aria-hidden="true"></canvas>
@@ -83,6 +85,6 @@
         <script src="corps.js"></script>
         <script src="natives.js"></script>
         <script src="tips.js?v=20251111f"></script>
-        <script src="app.js?v=20251113a"></script>
+        <script src="app.js?v=20251114h"></script>
     </body>
 </html>

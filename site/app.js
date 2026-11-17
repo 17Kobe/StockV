@@ -1409,6 +1409,16 @@
             .attr('stdDeviation', 0.9)
             .attr('flood-color', '#14210c')
             .attr('flood-opacity', 0.45);
+        // 貼地陰影 / 水波：用放射漸層做出柔邊，取代原本的 feGaussianBlur 濾鏡（url(#soft)）。
+        // 影子每幀都在縮放，濾鏡沒辦法快取，約 100 個影子每幀都要各跑一次模糊；漸層填色只是普通的上色，幾乎不花 GPU
+        const soft = (id, col) => {
+            const rg = defs.append('radialGradient').attr('id', id);
+            rg.append('stop').attr('offset', '0%').attr('stop-color', col).attr('stop-opacity', 1);
+            rg.append('stop').attr('offset', '55%').attr('stop-color', col).attr('stop-opacity', 0.85);
+            rg.append('stop').attr('offset', '100%').attr('stop-color', col).attr('stop-opacity', 0);
+        };
+        soft('softShadow', '#0f1a08');
+        soft('softWake', '#e8f6ff');
         // 旗幟底色（深藍漸層）
         const grad = (id, a, b) => {
             const lg = defs.append('linearGradient').attr('id', id).attr('x1', 0).attr('y1', 0).attr('x2', 0).attr('y2', 1);
@@ -1448,21 +1458,31 @@
     let walkRaf = 0,
         walkLast = 0;
     // 效能：PC 高更新率螢幕（120/144Hz）上主迴圈會跟著跑到 144fps，每幀都重畫全螢幕的雲/煙火 canvas，
-    // 跟同時開著的 YouTube 搶 GPU。這裡設上限：視窗有焦點時最多 60fps，沒焦點（例如在旁邊看影片）降到 20fps，
-    // 特效（雲、極光、藍眼淚、煙火、烏雲）再各自節流（見 fxFps）
+    // 跟同時開著的 YouTube 搶 GPU（Chrome 所有視窗共用同一個 GPU 行程，內顯尤其明顯）。
+    // 這裡設上限：視窗有焦點時最多 30fps，沒焦點（例如在旁邊看影片）降到 15fps；
+    // 遊戲模式全畫面每幀在內顯上約要 7~18ms 的 GPU 光柵化，60fps 時會把 GPU 吃滿。
+    // 地圖平移 / 縮放不受這個上限影響（由 d3-zoom 事件直接重畫）。
+    // 特效（雲、極光、藍眼淚、煙火、烏雲）再各自節流（見 fxFps），CSS 動畫也跟著這個迴圈走（見 stepCssAnims）
     let winFocused = document.hasFocus();
     window.addEventListener('focus', () => (winFocused = true));
     window.addEventListener('blur', () => (winFocused = false));
-    const loopFps = () => (winFocused ? 60 : 20);
+    const loopFps = () => (winFocused ? 30 : 15);
     const fxFps = () => (winFocused ? 30 : 10);
     // 特效 canvas 本來就是柔邊 sprite，不需要用到 3 倍 DPR，最多 1.5 倍就看不出差別，像素量少很多
     const fxDpr = () => Math.min(dpr, 1.5);
 
     // 小角色 / 地標 / 動物的外部 SVG 圖檔裡有大量 SMIL 動畫（<animate> 等），瀏覽器會照螢幕更新率去算，
-    // 程式這邊沒辦法暫停 <image> 裡的動畫。所以視窗沒焦點、動畫關閉、或系統要求減少動態時，
-    // 把 href 換成「凍結版」：在瀏覽器裡解析 SVG，把每個動畫固定在 t=0 的值後拿掉動畫元素，存成 Blob URL
-    const stillUrls = new Map(); // 原始網址 → 凍結版 Blob URL（建好之前是 Promise）
+    // 程式這邊沒辦法暫停 <image> 裡的動畫。而且向量 SVG 圖片只要所在的圖塊被弄髒（旁邊的動物走一步），
+    // GPU 就要整張重新光柵化一次：遊戲模式全畫面約 100 張圖、每張都是向量，實測每幀要 60~160ms 的 GPU 時間，
+    // 會把整個瀏覽器共用的 GPU 行程塞滿，同時開著的 YouTube 就跟著卡。
+    // 所以大部分圖改用「點陣快照」：在瀏覽器裡解析 SVG，把每個動畫固定在 t=0 的值、拿掉動畫元素，
+    // 再畫到 canvas 存成 PNG Blob URL（畫點陣圖只是貼一張貼圖，便宜很多）。
+    // 只有離畫面中心最近的 LIVE_MAX 張有動畫的圖保留動畫（見 assignLive）：那幾張的 SVG 內容放進 #map 的 <defs>
+    // 做成 <symbol>，用 <use> 疊在 <image> 上顯示。因為是 #map 自己的 SMIL 動畫，可以用 pauseAnimations() 停住、
+    // 再由主迴圈以 LIVE_FPS 呼叫 setCurrentTime() 推進——外部 <image> 裡的 SMIL 做不到，只能跟著螢幕更新率播。
+    // 視窗沒焦點、動畫關閉、或系統要求減少動態時，全部都用快照
     const animImgs = new Set(); // 所有用 setAnimHref 設過 href 的 <image>
+    const LIVE_MAX = 8; // 同時保留 SMIL 動畫的圖最多幾張（其餘用靜態快照）；調大動畫比較多，但每多一張 GPU 負擔就多一點
     let stillMode = false;
     const wantStill = () => !winFocused || !state.anim || reduceMotion.matches;
     function freezeSmil(doc) {
@@ -1489,35 +1509,260 @@
             }
         }
     }
-    function stillUrl(url) {
-        const got = stillUrls.get(url);
-        if (typeof got === 'string') return got;
+    // 載入順序：快照的製作（下載 SVG、解析、畫成點陣圖）不能跟地形圖磚搶資源。
+    // 一開始就把 300 張圖一起丟下去做，地形圖磚從 IndexedDB 讀出來的時間會從約 1 秒拖到 5~9 秒，
+    // 重新整理時畫面會先黑一大段。所以排進佇列：等地形這一波圖磚畫完（約 0.4 秒沒有新圖磚）才開始，
+    // 同時最多做 ASSET_JOBS 張。還沒做好的圖先用原始 SVG 顯示，畫面跟沒優化前一樣
+    const assetQ = [], assetQHi = []; // assetQHi：點陣圖（畫面上看得到的圖才會要求），比解析 SVG 優先
+    let assetBusy = 0,
+        assetTimer = 0,
+        lastTileAt = 0;
+    const assetStartAt = performance.now();
+    const ASSET_JOBS = 4;
+    function noteTerrainTile() {
+        lastTileAt = performance.now();
+    }
+    let assetOpen = false;
+    function assetGateOpen() {
+        if (assetOpen) return true;
+        const now = performance.now();
+        // 只擋第一波：地形一直沒好（例如離線）也不要永遠等。之後拖曳 / 縮放載入新圖磚就不再暫停，
+        // 不然地形一直有圖磚進來時，快照會做得很慢
+        assetOpen = now - assetStartAt > 8000 || (lastTileAt > 0 && now - lastTileAt > 400);
+        return assetOpen;
+    }
+    function queueAsset(job, hi) {
+        (hi ? assetQHi : assetQ).push(job);
+        pumpAssets();
+    }
+    function pumpAssets() {
+        if (!assetGateOpen()) {
+            if (!assetTimer) assetTimer = setTimeout(() => ((assetTimer = 0), pumpAssets()), 200);
+            return;
+        }
+        while (assetBusy < ASSET_JOBS && (assetQHi.length || assetQ.length)) {
+            const job = assetQHi.length ? assetQHi.shift() : assetQ.shift();
+            assetBusy++;
+            Promise.resolve()
+                .then(job)
+                .catch(() => {})
+                .then(() => {
+                    assetBusy--;
+                    pumpAssets();
+                });
+        }
+    }
+    // 每張 SVG 解析一次：有沒有動畫、長寬比、凍結版 SVG（data: URL，不另外建 Blob）；建好之前是 Promise
+    const svgMeta = new Map();
+    function svgInfo(url) {
+        const got = svgMeta.get(url);
+        if (got && !(got instanceof Promise)) return got;
         if (!got)
-            stillUrls.set(
+            svgMeta.set(
                 url,
-                fetch(url)
-                    .then((r) => r.text())
-                    .then((txt) => {
-                        const doc = new DOMParser().parseFromString(txt, 'image/svg+xml');
-                        if (doc.querySelector('parsererror')) return url;
-                        if (!doc.querySelector('animate,animateTransform,animateMotion,animateColor,set')) return url; // 本來就沒動畫，直接用原檔
-                        freezeSmil(doc);
-                        return URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(doc)], { type: 'image/svg+xml' }));
-                    })
-                    .catch(() => url)
-                    .then((s) => {
-                        stillUrls.set(url, s);
-                        // 建好時如果還在凍結模式，把正在用這張圖的 <image> 換過去
-                        if (stillMode) for (const img of animImgs) if (img._src === url && img.hasAttribute('href')) img.setAttribute('href', s);
-                    }),
+                new Promise((res) =>
+                    queueAsset(() =>
+                        fetch(url)
+                            .then((r) => r.text())
+                            .then((txt) => {
+                                const doc = new DOMParser().parseFromString(txt, 'image/svg+xml');
+                                if (doc.querySelector('parsererror')) return null;
+                                const root = doc.documentElement;
+                                const vb = (root.getAttribute('viewBox') || '').split(/[\s,]+/).map(Number);
+                                const w = vb.length === 4 && vb[2] > 0 ? vb[2] : parseFloat(root.getAttribute('width')) || 1,
+                                    h = vb.length === 4 && vb[3] > 0 ? vb[3] : parseFloat(root.getAttribute('height')) || 1;
+                                const anim = !!doc.querySelector('animate,animateTransform,animateMotion,animateColor,set');
+                                const src = anim ? txt : null; // 保留動畫版原文，挑中保留動畫時做成 <symbol>（見 liveSymbol）
+                                freezeSmil(doc);
+                                // 畫到 canvas 時需要明確的寬高，不然有些瀏覽器會用預設的 300×150
+                                root.setAttribute('width', w);
+                                root.setAttribute('height', h);
+                                const still = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(new XMLSerializer().serializeToString(doc));
+                                return { anim, ar: w / h, still, bmp: new Map(), src, sym: null };
+                            })
+                            .catch(() => null)
+                            .then((info) => {
+                                svgMeta.set(url, info);
+                                res();
+                                refreshHrefs(url);
+                            }),
+                    ),
+                ),
             );
         return null;
+    }
+    // 凍結版畫成 px×px 的點陣圖（對齊方式同 <image> 的 xMidYMax meet），PNG Blob URL；建好之前是 Promise
+    function bitmapOf(url, info, px) {
+        const got = info.bmp.get(px);
+        if (typeof got === 'string') return got;
+        if (!got)
+            info.bmp.set(
+                px,
+                new Promise((res) =>
+                    queueAsset(async () => {
+                        const fin = (u) => {
+                            info.bmp.set(px, u || info.still); // 畫不出來就用凍結版 SVG
+                            res();
+                            refreshHrefs(url);
+                        };
+                        try {
+                            const im = new Image();
+                            im.src = info.still;
+                            await im.decode();
+                            const c = document.createElement('canvas');
+                            c.width = c.height = px;
+                            const dw = info.ar >= 1 ? px : px * info.ar,
+                                dh = info.ar >= 1 ? px / info.ar : px;
+                            // willReadFrequently：用 CPU 畫布。GPU 畫布的 toBlob 要把像素從 GPU 讀回來，每次都會卡住主執行緒等 GPU
+                            //（實測 100 張就花掉 3 秒以上），CPU 畫布直接編碼就好
+                            c.getContext('2d', { willReadFrequently: true }).drawImage(im, (px - dw) / 2, px - dh, dw, dh);
+                            // toBlob 的 PNG 編碼瀏覽器會排到閒置時間才做，常常要等約 1 秒；
+                            // 這段等待不佔佇列名額（job 先結束），不然一秒只能換好幾張圖
+                            c.toBlob((blob) => fin(blob && URL.createObjectURL(blob)), 'image/png');
+                        } catch {
+                            fin(null);
+                        }
+                    }, true),
+                ),
+            );
+        return null;
+    }
+    const SVGNS = 'http://www.w3.org/2000/svg';
+    const LIVE_FPS = 15; // 保留動畫的圖每秒推進幾次
+    const liveImgs = new Set(); // 目前疊著 <use> 播動畫的 <image>
+    let liveSeq = 0,
+        smilT = 0,
+        smilAcc = 0;
+    // 把動畫版 SVG 的內容做成 #map <defs> 裡的 <symbol>（每個檔案只做一次），id 全部加前綴避免和其他圖衝突
+    function liveSymbol(info) {
+        if (info.sym) return info.sym;
+        const defs = svg && svg.select('defs').node();
+        if (!defs || !info.src) return null;
+        const doc = new DOMParser().parseFromString(info.src, 'image/svg+xml');
+        const root = doc.documentElement,
+            P = `lv${++liveSeq}-`;
+        for (const e of doc.querySelectorAll('[id]')) e.id = P + e.id;
+        for (const e of doc.querySelectorAll('*'))
+            for (const at of [...e.attributes]) {
+                if (at.value.includes('url(#')) e.setAttribute(at.name, at.value.replace(/url\(#/g, 'url(#' + P));
+                if ((at.localName === 'href' || at.name === 'xlink:href') && at.value[0] === '#') e.setAttribute(at.name, '#' + P + at.value.slice(1));
+            }
+        const sym = document.createElementNS(SVGNS, 'symbol');
+        sym.id = P + 'sym';
+        if (root.getAttribute('viewBox')) sym.setAttribute('viewBox', root.getAttribute('viewBox'));
+        sym.setAttribute('preserveAspectRatio', 'xMidYMax meet');
+        sym.setAttribute('overflow', 'visible');
+        for (const c of [...root.childNodes]) sym.appendChild(document.importNode(c, true));
+        defs.appendChild(sym);
+        return (info.sym = '#' + sym.id);
+    }
+    function setLive(img, sym) {
+        if (!sym) {
+            if (img._use) {
+                img._use.remove();
+                img._use = null;
+                img.style.visibility = '';
+            }
+            liveImgs.delete(img);
+            return;
+        }
+        if (!img._use) {
+            img._use = document.createElementNS(SVGNS, 'use');
+            img.after(img._use);
+            img.style.visibility = 'hidden'; // 底下的快照不畫（滑鼠事件改由 <use> 接，一樣會冒泡到外層的 g）
+        }
+        if (img._use.getAttribute('href') !== sym) img._use.setAttribute('href', sym);
+        liveImgs.add(img);
+        syncLive(img);
+    }
+    // <use> 的位置 / 大小跟著底下的 <image>（排版會改 image 的 x/y/width/height）
+    function syncLive(img) {
+        const u = img._use;
+        for (const a of ['x', 'y', 'width', 'height']) {
+            const v = img.getAttribute(a);
+            if (u.getAttribute(a) !== v) v == null ? u.removeAttribute(a) : u.setAttribute(a, v);
+        }
+    }
+    // 主迴圈每次 tick 呼叫：同步 <use> 位置，並以 LIVE_FPS 推進 #map 的 SMIL 時間
+    function stepLive(dt) {
+        if (!liveImgs.size || stillMode) return;
+        for (const img of liveImgs) syncLive(img);
+        smilT += dt;
+        smilAcc += dt;
+        if (smilAcc < 1 / LIVE_FPS - 0.004) return;
+        smilAcc = 0;
+        svg.node().setCurrentTime(smilT);
+    }
+    function hrefFor(img, url) {
+        if (!/\.svg$/i.test(url)) return url;
+        // 還沒量過大小（剛建立、或一直在畫面外 / 被收起來）：先用原檔，等 assignLive 量到它在畫面上才做快照
+        if (img._px == null) return url;
+        const info = svgInfo(url);
+        if (!info) return url; // 還在解析（或解析失敗）：先用原檔
+        return bitmapOf(url, info, img._px || 128) || (info.anim ? info.still : url);
+    }
+    function refreshHrefs(url) {
+        for (const img of animImgs) if (img._src === url && img.isConnected && img.hasAttribute('href')) setAnimHref(img, url);
     }
     function setAnimHref(img, url) {
         img._src = url;
         animImgs.add(img);
-        const href = (stillMode && /\.svg$/i.test(url) && stillUrl(url)) || url;
+        const href = hrefFor(img, url);
         if (img.getAttribute('href') !== href) img.setAttribute('href', href);
+        const info = /\.svg$/i.test(url) ? svgMeta.get(url) : null;
+        const live = !!(info && !(info instanceof Promise) && info.anim && img._live && !stillMode);
+        setLive(img, live ? liveSymbol(info) : null);
+    }
+    // 依畫面上的大小決定點陣圖解析度（64/128/256/512 px），並挑出離畫面中心最近的 LIVE_MAX 張有動畫的圖保留動畫。
+    // 會用到 getBoundingClientRect，所以排版完後延遲一下再跑，不在每幀做
+    let liveTimer = 0;
+    function scheduleLive() {
+        clearTimeout(liveTimer);
+        liveTimer = setTimeout(assignLive, 200);
+    }
+    function assignLive() {
+        const st = $('#stage');
+        if (!st) return;
+        const sr = st.getBoundingClientRect(),
+            cx = sr.left + sr.width / 2,
+            cy = sr.top + sr.height / 2,
+            pr = window.devicePixelRatio || 1;
+        const vis = [], rest = [];
+        for (const img of animImgs) {
+            if (!img.isConnected) {
+                animImgs.delete(img);
+                continue;
+            }
+            img._nlive = false;
+            img._npx = img._px;
+            if (!img.hasAttribute('href')) continue;
+            const r = img.getBoundingClientRect();
+            const on = r.width > 0 && r.right > sr.left && r.left < sr.right && r.bottom > sr.top && r.top < sr.bottom;
+            if (!on) {
+                rest.push(img); // 畫面外的不做快照（不在畫面上就不用光柵化），維持原本的解析度設定
+                continue;
+            }
+            const need = r.width * pr;
+            img._npx = need <= 64 ? 64 : need <= 128 ? 128 : need <= 256 ? 256 : 512;
+            vis.push([Math.hypot(r.left + r.width / 2 - cx, r.top + r.height / 2 - cy), img]);
+        }
+        // 離畫面中心近的先處理：快照佇列照這個順序排，中間的圖最先換好
+        vis.sort((a, b) => a[0] - b[0]);
+        let nLive = 0;
+        for (const [, img] of vis) {
+            if (nLive >= LIVE_MAX) break;
+            const info = svgMeta.get(img._src);
+            if (!info || info instanceof Promise || info.anim) {
+                img._nlive = true;
+                nLive++;
+            }
+        }
+        for (const img of [...vis.map((v) => v[1]), ...rest]) {
+            if (img._px === img._npx && img._live === img._nlive) continue;
+            img._px = img._npx;
+            img._live = img._nlive;
+            if (img.hasAttribute('href')) setAnimHref(img, img._src);
+        }
     }
     function applyStill() {
         const want = wantStill();
@@ -1526,6 +1771,7 @@
         stillMode = want;
         // 被收起來（href 拔掉）的不要補回去，等它顯示時再由 setAnimHref 處理
         for (const img of animImgs) if (img.isConnected && img.hasAttribute('href')) setAnimHref(img, img._src);
+        if (!stillMode) scheduleLive();
     }
     window.addEventListener('focus', applyStill);
     window.addEventListener('blur', applyStill);
@@ -1535,6 +1781,43 @@
         fxLastW = 0,
         fxLastH = 0,
         fxViewMoved = true;
+    // 地圖上的 CSS 無限循環動畫（開盤光圈、地標浮動…）本來由瀏覽器照螢幕更新率播，就算主迴圈降到 30fps，
+    // 它們還是會讓每個 vsync 都重畫一次。這裡把它們暫停，改由主迴圈每次 tick 時設定 currentTime 推進，
+    // 跟著 loopFps 一起節流；沒焦點 / 動畫關閉時就不推進（等於凍結，和 body.lowfx 的效果一樣）
+    const cssAnims = new Map(); // CSSAnimation → 起點（document.timeline 時間）
+    let cssScanAt = -1e9;
+    function stepCssAnims() {
+        const now = document.timeline.currentTime;
+        if (now == null) return;
+        if (now - cssScanAt > 1000) {
+            cssScanAt = now;
+            const stage = $('#stage');
+            for (const a of document.getAnimations()) {
+                if (cssAnims.has(a) || !(window.CSSAnimation && a instanceof CSSAnimation)) continue;
+                const tg = a.effect && a.effect.target;
+                if (!tg || !stage.contains(tg) || a.currentTime == null) continue;
+                cssAnims.set(a, now - a.currentTime);
+                a.pause();
+            }
+        }
+        const run = !stillMode;
+        for (const [a, t0] of cssAnims) {
+            if (a.playState === 'idle' || !a.effect || !a.effect.target || !a.effect.target.isConnected) {
+                cssAnims.delete(a);
+                continue;
+            }
+            if (run) {
+                a.currentTime = now - t0;
+                // 只播一次的動畫（例如即時更新的閃光）播完就交回給瀏覽器，不再追蹤
+                const end = a.effect.getComputedTiming().endTime;
+                if (isFinite(end) && a.currentTime >= end) {
+                    a.finish();
+                    cssAnims.delete(a);
+                }
+            }
+            else cssAnims.set(a, now - a.currentTime); // 凍結時把起點往後推，恢復時從停下的地方接著播
+        }
+    }
     function startWalk() {
         if (!walkRaf) {
             walkLast = performance.now();
@@ -1630,6 +1913,8 @@
             );
         }
         stepCritters(dt, t);
+        stepCssAnims();
+        stepLive(dt);
         if (window.GeoScenes) GeoScenes.step(dt, t);
         drawClouds(dt);
         drawAurora(dt);
@@ -1658,8 +1943,7 @@
             const wk = g.append('g');
             const shadow = wk
                 .append('ellipse')
-                .attr('class', d.sea ? 'wake' : 'shadow')
-                .attr('filter', 'url(#soft)');
+                .attr('class', d.sea ? 'wake' : 'shadow');
             const body = wk.append('g');
             let img,
                 poses = null;
@@ -2135,12 +2419,12 @@
             // 夜間暗化：依晨昏線壓低亮度（海上生物依浮沉位置估算當前經緯）
             {
                 const nb = nightBrightAt(c.d.lon, c.d.lat);
-                if (nb < 1) {
-                    // 動物在夜晚最暗到 0.5（比旗幟更暗沒關係，它們不是文字資訊）
-                    const br = (0.5 + nb * 0.5).toFixed(2);
-                    c.body.style.filter = `brightness(${br}) hue-rotate(${Math.round((1 - nb) * -15)}deg)`;
-                } else {
-                    c.body.style.filter = '';
+                // 動物在夜晚最暗到 0.5（比旗幟更暗沒關係，它們不是文字資訊）。
+                // 值沒變就不重設：每幀寫入 style 會觸發樣式重算
+                const nf = nb < 1 ? `brightness(${(0.5 + nb * 0.5).toFixed(2)}) hue-rotate(${Math.round((1 - nb) * -15)}deg)` : '';
+                if (c.nf !== nf) {
+                    c.nf = nf;
+                    c.body.style.filter = nf;
                 }
             }
             c.wk.setAttribute('transform', `translate(${c.x.toFixed(2)},${c.y.toFixed(2)})`);
@@ -2874,11 +3158,22 @@
         svg = d3.select('#map');
         const cv = $('#terrain');
         tctx = cv.getContext('2d', { alpha: false });
-        Terrain.init({ dem: DEM_URL, img: IMG_URL, maxZ: MAX_TILE_Z, onUpdate: scheduleTerrain });
+        Terrain.init({
+            dem: DEM_URL,
+            img: IMG_URL,
+            maxZ: MAX_TILE_Z,
+            onUpdate: () => {
+                noteTerrainTile(); // 圖示快照要等地形這一波圖磚畫完才開始做（見 assetGateOpen）
+                scheduleTerrain();
+            },
+        });
         // 透明的觸控層，讓空白處也能拖曳 / 縮放
         svg.append('rect').attr('class', 'hit').attr('fill', 'transparent');
 
-        gZoom = svg.append('g');
+        // 國界放在獨立的 #borders SVG（在 #map 下面，CSS 用 will-change 讓兩者各自是一個合成圖層）：
+        // 國界路徑點數多、描邊又寬，和動物放在同一張 SVG 時，動物每走一步弄髒的圖塊都要把國界整個重新光柵化一次；
+        // 分開後動物動只會重畫 #map，國界只有平移 / 縮放 / 改顏色時才重畫
+        gZoom = d3.select('#borders').append('g');
         // 東西向無限循環：國界畫兩份真的路徑（本體 + 右邊副本），平移時接在一起。
         // 不用 SVG <use> 複製，因為 Chrome 重建 <use> 副本時半透明填色會掉成預設的黑色。
         // gLand / gLine / gEdge 各是「兩個群組」的選取，資料綁定和上色會同時套到兩份。
@@ -2921,6 +3216,8 @@
         buildClouds();
 
         buildDefs();
+        // #map 裡的 SMIL（保留動畫的圖，見 liveSymbol）不自己跑，由主迴圈 stepLive 以 LIVE_FPS 推進
+        svg.node().pauseAnimations();
         const g = gMk
             .selectAll('g.mk')
             .data(state.maps, (d) => d.s)
@@ -2936,7 +3233,7 @@
             const an = s.append('g').attr('class', 'an');
             const wk = an.append('g').attr('class', 'walker');
             wk.append('ellipse').attr('class', 'ring'); // 開盤中：地面上擴散的光圈
-            const shadow = wk.append('ellipse').attr('class', 'shadow').attr('filter', 'url(#soft)');
+            const shadow = wk.append('ellipse').attr('class', 'shadow');
             const body = wk.append('g').attr('class', 'body');
             const info = animalOf(d.a);
             if (info) {
@@ -3091,7 +3388,7 @@
         Disasters.init({
             stage: $('#stage'),
             canvas: $('#fx'),
-            shakeEls: ['#terrain', '#clouds', '#aurora', '#map', '#fx'].map((s) => $(s)),
+            shakeEls: ['#terrain', '#clouds', '#aurora', '#borders', '#map', '#fx'].map((s) => $(s)),
             enabled: () => state.layer === 'stocks',
             toScreen: screenXY,
             toGeo: geoAt,
@@ -3344,6 +3641,7 @@
         H = st.clientHeight;
         if (!W || !H) return;
         svg.attr('viewBox', `0 0 ${W} ${H}`);
+        d3.select('#borders').attr('viewBox', `0 0 ${W} ${H}`);
         svg.select('rect.hit').attr('width', W).attr('height', H);
 
         // 高 DPI canvas
@@ -4760,6 +5058,7 @@
     }
 
     function layoutMarkers() {
+        scheduleLive(); // 排版完後重新分配哪些圖保留動畫、點陣圖解析度（有 debounce）
         if (!projection || !state.maps.length || state.flying) return;
         if (window.GeoScenes) GeoScenes.layout();
         const t = state.t,

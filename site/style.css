@@ -321,15 +321,17 @@ button{font:inherit;color:inherit;cursor:pointer}
 @media (prefers-reduced-motion:reduce){#diceBtn.rolling #diceScene,#diceBtn.rolling::before{animation:none}}
 .dz-it:focus-visible{outline:2px solid var(--gold-l);outline-offset:-2px}
 .dz-it.on{background:linear-gradient(180deg,#43669b 0%,#27436f 100%);border-color:var(--gold-l);color:var(--gold-l)}
-#map{position:absolute;inset:0;width:100%;height:100%;touch-action:none;display:block;user-select:none;-webkit-user-select:none}
+#map{position:absolute;inset:0;width:100%;height:100%;touch-action:none;display:block;user-select:none;-webkit-user-select:none;will-change:transform}
+/* 國界獨立一張 SVG（見 app.js buildSvg）：will-change 讓它和 #map 各自是一個合成圖層，動物動的時候不用重畫國界 */
+#borders{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;will-change:transform}
 /* 國界只畫有股市（或目前主題篩選卡片）的國家：app.js 的 paintLand 加上 .on 並寫入顏色（全球十大市值國家紅色、其他綠色），其餘國家不畫 */
-#map .land path,#map .line path,#map .edge path{display:none}
+#borders .land path,#borders .line path,#borders .edge path{display:none}
 /* 文明帝國的國界感：寬而淡的同色光暈 + 淡淡的國土底色（land）→ 清楚的亮色主線（line）→ 中央白色細線（edge） */
-#map .land path.on{display:inline;stroke-width:9;stroke-opacity:.22;stroke-linejoin:round;vector-effect:non-scaling-stroke;transition:fill .8s,stroke .8s}
-#map .line path.on{display:inline;fill:none;stroke-width:2.6;stroke-opacity:.95;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none;transition:stroke .8s}
-#map .edge path.on{display:inline;fill:none;stroke:#fff;stroke-width:.9;stroke-opacity:.85;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none}
+#borders .land path.on{display:inline;stroke-width:9;stroke-opacity:.22;stroke-linejoin:round;vector-effect:non-scaling-stroke;transition:fill .8s,stroke .8s}
+#borders .line path.on{display:inline;fill:none;stroke-width:2.6;stroke-opacity:.95;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none;transition:stroke .8s}
+#borders .edge path.on{display:inline;fill:none;stroke:#fff;stroke-width:.9;stroke-opacity:.85;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none}
 /* 點擊高亮的國家：國土填亮色浮起 + 邊線加粗發光 + 呼吸動畫 */
-#map .land path.hl-land{
+#borders .land path.hl-land{
   display:inline;
   fill:rgba(255,231,130,.42);
   stroke:rgba(255,220,80,.7);
@@ -339,7 +341,7 @@ button{font:inherit;color:inherit;cursor:pointer}
   filter:drop-shadow(0 0 8px rgba(255,220,60,.9)) drop-shadow(0 4px 12px rgba(0,0,0,.5));
   animation:hlPulse 1.8s ease-in-out infinite;
 }
-#map .line path.hl-line{
+#borders .line path.hl-line{
   display:inline;
   fill:none;
   stroke:#ffe234;
@@ -350,13 +352,13 @@ button{font:inherit;color:inherit;cursor:pointer}
   filter:drop-shadow(0 0 4px rgba(255,230,60,.8));
   animation:hlPulse 1.8s ease-in-out infinite;
 }
-#map .edge path.hl-edge{display:inline;fill:none;stroke:#fff;stroke-width:2;stroke-opacity:1;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none}
+#borders .edge path.hl-edge{display:inline;fill:none;stroke:#fff;stroke-width:2;stroke-opacity:1;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none}
 @keyframes hlPulse{
   0%,100%{opacity:1}
   50%{opacity:.55}
 }
 /* Hover 高亮：比點擊輕，國土微微發亮，邊線加粗但不脈衝。要「立刻」亮起：不轉場、不用 filter 模糊（大國家每次重畫模糊很貴），光暈靠寬的半透明描邊 */
-#map .land path.hv-land{
+#borders .land path.hv-land{
   display:inline;
   fill:rgba(255,231,130,.28);
   stroke:rgba(255,215,60,.55);
@@ -365,7 +367,7 @@ button{font:inherit;color:inherit;cursor:pointer}
   vector-effect:non-scaling-stroke;
   transition:none;
 }
-#map .line path.hv-line{
+#borders .line path.hv-line{
   display:inline;
   fill:none;
   stroke:#ffd840;
@@ -375,11 +377,11 @@ button{font:inherit;color:inherit;cursor:pointer}
   pointer-events:none;
   transition:none;
 }
-#map .edge path.hv-edge{display:inline;fill:none;stroke:#fff;stroke-width:1.4;stroke-opacity:.9;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none}
-@media (hover:none){#map .land path.hv-land,#map .line path.hv-line{filter:none}}
+#borders .edge path.hv-edge{display:inline;fill:none;stroke:#fff;stroke-width:1.4;stroke-opacity:.9;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none}
+@media (hover:none){#borders .land path.hv-land,#borders .line path.hv-line{filter:none}}
 /* 小角色（海洋生物、船、人物）：陸上用柔和影子，海上用白色水波 */
-.cr .shadow{fill:#0f1a08;opacity:.45;transform-box:fill-box;transform-origin:center}
-.cr .wake{fill:#e8f6ff;transform-box:fill-box;transform-origin:center}
+.cr .shadow{fill:url(#softShadow);opacity:.45;transform-box:fill-box;transform-origin:center}
+.cr .wake{fill:url(#softWake);transform-box:fill-box;transform-origin:center}
 /* 小人找不到國家附近的空位時，用虛線連回國家的位置（和主題卡片的引線同一個風格） */
 .folk-lead{pointer-events:none}
 .folk-lead line{stroke:var(--gold-l);stroke-width:1.2;stroke-opacity:.85;stroke-dasharray:3 3}
@@ -449,7 +451,7 @@ body.noanim .corps .bk,body.noanim .corps .flame{animation:none}
 .emoji{font-family:var(--emoji);text-anchor:middle;dominant-baseline:central}
 .mood{font-family:var(--emoji);text-anchor:middle;dominant-baseline:central}
 /* 3D 動物：腳下柔和影子 + 開盤時地面擴散的光圈 */
-.an .shadow{fill:#0f1a08;opacity:.5;transform-box:fill-box;transform-origin:center}
+.an .shadow{fill:url(#softShadow);opacity:.5;transform-box:fill-box;transform-origin:center}
 .an .ring{fill:none;stroke:#3dff9a;stroke-width:1.6;opacity:0;transform-box:fill-box;transform-origin:center}
 .an.open .ring{animation:ping 2.2s ease-out infinite}
 .an.break .ring{stroke:#ffc23d;animation:ping 3s ease-out infinite}
@@ -619,7 +621,7 @@ body.lowfx #stage *,body.lowfx #stage *::before{animation-play-state:paused!impo
    裝飾動物圖片是用 <image href="critters/xxx.svg"> 外部參照載入的，裡面的 SMIL 動畫不受
    JS 的 requestAnimationFrame 節流控制，只有真的從渲染樹拿掉才會讓瀏覽器停止解碼動畫，
    省下持續的 CPU / GPU 負擔 */
-body.tab-hidden #map,body.tab-hidden #terrain,body.tab-hidden #aurora,body.tab-hidden #clouds,body.tab-hidden #wfx,body.tab-hidden #fx{display:none!important}
+body.tab-hidden #map,body.tab-hidden #borders,body.tab-hidden #terrain,body.tab-hidden #aurora,body.tab-hidden #clouds,body.tab-hidden #wfx,body.tab-hidden #fx{display:none!important}
 
 /* ---------- 嵌入模式（?embed=1）：只留股市地圖，隱藏概況卡與圖層列（也就沒有旅遊等其它圖層、設定按鈕） ---------- */
 html.embed #rail,html.embed #hud{display:none}
