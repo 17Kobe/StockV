@@ -5664,7 +5664,8 @@
                     // 篩選的那一區自己的國家一個都不能退步；全球檢視，或其他區（例如中東非洲畫面裡的印度、中國）的國家，
                     // 最多容許 2 個從完整版退成迷你版（不能消失、整張列出的不能退）
                     const okRank = (t) => {
-                        let down = 0;
+                        let down = 0,
+                            hid = 0;
                         for (const [o, b] of t.snap) {
                             const r0 = base.get(o.m.s),
                                 r1 = rank(b);
@@ -5673,11 +5674,21 @@
                             // 區域外、本來就只剩迷你版的鄰近國家（例如看美洲時，畫面邊緣的荷蘭）：放大後擠不下就讓它隱藏，
                             // 不能因為它一個小角色就害整個區域的卡片都放不大
                             if (r0 === 1 && !isAll) continue;
-                            if (r1 < 1 || ++down > 2) return false;
+                            // 全球檢視國家多：容許較多張從完整版退成迷你版，換取其他卡片整體放大
+                            if (r1 < 1) {
+                                // 全球檢視：本來就只是迷你版的卡片（只有漲跌幅標籤）最多容許 2 張隱藏，放大地圖後會再出現
+                                if (!isAll || r0 !== 1 || ++hid > 2) return false;
+                                continue;
+                            }
+                            if (++down > (isAll ? 6 : 2)) return false;
                         }
                         return true;
                     };
-                    for (const u of [uMax, 1 + (uMax - 1) * 0.75, 1 + (uMax - 1) * 0.5, 1 + (uMax - 1) * 0.25]) {
+                    // 倍率由大到小試：全球檢視步階較細（約 0.08），才不會一格都過不了就整個退回 1 倍
+                    const tryUs = [];
+                    if (isAll) for (let u = uMax; u > 1.03; u -= 0.08) tryUs.push(u);
+                    else tryUs.push(uMax, 1 + (uMax - 1) * 0.75, 1 + (uMax - 1) * 0.5, 1 + (uMax - 1) * 0.25);
+                    for (const u of tryUs) {
                         U = u;
                         const t = solve();
                         if (okRank(t)) {

@@ -4,7 +4,7 @@ import fs from 'node:fs';
 const CHROME = 'C:/Program Files/Google/Chrome/Application/chrome.exe';
 const [season = 'autumn', region = 'game', js = ''] = process.argv.slice(2);
 const dbg = 9700 + Math.floor(Math.random() * 200);
-const proc = spawn(CHROME, ['--headless=new', `--remote-debugging-port=${dbg}`, `--user-data-dir=${process.env.TEMP}/stockv-season-${dbg}`, '--window-size=1600,900', '--no-first-run', '--use-angle=d3d11', '--enable-gpu'], { stdio: 'ignore' });
+const proc = spawn(CHROME, ['--headless=new', `--remote-debugging-port=${dbg}`, `--user-data-dir=${process.env.TEMP}/stockv-season-${dbg}`, '--window-size='+(process.env.WIN||'1600,900'), '--no-first-run', '--use-angle=d3d11', '--enable-gpu'], { stdio: 'ignore' });
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let list; for (let i = 0; i < 50; i++) { try { list = await (await fetch(`http://127.0.0.1:${dbg}/json/list`)).json(); if (list.find((t) => t.type === 'page')) break; } catch {} await sleep(200); }
 const ws = new WebSocket(list.find((t) => t.type === 'page').webSocketDebuggerUrl);
