@@ -40,7 +40,7 @@
 </header>
 <nav>
   <a href="#cause">問題與原因</a><a href="#method">量測方法</a><a href="#findings">量測發現</a><a href="#changes">修改內容</a>
-  <a href="#result">實測結果</a><a href="#load">載入變慢的修正</a><a href="#anim">哪些動畫被取消</a><a href="#tune">調整參數</a><a href="#todo">未來可再優化</a><a href="#pitfall">踩過的坑</a>
+  <a href="#result">實測結果</a><a href="#load">載入變慢的修正</a><a href="#anim">哪些動畫被取消</a><a href="#tune">調整參數</a><a href="#todo">未來可再優化</a><a href="#pitfall">踩過的坑</a><a href="#season">季節與椰子樹</a>
 </nav>
 <main>
 
@@ -391,6 +391,8 @@ node cpuprof.mjs 8000 2500 7000      # 重新整理後第 2.5–7 秒的 CPU pro
 <tr><td><code>fxFps()</code></td><td>app.js，特效 canvas</td><td>有焦點 30 / 無焦點 10</td><td>雲、極光、煙火的更新率</td></tr>
 <tr><td><code>fxDpr()</code></td><td>app.js，特效 canvas 解析度</td><td>最多 1.5 倍</td><td>降低可再省像素</td></tr>
 <tr><td><code>ASSET_JOBS</code></td><td>app.js，快照佇列同時處理數</td><td>4</td><td>越大換得越快，但載入時跟地形搶資源</td></tr>
+<tr><td><code>SEASON_STEPS</code></td><td>terrain.js，季節分段數</td><td>12（約一個月一段）</td><td>越大換季越平順，但換段時要重畫圖磚的次數越多；越小則反之</td></tr>
+<tr><td><code>SNOW_A</code> / <code>LEAF_A</code></td><td>terrain.js，積雪線 / 秋色線的緯度錨點表</td><td>見第 11 節</td><td>只改緯度數字，不影響效能（但會讓圖磚快取失效重畫一次）</td></tr>
 <tr><td>點陣解析度級距</td><td><code>assignLive</code>：64 / 128 / 256 / 512</td><td>依 devicePixelRatio × 顯示寬度</td><td>可全部降一級換 GPU 記憶體</td></tr>
 </tbody></table></div>
 
@@ -417,9 +419,52 @@ node cpuprof.mjs 8000 2500 7000      # 重新整理後第 2.5–7 秒的 CPU pro
   <li><b>不要用 GPU 畫布做 <code>toBlob</code> / <code>toDataURL</code></b>：會同步把像素從 GPU 讀回來。要讀像素或編碼的暫存畫布一律加 <code>willReadFrequently: true</code>。</li>
   <li><b>啟動時不要一次丟大量非同步工作</b>：會拖慢 IndexedDB 等其他非同步資源（地形快取）。先讓畫面主要內容出來，再排隊做。</li>
   <li><b>本機伺服器的埠可能被別的程式占用</b>：<code>serve_local.py</code> 會自動換下一個埠。比較新舊版時先用 <code>curl localhost:埠/ | grep app.js</code> 確認版本號。</li>
+  <li><b>改了地形繪製後，量效能要先等圖磚重畫完</b>：<code>terrain.js</code> 的原始碼雜湊（<code>SRC_VER</code>）一變，磁碟快取全部作廢，約 270 張圖磚（z2–z5）要由 Worker 重畫，約 20 秒，期間 Worker 每秒忙 300–800ms，GPU 也被拉高。量測要先讓頁面開過一次、等 30 秒以上（<code>SETTLE=32000</code>），再量。</li>
+  <li><b><code>loadtime.mjs</code> 的「圖示全部換成快照」可能顯示 &gt;15000ms</b>：畫面外（座標 0,0、寬 0）的動物 / 船會一直維持原始 SVG，這是設計如此，不是變慢。要看地形速度請看「地形圖磚 50% / 90% / 最後」那一行。</li>
+  <li><b>截圖工具各自要用獨立的 <code>--user-data-dir</code></b>：上一個 Chrome 沒關乾淨時，同一個資料夾會讓新的 headless Chrome 抓不到頁面（<code>list.find</code> 回傳 undefined）。</li>
   <li>量測腳本放在 <code>.tmp_work</code>，不屬於網站本體。</li>
 </ul>
 
+<h2 id="season">11. 季節效果與椰子樹（畫進地形圖磚，不加每幀成本）</h2>
+<p>需求：春夏秋冬要像真的（秋天北方樹變白、南方樹變橘紅像楓樹，冬天更多區域變白），靠海島嶼 / 台灣南部用椰子樹，而且不能影響效能。</p>
+<h3>為什麼不影響效能</h3>
+<ul>
+  <li><b>舊做法（已移除）</b>：<code>app.js</code> 的 <code>drawSeason()</code> 每次地形重畫都用世界陸地路徑 clip，再蓋一層半透明色，所有陸地（含沙漠）一起染色，而且不像秋天。</li>
+  <li><b>新做法</b>：季節直接畫進地形圖磚（<code>terrain.js</code> 的 <code>render()</code>）。圖磚本來就在 Worker 裡畫、存進 IndexedDB，之後只是貼圖，<b>每幀成本為 0</b>。</li>
+  <li>季節分成 <code>SEASON_STEPS = 12</code> 段（約一個月一段），段數放進快取 key：<code>SRC_VER + '/s' + SEASON_Q + '/' + z + '/' + x + '/' + y</code>。同一段內都從快取讀；只有換段那一次要重畫。</li>
+  <li>Worker 取得的段數由訊息傳入（<code>sq</code>），不是在 Worker 裡讀日期，主執行緒與 Worker 的快取 key 才會一致。</li>
+</ul>
+<h3>季節規則（緯度帶，隨日期移動）</h3>
+<div class="wrap"><table>
+<thead><tr><th>項目</th><th>做法</th></tr></thead>
+<tbody>
+<tr><td>積雪線 <code>SNOW_A</code></td><td>環狀（一年首尾相接）分段線性內插：冬至約北緯 48°、3 月底 58°、4 月底 70°、5 月中到 8 月底 90°（無雪）、9 月底 70°、10 月底 60°、11 月底 55°。之上的松樹換成 <code>pineSnow</code>，地面加斑駁積雪（<code>vnoise</code>，沙漠 0.45、其他 0.78）</td></tr>
+<tr><td>秋色線 <code>LEAF_A</code></td><td>8 月初到 12 月初由北往南掃：8 月初北緯 62° → 9 月中 52° → 10 月中 40° → 11 月中 32° → 12 月初 30°。線以北的闊葉樹換成 <code>maple</code>（紅）/ <code>treeO</code>（橘）/ <code>treeG</code>（金黃）</td></tr>
+<tr><td>落葉 <code>bare</code></td><td>11 月下旬到 3 月上旬，積雪線往南 16° 內的闊葉樹換成 <code>bare</code> / <code>bareSnow</code>（禿枝）</td></tr>
+<tr><td>南半球</td><td>季節相位偏半年</td></tr>
+<tr><td>邊界不呈直線</td><td>每棵樹的緯度加 ±3° 的抖動</td></tr>
+<tr><td>預覽</td><td>網址加 <code>?season=winter|spring|summer|autumn</code>，或 0–1 的數字（0 = 12/21 冬至附近）</td></tr>
+</tbody></table></div>
+<h3>椰子樹</h3>
+<ul>
+  <li>用 <code>landFrac(water, rad)</code>（可分離的方框模糊）算「周圍一圈有多少比例是陸地」，近海 / 小島的值低。z≥6 半徑 16，其他 8。</li>
+  <li>條件：<code>al &lt; 27</code>（南北緯 27° 以內）且（<code>lw &lt; 0.97</code> 或（<code>al &lt; 23.6</code> 且海拔 &lt; 250m））。地表類型 <code>b</code> 為 3 的不長；<code>b===2</code> 機率 15%、其他 45%。</li>
+  <li>非茂密處一律是椰子樹，茂密處約 60% 是椰子樹；椰子樹大小 14。</li>
+  <li>只有 <code>pine</code>、<code>tree</code>、<code>treeY</code> 這三種會依季節換圖，椰子樹不換。</li>
+</ul>
+<h3>成本與結果</h3>
+<ul>
+  <li><code>landFrac</code> 只多算兩次可分離的盒狀模糊，z2–z5 圖磚在 Worker 裡畫，重新整理時地形仍在約 1.13–1.18 秒內畫完（修改前 1.0–1.6 秒）。</li>
+  <li>圖磚畫完、存進快取後：視窗無焦點時 GPU 約 130、有焦點約 330（滿 1000），與修改前（120 / 320）相同。</li>
+  <li>唯一的額外成本：部署後第一次開啟、以及每個月換段那一次，背景要重畫約 270 張圖磚（約 20 秒，畫面照常顯示，只是 Worker 較忙）。</li>
+</ul>
+<h3>量測 / 截圖工具</h3>
+<pre>cd .tmp_work
+WAIT=20000 TAG=game node seasonshot.mjs autumn game            # 截圖：season_autumn_game.png
+ZOOM=1300,492,8 CLIP=x,y,w,h node seasonshot.mjs summer game   # 滾輪放大台灣再截圖
+node sprites.mjs                                                # 把所有樹 / 椰子樹畫成 sprites.png 檢查
+FOCUS=1 SETTLE=32000 node perf.mjs                              # 等圖磚重畫完再量 GPU</pre>
+<p class="dim">調整積雪線 / 秋色線只要改 <code>SNOW_A</code> / <code>LEAF_A</code> 兩個錨點表；<code>index.html</code> 的 <code>terrain.js?v=…</code> 版本字串要一起更新。</p>
 </main>
 </body>
 </html>
