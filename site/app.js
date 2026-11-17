@@ -2525,7 +2525,7 @@
                 }
             }
             // 先用統一的底色填滿整朵雲的外形，雲內部就不會有一圈一圈的硬邊（不然會像一串葡萄）
-            g.fillStyle = '#4a4f66';
+            g.fillStyle = '#5f6580';
             g.beginPath();
             for (const [x, y, rr] of P.concat(bumps)) {
                 g.moveTo(x + rr, y);
@@ -2549,14 +2549,14 @@
                 g.fillRect(x - rr * 1.2, y - rr * 1.6, rr * 2.4, rr * 2.6);
                 // 雲球下緣一點點陰影，讓前後層次分得出來，但不畫出硬邊
                 const sh = g.createRadialGradient(x, y + rr * 0.9, 0, x, y + rr * 0.9, rr * 0.9);
-                sh.addColorStop(0, 'rgba(30,33,50,.35)');
-                sh.addColorStop(1, 'rgba(30,33,50,0)');
+                sh.addColorStop(0, 'rgba(46,50,70,.28)');
+                sh.addColorStop(1, 'rgba(46,50,70,0)');
                 g.fillStyle = sh;
                 g.fillRect(x - rr, y, rr * 2, rr * 1.8);
             }
             const under = g.createLinearGradient(0, STORM_H * 0.45, 0, STORM_H);
-            under.addColorStop(0, 'rgba(16,18,30,0)');
-            under.addColorStop(1, 'rgba(16,18,30,.7)');
+            under.addColorStop(0, 'rgba(40,43,62,0)');
+            under.addColorStop(1, 'rgba(40,43,62,.55)');
             g.fillStyle = under;
             g.fillRect(0, 0, STORM_W, STORM_H);
             // 邊緣柔化一點，才不會像剪紙
