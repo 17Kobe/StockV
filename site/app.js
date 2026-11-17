@@ -563,8 +563,8 @@
         { src: 'critters/grizzly-salmon.svg', lon: -155.8, lat: 58.6, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 阿拉斯加：灰熊抓鮭魚
         { src: 'critters/amazon-rainforest.svg', lon: -71.0, lat: -8.0, mode: 'still', face: 'F', s: 1.8, deco: true, landmark: true }, // 亞馬遜雨林
         // ── 第六批補充（股市重鎮地標 + 傳說生物 + 動物） ──────────────────
+        { src: 'critters/marina-bay-sands.svg', lon: 103.86, lat: 1.15, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 新加坡：濱海灣金沙酒店：改回新加坡附近海灣（原本拉到南海太遠、不像在新加坡），排在魚尾獅前面，兩個距離夠近時優先顯示金沙
         { src: 'critters/merlion.svg', lon: 103.854, lat: 1.287, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 新加坡：魚尾獅
-        { src: 'critters/marina-bay-sands.svg', lon: 105, lat: 4.3, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 新加坡：濱海灣金沙酒店：原座標離魚尾獅只差 0.1 度，幾乎完全疊在一起，拉到南海海域拉開距離
         { src: 'critters/petronas-towers.svg', lon: 101.712, lat: 3.158, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 馬來西亞：雙峰塔
         { src: 'critters/boracay.svg', lon: 121.93, lat: 11.97, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 菲律賓：長灘島
         { src: 'critters/bran-castle.svg', lon: 25.367, lat: 45.514, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 羅馬尼亞：布蘭城堡
@@ -676,6 +676,29 @@
         { src: 'critters/bill-gates.svg', lon: -122.12, lat: 47.67, mode: 'still', face: 'F', s: 1.0, deco: true }, // 比爾‧蓋茲
         { src: 'critters/hokkaido-king-crab.svg', lon: 141.5, lat: 43.8, mode: 'bob', s: 1.0, sea: true, deco: true }, // 北海道帝王蟹
         { src: 'critters/dalai-lama.svg', lon: 76.32, lat: 32.22, mode: 'still', face: 'F', s: 1.0, deco: true }, // 達賴喇嘛：原座標跟布達拉宮完全重疊，改放到他流亡後長居的印度達蘭薩拉
+        // ── 第十一批補充（世界地標，不用在前 80 名額內，只要畫出來、放大能看到就好） ──────────
+        { src: 'critters/parthenon.svg', lon: 22.44, lat: 37.98, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 希臘：帕德嫩神廟（素材本來就有畫，之前漏了放進地圖清單；跟雅典衛城拉開一點距離）
+        { src: 'critters/versailles.svg', lon: 2.1204, lat: 48.8049, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 法國：凡爾賽宮
+        { src: 'critters/budapest-parliament.svg', lon: 19.0469, lat: 47.5076, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 匈牙利：布達佩斯國會大廈
+        { src: 'critters/pantheon-rome.svg', lon: 12.4768, lat: 41.8986, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 義大利：萬神殿
+        { src: 'critters/hagia-sophia.svg', lon: 28.9802, lat: 41.0086, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 土耳其：聖索菲亞大教堂
+        { src: 'critters/blue-mosque.svg', lon: 28.9768, lat: 41.0054, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 土耳其：伊斯坦堡歷史區（藍色清真寺）
+        { src: 'critters/chartres-cathedral.svg', lon: 1.4360, lat: 48.4474, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 法國：沙特爾大教堂
+        { src: 'critters/florence-dome.svg', lon: 11.2560, lat: 43.7731, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 義大利：布魯內萊斯基穹頂（佛羅倫斯大教堂）
+        { src: 'critters/fallingwater.svg', lon: -79.4700, lat: 39.9080, mode: 'still', face: 'F', s: 1.0, sea: true, deco: true, landmark: true }, // 美國：流水別墅
+        { src: 'critters/villa-savoye.svg', lon: 2.0953, lat: 48.9169, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 法國：薩伏伊別墅
+        { src: 'critters/guggenheim-nyc.svg', lon: -73.9590, lat: 40.7829, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 美國：古根漢美術館（紐約）
+        { src: 'critters/pompidou-centre.svg', lon: 2.3522, lat: 48.8606, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 法國：龐畢度中心
+        { src: 'critters/guggenheim-bilbao.svg', lon: -2.9336, lat: 43.2686, mode: 'still', face: 'F', s: 1.0, sea: true, deco: true, landmark: true }, // 西班牙：畢爾包古根漢美術館
+        { src: 'critters/birds-nest.svg', lon: 116.3972, lat: 39.9929, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 中國：北京國家體育場（鳥巢）
+        { src: 'critters/bosco-verticale.svg', lon: 9.1900, lat: 45.4846, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 義大利：米蘭垂直森林
+        { src: 'critters/karnak-temple.svg', lon: 32.6573, lat: 25.7188, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 埃及：卡納克神廟
+        { src: 'critters/mesa-verde.svg', lon: -108.4618, lat: 37.1853, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 美國：梅薩維德國家公園崖居
+        { src: 'critters/palau-milky-way.svg', lon: 134.3400, lat: 7.2300, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 帛琉：牛奶湖
+        { src: 'critters/taiwan-presidential-office.svg', lon: 121.5125, lat: 25.0392, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 台灣：總統府
+        { src: 'critters/pier-2.svg', lon: 120.2823, lat: 22.6187, mode: 'still', face: 'F', s: 1.0, sea: true, deco: true, landmark: true }, // 台灣：駁二藝術特區
+        { src: 'critters/carp-island.svg', lon: 134.47, lat: 7.12, mode: 'still', face: 'F', s: 1.0, sea: true, deco: true, landmark: true }, // 帛琉：星象島（Ngercheu／Carp Island）
+        { src: 'critters/beirut-terraces.svg', lon: 35.5018, lat: 33.8938, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 黎巴嫩：貝魯特垂直森林（Beirut Terraces）
     ];
     // 原住民小人（natives.js）：該國主要指數漲就歡呼跳舞、跌就沮喪哭泣，平盤時散步 / 揮手 / 眨眼
     // mode 'folk'；market = 看哪個指數；ox / oy = 相對位置點的偏移（單位：小角色基準大小）；minK = 縮小到這個倍率以下就收起來

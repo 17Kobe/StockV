@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+<defs>
+  <linearGradient id="fwConc" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#d8d4c8"/>
+    <stop offset="1" stop-color="#b0aa98"/>
+  </linearGradient>
+  <linearGradient id="fwWater" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#eaf6f8"/>
+    <stop offset="1" stop-color="#9cc8d0"/>
+  </linearGradient>
+</defs>
+<!-- 流水別墅：現代主義水平懸挑樓板疊在瀑布上方，是建築史上最知名的「與自然融合」案例 -->
+<!-- 底部岩石與瀑布 -->
+<path d="M8,80 L14,46 L26,50 L24,80 Z" fill="#8a8272" stroke="#5c5644" stroke-width="0.5"/>
+<path d="M18,80 L22,48 L30,52 L30,80 Z" fill="url(#fwWater)" opacity="0.9"/>
+<g stroke="#ffffff" stroke-width="0.8" opacity="0.6" fill="none">
+  <path d="M22,54 Q23,64 21,74"/>
+  <path d="M26,56 Q27,66 25,76"/>
+</g>
+<!-- 水平懸挑樓板（三層，逐層錯開） -->
+<rect x="20" y="42" width="48" height="7" fill="url(#fwConc)" stroke="#6b6554" stroke-width="0.5"/>
+<rect x="28" y="30" width="38" height="7" fill="url(#fwConc)" stroke="#6b6554" stroke-width="0.5"/>
+<rect x="34" y="18" width="28" height="7" fill="url(#fwConc)" stroke="#6b6554" stroke-width="0.5"/>
+<g fill="#5a4a34" opacity="0.5">
+  <rect x="38" y="25" width="2" height="5"/>
+  <rect x="44" y="25" width="2" height="5"/>
+  <rect x="32" y="37" width="2" height="5"/>
+  <rect x="58" y="37" width="2" height="5"/>
+</g>
+<!-- 周圍樹林 -->
+<g fill="#4a7c40" opacity="0.85">
+  <circle cx="8" cy="30" r="8"/>
+  <circle cx="70" cy="34" r="7"/>
+</g>
+</svg>

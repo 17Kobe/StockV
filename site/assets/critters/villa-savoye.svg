@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+<defs>
+  <linearGradient id="vsavWall" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f8f6ee"/>
+    <stop offset="1" stop-color="#d8d4c4"/>
+  </linearGradient>
+</defs>
+<!-- 薩伏伊別墅：白色現代主義方盒子懸浮在細柱（pilotis）上，帶狀長窗，是柯比意「新建築五點」的代表作 -->
+<g fill="#4a4030" opacity="0.6">
+  <rect x="14" y="48" width="3" height="20"/>
+  <rect x="24" y="48" width="3" height="20"/>
+  <rect x="36" y="48" width="3" height="20"/>
+  <rect x="48" y="48" width="3" height="20"/>
+  <rect x="58" y="48" width="3" height="20"/>
+</g>
+<rect x="10" y="28" width="56" height="22" fill="url(#vsavWall)" stroke="#9a9688" stroke-width="0.6"/>
+<!-- 帶狀長窗（水平連續開窗，是本案最具代表性的識別特徵） -->
+<rect x="13" y="34" width="50" height="7" fill="#5a7a92" stroke="#3f5868" stroke-width="0.4"/>
+<g stroke="#3f5868" stroke-width="0.4">
+  <line x1="23" y1="34" x2="23" y2="41"/>
+  <line x1="33" y1="34" x2="33" y2="41"/>
+  <line x1="43" y1="34" x2="43" y2="41"/>
+  <line x1="53" y1="34" x2="53" y2="41"/>
+</g>
+<!-- 平屋頂與屋頂花園矮牆 -->
+<rect x="10" y="26" width="56" height="2.5" fill="#c8c4b4"/>
+<rect x="22" y="18" width="20" height="8" fill="url(#vsavWall)" stroke="#9a9688" stroke-width="0.5"/>
+</svg>

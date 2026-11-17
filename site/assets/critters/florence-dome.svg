@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+<defs>
+  <linearGradient id="fdTile" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#d88a4a"/>
+    <stop offset="1" stop-color="#a85c2a"/>
+  </linearGradient>
+  <linearGradient id="fdLantern" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f4ead0"/>
+    <stop offset="1" stop-color="#d8c8a0"/>
+  </linearGradient>
+</defs>
+<!-- 布魯內萊斯基穹頂（佛羅倫斯大教堂）：八角形紅磚肋拱圓頂＋頂端白色採光塔，文藝復興建築史的里程碑 -->
+<g fill="url(#fdTile)" stroke="#6b3a1a" stroke-width="0.5">
+  <polygon points="40,18 52,24 48,56 32,56 28,24"/>
+</g>
+<g stroke="#6b3a1a" stroke-width="0.6" fill="none">
+  <line x1="40" y1="18" x2="40" y2="56"/>
+  <line x1="52" y1="24" x2="48" y2="56"/>
+  <line x1="28" y1="24" x2="32" y2="56"/>
+</g>
+<rect x="33" y="56" width="14" height="6" fill="#c9bca0" stroke="#6b5a34" stroke-width="0.5"/>
+<!-- 頂端白色採光塔 -->
+<rect x="36" y="8" width="8" height="10" fill="url(#fdLantern)" stroke="#9a8c68" stroke-width="0.5"/>
+<polygon points="36,8 40,2 44,8" fill="#d8c8a0" stroke="#9a8c68" stroke-width="0.5"/>
+<circle cx="40" cy="1" r="1" fill="#9a8c68"/>
+</svg>

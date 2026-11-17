@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+<defs>
+  <linearGradient id="p2Warehouse" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#b0aca0"/>
+    <stop offset="1" stop-color="#7c7868"/>
+  </linearGradient>
+</defs>
+<!-- 駁二藝術特區：高雄港邊的舊倉庫改造成的藝術特區，彩色貨櫃與大型公共藝術是最具代表性的識別特徵 -->
+<rect x="0" y="58" width="80" height="4" fill="#3a6b86"/>
+<rect x="8" y="38" width="40" height="22" fill="url(#p2Warehouse)" stroke="#4a4638" stroke-width="0.5"/>
+<polygon points="8,38 28,26 48,38" fill="#8a8678" stroke="#4a4638" stroke-width="0.5"/>
+<g fill="#5a7a8a" opacity="0.8">
+  <rect x="13" y="44" width="5" height="7"/>
+  <rect x="22" y="44" width="5" height="7"/>
+  <rect x="31" y="44" width="5" height="7"/>
+  <rect x="40" y="44" width="5" height="7"/>
+</g>
+<!-- 彩色貨櫃疊起來 -->
+<g stroke="#2a2822" stroke-width="0.5">
+  <rect x="52" y="48" width="12" height="8" fill="#e05a3a"/>
+  <rect x="52" y="40" width="12" height="8" fill="#3aa0c8"/>
+  <rect x="64" y="48" width="10" height="8" fill="#e0b030"/>
+</g>
+<!-- 招牌大型機器人公共藝術 -->
+<g fill="#c0392b" stroke="#6b1a12" stroke-width="0.5">
+  <rect x="68" y="30" width="6" height="8"/>
+  <circle cx="71" cy="26" r="4"/>
+  <rect x="69.5" y="38" width="3" height="6"/>
+</g>
+</svg>

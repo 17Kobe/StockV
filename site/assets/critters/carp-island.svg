@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+<defs>
+  <linearGradient id="ciSky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#1c2a52"/>
+    <stop offset="1" stop-color="#3a4f7a"/>
+  </linearGradient>
+  <linearGradient id="ciSea" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#1a3a5c"/>
+    <stop offset="1" stop-color="#0c2238"/>
+  </linearGradient>
+  <linearGradient id="ciIsle" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#3a7a4a"/>
+    <stop offset="1" stop-color="#1f4a2c"/>
+  </linearGradient>
+</defs>
+<!-- 星象島（Ngercheu／Carp Island）：帛琉遠離光害的夜空觀星勝地，深藍夜空＋海面倒映星光 -->
+<path d="M0,0 L80,0 L80,46 Q40,40 0,46 Z" fill="url(#ciSky)"/>
+<g fill="#eaf4ff">
+  <circle cx="10" cy="10" r="0.9"/><circle cx="26" cy="6" r="0.7"/><circle cx="46" cy="12" r="0.8"/>
+  <circle cx="62" cy="7" r="0.9"/><circle cx="72" cy="16" r="0.7"/><circle cx="18" cy="20" r="0.6"/>
+  <circle cx="54" cy="22" r="0.6"/><circle cx="34" cy="16" r="0.5"/>
+</g>
+<path d="M50,8 Q56,6 60,10 Q55,12 50,8 Z" fill="#f4edc8" opacity="0.9"/>
+<path d="M0,46 Q40,40 80,46 L80,80 L0,80 Z" fill="url(#ciSea)"/>
+<g opacity="0.3" stroke="#eaf4ff" stroke-width="0.8" fill="none">
+  <path d="M10,56 Q20,54 30,56"/>
+  <path d="M46,64 Q56,62 66,64"/>
+</g>
+<!-- 珊瑚礁小島與椰子樹 -->
+<ellipse cx="38" cy="54" rx="22" ry="7" fill="url(#ciIsle)" stroke="#143a1e" stroke-width="0.5"/>
+<path d="M30,54 Q32,42 29,34" fill="none" stroke="#5c4428" stroke-width="1.6" stroke-linecap="round"/>
+<g fill="#3a7a4a" stroke="#1f4a2c" stroke-width="0.3">
+  <path d="M29,34 Q22,30 24,35 Q27,38 29,34 Z"/>
+  <path d="M29,34 Q36,29 37,34 Q32,38 29,34 Z"/>
+</g>
+<!-- 水上小屋 -->
+<g>
+  <line x1="48" y1="50" x2="48" y2="60" stroke="#6b4a28" stroke-width="1"/>
+  <line x1="56" y1="50" x2="56" y2="60" stroke="#6b4a28" stroke-width="1"/>
+  <rect x="46" y="44" width="12" height="7" fill="#caa06a" stroke="#6b4a28" stroke-width="0.5"/>
+  <polygon points="45,44 52,38 59,44" fill="#8a6a4a" stroke="#4a3220" stroke-width="0.4"/>
+</g>
+</svg>

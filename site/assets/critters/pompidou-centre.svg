@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+<defs>
+  <linearGradient id="pcSteel" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#d8d4cc"/>
+    <stop offset="1" stop-color="#a8a498"/>
+  </linearGradient>
+</defs>
+<!-- 龐畢度中心：鋼骨玻璃外露結構＋外牆彩色管線（藍=空調、綠=水管、黃=電力、紅=手扶梯），高科技建築代表作 -->
+<rect x="8" y="30" width="64" height="38" fill="url(#pcSteel)" stroke="#6b6860" stroke-width="0.6"/>
+<g stroke-width="0" >
+  <rect x="12" y="34" width="56" height="4" fill="#4a90c4"/>
+  <rect x="12" y="40" width="56" height="4" fill="#4aa868"/>
+  <rect x="12" y="46" width="56" height="4" fill="#e8c840"/>
+</g>
+<!-- 正面的紅色管狀手扶梯，是本案最具代表性的識別特徵 -->
+<path d="M14,66 L62,18" fill="none" stroke="#c8402c" stroke-width="5" stroke-linecap="round"/>
+<path d="M14,66 L62,18" fill="none" stroke="#e86a50" stroke-width="2" stroke-linecap="round"/>
+<g fill="#6b6860">
+  <rect x="6" y="66" width="68" height="4"/>
+</g>
+</svg>

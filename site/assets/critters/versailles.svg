@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+<defs>
+  <linearGradient id="vsStone" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f0e6c8"/>
+    <stop offset="1" stop-color="#cbb988"/>
+  </linearGradient>
+  <linearGradient id="vsRoof" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#6b7b8a"/>
+    <stop offset="1" stop-color="#3f4b56"/>
+  </linearGradient>
+</defs>
+<!-- 凡爾賽宮：對稱的巴洛克宮殿立面，中央金色大門，前方幾何花園 -->
+<path d="M4,58 Q40,52 76,58 L76,64 L4,64 Z" fill="#6a9a5e" stroke="#3f6b36" stroke-width="0.5"/>
+<path d="M14,60 Q40,56 66,60" fill="none" stroke="#e8d070" stroke-width="1.2" opacity="0.8"/>
+<rect x="8" y="34" width="64" height="24" fill="url(#vsStone)" stroke="#8a7a50" stroke-width="0.6"/>
+<rect x="8" y="30" width="64" height="5" fill="url(#vsRoof)" stroke="#2a323a" stroke-width="0.5"/>
+<g fill="#9ab0c0" opacity="0.9">
+  <rect x="13" y="38" width="4" height="8"/>
+  <rect x="22" y="38" width="4" height="8"/>
+  <rect x="31" y="38" width="4" height="8"/>
+  <rect x="45" y="38" width="4" height="8"/>
+  <rect x="54" y="38" width="4" height="8"/>
+  <rect x="63" y="38" width="4" height="8"/>
+</g>
+<!-- 中央鍍金大門 -->
+<path d="M36,58 L36,44 Q40,40 44,44 L44,58 Z" fill="#e8c74a" stroke="#9a7a1a" stroke-width="0.6"/>
+<circle cx="40" cy="27" r="2.5" fill="#e8c74a" stroke="#9a7a1a" stroke-width="0.5"/>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+<defs>
+  <radialGradient id="pmLagoon" cx="45%" cy="40%" r="70%">
+    <stop offset="0" stop-color="#eaf6ee"/>
+    <stop offset="0.5" stop-color="#a8e0d4"/>
+    <stop offset="1" stop-color="#4fa89c"/>
+  </radialGradient>
+  <linearGradient id="pmRock" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#5a9a52"/>
+    <stop offset="1" stop-color="#3a6b38"/>
+  </linearGradient>
+</defs>
+<!-- 帛琉牛奶湖：石灰質白泥讓湖水呈現夢幻的乳白藍綠色，周圍是叢林覆蓋的石灰岩小島 -->
+<g fill="url(#pmRock)">
+  <ellipse cx="14" cy="26" rx="12" ry="14"/>
+  <ellipse cx="64" cy="20" rx="10" ry="12"/>
+  <ellipse cx="70" cy="56" rx="11" ry="13"/>
+  <ellipse cx="10" cy="60" rx="9" ry="11"/>
+</g>
+<ellipse cx="40" cy="42" rx="30" ry="26" fill="url(#pmLagoon)" stroke="#2f8a7c" stroke-width="0.5"/>
+<g opacity="0.5" fill="#ffffff">
+  <ellipse cx="32" cy="36" rx="6" ry="3"/>
+  <ellipse cx="48" cy="48" rx="7" ry="3"/>
+</g>
+<!-- 一艘小船 -->
+<path d="M36,54 Q40,51 44,54 L43,56 L37,56 Z" fill="#8a5a30" stroke="#4a3018" stroke-width="0.4"/>
+<line x1="40" y1="54" x2="40" y2="48" stroke="#4a3018" stroke-width="0.6"/>
+</svg>

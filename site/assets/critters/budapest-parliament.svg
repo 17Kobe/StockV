@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+<defs>
+  <linearGradient id="bpStone" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#d9c89a"/>
+    <stop offset="1" stop-color="#b09a68"/>
+  </linearGradient>
+  <linearGradient id="bpWater" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#4a7fa0"/>
+    <stop offset="1" stop-color="#1c4a66"/>
+  </linearGradient>
+</defs>
+<!-- 多瑙河 -->
+<rect x="0" y="62" width="80" height="18" fill="url(#bpWater)"/>
+<g opacity="0.35" stroke="#bfe0ee" stroke-width="0.8" fill="none">
+  <path d="M10,70 Q20,68 30,70"/>
+  <path d="M48,74 Q58,72 68,74"/>
+</g>
+<!-- 新哥德式國會大廈：對稱長立面、中央大圓頂、兩側尖塔 -->
+<rect x="10" y="40" width="60" height="24" fill="url(#bpStone)" stroke="#6b5a34" stroke-width="0.5"/>
+<g fill="#8a7648" stroke="#5c4c28" stroke-width="0.4">
+  <polygon points="14,40 16,30 18,40"/>
+  <polygon points="24,40 26,32 28,40"/>
+  <polygon points="52,40 54,32 56,40"/>
+  <polygon points="62,40 64,30 66,40"/>
+</g>
+<!-- 中央圓頂 -->
+<path d="M30,40 Q30,18 40,14 Q50,18 50,40 Z" fill="url(#bpStone)" stroke="#6b5a34" stroke-width="0.5"/>
+<path d="M36,16 L36,8 M44,16 L44,8" stroke="#6b5a34" stroke-width="1"/>
+<circle cx="40" cy="7" r="1.6" fill="#8a7648"/>
+<g fill="#5c4c28" opacity="0.5">
+  <rect x="17" y="44" width="2.5" height="6"/>
+  <rect x="25" y="44" width="2.5" height="6"/>
+  <rect x="53" y="44" width="2.5" height="6"/>
+  <rect x="60" y="44" width="2.5" height="6"/>
+</g>
+</svg>

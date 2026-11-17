@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+<defs>
+  <linearGradient id="poBrick" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#c8604a"/>
+    <stop offset="1" stop-color="#8a3a28"/>
+  </linearGradient>
+</defs>
+<!-- 台灣總統府：日治時期紅磚巴洛克建築，中央高塔是最具代表性的識別特徵 -->
+<rect x="10" y="48" width="60" height="22" fill="url(#poBrick)" stroke="#5c2418" stroke-width="0.5"/>
+<g fill="#e8d8b8" opacity="0.9">
+  <rect x="15" y="54" width="4" height="8"/>
+  <rect x="24" y="54" width="4" height="8"/>
+  <rect x="52" y="54" width="4" height="8"/>
+  <rect x="61" y="54" width="4" height="8"/>
+</g>
+<!-- 中央高塔 -->
+<rect x="33" y="18" width="14" height="32" fill="url(#poBrick)" stroke="#5c2418" stroke-width="0.5"/>
+<rect x="35" y="24" width="10" height="6" fill="#e8d8b8" opacity="0.9"/>
+<polygon points="31,18 40,6 49,18" fill="#5c7a68" stroke="#2f4a3a" stroke-width="0.5"/>
+<rect x="38" y="4" width="4" height="4" fill="#5c2418"/>
+</svg>

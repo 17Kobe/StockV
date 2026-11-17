@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+<defs>
+  <linearGradient id="btSlab" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#e4e0d6"/>
+    <stop offset="1" stop-color="#b8b2a2"/>
+  </linearGradient>
+</defs>
+<!-- 貝魯特垂直森林（Beirut Terraces）：不規則錯位疊起的懸挑樓板，每層邊緣都種滿植栽，跟米蘭垂直森林的「樹塔」不同，是「疊盤式空中花園」 -->
+<g>
+  <rect x="26" y="60" width="32" height="8" fill="url(#btSlab)" stroke="#7a7466" stroke-width="0.5"/>
+  <rect x="22" y="49" width="38" height="8" fill="url(#btSlab)" stroke="#7a7466" stroke-width="0.5"/>
+  <rect x="28" y="38" width="30" height="8" fill="url(#btSlab)" stroke="#7a7466" stroke-width="0.5"/>
+  <rect x="20" y="27" width="36" height="8" fill="url(#btSlab)" stroke="#7a7466" stroke-width="0.5"/>
+  <rect x="30" y="16" width="26" height="8" fill="url(#btSlab)" stroke="#7a7466" stroke-width="0.5"/>
+</g>
+<!-- 每層露台邊緣的綠色植栽 -->
+<g fill="#3f8a4a" stroke="#215c2a" stroke-width="0.3">
+  <circle cx="27" cy="60" r="2.4"/><circle cx="57" cy="60" r="2"/>
+  <circle cx="23" cy="49" r="2.2"/><circle cx="59" cy="49" r="2.4"/>
+  <circle cx="29" cy="38" r="2"/><circle cx="57" cy="38" r="2.2"/>
+  <circle cx="21" cy="27" r="2.2"/><circle cx="55" cy="27" r="2"/>
+  <circle cx="31" cy="16" r="2"/><circle cx="55" cy="16" r="2.2"/>
+</g>
+<g fill="#4a4538" opacity="0.5">
+  <rect x="36" y="52" width="6" height="7"/>
+  <rect x="34" y="41" width="6" height="7"/>
+  <rect x="40" y="30" width="6" height="7"/>
+  <rect x="36" y="19" width="6" height="7"/>
+</g>
+</svg>

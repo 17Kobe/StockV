@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+<defs>
+  <linearGradient id="knStone" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#e0c290"/>
+    <stop offset="1" stop-color="#b4895a"/>
+  </linearGradient>
+</defs>
+<!-- 卡納克神廟：古埃及大型列柱廳與方尖碑，巨大石柱是最具代表性的識別特徵 -->
+<rect x="4" y="60" width="72" height="4" fill="#c4a06c"/>
+<g fill="url(#knStone)" stroke="#7a5a30" stroke-width="0.5">
+  <rect x="8" y="30" width="7" height="30" rx="1"/>
+  <ellipse cx="11.5" cy="28" rx="5" ry="2.5"/>
+  <rect x="20" y="24" width="7" height="36" rx="1"/>
+  <ellipse cx="23.5" cy="22" rx="5" ry="2.5"/>
+  <rect x="32" y="28" width="7" height="32" rx="1"/>
+  <ellipse cx="35.5" cy="26" rx="5" ry="2.5"/>
+  <rect x="44" y="22" width="7" height="38" rx="1"/>
+  <ellipse cx="47.5" cy="20" rx="5" ry="2.5"/>
+  <rect x="56" y="28" width="7" height="32" rx="1"/>
+  <ellipse cx="59.5" cy="26" rx="5" ry="2.5"/>
+</g>
+<!-- 方尖碑 -->
+<polygon points="68,60 72,60 71,16 69,16" fill="#c49a68" stroke="#7a5a30" stroke-width="0.4"/>
+<polygon points="69,16 71,16 70,10" fill="#c49a68" stroke="#7a5a30" stroke-width="0.4"/>
+</svg>

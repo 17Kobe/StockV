@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+<defs>
+  <linearGradient id="gbTitan" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#e8e2d4"/>
+    <stop offset="0.5" stop-color="#b8b0a0"/>
+    <stop offset="1" stop-color="#8a8276"/>
+  </linearGradient>
+</defs>
+<!-- 畢爾包古根漢美術館：鈦金屬包覆的不規則曲面量體，像揚起的船帆，是解構主義建築代表作 -->
+<path d="M10,66 Q8,40 26,28 Q20,20 34,16 Q50,12 54,26 Q68,24 70,40 Q72,58 56,64 Q40,70 10,66 Z"
+      fill="url(#gbTitan)" stroke="#6b6458" stroke-width="0.6"/>
+<path d="M26,28 Q34,22 44,24 Q54,27 54,26" fill="none" stroke="#f4f0e4" stroke-width="1.2" opacity="0.7"/>
+<path d="M34,16 Q40,18 44,24" fill="none" stroke="#8a8276" stroke-width="0.8" opacity="0.6"/>
+<path d="M56,64 Q62,54 68,40" fill="none" stroke="#6b6458" stroke-width="0.8" opacity="0.5"/>
+<!-- 河面倒影 -->
+<ellipse cx="40" cy="72" rx="34" ry="4" fill="#4a7fa0" opacity="0.4"/>
+</svg>
