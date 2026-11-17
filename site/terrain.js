@@ -121,6 +121,59 @@ function newCanvas(w, h) {
 }
 
 const clamp = (v, a, b) => (v < a ? a : v > b ? b : v);
+
+/* ================= 四季 =================
+ * 季節直接畫進圖磚（樹的種類 / 顏色、地面積雪），所以每一幀完全不多花效能。
+ * 季節「相位」0~1 以北半球為準：0 = 冬至（12/21）、0.25 = 春分、0.5 = 夏至、0.75 = 秋分；南半球差半年。
+ * 相位量化成 SEASON_STEPS 段（約一個月一段），段數放進磁碟快取的鍵值：同一段期間都直接讀快取，
+ * 換段時看到的圖磚才重畫一次。網址加 ?season=winter / spring / summer / autumn（或 0~1 的數字）可以預覽。 */
+const SEASON_STEPS = 12;
+function seasonStep() {
+  let p = null;
+  try {
+    const v = new URLSearchParams(location.search).get('season');
+    if (v != null) p = { winter: 0, spring: 0.25, summer: 0.5, autumn: 0.88 }[v] ?? parseFloat(v);
+  } catch (err) { /* 略過 */ }
+  if (p == null || !isFinite(p)) {
+    const now = new Date();
+    const day = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 864e5);
+    p = (day - 355) / 365;
+  }
+  p = ((p % 1) + 1) % 1;
+  return Math.round(p * SEASON_STEPS) % SEASON_STEPS;
+}
+// Worker 端由主執行緒在每個工作裡帶過來（e.sq），兩邊一定一致
+const SEASON_Q = IS_WORKER ? 0 : seasonStep();
+// 環狀的分段線性內插：anchors = [[相位, 值], ...]，相位由小到大、首尾接起來
+function ring(anchors, p) {
+  const n = anchors.length;
+  for (let k = 0; k < n; k++) {
+    const [p0, v0] = anchors[k], [p1r, v1] = anchors[(k + 1) % n];
+    const p1 = k === n - 1 ? p1r + 1 : p1r;
+    const pp = p < p0 ? p + 1 : p;
+    if (pp >= p0 && pp <= p1) return v0 + (v1 - v0) * (p1 === p0 ? 0 : (pp - p0) / (p1 - p0));
+  }
+  return anchors[0][1];
+}
+// 緯度（絕對值）超過 snow：樹和地面積雪；介於 bare～snow：落葉樹只剩枝幹；介於 leaf～bare：落葉樹變秋色
+const SNOW_A = [[0, 48], [0.08, 47], [0.16, 52], [0.25, 58], [0.33, 70], [0.4, 90], [0.66, 90], [0.75, 70], [0.85, 60], [0.92, 55]];
+const LEAF_A = [[0.62, 62], [0.72, 52], [0.82, 40], [0.9, 32], [0.96, 30]];
+const seasonMemo = new Map();
+function seasonAt(step, latDeg) {
+  const south = latDeg < 0;
+  const key = step * 2 + (south ? 1 : 0);
+  let v = seasonMemo.get(key);
+  if (v) return v;
+  const p = ((step / SEASON_STEPS + (south ? 0.5 : 0)) % 1 + 1) % 1;
+  const snow = ring(SNOW_A, p);
+  // 秋色：9 月下旬～12 月初，由北往南掃下來
+  const leaf = p >= 0.62 && p <= 0.96 ? ring(LEAF_A, p) : 90;
+  // 冬天落葉：12 月～4 月初，積雪線往南 16 度內的落葉樹只剩枝幹
+  const bare = p >= 0.93 || p <= 0.22 ? snow - 16 : 90;
+  v = { snow, leaf: Math.min(leaf, snow), bare: Math.min(bare, snow) };
+  seasonMemo.set(key, v);
+  return v;
+}
 function rnd(a, b, c) {
   let h = Math.imul(a | 0, 374761393) ^ Math.imul(b | 0, 668265263) ^ Math.imul(c | 0, 1442695041);
   h = Math.imul(h ^ (h >>> 13), 1274126177);
@@ -201,6 +254,58 @@ function broadleaf(g, w, h, dark, light, hi) {
   g.strokeStyle = 'rgba(20,50,25,.5)'; g.lineWidth = w * 0.04;
   g.beginPath(); g.arc(w * 0.5, h * 0.42, w * 0.4, 0, Math.PI * 2); g.stroke();
 }
+// 積雪的針葉樹：每層樹冠上半截蓋白雪，底邊留一條雪線
+function pineSnow(g, w, h) {
+  pine(g, w, h);
+  const tiers = [[0.82, 0.42, 0.44], [0.62, 0.34, 0.24], [0.42, 0.24, 0.04]];
+  for (const [b, hw, tp] of tiers) {
+    const yb = tp + (b - tp) * 0.5, k = 0.5;
+    g.fillStyle = '#f5f9ff';
+    g.beginPath(); g.moveTo(w * (0.5 - hw * k), h * yb); g.lineTo(w * 0.5, h * tp);
+    g.lineTo(w * (0.5 + hw * k), h * yb);
+    g.quadraticCurveTo(w * 0.5, h * (yb - (b - tp) * 0.12), w * (0.5 - hw * k), h * yb); g.fill();
+    g.strokeStyle = 'rgba(245,249,255,.9)'; g.lineWidth = h * 0.025;
+    g.beginPath(); g.moveTo(w * (0.5 - hw * 0.92), h * (b - 0.01)); g.lineTo(w * (0.5 + hw * 0.92), h * (b - 0.01)); g.stroke();
+  }
+}
+// 落葉後的枝幹（snow：枝條上緣積雪）
+const BRANCHES = [[0.5, 0.5, 0.26, 0.2], [0.5, 0.45, 0.74, 0.18], [0.5, 0.42, 0.5, 0.1], [0.5, 0.62, 0.22, 0.42], [0.5, 0.58, 0.8, 0.38]];
+function bareTree(g, w, h, snow) {
+  shadow(g, w * 0.56, h * 0.92, w * 0.32, h * 0.05);
+  g.strokeStyle = '#6e4a2c';
+  g.lineWidth = w * 0.09; g.beginPath(); g.moveTo(w * 0.5, h * 0.92); g.lineTo(w * 0.5, h * 0.45); g.stroke();
+  g.lineWidth = w * 0.05;
+  for (const [x0, y0, x1, y1] of BRANCHES) { g.beginPath(); g.moveTo(w * x0, h * y0); g.quadraticCurveTo(w * (x0 + x1) / 2, h * y0, w * x1, h * y1); g.stroke(); }
+  if (!snow) return;
+  g.strokeStyle = '#f5f9ff'; g.lineWidth = w * 0.045;
+  for (const [x0, y0, x1, y1] of BRANCHES) { g.beginPath(); g.moveTo(w * (x0 + (x1 - x0) * 0.35), h * (y0 + (y1 - y0) * 0.35) - w * 0.035); g.quadraticCurveTo(w * (x0 + x1) / 2, h * y0 - w * 0.035, w * x1, h * y1 - w * 0.03); g.stroke(); }
+  g.fillStyle = '#f5f9ff'; g.beginPath(); g.ellipse(w * 0.5, h * 0.9, w * 0.3, h * 0.05, 0, 0, Math.PI * 2); g.fill();
+}
+// 椰子樹：微彎的樹幹 + 一叢往外下垂的寬葉片 + 椰子。地圖上只有十幾 px，葉子要畫得粗，縮小後才看得出是椰子樹
+function palm(g, w, h) {
+  shadow(g, w * 0.6, h * 0.93, w * 0.3, h * 0.05);
+  const cx = w * 0.44, cy = h * 0.34;
+  g.strokeStyle = '#7a5530'; g.lineWidth = w * 0.11;
+  g.beginPath(); g.moveTo(w * 0.56, h * 0.93); g.quadraticCurveTo(w * 0.62, h * 0.58, cx, cy); g.stroke();
+  g.strokeStyle = '#a77a45'; g.lineWidth = w * 0.045;
+  g.beginPath(); g.moveTo(w * 0.53, h * 0.9); g.quadraticCurveTo(w * 0.58, h * 0.58, cx - w * 0.02, cy + h * 0.02); g.stroke();
+  // 葉子：[角度, 長度, 下垂量]，先畫深色底再畫亮色中段
+  const fronds = [[-178, 0.44, 0.22], [-140, 0.4, 0.1], [-100, 0.3, 0.03], [-60, 0.4, 0.1], [-4, 0.44, 0.22], [155, 0.34, 0.2], [25, 0.34, 0.2]];
+  for (let pass = 0; pass < 2; pass++) {
+    for (const [deg, len, dr] of fronds) {
+      const a = (deg * Math.PI) / 180, L = w * len;
+      const tx = cx + Math.cos(a) * L, ty = cy + Math.sin(a) * L * 0.6 + h * dr;
+      const mx = cx + Math.cos(a) * L * 0.55, my = cy + Math.sin(a) * L * 0.45 - h * 0.06;
+      const k = w * (pass ? 0.055 : 0.12), nx = -Math.sin(a) * k, ny = Math.cos(a) * k;
+      g.fillStyle = pass ? '#6fcf5c' : '#23803a';
+      g.beginPath(); g.moveTo(cx, cy);
+      g.quadraticCurveTo(mx + nx, my + ny, tx, ty);
+      g.quadraticCurveTo(mx - nx, my - ny, cx, cy); g.fill();
+    }
+  }
+  g.fillStyle = '#5a3a14';
+  for (const [dx, dy] of [[-0.06, 0.05], [0.05, 0.06], [0, 0.1]]) { g.beginPath(); g.arc(cx + w * dx, cy + h * dy, w * 0.055, 0, Math.PI * 2); g.fill(); }
+}
 function jungle(g, w, h) {
   shadow(g, w * 0.55, h * 0.9, w * 0.42, h * 0.07);
   const blobs = [[0.3, 0.55, 0.26], [0.7, 0.55, 0.26], [0.5, 0.36, 0.3]];
@@ -223,6 +328,14 @@ function buildSprites() {
   SPR.tree = [mk(48, 56, (g, w, h) => broadleaf(g, w, h, '#2f7e38', '#4aa046', '#7fcb5e')), 0.9];
   SPR.treeY = [mk(48, 56, (g, w, h) => broadleaf(g, w, h, '#6f8a2a', '#9bb43c', '#cfd86a')), 0.9];
   SPR.jungle = [mk(60, 56, jungle), 0.86];
+  // 四季變化用的樹：積雪針葉樹、秋色闊葉樹（楓紅 / 橘 / 金黃）、落葉枝幹、積雪枝幹；海島 / 熱帶海岸的椰子樹
+  SPR.pineSnow = [mk(44, 64, pineSnow), 0.9];
+  SPR.maple = [mk(48, 56, (g, w, h) => broadleaf(g, w, h, '#a8341c', '#d9532a', '#f59a5c')), 0.9];
+  SPR.treeO = [mk(48, 56, (g, w, h) => broadleaf(g, w, h, '#b85e18', '#e58c2a', '#f8c766')), 0.9];
+  SPR.treeG = [mk(48, 56, (g, w, h) => broadleaf(g, w, h, '#a8861a', '#d9b635', '#f5e486')), 0.9];
+  SPR.bare = [mk(48, 56, (g, w, h) => bareTree(g, w, h, false)), 0.9];
+  SPR.bareSnow = [mk(48, 56, (g, w, h) => bareTree(g, w, h, true)), 0.9];
+  SPR.palm = [mk(48, 60, palm), 0.92];
   SPR.dune = [mk(84, 34, dune), 0.6];
 }
 
@@ -231,7 +344,7 @@ let diskOK = false;
 function newEntry(z, x, y, extra) {
   return Object.assign({
     z, x, y, ready: false, seen: frame, left: 2,
-    key: diskOK ? SRC_VER + '/' + z + '/' + x + '/' + y : null
+    key: diskOK ? SRC_VER + '/s' + SEASON_Q + '/' + z + '/' + x + '/' + y : null
   }, extra);
 }
 // 先查磁碟快取，沒有才排隊下載、重畫
@@ -399,7 +512,7 @@ function pump() {
         const id = ++jobId;
         jobs.set(id, e);
         w.busy++;
-        w.postMessage({ id, z: e.z, x: e.x, y: e.y, dem: e.demB, img: e.imgB, key: e.key, keep: !e.pf });
+        w.postMessage({ id, z: e.z, x: e.x, y: e.y, sq: SEASON_Q, dem: e.demB, img: e.imgB, key: e.key, keep: !e.pf });
         e.demB = e.imgB = null;
       }
     }
@@ -443,8 +556,32 @@ function pfPump() {
 function pfDone() { pfBusy--; pfKick(50); }
 
 /* ================= 單張圖磚的繪製 ================= */
+// 每個像素周圍 (2·rad+1)² 範圍內的陸地比例（可分離的方框模糊；超出圖磚沿用邊緣像素）
+function landFrac(water, rad) {
+  const N = TS * TS, E = TS - 1, tmp = new Float32Array(N), out = new Float32Array(N);
+  for (let r = 0; r < TS; r++) {
+    const o = r * TS;
+    let s = 0;
+    for (let c = -rad; c <= rad; c++) s += 1 - water[o + clamp(c, 0, E)];
+    for (let c = 0; c < TS; c++) {
+      tmp[o + c] = s;
+      s += (1 - water[o + Math.min(E, c + rad + 1)]) - (1 - water[o + Math.max(0, c - rad)]);
+    }
+  }
+  const win = (2 * rad + 1) * (2 * rad + 1);
+  for (let c = 0; c < TS; c++) {
+    let s = 0;
+    for (let r = -rad; r <= rad; r++) s += tmp[clamp(r, 0, E) * TS + c];
+    for (let r = 0; r < TS; r++) {
+      out[r * TS + c] = s / win;
+      s += tmp[Math.min(E, r + rad + 1) * TS + c] - tmp[Math.max(0, r - rad) * TS + c];
+    }
+  }
+  return out;
+}
 function render(e) {
   const { z, x, y } = e;
+  const SQ = e.sq ?? SEASON_Q;
   const N = TS * TS, zs = Math.pow(2, z);
 
   // ---- 1. 高度（Terrarium 編碼：R*256 + G + B/256 - 32768 公尺）----
@@ -488,6 +625,7 @@ function render(e) {
   const col = [0, 0, 0];
   for (let r = 0, i = 0; r < TS; r++) {
     const ar = Math.abs(lat[r]), m = mpp[r];
+    const snowLat = seasonAt(SQ, lat[r]).snow;
     for (let c = 0; c < TS; c++, i++) {
       const h = Hh[i];
       let ir = 120, ig = 150, ib = 80, L = 110, sat = 60;
@@ -535,6 +673,12 @@ function render(e) {
         // 影像白色、低彩度 → 雪
         const sw = Math.max(hs, clamp((L - 172) / 45, 0, 1) * clamp((48 - sat) / 30, 0, 1));
         mixInto(col, P.snow, sw);
+        // 季節積雪：超過積雪線的陸地蓋上一層雪（邊緣用雜訊做出斑駁，不要一條直線）；沙漠少一點
+        if (ar > snowLat - 6) {
+          const nz = vnoise(x * TS + c, y * TS + r, 18, 5) - 0.5;
+          const sn = clamp((ar - snowLat + nz * 8) / 5, 0, 1) * (t < 0.18 ? 0.45 : 0.78);
+          if (sn > 0) mixInto(col, P.snow, sn);
+        }
         bio[i] = sw > 0.5 ? 3 : fw > 0.45 ? 1 : t < 0.18 ? 2 : gw > 0.5 ? 4 : fw > 0.2 ? 5 : 0;
       }
       R[i] = col[0]; G[i] = col[1]; B[i] = col[2];
@@ -564,6 +708,9 @@ function render(e) {
       s += tmp[Math.min(E, r + rad + 1) * TS + c] - tmp[Math.max(0, r - rad) * TS + c];
     }
   }
+
+  // 較大範圍的陸地比例：判斷「靠海」（椰子樹用），跟上面的浪花 / 沙灘分開算
+  const lw = landFrac(water, z >= 6 ? 16 : 8);
 
   // ---- 5. 光影：誇張化的山體陰影，山地的稜線再加強對比 ----
   const lx = -0.62, ly = -0.62, lz = 0.48; // 西北方的光
@@ -621,14 +768,33 @@ function render(e) {
       const gx = x * 22 + cx, gy = y * 22 + cy;
       const px = cx * TC + rnd(gx, gy, z + 1) * TC, py = cy * TC + rnd(gx, gy, z + 2) * TC;
       const ci = clamp(py | 0, 0, TS - 1), cj = clamp(px | 0, 0, TS - 1), i = ci * TS + cj;
-      if (water[i] || lb[i] < 0.9) continue;
+      if (water[i]) continue;
+      const al = Math.abs(lat[ci]);
+      // 熱帶 / 亞熱帶（南北緯 27° 內）靠海的地方：種椰子樹（例如台灣南部、東南亞島嶼、加勒比海），可以種到離岸比較近
+      // 北回歸線以南的低地（例如台灣南部、海南島）就算離海遠一點也種椰子樹
+      const coast = al < 27 && (lw[i] < 0.97 || (al < 23.6 && Hh[i] < 250));
+      if (lb[i] < (coast ? 0.6 : 0.9)) continue;
       const b = bio[i], p = rnd(gx, gy, z + 3), q = rnd(gx, gy, z + 4);
       if (rock[i] > 0.35) continue; // 陡峭山地不種樹
-      if (!(b === 1 ? p < 0.92 : b === 5 ? p < 0.35 : b === 0 ? p < 0.04 : false)) continue;
-      const al = Math.abs(lat[ci]);
-      const type = al < 20 ? (q < 0.8 ? 'jungle' : 'tree') : al > 50 ? 'pine' : q < 0.45 ? 'pine' : b === 5 ? 'treeY' : 'tree';
-    
-      const size = (type === 'jungle' ? 13 : type === 'pine' ? 9 : 10.5) * (0.85 + q * 0.3);
+      const dense = b === 1 ? p < 0.92 : b === 5 ? p < 0.35 : b === 0 ? p < 0.04 : false;
+      // 熱帶沒有凍原：灰色低彩度（b === 4）在這裡多半是城鎮 / 農田，也可以種
+      const palmy = coast && b !== 3 && (b === 2 ? p < 0.15 : p < 0.45);
+      if (!dense && !palmy) continue;
+      let type;
+      if (coast && (!dense || q < 0.6)) type = 'palm';
+      else type = al < 20 ? (q < 0.8 ? 'jungle' : 'tree') : al > 50 ? 'pine' : q < 0.45 ? 'pine' : b === 5 ? 'treeY' : 'tree';
+      // 季節：每棵樹的分界線各自錯開幾度，季節交界才不會是一條直線
+      if (type === 'pine' || type === 'tree' || type === 'treeY') {
+        const S = seasonAt(SQ, lat[ci]), jit = (rnd(gx, gy, z + 5) - 0.5) * 6, r2 = rnd(gx, gy, z + 6);
+        if (type === 'pine') { if (al > S.snow + jit) type = 'pineSnow'; }
+        else if (al > S.snow + jit) type = 'bareSnow';
+        else if (al > S.bare + jit) type = 'bare';
+        else if (al > S.leaf + jit && r2 < 0.25 + clamp((al - S.leaf - jit) / 6, 0, 1) * 0.65) {
+          const r3 = rnd(gx, gy, z + 7);
+          type = r3 < 0.4 ? 'maple' : r3 < 0.75 ? 'treeO' : 'treeG';
+        }
+      }
+      const size = (type === 'jungle' ? 13 : type === 'palm' ? 14 : type === 'pine' || type === 'pineSnow' ? 9 : 10.5) * (0.85 + q * 0.3);
       list.push([px, py, type, size]);
     }
   }
@@ -772,7 +938,7 @@ if (IS_WORKER) {
     const d = ev.data;
     // 這個瀏覽器的 OffscreenCanvas 不能用：請主執行緒改回自己畫
     if (ok !== true) { self.postMessage({ id: d.id, unsupported: true, err: ok }); return; }
-    const e = { z: d.z, x: d.x, y: d.y };
+    const e = { z: d.z, x: d.x, y: d.y, sq: d.sq };
     e.dem = await decode(d.dem);
     e.img = await decode(d.img);
     try {
