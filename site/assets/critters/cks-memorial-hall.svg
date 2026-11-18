@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 中正紀念堂：白色大理石主堂坐落在高高的白色基座上，頂部為深藍色琉璃瓦八角形雙層攢尖屋頂與金色寶頂，正面寬闊白色大階梯，兩側紅花與綠樹 -->
+  <defs>
+    <linearGradient id="cksBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4a86e0"/>
+      <stop offset=".5" stop-color="#1f4fb0"/>
+      <stop offset="1" stop-color="#14327a"/>
+    </linearGradient>
+    <linearGradient id="cksBlueV" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f78d6"/>
+      <stop offset="1" stop-color="#173a8a"/>
+    </linearGradient>
+    <linearGradient id="cksWhite" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".6" stop-color="#eeeef2"/>
+      <stop offset="1" stop-color="#c8c9d2"/>
+    </linearGradient>
+    <linearGradient id="cksStep" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f4f7"/>
+      <stop offset="1" stop-color="#c9cad3"/>
+    </linearGradient>
+    <linearGradient id="cksGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffe58a"/>
+      <stop offset="1" stop-color="#c8901e"/>
+    </linearGradient>
+    <radialGradient id="cksBush" cx=".4" cy=".35" r=".7">
+      <stop offset="0" stop-color="#6fc25a"/>
+      <stop offset="1" stop-color="#2a7a34"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 地面陰影 -->
+  <ellipse cx="40" cy="75" rx="34" ry="3.2" fill="#000" opacity=".2"/>
+
+  <!-- 基座（兩層白色台基） -->
+  <path d="M10 56 H70 V73 H10Z" fill="url(#cksWhite)" stroke="#7a7c8a" stroke-width=".5"/>
+  <path d="M10 58 H70" stroke="#a8aab6" stroke-width=".4"/>
+  <path d="M16 45 H64 V56 H16Z" fill="url(#cksWhite)" stroke="#7a7c8a" stroke-width=".5"/>
+  <path d="M16 47 H64" stroke="#a8aab6" stroke-width=".4"/>
+  <g fill="#c8c9d2">
+    <rect x="13" y="61" width="5" height="8" rx=".5"/><rect x="62" y="61" width="5" height="8" rx=".5"/>
+    <rect x="19" y="49" width="4" height="5" rx=".5"/><rect x="57" y="49" width="4" height="5" rx=".5"/>
+  </g>
+
+  <!-- 主堂牆身 -->
+  <rect x="24" y="31" width="32" height="14" fill="url(#cksWhite)" stroke="#7a7c8a" stroke-width=".5"/>
+  <path d="M24 33 H56" stroke="#a8aab6" stroke-width=".4"/>
+  <!-- 正門 -->
+  <path d="M35 45 V37.5 Q40 33 45 37.5 V45Z" fill="#1f3f86" stroke="#5a5c6a" stroke-width=".4"/>
+  <path d="M40 34.8 V45" stroke="#d9a63a" stroke-width=".5"/>
+  <path d="M36.6 38.6 H43.4" stroke="#d9a63a" stroke-width=".4"/>
+  <rect x="27" y="36" width="3" height="6" fill="#d5d6de"/><rect x="50" y="36" width="3" height="6" fill="#d5d6de"/>
+
+  <!-- 下層藍色八角屋簷 -->
+  <path d="M22 31.5 L58 31.5 Q60 31 62.5 29.6 L56 24 L24 24 L17.5 29.6 Q20 31 22 31.5Z" fill="url(#cksBlue)" stroke="#0f2560" stroke-width=".5" stroke-linejoin="round"/>
+  <path d="M30 24 L26.5 31.5 M50 24 L53.5 31.5" stroke="#0f2560" stroke-width=".5"/>
+  <path d="M17.5 29.6 Q20 31 22 31.5 H58 Q60 31 62.5 29.6" fill="none" stroke="#7fb0ff" stroke-width=".6" opacity=".8"/>
+  <rect x="27" y="22" width="26" height="2.4" fill="url(#cksWhite)" stroke="#7a7c8a" stroke-width=".4"/>
+
+  <!-- 上層八角攢尖頂 -->
+  <path d="M40 7.5 L52.5 19.5 Q55 21.5 57 21.6 Q55 22.6 52 22.6 L28 22.6 Q25 22.6 23 21.6 Q25 21.5 27.5 19.5Z" fill="url(#cksBlue)" stroke="#0f2560" stroke-width=".5" stroke-linejoin="round"/>
+  <path d="M40 7.5 L35 22.6 M40 7.5 L45 22.6" stroke="#0f2560" stroke-width=".5"/>
+  <path d="M39 9.5 L31 19" stroke="#8fbaff" stroke-width=".7" opacity=".6" stroke-linecap="round"/>
+  <path d="M23 21.6 Q25 22.6 28 22.6 H52 Q55 22.6 57 21.6" fill="none" stroke="#7fb0ff" stroke-width=".6" opacity=".8"/>
+
+  <!-- 金色寶頂 -->
+  <path d="M38.6 8.6 H41.4 L41 7 H39Z" fill="url(#cksGold)" stroke="#8a6010" stroke-width=".3"/>
+  <ellipse cx="40" cy="5.6" rx="1.6" ry="1.7" fill="url(#cksGold)" stroke="#8a6010" stroke-width=".3"/>
+  <path d="M40 4 V1.8" stroke="#c8901e" stroke-width=".7" stroke-linecap="round"/>
+  <circle cx="39.4" cy="5" r=".45" fill="#fff" opacity=".8">
+    <animate attributeName="opacity" values=".2;1;.2" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- 正面大階梯 -->
+  <path d="M33 45 H47 L53 73 H27Z" fill="url(#cksStep)" stroke="#7a7c8a" stroke-width=".45"/>
+  <g stroke="#a8aab6" stroke-width=".35">
+    <path d="M32.6 47 H47.4 M32.2 49 H47.8 M31.7 51 H48.3 M31.3 53 H48.7 M30.9 55 H49.1 M30.4 57 H49.6 M30 59 H50 M29.6 61 H50.4 M29.1 63 H50.9 M28.7 65 H51.3 M28.3 67 H51.7 M27.9 69 H52.1 M27.4 71 H52.6"/>
+  </g>
+  <path d="M38.6 45 H41.4 L42.2 73 H37.8Z" fill="#dcdde4" stroke="#a8aab6" stroke-width=".3"/>
+
+  <!-- 兩側綠樹與紅花 -->
+  <g stroke="#1f5a28" stroke-width=".4">
+    <circle cx="7" cy="66" r="5.5" fill="url(#cksBush)"/>
+    <circle cx="14" cy="70" r="4.2" fill="url(#cksBush)"/>
+    <circle cx="73" cy="66" r="5.5" fill="url(#cksBush)"/>
+    <circle cx="66" cy="70" r="4.2" fill="url(#cksBush)"/>
+  </g>
+  <g fill="#e2333a" stroke="#8a1a1e" stroke-width=".2">
+    <circle cx="5" cy="65" r="1"/><circle cx="8.5" cy="63" r="1"/><circle cx="9" cy="68" r="1"/><circle cx="4.5" cy="69" r=".9"/>
+    <circle cx="13" cy="69" r=".9"/><circle cx="16" cy="71.5" r=".9"/>
+    <circle cx="75" cy="65" r="1"/><circle cx="71.5" cy="63" r="1"/><circle cx="71" cy="68" r="1"/><circle cx="75.5" cy="69" r=".9"/>
+    <circle cx="67" cy="69" r=".9"/><circle cx="64" cy="71.5" r=".9"/>
+  </g>
+</svg>

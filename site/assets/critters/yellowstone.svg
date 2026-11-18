@@ -1,27 +1,78 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- 黃石國家公園：老忠實間歇泉從白灰色泉華丘筆直噴出高聳水柱與白色蒸氣，前方是大稜鏡溫泉（深藍→青綠→黃→橘紅的同心彩環），兩側有扭葉松，旁邊一頭小野牛 -->
   <defs>
-    <radialGradient id="sp" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#4fd8d0"/><stop offset=".45" stop-color="#4aa8e0"/><stop offset=".6" stop-color="#f2c648"/><stop offset=".78" stop-color="#e8743a"/><stop offset="1" stop-color="#b03a22"/></radialGradient>
-    <linearGradient id="pl" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cfeefa" stop-opacity=".25"/></linearGradient>
-    <linearGradient id="ysMountain" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9aa6b8"/><stop offset="1" stop-color="#6c7a90"/></linearGradient>
-    <linearGradient id="ysGround" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fb86c"/><stop offset="1" stop-color="#689448"/></linearGradient>
+    <radialGradient id="ysnSpring" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#1c4fa8"/>
+      <stop offset=".28" stop-color="#2a8fd6"/>
+      <stop offset=".46" stop-color="#4fd6d0"/>
+      <stop offset=".58" stop-color="#9fe0a0"/>
+      <stop offset=".68" stop-color="#f6d84a"/>
+      <stop offset=".82" stop-color="#f08a2c"/>
+      <stop offset="1" stop-color="#b8461e"/>
+    </radialGradient>
+    <linearGradient id="ysnMound" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f2ea"/>
+      <stop offset="1" stop-color="#b9b4a6"/>
+    </linearGradient>
+    <linearGradient id="ysnGround" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e9e2cc"/>
+      <stop offset="1" stop-color="#c8b994"/>
+    </linearGradient>
+    <linearGradient id="ysnJet" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".7" stop-color="#eaf7fc"/>
+      <stop offset="1" stop-color="#d6eef8" stop-opacity=".6"/>
+    </linearGradient>
+    <radialGradient id="ysnSteam" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".7" stop-color="#eef3f6"/>
+      <stop offset="1" stop-color="#c3d0d8"/>
+    </radialGradient>
+    <linearGradient id="ysnPine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4f9a4a"/>
+      <stop offset="1" stop-color="#21582e"/>
+    </linearGradient>
   </defs>
-  <!-- 黃石公園：老忠實泉定時噴發，前方是七彩的大稜鏡溫泉，背後有松林與山 -->
-  <path d="M0 74 L22 44 L40 62 L56 36 L78 64 L96 46 L128 78 V90 H0Z" fill="url(#ysMountain)" stroke="#4a5468" stroke-width="0.7" stroke-linejoin="round"/>
-  <path d="M56 36 L62 46 L52 46Z M22 44 L27 52 L17 52Z M96 46 L101 54 L91 54Z" fill="#fff"/>
-  <!-- 地面：自然起伏的邊緣，不是硬切矩形 -->
-  <path d="M0 88 Q16 84 32 88 Q48 92 64 87 Q82 82 98 88 Q112 92 128 86 V128 H0Z" fill="url(#ysGround)" stroke="#4e6e36" stroke-width="0.7"/>
-  <g fill="#2f6a3a" stroke="#1d4322" stroke-width="0.5"><path d="M6 96 L12 76 L18 96Z M16 100 L23 78 L30 100Z M98 98 L105 78 L112 98Z M110 100 L117 80 L124 100Z M88 96 L94 80 L100 96Z"/></g>
-  <!-- 彩虹溫泉 -->
-  <ellipse cx="64" cy="112" rx="50" ry="12" fill="url(#sp)" stroke="#8a5a28" stroke-width="0.6"/>
-  <ellipse cx="64" cy="112" rx="50" ry="12" fill="none" stroke="#fff8e0" stroke-width="0.6" opacity=".3"/>
-  <!-- 噴發的間歇泉 -->
-  <path d="M60 106 Q64 112 68 106 L66 98 L62 98Z" fill="#ddd6c4" stroke="#8c8368" stroke-width="0.5"/>
-  <g transform="translate(64 100)">
-    <g>
-      <animateTransform attributeName="transform" type="scale" values="1 .1;1 1;1 1;1 .1" keyTimes="0;.25;.7;1" dur="5s" repeatCount="indefinite"/>
-      <path d="M-4 0 Q-6 -30 -10 -50 Q-4 -62 0 -66 Q4 -62 10 -50 Q6 -30 4 0Z" fill="url(#pl)"/>
-      <circle cx="-9" cy="-54" r="7" fill="#fff" opacity=".85"/><circle cx="9" cy="-52" r="8" fill="#fff" opacity=".85"/><circle cx="0" cy="-66" r="9" fill="#fff" opacity=".9"/>
-    </g>
+  <!-- 地面陰影與泉華地 -->
+  <ellipse cx="64" cy="114" rx="58" ry="9" fill="#000" opacity=".18"/>
+  <path d="M8 110 Q10 92 34 88 Q64 82 94 88 Q120 92 120 110 Q64 120 8 110 Z" fill="url(#ysnGround)" stroke="#9c8c66" stroke-width="1"/>
+  <!-- 扭葉松 -->
+  <g stroke="#173f22" stroke-width=".9" fill="url(#ysnPine)">
+    <rect x="15.2" y="86" width="2.6" height="8" fill="#6b4a2a"/>
+    <path d="M16.5 48 L24 70 L20 70 L26 88 L7 88 L13 70 L9 70 Z"/>
+    <rect x="26.2" y="88" width="2.2" height="6" fill="#6b4a2a"/>
+    <path d="M27.3 60 L33 76 L30 76 L35 90 L19.6 90 L24.6 76 L21.6 76 Z"/>
+    <rect x="109" y="84" width="2.6" height="8" fill="#6b4a2a"/>
+    <path d="M110.3 44 L118 67 L114 67 L120 86 L100.6 86 L106.6 67 L102.6 67 Z"/>
+    <rect x="99" y="87" width="2.2" height="6" fill="#6b4a2a"/>
+    <path d="M100 62 L105.5 77 L102.6 77 L107.5 90 L92.5 90 L97.4 77 L94.5 77 Z"/>
   </g>
-  <g fill="#fff" opacity=".6"><circle cx="40" cy="104" r="3"><animate attributeName="cy" values="106;96;106" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values=".6;0;.6" dur="3s" repeatCount="indefinite"/></circle><circle cx="92" cy="106" r="2.6"><animate attributeName="cy" values="108;98;108" dur="3.6s" repeatCount="indefinite"/><animate attributeName="opacity" values=".6;0;.6" dur="3.6s" repeatCount="indefinite"/></circle></g>
+  <!-- 蒸氣雲 -->
+  <g fill="url(#ysnSteam)" stroke="#9fb0bb" stroke-width=".9">
+    <path d="M40 30 Q34 30 34 23 Q34 15 43 16 Q45 6 56 8 Q62 1 72 6 Q82 3 86 12 Q95 12 94 21 Q98 29 89 31 Q80 36 72 31 Q64 36 56 31 Q46 36 40 30 Z">
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -1.5;0 0" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  <!-- 間歇泉水柱 -->
+  <path d="M57 76 Q58 52 56.5 30 Q64 26 71.5 30 Q70 52 71 76 Z" fill="url(#ysnJet)" stroke="#a9c4d2" stroke-width="1"/>
+  <path d="M61.5 74 Q62 52 61 32 M66.5 74 Q66 52 67 32" stroke="#cfe6f0" stroke-width="1.2" fill="none" opacity=".9"/>
+  <g fill="#ffffff" stroke="#b6c8d2" stroke-width=".8">
+    <circle cx="54" cy="44" r="4"/>
+    <circle cx="74" cy="52" r="4.5"/>
+    <circle cx="53" cy="62" r="3.5"/>
+    <circle cx="75" cy="68" r="3.5"/>
+  </g>
+  <!-- 泉華丘 -->
+  <path d="M42 86 Q48 74 58 73 Q64 71 70 73 Q80 74 86 86 Q64 90 42 86 Z" fill="url(#ysnMound)" stroke="#8e887a" stroke-width="1"/>
+  <path d="M50 80 Q56 78 60 79 M70 79 Q75 78 79 81" stroke="#a49e90" stroke-width=".9" fill="none"/>
+  <!-- 大稜鏡溫泉 -->
+  <ellipse cx="62" cy="102" rx="36" ry="10.5" fill="url(#ysnSpring)" stroke="#8a3416" stroke-width="1"/>
+  <ellipse cx="62" cy="101.2" rx="13" ry="3.4" fill="#ffffff" opacity=".25">
+    <animate attributeName="opacity" values=".15;.35;.15" dur="2.6s" repeatCount="indefinite"/>
+  </ellipse>
+  <!-- 野牛 -->
+  <g transform="translate(96 96)" stroke="#2a170c" stroke-width=".8">
+    <path d="M2 4 Q2 -3 9 -4 Q14 -6 17 -1 Q20 0 20 4 L19 9 L17 9 L16.5 6 L7 6 L6 9 L4 9 L3.5 6 Q1 6 2 4 Z" fill="#6b3f1f"/>
+    <path d="M14.5 -3 Q20 -4 21 2 Q21 6 18 6 Q15 5 14.5 -3 Z" fill="#3e2412"/>
+  </g>
 </svg>

@@ -1,48 +1,122 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 哈爾濱冰雪大世界：夜間由半透明冰磚砌成的冰雪城堡，內部打上藍、紫、粉、綠、金色 LED 燈光；中央高塔尖頂、兩側洋蔥頂塔樓、冰磚紋理、雪地與閃爍亮點 -->
   <defs>
-    <linearGradient id="iceMain" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#eafcff"/><stop offset="60%" stop-color="#aee4f0"/><stop offset="100%" stop-color="#6fb8d6"/>
+    <linearGradient id="hw-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#effcff"/><stop offset=".45" stop-color="#7fd8ff"/><stop offset="1" stop-color="#2a74e0"/>
     </linearGradient>
-    <linearGradient id="iceSide" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#cdeef7"/><stop offset="100%" stop-color="#5a9fc0"/>
+    <linearGradient id="hw-purple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6ecff"/><stop offset=".45" stop-color="#bf92ff"/><stop offset="1" stop-color="#6534cc"/>
     </linearGradient>
-    <linearGradient id="snowGround" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#eef8fc"/><stop offset="100%" stop-color="#c9e4ee"/>
+    <linearGradient id="hw-pink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff0f8"/><stop offset=".45" stop-color="#ff92d2"/><stop offset="1" stop-color="#cc3388"/>
     </linearGradient>
-    <radialGradient id="neonPink" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ff5ec4" stop-opacity="0.55"/><stop offset="100%" stop-color="#ff5ec4" stop-opacity="0"/>
+    <linearGradient id="hw-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ecfff4"/><stop offset=".45" stop-color="#78f0b4"/><stop offset="1" stop-color="#16a068"/>
+    </linearGradient>
+    <linearGradient id="hw-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffbe4"/><stop offset=".45" stop-color="#ffd660"/><stop offset="1" stop-color="#e08a14"/>
+    </linearGradient>
+    <linearGradient id="hw-sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".35" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#1a1050" stop-opacity=".25"/>
+    </linearGradient>
+    <linearGradient id="hw-snow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#c4dcf2"/>
+    </linearGradient>
+    <radialGradient id="hw-halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#9fe8ff" stop-opacity=".35"/><stop offset="1" stop-color="#9fe8ff" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="neonCyan" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#3ff0ff" stop-opacity="0.55"/><stop offset="100%" stop-color="#3ff0ff" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="neonOrange" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffb13f" stop-opacity="0.5"/><stop offset="100%" stop-color="#ffb13f" stop-opacity="0"/>
-    </radialGradient>
+    <pattern id="hw-brick" patternUnits="userSpaceOnUse" width="4" height="2.4">
+      <path d="M0,0.1 H4 M0,1.3 H4 M1,0.1 V1.3 M3,1.3 V2.4" stroke="#fff" stroke-width="0.25" fill="none" opacity=".6"/>
+    </pattern>
+    <g id="hw-star">
+      <path d="M0,-2 Q0.3,-0.3 2,0 Q0.3,0.3 0,2 Q-0.3,0.3 -2,0 Q-0.3,-0.3 0,-2 Z" fill="#fff"/>
+    </g>
   </defs>
-  <rect x="0" y="74" width="80" height="6" fill="url(#snowGround)"/>
-  <ellipse cx="22" cy="60" rx="16" ry="18" fill="url(#neonPink)">
-    <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2.6s" repeatCount="indefinite"/>
+
+  <!-- 光暈 -->
+  <ellipse cx="40" cy="44" rx="40" ry="32" fill="url(#hw-halo)">
+    <animate attributeName="opacity" values="1;.7;1" dur="4s" repeatCount="indefinite"/>
   </ellipse>
-  <ellipse cx="56" cy="58" rx="16" ry="18" fill="url(#neonCyan)">
-    <animate attributeName="opacity" values="0.8;0.5;0.8" dur="3.1s" repeatCount="indefinite"/>
-  </ellipse>
-  <ellipse cx="40" cy="50" rx="14" ry="16" fill="url(#neonOrange)">
-    <animate attributeName="opacity" values="0.6;0.9;0.6" dur="2.2s" repeatCount="indefinite"/>
-  </ellipse>
-  <path d="M4,78 L4,46 L13,34 L22,46 L22,78 Z" fill="url(#iceSide)" stroke="#3f7a94" stroke-width="0.4"/>
-  <path d="M58,78 L58,44 L67,32 L76,44 L76,78 Z" fill="url(#iceSide)" stroke="#3f7a94" stroke-width="0.4"/>
-  <path d="M20,78 L20,38 L30,38 L30,30 L50,30 L50,38 L60,38 L60,78 Z" fill="url(#iceMain)" stroke="#3f7a94" stroke-width="0.5"/>
-  <g fill="url(#iceMain)" stroke="#3f7a94" stroke-width="0.4">
-    <rect x="21" y="32" width="5" height="6"/><rect x="29" y="24" width="5" height="6"/><rect x="37" y="20" width="6" height="10"/><rect x="46" y="24" width="5" height="6"/><rect x="54" y="32" width="5" height="6"/>
+
+  <!-- 左側粉色城牆 -->
+  <g stroke="#8a2060" stroke-width="0.5" stroke-linejoin="round">
+    <path d="M3,70 L3,54 L5,54 L5,52 L7.5,52 L7.5,54 L10,54 L10,52 L12.5,52 L12.5,54 L15,54 L15,70 Z" fill="url(#hw-pink)"/>
   </g>
-  <path d="M36,20 L40,8 L44,20 Z" fill="url(#iceMain)" stroke="#3f7a94" stroke-width="0.4"/>
-  <g stroke="#3f7a94" stroke-width="0.35" opacity="0.6">
-    <line x1="20" y1="50" x2="60" y2="50"/>
-    <line x1="20" y1="62" x2="60" y2="62"/>
-    <line x1="30" y1="38" x2="30" y2="78"/>
-    <line x1="50" y1="38" x2="50" y2="78"/>
+  <path d="M3,70 L3,54 L15,54 L15,70 Z" fill="url(#hw-brick)"/>
+  <!-- 右側金色塔樓 -->
+  <g stroke="#9a5a08" stroke-width="0.5" stroke-linejoin="round">
+    <path d="M64,70 L64,52 L68,52 L68,48 L73,38 L78,48 L78,70 Z" fill="url(#hw-gold)"/>
   </g>
-  <path d="M35,78 L35,64 Q40,58 45,64 L45,78 Z" fill="#ffd9f0" opacity="0.8">
-    <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2.4s" repeatCount="indefinite"/>
-  </path>
+  <path d="M64,70 L64,52 L68,52 L68,48 L78,48 L78,70 Z" fill="url(#hw-brick)"/>
+  <path d="M73,38 L73,34" stroke="#9a5a08" stroke-width="0.6" stroke-linecap="round"/>
+
+  <!-- 左紫色洋蔥頂塔 -->
+  <g stroke="#3e1a8a" stroke-width="0.5" stroke-linejoin="round">
+    <rect x="12" y="38" width="12" height="32" fill="url(#hw-purple)"/>
+    <rect x="12" y="38" width="12" height="32" fill="url(#hw-brick)" stroke="none"/>
+    <rect x="12" y="38" width="12" height="32" fill="url(#hw-sheen)" stroke="none"/>
+    <path d="M14.5,38 C10.5,36 11,31 16,28 Q17.6,27 18,24.5 Q18.4,27 20,28 C25,31 25.5,36 21.5,38 Z" fill="url(#hw-pink)"/>
+    <path d="M18,24.5 L18,20.5" stroke-width="0.6"/>
+    <rect x="11" y="37.2" width="14" height="1.6" rx="0.5" fill="#e6d8ff"/>
+    <path d="M16,50 Q16,47 18,47 Q20,47 20,50 L20,53 L16,53 Z" fill="#fff6c8" stroke="#8a6ad0"/>
+  </g>
+  <!-- 右綠色洋蔥頂塔 -->
+  <g stroke="#0a6a42" stroke-width="0.5" stroke-linejoin="round">
+    <rect x="55" y="40" width="12" height="30" fill="url(#hw-green)"/>
+    <rect x="55" y="40" width="12" height="30" fill="url(#hw-brick)" stroke="none"/>
+    <rect x="55" y="40" width="12" height="30" fill="url(#hw-sheen)" stroke="none"/>
+    <path d="M57.5,40 C53.5,38 54,33 59,30 Q60.6,29 61,26.5 Q61.4,29 63,30 C68,33 68.5,38 64.5,40 Z" fill="url(#hw-gold)" stroke="#9a5a08"/>
+    <path d="M61,26.5 L61,22.5" stroke-width="0.6"/>
+    <rect x="54" y="39.2" width="14" height="1.6" rx="0.5" fill="#d8ffe8"/>
+    <path d="M59,52 Q59,49 61,49 Q63,49 63,52 L63,55 L59,55 Z" fill="#fff6c8" stroke="#3aa878"/>
+  </g>
+
+  <!-- 中央藍色高塔 -->
+  <g stroke="#173e9a" stroke-width="0.55" stroke-linejoin="round">
+    <path d="M29,70 L29,48 L51,48 L51,70 Z" fill="url(#hw-blue)"/>
+    <path d="M29,70 L29,48 L51,48 L51,70 Z" fill="url(#hw-brick)" stroke="none"/>
+    <path d="M29,70 L29,48 L51,48 L51,70 Z" fill="url(#hw-sheen)" stroke="none"/>
+    <path d="M33,48 L33,32 L47,32 L47,48 Z" fill="url(#hw-purple)"/>
+    <path d="M33,48 L33,32 L47,32 L47,48 Z" fill="url(#hw-brick)" stroke="none"/>
+    <path d="M33,48 L33,32 L47,32 L47,48 Z" fill="url(#hw-sheen)" stroke="none"/>
+    <path d="M36.5,32 L36.5,22 L43.5,22 L43.5,32 Z" fill="url(#hw-blue)"/>
+    <path d="M36.5,32 L36.5,22 L43.5,22 L43.5,32 Z" fill="url(#hw-sheen)" stroke="none"/>
+    <path d="M35.6,22 L40,5 L44.4,22 Z" fill="url(#hw-gold)" stroke="#9a5a08"/>
+    <path d="M40,5 L40,2.5" stroke="#9a5a08" stroke-width="0.6"/>
+    <!-- 角樓小尖塔 -->
+    <path d="M27.6,48 L30.5,39 L33.4,48 Z" fill="url(#hw-pink)" stroke="#8a2060"/>
+    <path d="M46.6,48 L49.5,39 L52.4,48 Z" fill="url(#hw-green)" stroke="#0a6a42"/>
+    <path d="M32,32.4 L34,27 L36,32.4 Z M44,32.4 L46,27 L48,32.4 Z" fill="url(#hw-gold)" stroke="#9a5a08"/>
+    <rect x="28" y="47.2" width="24" height="1.6" rx="0.5" fill="#e4f8ff"/>
+    <rect x="32" y="31.2" width="16" height="1.4" rx="0.5" fill="#efe4ff"/>
+    <!-- 拱門與窗 -->
+    <path d="M36,70 L36,62 Q36,57 40,57 Q44,57 44,62 L44,70 Z" fill="#fff4b8" stroke="#2a5ac0"/>
+    <path d="M38.2,42 Q38.2,39 40,39 Q41.8,39 41.8,42 L41.8,45 L38.2,45 Z" fill="#fff4b8"/>
+    <path d="M39,29 Q39,27 40,27 Q41,27 41,29 L41,30.6 L39,30.6 Z" fill="#ffe0f4"/>
+    <path d="M31.5,56 h3 v3.5 h-3 Z M45.5,56 h3 v3.5 h-3 Z" fill="#d6fff0"/>
+  </g>
+  <path d="M38.6,9 L37,22" stroke="#fff" stroke-width="0.6" opacity=".8"/>
+
+  <!-- 雪地 -->
+  <path d="M0,70.5 Q20,67 40,69.5 Q60,67 80,70.5 L80,75 Q40,79.5 0,75 Z" fill="url(#hw-snow)" stroke="#9cb8d6" stroke-width="0.5"/>
+  <g opacity=".45">
+    <ellipse cx="18" cy="72" rx="7" ry="1.2" fill="#b98aff"/>
+    <ellipse cx="40" cy="72.6" rx="9" ry="1.3" fill="#6fc8ff"/>
+    <ellipse cx="61" cy="72" rx="7" ry="1.2" fill="#6ff0b0"/>
+  </g>
+
+  <!-- 閃光 -->
+  <use href="#hw-star" transform="translate(9,40) scale(.9)">
+    <animate attributeName="opacity" values="1;.2;1" dur="2s" repeatCount="indefinite"/>
+  </use>
+  <use href="#hw-star" transform="translate(52,18) scale(1.1)">
+    <animate attributeName="opacity" values=".2;1;.2" dur="2.4s" repeatCount="indefinite"/>
+  </use>
+  <use href="#hw-star" transform="translate(27,28) scale(.7)">
+    <animate attributeName="opacity" values="1;.3;1" dur="1.8s" repeatCount="indefinite"/>
+  </use>
+  <use href="#hw-star" transform="translate(73,30) scale(.8)">
+    <animate attributeName="opacity" values=".3;1;.3" dur="2.2s" repeatCount="indefinite"/>
+  </use>
 </svg>

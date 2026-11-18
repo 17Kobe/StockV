@@ -604,7 +604,7 @@
         { src: 'critters/double-decker-bus.svg', lon: -1.5, lat: 52.3, mode: 'wander', s: 1.0, deco: true, maxDeg: 2 }, // 英國：紅色雙層巴士
         { src: 'critters/arc-de-triomphe.svg', lon: 2.295, lat: 48.8738, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 法國：凱旋門
         // ── 第十批補充（剩下 9 個：黑熊、龜船、天壇、舞龍、海狸、騎警、熱氣球、啤酒節、嘟嘟車） ──
-        { src: 'critters/formosan-black-bear.svg', lon: 121.0, lat: 23.7, mode: 'wander', s: 1.0, deco: true, maxDeg: 2 }, // 台灣：台灣黑熊
+        { src: 'critters/formosan-black-bear.svg', lon: 121.05, lat: 23.25, mode: 'wander', s: 1.0, deco: true, maxDeg: 1 }, // 台灣：台灣黑熊：往南移到中央山脈南段，讓出日月潭的位置
         { src: 'critters/turtle-ship.svg', lon: 128.3, lat: 33.8, mode: 'bob', s: 1.1, sea: true, deco: true, landmark: true }, // 南韓：李舜臣龜船（移到濟州島北側外海，離任何海岸線至少 0.9 度，確實在開闊海面上）
         { src: 'critters/temple-of-heaven.svg', lon: 114.0, lat: 36.0, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 中國：天壇：上次修正後離紫禁城仍只差 0.64 度，實測要縮放到跟長城/紫禁城同框後再深縮 8 格才會冒出來，再拉大到確實跟兩者都有安全距離（實測一放大就會一起出現）
         { src: 'critters/dragon-dance.svg', lon: 108.0, lat: 30.0, mode: 'still', face: 'F', s: 1.1, deco: true }, // 中國：舞龍
@@ -694,7 +694,10 @@
         { src: 'critters/karnak-temple.svg', lon: 32.6573, lat: 25.7188, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 埃及：卡納克神廟
         { src: 'critters/mesa-verde.svg', lon: -108.4618, lat: 37.1853, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 美國：梅薩維德國家公園崖居
         { src: 'critters/palau-milky-way.svg', lon: 134.3400, lat: 7.2300, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 帛琉：牛奶湖
-        { src: 'critters/taiwan-presidential-office.svg', lon: 121.5125, lat: 25.0392, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 台灣：總統府
+        { src: 'critters/taiwan-presidential-office.svg', lon: 121.3, lat: 25.0, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 台灣：總統府：真實位置（121.51, 25.04）和台北 101 只差 0.05 度，台北又多了故宮、中正紀念堂，往西拉開約 0.25 度
+        { src: 'critters/national-palace-museum.svg', lon: 121.5, lat: 25.2, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 台灣：國立故宮博物院：真實位置在外雙溪（121.55, 25.10），往北移一點，和 101、總統府拉開
+        { src: 'critters/cks-memorial-hall.svg', lon: 121.45, lat: 24.78, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 台灣：中正紀念堂：真實位置（121.52, 25.03）和總統府、101 幾乎重疊，往南移約 0.25 度
+        { src: 'critters/sun-moon-lake.svg', lon: 120.91, lat: 23.86, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 台灣：日月潭（真實位置）
         { src: 'critters/pier-2.svg', lon: 120.2823, lat: 22.6187, mode: 'still', face: 'F', s: 1.0, sea: true, deco: true, landmark: true }, // 台灣：駁二藝術特區
         { src: 'critters/carp-island.svg', lon: 134.47, lat: 7.12, mode: 'still', face: 'F', s: 1.0, sea: true, deco: true, landmark: true }, // 帛琉：星象島（Ngercheu／Carp Island）
         { src: 'critters/beirut-terraces.svg', lon: 35.5018, lat: 33.8938, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 黎巴嫩：貝魯特垂直森林（Beirut Terraces）

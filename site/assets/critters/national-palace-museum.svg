@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 國立故宮博物院：外雙溪青山前的中國宮殿式建築，綠色琉璃瓦屋頂配黃色屋脊，米白牆面，中央重簷主殿與左右兩翼，前方寬大階梯與平台，最前方為白色石造牌樓（藍色瓦頂） -->
+  <defs>
+    <linearGradient id="npmHill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6fbf5e"/>
+      <stop offset="1" stop-color="#2f7a3c"/>
+    </linearGradient>
+    <linearGradient id="npmRoof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4fc4a0"/>
+      <stop offset="1" stop-color="#1f7a64"/>
+    </linearGradient>
+    <linearGradient id="npmWall" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fffaee"/>
+      <stop offset="1" stop-color="#e2d6bc"/>
+    </linearGradient>
+    <linearGradient id="npmStair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8e2d4"/>
+      <stop offset="1" stop-color="#bdb3a0"/>
+    </linearGradient>
+    <linearGradient id="npmBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5aa6e0"/>
+      <stop offset="1" stop-color="#22609e"/>
+    </linearGradient>
+    <linearGradient id="npmMarble" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d4d4d8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 地面陰影 -->
+  <ellipse cx="40" cy="75.5" rx="34" ry="3" fill="#000" opacity=".2"/>
+
+  <!-- 外雙溪青山 -->
+  <path d="M2 50 Q4 30 14 24 Q22 18 30 20 Q38 10 50 14 Q60 12 66 20 Q76 24 78 50Z" fill="url(#npmHill)" stroke="#2a5e30" stroke-width=".5"/>
+  <g fill="#4a9a48" opacity=".7">
+    <circle cx="12" cy="30" r="3"/><circle cx="22" cy="24" r="2.6"/><circle cx="62" cy="22" r="2.8"/><circle cx="70" cy="30" r="3"/><circle cx="44" cy="16" r="2.4"/>
+  </g>
+
+  <!-- 左右兩翼 -->
+  <g stroke="#6b5f4c" stroke-width=".45">
+    <rect x="6" y="37" width="20" height="10" fill="url(#npmWall)"/>
+    <rect x="54" y="37" width="20" height="10" fill="url(#npmWall)"/>
+  </g>
+  <g fill="#7a3a2a">
+    <rect x="9" y="40" width="2" height="4"/><rect x="13.5" y="40" width="2" height="4"/><rect x="18" y="40" width="2" height="4"/><rect x="22" y="40" width="2" height="4"/>
+    <rect x="56" y="40" width="2" height="4"/><rect x="60" y="40" width="2" height="4"/><rect x="64.5" y="40" width="2" height="4"/><rect x="69" y="40" width="2" height="4"/>
+  </g>
+  <path d="M8 33 L27 33 L27 37.5 L4.5 37.5 Q3.5 37.5 3 36 Q6 35.6 8 33Z" fill="url(#npmRoof)" stroke="#145646" stroke-width=".45"/>
+  <path d="M72 33 L53 33 L53 37.5 L75.5 37.5 Q76.5 37.5 77 36 Q74 35.6 72 33Z" fill="url(#npmRoof)" stroke="#145646" stroke-width=".45"/>
+  <path d="M3 36 Q4 37.5 6 37.5 H27 M77 36 Q76 37.5 74 37.5 H53 M8 33 H27 M72 33 H53" fill="none" stroke="#f2c94c" stroke-width=".7"/>
+
+  <!-- 主殿牆面與柱 -->
+  <rect x="24" y="33" width="32" height="14" fill="url(#npmWall)" stroke="#6b5f4c" stroke-width=".5"/>
+  <g fill="#b03a2a">
+    <rect x="26.5" y="35" width="1.4" height="12"/><rect x="31.5" y="35" width="1.4" height="12"/><rect x="36.5" y="35" width="1.4" height="12"/>
+    <rect x="42.1" y="35" width="1.4" height="12"/><rect x="47.1" y="35" width="1.4" height="12"/><rect x="52.1" y="35" width="1.4" height="12"/>
+  </g>
+  <rect x="38.4" y="38" width="3.2" height="9" fill="#5a2a1e"/>
+
+  <!-- 上層屋簷（重簷之上） -->
+  <rect x="30" y="25.5" width="20" height="4.5" fill="url(#npmWall)" stroke="#6b5f4c" stroke-width=".4"/>
+  <path d="M30 27 H50" stroke="#b03a2a" stroke-width=".8"/>
+  <path d="M33 18 L47 18 Q50 22.6 56.5 24 Q55 26.2 51.5 26.2 L28.5 26.2 Q25 26.2 23.5 24 Q30 22.6 33 18Z" fill="url(#npmRoof)" stroke="#145646" stroke-width=".5" stroke-linejoin="round"/>
+  <path d="M23.5 24 Q25 26.2 28.5 26.2 H51.5 Q55 26.2 56.5 24" fill="none" stroke="#f2c94c" stroke-width=".9"/>
+  <path d="M32 18 H48" stroke="#f2c94c" stroke-width="1.1" stroke-linecap="round"/>
+  <path d="M32.2 17.2 l-.8 -1.6 l1.6 .4Z M47.8 17.2 l.8 -1.6 l-1.6 .4Z" fill="#f2c94c"/>
+  <path d="M36 19.5 L34 25 M40 19.5 V25 M44 19.5 L46 25" stroke="#1a6a56" stroke-width=".4" opacity=".7"/>
+
+  <!-- 下層屋簷 -->
+  <path d="M25 29.5 L55 29.5 Q58 32.6 63.5 33.6 Q62 35.4 58.5 35.4 L21.5 35.4 Q18 35.4 16.5 33.6 Q22 32.6 25 29.5Z" fill="url(#npmRoof)" stroke="#145646" stroke-width=".5" stroke-linejoin="round"/>
+  <path d="M16.5 33.6 Q18 35.4 21.5 35.4 H58.5 Q62 35.4 63.5 33.6" fill="none" stroke="#f2c94c" stroke-width=".9"/>
+  <path d="M25 29.5 H55" stroke="#f2c94c" stroke-width=".6"/>
+
+  <!-- 平台欄杆 -->
+  <rect x="4" y="47" width="72" height="4" fill="url(#npmStair)" stroke="#7a705e" stroke-width=".45"/>
+  <path d="M4 48.3 H76" stroke="#fff" stroke-width=".5"/>
+  <g stroke="#9a907c" stroke-width=".35">
+    <path d="M8 47 V51 M12 47 V51 M16 47 V51 M20 47 V51 M24 47 V51 M28 47 V51 M52 47 V51 M56 47 V51 M60 47 V51 M64 47 V51 M68 47 V51 M72 47 V51"/>
+  </g>
+
+  <!-- 中央大階梯 -->
+  <path d="M32 47 L48 47 L54 63 L26 63Z" fill="url(#npmStair)" stroke="#7a705e" stroke-width=".45"/>
+  <g stroke="#9a907c" stroke-width=".35">
+    <path d="M31.4 49 H48.6 M30.7 51 H49.3 M29.9 53 H50.1 M29.2 55 H50.8 M28.4 57 H51.6 M27.7 59 H52.3 M26.9 61 H53.1"/>
+  </g>
+  <path d="M4 51 H26.8 L22 70 Q12 70 2 66Z M76 51 H53.2 L58 70 Q68 70 78 66Z" fill="#5aa04a" stroke="#2f6a34" stroke-width=".4"/>
+
+  <g transform="translate(40 75) scale(1.2) translate(-40 -75)">
+  <!-- 前方白色牌樓 -->
+  <g stroke="#6e6e78" stroke-width=".45">
+    <rect x="23" y="62" width="2.6" height="13" fill="url(#npmMarble)"/>
+    <rect x="32.4" y="60" width="2.6" height="15" fill="url(#npmMarble)"/>
+    <rect x="45" y="60" width="2.6" height="15" fill="url(#npmMarble)"/>
+    <rect x="54.4" y="62" width="2.6" height="13" fill="url(#npmMarble)"/>
+    <rect x="22" y="62" width="14" height="2.4" fill="url(#npmMarble)"/>
+    <rect x="44" y="62" width="14" height="2.4" fill="url(#npmMarble)"/>
+    <rect x="31.4" y="59.6" width="17.2" height="3" fill="url(#npmMarble)"/>
+    <rect x="37" y="63.4" width="6" height="2.4" fill="#2a5e9a"/>
+  </g>
+  <path d="M38 64.6 H42" stroke="#f2c94c" stroke-width=".6"/>
+  <!-- 牌樓藍瓦頂 -->
+  <path d="M21.2 62.2 Q22.6 61.6 23.4 59.6 H34.6 Q35.4 61.6 36.8 62.2Z" fill="url(#npmBlue)" stroke="#173f6a" stroke-width=".4" stroke-linejoin="round"/>
+  <path d="M43.2 62.2 Q44.6 61.6 45.4 59.6 H56.6 Q57.4 61.6 58.8 62.2Z" fill="url(#npmBlue)" stroke="#173f6a" stroke-width=".4" stroke-linejoin="round"/>
+  <path d="M30 59.8 Q31.8 59 32.8 56.4 H47.2 Q48.2 59 50 59.8Z" fill="url(#npmBlue)" stroke="#173f6a" stroke-width=".4" stroke-linejoin="round"/>
+  <path d="M33 56.4 H47 M23.6 59.6 H34.4 M45.6 59.6 H56.4" stroke="#f2c94c" stroke-width=".55" stroke-linecap="round"/>
+  </g>
+</svg>

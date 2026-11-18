@@ -1,26 +1,87 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- 優勝美地國家公園：中央是半圓丘（Half Dome），一側光滑圓弧、另一側被削成垂直斷崖；左邊是酋長岩（El Capitan）巨大花崗岩壁，中間細長的優勝美地瀑布；夕陽暖光照著灰白花崗岩，前方是綠色谷地與高大針葉樹 -->
   <defs>
-    <linearGradient id="gr" x1="0" x2="1"><stop offset="0" stop-color="#d6d2c8"/><stop offset=".5" stop-color="#a8a498"/><stop offset="1" stop-color="#6f6c62"/></linearGradient>
-    <linearGradient id="bk" x1="0" x2="1"><stop offset="0" stop-color="#c8c2b4"/><stop offset="1" stop-color="#7a766a"/></linearGradient>
-    <linearGradient id="wf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cfeefa" stop-opacity=".7"/></linearGradient>
+    <linearGradient id="ysDome" x1="0" y1="0" x2="1" y2=".6">
+      <stop offset="0" stop-color="#fff0d8"/>
+      <stop offset=".45" stop-color="#e2cdb4"/>
+      <stop offset="1" stop-color="#9c9088"/>
+    </linearGradient>
+    <linearGradient id="ysFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9a8e8a"/>
+      <stop offset="1" stop-color="#6c625e"/>
+    </linearGradient>
+    <linearGradient id="ysCap" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b8aca4"/>
+      <stop offset=".55" stop-color="#ead8c0"/>
+      <stop offset="1" stop-color="#c8b6a2"/>
+    </linearGradient>
+    <linearGradient id="ysRidge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b4aab0"/>
+      <stop offset="1" stop-color="#8a8290"/>
+    </linearGradient>
+    <linearGradient id="ysFall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d6f0fa"/>
+    </linearGradient>
+    <linearGradient id="ysValley" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8cc45a"/>
+      <stop offset="1" stop-color="#4f8a3a"/>
+    </linearGradient>
+    <linearGradient id="ysPine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3f7d44"/>
+      <stop offset="1" stop-color="#1c4a28"/>
+    </linearGradient>
   </defs>
-  <!-- 優勝美地國家公園：酋長岩與半圓頂花崗岩峭壁、優勝美地瀑布，前方是巨大的紅杉 -->
-  <path d="M0 40 L30 36 L34 84 H0Z" fill="url(#gr)"/>
-  <path d="M60 84 L64 40 Q88 18 112 42 L112 84Z" fill="url(#bk)"/>
-  <path d="M64 40 Q88 18 112 42 L100 40 Q88 30 70 42Z" fill="#fff" opacity=".25"/>
-  <path d="M96 42 Q106 62 100 84" stroke="#5a574c" stroke-width="2" fill="none" opacity=".6"/>
-  <!-- 瀑布 -->
-  <path d="M44 34 L50 34 L50 60 L52 62 L52 84 L44 84 L44 62 L46 60Z" fill="url(#wf)"><animate attributeName="opacity" values="1;.75;1" dur="2s" repeatCount="indefinite"/></path>
-  <g fill="#fff" opacity=".8"><ellipse cx="48" cy="86" rx="8" ry="3"><animate attributeName="ry" values="3;5;3" dur="2s" repeatCount="indefinite"/></ellipse></g>
-  <!-- 山谷 -->
-  <path d="M0 84 H128 V126 H0Z" fill="#6f9a4a"/>
-  <path d="M0 98 Q32 92 64 98 T128 98" stroke="#4a8ab8" stroke-width="5" fill="none" opacity=".85"/>
-  <!-- 紅杉 -->
-  <g>
-    <rect x="12" y="52" width="9" height="72" fill="#9a4a2a"/><path d="M12 52 H21 L19 124 H14Z" fill="#b25a32"/>
-    <path d="M4 60 L16 20 L28 60Z M2 78 L16 40 L30 78Z" fill="#2f6a3a"/>
-    <rect x="104" y="60" width="8" height="64" fill="#9a4a2a"/>
-    <path d="M96 66 L108 30 L120 66Z M94 84 L108 46 L122 84Z" fill="#2f6a3a"/>
+
+  <!-- 後方山脊與優勝美地瀑布 -->
+  <path d="M26,98 L30,58 Q36,48 46,50 L56,56 L58,98 Z" fill="url(#ysRidge)" stroke="#6a6270" stroke-width=".8"/>
+  <path d="M40.5,50 L43,50 L43.6,74 L44.6,76 L45,96 L41,96 L41.4,76 L40.6,74 Z" fill="url(#ysFall)" stroke="#a8d4e6" stroke-width=".5">
+    <animate attributeName="opacity" values="1;.7;1" dur="1.6s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- 半圓丘：左側光滑圓弧，右側垂直斷崖 -->
+  <path d="M46,98 C45,66 54,32 80,22 Q91,18 99,19.5 L100,66 Q108,72 114,82 L118,98 Z" fill="url(#ysDome)" stroke="#6e6460" stroke-width="1"/>
+  <!-- 斷崖平面（陰影） -->
+  <path d="M92,18.8 L99,19.5 L100,66 Q96,62 92,63 Q90,40 92,18.8 Z" fill="url(#ysFace)" stroke="#5a5250" stroke-width=".7"/>
+  <g stroke="#57504c" stroke-width=".6" opacity=".7" fill="none">
+    <path d="M95,20 L95.5,58"/><path d="M97.5,22 L98,62"/>
   </g>
-  <g fill="#2f6a3a"><path d="M70 100 L74 82 L78 100Z M80 104 L85 84 L90 104Z M60 104 L64 88 L68 104Z"/></g>
+  <!-- 圓弧受光邊與岩面紋理 -->
+  <path d="M50,88 C50,64 57,36 80,24.5" fill="none" stroke="#fffaf0" stroke-width="1.4" opacity=".85" stroke-linecap="round"/>
+  <g stroke="#a89a90" stroke-width=".7" fill="none" opacity=".7" stroke-linecap="round">
+    <path d="M64,40 Q76,32 90,30"/><path d="M62,58 Q74,50 88,48"/><path d="M58,74 Q72,66 90,66"/>
+  </g>
+  <!-- 斷崖下方的肩部 -->
+  <path d="M100,66 Q108,72 114,82 L118,98 L102,98 Q100,82 100,66 Z" fill="#8c827c" opacity=".55"/>
+
+  <!-- 酋長岩 -->
+  <path d="M0,100 L2,44 Q4,34 14,32 Q26,30 32,38 L34,100 Z" fill="url(#ysCap)" stroke="#6e6460" stroke-width="1"/>
+  <path d="M26,34 Q32,38 34,100 L28,100 Q28,60 26,34 Z" fill="#8a7e78" opacity=".5"/>
+  <g stroke="#9c8e84" stroke-width=".7" fill="none" opacity=".7">
+    <path d="M12,40 L12.5,92"/><path d="M20,36 L20,94"/>
+  </g>
+
+  <!-- 谷地 -->
+  <path d="M0,98 Q64,90 128,98 L128,120 Q64,126 0,120 Z" fill="url(#ysValley)" stroke="#3a6a2c" stroke-width=".8"/>
+  <path d="M30,108 Q64,104 98,108" fill="none" stroke="#b6e07a" stroke-width="1.2" opacity=".6"/>
+
+  <!-- 針葉樹 -->
+  <g stroke="#14361c" stroke-width=".8" stroke-linejoin="round">
+    <g fill="url(#ysPine)">
+      <path d="M6,118 L12,78 L18,118 Z"/>
+      <path d="M16,120 L22,88 L28,120 Z"/>
+      <path d="M100,120 L107,84 L114,120 Z"/>
+      <path d="M112,118 L118,76 L124,118 Z"/>
+      <path d="M58,120 L62,104 L66,120 Z"/>
+      <path d="M70,120 L74,100 L78,120 Z"/>
+    </g>
+    <g fill="#5a3a24">
+      <rect x="11" y="117" width="2" height="4"/><rect x="21" y="119" width="2" height="3"/>
+      <rect x="106" y="119" width="2" height="3"/><rect x="117" y="117" width="2" height="4"/>
+    </g>
+  </g>
+  <g fill="none" stroke="#5ea05a" stroke-width=".6" opacity=".7">
+    <path d="M9,96 L12,94 L15,96 M8,106 L12,103 L16,106"/>
+    <path d="M115,94 L118,92 L121,94 M114,104 L118,101 L122,104"/>
+  </g>
 </svg>

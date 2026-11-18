@@ -19,7 +19,8 @@
     </linearGradient>
   </defs>
 
-  <path d="M3,80 L3,70 Q20,59 37,65 Q51,57 65,65 Q73,59 77,70 L77,80 Z" fill="url(#groundGrad)" stroke="#423627" stroke-width="0.5"/>
+  <!-- 腳下不畫咖啡色土地，只留一個淡淡的影子，直接站在地圖上 -->
+  <ellipse cx="42" cy="78" rx="32" ry="2.6" fill="#000" opacity=".2"/>
 
   <g>
     <animateTransform attributeName="transform" type="rotate" values="-2 42 78;2 42 78;-2 42 78" dur="2.2s" repeatCount="indefinite"/>

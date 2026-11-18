@@ -1,26 +1,134 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- 伊瓜蘇瀑布：紅褐色河水沿新月形崖壁分成數十道白色瀑布，上下兩層，瀑布之間隔著亞熱帶雨林小島；中央是霧氣瀰漫的「魔鬼咽喉」U 形深淵，水霧中浮現彩虹，右側有一隻巨嘴鳥 -->
   <defs>
-    <linearGradient id="wf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#bfe4f4"/></linearGradient>
+    <linearGradient id="igRiver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c48a5a"/>
+      <stop offset="1" stop-color="#9a6238"/>
+    </linearGradient>
+    <linearGradient id="igFall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8d2b8"/>
+      <stop offset=".25" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d8eef6"/>
+    </linearGradient>
+    <linearGradient id="igCliff" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7a5a40"/>
+      <stop offset="1" stop-color="#4a3424"/>
+    </linearGradient>
+    <linearGradient id="igPool" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b98a62"/>
+      <stop offset="1" stop-color="#7e5434"/>
+    </linearGradient>
+    <radialGradient id="igLeaf" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#9ad460"/>
+      <stop offset=".6" stop-color="#3f9a3a"/>
+      <stop offset="1" stop-color="#1f5a26"/>
+    </radialGradient>
+    <radialGradient id="igMist" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".65" stop-color="#ffffff" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <!-- 伊瓜蘇國家公園（阿根廷／巴西邊界）：馬蹄形的瀑布群，數百道瀑布傾瀉而下，水霧中浮現彩虹 -->
-  <!-- 後方的雨林 -->
-  <path d="M0 60 Q16 34 36 44 Q50 28 66 40 Q84 26 100 42 Q118 34 128 56 V80 H0Z" fill="#2f7a3a"/>
+
+  <!-- 遠岸雨林 -->
+  <g fill="url(#igLeaf)" stroke="#1a4a20" stroke-width=".8">
+    <circle cx="14" cy="34" r="10"/><circle cx="30" cy="26" r="10"/><circle cx="48" cy="22" r="9"/>
+    <circle cx="66" cy="20" r="10"/><circle cx="84" cy="22" r="9"/><circle cx="100" cy="26" r="10"/><circle cx="116" cy="34" r="10"/>
+  </g>
+
+  <!-- 上游紅褐河面 -->
+  <path d="M2,46 Q10,32 40,30 Q64,26 88,30 Q118,32 126,46 Q100,40 82,42 Q64,38 46,42 Q24,40 2,46 Z" fill="url(#igRiver)" stroke="#6e4426" stroke-width=".8"/>
+
+  <!-- 魔鬼咽喉：中央 U 形深淵 -->
+  <path d="M46,42 Q64,36 82,42 L80,72 Q64,66 48,72 Z" fill="url(#igFall)" stroke="#8cb8c8" stroke-width=".7"/>
+  <g stroke="#bcdcea" stroke-width=".7" fill="none">
+    <path d="M52,41 V70"/><path d="M58,39.5 V68"/><path d="M64,39 V67"/><path d="M70,39.5 V68"/><path d="M76,41 V70"/>
+    <animate attributeName="opacity" values="1;.4;1" dur="1.5s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- 左翼崖壁：上層 -->
+  <path d="M2,46 Q24,40 46,42 L48,62 Q26,60 4,66 Z" fill="url(#igCliff)" stroke="#3a2618" stroke-width=".8"/>
+  <!-- 右翼崖壁：上層 -->
+  <path d="M126,46 Q104,40 82,42 L80,62 Q102,60 124,66 Z" fill="url(#igCliff)" stroke="#3a2618" stroke-width=".8"/>
+  <!-- 上層瀑布（左） -->
+  <g fill="url(#igFall)" stroke="#8cb8c8" stroke-width=".5">
+    <path d="M5,45.5 L10,44.5 L11,64.5 L6,65.5 Z"/>
+    <path d="M14,43.6 L19,42.8 L19.6,63 L14.6,63.8 Z"/>
+    <path d="M23,42.2 L29,41.6 L29.4,61.6 L23.4,62.2 Z"/>
+    <path d="M33,41.4 L37,41.3 L37.4,61 L33.4,61.2 Z"/>
+    <path d="M40,41.4 L45,41.8 L46.6,61.6 L41,61.2 Z"/>
+  </g>
+  <!-- 上層瀑布（右） -->
+  <g fill="url(#igFall)" stroke="#8cb8c8" stroke-width=".5">
+    <path d="M123,45.5 L118,44.5 L117,64.5 L122,65.5 Z"/>
+    <path d="M114,43.6 L109,42.8 L108.4,63 L113.4,63.8 Z"/>
+    <path d="M105,42.2 L99,41.6 L98.6,61.6 L104.6,62.2 Z"/>
+    <path d="M95,41.4 L91,41.3 L90.6,61 L94.6,61.2 Z"/>
+    <path d="M88,41.4 L83,41.8 L81.4,61.6 L87,61.2 Z"/>
+  </g>
+
+  <!-- 中段雨林台地 -->
+  <path d="M0,68 Q24,60 48,64 L50,74 Q26,72 0,80 Z" fill="url(#igLeaf)" stroke="#1a4a20" stroke-width=".8"/>
+  <path d="M128,68 Q104,60 80,64 L78,74 Q102,72 128,80 Z" fill="url(#igLeaf)" stroke="#1a4a20" stroke-width=".8"/>
+  <g fill="url(#igLeaf)" stroke="#1a4a20" stroke-width=".6">
+    <circle cx="12" cy="44" r="3"/><circle cx="21" cy="42" r="2.6"/><circle cx="31" cy="41" r="2.6"/><circle cx="39" cy="41" r="2.2"/>
+    <circle cx="116" cy="44" r="3"/><circle cx="107" cy="42" r="2.6"/><circle cx="97" cy="41" r="2.6"/><circle cx="89" cy="41" r="2.2"/>
+  </g>
+
+  <!-- 下層崖壁 -->
+  <path d="M0,78 Q26,70 50,73 L52,94 Q26,94 0,100 Z" fill="url(#igCliff)" stroke="#3a2618" stroke-width=".8"/>
+  <path d="M128,78 Q102,70 78,73 L76,94 Q102,94 128,100 Z" fill="url(#igCliff)" stroke="#3a2618" stroke-width=".8"/>
+  <!-- 下層瀑布 -->
+  <g fill="url(#igFall)" stroke="#8cb8c8" stroke-width=".5">
+    <path d="M3,77.5 L10,75.6 L10.6,96.6 L3.6,98.4 Z"/>
+    <path d="M14,74.6 L20,73.6 L20.4,95.2 L14.4,96 Z"/>
+    <path d="M25,73 L33,72.4 L33.4,94.4 L25.4,94.8 Z"/>
+    <path d="M37,72.4 L42,72.5 L42.4,94.2 L37.4,94.2 Z"/>
+    <path d="M45,72.8 L50,73.2 L51.6,94 L46,94 Z"/>
+    <path d="M125,77.5 L118,75.6 L117.4,96.6 L124.4,98.4 Z"/>
+    <path d="M114,74.6 L108,73.6 L107.6,95.2 L113.6,96 Z"/>
+    <path d="M103,73 L95,72.4 L94.6,94.4 L102.6,94.8 Z"/>
+    <path d="M91,72.4 L86,72.5 L85.6,94.2 L90.6,94.2 Z"/>
+    <path d="M83,72.8 L78,73.2 L76.4,94 L82,94 Z"/>
+  </g>
+
+  <!-- 下游河面 -->
+  <path d="M0,98 Q64,88 128,98 L128,116 Q64,124 0,116 Z" fill="url(#igPool)" stroke="#5e3a20" stroke-width=".8"/>
+
   <!-- 彩虹 -->
-  <g fill="none" stroke-width="3" opacity=".6"><path d="M16 82 Q64 4 112 82" stroke="#ff5a5a"/><path d="M20 82 Q64 10 108 82" stroke="#ffb23a"/><path d="M24 82 Q64 16 104 82" stroke="#ffe14d"/><path d="M28 82 Q64 22 100 82" stroke="#5ed87a"/><path d="M32 82 Q64 28 96 82" stroke="#4aa8e0"/><animate attributeName="opacity" values=".6;.3;.6" dur="3.4s" repeatCount="indefinite"/></g>
-  <!-- 懸崖與瀑布 -->
-  <path d="M0 66 H128 V112 H0Z" fill="#8a6a46"/>
-  <g fill="url(#wf)">
-    <path d="M6 66 H20 V108 H6Z"/><path d="M24 66 H40 V104 H24Z"/><path d="M44 66 H64 V110 H44Z"/><path d="M68 66 H84 V106 H68Z"/><path d="M88 66 H104 V110 H88Z"/><path d="M108 66 H122 V104 H108Z"/>
+  <g fill="none" stroke-width="1.6" opacity=".65">
+    <path d="M30,92 Q64,40 98,92" stroke="#ff6b6b"/>
+    <path d="M32,92 Q64,43.4 96,92" stroke="#ffd25a"/>
+    <path d="M34,92 Q64,46.8 94,92" stroke="#6fd36f"/>
+    <path d="M36,92 Q64,50.2 92,92" stroke="#6aa8ff"/>
   </g>
-  <g stroke="#9fd8ee" stroke-width="1.6" fill="none" stroke-dasharray="6 5">
-    <path d="M10 66 V108 M16 66 V108 M28 66 V104 M34 66 V104 M50 66 V110 M58 66 V110 M74 66 V106 M80 66 V106 M94 66 V110 M100 66 V110 M112 66 V104 M118 66 V104"><animate attributeName="stroke-dashoffset" values="0;-22" dur=".7s" repeatCount="indefinite"/></path>
+
+  <!-- 魔鬼咽喉水霧與各瀑布底部水花 -->
+  <g fill="url(#igMist)">
+    <ellipse cx="64" cy="72" rx="22" ry="12"/>
+    <ellipse cx="64" cy="86" rx="20" ry="10"/>
+    <ellipse cx="24" cy="98" rx="24" ry="6"/>
+    <ellipse cx="104" cy="98" rx="24" ry="6"/>
+    <ellipse cx="64" cy="98" rx="18" ry="7"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-1.5;0,0" dur="3.2s" repeatCount="indefinite"/>
   </g>
-  <path d="M0 66 H128" stroke="#4a3a28" stroke-width="3"/>
-  <!-- 水霧 -->
+  <g fill="#fff" opacity=".85">
+    <circle cx="56" cy="60" r="4"/><circle cx="70" cy="58" r="3.5"/><circle cx="62" cy="54" r="2.6"/>
+    <animate attributeName="opacity" values=".85;.35;.85" dur="2.4s" repeatCount="indefinite"/>
+  </g>
   <g fill="#fff" opacity=".8">
-    <ellipse cx="14" cy="112" rx="16" ry="8"><animate attributeName="ry" values="7;11;7" dur="2.4s" repeatCount="indefinite"/></ellipse>
-    <ellipse cx="52" cy="114" rx="20" ry="9"><animate attributeName="ry" values="8;12;8" dur="2.8s" repeatCount="indefinite"/></ellipse>
-    <ellipse cx="96" cy="114" rx="20" ry="9"><animate attributeName="ry" values="9;12;9" dur="2.2s" repeatCount="indefinite"/></ellipse>
+    <ellipse cx="22" cy="64" rx="18" ry="2.2"/>
+    <ellipse cx="106" cy="64" rx="18" ry="2.2"/>
   </g>
-  <path d="M0 116 H128 V128 H0Z" fill="#6aa8c8"/>
+
+  <!-- 巨嘴鳥 -->
+  <g transform="translate(112,58)">
+    <path d="M-1,10 L0,15" stroke="#3a2618" stroke-width="1"/>
+    <ellipse cx="0" cy="4" rx="4" ry="6.5" fill="#1c1c22" stroke="#000" stroke-width=".5"/>
+    <ellipse cx="-1.4" cy="1" rx="2.4" ry="2.6" fill="#fff6c8"/>
+    <circle cx="-1.2" cy="-1.4" r="1" fill="#3a8ad8"/><circle cx="-1.2" cy="-1.4" r=".45" fill="#000"/>
+    <path d="M-2.2,-2.6 Q-10,-3.4 -12,0.4 Q-7,1.8 -2.2,0.6 Z" fill="#ff9a1a" stroke="#a04a10" stroke-width=".5"/>
+    <path d="M-11.6,0.2 Q-12.4,-1.4 -10.6,-2" fill="#e8301a"/>
+    <path d="M-2.4,8 Q0,9.6 2.4,8" fill="none" stroke="#e8301a" stroke-width=".9"/>
+  </g>
 </svg>

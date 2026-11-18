@@ -1,121 +1,110 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 桂林山水：高聳圓頂的喀斯特石灰岩峰（越遠越淡、雲霧繚繞），平靜灕江倒映山影；江上一條前端微翹的竹筏，戴斗笠的船夫撐著長竹篙，筏頭站著一隻鸕鶿 -->
   <defs>
-    <linearGradient id="gkPeakA" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#6f9a6a"/>
-      <stop offset="45%" stop-color="#5a8a63"/>
-      <stop offset="100%" stop-color="#3f6350"/>
+    <linearGradient id="gk-back" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bcd8cc"/><stop offset="1" stop-color="#e2efe9"/>
     </linearGradient>
-    <linearGradient id="gkPeakB" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7fa870"/>
-      <stop offset="45%" stop-color="#63925f"/>
-      <stop offset="100%" stop-color="#406048"/>
+    <linearGradient id="gk-mid" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9cc79c"/><stop offset=".6" stop-color="#78a882"/><stop offset="1" stop-color="#5d8d6c"/>
     </linearGradient>
-    <linearGradient id="gkPeakC" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#6a9168"/>
-      <stop offset="45%" stop-color="#557f5e"/>
-      <stop offset="100%" stop-color="#395a4a"/>
+    <linearGradient id="gk-front" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6fae5a"/><stop offset=".55" stop-color="#3f8146"/><stop offset="1" stop-color="#275a36"/>
     </linearGradient>
-    <linearGradient id="gkWater" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#6fc1c8"/>
-      <stop offset="55%" stop-color="#3f93a0"/>
-      <stop offset="100%" stop-color="#1f5d6e"/>
+    <linearGradient id="gk-mist" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="gkRaft" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d9bd78"/>
-      <stop offset="100%" stop-color="#a9823f"/>
+    <linearGradient id="gk-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a6d6cf"/><stop offset="1" stop-color="#3f8590"/>
     </linearGradient>
-    <linearGradient id="gkShirt" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#4f7cb0"/>
-      <stop offset="100%" stop-color="#355e8c"/>
+    <linearGradient id="gk-bamboo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8cf7a"/><stop offset="1" stop-color="#a7843a"/>
     </linearGradient>
-    <linearGradient id="gkHat" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e8d5a0"/>
-      <stop offset="100%" stop-color="#bb9a55"/>
+    <linearGradient id="gk-hat" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6e2a6"/><stop offset="1" stop-color="#c49a4c"/>
     </linearGradient>
+    <clipPath id="gk-wclip"><path d="M1,57 Q40,53 79,57 L79,74 Q40,80 1,74 Z"/></clipPath>
+    <g id="gk-fronts">
+      <path d="M4,58 C3.5,30 8,10 15,10 C21.5,10 26.5,28 26,58 Z"/>
+      <path d="M61,58 C60.5,40 64,30 70,30 C76,30 79.5,40 79,58 Z"/>
+      <path d="M41,58 C41,47 44,40.5 48,40.5 C52,40.5 55,47 55,58 Z"/>
+    </g>
   </defs>
 
-  <!-- river -->
-  <rect x="0" y="44" width="80" height="36" fill="url(#gkWater)"/>
-
-  <!-- blurred reflections of the peaks -->
-  <g opacity="0.3">
-    <g transform="translate(0,92) scale(1,-1)">
-      <path d="M4,48 C2,38 6,28 10,22 C12,18 16,18 18,22 C22,28 26,38 24,48 Z" fill="url(#gkPeakA)"/>
-      <path d="M28,48 C25,36 30,22 36,16 C40,11 46,11 50,16 C56,22 59,36 56,48 Z" fill="url(#gkPeakB)"/>
-      <path d="M50,48 C48,38 52,30 58,25 C61,22 67,22 70,25 C74,31 76,39 74,48 Z" fill="url(#gkPeakC)"/>
-    </g>
+  <!-- 遠峰 -->
+  <g fill="url(#gk-back)" stroke="#9fbcb0" stroke-width="0.4">
+    <path d="M22,54 C22,36 24.5,28 28,28 C31.5,28 34,36 34,54 Z"/>
+    <path d="M46,54 C46,34 48.5,25 52,25 C55.5,25 58,34 58,54 Z"/>
+    <path d="M32,54 C32,30 35,19 40,19 C45,19 48,30 48,54 Z"/>
   </g>
-  <!-- soft ripple lines across the water -->
-  <g stroke="#bfeef2" stroke-width="0.5" opacity="0.35" fill="none">
-    <path d="M2,54 Q10,52 18,54 T34,54 T50,54 T66,54 T80,54"/>
-    <path d="M0,60 Q8,58 16,60 T32,60 T48,60 T64,60 T80,60"/>
+  <ellipse cx="40" cy="48" rx="26" ry="6" fill="#fff" opacity=".6"/>
+  <!-- 中峰 -->
+  <g fill="url(#gk-mid)" stroke="#4f7a5c" stroke-width="0.45">
+    <path d="M55,56 C55,32 58,21 64,21 C70,21 73,32 73,56 Z"/>
+    <path d="M27,56 C27,41 30.5,32 35.5,32 C40.5,32 44,41 44,56 Z"/>
   </g>
-
-  <!-- karst peaks -->
-  <g stroke="#2d4636" stroke-width="0.5">
-    <path d="M4,48 C2,38 6,28 10,22 C12,18 16,18 18,22 C22,28 26,38 24,48 Z" fill="url(#gkPeakA)"/>
-    <ellipse cx="13" cy="21" rx="4.5" ry="2.6" fill="#4d7a52" opacity="0.8" stroke="none"/>
+  <g fill="#c8e6b0" opacity=".55">
+    <ellipse cx="61.5" cy="24" rx="2.4" ry="1.2"/><ellipse cx="33" cy="35" rx="2" ry="1"/>
   </g>
-  <g stroke="#263f30" stroke-width="0.5">
-    <path d="M28,48 C25,36 30,22 36,16 C40,11 46,11 50,16 C56,22 59,36 56,48 Z" fill="url(#gkPeakB)"/>
-    <ellipse cx="42" cy="15" rx="5" ry="2.8" fill="#5a8a5f" opacity="0.8" stroke="none"/>
-    <path d="M34,40 Q36,30 40,22" stroke="#2d4a38" stroke-width="0.6" fill="none" opacity="0.6"/>
-    <path d="M50,42 Q48,32 44,24" stroke="#2d4a38" stroke-width="0.6" fill="none" opacity="0.6"/>
-  </g>
-  <g stroke="#223a2e" stroke-width="0.5" opacity="0.92">
-    <path d="M50,48 C48,38 52,30 58,25 C61,22 67,22 70,25 C74,31 76,39 74,48 Z" fill="url(#gkPeakC)"/>
-    <ellipse cx="63" cy="25" rx="4.2" ry="2.3" fill="#4a7050" opacity="0.8" stroke="none"/>
-  </g>
-
-  <!-- water line blending over peak bases -->
-  <rect x="0" y="46" width="80" height="4" fill="url(#gkWater)" opacity="0.55"/>
-
-  <!-- bamboo raft with pole-man, gently bobbing -->
+  <!-- 雲霧 -->
   <g>
-    <animateTransform attributeName="transform" type="translate" values="0,0; 0,1.1; 0,0; 0,-0.6; 0,0" dur="3.2s" repeatCount="indefinite"/>
-
-    <!-- raft shadow/wake -->
-    <ellipse cx="42" cy="73" rx="19" ry="4.2" fill="#0d3a44" opacity="0.3"/>
-
-    <!-- bamboo poles -->
-    <g stroke="#7a5c2c" stroke-width="0.4">
-      <rect x="23" y="63.5" width="36" height="2" rx="1" fill="url(#gkRaft)"/>
-      <rect x="22" y="65.6" width="38" height="2" rx="1" fill="url(#gkRaft)"/>
-      <rect x="21" y="67.7" width="40" height="2.1" rx="1" fill="url(#gkRaft)"/>
-      <rect x="22" y="69.9" width="38" height="2" rx="1" fill="url(#gkRaft)"/>
-      <rect x="24" y="72" width="34" height="1.9" rx="1" fill="url(#gkRaft)"/>
-    </g>
-    <line x1="30" y1="62.5" x2="33" y2="73.5" stroke="#5c3f1c" stroke-width="0.6"/>
-    <line x1="52" y1="62.5" x2="49" y2="73.5" stroke="#5c3f1c" stroke-width="0.6"/>
-
-    <!-- push pole into the water -->
-    <line x1="47" y1="42" x2="58" y2="79" stroke="#6b4a24" stroke-width="1.1" stroke-linecap="round"/>
-
-    <!-- figure -->
-    <g>
-      <!-- legs -->
-      <path d="M37,66 L39,55 L43,55 L42,66 Z" fill="#2e3f52" stroke="#1d2a38" stroke-width="0.3"/>
-      <!-- body -->
-      <path d="M36,56 Q36,44 40,42 Q44,44 44,56 Z" fill="url(#gkShirt)" stroke="#294568" stroke-width="0.4"/>
-      <!-- arms to pole -->
-      <path d="M42,46 L48,43" stroke="#355e8c" stroke-width="2.4" stroke-linecap="round"/>
-      <path d="M39,47 L36,52" stroke="#355e8c" stroke-width="2" stroke-linecap="round"/>
-      <!-- head -->
-      <circle cx="40" cy="39" r="3" fill="#e3b685" stroke="#9c7450" stroke-width="0.3"/>
-      <!-- conical hat -->
-      <path d="M34,38 Q40,28 46,38 Z" fill="url(#gkHat)" stroke="#8a7138" stroke-width="0.4"/>
-    </g>
+    <path d="M6,52 Q8,48 14,49 Q22,45 32,48.5 Q42,45 52,48 Q62,45 70,48.5 Q77,48 76,52 Q72,55 40,55.5 Q10,55 6,52 Z" fill="#fff" opacity=".7"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;1.5,0;0,0" dur="10s" repeatCount="indefinite"/>
+  </g>
+  <!-- 近峰 -->
+  <use href="#gk-fronts" fill="url(#gk-front)" stroke="#1f4a2c" stroke-width="0.6"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M10,16 Q12,12.5 16,12" stroke="#b6e08a" stroke-width="1" opacity=".8"/>
+    <path d="M64,34 Q66,31.5 69,31.2 M44,44 Q46,42 48,41.8" stroke="#b6e08a" stroke-width="0.8" opacity=".8"/>
+    <path d="M18,22 Q20,36 19,52 M9,30 Q8,42 9,54 M73,38 Q74,46 73,55" stroke="#8a9a88" stroke-width="0.5" opacity=".7"/>
+  </g>
+  <g fill="#2f6a3a">
+    <circle cx="12" cy="24" r="1.4"/><circle cx="21" cy="30" r="1.2"/><circle cx="7.5" cy="40" r="1.3"/><circle cx="23" cy="44" r="1.2"/>
+    <circle cx="66" cy="40" r="1.1"/><circle cx="75" cy="46" r="1.1"/><circle cx="50" cy="47" r="1"/>
   </g>
 
-  <!-- gentle ripples spreading from the raft -->
-  <g fill="none" stroke="#cdeef0">
-    <ellipse cx="42" cy="75" rx="14" ry="3" opacity="0.5" stroke-width="0.5">
-      <animate attributeName="rx" values="10;22;10" dur="3.2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.55;0.05;0.55" dur="3.2s" repeatCount="indefinite"/>
-    </ellipse>
-    <ellipse cx="42" cy="75" rx="7" ry="1.8" opacity="0.6" stroke-width="0.5">
-      <animate attributeName="rx" values="5;15;5" dur="3.2s" begin="0.6s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;0.05;0.6" dur="3.2s" begin="0.6s" repeatCount="indefinite"/>
-    </ellipse>
+  <!-- 灕江 -->
+  <path d="M1,57 Q40,53 79,57 L79,74 Q40,80 1,74 Z" fill="url(#gk-water)" stroke="#2c6670" stroke-width="0.6"/>
+  <g clip-path="url(#gk-wclip)" opacity=".3">
+    <use href="#gk-fronts" fill="#245a36" transform="translate(0,115) scale(1,-1)"/>
+  </g>
+  <g stroke="#e6f6f2" stroke-width="0.5" stroke-linecap="round" opacity=".7">
+    <path d="M6,61 h8 M30,60 h6 M64,61.5 h9 M8,71 h6 M66,72 h7"/>
+    <animate attributeName="opacity" values=".7;.35;.7" dur="3s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- 竹篙 -->
+  <path d="M56,41 L41,77" stroke="#7a5a2a" stroke-width="0.8" stroke-linecap="round"/>
+  <!-- 竹筏 -->
+  <ellipse cx="38" cy="68.6" rx="26" ry="1.6" fill="#1f5a64" opacity=".35"/>
+  <g stroke="#6e5220" stroke-width="0.45" stroke-linejoin="round">
+    <path d="M11,61.5 Q14.5,64.2 20,64.6 L63,64.6 L63.6,67.8 L20,68.2 Q13.4,67.6 10.4,62.6 Z" fill="url(#gk-bamboo)"/>
+    <path d="M11.6,63.6 Q15,65.6 20,65.7 L63.2,65.7 M12.4,64.9 Q15.4,66.6 20,66.9 L63.4,66.9" fill="none"/>
+    <path d="M27,64.6 v3.5 M43,64.6 v3.5 M58,64.6 v3.2" stroke="#4a3412" stroke-width="0.7"/>
+    <path d="M34,64.8 v3 M50,64.8 v3" stroke="#b49444" stroke-width="0.35"/>
+  </g>
+
+  <!-- 鸕鶿 -->
+  <g stroke="#111" stroke-width="0.3" stroke-linejoin="round">
+    <path d="M19,64.6 Q18,61 20,58.6 Q21.5,57 23.6,58.4 Q25.2,60.6 24,63.2 Q22,64.8 19,64.6 Z" fill="#1d2228"/>
+    <path d="M21.4,59 Q20.6,56 21.2,54.2 L22.4,54.4 Q22,56.4 22.6,58.6 Z" fill="#1d2228"/>
+    <circle cx="21.8" cy="54" r="1.1" fill="#1d2228"/>
+    <path d="M22.6,53.6 L24.6,54 Q24.6,54.7 24,54.6 L22.7,54.6 Z" fill="#f2b632"/>
+  </g>
+  <circle cx="21.9" cy="53.7" r="0.3" fill="#9fd4ff"/>
+
+  <!-- 船夫 -->
+  <g stroke="#2a2418" stroke-width="0.4" stroke-linejoin="round">
+    <rect x="46.4" y="58" width="1.5" height="4.2" fill="#2a3448"/>
+    <rect x="48.4" y="58" width="1.5" height="4.2" fill="#2a3448"/>
+    <rect x="46.5" y="62" width="1.3" height="2.6" fill="#d9a77a"/>
+    <rect x="48.5" y="62" width="1.3" height="2.6" fill="#d9a77a"/>
+    <path d="M45.4,51.2 Q48,50 50.8,51.2 L51,58.6 L45.2,58.6 Z" fill="#3b6aa8"/>
+    <path d="M50.4,51.6 L51.6,53.4" stroke="#3b6aa8" stroke-width="1.3" stroke-linecap="round"/>
+    <path d="M45.8,52.2 Q46.4,55.4 49.8,56" fill="none" stroke="#3b6aa8" stroke-width="1.3" stroke-linecap="round"/>
+    <circle cx="51.2" cy="53" r="0.75" fill="#d9a77a"/>
+    <circle cx="49.9" cy="56" r="0.75" fill="#d9a77a"/>
+    <circle cx="48.1" cy="48.9" r="1.6" fill="#d9a77a"/>
+    <path d="M42.2,48.6 L48.1,43.8 L54,48.6 Q48.1,50 42.2,48.6 Z" fill="url(#gk-hat)"/>
+    <path d="M45,46.4 L51.2,46.4" stroke="#a87e38" stroke-width="0.3"/>
   </g>
 </svg>

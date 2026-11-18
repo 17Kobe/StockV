@@ -1,21 +1,81 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-<defs>
-  <linearGradient id="poBrick" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#c8604a"/>
-    <stop offset="1" stop-color="#8a3a28"/>
-  </linearGradient>
-</defs>
-<!-- 台灣總統府：日治時期紅磚巴洛克建築，中央高塔是最具代表性的識別特徵 -->
-<rect x="10" y="48" width="60" height="22" fill="url(#poBrick)" stroke="#5c2418" stroke-width="0.5"/>
-<g fill="#e8d8b8" opacity="0.9">
-  <rect x="15" y="54" width="4" height="8"/>
-  <rect x="24" y="54" width="4" height="8"/>
-  <rect x="52" y="54" width="4" height="8"/>
-  <rect x="61" y="54" width="4" height="8"/>
-</g>
-<!-- 中央高塔 -->
-<rect x="33" y="18" width="14" height="32" fill="url(#poBrick)" stroke="#5c2418" stroke-width="0.5"/>
-<rect x="35" y="24" width="10" height="6" fill="#e8d8b8" opacity="0.9"/>
-<polygon points="31,18 40,6 49,18" fill="#5c7a68" stroke="#2f4a3a" stroke-width="0.5"/>
-<rect x="38" y="4" width="4" height="4" fill="#5c2418"/>
+  <!-- 台灣總統府：日治時期紅磚白石帶的文藝復興風格建築，左右對稱長立面、兩翼角樓、成排拱窗，正中央高聳的中央塔樓（白色塔頂與小圓頂），塔頂飄揚中華民國國旗 -->
+  <defs>
+    <linearGradient id="tpoBrick" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d4664a"/>
+      <stop offset=".6" stop-color="#b44a34"/>
+      <stop offset="1" stop-color="#8c3624"/>
+    </linearGradient>
+    <linearGradient id="tpoStone" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fbf6ea"/>
+      <stop offset="1" stop-color="#d6cbb4"/>
+    </linearGradient>
+    <linearGradient id="tpoWin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3c5470"/>
+      <stop offset="1" stop-color="#1f2c3c"/>
+    </linearGradient>
+  </defs>
+  <!-- 地面陰影 -->
+  <ellipse cx="40" cy="72" rx="37" ry="3.2" fill="#000" opacity=".2"/>
+  <!-- 兩翼主體 -->
+  <rect x="5" y="50" width="70" height="21" fill="url(#tpoBrick)" stroke="#5c2418" stroke-width=".6"/>
+  <!-- 角樓 -->
+  <rect x="3" y="45" width="10" height="26" fill="url(#tpoBrick)" stroke="#5c2418" stroke-width=".6"/>
+  <rect x="67" y="45" width="10" height="26" fill="url(#tpoBrick)" stroke="#5c2418" stroke-width=".6"/>
+  <path d="M2.5 45 L8 41.5 L13.5 45 Z M66.5 45 L72 41.5 L77.5 45 Z" fill="#7d8a86" stroke="#4a524f" stroke-width=".5"/>
+  <!-- 白色石帶 -->
+  <g fill="url(#tpoStone)" stroke="#a89c84" stroke-width=".3">
+    <rect x="5" y="49" width="70" height="1.6"/>
+    <rect x="5" y="57" width="70" height="1.2"/>
+    <rect x="5" y="64" width="70" height="1.2"/>
+    <rect x="3" y="44.4" width="10" height="1.4"/>
+    <rect x="67" y="44.4" width="10" height="1.4"/>
+    <rect x="3" y="69.5" width="74" height="1.8"/>
+  </g>
+  <!-- 拱窗 -->
+  <g fill="url(#tpoWin)" stroke="#f3ead6" stroke-width=".45">
+    <path d="M16 56 v-3 a1.2 1.2 0 0 1 2.4 0 v3 Z M21 56 v-3 a1.2 1.2 0 0 1 2.4 0 v3 Z M26 56 v-3 a1.2 1.2 0 0 1 2.4 0 v3 Z"/>
+    <path d="M51.6 56 v-3 a1.2 1.2 0 0 1 2.4 0 v3 Z M56.6 56 v-3 a1.2 1.2 0 0 1 2.4 0 v3 Z M61.6 56 v-3 a1.2 1.2 0 0 1 2.4 0 v3 Z"/>
+    <path d="M16 63 v-3 a1.2 1.2 0 0 1 2.4 0 v3 Z M21 63 v-3 a1.2 1.2 0 0 1 2.4 0 v3 Z M26 63 v-3 a1.2 1.2 0 0 1 2.4 0 v3 Z"/>
+    <path d="M51.6 63 v-3 a1.2 1.2 0 0 1 2.4 0 v3 Z M56.6 63 v-3 a1.2 1.2 0 0 1 2.4 0 v3 Z M61.6 63 v-3 a1.2 1.2 0 0 1 2.4 0 v3 Z"/>
+    <path d="M6.8 56 v-3 a1.2 1.2 0 0 1 2.4 0 v3 Z M70.8 56 v-3 a1.2 1.2 0 0 1 2.4 0 v3 Z M6.8 63 v-3 a1.2 1.2 0 0 1 2.4 0 v3 Z M70.8 63 v-3 a1.2 1.2 0 0 1 2.4 0 v3 Z"/>
+  </g>
+  <!-- 中央塔樓基座（門廊） -->
+  <rect x="31" y="40" width="18" height="31" fill="url(#tpoBrick)" stroke="#5c2418" stroke-width=".6"/>
+  <g fill="url(#tpoStone)" stroke="#a89c84" stroke-width=".3">
+    <rect x="31" y="39.4" width="18" height="1.6"/>
+    <rect x="31" y="49" width="18" height="1.6"/>
+    <rect x="31" y="57" width="18" height="1.2"/>
+  </g>
+  <!-- 主入口 -->
+  <path d="M35 71 v-7 a5 4 0 0 1 10 0 v7 Z" fill="url(#tpoStone)" stroke="#a89c84" stroke-width=".4"/>
+  <path d="M37 71 v-6 a3 2.6 0 0 1 6 0 v6 Z" fill="url(#tpoWin)"/>
+  <g fill="url(#tpoWin)" stroke="#f3ead6" stroke-width=".45">
+    <path d="M34 48 v-4 a1.3 1.3 0 0 1 2.6 0 v4 Z M38.7 48 v-4 a1.3 1.3 0 0 1 2.6 0 v4 Z M43.4 48 v-4 a1.3 1.3 0 0 1 2.6 0 v4 Z"/>
+    <path d="M34 56 v-3 a1.3 1.3 0 0 1 2.6 0 v3 Z M43.4 56 v-3 a1.3 1.3 0 0 1 2.6 0 v3 Z M38.7 56 v-3 a1.3 1.3 0 0 1 2.6 0 v3 Z"/>
+  </g>
+  <!-- 高塔身 -->
+  <rect x="34.5" y="18" width="11" height="22" fill="url(#tpoBrick)" stroke="#5c2418" stroke-width=".6"/>
+  <g fill="url(#tpoStone)" stroke="#a89c84" stroke-width=".3">
+    <rect x="34.5" y="24" width="11" height="1.2"/>
+    <rect x="34.5" y="31" width="11" height="1.2"/>
+  </g>
+  <g fill="url(#tpoWin)" stroke="#f3ead6" stroke-width=".4">
+    <path d="M38.8 30 v-3.5 a1.2 1.2 0 0 1 2.4 0 v3.5 Z M38.8 38 v-4 a1.2 1.2 0 0 1 2.4 0 v4 Z"/>
+  </g>
+  <!-- 白色塔頂段 -->
+  <rect x="33.5" y="16.5" width="13" height="2" fill="url(#tpoStone)" stroke="#a89c84" stroke-width=".4"/>
+  <rect x="35.5" y="10.5" width="9" height="6" fill="url(#tpoStone)" stroke="#a89c84" stroke-width=".4"/>
+  <path d="M37.3 16 v-3 a.7 .7 0 0 1 1.4 0 v3 Z M41.3 16 v-3 a.7 .7 0 0 1 1.4 0 v3 Z" fill="url(#tpoWin)"/>
+  <!-- 小圓頂 -->
+  <path d="M36.5 10.6 Q36.5 5.5 40 5 Q43.5 5.5 43.5 10.6 Z" fill="#8a9a94" stroke="#4a524f" stroke-width=".45"/>
+  <rect x="39.5" y="0.3" width=".8" height="5.2" fill="#4a524f"/>
+  <!-- 國旗 -->
+  <g>
+    <rect x="40.3" y="0.6" width="6.5" height="4.3" fill="#d42a26" stroke="#7a1412" stroke-width=".3">
+      <animate attributeName="width" values="6.5;6;6.5" dur="1.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="40.3" y="0.6" width="3.2" height="2.15" fill="#1c3c9c"/>
+    <circle cx="41.9" cy="1.7" r=".65" fill="#ffffff"/>
+  </g>
 </svg>

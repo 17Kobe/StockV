@@ -1,37 +1,122 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- 大洪水與諾亞方舟：背景為雪頂的亞拉拉特山（大小雙峰）與彩虹，木造方舟漂在洪水浪上，甲板有一對長頸鹿與一對大象探頭，白鴿銜橄欖枝飛來 -->
   <defs>
-    <linearGradient id="mt" x1="0" x2="1"><stop offset="0" stop-color="#c8c4be"/><stop offset=".6" stop-color="#8a8a92"/><stop offset="1" stop-color="#5a5a66"/></linearGradient>
-    <linearGradient id="hl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b8844a"/><stop offset="1" stop-color="#6a4322"/></linearGradient>
+    <linearGradient id="nakMt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a9b4c8"/>
+      <stop offset="1" stop-color="#5d6880"/>
+    </linearGradient>
+    <linearGradient id="nakHull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c58a4c"/>
+      <stop offset="1" stop-color="#6b4020"/>
+    </linearGradient>
+    <linearGradient id="nakCabin" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e2b071"/>
+      <stop offset="1" stop-color="#a8703c"/>
+    </linearGradient>
+    <linearGradient id="nakRoof" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b8532e"/>
+      <stop offset="1" stop-color="#6e2a17"/>
+    </linearGradient>
+    <linearGradient id="nakSea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4f9fd8"/>
+      <stop offset="1" stop-color="#1d4f8c"/>
+    </linearGradient>
+    <linearGradient id="nakSeaB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a83c4"/>
+      <stop offset="1" stop-color="#173f75"/>
+    </linearGradient>
   </defs>
-  <!-- 亞拉臘山上的諾亞方舟：大洪水退去後，方舟停在山頂，鴿子銜著橄欖枝飛回，天上出現彩虹 -->
+
   <!-- 彩虹 -->
-  <g fill="none" stroke-width="3.2" opacity=".75">
-    <path d="M6 70 Q64 -10 122 70" stroke="#ff5a5a"/><path d="M10 70 Q64 -4 118 70" stroke="#ffb23a"/><path d="M14 70 Q64 2 114 70" stroke="#ffe14d"/><path d="M18 70 Q64 8 110 70" stroke="#5ed87a"/><path d="M22 70 Q64 14 106 70" stroke="#4aa8e0"/><path d="M26 70 Q64 20 102 70" stroke="#8a6ae0"/>
-    <animate attributeName="opacity" values=".75;.45;.75" dur="3.6s" repeatCount="indefinite"/>
+  <g fill="none" stroke-width="4.2" opacity=".9">
+    <path d="M8 84 A56 56 0 0 1 120 84" stroke="#e8453c"/>
+    <path d="M12.2 84 A51.8 51.8 0 0 1 115.8 84" stroke="#f49a2e"/>
+    <path d="M16.4 84 A47.6 47.6 0 0 1 111.6 84" stroke="#f6d743"/>
+    <path d="M20.6 84 A43.4 43.4 0 0 1 107.4 84" stroke="#5cc25a"/>
+    <path d="M24.8 84 A39.2 39.2 0 0 1 103.2 84" stroke="#3f8fe0"/>
+    <path d="M29 84 A35 35 0 0 1 99 84" stroke="#8a5cc9"/>
   </g>
-  <!-- 雙峰的亞拉臘山 -->
-  <path d="M0 126 L30 66 L44 80 L64 36 L100 126Z" fill="url(#mt)"/>
-  <path d="M64 36 L72 52 L64 48 L58 56 L52 50Z M30 66 L36 76 L30 74 L26 78Z" fill="#fff"/>
-  <path d="M64 126 L98 82 L124 126Z" fill="#6f7a82"/>
-  <path d="M98 82 L104 94 L98 92 L94 96Z" fill="#fff"/>
-  <!-- 水位退去的水面 -->
-  <path d="M0 108 Q20 104 40 108 T80 108 T128 108 V128 H0Z" fill="#4a9ac8" opacity=".9"/>
-  <path d="M0 114 Q20 110 40 114 T80 114 T128 114" stroke="#d7f4ff" stroke-width="1.4" fill="none" opacity=".7"/>
-  <!-- 方舟 -->
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="-1.5 64 44;1.5 64 44;-1.5 64 44" dur="4s" repeatCount="indefinite"/>
-    <path d="M38 48 L90 48 L84 62 Q64 68 44 62Z" fill="url(#hl)" stroke="#3a2210" stroke-width="1.4"/>
-    <rect x="48" y="30" width="32" height="18" fill="#c8964e" stroke="#3a2210" stroke-width="1.4"/>
-    <path d="M44 30 L64 18 L84 30Z" fill="#8a5a2c" stroke="#3a2210" stroke-width="1.4"/>
-    <g fill="#3a2210"><rect x="54" y="35" width="6" height="8"/><rect x="68" y="35" width="6" height="8"/></g>
-    <path d="M42 54 H86" stroke="#e2b04a" stroke-width="1.6"/>
-    <circle cx="40" cy="44" r="3" fill="#f2c9a0"/><path d="M36 44 Q40 38 44 44" fill="#2a1a10"/>
+
+  <!-- 亞拉拉特山：大峰與小峰 -->
+  <path d="M14 84 L38 54 L46 62 L52 56 L74 30 L104 72 L116 84Z" fill="url(#nakMt)" stroke="#424b60" stroke-width=".9" stroke-linejoin="round"/>
+  <path d="M74 30 L66 40 L70 39 L72 43 L76 39 L80 42 L82 40.5Z" fill="#fff" stroke="#9aa6bc" stroke-width=".6" stroke-linejoin="round"/>
+  <path d="M38 54 L33.5 59.6 L37 58.6 L39 61 L42 58.2Z" fill="#fff" stroke="#9aa6bc" stroke-width=".6" stroke-linejoin="round"/>
+
+  <!-- 甲板上的長頸鹿一對 -->
+  <g stroke="#7a4a1c" stroke-width=".8" stroke-linejoin="round">
+    <path d="M24 82 L26 60 L30 60 L30 82Z" fill="#f2b84a"/>
+    <path d="M23 61 Q24 55 30 56.5 L33 59 Q32 61.5 29 61.5 Z" fill="#f2b84a"/>
+    <path d="M33 82 L35.5 64 L39.5 64 L39 82Z" fill="#f2c25a"/>
+    <path d="M33 65 Q34.5 59 40 60.5 L43 63 Q42 65.5 39 65.5Z" fill="#f2c25a"/>
   </g>
-  <!-- 銜橄欖枝的鴿子 -->
-  <g>
-    <animateMotion dur="7s" repeatCount="indefinite" path="M4 30 Q30 8 60 20 T100 12"/>
-    <path d="M-5 0 Q0 -5 6 -1 L9 1 L5 2 Q0 6 -5 3Z" fill="#fff" stroke="#9aa8b8" stroke-width=".8"/>
-    <path d="M-1 -2 Q-4 -9 1 -10 Q3 -6 2 -1Z" fill="#f4f6fa" stroke="#9aa8b8" stroke-width=".8"><animateTransform attributeName="transform" type="rotate" values="0 0 0;-30 0 0;0 0 0" dur=".5s" repeatCount="indefinite"/></path>
-    <path d="M9 1 Q14 -1 16 3" stroke="#4f9a2d" stroke-width="1.4" fill="none"/><ellipse cx="14" cy="1" rx="2.4" ry="1.2" fill="#4f9a2d"/>
+  <g fill="#b3702a">
+    <circle cx="27.5" cy="66" r="1.2"/><circle cx="28.2" cy="72" r="1.3"/><circle cx="26.4" cy="77" r="1.1"/>
+    <circle cx="37" cy="69" r="1.2"/><circle cx="37.6" cy="75" r="1.2"/>
+  </g>
+  <g stroke="#7a4a1c" stroke-width=".9" stroke-linecap="round">
+    <path d="M25 56.5 L24.5 53.5 M27.5 56 L27.5 53"/>
+    <path d="M35 60.5 L34.5 57.5 M37.5 60 L37.5 57"/>
+  </g>
+  <circle cx="28.5" cy="58.3" r=".8" fill="#2a1a0c"/>
+  <circle cx="38.5" cy="62.3" r=".8" fill="#2a1a0c"/>
+
+  <!-- 船艙與山形屋頂 -->
+  <rect x="42" y="66" width="46" height="16" fill="url(#nakCabin)" stroke="#5a3417" stroke-width=".9"/>
+  <path d="M42 70.5 H88 M42 75 H88 M42 79 H88" stroke="#8a5628" stroke-width=".6"/>
+  <path d="M38 67 L65 52 L92 67Z" fill="url(#nakRoof)" stroke="#4a1c0e" stroke-width=".9" stroke-linejoin="round"/>
+  <path d="M47 64 L65 54 M53 65.5 L65 58.5" stroke="#d47a4e" stroke-width=".7" opacity=".7"/>
+  <rect x="59" y="69" width="12" height="9" rx="1" fill="#3a2410" stroke="#5a3417" stroke-width=".7"/>
+  <line x1="65" y1="69" x2="65" y2="78" stroke="#a8703c" stroke-width=".8"/>
+  <!-- 窗口探頭的小動物（兔子一對） -->
+  <circle cx="62" cy="75" r="2.2" fill="#eee" stroke="#777" stroke-width=".5"/>
+  <circle cx="68" cy="75" r="2.2" fill="#d9c3a8" stroke="#7a5a3a" stroke-width=".5"/>
+  <circle cx="61.3" cy="74.6" r=".5" fill="#222"/><circle cx="62.7" cy="74.6" r=".5" fill="#222"/>
+  <circle cx="67.3" cy="74.6" r=".5" fill="#222"/><circle cx="68.7" cy="74.6" r=".5" fill="#222"/>
+
+  <!-- 甲板上的大象一對 -->
+  <g stroke="#4e4e5c" stroke-width=".8" stroke-linejoin="round">
+    <circle cx="96" cy="76" r="6" fill="#a3a7b6"/>
+    <path d="M90.5 73 Q86 72 87 78.5 Q89.5 80 91.5 78Z" fill="#8f93a3"/>
+    <path d="M97 79 Q97 86 93.5 86.5" fill="none" stroke-width="2.6" stroke-linecap="round"/>
+    <circle cx="106.5" cy="77.5" r="5.2" fill="#b4b8c6"/>
+    <path d="M111 75 Q115 74 114.5 79.5 Q112 81 110.5 79Z" fill="#9ea2b2"/>
+    <path d="M106 80.5 Q106.5 86 110 86.5" fill="none" stroke-width="2.4" stroke-linecap="round"/>
+  </g>
+  <path d="M97 79 Q97 86 93.5 86.5" fill="none" stroke="#a3a7b6" stroke-width="1.4" stroke-linecap="round"/>
+  <path d="M106 80.5 Q106.5 86 110 86.5" fill="none" stroke="#b4b8c6" stroke-width="1.2" stroke-linecap="round"/>
+  <circle cx="95" cy="75" r=".8" fill="#222"/><circle cx="98.5" cy="75" r=".8" fill="#222"/>
+  <circle cx="105.5" cy="76.6" r=".75" fill="#222"/><circle cx="108.5" cy="76.6" r=".75" fill="#222"/>
+
+  <!-- 船身 -->
+  <path d="M10 80 L118 80 L108 104 Q64 110 20 104Z" fill="url(#nakHull)" stroke="#3e220d" stroke-width="1" stroke-linejoin="round"/>
+  <path d="M12.5 86 H115.5 M15 92 H113 M17.5 98 H110.5" stroke="#4e2c12" stroke-width=".8" opacity=".8"/>
+  <path d="M34 80 V106 M58 80 V108 M82 80 V107 M100 80 V104" stroke="#4e2c12" stroke-width=".6" opacity=".55"/>
+  <rect x="9" y="78.5" width="110" height="3.2" rx="1.2" fill="#d99c5a" stroke="#3e220d" stroke-width=".8"/>
+  <path d="M14 83 H60" stroke="#f0c48c" stroke-width=".8" opacity=".6"/>
+
+  <!-- 洪水浪花 -->
+  <path d="M0 102 Q8 96 16 102 T32 102 T48 102 T64 102 T80 102 T96 102 T112 102 T128 102 T144 102 V128 H0Z" fill="url(#nakSeaB)">
+    <animateTransform attributeName="transform" type="translate" values="0 0;-16 0;0 0" dur="5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M-16 108 Q-6 100 4 108 T24 108 T44 108 T64 108 T84 108 T104 108 T124 108 T144 108 V128 H-16Z" fill="url(#nakSea)" stroke="#d8f0ff" stroke-width="1">
+    <animateTransform attributeName="transform" type="translate" values="0 0;12 0;0 0" dur="4s" repeatCount="indefinite"/>
+  </path>
+  <g fill="#fff" opacity=".85">
+    <circle cx="10" cy="104" r="1.4"/><circle cx="50" cy="104" r="1.2"/><circle cx="92" cy="104" r="1.4"/><circle cx="118" cy="105" r="1.1"/>
+  </g>
+
+  <!-- 銜橄欖枝的白鴿 -->
+  <g transform="translate(100 30)">
+    <path d="M-7 1 Q-2 -3 4 -1 Q8 0 9 -2 Q9.5 1 6 2.5 Q0 4.5 -7 1Z" fill="#fff" stroke="#6a7a8c" stroke-width=".7" stroke-linejoin="round"/>
+    <path d="M-7 1 L-12 -1.5 L-11 2.5Z" fill="#f0f4f8" stroke="#6a7a8c" stroke-width=".7" stroke-linejoin="round"/>
+    <path d="M-1 0 Q-6 -10 2 -12 Q3 -5 3 0Z" fill="#f4f7fa" stroke="#6a7a8c" stroke-width=".7" stroke-linejoin="round">
+      <animateTransform attributeName="transform" type="scale" values="1 1;1 -.35;1 1" dur=".9s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="6.2" cy="-1" r=".7" fill="#222"/>
+    <path d="M9 -2 L11 -1.4 L9.2 -.6Z" fill="#f2a43a"/>
+    <path d="M10.5 -1 Q14 1 15 4" fill="none" stroke="#5b7a2a" stroke-width=".8"/>
+    <ellipse cx="13" cy="0" rx="1.6" ry=".8" transform="rotate(30 13 0)" fill="#6fae3a"/>
+    <ellipse cx="14.8" cy="3" rx="1.6" ry=".8" transform="rotate(60 14.8 3)" fill="#6fae3a"/>
+    <ellipse cx="12.4" cy="2.4" rx="1.4" ry=".7" transform="rotate(-20 12.4 2.4)" fill="#7fbf48"/>
   </g>
 </svg>

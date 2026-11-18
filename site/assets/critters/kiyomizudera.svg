@@ -1,112 +1,129 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 京都清水寺：懸造的木造「清水舞台」由多根木柱與橫樑格架撐起，台上本堂為檜皮葺大屋頂，四周秋楓紅葉，背景小朱紅三重塔 -->
   <defs>
     <linearGradient id="kyHill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#52a63f"/>
-      <stop offset="1" stop-color="#2f6b23"/>
-    </linearGradient>
-    <linearGradient id="kyHillLight" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#63c24c"/>
-      <stop offset="1" stop-color="#3d8c2f"/>
-    </linearGradient>
-    <linearGradient id="kyRed" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#d8492f"/>
-      <stop offset="1" stop-color="#9e2416"/>
+      <stop offset="0" stop-color="#6aa64a"/>
+      <stop offset="1" stop-color="#2f5e26"/>
     </linearGradient>
     <linearGradient id="kyRoof" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#555555"/>
-      <stop offset="1" stop-color="#2a2a2a"/>
+      <stop offset="0" stop-color="#8a7464"/>
+      <stop offset="0.6" stop-color="#5e4b3f"/>
+      <stop offset="1" stop-color="#3b2e27"/>
     </linearGradient>
-    <linearGradient id="kyWood" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#8a5a34"/>
-      <stop offset="1" stop-color="#5a331a"/>
+    <linearGradient id="kyWood" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d3a46c"/>
+      <stop offset="1" stop-color="#9a6a3c"/>
     </linearGradient>
+    <linearGradient id="kyPillar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b98450"/>
+      <stop offset="1" stop-color="#7a5230"/>
+    </linearGradient>
+    <linearGradient id="kyVerm" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f05a3a"/>
+      <stop offset="1" stop-color="#b8321e"/>
+    </linearGradient>
+    <radialGradient id="kyMaple" cx="0.35" cy="0.3" r="0.75">
+      <stop offset="0" stop-color="#ff9a3c"/>
+      <stop offset="0.6" stop-color="#e2452a"/>
+      <stop offset="1" stop-color="#a8251a"/>
+    </radialGradient>
+    <radialGradient id="kyMaple2" cx="0.35" cy="0.3" r="0.75">
+      <stop offset="0" stop-color="#ffd25a"/>
+      <stop offset="1" stop-color="#e57d22"/>
+    </radialGradient>
+    <radialGradient id="kyGreen" cx="0.35" cy="0.3" r="0.75">
+      <stop offset="0" stop-color="#7cc25a"/>
+      <stop offset="1" stop-color="#3a7a2e"/>
+    </radialGradient>
   </defs>
 
-  <!-- Ground shadow -->
-  <ellipse cx="40" cy="74" rx="28" ry="5" fill="#2d5a1b" opacity="0.5"/>
+  <!-- 地面陰影 -->
+  <ellipse cx="40" cy="74" rx="37" ry="4" fill="#000" opacity="0.18"/>
 
-  <!-- Green hillside/trees background -->
-  <ellipse cx="20" cy="65" rx="18" ry="22" fill="url(#kyHill)" stroke="#254f1c" stroke-width="0.5"/>
-  <ellipse cx="12" cy="62" rx="10" ry="15" fill="url(#kyHillLight)" stroke="#2f6b23" stroke-width="0.4"/>
-  <ellipse cx="28" cy="60" rx="9" ry="13" fill="url(#kyHillLight)" stroke="#2f6b23" stroke-width="0.4"/>
-
-  <!-- Wooden support pillars (懸造) -->
-  <rect x="36" y="52" width="3" height="22" fill="url(#kyWood)" stroke="#3f2110" stroke-width="0.4"/>
-  <rect x="43" y="49" width="3" height="25" fill="url(#kyWood)" stroke="#3f2110" stroke-width="0.4"/>
-  <rect x="50" y="52" width="3" height="22" fill="url(#kyWood)" stroke="#3f2110" stroke-width="0.4"/>
-  <rect x="57" y="55" width="3" height="19" fill="url(#kyWood)" stroke="#3f2110" stroke-width="0.4"/>
-
-  <!-- Cross braces on pillars -->
-  <line x1="36" y1="60" x2="46" y2="55" stroke="#5a2e12" stroke-width="1.2"/>
-  <line x1="43" y1="60" x2="53" y2="57" stroke="#5a2e12" stroke-width="1.2"/>
-  <line x1="50" y1="62" x2="60" y2="60" stroke="#5a2e12" stroke-width="1.2"/>
-
-  <!-- Stage platform (舞台) -->
-  <rect x="33" y="48" width="32" height="6" rx="1" fill="url(#kyWood)" stroke="#3f2110" stroke-width="0.5"/>
-
-  <!-- Main building base -->
-  <rect x="35" y="28" width="30" height="22" fill="url(#kyRed)" stroke="#6e180f" stroke-width="0.5"/>
-
-  <!-- Windows/shoji screens -->
-  <rect x="38" y="32" width="6" height="8" rx="0.5" fill="#f5e6c8" stroke="#b89a68" stroke-width="0.4"/>
-  <rect x="47" y="32" width="6" height="8" rx="0.5" fill="#f5e6c8" stroke="#b89a68" stroke-width="0.4"/>
-  <rect x="56" y="32" width="5" height="8" rx="0.5" fill="#f5e6c8" stroke="#b89a68" stroke-width="0.4"/>
-  <!-- Grid lines on shoji -->
-  <line x1="41" y1="32" x2="41" y2="40" stroke="#c8a87a" stroke-width="0.5"/>
-  <line x1="38" y1="36" x2="44" y2="36" stroke="#c8a87a" stroke-width="0.5"/>
-  <line x1="50" y1="32" x2="50" y2="40" stroke="#c8a87a" stroke-width="0.5"/>
-  <line x1="47" y1="36" x2="53" y2="36" stroke="#c8a87a" stroke-width="0.5"/>
-
-  <!-- Lower roof (lower eave) -->
-  <polygon points="32,28 68,28 71,34 29,34" fill="url(#kyRoof)" stroke="#1a1a1a" stroke-width="0.5"/>
-  <!-- Lower roof ridge detail -->
-  <line x1="32" y1="28" x2="68" y2="28" stroke="#666" stroke-width="0.8"/>
-
-  <!-- Upper building -->
-  <rect x="38" y="14" width="24" height="16" fill="url(#kyRed)" stroke="#6e180f" stroke-width="0.5"/>
-
-  <!-- Upper roof (main) -->
-  <polygon points="34,14 66,14 70,21 30,21" fill="url(#kyRoof)" stroke="#1a1a1a" stroke-width="0.5"/>
-  <!-- Roof curve upward at tips -->
-  <path d="M30,21 Q29,19 31,17" fill="none" stroke="#666" stroke-width="0.8"/>
-  <path d="M70,21 Q71,19 69,17" fill="none" stroke="#666" stroke-width="0.8"/>
-
-  <!-- Top small roof -->
-  <polygon points="37,9 63,9 66,14 34,14" fill="url(#kyRoof)" stroke="#1a1a1a" stroke-width="0.5"/>
-  <!-- Roof tip ornament (鴟尾) -->
-  <path d="M37,9 Q35,7 37,5 Q36,7 37,9" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="0.4"/>
-  <path d="M63,9 Q65,7 63,5 Q64,7 63,9" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="0.4"/>
-  <!-- Ridge ornament -->
-  <rect x="48" y="5" width="4" height="5" rx="1" fill="#8b6914" stroke="#5c4409" stroke-width="0.4"/>
-
-  <!-- Roof tiles detail lines -->
-  <line x1="34" y1="17" x2="66" y2="17" stroke="#666" stroke-width="0.6"/>
-  <line x1="30" y1="21" x2="70" y2="21" stroke="#666" stroke-width="0.6"/>
-
-  <!-- Cherry blossom tree (small, right background hint) -->
-  <rect x="63" y="55" width="2.5" height="12" fill="#6e3710" stroke="#431f06" stroke-width="0.4"/>
-  <circle cx="64" cy="52" r="7" fill="#f7a3c6" stroke="#c56f94" stroke-width="0.4"/>
-  <circle cx="60" cy="55" r="5" fill="#f8bfd4" stroke="#cc8ea8" stroke-width="0.4"/>
-  <circle cx="68" cy="55" r="5" fill="#f8bfd4" stroke="#cc8ea8" stroke-width="0.4"/>
-
-  <!-- Falling cherry blossom petals animation -->
-  <g opacity="0.9">
-    <ellipse cx="25" cy="20" rx="2" ry="1.2" fill="#f9a8c9" transform="rotate(30 25 20)">
-      <animateTransform attributeName="transform" type="translate" from="0 0" to="4 55" dur="4s" repeatCount="indefinite" begin="0s"/>
-      <animate attributeName="opacity" from="1" to="0" dur="4s" repeatCount="indefinite" begin="0s"/>
-    </ellipse>
-    <ellipse cx="70" cy="10" rx="2" ry="1.2" fill="#f9c4d8" transform="rotate(-20 70 10)">
-      <animateTransform attributeName="transform" type="translate" from="0 0" to="-3 60" dur="5s" repeatCount="indefinite" begin="1.5s"/>
-      <animate attributeName="opacity" from="1" to="0" dur="5s" repeatCount="indefinite" begin="1.5s"/>
-    </ellipse>
-    <ellipse cx="48" cy="5" rx="1.8" ry="1.1" fill="#f9a8c9" transform="rotate(15 48 5)">
-      <animateTransform attributeName="transform" type="translate" from="0 0" to="5 65" dur="4.5s" repeatCount="indefinite" begin="0.8s"/>
-      <animate attributeName="opacity" from="1" to="0" dur="4.5s" repeatCount="indefinite" begin="0.8s"/>
-    </ellipse>
-    <ellipse cx="15" cy="30" rx="2" ry="1.2" fill="#f9c4d8" transform="rotate(-10 15 30)">
-      <animateTransform attributeName="transform" type="translate" from="0 0" to="6 45" dur="3.8s" repeatCount="indefinite" begin="2.5s"/>
-      <animate attributeName="opacity" from="1" to="0" dur="3.8s" repeatCount="indefinite" begin="2.5s"/>
-    </ellipse>
+  <!-- 背景三重塔 -->
+  <g stroke="#3b1a12" stroke-width="0.4" stroke-linejoin="round">
+    <line x1="71" y1="3" x2="71" y2="9" stroke="#c9a13a" stroke-width="0.8"/>
+    <rect x="68.6" y="10" width="4.8" height="3.4" fill="url(#kyVerm)"/>
+    <path d="M65.2 10.6 Q71 7.6 76.8 10.6 Q71 9.9 65.2 10.6Z" fill="#4a3a30"/>
+    <rect x="68.2" y="14.6" width="5.6" height="3.6" fill="url(#kyVerm)"/>
+    <path d="M64.4 15.3 Q71 12.2 77.6 15.3 Q71 14.6 64.4 15.3Z" fill="#4a3a30"/>
+    <rect x="67.8" y="19.4" width="6.4" height="4" fill="url(#kyVerm)"/>
+    <path d="M63.6 20.2 Q71 16.8 78.4 20.2 Q71 19.4 63.6 20.2Z" fill="#4a3a30"/>
   </g>
 
+  <!-- 山坡 -->
+  <path d="M30 72 Q46 66 54 56 Q60 44 66 34 Q72 25 79 24 L79 70 Q60 76 30 72Z" fill="url(#kyHill)" stroke="#24481c" stroke-width="0.6"/>
+  <!-- 山坡上的樹 -->
+  <circle cx="72" cy="30" r="6" fill="url(#kyMaple)" stroke="#7a1c12" stroke-width="0.5"/>
+  <circle cx="66" cy="27" r="4.5" fill="url(#kyGreen)" stroke="#2a5a20" stroke-width="0.5"/>
+
+  <!-- 舞台下的懸造木柱格架 -->
+  <g>
+    <rect x="6" y="41" width="52" height="30" fill="#3a2516" opacity="0.55"/>
+    <g fill="url(#kyPillar)" stroke="#4a2e18" stroke-width="0.4">
+      <rect x="6.5" y="41" width="2.2" height="30"/>
+      <rect x="12.6" y="41" width="2.2" height="30"/>
+      <rect x="18.7" y="41" width="2.2" height="30"/>
+      <rect x="24.8" y="41" width="2.2" height="30"/>
+      <rect x="30.9" y="41" width="2.2" height="30"/>
+      <rect x="37" y="41" width="2.2" height="30"/>
+      <rect x="43.1" y="41" width="2.2" height="30"/>
+      <rect x="49.2" y="41" width="2.2" height="30"/>
+      <rect x="55.3" y="41" width="2.2" height="28"/>
+    </g>
+    <g fill="#c99560" stroke="#4a2e18" stroke-width="0.4">
+      <rect x="5.5" y="48" width="53" height="1.6"/>
+      <rect x="5.5" y="55" width="53" height="1.6"/>
+      <rect x="5.5" y="62" width="53" height="1.6"/>
+    </g>
+  </g>
+
+  <!-- 舞台地板 -->
+  <path d="M3 38.6 L60 38.6 L60 42 L3 42Z" fill="url(#kyWood)" stroke="#5a3a1e" stroke-width="0.5"/>
+  <rect x="3" y="41.2" width="57" height="0.8" fill="#6e4524"/>
+  <!-- 欄杆 -->
+  <g stroke="#6e4524" stroke-width="0.6">
+    <line x1="3.5" y1="35.6" x2="3.5" y2="38.6"/>
+    <line x1="9" y1="35.6" x2="9" y2="38.6"/>
+    <line x1="14.5" y1="35.6" x2="14.5" y2="38.6"/>
+  </g>
+  <rect x="3" y="35.2" width="12" height="0.9" fill="#c99560" stroke="#6e4524" stroke-width="0.3"/>
+
+  <!-- 本堂牆身 -->
+  <rect x="15" y="29" width="46" height="9.6" fill="#f0e2c4" stroke="#6e4524" stroke-width="0.5"/>
+  <g fill="#b04026">
+    <rect x="15" y="29" width="1.6" height="9.6"/>
+    <rect x="24" y="29" width="1.4" height="9.6"/>
+    <rect x="32.6" y="29" width="1.4" height="9.6"/>
+    <rect x="41.2" y="29" width="1.4" height="9.6"/>
+    <rect x="49.8" y="29" width="1.4" height="9.6"/>
+    <rect x="59.4" y="29" width="1.6" height="9.6"/>
+  </g>
+  <g fill="#8a5a32" opacity="0.6">
+    <rect x="17.5" y="31" width="5.5" height="7.6"/>
+    <rect x="26.4" y="31" width="5.4" height="7.6"/>
+    <rect x="35" y="31" width="5.4" height="7.6"/>
+    <rect x="43.6" y="31" width="5.4" height="7.6"/>
+    <rect x="52.2" y="31" width="6.4" height="7.6"/>
+  </g>
+
+  <!-- 檜皮葺大屋頂（入母屋造） -->
+  <path d="M8 29.5 Q20 27.6 26 21 L31 13 L45 13 L50 21 Q56 27.6 68 29.5 Q60 31.4 38 31.2 Q16 31.4 8 29.5Z" fill="url(#kyRoof)" stroke="#2a1f1a" stroke-width="0.6" stroke-linejoin="round"/>
+  <!-- 山牆（破風） -->
+  <path d="M33.2 13.2 L38 9.4 L42.8 13.2 L44 18.6 L32 18.6Z" fill="#7a6252" stroke="#2a1f1a" stroke-width="0.5" stroke-linejoin="round"/>
+  <path d="M34.6 14.2 L38 11.4 L41.4 14.2 L41.8 17.6 L34.2 17.6Z" fill="#e8d6b0" opacity="0.85"/>
+  <line x1="29" y1="13" x2="47" y2="13" stroke="#2a1f1a" stroke-width="1.1" stroke-linecap="round"/>
+  <path d="M12 29 Q24 27.4 29 21" fill="none" stroke="#a89282" stroke-width="0.6" opacity="0.8"/>
+  <path d="M8 29.5 Q38 32.6 68 29.5" fill="none" stroke="#1e1612" stroke-width="0.9"/>
+
+  <!-- 左下秋楓 -->
+  <circle cx="5" cy="66" r="6" fill="url(#kyMaple)" stroke="#7a1c12" stroke-width="0.5"/>
+  <circle cx="12" cy="70" r="5" fill="url(#kyMaple2)" stroke="#9a4a12" stroke-width="0.5"/>
+  <circle cx="2.5" cy="72" r="4" fill="url(#kyGreen)" stroke="#2a5a20" stroke-width="0.5"/>
+  <!-- 右下秋楓 -->
+  <circle cx="62" cy="60" r="6.5" fill="url(#kyMaple)" stroke="#7a1c12" stroke-width="0.5"/>
+  <circle cx="72" cy="50" r="6" fill="url(#kyMaple2)" stroke="#9a4a12" stroke-width="0.5"/>
+  <circle cx="74" cy="64" r="5.5" fill="url(#kyMaple)" stroke="#7a1c12" stroke-width="0.5"/>
+  <circle cx="66" cy="41" r="4.5" fill="url(#kyGreen)" stroke="#2a5a20" stroke-width="0.5"/>
+  <circle cx="54" cy="69" r="4.5" fill="url(#kyMaple2)" stroke="#9a4a12" stroke-width="0.5"/>
 </svg>

@@ -1,65 +1,73 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 黃山迎客松：從花崗岩崖壁長出的松樹，樹幹扭曲傾斜，一條長長的橫枝向外伸出如迎客手臂，枝頭是層層扁平雲朵狀的深綠松針；後方是尖峭花崗岩峰與雲海 -->
   <defs>
-    <linearGradient id="hsPeak" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#cfd6cf"/>
-      <stop offset="45%" stop-color="#9aa89a"/>
-      <stop offset="100%" stop-color="#5c6b5c"/>
+    <linearGradient id="hp-far" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dfe6ea"/><stop offset=".6" stop-color="#a6b2bc"/><stop offset="1" stop-color="#8592a0"/>
     </linearGradient>
-    <linearGradient id="hsPeak2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#b7c2b7"/>
-      <stop offset="100%" stop-color="#6b7a6b"/>
+    <linearGradient id="hp-farFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity=".9"/>
     </linearGradient>
-    <linearGradient id="hsTrunk" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#6b4a2c"/>
-      <stop offset="100%" stop-color="#3c2814"/>
+    <linearGradient id="hp-rock" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d4d3c8"/><stop offset=".55" stop-color="#9e9e94"/><stop offset="1" stop-color="#686a64"/>
     </linearGradient>
-    <radialGradient id="hsFoliage" cx="40%" cy="30%" r="70%">
-      <stop offset="0%" stop-color="#8fc26a"/>
-      <stop offset="100%" stop-color="#4a7a35"/>
+    <linearGradient id="hp-trunk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9a6a44"/><stop offset=".5" stop-color="#6e4628"/><stop offset="1" stop-color="#4a2e1a"/>
+    </linearGradient>
+    <radialGradient id="hp-leaf" cx="40%" cy="20%" r="80%">
+      <stop offset="0" stop-color="#7fb35a"/><stop offset=".55" stop-color="#3f7a3a"/><stop offset="1" stop-color="#244d2a"/>
     </radialGradient>
+    <linearGradient id="hp-cloud" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dfe9f0"/>
+    </linearGradient>
+    <!-- 雲朵狀松針墊（中心在 0,0） -->
+    <g id="hp-pad">
+      <path d="M-9,1.5 Q-10.5,-1.5 -7,-2.6 Q-6,-5 -2.6,-4.6 Q-0.5,-6.6 2.6,-5 Q6,-5.6 7,-2.8 Q10.6,-1.8 9,1.5 Q0,3.2 -9,1.5 Z" fill="url(#hp-leaf)" stroke="#1d3d22" stroke-width="0.5" stroke-linejoin="round"/>
+      <path d="M-6.5,-1.8 Q-4.5,-3.8 -2,-3.4 Q0,-5 2.5,-3.8 Q5,-4.2 6,-2.2" fill="none" stroke="#a8d27a" stroke-width="0.7" stroke-linecap="round" opacity=".8"/>
+      <path d="M-7.5,1.2 Q0,2.6 7.5,1.2" fill="none" stroke="#1d3d22" stroke-width="0.6" opacity=".6"/>
+      <path d="M-5,-0.5 l1,-1 M-1.5,-0.2 l1,-1.2 M2,-0.6 l1,-1 M5,0 l0.8,-1" stroke="#2a5a2e" stroke-width="0.4" stroke-linecap="round"/>
+    </g>
   </defs>
 
-  <!-- background granite peaks (local, not full sky) -->
-  <path d="M0,46 L14,20 L28,46 Z" fill="url(#hsPeak2)" opacity="0.85"/>
-  <path d="M46,48 L62,14 L78,48 Z" fill="url(#hsPeak)" opacity="0.9"/>
+  <!-- 遠方花崗岩峰 -->
+  <g stroke="#6f7c88" stroke-width="0.5" stroke-linejoin="round">
+    <path d="M44,54 L47,30 L50,27 L52,16 L55,11 L58,17 L60,22 L63,19 L66,9 L69,5 L72,11 L73,22 L76,30 L78,54 Z" fill="url(#hp-far)"/>
+    <path d="M2,54 L4,36 L7,30 L9,22 L12,19 L15,25 L17,33 L20,38 L22,54 Z" fill="url(#hp-far)" opacity=".85"/>
+    <path d="M54,24 L55,46 M67,14 L66,44 M72,22 L74,46 M11,26 L12,46" fill="none" stroke="#7d8a96" stroke-width="0.4" opacity=".7"/>
+  </g>
+  <ellipse cx="40" cy="48" rx="38" ry="8" fill="url(#hp-farFade)" opacity=".6"/>
 
-  <!-- drifting mist across the mid-ground -->
-  <g opacity="0.55">
-    <ellipse cx="18" cy="48" rx="20" ry="5" fill="#f3f7f3">
-      <animate attributeName="cx" values="14;24;14" dur="6s" repeatCount="indefinite"/>
-    </ellipse>
-    <ellipse cx="60" cy="52" rx="24" ry="5.5" fill="#f3f7f3">
-      <animate attributeName="cx" values="64;54;64" dur="7s" repeatCount="indefinite"/>
-    </ellipse>
+  <!-- 雲海 -->
+  <g>
+    <path d="M2,57 Q0,51 6,50 Q9,45 15,48 Q20,43 26,47 Q32,43 38,47 Q44,44 50,48 Q56,44 62,47 Q68,43 72,47 Q79,47 78,54 Q80,59 74,60 Q40,64 6,60 Q1,60 2,57 Z" fill="url(#hp-cloud)" stroke="#c8d6e0" stroke-width="0.4"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;1.2,0;0,0" dur="9s" repeatCount="indefinite"/>
   </g>
 
-  <!-- main granite ledge the pine grows from -->
-  <path d="M8,80 L8,58 Q24,50 40,56 Q56,50 72,58 L72,80 Z" fill="url(#hsPeak)" stroke="#44533f" stroke-width="0.6"/>
-  <g stroke="#44533f" stroke-width="0.4" opacity="0.4" fill="none">
-    <path d="M16,60 L14,78"/>
-    <path d="M64,60 L66,78"/>
-  </g>
+  <!-- 前景花崗岩崖 -->
+  <path d="M24,78 L26,66 Q27,60 33,59 L40,58 Q44,54 50,55 L60,54 Q66,53 70,57 L74,62 L77,78 Q50,80 24,78 Z" fill="url(#hp-rock)" stroke="#4f514c" stroke-width="0.7" stroke-linejoin="round"/>
+  <path d="M34,60 L33,77 M45,57 Q46,66 44,78 M62,55 L64,66 L63,78 M70,58 L69,70 M26,68 Q34,67 40,69 M52,64 Q58,63 64,66" fill="none" stroke="#6b6d66" stroke-width="0.45" opacity=".8"/>
+  <path d="M28,64 Q30,60 34,60 M41,58 Q45,55 50,56" fill="none" stroke="#f0efe6" stroke-width="0.7" stroke-linecap="round" opacity=".8"/>
 
-  <!-- the Greeting Pine: twisting trunk, iconic wide horizontal branch -->
-  <path d="M38,80 C37,66 36,54 40,42 C41,38 44,36 46,36 C44,40 43,46 44,52"
-        fill="none" stroke="url(#hsTrunk)" stroke-width="4.2" stroke-linecap="round"/>
-  <path d="M42,52 C50,48 62,47 70,51 C62,50 52,53 46,58"
-        fill="none" stroke="url(#hsTrunk)" stroke-width="2.6" stroke-linecap="round"/>
-  <path d="M40,46 C32,42 22,42 15,46 C23,44 32,46 37,50"
-        fill="none" stroke="url(#hsTrunk)" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- 松樹枝幹 -->
+  <g fill="url(#hp-trunk)" stroke="#3a2212" stroke-width="0.6" stroke-linejoin="round">
+    <!-- 長橫枝（迎客手臂） -->
+    <path d="M46,39 Q36,36.5 26,38.2 Q17,39.6 9,37.4 L8.6,38.8 Q17,41.6 26,40.4 Q36,39.4 45.6,42 Z"/>
+    <!-- 主幹 -->
+    <path d="M49,58 Q52,52 50,46 Q47,40 50,34 Q52,29 48,24 L45,24.6 Q48.6,29 46.6,33.6 Q43.4,40 46.4,46.4 Q48,51.4 44.6,58 Z"/>
+    <!-- 右側短枝 -->
+    <path d="M49,44 Q55,42 61,40.4 L61.4,41.8 Q56,43.6 49.6,46.4 Z"/>
+    <path d="M48.4,30 Q52,28.6 55,29 L55,30.4 Q52,30.2 48.6,31.8 Z"/>
+    <path d="M47,27 Q43,25.6 38,27 L38,28.4 Q43,27.4 46.6,29 Z"/>
+  </g>
+  <path d="M47.6,52 Q49,48 47.6,45 M47.8,38 Q48.6,34 48.2,31 M30,39.2 Q22,40 14,38.8" fill="none" stroke="#c09068" stroke-width="0.5" stroke-linecap="round" opacity=".7"/>
+  <!-- 樹根抓岩 -->
+  <path d="M44.6,58 Q41,58 38.6,59.4 M49,58 Q53,57.6 55.6,59" fill="none" stroke="#4a2e1a" stroke-width="0.9" stroke-linecap="round"/>
 
-  <!-- layered pine foliage clusters along the branches -->
-  <g fill="url(#hsFoliage)" stroke="#355a26" stroke-width="0.4">
-    <ellipse cx="44" cy="35" rx="9" ry="3.6"/>
-    <ellipse cx="54" cy="42" rx="8" ry="3.2"/>
-    <ellipse cx="64" cy="48" rx="9" ry="3.4"/>
-    <ellipse cx="14" cy="43" rx="7.5" ry="3"/>
-    <ellipse cx="24" cy="46" rx="7" ry="2.8"/>
-    <ellipse cx="36" cy="40" rx="8" ry="3.2"/>
-  </g>
-  <g fill="#aee083" opacity="0.6">
-    <ellipse cx="44" cy="34" rx="5" ry="1.8"/>
-    <ellipse cx="60" cy="47" rx="5" ry="1.8"/>
-    <ellipse cx="18" cy="42" rx="4" ry="1.5"/>
-  </g>
+  <!-- 松針雲墊 -->
+  <use href="#hp-pad" transform="translate(10,36) scale(.8,.75)"/>
+  <use href="#hp-pad" transform="translate(22,37) scale(.9,.8)"/>
+  <use href="#hp-pad" transform="translate(34,36.4) scale(.75,.7)"/>
+  <use href="#hp-pad" transform="translate(62,39.6) scale(.8,.75)"/>
+  <use href="#hp-pad" transform="translate(56,28.4) scale(.7,.7)"/>
+  <use href="#hp-pad" transform="translate(37,26.6) scale(.75,.75)"/>
+  <use href="#hp-pad" transform="translate(47,22.6) scale(1,.9)"/>
 </svg>
