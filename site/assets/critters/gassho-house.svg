@@ -1,79 +1,131 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-  <defs>
-    <linearGradient id="gh-wall" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f7efd8"/>
-      <stop offset="1" stop-color="#d9c89e"/>
-    </linearGradient>
-    <linearGradient id="gh-roof" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#6b5a46"/>
-      <stop offset="1" stop-color="#453a2c"/>
-    </linearGradient>
-  </defs>
-
-  <!-- Ground -->
-  <ellipse cx="40" cy="74" rx="28" ry="5" fill="#7ab648" stroke="#4f8a30" stroke-width="0.6"/>
-
-  <!-- Main wall body -->
-  <rect x="18" y="46" width="44" height="22" rx="1" fill="url(#gh-wall)" stroke="#9c8a62" stroke-width="0.6"/>
-
-  <!-- Wood beam details on wall -->
-  <line x1="18" y1="52" x2="62" y2="52" stroke="#8b6914" stroke-width="1"/>
-  <line x1="18" y1="60" x2="62" y2="60" stroke="#8b6914" stroke-width="1"/>
-  <line x1="28" y1="46" x2="28" y2="68" stroke="#8b6914" stroke-width="1"/>
-  <line x1="52" y1="46" x2="52" y2="68" stroke="#8b6914" stroke-width="1"/>
-
-  <!-- Windows (warm glow) -->
-  <rect x="22" y="54" width="8" height="8" rx="1" fill="#ffd060" stroke="#8b6914" stroke-width="1"/>
-  <rect x="36" y="54" width="8" height="8" rx="1" fill="#ffd060" stroke="#8b6914" stroke-width="1"/>
-  <rect x="50" y="54" width="8" height="8" rx="1" fill="#ffd060" stroke="#8b6914" stroke-width="1"/>
-
-  <!-- Door -->
-  <rect x="34" y="58" width="12" height="10" rx="1" fill="#7a5c3a" stroke="#5a3a1a" stroke-width="1"/>
-
-  <!-- Main steep thatched roof -->
-  <polygon points="40,8 10,48 70,48" fill="url(#gh-roof)" stroke="#2e2318" stroke-width="0.6"/>
-
-  <!-- Thatch texture lines -->
-  <line x1="17" y1="42" x2="63" y2="42" stroke="#7a6a5a" stroke-width="1" opacity="0.6"/>
-  <line x1="20" y1="36" x2="60" y2="36" stroke="#7a6a5a" stroke-width="1" opacity="0.6"/>
-  <line x1="23" y1="30" x2="57" y2="30" stroke="#7a6a5a" stroke-width="1" opacity="0.6"/>
-  <line x1="27" y1="24" x2="53" y2="24" stroke="#7a6a5a" stroke-width="1" opacity="0.6"/>
-  <line x1="31" y1="18" x2="49" y2="18" stroke="#7a6a5a" stroke-width="1" opacity="0.6"/>
-  <line x1="35" y1="13" x2="45" y2="13" stroke="#7a6a5a" stroke-width="1" opacity="0.6"/>
-
-  <!-- Snow on roof top -->
-  <polygon points="40,8 28,22 52,22" fill="#ffffff" opacity="0.92"/>
-  <!-- Snow ridge cap -->
-  <ellipse cx="40" cy="8" rx="3" ry="2" fill="#ffffff" opacity="0.92"/>
-
-  <!-- Snowflake 1 -->
-  <circle cx="15" cy="10" r="1.5" fill="white" opacity="0.85">
-    <animate attributeName="cy" values="5;75" dur="4s" begin="0s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;0.9;0.9;0" dur="4s" begin="0s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- Snowflake 2 -->
-  <circle cx="65" cy="10" r="1.2" fill="white" opacity="0.8">
-    <animate attributeName="cy" values="5;75" dur="3.5s" begin="0.8s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;0.9;0.9;0" dur="3.5s" begin="0.8s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- Snowflake 3 -->
-  <circle cx="10" cy="10" r="1" fill="white" opacity="0.75">
-    <animate attributeName="cy" values="5;75" dur="5s" begin="1.5s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;0.85;0.85;0" dur="5s" begin="1.5s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- Snowflake 4 -->
-  <circle cx="55" cy="10" r="1.3" fill="white" opacity="0.8">
-    <animate attributeName="cy" values="5;75" dur="4.5s" begin="2.2s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;0.9;0.9;0" dur="4.5s" begin="2.2s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- Snowflake 5 -->
-  <circle cx="35" cy="10" r="1.1" fill="white" opacity="0.7">
-    <animate attributeName="cy" values="5;75" dur="3.8s" begin="3s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;0.8;0.8;0" dur="3.8s" begin="3s" repeatCount="indefinite"/>
-  </circle>
-
+<!-- 白川鄉合掌村 Shirakawa-go：三棟大小不同的合掌造民家，極陡的厚茅草三角屋頂幾乎觸地，屋脊覆雪 -->
+<!-- 山牆露出深色木樑與白色障子窗，四周是綠色梯田水田，後方有杉林與小雪山 -->
+<defs>
+  <linearGradient id="gshThatch" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#e2b46a"/>
+    <stop offset="1" stop-color="#a87634"/>
+  </linearGradient>
+  <linearGradient id="gshThatchSide" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#c8944a"/>
+    <stop offset="1" stop-color="#8a5a24"/>
+  </linearGradient>
+  <linearGradient id="gshMtn" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#5a8a74"/>
+    <stop offset="1" stop-color="#2e5a40"/>
+  </linearGradient>
+  <linearGradient id="gshField" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#9ad860"/>
+    <stop offset="1" stop-color="#5a9a34"/>
+  </linearGradient>
+</defs>
+<!-- 後方小山與杉林 -->
+<path d="M2 46 L16 22 L22 28 L32 14 L46 30 L54 24 L78 46 Z" fill="url(#gshMtn)" stroke="#24463a" stroke-width="0.5" stroke-linejoin="round"/>
+<path d="M28 20 L32 14 L36 19 L34 18.5 L32 20 L30 18.6 Z" fill="#ffffff"/>
+<path d="M13 27 L16 22 L19 25.5 L17 25 Z" fill="#ffffff"/>
+<g fill="#2a5a34" stroke="#1a3a22" stroke-width="0.4">
+  <path d="M4 50 L7 40 L10 50 Z"/><path d="M8 52 L11.5 41 L15 52 Z"/>
+  <path d="M68 50 L71.5 38 L75 50 Z"/><path d="M73 52 L76 42 L79 52 Z"/>
+</g>
+<!-- 梯田水田 -->
+<path d="M1 54 Q40 48 79 54 L79 74 Q40 79 1 74 Z" fill="url(#gshField)" stroke="#3e7a28" stroke-width="0.5"/>
+<path d="M2 62 Q40 57 78 62 M3 69 Q40 65 77 69" fill="none" stroke="#e8f4c0" stroke-width="0.8" opacity="0.8"/>
+<path d="M8 66 Q20 64 30 65.5 M50 66 Q62 64.5 72 66" fill="none" stroke="#7ac8e8" stroke-width="1" opacity="0.8" stroke-linecap="round"/>
+<ellipse cx="44" cy="67.5" rx="24" ry="3" fill="#24461c" opacity="0.3"/>
+<g transform="translate(14 31) scale(0.5)">
+  <!-- 側面屋頂（茅草） -->
+  <path d="M0 -2 L14 -8 L33 36 L19 42 Z" fill="url(#gshThatchSide)" stroke="#5a3a16" stroke-width="0.7" stroke-linejoin="round"/>
+  <path d="M1.6 -2.7 L20.6 41.3 M3.1 -3.3 L22.1 40.7 M4.7 -4.0 L23.7 40.0 M6.2 -4.7 L25.2 39.3 M7.8 -5.3 L26.8 38.7 M9.3 -6.0 L28.3 38.0 M10.9 -6.7 L29.9 37.3 M12.4 -7.3 L31.4 36.7" stroke="#8a5e28" stroke-width="0.5" opacity="0.7"/>
+  <!-- 屋頂積雪 -->
+  <path d="M0 -2 L14 -8 L19.5 4.5 Q16 6 14 4.5 Q11 7 8.5 6 Q6 9 4 8 Z" fill="#ffffff" stroke="#b8cce0" stroke-width="0.5" stroke-linejoin="round"/>
+  <path d="M25 22 Q28 20 29.5 24 L27.5 25 Z" fill="#ffffff" opacity="0.9"/>
+  <!-- 牆身 -->
+  <path d="M19 40 L31 35 L31 43 L19 49 Z" fill="#5a3a20" stroke="#2e1c0c" stroke-width="0.5"/>
+  <path d="M21.5 41.5 L28.5 38.6 L28.5 42 L21.5 45 Z" fill="#f2ecd8" stroke="#2e1c0c" stroke-width="0.4"/>
+  <rect x="-17" y="40" width="36" height="9" fill="#6a4628" stroke="#2e1c0c" stroke-width="0.5"/>
+  <rect x="-14" y="42" width="7" height="5" fill="#f4eedc" stroke="#2e1c0c" stroke-width="0.5"/>
+  <rect x="-4" y="42" width="7" height="7" fill="#3a2414" stroke="#2e1c0c" stroke-width="0.5"/>
+  <rect x="7" y="42" width="8" height="5" fill="#f4eedc" stroke="#2e1c0c" stroke-width="0.5"/>
+  <path d="M-10.5 42 V47 M10.5 42 V47 M14 42 V47" stroke="#6a4628" stroke-width="0.4"/>
+  <!-- 正面山牆的茅草厚邊 -->
+  <path d="M0 -2 L20 42.5 L15 42.5 L0 7 L-15 42.5 L-20 42.5 Z" fill="url(#gshThatch)" stroke="#5a3a16" stroke-width="0.7" stroke-linejoin="round"/>
+  <path d="M0 -2 L-20 42.5 L-17 42.5 L0 3 L17 42.5 L20 42.5 Z" fill="#7a5226" opacity="0.35"/>
+  <!-- 山牆：木樑與障子窗 -->
+  <clipPath id="gshGable1"><path d="M0 7 L15 42 L-15 42 Z"/></clipPath>
+  <path d="M0 7 L15 42 L-15 42 Z" fill="#4a2e18"/>
+  <g clip-path="url(#gshGable1)">
+    <rect x="-12" y="33" width="24" height="7" fill="#f4eedc"/>
+    <rect x="-7.5" y="23.5" width="15" height="6" fill="#f4eedc"/>
+    <rect x="-3" y="15" width="6" height="5" fill="#f4eedc"/>
+    <path d="M-20 31.5 H20 M-20 40.5 H20 M-20 22 H20 M-20 13.5 H20" stroke="#8a5a30" stroke-width="1.2"/>
+    <path d="M-6 33 V40 M0 33 V40 M6 33 V40 M-2.5 23.5 V29.5 M2.5 23.5 V29.5 M0 15 V20" stroke="#4a2e18" stroke-width="0.7"/>
+    <path d="M-12 36.5 H12 M-7.5 26.5 H7.5" stroke="#4a2e18" stroke-width="0.4"/>
+  </g>
+  <path d="M0 -2 L1.6 0.8 Q0 1.8 -1.6 0.8 Z" fill="#ffffff"/>
+  <path d="M0 -2.2 L-3.5 5.5 Q-2 5 -1 6.2 Q0 4.6 1 6.2 Q2 5 3.5 5.5 Z" fill="#ffffff" stroke="#b8cce0" stroke-width="0.4"/>
+</g>
+<g transform="translate(60 28) scale(0.6)">
+  <!-- 側面屋頂（茅草） -->
+  <path d="M0 -2 L14 -8 L33 36 L19 42 Z" fill="url(#gshThatchSide)" stroke="#5a3a16" stroke-width="0.7" stroke-linejoin="round"/>
+  <path d="M1.6 -2.7 L20.6 41.3 M3.1 -3.3 L22.1 40.7 M4.7 -4.0 L23.7 40.0 M6.2 -4.7 L25.2 39.3 M7.8 -5.3 L26.8 38.7 M9.3 -6.0 L28.3 38.0 M10.9 -6.7 L29.9 37.3 M12.4 -7.3 L31.4 36.7" stroke="#8a5e28" stroke-width="0.5" opacity="0.7"/>
+  <!-- 屋頂積雪 -->
+  <path d="M0 -2 L14 -8 L19.5 4.5 Q16 6 14 4.5 Q11 7 8.5 6 Q6 9 4 8 Z" fill="#ffffff" stroke="#b8cce0" stroke-width="0.5" stroke-linejoin="round"/>
+  <path d="M25 22 Q28 20 29.5 24 L27.5 25 Z" fill="#ffffff" opacity="0.9"/>
+  <!-- 牆身 -->
+  <path d="M19 40 L31 35 L31 43 L19 49 Z" fill="#5a3a20" stroke="#2e1c0c" stroke-width="0.5"/>
+  <path d="M21.5 41.5 L28.5 38.6 L28.5 42 L21.5 45 Z" fill="#f2ecd8" stroke="#2e1c0c" stroke-width="0.4"/>
+  <rect x="-17" y="40" width="36" height="9" fill="#6a4628" stroke="#2e1c0c" stroke-width="0.5"/>
+  <rect x="-14" y="42" width="7" height="5" fill="#f4eedc" stroke="#2e1c0c" stroke-width="0.5"/>
+  <rect x="-4" y="42" width="7" height="7" fill="#3a2414" stroke="#2e1c0c" stroke-width="0.5"/>
+  <rect x="7" y="42" width="8" height="5" fill="#f4eedc" stroke="#2e1c0c" stroke-width="0.5"/>
+  <path d="M-10.5 42 V47 M10.5 42 V47 M14 42 V47" stroke="#6a4628" stroke-width="0.4"/>
+  <!-- 正面山牆的茅草厚邊 -->
+  <path d="M0 -2 L20 42.5 L15 42.5 L0 7 L-15 42.5 L-20 42.5 Z" fill="url(#gshThatch)" stroke="#5a3a16" stroke-width="0.7" stroke-linejoin="round"/>
+  <path d="M0 -2 L-20 42.5 L-17 42.5 L0 3 L17 42.5 L20 42.5 Z" fill="#7a5226" opacity="0.35"/>
+  <!-- 山牆：木樑與障子窗 -->
+  <clipPath id="gshGable2"><path d="M0 7 L15 42 L-15 42 Z"/></clipPath>
+  <path d="M0 7 L15 42 L-15 42 Z" fill="#4a2e18"/>
+  <g clip-path="url(#gshGable2)">
+    <rect x="-12" y="33" width="24" height="7" fill="#f4eedc"/>
+    <rect x="-7.5" y="23.5" width="15" height="6" fill="#f4eedc"/>
+    <rect x="-3" y="15" width="6" height="5" fill="#f4eedc"/>
+    <path d="M-20 31.5 H20 M-20 40.5 H20 M-20 22 H20 M-20 13.5 H20" stroke="#8a5a30" stroke-width="1.2"/>
+    <path d="M-6 33 V40 M0 33 V40 M6 33 V40 M-2.5 23.5 V29.5 M2.5 23.5 V29.5 M0 15 V20" stroke="#4a2e18" stroke-width="0.7"/>
+    <path d="M-12 36.5 H12 M-7.5 26.5 H7.5" stroke="#4a2e18" stroke-width="0.4"/>
+  </g>
+  <path d="M0 -2 L1.6 0.8 Q0 1.8 -1.6 0.8 Z" fill="#ffffff"/>
+  <path d="M0 -2.2 L-3.5 5.5 Q-2 5 -1 6.2 Q0 4.6 1 6.2 Q2 5 3.5 5.5 Z" fill="#ffffff" stroke="#b8cce0" stroke-width="0.4"/>
+</g>
+<g transform="translate(34 22) scale(1.0)">
+  <!-- 側面屋頂（茅草） -->
+  <path d="M0 -2 L14 -8 L33 36 L19 42 Z" fill="url(#gshThatchSide)" stroke="#5a3a16" stroke-width="0.7" stroke-linejoin="round"/>
+  <path d="M1.6 -2.7 L20.6 41.3 M3.1 -3.3 L22.1 40.7 M4.7 -4.0 L23.7 40.0 M6.2 -4.7 L25.2 39.3 M7.8 -5.3 L26.8 38.7 M9.3 -6.0 L28.3 38.0 M10.9 -6.7 L29.9 37.3 M12.4 -7.3 L31.4 36.7" stroke="#8a5e28" stroke-width="0.5" opacity="0.7"/>
+  <!-- 屋頂積雪 -->
+  <path d="M0 -2 L14 -8 L19.5 4.5 Q16 6 14 4.5 Q11 7 8.5 6 Q6 9 4 8 Z" fill="#ffffff" stroke="#b8cce0" stroke-width="0.5" stroke-linejoin="round"/>
+  <path d="M25 22 Q28 20 29.5 24 L27.5 25 Z" fill="#ffffff" opacity="0.9"/>
+  <!-- 牆身 -->
+  <path d="M19 40 L31 35 L31 43 L19 49 Z" fill="#5a3a20" stroke="#2e1c0c" stroke-width="0.5"/>
+  <path d="M21.5 41.5 L28.5 38.6 L28.5 42 L21.5 45 Z" fill="#f2ecd8" stroke="#2e1c0c" stroke-width="0.4"/>
+  <rect x="-17" y="40" width="36" height="9" fill="#6a4628" stroke="#2e1c0c" stroke-width="0.5"/>
+  <rect x="-14" y="42" width="7" height="5" fill="#f4eedc" stroke="#2e1c0c" stroke-width="0.5"/>
+  <rect x="-4" y="42" width="7" height="7" fill="#3a2414" stroke="#2e1c0c" stroke-width="0.5"/>
+  <rect x="7" y="42" width="8" height="5" fill="#f4eedc" stroke="#2e1c0c" stroke-width="0.5"/>
+  <path d="M-10.5 42 V47 M10.5 42 V47 M14 42 V47" stroke="#6a4628" stroke-width="0.4"/>
+  <!-- 正面山牆的茅草厚邊 -->
+  <path d="M0 -2 L20 42.5 L15 42.5 L0 7 L-15 42.5 L-20 42.5 Z" fill="url(#gshThatch)" stroke="#5a3a16" stroke-width="0.7" stroke-linejoin="round"/>
+  <path d="M0 -2 L-20 42.5 L-17 42.5 L0 3 L17 42.5 L20 42.5 Z" fill="#7a5226" opacity="0.35"/>
+  <!-- 山牆：木樑與障子窗 -->
+  <clipPath id="gshGable3"><path d="M0 7 L15 42 L-15 42 Z"/></clipPath>
+  <path d="M0 7 L15 42 L-15 42 Z" fill="#4a2e18"/>
+  <g clip-path="url(#gshGable3)">
+    <rect x="-12" y="33" width="24" height="7" fill="#f4eedc"/>
+    <rect x="-7.5" y="23.5" width="15" height="6" fill="#f4eedc"/>
+    <rect x="-3" y="15" width="6" height="5" fill="#f4eedc"/>
+    <path d="M-20 31.5 H20 M-20 40.5 H20 M-20 22 H20 M-20 13.5 H20" stroke="#8a5a30" stroke-width="1.2"/>
+    <path d="M-6 33 V40 M0 33 V40 M6 33 V40 M-2.5 23.5 V29.5 M2.5 23.5 V29.5 M0 15 V20" stroke="#4a2e18" stroke-width="0.7"/>
+    <path d="M-12 36.5 H12 M-7.5 26.5 H7.5" stroke="#4a2e18" stroke-width="0.4"/>
+  </g>
+  <path d="M0 -2 L1.6 0.8 Q0 1.8 -1.6 0.8 Z" fill="#ffffff"/>
+  <path d="M0 -2.2 L-3.5 5.5 Q-2 5 -1 6.2 Q0 4.6 1 6.2 Q2 5 3.5 5.5 Z" fill="#ffffff" stroke="#b8cce0" stroke-width="0.4"/>
+</g>
 </svg>

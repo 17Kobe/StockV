@@ -1,66 +1,81 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-<defs>
-  <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#c7a579"/>
-    <stop offset="100%" stop-color="#8a6945"/>
-  </linearGradient>
-  <linearGradient id="moundGrad" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#7f6044"/>
-    <stop offset="100%" stop-color="#4a3824"/>
-  </linearGradient>
-  <radialGradient id="furGrad" cx="35%" cy="25%" r="80%">
-    <stop offset="0%" stop-color="#a9916f"/>
-    <stop offset="100%" stop-color="#6b5640"/>
-  </radialGradient>
-</defs>
-<g>
-  <!-- 地面小丘（半橢圓，非整版背景) -->
-  <path d="M8,70 A32,10 0 0 1 72,70 L72,80 L8,80 Z" fill="url(#groundGrad)" stroke="#6e5234" stroke-width="0.6"/>
-  <!-- 挖出的土堆 -->
-  <path d="M8,61 A15,12 0 0 1 38,60 L38,72 L8,72 Z" fill="url(#moundGrad)" stroke="#2e2113" stroke-width="0.5"/>
-  <!-- 土堆質感土塊 -->
-  <circle cx="14" cy="60" r="2.3" fill="#523c28"/>
-  <circle cx="22" cy="57" r="2" fill="#523c28"/>
-  <circle cx="30" cy="59" r="2.1" fill="#523c28"/>
+  <!-- 袋熊（澳洲）：矮胖桶狀身體、灰褐粗毛、短粗腿與白爪、寬扁頭、小圓耳、大而方的黑色裸鼻、小眼睛，幾乎沒有尾巴；右後方是洞穴土堆 -->
+  <defs>
+    <radialGradient id="wmbFur" cx="35%" cy="25%" r="85%">
+      <stop offset="0" stop-color="#ab9c86"/><stop offset=".6" stop-color="#857766"/><stop offset="1" stop-color="#5c5146"/>
+    </radialGradient>
+    <radialGradient id="wmbHead" cx="35%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#b4a58e"/><stop offset=".65" stop-color="#8a7b69"/><stop offset="1" stop-color="#625649"/>
+    </radialGradient>
+    <linearGradient id="wmbMound" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c99c64"/><stop offset="1" stop-color="#8a6236"/>
+    </linearGradient>
+    <radialGradient id="wmbHole" cx="50%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#140d07"/><stop offset="1" stop-color="#3e2a18"/>
+    </radialGradient>
+    <linearGradient id="wmbNose" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4e4542"/><stop offset="1" stop-color="#1c1715"/>
+    </linearGradient>
+  </defs>
 
-  <!-- 袋熊身體（後半身） -->
-  <ellipse cx="45" cy="49" rx="21" ry="15" fill="url(#furGrad)" stroke="#4a3828" stroke-width="0.6"/>
-  <!-- 腹部淺色區塊 -->
-  <ellipse cx="50" cy="58" rx="12.5" ry="7" fill="#c9b89a"/>
-  <!-- 短尾 -->
-  <circle cx="65" cy="45" r="6" fill="url(#furGrad)" stroke="#4a3828" stroke-width="0.5"/>
+  <!-- 洞穴土堆 -->
+  <path d="M46,56 Q50,22 66,22 Q79,22 79,56 Z" fill="url(#wmbMound)" stroke="#6e4a26" stroke-width=".7"/>
+  <ellipse cx="66" cy="34" rx="7.5" ry="7" fill="url(#wmbHole)"/>
+  <path d="M58.6,33 Q66,25 73.4,33" fill="none" stroke="#a87a44" stroke-width="1.2"/>
+  <g fill="#a87a44"><circle cx="74" cy="48" r="1.3"/><circle cx="54" cy="30" r="1"/><circle cx="77" cy="40" r=".9"/></g>
 
-  <!-- 洞口（蓋住前半身，製造鑽入土洞的效果） -->
-  <ellipse cx="26" cy="53" rx="15" ry="12" fill="#2e1f14" stroke="#17100a" stroke-width="0.5"/>
+  <!-- 地面陰影 -->
+  <ellipse cx="38" cy="68" rx="32" ry="4" fill="#000" opacity=".18"/>
 
-  <!-- 後腿 1（刨土動作） -->
-  <g>
-    <ellipse cx="38" cy="63" rx="7.3" ry="6.3" fill="url(#furGrad)" stroke="#4a3828" stroke-width="0.5">
-      <animateTransform attributeName="transform" type="rotate" values="-18 38 56;16 38 56;-18 38 56" dur="0.7s" repeatCount="indefinite"/>
-    </ellipse>
-    <path d="M34,68 L33,71 M38,69 L38,72 M42,68 L43,71" stroke="#3a2a1c" stroke-width="0.8" stroke-linecap="round" fill="none">
-      <animateTransform attributeName="transform" type="rotate" values="-18 38 56;16 38 56;-18 38 56" dur="0.7s" repeatCount="indefinite"/>
-    </path>
+  <!-- 遠側腿 -->
+  <g fill="#564b40" stroke="#3a3128" stroke-width=".6">
+    <rect x="24" y="58" width="9" height="8" rx="3.5"/>
+    <rect x="52" y="58" width="9" height="8" rx="3.5"/>
   </g>
 
-  <!-- 後腿 2（刨土動作，反相擺動） -->
-  <g>
-    <ellipse cx="54" cy="64" rx="7.3" ry="6.3" fill="url(#furGrad)" stroke="#4a3828" stroke-width="0.5">
-      <animateTransform attributeName="transform" type="rotate" values="14 54 57;-18 54 57;14 54 57" dur="0.7s" repeatCount="indefinite"/>
-    </ellipse>
-    <path d="M50,69 L49,72 M54,70 L54,73 M58,69 L59,72" stroke="#3a2a1c" stroke-width="0.8" stroke-linecap="round" fill="none">
-      <animateTransform attributeName="transform" type="rotate" values="14 54 57;-18 54 57;14 54 57" dur="0.7s" repeatCount="indefinite"/>
-    </path>
+  <!-- 桶狀身體 -->
+  <path d="M14,46 C15,34 32,30 48,31 C62,32 70,40 69,50 C68,60 58,63 42,63 C26,63 13,58 14,46 Z" fill="url(#wmbFur)" stroke="#3a3128" stroke-width=".8"/>
+  <!-- 粗毛紋理 -->
+  <g fill="none" stroke="#5c5146" stroke-width=".7" stroke-linecap="round" opacity=".7">
+    <path d="M38,36 l2,3"/><path d="M46,35 l2,3"/><path d="M54,37 l2,3"/><path d="M61,41 l2,3"/>
+    <path d="M42,44 l2,3"/><path d="M50,43 l2,3"/><path d="M57,48 l2,3"/><path d="M63,51 l1.6,3"/>
+  </g>
+  <!-- 小尾巴 -->
+  <ellipse cx="69" cy="48" rx="1.5" ry="1.3" fill="#6b5f51"/>
+
+  <!-- 近側短腿與白爪 -->
+  <g fill="url(#wmbFur)" stroke="#3a3128" stroke-width=".7">
+    <path d="M18,55 C20,53 28,53 30,55 L30,65 Q24,67 17,65 Z"/>
+    <path d="M55,54 C57,52 64,52 66,54 L66,65 Q60,67 54,65 Z"/>
+  </g>
+  <g fill="#ece4d4" stroke="#5a4a3b" stroke-width=".3">
+    <path d="M16.6,65 l-1.6,1.8 l2.6,-.4 Z"/><path d="M19.6,65.6 l-1.4,1.8 l2.6,-.3 Z"/><path d="M22.6,65.8 l-1.2,1.8 l2.6,-.3 Z"/>
+    <path d="M53.6,65 l-1.6,1.8 l2.6,-.4 Z"/><path d="M56.6,65.6 l-1.4,1.8 l2.6,-.3 Z"/><path d="M59.6,65.8 l-1.2,1.8 l2.6,-.3 Z"/>
   </g>
 
-  <!-- 刨土飛起的塵土 -->
-  <circle cx="29" cy="66" r="1.8" fill="#8a7560" opacity="0.7">
-    <animate attributeName="cy" values="66;58;66" dur="0.7s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.7;0;0.7" dur="0.7s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="60" cy="68" r="1.6" fill="#8a7560" opacity="0.6">
-    <animate attributeName="cy" values="68;60;68" dur="0.7s" begin="0.2s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.6;0;0.6" dur="0.7s" begin="0.2s" repeatCount="indefinite"/>
-  </circle>
-</g>
+  <!-- 寬扁頭（朝左） -->
+  <g>
+    <!-- 小圓耳（右耳輕抖） -->
+    <ellipse cx="16" cy="34" rx="3" ry="3.4" fill="#76695a" stroke="#3a3128" stroke-width=".6"/>
+    <ellipse cx="16" cy="34.6" rx="1.4" ry="1.8" fill="#b89c8e"/>
+    <g>
+      <ellipse cx="29" cy="33.6" rx="3" ry="3.4" fill="#76695a" stroke="#3a3128" stroke-width=".6"/>
+      <ellipse cx="29" cy="34.2" rx="1.4" ry="1.8" fill="#b89c8e"/>
+      <animateTransform attributeName="transform" type="rotate" values="0 29 37;0 29 37;12 29 37;0 29 37" keyTimes="0;.85;.92;1" dur="3.5s" repeatCount="indefinite"/>
+    </g>
+    <path d="M5,46 C5,38 12,35 22,35 C32,35 37,39 37,46 C37,53 30,56 21,56 C11,56 5,53 5,46 Z" fill="url(#wmbHead)" stroke="#3a3128" stroke-width=".8"/>
+    <!-- 小眼睛（眨眼） -->
+    <g fill="#16110d">
+      <ellipse cx="14" cy="41.4" rx="1.3" ry="1.3"><animate attributeName="ry" values="1.3;1.3;.2;1.3" keyTimes="0;.9;.95;1" dur="4.5s" repeatCount="indefinite"/></ellipse>
+      <ellipse cx="27" cy="41.4" rx="1.3" ry="1.3"><animate attributeName="ry" values="1.3;1.3;.2;1.3" keyTimes="0;.9;.95;1" dur="4.5s" repeatCount="indefinite"/></ellipse>
+    </g>
+    <!-- 口鼻周圍淺色毛 -->
+    <ellipse cx="20" cy="50" rx="9.6" ry="5.4" fill="#a8977f" opacity=".7"/>
+    <!-- 大而方的裸鼻（鼻孔在上方兩側） -->
+    <path d="M12.6,46 Q12.6,43.4 15.6,43.4 L24.4,43.4 Q27.4,43.4 27.4,46 L27,49.4 Q26.4,52 23.4,52 L16.6,52 Q13.6,52 13,49.4 Z" fill="url(#wmbNose)" stroke="#0e0a08" stroke-width=".6"/>
+    <path d="M15,45 Q20,44.2 25,45" fill="none" stroke="#7d706b" stroke-width=".8" stroke-linecap="round"/>
+    <path d="M15.6,47 Q16.6,46 18,47.4" fill="none" stroke="#000" stroke-width="1" stroke-linecap="round"/>
+    <path d="M24.4,47 Q23.4,46 22,47.4" fill="none" stroke="#000" stroke-width="1" stroke-linecap="round"/>
+    <path d="M17,54.2 Q20,55.2 23,54.2" fill="none" stroke="#3a3128" stroke-width=".6" stroke-linecap="round"/>
+  </g>
 </svg>

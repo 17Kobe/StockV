@@ -22,6 +22,7 @@ await send('Page.navigate', { url });
 for (let i = 0; i < 100; i++) { if (await ev(`!!document.querySelector('#loading.gone')`)) break; await sleep(300); }
 await sleep(2500);
 if (process.env.ZOOM) { const [x, y, n] = process.env.ZOOM.split(',').map(Number); for (let i = 0; i < n; i++) { await send('Input.dispatchMouseEvent', { type: 'mouseWheel', x, y, deltaX: 0, deltaY: -240 }); await sleep(250); } }
+if (process.env.DRAG) { const [ax, ay, bx, by] = process.env.DRAG.split(',').map(Number); await send('Input.dispatchMouseEvent', { type: 'mousePressed', x: ax, y: ay, button: 'left', clickCount: 1 }); for (let i = 1; i <= 12; i++) { await send('Input.dispatchMouseEvent', { type: 'mouseMoved', x: ax + (bx - ax) * i / 12, y: ay + (by - ay) * i / 12, button: 'left', buttons: 1 }); await sleep(30); } await send('Input.dispatchMouseEvent', { type: 'mouseReleased', x: bx, y: by, button: 'left', clickCount: 1 }); }
 if (js) { await ev(js); await sleep(9000); } else await sleep(+(process.env.WAIT || 6000));
 const clip = process.env.CLIP ? (([x, y, width, height]) => ({ x, y, width, height, scale: 2 }))(process.env.CLIP.split(',').map(Number)) : undefined;
 const r = await send('Page.captureScreenshot', { format: 'png', ...(clip ? { clip } : {}) });

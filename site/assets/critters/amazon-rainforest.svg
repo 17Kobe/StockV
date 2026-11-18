@@ -1,65 +1,120 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 亞馬遜雨林：多層濃密熱帶雨林樹冠（深淺不一的圓形花椰菜狀樹冠，幾棵突出林冠的高大露生樹），一條褐色亞馬遜河蜿蜒穿過，林冠上飄著薄霧，一隻紅色金剛鸚鵡飛過、一隻巨嘴鳥停在樹上 -->
   <defs>
-    <radialGradient id="canopyL" cx="35%" cy="30%" r="75%">
-      <stop offset="0%" stop-color="#5BAE5E"/>
-      <stop offset="100%" stop-color="#1B5E20"/>
+    <radialGradient id="amzFar" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#9fd07a"/>
+      <stop offset="1" stop-color="#5e9a4e"/>
     </radialGradient>
-    <radialGradient id="canopyLi" cx="35%" cy="30%" r="75%">
-      <stop offset="0%" stop-color="#8BC34A"/>
-      <stop offset="100%" stop-color="#2E7D32"/>
+    <radialGradient id="amzMid" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#7cc456"/>
+      <stop offset="1" stop-color="#2f7a32"/>
     </radialGradient>
-    <radialGradient id="canopyR" cx="35%" cy="30%" r="75%">
-      <stop offset="0%" stop-color="#5BAE5E"/>
-      <stop offset="100%" stop-color="#1B5E20"/>
+    <radialGradient id="amzNear" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#5cae44"/>
+      <stop offset="1" stop-color="#1c5424"/>
     </radialGradient>
-    <radialGradient id="canopyRi" cx="35%" cy="30%" r="75%">
-      <stop offset="0%" stop-color="#9CCC65"/>
-      <stop offset="100%" stop-color="#2E7D32"/>
+    <radialGradient id="amzLime" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#c4e070"/>
+      <stop offset="1" stop-color="#6c9e34"/>
     </radialGradient>
-    <radialGradient id="canopyC" cx="35%" cy="25%" r="80%">
-      <stop offset="0%" stop-color="#66BB6A"/>
-      <stop offset="100%" stop-color="#1B5E20"/>
-    </radialGradient>
+    <linearGradient id="amzRiver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c8a070"/>
+      <stop offset="1" stop-color="#8a5a30"/>
+    </linearGradient>
   </defs>
 
-  <ellipse cx="40" cy="68" rx="30" ry="7" fill="#1565C0" opacity="0.5">
-    <animate attributeName="opacity" values="0.4;0.6;0.4" dur="3s" repeatCount="indefinite"/>
-  </ellipse>
-
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-1.5; 0,0" dur="3.4s" repeatCount="indefinite"/>
-    <ellipse cx="16" cy="48" rx="15" ry="14" fill="url(#canopyL)" stroke="#123d16" stroke-width="0.5"/>
-    <ellipse cx="16" cy="48" rx="8" ry="7.5" fill="url(#canopyLi)" stroke="#1b5e20" stroke-width="0.4"/>
-    <ellipse cx="12" cy="43" rx="3" ry="2" fill="#2e7d32" opacity="0.5"/>
+  <!-- 遠景樹冠 -->
+  <g fill="url(#amzFar)" stroke="#4a7a3e" stroke-width="0.4">
+    <circle cx="6" cy="30" r="6"/><circle cx="16" cy="28" r="6"/><circle cx="27" cy="29" r="5.5"/>
+    <circle cx="38" cy="28" r="6"/><circle cx="50" cy="27" r="6.5"/><circle cx="62" cy="28" r="6"/>
+    <circle cx="73" cy="29" r="6.5"/>
+    <rect x="0" y="30" width="80" height="12" stroke="none"/>
+  </g>
+  <!-- 露生樹（突出林冠的高大樹） -->
+  <g stroke="#4a3018" stroke-width="0.5">
+    <path d="M21,30 L21.6,16 L22.8,16 L23.6,30 Z" fill="#7a5432"/>
+    <path d="M58,30 L58.6,10 L59.8,10 L60.6,30 Z" fill="#7a5432"/>
+  </g>
+  <g stroke="#2f5a2a" stroke-width="0.45">
+    <path d="M14,16 Q15,10 22,10.6 Q29,10 31,16 Q22,18.4 14,16 Z" fill="url(#amzMid)"/>
+    <path d="M49,10.4 Q50,3.4 59,4 Q68,3.6 70,10.4 Q59,13 49,10.4 Z" fill="url(#amzMid)"/>
+    <ellipse cx="22" cy="12" rx="4" ry="2" fill="#9fd47a" stroke="none" opacity="0.6"/>
+    <ellipse cx="57" cy="6" rx="5" ry="2" fill="#9fd47a" stroke="none" opacity="0.6"/>
+  </g>
+  <!-- 薄霧 -->
+  <g fill="#ffffff" opacity="0.6">
+    <ellipse cx="12" cy="31" rx="12" ry="2.2"/>
+    <ellipse cx="44" cy="30" rx="14" ry="2"/>
+    <ellipse cx="72" cy="32" rx="9" ry="1.8"/>
+    <animateTransform attributeName="transform" type="translate" values="-2 0;2 0;-2 0" dur="10s" repeatCount="indefinite"/>
   </g>
 
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="2.8s" repeatCount="indefinite"/>
-    <ellipse cx="62" cy="46" rx="16" ry="15" fill="url(#canopyR)" stroke="#123d16" stroke-width="0.5"/>
-    <ellipse cx="62" cy="46" rx="8.5" ry="8" fill="url(#canopyRi)" stroke="#2e7d32" stroke-width="0.4"/>
-    <ellipse cx="58" cy="40" rx="3.2" ry="2.2" fill="#388e3c" opacity="0.5"/>
+  <!-- 中景樹冠 -->
+  <g fill="url(#amzMid)" stroke="#245a26" stroke-width="0.45">
+    <circle cx="4" cy="40" r="7"/><circle cx="15" cy="37" r="7.5"/><circle cx="27" cy="39" r="6.5"/>
+    <circle cx="48" cy="38" r="7"/><circle cx="60" cy="36" r="7.5"/><circle cx="72" cy="38" r="7.5"/>
+    <path d="M0,40 H80 V72 Q78,78 72,79 H8 Q2,78 0,72 Z" stroke="none"/>
+  </g>
+  <g fill="url(#amzLime)" stroke="#5a8a2a" stroke-width="0.4">
+    <circle cx="37" cy="37" r="5.5"/>
   </g>
 
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2.2; 0,0" dur="3.1s" repeatCount="indefinite"/>
-    <ellipse cx="40" cy="30" rx="20" ry="18" fill="url(#canopyC)" stroke="#123d16" stroke-width="0.6"/>
-    <ellipse cx="32" cy="27" rx="9" ry="8" fill="#4CAF50" stroke="#1b5e20" stroke-width="0.4"/>
-    <ellipse cx="48" cy="29" rx="9.5" ry="8.5" fill="#1B5E20" stroke="#0e3d12" stroke-width="0.4"/>
-    <ellipse cx="40" cy="20" rx="8" ry="7" fill="#66BB6A" stroke="#2e7d32" stroke-width="0.4"/>
-    <ellipse cx="36" cy="23" rx="2.8" ry="2" fill="#81c784" opacity="0.55"/>
-  </g>
-
-  <path d="M30 60 Q28 65 32 70" fill="none" stroke="#1565C0" stroke-width="3" stroke-linecap="round" opacity="0.6">
-    <animate attributeName="opacity" values="0.4;0.7;0.4" dur="2.5s" repeatCount="indefinite"/>
-  </path>
-
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0,0; -1,-2; 0,0" dur="2.2s" repeatCount="indefinite"/>
-    <ellipse cx="42" cy="42" rx="7" ry="5.5" fill="#D32F2F" stroke="#7f1313" stroke-width="0.5"/>
-    <path d="M35 42 Q29 40 31 46 Q33 44 36 44 Z" fill="#1976D2" stroke="#0d3a6b" stroke-width="0.4">
-      <animateTransform attributeName="transform" type="rotate" values="0 33 43; -22 33 43; 0 33 43" dur="0.7s" repeatCount="indefinite"/>
+  <!-- 蜿蜒的亞馬遜河 -->
+  <path d="M38,42 Q46,44 44,48 Q40,52 30,54 Q16,57 18,63 Q20,68 36,70 Q52,72 60,80 L36,80 Q30,74 18,72 Q4,68 6,60 Q8,52 24,49 Q34,47 34,45 Q34,43 38,42 Z" fill="url(#amzRiver)" stroke="#6a4424" stroke-width="0.5" stroke-linejoin="round"/>
+  <g stroke="#e8d0a8" stroke-width="0.5" fill="none" stroke-linecap="round" opacity="0.7">
+    <path d="M24,52 Q18,54 14,58 M18,66 Q24,69 30,70 M40,74 Q44,75 47,77">
+      <animate attributeName="opacity" values="0.7;0.25;0.7" dur="3s" repeatCount="indefinite"/>
     </path>
-    <path d="M48 41 Q48 36 51 38 Q50 40 49 42 Z" fill="#FBC02D" stroke="#8a6200" stroke-width="0.4"/>
-    <circle cx="47" cy="40" r="1.3" fill="#212121"/>
+  </g>
+
+  <!-- 近景樹冠 -->
+  <g fill="url(#amzNear)" stroke="#143e1a" stroke-width="0.5">
+    <circle cx="52" cy="52" r="8"/><circle cx="65" cy="50" r="8.5"/><circle cx="76" cy="54" r="7"/>
+    <circle cx="60" cy="62" r="8"/><circle cx="74" cy="66" r="8"/>
+    <circle cx="44" cy="62" r="6"/>
+    <circle cx="30" cy="62" r="5"/><circle cx="0" cy="56" r="5.5"/><circle cx="26" cy="77" r="4"/>
+    <circle cx="2" cy="76" r="6"/><circle cx="12" cy="79" r="5"/>
+  </g>
+  <g fill="url(#amzLime)" stroke="#4a7a24" stroke-width="0.4">
+    <circle cx="68" cy="74" r="5"/>
+    <circle cx="56" cy="72" r="4.5"/>
+  </g>
+  <!-- 樹冠高光小點 -->
+  <g fill="#8ad06a" opacity="0.6">
+    <ellipse cx="50" cy="49" rx="2.6" ry="1.6"/><ellipse cx="63" cy="46.6" rx="3" ry="1.8"/>
+    <ellipse cx="58" cy="59" rx="2.6" ry="1.6"/><ellipse cx="13" cy="34" rx="2.6" ry="1.6"/>
+    <ellipse cx="58" cy="33" rx="2.6" ry="1.6"/>
+  </g>
+
+  <!-- 巨嘴鳥（停在近景樹上） -->
+  <g stroke="#111" stroke-width="0.35" stroke-linejoin="round">
+    <path d="M66,46 Q64,42 66.4,40 Q69,39 69.6,42 Q70,46 68.4,48.6 L67.6,50.6 L66.6,48.6 Z" fill="#1a1a1a"/>
+    <path d="M66.2,41.6 Q67.4,43.8 68.8,42.4 Q69,44.4 67.4,45.2 Q66,44.4 66.2,41.6 Z" fill="#ffe24a" stroke="none"/>
+    <path d="M66.8,40.6 Q62,39.6 60.2,42 Q63.4,41.6 66.6,42.4 Z" fill="#ff9a1e"/>
+    <path d="M60.2,42 Q61.2,40.6 63,40.4" stroke="#d0281e" stroke-width="0.5" fill="none"/>
+    <circle cx="67.4" cy="40.8" r="0.5" fill="#6ad0f0" stroke="none"/>
+  </g>
+
+  <!-- 紅色金剛鸚鵡（飛行，拍翅） -->
+  <g transform="translate(36 18)" stroke="#5a0e0e" stroke-width="0.4" stroke-linejoin="round">
+    <!-- 長尾 -->
+    <path d="M-1,1 L-9,6 L-7.4,6.8 L-0.4,2.4 Z" fill="#d82a1e"/>
+    <path d="M-5,4 L-9,6 L-7.4,6.8 Z" fill="#2a6ad8" stroke="none"/>
+    <!-- 翅膀 -->
+    <g>
+      <path d="M-1,0 Q-3,-6 2,-9 Q3,-4 2,0 Z" fill="#ffd22a"/>
+      <path d="M0.6,-6 Q1.6,-8.6 2,-9 Q2.6,-6 2.2,-4.4 Z" fill="#2a6ad8" stroke="none"/>
+      <animateTransform attributeName="transform" type="scale" values="1 1;1 0.4;1 1" dur="0.7s" repeatCount="indefinite"/>
+    </g>
+    <!-- 身體與頭 -->
+    <path d="M-2,1.8 Q-1,-1.2 3,-1 Q6,-1.4 6.6,0.4 Q5.6,2 3,2.4 Q0,3 -2,1.8 Z" fill="#e8301e"/>
+    <circle cx="5" cy="-0.6" r="1.6" fill="#e8301e"/>
+    <path d="M6.4,-1.2 Q8,-0.6 7.4,0.8 L6.4,0.2 Z" fill="#f0e6d6"/>
+    <circle cx="5.2" cy="-0.9" r="0.4" fill="#fff" stroke="none"/>
+    <!-- 下側翅膀 -->
+    <g>
+      <path d="M0,1.8 Q-1,6 3,8 Q3.4,4.6 2.4,2 Z" fill="#2a6ad8"/>
+      <animateTransform attributeName="transform" type="scale" values="1 1;1 0.5;1 1" dur="0.7s" repeatCount="indefinite"/>
+    </g>
   </g>
 </svg>

@@ -1,40 +1,137 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+<!-- 峇里島：湖上的烏魯瓦圖布拉坦水神廟十一層黑色茅草屋頂美露塔（Meru）、左側灰黑火山石分裂式廟門（Candi Bentar）、底部綠色梯田、椰子樹與雞蛋花 -->
 <defs>
-  <linearGradient id="baVolcano" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#9db3c8"/>
-    <stop offset="1" stop-color="#5c7a92"/>
+  <linearGradient id="bliRoof" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#5a4e44"/>
+    <stop offset=".45" stop-color="#3a312a"/>
+    <stop offset="1" stop-color="#1c1814"/>
   </linearGradient>
-  <linearGradient id="baTerrace1" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#8fc46a"/>
-    <stop offset="1" stop-color="#5a9a46"/>
+  <linearGradient id="bliWater" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#7cc4dc"/>
+    <stop offset="1" stop-color="#3f8fb0"/>
   </linearGradient>
-  <linearGradient id="baTerrace2" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#d9c878"/>
-    <stop offset="1" stop-color="#b8a250"/>
+  <linearGradient id="bliStone" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#7a7a7e"/>
+    <stop offset=".5" stop-color="#55565c"/>
+    <stop offset="1" stop-color="#36373c"/>
   </linearGradient>
-  <linearGradient id="baRoof" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#4a4038"/>
-    <stop offset="1" stop-color="#241f1a"/>
+  <linearGradient id="bliStoneR" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#36373c"/>
+    <stop offset=".5" stop-color="#55565c"/>
+    <stop offset="1" stop-color="#6c6c72"/>
+  </linearGradient>
+  <linearGradient id="bliRice1" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#9fd86a"/>
+    <stop offset="1" stop-color="#5ea43c"/>
+  </linearGradient>
+  <linearGradient id="bliRice2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#7fc254"/>
+    <stop offset="1" stop-color="#3f8a2e"/>
+  </linearGradient>
+  <linearGradient id="bliBase" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#c49a6c"/>
+    <stop offset="1" stop-color="#7e5a3a"/>
+  </linearGradient>
+  <linearGradient id="bliLeaf" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#6cc04a"/>
+    <stop offset="1" stop-color="#2f7a2a"/>
   </linearGradient>
 </defs>
-<!-- 天空部份鏤空（不鋪底色），遠處阿貢火山剪影 -->
-<polygon points="20,34 34,8 48,34" fill="url(#baVolcano)" opacity="0.8"/>
-<!-- 層層梯田，峇里島最具代表性的地景 -->
-<path d="M0,40 Q40,32 80,40 L80,48 Q40,40 0,48 Z" fill="url(#baTerrace1)" stroke="#3f6b32" stroke-width="0.4"/>
-<path d="M0,48 Q40,40 80,48 L80,58 Q40,50 0,58 Z" fill="url(#baTerrace2)" stroke="#8a7536" stroke-width="0.4"/>
-<path d="M0,58 Q40,50 80,58 L80,68 Q40,60 0,68 Z" fill="url(#baTerrace1)" stroke="#3f6b32" stroke-width="0.4"/>
-<path d="M0,68 Q40,60 80,68 L80,80 L0,80 Z" fill="url(#baTerrace2)" stroke="#8a7536" stroke-width="0.4"/>
-<!-- 多層茅草屋頂的峇里島美廟（Meru）：黑色層疊屋頂是最醒目的識別特徵 -->
-<g>
-  <rect x="35" y="60" width="10" height="14" fill="#c9a86a" stroke="#6b5230" stroke-width="0.5"/>
-  <polygon points="32,60 48,60 44,52 36,52" fill="url(#baRoof)" stroke="#120f0c" stroke-width="0.4"/>
-  <polygon points="34,52 46,52 43,45 37,45" fill="url(#baRoof)" stroke="#120f0c" stroke-width="0.4"/>
-  <polygon points="36,45 44,45 41,38 39,38" fill="url(#baRoof)" stroke="#120f0c" stroke-width="0.4"/>
-  <polygon points="38,38 42,38 40,32" fill="#d4a63a"/>
+<!-- 地面柔和陰影 -->
+<ellipse cx="40" cy="74" rx="38" ry="5" fill="#000" opacity="0.15"/>
+<!-- 布拉坦湖水面 -->
+<path d="M30,52 Q55,49 80,52 L80,62 L30,62 Z" fill="url(#bliWater)" stroke="#2f6f8c" stroke-width="0.4"/>
+<path d="M36,57 h8 M60,56 h9 M48,59.5 h10" stroke="#e6f7fc" stroke-width="0.7" stroke-linecap="round" opacity="0.8">
+  <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite"/>
+</path>
+<!-- 美露塔倒影 -->
+<path d="M44,53 L64,53 L57,60 L51,60 Z" fill="#1c1814" opacity="0.25"/>
+<!-- 美露塔：中央木柱 -->
+<rect x="51.8" y="12" width="4.4" height="40" fill="#8a5a36" stroke="#4a2c18" stroke-width="0.4"/>
+<!-- 美露塔：石砌基座 -->
+<path d="M42,51 L66,51 L65,55 L43,55 Z" fill="url(#bliBase)" stroke="#5a3e26" stroke-width="0.5"/>
+<!-- 十一層黑色茅草屋頂，越往上越小 -->
+<g fill="url(#bliRoof)" stroke="#120e0b" stroke-width="0.5" stroke-linejoin="round">
+  <path d="M41.0,51.0 Q54,51.5 67.0,51.0 L60.2,48.6 L47.8,48.6 Z"/>
+  <path d="M42.0,47.4 Q54,47.9 66.0,47.4 L59.8,45.0 L48.2,45.0 Z"/>
+  <path d="M43.0,43.8 Q54,44.3 65.0,43.8 L59.3,41.4 L48.7,41.4 Z"/>
+  <path d="M43.9,40.2 Q54,40.7 64.1,40.2 L58.8,37.8 L49.2,37.8 Z"/>
+  <path d="M44.9,36.6 Q54,37.1 63.1,36.6 L58.4,34.2 L49.6,34.2 Z"/>
+  <path d="M45.9,33.0 Q54,33.5 62.1,33.0 L57.9,30.6 L50.1,30.6 Z"/>
+  <path d="M46.9,29.4 Q54,29.9 61.1,29.4 L57.4,27.0 L50.6,27.0 Z"/>
+  <path d="M47.8,25.8 Q54,26.3 60.2,25.8 L57.0,23.4 L51.0,23.4 Z"/>
+  <path d="M48.8,22.2 Q54,22.7 59.2,22.2 L56.5,19.8 L51.5,19.8 Z"/>
+  <path d="M49.8,18.6 Q54,19.1 58.2,18.6 L56.0,16.2 L52.0,16.2 Z"/>
+  <path d="M50.8,15.0 Q54,15.5 57.3,15.0 L55.6,12.6 L52.4,12.6 Z"/>
 </g>
-<!-- 兩側的守護石獅 -->
-<g fill="#9a8560" stroke="#5c4a2e" stroke-width="0.4">
-  <circle cx="26" cy="68" r="3.2"/>
-  <circle cx="54" cy="68" r="3.2"/>
+<g stroke="#7a6c5e" stroke-width="0.35" opacity="0.8">
+  <path d="M42.0,50.5 L48.4,49.1"/>
+  <path d="M43.0,46.9 L48.8,45.5"/>
+  <path d="M44.0,43.3 L49.3,41.9"/>
+  <path d="M44.9,39.7 L49.8,38.3"/>
+  <path d="M45.9,36.1 L50.2,34.7"/>
+  <path d="M46.9,32.5 L50.7,31.1"/>
+  <path d="M47.9,28.9 L51.2,27.5"/>
+  <path d="M48.8,25.3 L51.6,23.9"/>
+  <path d="M49.8,21.7 L52.1,20.3"/>
+  <path d="M50.8,18.1 L52.6,16.7"/>
+  <path d="M51.8,14.5 L53.0,13.1"/>
+</g>
+<!-- 塔頂尖飾 -->
+<path d="M54,6.5 L55.3,11.4 L52.7,11.4 Z" fill="#d8b04a" stroke="#7a5a1a" stroke-width="0.4"/>
+<!-- 椰子樹 -->
+<path d="M74,62 Q76,46 71,32" fill="none" stroke="#7a5432" stroke-width="2" stroke-linecap="round"/>
+<g fill="url(#bliLeaf)" stroke="#245a1e" stroke-width="0.4">
+  <path d="M71,32 Q64,27 58,32 Q65,30 71,33 Z"/>
+  <path d="M71,32 Q78,26 80,31 Q76,30 71,33 Z"/>
+  <path d="M71,32 Q66,22 61,24 Q67,25 71,32 Z"/>
+  <path d="M71,32 Q75,22 79,23 Q74,26 71,32 Z"/>
+  <path d="M71,32 Q70,40 66,42 Q69,37 71,32 Z"/>
+</g>
+<circle cx="70.5" cy="33.5" r="1" fill="#8a5a26"/><circle cx="72" cy="33.8" r="1" fill="#6e4a1e"/>
+<!-- 分裂式廟門 Candi Bentar：一座階梯狀石門從正中央乾淨劈開 -->
+<g stroke="#1e1f22" stroke-width="0.6" stroke-linejoin="round">
+  <!-- 左半邊：外側逐層內收，內側筆直 -->
+  <path d="M3,64 L3,52 L5,52 L5,44 L7,44 L7,36 L9,36 L9,29 L11,29 L11,22 L13,22 L13,16 L15,14 L16,14 L16,64 Z" fill="url(#bliStone)"/>
+  <!-- 右半邊（鏡像） -->
+  <path d="M33,64 L33,52 L31,52 L31,44 L29,44 L29,36 L27,36 L27,29 L25,29 L25,22 L23,22 L23,16 L21,14 L20,14 L20,64 Z" fill="url(#bliStoneR)"/>
+</g>
+<!-- 石門層簷裝飾線 -->
+<g stroke="#9a9aa0" stroke-width="0.6" opacity="0.9">
+  <path d="M3.5,52 H16 M5.5,44 H16 M7.5,36 H16 M9.5,29 H16 M11.5,22 H16"/>
+  <path d="M32.5,52 H20 M30.5,44 H20 M28.5,36 H20 M26.5,29 H20 M24.5,22 H20"/>
+</g>
+<!-- 紅磚色雕花帶 -->
+<g fill="#b0583a" opacity="0.85">
+  <rect x="6" y="46" width="9" height="2.5"/><rect x="21" y="46" width="9" height="2.5"/>
+  <rect x="10" y="31" width="5" height="2"/><rect x="21" y="31" width="5" height="2"/>
+</g>
+<!-- 中央石階 -->
+<path d="M14,64 L22,64 L21,61 L15,61 Z" fill="#6a6a70" stroke="#2a2a2e" stroke-width="0.4"/>
+<!-- 梯田：彎曲階梯狀綠帶 -->
+<path d="M0,62 Q40,57 80,62 L80,68 Q40,63 0,68 Z" fill="url(#bliRice1)" stroke="#3a6e28" stroke-width="0.5"/>
+<path d="M0,68 Q40,63 80,68 L80,74 Q40,69 0,74 Z" fill="url(#bliRice2)" stroke="#2f5e22" stroke-width="0.5"/>
+<path d="M0,74 Q40,69 80,74 L80,80 L0,80 Z" fill="url(#bliRice1)" stroke="#3a6e28" stroke-width="0.5"/>
+<path d="M4,65 Q40,60.5 76,65 M4,71 Q40,66.5 76,71" fill="none" stroke="#c4ec8e" stroke-width="0.5" opacity="0.7"/>
+<!-- 雞蛋花 -->
+<g transform="translate(40,74)">
+  <g fill="#fff8ec" stroke="#c8a870" stroke-width="0.3">
+    <ellipse cx="0" cy="-1.6" rx="1.1" ry="1.8"/>
+    <ellipse cx="0" cy="-1.6" rx="1.1" ry="1.8" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-1.6" rx="1.1" ry="1.8" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-1.6" rx="1.1" ry="1.8" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-1.6" rx="1.1" ry="1.8" transform="rotate(288)"/>
+  </g>
+  <circle r="0.9" fill="#f6c83a"/>
+</g>
+<g transform="translate(46,77) scale(0.8)">
+  <g fill="#fff8ec" stroke="#c8a870" stroke-width="0.3">
+    <ellipse cx="0" cy="-1.6" rx="1.1" ry="1.8"/>
+    <ellipse cx="0" cy="-1.6" rx="1.1" ry="1.8" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-1.6" rx="1.1" ry="1.8" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-1.6" rx="1.1" ry="1.8" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-1.6" rx="1.1" ry="1.8" transform="rotate(288)"/>
+  </g>
+  <circle r="0.9" fill="#f6c83a"/>
 </g>
 </svg>

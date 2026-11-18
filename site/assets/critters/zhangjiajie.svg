@@ -1,54 +1,105 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 張家界（武陵源）：一群又高又細的石英砂岩石柱，灰褐岩面帶直向裂紋與橫向岩層，柱頂平緩長滿松樹，柱間深谷飄著白色雲霧（阿凡達哈利路亞山） -->
   <defs>
-    <linearGradient id="zjGround" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#7FA052"/>
-      <stop offset="100%" stop-color="#3F5C28"/>
+    <linearGradient id="zjjRock" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d9cbb0"/>
+      <stop offset=".45" stop-color="#b9a688"/>
+      <stop offset="1" stop-color="#7d6c56"/>
     </linearGradient>
-    <linearGradient id="zjRock" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#A8B890"/>
-      <stop offset="100%" stop-color="#788A64"/>
+    <linearGradient id="zjjRockFar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c4c6bc"/>
+      <stop offset="1" stop-color="#959a90"/>
     </linearGradient>
-    <linearGradient id="zjGrass" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#5EA042"/>
-      <stop offset="100%" stop-color="#2E5A20"/>
+    <radialGradient id="zjjLeaf" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#8fcc5a"/>
+      <stop offset=".6" stop-color="#4f9a38"/>
+      <stop offset="1" stop-color="#2c6326"/>
+    </radialGradient>
+    <linearGradient id="zjjMist" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset=".35" stop-color="#ffffff" stop-opacity=".92"/>
+      <stop offset=".8" stop-color="#f2f6f8" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#f2f6f8" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <!-- 地面 -->
-  <ellipse cx="40" cy="74" rx="34" ry="4.5" fill="url(#zjGround)" stroke="#2C421C" stroke-width="0.5"/>
 
-  <!-- 山體：一整座山脊，中央被天門洞貫穿 -->
-  <path d="M4,70 L10,42 L18,30 L26,38 L32,20 Q40,8 48,20 L54,38 L62,30 L70,42 L76,70 Z"
-    fill="url(#zjRock)" stroke="#3F4A32" stroke-width="0.6" stroke-linejoin="round"/>
-  <!-- 山體暗面（右側） -->
-  <path d="M48,20 L54,38 L62,30 L70,42 L76,70 L58,70 Q50,45 48,20 Z"
-    fill="#6e7e5c" opacity="0.55"/>
-  <!-- 山體岩紋（風化紋理） -->
-  <path d="M14,52 Q18,44 24,40 M58,50 Q62,42 68,38" stroke="#5C6E48" stroke-width="0.8" opacity="0.5" fill="none"/>
+  <!-- 遠方淡色石柱 -->
+  <g fill="url(#zjjRockFar)" stroke="#7f857c" stroke-width="0.4" opacity="0.85">
+    <path d="M17,24 L23,23.5 L23.5,70 L16.5,70 Z"/>
+    <path d="M57,18 L63,18.5 L63.5,70 L56.5,70 Z"/>
+  </g>
+  <g fill="#5e8f45" opacity="0.85">
+    <ellipse cx="20" cy="23.5" rx="4" ry="2"/>
+    <ellipse cx="60" cy="18" rx="4" ry="2"/>
+  </g>
 
-  <!-- 天門洞：貫穿山體的巨大橢圓孔洞，露出後方天空 -->
-  <ellipse cx="40" cy="44" rx="13" ry="17" fill="#8ec8e8"/>
-  <!-- 洞口邊緣岩石描邊，增加厚度感 -->
-  <ellipse cx="40" cy="44" rx="13" ry="17" fill="none" stroke="#3F4A32" stroke-width="0.7"/>
-  <ellipse cx="40" cy="44" rx="10.5" ry="14.3" fill="none" stroke="#5a6a48" stroke-width="1.4" opacity="0.6"/>
-  <!-- 洞內遠方的雲朵，增加縱深感 -->
-  <ellipse cx="37" cy="40" rx="4.5" ry="2.2" fill="white" opacity="0.75"/>
-  <ellipse cx="43" cy="49" rx="3.5" ry="1.8" fill="white" opacity="0.6"/>
+  <!-- 中層雲霧 -->
+  <g fill="#ffffff" opacity="0.75">
+    <ellipse cx="22" cy="46" rx="14" ry="3"/>
+    <ellipse cx="60" cy="40" rx="12" ry="2.6"/>
+    <animateTransform attributeName="transform" type="translate" values="-1.5 0;1.5 0;-1.5 0" dur="9s" repeatCount="indefinite"/>
+  </g>
 
-  <!-- 天梯石階：從山腳蜿蜒而上通往洞口 -->
-  <path d="M26,70 Q29,60 32,52 Q35,47 37,44"
-    fill="none" stroke="#c8c0a0" stroke-width="2.6" stroke-linecap="round" opacity="0.9"/>
-  <path d="M26,70 Q29,60 32,52 Q35,47 37,44"
-    fill="none" stroke="#F0E6C0" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+  <!-- 主石柱群 -->
+  <g stroke="#4f4234" stroke-width="0.6" stroke-linejoin="round">
+    <!-- 左柱 -->
+    <path d="M5,34 Q8,32.5 13,33.5 Q14,46 13.4,56 Q14.4,64 14,74 L4,74 Q4.6,62 5.4,52 Q4.4,44 5,34 Z" fill="url(#zjjRock)"/>
+    <!-- 左中柱 -->
+    <path d="M23.5,15 Q28,13.5 33,14.5 Q34,26 33.2,38 Q34.4,54 33.6,74 L23,74 Q23.8,56 24.4,42 Q22.8,28 23.5,15 Z" fill="url(#zjjRock)"/>
+    <!-- 中央最高柱 -->
+    <path d="M38,7 Q43,5.5 48,6.8 Q49.2,20 48.2,32 Q49.6,50 48.8,74 L37.4,74 Q38.2,54 37.2,38 Q36.8,22 38,7 Z" fill="url(#zjjRock)"/>
+    <!-- 右中柱 -->
+    <path d="M54,25 Q58.5,23.8 63,25 Q63.8,36 63.2,48 Q64.2,60 63.8,74 L53.6,74 Q54.4,60 53.6,48 Q53.2,36 54,25 Z" fill="url(#zjjRock)"/>
+    <!-- 右柱 -->
+    <path d="M68,38 Q72,37 76,38.2 Q76.8,50 76.2,60 Q77,66 76.6,74 L67.4,74 Q68.2,62 67.6,52 Q67.2,44 68,38 Z" fill="url(#zjjRock)"/>
+  </g>
 
-  <!-- 山頂植被 -->
-  <ellipse cx="18" cy="29" rx="5" ry="3.2" fill="url(#zjGrass)" stroke="#223E18" stroke-width="0.4"/>
-  <ellipse cx="62" cy="29" rx="5" ry="3.2" fill="url(#zjGrass)" stroke="#223E18" stroke-width="0.4"/>
-  <ellipse cx="40" cy="12" rx="6" ry="3.5" fill="url(#zjGrass)" stroke="#223E18" stroke-width="0.4"/>
+  <!-- 岩層橫紋與直向裂紋 -->
+  <g stroke="#6a5a46" stroke-width="0.45" fill="none" opacity="0.8" stroke-linecap="round">
+    <path d="M5.4,42 H12.8 M5.2,51 H13 M9,36 V48 M10.5,54 V66"/>
+    <path d="M24,24 H32.8 M24.2,33 H33 M24,45 H33.4 M24.2,57 H33.4 M28,17 V30 M30.5,36 V52 M27,48 V66"/>
+    <path d="M37.6,16 H48 M37.4,26 H48.2 M37.6,37 H48.4 M37.8,49 H48.8 M38,61 H48.8 M42,9 V22 M45,28 V44 M41,40 V58 M44.5,52 V70"/>
+    <path d="M54,34 H63 M53.8,44 H63.2 M54,56 H63.6 M58,27 V40 M60.5,46 V62"/>
+    <path d="M68,46 H76.2 M67.8,56 H76.4 M72,40 V52"/>
+  </g>
+  <!-- 右側陰影面 -->
+  <g fill="#4a3c2e" opacity="0.22">
+    <path d="M11,33.3 Q13,33.5 13,33.5 Q14,46 13.4,56 Q14.4,64 14,74 L11,74 Z"/>
+    <path d="M30,14.2 L33,14.5 Q34,26 33.2,38 Q34.4,54 33.6,74 L30,74 Z"/>
+    <path d="M45,6.2 L48,6.8 Q49.2,20 48.2,32 Q49.6,50 48.8,74 L45,74 Z"/>
+    <path d="M60.5,24.4 L63,25 Q63.8,36 63.2,48 Q64.2,60 63.8,74 L60.5,74 Z"/>
+    <path d="M73.6,37.6 L76,38.2 Q76.8,50 76.2,60 Q77,66 76.6,74 L73.6,74 Z"/>
+  </g>
 
-  <!-- 雲霧飄帶：柔和橫越山腰 -->
-  <g opacity="0.7">
-    <ellipse cx="16" cy="58" rx="12" ry="2.6" fill="white"/>
-    <ellipse cx="64" cy="55" rx="11" ry="2.4" fill="white" opacity="0.8"/>
-    <animate attributeName="opacity" values="0.5;0.8;0.5" dur="4.5s" repeatCount="indefinite"/>
+  <!-- 柱頂綠樹 -->
+  <g fill="url(#zjjLeaf)" stroke="#24501e" stroke-width="0.45">
+    <path d="M3.6,35 Q4,31 7,31.5 Q8.5,29.4 11,30.6 Q14.2,30.4 14.2,34 Q11,35.6 8,35.2 Q5.4,36 3.6,35 Z"/>
+    <path d="M22.2,16 Q22.4,11.6 26,12.2 Q28,9.6 31,11 Q34.6,11.2 34.2,15.4 Q30.6,17 27.4,16.4 Q24.4,17.2 22.2,16 Z"/>
+    <path d="M36.6,8 Q36.8,3.6 40.4,4.2 Q42.8,1.6 45.6,3 Q49.6,3.2 49.2,7.6 Q45.6,9.2 42.4,8.6 Q39,9.4 36.6,8 Z"/>
+    <path d="M52.8,26 Q53,22.2 56.2,22.6 Q58.4,20.4 61,21.6 Q64.4,21.8 64,25.6 Q60.8,27 57.6,26.6 Q55,27.2 52.8,26 Z"/>
+    <path d="M66.8,39 Q67,35.6 70,36 Q72,34 74.4,35 Q77.6,35.2 77.2,38.8 Q74.4,40.2 71.4,39.8 Q69,40.4 66.8,39 Z"/>
+  </g>
+  <!-- 小松樹 -->
+  <g fill="#2f6a2a" stroke="#1d4419" stroke-width="0.35" stroke-linejoin="round">
+    <path d="M41.5,0.6 L44,4.6 H42.9 L45,7.2 H38 L40.1,4.6 H39 Z"/>
+    <path d="M27.4,8 L29.6,11.6 H28.6 L30.4,14 H24.4 L26.2,11.6 H25.2 Z"/>
+    <path d="M58,18.4 L60,21.6 H59.1 L60.8,23.8 H55.2 L56.9,21.6 H56 Z"/>
+    <path d="M8.2,27.4 L10,30.4 H9.2 L10.8,32.4 H5.6 L7.2,30.4 H6.4 Z"/>
+  </g>
+  <!-- 掛在岩壁上的小樹叢 -->
+  <g fill="#4f9a38" stroke="#24501e" stroke-width="0.3">
+    <ellipse cx="24.4" cy="29" rx="1.8" ry="1.1"/>
+    <ellipse cx="48.4" cy="22" rx="1.8" ry="1.1"/>
+    <ellipse cx="37.6" cy="44" rx="1.6" ry="1"/>
+    <ellipse cx="63.4" cy="40" rx="1.6" ry="1"/>
+    <ellipse cx="5.4" cy="46" rx="1.5" ry="0.9"/>
+  </g>
+
+  <!-- 谷底濃霧 -->
+  <path d="M0,58 Q8,53 16,56 Q24,51 34,55 Q42,50 52,54 Q62,50 70,54 Q76,52 80,55 V68 Q70,74 56,72 Q44,76 30,73 Q14,75 0,70 Z" fill="url(#zjjMist)"/>
+  <g fill="#ffffff" opacity="0.9">
+    <ellipse cx="18" cy="62" rx="12" ry="3.4"/>
+    <ellipse cx="54" cy="60" rx="14" ry="3.4"/>
+    <animateTransform attributeName="transform" type="translate" values="1.5 0;-1.5 0;1.5 0" dur="7s" repeatCount="indefinite"/>
   </g>
 </svg>

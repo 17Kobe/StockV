@@ -1,35 +1,79 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+<!-- 拉利貝拉岩石教堂：俯瞰聖喬治教堂（Biete Giyorgis），玫瑰紅岩石鑿成的希臘十字形屋頂（層層內嵌十字浮雕），位於鑿入地面的方形深坑中，坑邊有白袍朝聖者 -->
 <defs>
-  <radialGradient id="lb-stone" cx="35%" cy="30%" r="85%">
-    <stop offset="0" stop-color="#b06c48"/>
-    <stop offset="1" stop-color="#7a4228"/>
-  </radialGradient>
-  <linearGradient id="lb-cut" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#7a4228"/>
-    <stop offset="1" stop-color="#4a2514"/>
+  <linearGradient id="lalGround" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#d8a47a"/>
+    <stop offset="1" stop-color="#b47a54"/>
   </linearGradient>
-  <linearGradient id="lb-cross" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#d08860"/>
-    <stop offset="1" stop-color="#9c5c3a"/>
+  <linearGradient id="lalPit" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#5a2e20"/>
+    <stop offset="1" stop-color="#8a4e36"/>
+  </linearGradient>
+  <linearGradient id="lalBackWall" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#9a5a40"/>
+    <stop offset="1" stop-color="#6a3626"/>
+  </linearGradient>
+  <linearGradient id="lalRoof" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#f0b48e"/>
+    <stop offset=".6" stop-color="#d4886a"/>
+    <stop offset="1" stop-color="#b86a50"/>
+  </linearGradient>
+  <linearGradient id="lalWall" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#c47658"/>
+    <stop offset="1" stop-color="#8e4a36"/>
+  </linearGradient>
+  <linearGradient id="lalLip" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#a86a48"/>
+    <stop offset="1" stop-color="#7a4630"/>
   </linearGradient>
 </defs>
-<rect x="8" y="8" width="64" height="64" rx="8" fill="url(#lb-stone)" stroke="#5c3018" stroke-width="0.6"/>
-<line x1="11" y1="11" x2="14" y2="14" stroke="#5c3018" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
-<line x1="69" y1="11" x2="66" y2="14" stroke="#5c3018" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
-<rect x="16" y="16" width="48" height="48" rx="4" fill="url(#lb-cut)" stroke="#3a1c0e" stroke-width="0.5"/>
-<rect x="17" y="51" width="12" height="4" rx="1" fill="#c9875f" stroke="#7a4228" stroke-width="0.5"/>
-<rect x="19" y="56" width="9" height="4" rx="1" fill="#c9875f" stroke="#7a4228" stroke-width="0.5"/>
-<rect x="21" y="61" width="6" height="3" rx="1" fill="#c9875f" stroke="#7a4228" stroke-width="0.5"/>
-<polygon points="31,16 49,16 49,31 64,31 64,49 49,49 49,64 31,64 31,49 16,49 16,31 31,31" fill="url(#lb-cross)" stroke="#5c3018" stroke-width="0.6"/>
-<line x1="40" y1="16" x2="40" y2="31" stroke="#8a5540" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="40" y1="49" x2="40" y2="64" stroke="#8a5540" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="16" y1="40" x2="31" y2="40" stroke="#8a5540" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="49" y1="40" x2="64" y2="40" stroke="#8a5540" stroke-width="1.5" stroke-linecap="round"/>
-<circle cx="40" cy="40" r="7" fill="#ffd27f" opacity="0.4">
-<animate attributeName="opacity" values="0.25;0.75;0.25" dur="2.5s" repeatCount="indefinite"/>
-</circle>
-<g stroke="#fff4d6" stroke-width="1.2" stroke-linecap="round" opacity="0.85">
-<line x1="40" y1="35" x2="40" y2="45"/>
-<line x1="35" y1="40" x2="45" y2="40"/>
+<!-- 地面柔和陰影 -->
+<ellipse cx="40" cy="76" rx="37" ry="3.5" fill="#000" opacity="0.18"/>
+<!-- 周圍岩盤（含前緣厚度） -->
+<path d="M3,10 Q3,5 8,5 L72,5 Q77,5 77,10 L77,74 L3,74 Z" fill="url(#lalLip)" stroke="#5a3020" stroke-width="0.6"/>
+<path d="M3,10 Q3,5 8,5 L72,5 Q77,5 77,10 L77,69 L3,69 Z" fill="url(#lalGround)" stroke="#6a3a26" stroke-width="0.6"/>
+<!-- 岩盤紋理 -->
+<path d="M6,66 q4,-1 8,0 M64,66 q4,-1 9,0 M74,20 v6 M5,30 v5" stroke="#9a6444" stroke-width="0.5" fill="none" opacity="0.7"/>
+<!-- 方形深坑：坑底 -->
+<path d="M9,10 L71,10 L71,64 L9,64 Z" fill="url(#lalPit)" stroke="#3e1e14" stroke-width="0.6"/>
+<!-- 坑的後側壁面（可見的岩壁） -->
+<path d="M9,10 L71,10 L68,22 L12,22 Z" fill="url(#lalBackWall)" stroke="#3e1e14" stroke-width="0.4"/>
+<!-- 左右兩側斜壁 -->
+<path d="M9,10 L12,22 L12,64 L9,64 Z" fill="#7a4230" opacity="0.9"/>
+<path d="M71,10 L68,22 L68,64 L71,64 Z" fill="#4e2618" opacity="0.9"/>
+<path d="M14,13 v6 M26,12 v8 M44,12 v7 M58,13 v7" stroke="#5a2e20" stroke-width="0.4" opacity="0.7"/>
+<!-- 教堂投在坑底的陰影 -->
+<path d="M37,45 L51,45 L51,61 L37,61 Z M23,36 L37,36 L37,51 L23,51 Z M51,36 L63,36 L63,51 L51,51 Z" fill="#2e140c" opacity="0.4"/>
+<!-- 教堂正面牆壁（往下延伸的十字三臂） -->
+<g stroke="#4e2418" stroke-width="0.5" stroke-linejoin="round">
+  <rect x="21" y="35" width="12" height="14" fill="url(#lalWall)"/>
+  <rect x="47" y="35" width="12" height="14" fill="url(#lalWall)"/>
+  <rect x="33" y="44" width="14" height="15" fill="url(#lalWall)"/>
+</g>
+<!-- 牆面基座線 -->
+<path d="M21,46.5 H33 M47,46.5 H59 M33,56.5 H47" stroke="#6a3020" stroke-width="0.6"/>
+<!-- 小窗戶 -->
+<g fill="#3a160e">
+  <rect x="25.6" y="38" width="2.8" height="4" rx="1.4"/>
+  <rect x="51.6" y="38" width="2.8" height="4" rx="1.4"/>
+  <rect x="35" y="49" width="2" height="3.4" rx="1"/>
+  <rect x="39" y="49" width="2" height="3.4" rx="1"/>
+  <rect x="43" y="49" width="2" height="3.4" rx="1"/>
+</g>
+<!-- 希臘十字形屋頂（最醒目的識別元素） -->
+<path d="M33,15 L47,15 L47,24.5 L59,24.5 L59,35 L47,35 L47,44 L33,44 L33,35 L21,35 L21,24.5 L33,24.5 Z" fill="url(#lalRoof)" stroke="#5a2a1c" stroke-width="0.8" stroke-linejoin="round"/>
+<!-- 第二層內嵌十字（階梯浮雕） -->
+<path d="M35.6,18.4 L44.4,18.4 L44.4,26.8 L55.4,26.8 L55.4,32.8 L44.4,32.8 L44.4,40.6 L35.6,40.6 L35.6,32.8 L24.6,32.8 L24.6,26.8 L35.6,26.8 Z" fill="#e4a07c" stroke="#9a5038" stroke-width="0.6" stroke-linejoin="round"/>
+<path d="M35.6,40.6 L44.4,40.6 L44.4,32.8 L55.4,32.8 L55.4,26.8" fill="none" stroke="#f8d0b4" stroke-width="0.5" opacity="0.9"/>
+<!-- 第三層內嵌十字 -->
+<path d="M38,22 L42,22 L42,28.4 L51.6,28.4 L51.6,31.2 L42,31.2 L42,37 L38,37 L38,31.2 L28.4,31.2 L28.4,28.4 L38,28.4 Z" fill="#c87a5c" stroke="#8a4430" stroke-width="0.5" stroke-linejoin="round"/>
+<!-- 屋頂左上受光邊 -->
+<path d="M21,35 L21,24.5 L33,24.5 L33,15 L47,15" fill="none" stroke="#fbd8c0" stroke-width="0.6" opacity="0.8"/>
+<!-- 白袍朝聖者（坑邊，比例參考） -->
+<g transform="translate(70,66)">
+  <ellipse cx="0" cy="2.4" rx="2.2" ry="0.6" fill="#000" opacity="0.25"/>
+  <path d="M-1.8,2.4 L-1.1,-2.4 Q0,-3.2 1.1,-2.4 L1.8,2.4 Z" fill="#ffffff" stroke="#8a8a8a" stroke-width="0.3"/>
+  <circle cx="0" cy="-3.6" r="1.1" fill="#ffffff" stroke="#8a8a8a" stroke-width="0.3"/>
+  <circle cx="0.2" cy="-3.3" r="0.6" fill="#5a3422"/>
 </g>
 </svg>

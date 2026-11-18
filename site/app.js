@@ -636,7 +636,7 @@
         { src: 'critters/russian-matryoshka.svg', lon: 48.0, lat: 57.5, mode: 'still', face: 'F', s: 1.0, deco: true }, // 俄羅斯：傳統套娃
         { src: 'critters/lake-baikal-ice-railway.svg', lon: 104.3, lat: 53.5, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 俄羅斯：貝加爾湖與結冰鐵道
         { src: 'critters/fram-polar-ship.svg', lon: 15, lat: 78, mode: 'bob', s: 1.0, sea: true, deco: true }, // 極地探險船・前進號
-        { src: 'critters/evergreen-container-ship.svg', lon: 120.3, lat: 24, mode: 'boat', s: 1.0, sea: true, deco: true }, // 長榮海運貨櫃輪
+        { src: 'critters/evergreen-container-ship.svg', lon: 119.6, lat: 22.0, mode: 'boat', s: 1.0, sea: true, deco: true, maxDeg: 0.5 }, // 長榮海運貨櫃輪：原座標（120.3, 24）離台中海岸只有 0.3 度、又沒有 maxDeg 限制，會漂到台灣陸地上；移到高雄外海西南方，並限制漂動範圍
         { src: 'critters/rms-olympic.svg', lon: -40, lat: 48, mode: 'boat', s: 1.0, sea: true, deco: true }, // 奧林匹克號
         { src: 'critters/venice-gondola.svg', lon: 12.5, lat: 45.5, mode: 'boat', s: 1.0, sea: true, deco: true }, // 威尼斯貢多拉
         { src: 'critters/nile-felucca.svg', lon: 32.64, lat: 25.69, mode: 'boat', s: 1.0, sea: true, deco: true }, // 尼羅河路卡索帆船
@@ -6295,20 +6295,27 @@
             return;
         }
         const tiles = [];
+        // 兩份世界在換日線（東經 180 度）接起來。目的地座標要對齊到整數像素：
+        // 以前直接用小數像素，接縫那一格兩邊各只蓋到一部分（邊緣反鋸齒變半透明），夜色在那一格變淡，
+        // 太平洋中間就出現一條直直的白線
+        const Y0 = Math.round(dy0 * dpr),
+            Y1 = Math.round(dy1 * dpr);
         for (let n = Math.floor(-t.x / ww); n <= Math.floor((W - t.x) / ww); n++) {
             const x = t.x + n * ww,
-                dx0 = Math.max(0, x),
-                dx1 = Math.min(W, x + ww);
-            if (dx1 <= dx0) continue;
+                X0 = Math.round(Math.max(0, x) * dpr),
+                X1 = Math.round(Math.min(W, x + ww) * dpr);
+            if (X1 <= X0) continue;
+            const sx0 = ((X0 / dpr - x) / ww) * NIGHT_TW,
+                sx1 = ((X1 / dpr - x) / ww) * NIGHT_TW;
             tiles.push([
-                ((dx0 - x) / ww) * NIGHT_TW,
+                Math.max(0, sx0),
                 ((dy0 - y) / h) * TH,
-                ((dx1 - dx0) / ww) * NIGHT_TW,
+                Math.min(NIGHT_TW, sx1) - Math.max(0, sx0),
                 ((dy1 - dy0) / h) * TH,
-                dx0 * dpr,
-                dy0 * dpr,
-                (dx1 - dx0) * dpr,
-                (dy1 - dy0) * dpr,
+                X0,
+                Y0,
+                X1 - X0,
+                Y1 - Y0,
             ]);
         }
         tctx.setTransform(1, 0, 0, 1, 0, 0);

@@ -1,33 +1,87 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- 大熊貓（朝左走）：白色圓頭、黑色圓耳、下垂淚滴形黑眼圈、黑色肩帶連前腿、黑色後腿、白屁股與短白尾，前掌抓著綠竹子啃 -->
   <defs>
-    <radialGradient id="w" cx="38%" cy="28%" r="80%"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#f1f1f4"/><stop offset="1" stop-color="#c9ccd8"/></radialGradient>
-    <radialGradient id="k" cx="38%" cy="28%" r="85%"><stop offset="0" stop-color="#4a4d5c"/><stop offset=".55" stop-color="#2a2c37"/><stop offset="1" stop-color="#14151c"/></radialGradient>
-    <clipPath id="bc"><ellipse cx="68" cy="82" rx="40" ry="29"/></clipPath>
+    <radialGradient id="pndW" cx="35%" cy="28%" r="80%">
+      <stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#f2f2f4"/><stop offset="1" stop-color="#cfd1da"/>
+    </radialGradient>
+    <radialGradient id="pndK" cx="35%" cy="28%" r="85%">
+      <stop offset="0" stop-color="#4b4e5c"/><stop offset=".55" stop-color="#2a2c36"/><stop offset="1" stop-color="#15161c"/>
+    </radialGradient>
+    <linearGradient id="pndBam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9ad65a"/><stop offset=".5" stop-color="#5fae36"/><stop offset="1" stop-color="#3d7f22"/>
+    </linearGradient>
+    <linearGradient id="pndLeaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8fd458"/><stop offset="1" stop-color="#3f8a26"/>
+    </linearGradient>
+    <clipPath id="pndBody"><path d="M36,70 C40,52 70,48 96,52 C116,56 122,76 116,92 C110,106 82,108 60,106 C40,104 32,88 36,70 Z"/></clipPath>
   </defs>
-  <!-- 後腿（在身體後面） -->
-  <ellipse cx="96" cy="108" rx="13" ry="15" fill="url(#k)"/>
-  <ellipse cx="96" cy="120" rx="11" ry="5" fill="#14151c" opacity=".55"/>
-  <!-- 身體 -->
-  <ellipse cx="68" cy="82" rx="40" ry="29" fill="url(#w)"/>
-  <!-- 肩膀的黑色環帶 -->
-  <g clip-path="url(#bc)"><ellipse cx="46" cy="84" rx="17" ry="34" fill="url(#k)"/></g>
-  <!-- 前腿 -->
-  <ellipse cx="42" cy="106" rx="12" ry="16" fill="url(#k)"/>
-  <ellipse cx="42" cy="120" rx="11" ry="5" fill="#14151c" opacity=".55"/>
-  <!-- 尾巴 -->
-  <circle cx="108" cy="78" r="6" fill="#f1f1f4"/>
-  <!-- 頭 -->
-  <circle cx="30" cy="58" r="25" fill="url(#w)"/>
-  <circle cx="14" cy="36" r="9" fill="url(#k)"/>
-  <circle cx="45" cy="34" r="9" fill="url(#k)"/>
-  <ellipse cx="22" cy="54" rx="6.5" ry="9" transform="rotate(25 22 54)" fill="url(#k)"/>
-  <ellipse cx="40" cy="52" rx="6.5" ry="9" transform="rotate(-25 40 52)" fill="url(#k)"/>
-  <circle cx="21" cy="53" r="2.4" fill="#fff"/><circle cx="41" cy="51" r="2.4" fill="#fff"/>
-  <ellipse cx="29" cy="63" rx="5" ry="3.6" fill="#14151c"/>
-  <path d="M22 67 Q29 73 36 68" stroke="#14151c" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-  <ellipse cx="29" cy="73" rx="8" ry="3" fill="#e7a0a8" opacity=".45"/>
-  <!-- 手上抱著竹子 -->
-  <rect x="26" y="96" width="9" height="30" rx="3" fill="#7bc14b" transform="rotate(-18 30 110)"/>
-  <rect x="26" y="106" width="9" height="2.6" fill="#4f9a2d" transform="rotate(-18 30 110)"/>
-  <rect x="26" y="116" width="9" height="2.6" fill="#4f9a2d" transform="rotate(-18 30 110)"/>
+
+  <!-- 地面陰影 -->
+  <ellipse cx="68" cy="119" rx="50" ry="5.5" fill="#000" opacity=".18"/>
+
+  <!-- 遠側腿 -->
+  <path d="M86,90 L104,90 L104,114 Q95,118 86,114 Z" fill="#15161c" stroke="#0b0b10" stroke-width="1"/>
+
+  <!-- 短白尾（輕擺） -->
+  <ellipse cx="117" cy="70" rx="6" ry="5" fill="url(#pndW)" stroke="#9a9caa" stroke-width="1">
+    <animateTransform attributeName="transform" type="rotate" values="0 113 72;8 113 72;0 113 72" dur="2.6s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- 身體（白色） -->
+  <path d="M36,70 C40,52 70,48 96,52 C116,56 122,76 116,92 C110,106 82,108 60,106 C40,104 32,88 36,70 Z" fill="url(#pndW)" stroke="#9a9caa" stroke-width="1.2"/>
+  <!-- 黑色肩帶（越過肩膀） -->
+  <g clip-path="url(#pndBody)">
+    <path d="M44,40 C60,40 74,46 76,58 C78,74 70,96 64,112 L30,112 L30,40 Z" fill="url(#pndK)"/>
+  </g>
+
+  <!-- 近側後腿（黑） -->
+  <path d="M92,78 C104,74 116,82 114,96 L112,114 Q102,119 92,115 L91,100 C86,94 86,82 92,78 Z" fill="url(#pndK)" stroke="#0b0b10" stroke-width="1"/>
+
+  <!-- 地上的前腿（黑） -->
+  <path d="M52,86 C60,84 68,88 68,96 L68,114 Q59,119 50,115 L50,96 Z" fill="url(#pndK)" stroke="#0b0b10" stroke-width="1"/>
+
+  <!-- 竹子 -->
+  <g>
+    <rect x="10" y="30" width="7" height="82" rx="3" fill="url(#pndBam)" stroke="#2f6a1a" stroke-width="1" transform="rotate(-12 14 72)"/>
+    <g stroke="#2f6a1a" stroke-width="1.6" stroke-linecap="round" transform="rotate(-12 14 72)">
+      <path d="M10,52 L17,52"/><path d="M10,76 L17,76"/><path d="M10,98 L17,98"/>
+    </g>
+    <g fill="url(#pndLeaf)" stroke="#2f6a1a" stroke-width=".8">
+      <path d="M17,30 Q30,16 42,18 Q30,28 17,30 Z"/>
+      <path d="M16,32 Q4,20 4,10 Q14,20 16,32 Z"/>
+      <path d="M18,28 Q24,10 32,6 Q28,20 18,28 Z"/>
+    </g>
+    <animateTransform attributeName="transform" type="rotate" values="0 22 90;-3 22 90;0 22 90" dur="2s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- 頭部 -->
+  <g>
+    <!-- 耳朵 -->
+    <circle cx="20" cy="30" r="9.5" fill="url(#pndK)" stroke="#0b0b10" stroke-width="1"/>
+    <circle cx="52" cy="28" r="9.5" fill="url(#pndK)" stroke="#0b0b10" stroke-width="1"/>
+    <!-- 頭 -->
+    <ellipse cx="35" cy="52" rx="25" ry="22" fill="url(#pndW)" stroke="#9a9caa" stroke-width="1.2"/>
+    <!-- 淚滴形眼圈（向外下垂） -->
+    <path d="M24,44 C29,42 32,47 30,53 C28,59 22,63 19,60 C16,57 19,46 24,44 Z" fill="url(#pndK)"/>
+    <path d="M42,43 C37,42 35,47 37,53 C39,59 45,62 48,59 C51,56 47,44 42,43 Z" fill="url(#pndK)"/>
+    <!-- 眼睛（眨眼） -->
+    <g fill="#fff">
+      <ellipse cx="25" cy="49" rx="2.4" ry="2.6"><animate attributeName="ry" values="2.6;2.6;.3;2.6" keyTimes="0;.9;.95;1" dur="4s" repeatCount="indefinite"/></ellipse>
+      <ellipse cx="41" cy="49" rx="2.4" ry="2.6"><animate attributeName="ry" values="2.6;2.6;.3;2.6" keyTimes="0;.9;.95;1" dur="4s" repeatCount="indefinite"/></ellipse>
+    </g>
+    <g fill="#111">
+      <circle cx="24.4" cy="49.6" r="1.3"/><circle cx="40.4" cy="49.6" r="1.3"/>
+    </g>
+    <!-- 口鼻 -->
+    <ellipse cx="32" cy="63" rx="9" ry="6.5" fill="#ffffff" stroke="#c6c8d2" stroke-width=".8"/>
+    <path d="M28,58.6 Q32,57 36,58.6 Q35,62.4 32,63 Q29,62.4 28,58.6 Z" fill="#15161c"/>
+    <path d="M32,63 L32,65.6 M32,65.6 Q29.4,67.6 27.4,66 M32,65.6 Q34.6,67.6 36.6,66" fill="none" stroke="#15161c" stroke-width="1" stroke-linecap="round"/>
+    <!-- 臉頰紅暈 -->
+    <ellipse cx="18" cy="62" rx="3" ry="1.8" fill="#f4a3b0" opacity=".55"/>
+    <ellipse cx="47" cy="61" rx="3" ry="1.8" fill="#f4a3b0" opacity=".55"/>
+  </g>
+
+  <!-- 抓竹子的前掌（黑） -->
+  <path d="M42,74 C34,70 22,72 16,76 C12,80 14,86 19,86 C26,86 36,84 44,84 Z" fill="url(#pndK)" stroke="#0b0b10" stroke-width="1"/>
+  <g fill="#3b3e4a"><circle cx="17" cy="78" r="1.4"/><circle cx="16" cy="82" r="1.4"/></g>
 </svg>

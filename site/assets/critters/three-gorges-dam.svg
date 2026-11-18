@@ -1,64 +1,111 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 三峽大壩：從下游斜看，一道又長又直的灰色混凝土重力壩橫跨兩側青綠峽谷，中段一排洩洪閘門噴出白色水瀑，壩後是高水位水庫，壩前是長江，左側有升船機塔樓 -->
   <defs>
-    <linearGradient id="tgDam" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e3e6e2"/>
-      <stop offset="55%" stop-color="#b7bcb4"/>
-      <stop offset="100%" stop-color="#7d8277"/>
+    <linearGradient id="tgdLake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7cc4dc"/>
+      <stop offset="1" stop-color="#3f8fb0"/>
     </linearGradient>
-    <linearGradient id="tgCliff" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9aab86"/>
-      <stop offset="100%" stop-color="#4f5c42"/>
+    <linearGradient id="tgdRiver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6fa8b0"/>
+      <stop offset="1" stop-color="#3f7380"/>
     </linearGradient>
-    <linearGradient id="tgWaterUp" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bfe0e6"/>
-      <stop offset="100%" stop-color="#3f7d8c"/>
+    <linearGradient id="tgdFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d6dadc"/>
+      <stop offset=".6" stop-color="#a9b0b4"/>
+      <stop offset="1" stop-color="#7f878c"/>
     </linearGradient>
-    <linearGradient id="tgSpill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#d8f1f5"/>
+    <linearGradient id="tgdMtnL" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#86c068"/>
+      <stop offset="1" stop-color="#3c7434"/>
+    </linearGradient>
+    <linearGradient id="tgdMtnR" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6aa654"/>
+      <stop offset="1" stop-color="#2e5e2a"/>
+    </linearGradient>
+    <linearGradient id="tgdFall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d8f0f8"/>
     </linearGradient>
   </defs>
 
-  <!-- gorge walls either side -->
-  <path d="M0,0 L14,0 L18,40 L10,80 L0,80 Z" fill="url(#tgCliff)" stroke="#333d2a" stroke-width="0.5"/>
-  <path d="M80,0 L66,0 L62,40 L70,80 L80,80 Z" fill="url(#tgCliff)" stroke="#333d2a" stroke-width="0.5"/>
+  <!-- 遠山 -->
+  <path d="M10,30 Q20,14 30,24 Q40,12 52,22 Q62,14 72,28 L72,32 L10,32 Z" fill="#8fb7a0" stroke="#5f8a72" stroke-width="0.4" opacity="0.8"/>
+  <!-- 壩後水庫（較高水位） -->
+  <path d="M8,30.5 Q40,27 74,31 L74,35.5 L8,31.8 Z" fill="url(#tgdLake)"/>
 
-  <!-- upstream reservoir, calm water above the dam -->
-  <path d="M14,30 L66,30 L62,46 L18,46 Z" fill="url(#tgWaterUp)" opacity="0.9"/>
-
-  <!-- the dam wall itself -->
-  <path d="M12,46 L68,46 L66,58 L14,58 Z" fill="url(#tgDam)" stroke="#565b52" stroke-width="0.6"/>
-  <!-- spillway gate piers -->
-  <g fill="#8d9387" stroke="#565b52" stroke-width="0.4">
-    <rect x="20" y="40" width="3.4" height="18"/>
-    <rect x="30" y="40" width="3.4" height="18"/>
-    <rect x="40" y="40" width="3.4" height="18"/>
-    <rect x="50" y="40" width="3.4" height="18"/>
-    <rect x="58" y="40" width="3.4" height="18"/>
+  <!-- 壩頂 -->
+  <path d="M8,31.6 L74,35.4 L74,37 L8,33.6 Z" fill="#eef0f0" stroke="#5d6468" stroke-width="0.5" stroke-linejoin="round"/>
+  <!-- 下游壩面（左近右遠，呈透視） -->
+  <path d="M8,33.6 L74,37 L74,52 L8,60 Z" fill="url(#tgdFace)" stroke="#5d6468" stroke-width="0.6" stroke-linejoin="round"/>
+  <!-- 壩段分縫 -->
+  <g stroke="#7a8286" stroke-width="0.35" opacity="0.8">
+    <path d="M16,34 V59 M24,34.4 V58 M60,36.3 V53.7 M67,36.7 V52.8"/>
+  </g>
+  <!-- 壩頂護欄與門機 -->
+  <g stroke="#5d6468" stroke-width="0.4">
+    <path d="M8,31.6 L74,35.4" stroke="#8a9296"/>
+    <rect x="30" y="29.2" width="3" height="3.4" fill="#e9b04a"/>
+    <rect x="46" y="30.1" width="3" height="3.3" fill="#e9b04a"/>
   </g>
 
-  <!-- water discharging through the spillway gates, downstream side -->
-  <g>
-    <path d="M24,58 C23,64 25,70 23,78" fill="none" stroke="url(#tgSpill)" stroke-width="2.6" stroke-linecap="round" opacity="0.85">
-      <animate attributeName="d" values="M24,58 C23,64 25,70 23,78;M24,58 C25,64 23,70 25,78;M24,58 C23,64 25,70 23,78" dur="0.8s" repeatCount="indefinite"/>
-    </path>
-    <path d="M35,58 C34,65 36,72 34,78" fill="none" stroke="url(#tgSpill)" stroke-width="3" stroke-linecap="round" opacity="0.9">
-      <animate attributeName="d" values="M35,58 C34,65 36,72 34,78;M35,58 C36,65 34,72 36,78;M35,58 C34,65 36,72 34,78" dur="0.7s" repeatCount="indefinite"/>
-    </path>
-    <path d="M46,58 C45,64 47,70 45,78" fill="none" stroke="url(#tgSpill)" stroke-width="2.8" stroke-linecap="round" opacity="0.85">
-      <animate attributeName="d" values="M46,58 C45,64 47,70 45,78;M46,58 C47,64 45,70 47,78;M46,58 C45,64 47,70 45,78" dur="0.75s" repeatCount="indefinite"/>
-    </path>
-    <path d="M56,58 C55,65 57,72 55,78" fill="none" stroke="url(#tgSpill)" stroke-width="2.6" stroke-linecap="round" opacity="0.85">
-      <animate attributeName="d" values="M56,58 C55,65 57,72 55,78;M56,58 C57,65 55,72 57,78;M56,58 C55,65 57,72 55,78" dur="0.85s" repeatCount="indefinite"/>
+  <!-- 升船機塔樓（左端） -->
+  <path d="M9,25 L17,25.4 L17,59 L9,60 Z" fill="#c5cbce" stroke="#5d6468" stroke-width="0.5"/>
+  <path d="M9.6,23 H11.6 V25 H9.6 Z M14.4,23.2 H16.4 V25.3 H14.4 Z" fill="#9aa2a6" stroke="#5d6468" stroke-width="0.4"/>
+  <g fill="#6d767a">
+    <rect x="10.2" y="28" width="1.2" height="1.6"/><rect x="14.4" y="28.2" width="1.2" height="1.6"/>
+    <rect x="10.2" y="32" width="1.2" height="1.6"/><rect x="14.4" y="32.2" width="1.2" height="1.6"/>
+    <rect x="10.2" y="36" width="1.2" height="1.6"/><rect x="14.4" y="36.2" width="1.2" height="1.6"/>
+  </g>
+
+  <!-- 洩洪閘門（暗色方孔） -->
+  <g fill="#3e464a" stroke="#2a3033" stroke-width="0.3">
+    <rect x="28" y="37" width="2.6" height="3.6"/>
+    <rect x="32" y="37.2" width="2.6" height="3.6"/>
+    <rect x="36" y="37.5" width="2.6" height="3.5"/>
+    <rect x="40" y="37.7" width="2.6" height="3.5"/>
+    <rect x="44" y="38" width="2.6" height="3.4"/>
+    <rect x="48" y="38.2" width="2.6" height="3.4"/>
+    <rect x="52" y="38.5" width="2.6" height="3.3"/>
+  </g>
+  <!-- 噴湧而下的白色水瀑 -->
+  <g fill="url(#tgdFall)" stroke="#9fd0e0" stroke-width="0.3">
+    <path d="M28,40.6 H30.6 L31.4,56.6 H27.4 Z"/>
+    <path d="M32,40.8 H34.6 L35.4,56.2 H31.4 Z"/>
+    <path d="M36,41 H38.6 L39.4,55.7 H35.4 Z"/>
+    <path d="M40,41.2 H42.6 L43.4,55.2 H39.4 Z"/>
+    <path d="M44,41.4 H46.6 L47.4,54.8 H43.4 Z"/>
+    <path d="M48,41.6 H50.6 L51.4,54.3 H47.4 Z"/>
+    <path d="M52,41.8 H54.6 L55.4,53.9 H51.4 Z"/>
+    <animate attributeName="opacity" values="1;0.82;1" dur="1.6s" repeatCount="indefinite"/>
+  </g>
+  <g stroke="#a8d4e4" stroke-width="0.4" opacity="0.8" stroke-dasharray="2 2">
+    <path d="M29.3,43 V54 M33.3,43 V53.6 M37.3,43.2 V53.2 M41.3,43.4 V52.8 M45.3,43.6 V52.4 M49.3,43.8 V52 M53.3,44 V51.6">
+      <animate attributeName="stroke-dashoffset" values="0;-4" dur="0.8s" repeatCount="indefinite"/>
     </path>
   </g>
-  <ellipse cx="40" cy="78" rx="26" ry="3.2" fill="#eaf8fb" opacity="0.6"/>
-  <g fill="#ffffff" opacity="0.6">
-    <circle cx="26" cy="74" r="1.2">
-      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="44" cy="76" r="1.1">
-      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.4s" repeatCount="indefinite"/>
-    </circle>
+
+  <!-- 下游長江 -->
+  <path d="M8,60 L74,52 L80,54 L80,76 L0,76 L0,62 Z" fill="url(#tgdRiver)"/>
+  <g stroke="#cfe8ee" stroke-width="0.5" fill="none" opacity="0.7" stroke-linecap="round">
+    <path d="M14,68 Q20,67 26,68 M44,66 Q50,65 56,66 M30,72 Q36,71 42,72 M60,70 Q65,69 70,70"/>
+  </g>
+  <!-- 水瀑底部浪花 -->
+  <g fill="#ffffff" stroke="#b8dce8" stroke-width="0.3">
+    <ellipse cx="34" cy="57.4" rx="8" ry="2.4"/>
+    <ellipse cx="47" cy="55.8" rx="8" ry="2.2"/>
+    <ellipse cx="41" cy="58.6" rx="6" ry="1.6" opacity="0.9"/>
+    <animate attributeName="opacity" values="1;0.8;1" dur="1.2s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- 左側峽谷山 -->
+  <path d="M0,16 Q4,12 7,18 Q10,24 9,34 Q8,48 12,62 L0,70 Z" fill="url(#tgdMtnL)" stroke="#2f5a28" stroke-width="0.6" stroke-linejoin="round"/>
+  <path d="M2,30 Q5,36 4,44 M6,22 Q8,28 7,34" stroke="#3c6a32" stroke-width="0.5" fill="none" opacity="0.7"/>
+  <!-- 右側峽谷山 -->
+  <path d="M80,20 Q76,18 74,24 Q71,30 72,38 Q72,46 70,54 L80,58 Z" fill="url(#tgdMtnR)" stroke="#2f5a28" stroke-width="0.6" stroke-linejoin="round"/>
+  <path d="M77,28 Q75,34 76,40 M75,44 Q74,48 75,52" stroke="#24481f" stroke-width="0.5" fill="none" opacity="0.7"/>
+  <!-- 山上小樹 -->
+  <g fill="#3f7e36" stroke="#264f22" stroke-width="0.3">
+    <circle cx="3" cy="20" r="1.6"/><circle cx="6" cy="26" r="1.4"/><circle cx="3" cy="38" r="1.5"/>
+    <circle cx="77" cy="24" r="1.5"/><circle cx="75" cy="33" r="1.3"/><circle cx="78" cy="46" r="1.4"/>
   </g>
 </svg>
