@@ -16,6 +16,7 @@ const ev = async (e) => (await send('Runtime.evaluate', { expression: e, awaitPr
 await send('Page.enable'); await send('Runtime.enable'); if (process.env.MOBILE) { const [mw, mh] = process.env.MOBILE.split(',').map(Number); await send('Emulation.setDeviceMetricsOverride', { width: mw, height: mh, deviceScaleFactor: 2, mobile: true }); }
 const url = `http://localhost:8000/?season=${season}`;
 await send('Page.navigate', { url }); await sleep(1500);
+if (process.env.LANG_) await ev(`localStorage.setItem('stockv.lang','${process.env.LANG_}')`);
 await ev(`localStorage.setItem('activeRegion', JSON.stringify('${region}'))`);
 await send('Page.navigate', { url });
 for (let i = 0; i < 100; i++) { if (await ev(`!!document.querySelector('#loading.gone')`)) break; await sleep(300); }

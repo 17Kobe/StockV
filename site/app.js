@@ -19,7 +19,7 @@
         commodity: { icon: '🛢️', label: $t('商品'), mlon: -35 }, // 大西洋：左邊看到一點美洲、右邊看到一點歐洲
         fx: { icon: '💵', label: $t('匯率'), mlon: GLOBAL_LON },
         // img：篩選按鈕改用 3D 圖片（系統 emoji 的長條圖太陽春）；icon 仍用在文字場合
-        econ: { icon: '📊', img: 'assets/icons/bar_chart.png', label: $t('全球市場'), mlon: GLOBAL_LON },
+        econ: { icon: '📊', img: 'assets/icons/bar_chart.png', label: $t('經濟數據'), mlon: GLOBAL_LON },
         bond: { icon: '🏦', label: $t('債券'), mlon: GLOBAL_LON },
         rate: { icon: '🏛️', label: $t('利率'), mlon: GLOBAL_LON },
         geo: { icon: '⚔️', label: $t('地緣'), mlon: 85 },
@@ -38,10 +38,10 @@
             icon: '📈',
             label: $t('全球市場'),
             title: $t('全球市場'),
-            desc: $t('指數、商品、匯率、債券、利率、全球市場、地緣'),
+            desc: $t('指數、商品、匯率、債券、利率、經濟數據、地緣'),
             ready: true,
         },
-        { k: 'picks', icon: '📊', label: $t('個股'), title: $t('個股'), desc: $t('個股報價、走勢與公司資訊') },
+        { k: 'picks', icon: '📊', label: $t('價差股利'), title: $t('價差股利'), desc: $t('個股報價、走勢與公司資訊') },
         { k: 'holdings', icon: '💼', label: $t('持倉'), title: $t('持倉'), desc: $t('我的持股、成本與損益') },
         { k: 'balance', icon: '⚖️', label: $t('資產負債'), title: $t('資產負債'), desc: $t('資產、負債與淨值') },
     ];

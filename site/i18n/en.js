@@ -2,6 +2,9 @@
 I18n.add('en', {
   "商品": "Commodities",
   "匯率": "FX",
+  "全球市場": "Global Markets",
+  "遊戲": "Game",
+  "價差股利": "Gain & Div",
   "經濟數據": "Economy",
   "地緣": "Geopolitics",
   "利率": "Rates",

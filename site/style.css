@@ -473,11 +473,14 @@ body.noanim .corps .bk,body.noanim .corps .flame{animation:none}
 /* 多指數旗幟：每列一個指數 */
 .bubble .rbg{fill:transparent}
 .bubble .rbg.odd{fill:rgba(255,255,255,.05)}
-/* 經濟數據卡：成長 / 物價 / 就業 不再有標題列，每個區塊一種底色（藍 / 琥珀 / 紫 / 青；避開紅綠，免得和漲跌色混在一起），區塊內不分單雙列 */
-.bubble .rbg.g0{fill:rgba(22,52,108,.86)}
-.bubble .rbg.g1{fill:rgba(88,60,18,.86)}
-.bubble .rbg.g2{fill:rgba(56,40,104,.88)}
-.bubble .rbg.g3{fill:rgba(14,68,82,.86)}
+/* 經濟數據卡：成長 / 物價 / 就業 不再有標題列，每個區塊一種底色，區塊內不分單雙列。
+   四色都取冷色系、明度與飽和度相近（鋼藍 / 青綠 / 靛紫 / 石板灰），和卡片的深藍底協調，也不搶金色標籤、白色數字；
+   避開紅綠（漲跌色）與棕色（和金字對比差、顯髒）。列與列之間用細暗線分開 */
+.bubble .rbg.g0{fill:rgba(30,78,150,.88)}
+.bubble .rbg.g1{fill:rgba(16,98,112,.88)}
+.bubble .rbg.g2{fill:rgba(66,62,140,.88)}
+.bubble .rbg.g3{fill:rgba(54,72,102,.9)}
+.bubble .rbg[class*=" g"]{stroke:rgba(6,14,32,.35);stroke-width:.5}
 
 /* 報價剛更新（lvr = 紅光、lvg = 綠光，顏色是「這次價格漲或跌」，程式依紅漲綠跌設定決定）：
    旗幟 / 卡片外框發光、數字區塊或該列底色淡出。持續約 2 秒後程式會把 class 拿掉 */
