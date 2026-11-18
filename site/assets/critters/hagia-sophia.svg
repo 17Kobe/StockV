@@ -1,27 +1,76 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
 <defs>
-  <linearGradient id="hsStone" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#e8c9a0"/>
-    <stop offset="1" stop-color="#c49a68"/>
+  <linearGradient id="hsWall" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#e9a77c"/>
+    <stop offset="1" stop-color="#b86b45"/>
   </linearGradient>
-  <radialGradient id="hsDome" cx="40%" cy="30%" r="70%">
-    <stop offset="0" stop-color="#d8b890"/>
-    <stop offset="1" stop-color="#a87c4c"/>
+  <linearGradient id="hsWallSide" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#c97d55"/>
+    <stop offset="1" stop-color="#e3a07a"/>
+  </linearGradient>
+  <!-- 圓頂是鉛皮：帶藍的灰色，左上受光 -->
+  <radialGradient id="hsDome" cx="38%" cy="28%" r="75%">
+    <stop offset="0" stop-color="#e4ecf4"/>
+    <stop offset="0.45" stop-color="#9fb0c4"/>
+    <stop offset="1" stop-color="#5a6a80"/>
   </radialGradient>
+  <linearGradient id="hsMin" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#f6efe2"/>
+    <stop offset="1" stop-color="#cbbfa8"/>
+  </linearGradient>
 </defs>
-<!-- 聖索菲亞大教堂：磚紅色主體 + 中央大圓頂 + 四座尖細的宣禮塔 -->
-<rect x="18" y="42" width="44" height="26" fill="url(#hsStone)" stroke="#7a5230" stroke-width="0.5"/>
-<path d="M22,42 Q40,20 58,42 Z" fill="url(#hsDome)" stroke="#6b4a28" stroke-width="0.5"/>
-<circle cx="40" cy="21" r="1.4" fill="#6b4a28"/>
-<!-- 四座宣禮塔（兩側各兩座，是伊斯坦堡最醒目的識別特徵） -->
-<g fill="#d8c8a8" stroke="#8a7650" stroke-width="0.4">
-  <rect x="6" y="38" width="3" height="30"/>
-  <polygon points="6,38 7.5,30 9,38"/>
-  <rect x="13" y="44" width="2.6" height="24"/>
-  <polygon points="13,44 14.3,37 15.6,44"/>
-  <rect x="64" y="44" width="2.6" height="24"/>
-  <polygon points="64,44 65.3,37 66.6,44"/>
-  <rect x="71" y="38" width="3" height="30"/>
-  <polygon points="71,38 72.5,30 74,38"/>
+<!-- 聖索菲亞大教堂：中央巨大的淺圓頂（底下一圈窗戶的鼓座）＋兩側往下的半圓頂＋粉橘色牆＋四座鉛筆尖的鄂圖曼宣禮塔 -->
+<!-- 地面 -->
+<ellipse cx="40" cy="73" rx="36" ry="3" fill="#000" opacity="0.18"/>
+<!-- 四座宣禮塔（後排兩座矮一點） -->
+<g stroke="#8a7a5e" stroke-width="0.4">
+  <rect x="13.4" y="30" width="2.6" height="42" fill="url(#hsMin)"/>
+  <rect x="64" y="30" width="2.6" height="42" fill="url(#hsMin)"/>
+  <rect x="12.8" y="42" width="3.8" height="1.4" fill="#e9dfcc"/>
+  <rect x="63.4" y="42" width="3.8" height="1.4" fill="#e9dfcc"/>
+  <polygon points="13.2,30 14.7,18 16.2,30" fill="#7d8ea4"/>
+  <polygon points="63.8,30 65.3,18 66.8,30" fill="#7d8ea4"/>
+  <rect x="5" y="22" width="3.2" height="50" fill="url(#hsMin)"/>
+  <rect x="71.8" y="22" width="3.2" height="50" fill="url(#hsMin)"/>
+  <rect x="4.2" y="34" width="4.8" height="1.6" fill="#e9dfcc"/>
+  <rect x="71" y="34" width="4.8" height="1.6" fill="#e9dfcc"/>
+  <rect x="4.2" y="46" width="4.8" height="1.6" fill="#e9dfcc"/>
+  <rect x="71" y="46" width="4.8" height="1.6" fill="#e9dfcc"/>
+  <polygon points="4.8,22 6.6,8 8.4,22" fill="#7d8ea4"/>
+  <polygon points="71.6,22 73.4,8 75.2,22" fill="#7d8ea4"/>
 </g>
+<!-- 主體：下層寬、側邊扶壁 -->
+<rect x="17" y="50" width="46" height="22" fill="url(#hsWall)" stroke="#7a4228" stroke-width="0.5"/>
+<rect x="17" y="50" width="5" height="22" fill="url(#hsWallSide)" stroke="#7a4228" stroke-width="0.4"/>
+<rect x="58" y="50" width="5" height="22" fill="url(#hsWallSide)" stroke="#7a4228" stroke-width="0.4"/>
+<!-- 下層拱窗 -->
+<g fill="#5a2f1e">
+  <path d="M26 66 V61 Q28 58.6 30 61 V66 Z"/>
+  <path d="M33 66 V60 Q35 57.4 37 60 V66 Z"/>
+  <path d="M43 66 V60 Q45 57.4 47 60 V66 Z"/>
+  <path d="M50 66 V61 Q52 58.6 54 61 V66 Z"/>
+</g>
+<path d="M37.5 72 V62 Q40 58.5 42.5 62 V72 Z" fill="#4a2414"/>
+<!-- 兩側的半圓頂（從主圓頂往左右兩邊降下來） -->
+<path d="M20 50 Q20 41 31 40 L31 50 Z" fill="url(#hsDome)" stroke="#4e5c70" stroke-width="0.5"/>
+<path d="M60 50 Q60 41 49 40 L49 50 Z" fill="url(#hsDome)" stroke="#4e5c70" stroke-width="0.5"/>
+<!-- 鼓座：一圈小窗 -->
+<rect x="27" y="36" width="26" height="8" fill="url(#hsWall)" stroke="#7a4228" stroke-width="0.5"/>
+<g fill="#5a2f1e">
+  <rect x="29" y="38" width="1.6" height="4" rx="0.8"/><rect x="32.4" y="38" width="1.6" height="4" rx="0.8"/>
+  <rect x="35.8" y="38" width="1.6" height="4" rx="0.8"/><rect x="39.2" y="38" width="1.6" height="4" rx="0.8"/>
+  <rect x="42.6" y="38" width="1.6" height="4" rx="0.8"/><rect x="46" y="38" width="1.6" height="4" rx="0.8"/>
+  <rect x="49.4" y="38" width="1.6" height="4" rx="0.8"/>
+</g>
+<!-- 中央大圓頂：又寬又淺，是整棟最醒目的地方 -->
+<path d="M24.5 36.5 Q25 18 40 17 Q55 18 55.5 36.5 Z" fill="url(#hsDome)" stroke="#4e5c70" stroke-width="0.6"/>
+<!-- 圓頂上的肋線 -->
+<path d="M40 17 V36.5 M33 18.6 Q31 27 30 36.5 M47 18.6 Q49 27 50 36.5 M28 23 Q26.5 30 26.5 36.5 M52 23 Q53.5 30 53.5 36.5"
+      stroke="#5f6f86" stroke-width="0.45" fill="none" opacity="0.7"/>
+<!-- 圓頂高光 -->
+<path d="M29 30 Q30 21 37 19.2" stroke="#ffffff" stroke-width="1.4" fill="none" opacity="0.55" stroke-linecap="round"/>
+<!-- 金色新月尖頂 -->
+<line x1="40" y1="17" x2="40" y2="11.5" stroke="#c8962e" stroke-width="0.9"/>
+<circle cx="40" cy="13.6" r="0.9" fill="#e8b93e"/>
+<path d="M41.2 8.6 A2.4 2.4 0 1 0 41.2 12.2 A1.9 1.9 0 1 1 41.2 8.6 Z" fill="#f2c94c" stroke="#a87a1e" stroke-width="0.3"/>
 </svg>

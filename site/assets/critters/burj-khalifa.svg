@@ -1,13 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
     <linearGradient id="bk" x1="0" x2="1"><stop offset="0" stop-color="#e6edf6"/><stop offset=".5" stop-color="#a9bbd2"/><stop offset="1" stop-color="#6d83a0"/></linearGradient>
-    <linearGradient id="sd" x1="0" x2="1"><stop offset="0" stop-color="#dfe7f0"/><stop offset="1" stop-color="#8c9db4"/></linearGradient>
+    <linearGradient id="bkSteel" x1="0" x2="1"><stop offset="0" stop-color="#8a96a8"/><stop offset="1" stop-color="#3c4454"/></linearGradient>
+    <linearGradient id="bkGold" x1="0" x2="1"><stop offset="0" stop-color="#ffe49a"/><stop offset=".55" stop-color="#e0aa48"/><stop offset="1" stop-color="#9a6a22"/></linearGradient>
+    <linearGradient id="bkBronze" x1="0" x2="1"><stop offset="0" stop-color="#e3a274"/><stop offset="1" stop-color="#8c4e2c"/></linearGradient>
+    <linearGradient id="bkTeal" x1="0" x2="1"><stop offset="0" stop-color="#8fe0e6"/><stop offset="1" stop-color="#2c8896"/></linearGradient>
   </defs>
   <!-- 杜拜：哈里發塔（世界最高樓，三葉狀收窄的階梯）與旁邊的摩天樓、沙漠 -->
-  <g fill="url(#sd)" stroke="#6d83a0" stroke-width=".8">
-    <rect x="16" y="64" width="12" height="52"/><rect x="30" y="52" width="10" height="64"/><rect x="88" y="58" width="12" height="58"/><rect x="102" y="70" width="14" height="46"/>
-  </g>
-  <g stroke="#f4f8fc" stroke-width=".8" opacity=".6"><path d="M18 74 H26 M18 84 H26 M18 94 H26 M32 62 H38 M32 72 H38 M32 82 H38 M90 68 H98 M90 78 H98 M90 88 H98 M104 80 H114 M104 90 H114"/></g>
+  <!-- 旁邊的摩天樓各用不同顏色：阿聯酋塔（深色鋼構、三角斜頂）、金色玻璃大樓、卡揚塔（扭轉的古銅色）、藍綠玻璃大樓 -->
+  <!-- 阿聯酋塔 -->
+  <path d="M16 116 V58 L28 46 V116Z" fill="url(#bkSteel)" stroke="#2a3140" stroke-width=".8"/>
+  <path d="M18 70 H26 M18 82 H26 M18 94 H26 M18 106 H26" stroke="#b8c4d4" stroke-width=".7" opacity=".5"/>
+  <!-- 金色玻璃大樓 -->
+  <path d="M31 116 V56 Q35 50 40 56 V116Z" fill="url(#bkGold)" stroke="#8a6420" stroke-width=".8"/>
+  <path d="M32 66 H39 M32 76 H39 M32 86 H39 M32 96 H39 M32 106 H39" stroke="#fff3c4" stroke-width=".7" opacity=".6"/>
+  <!-- 卡揚塔：扭轉 90 度的螺旋 -->
+  <path d="M87 116 C86 98 90 84 88 60 L100 60 C102 84 98 98 99 116Z" fill="url(#bkBronze)" stroke="#6a3c22" stroke-width=".8"/>
+  <path d="M88 64 C92 70 96 72 100 78 M87 76 C91 82 95 86 99 92 M87 90 C91 96 95 100 99 106" stroke="#f3c9a0" stroke-width=".8" fill="none" opacity=".7"/>
+  <!-- 藍綠玻璃大樓 -->
+  <rect x="102" y="70" width="14" height="46" fill="url(#bkTeal)" stroke="#1f5a66" stroke-width=".8"/>
+  <path d="M104 80 H114 M104 90 H114 M104 100 H114" stroke="#d6f6fa" stroke-width=".8" opacity=".6"/>
   <!-- 哈里發塔 -->
   <path d="M52 116 L53 90 L56 90 L56 72 L59 72 L59 56 L61.5 56 L61.5 40 L63 40 L63 24 L63.8 24 L64 4 L64.2 24 L65 24 L65 40 L66.5 40 L66.5 56 L69 56 L69 72 L72 72 L72 90 L75 90 L76 116Z" fill="url(#bk)" stroke="#5f7494" stroke-width=".9"/>
   <path d="M64 6 V116" stroke="#ffffff" stroke-width="1" opacity=".6"/>

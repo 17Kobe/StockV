@@ -1,16 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
   <defs>
+    <!-- 後排陪襯樓：青綠玻璃 / 灰粉色 / 深炭灰，顏色各不相同 -->
     <linearGradient id="hkGlass1" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9fc9e6"/><stop offset="100%" stop-color="#4a7aa0"/>
+      <stop offset="0%" stop-color="#7fd6c8"/><stop offset="100%" stop-color="#2f7f78"/>
     </linearGradient>
-    <linearGradient id="hkGlass2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#b9d9ec"/><stop offset="100%" stop-color="#5f8fb5"/>
+    <linearGradient id="hkRose" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e7b9b4"/><stop offset="100%" stop-color="#9c6a6a"/>
+    </linearGradient>
+    <linearGradient id="hkDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6a7280"/><stop offset="100%" stop-color="#2e3440"/>
+    </linearGradient>
+    <!-- 國際金融中心二期：香檳銀 -->
+    <linearGradient id="hkGlass2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f4ead6"/><stop offset="55%" stop-color="#cbbd9f"/><stop offset="100%" stop-color="#857a64"/>
+    </linearGradient>
+    <linearGradient id="hkPeak" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5f9a5a"/><stop offset="100%" stop-color="#2f5e3a"/>
     </linearGradient>
     <linearGradient id="hkBoc" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#7fa8c9"/><stop offset="50%" stop-color="#d4ecf8"/><stop offset="100%" stop-color="#5f8fb5"/>
     </linearGradient>
-    <linearGradient id="hkPlaza" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8fb8cf"/><stop offset="100%" stop-color="#3f6f8f"/>
+    <!-- 中環廣場：金色玻璃帷幕 -->
+    <linearGradient id="hkPlaza" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffe08a"/><stop offset="55%" stop-color="#d9a441"/><stop offset="100%" stop-color="#8f6420"/>
     </linearGradient>
     <linearGradient id="hkWater" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1c4a6e"/><stop offset="100%" stop-color="#0d2b45"/>
@@ -23,11 +35,13 @@
     <animate attributeName="opacity" values="0.25;0.55;0.25" dur="3s" repeatCount="indefinite"/>
   </path>
 
+  <!-- 太平山：大樓群後面的綠色山頭 -->
+  <path d="M0,60 Q12,40 30,44 Q44,30 60,40 Q72,44 80,52 V74 H0 Z" fill="url(#hkPeak)" opacity="0.9"/>
   <!-- 後排陪襯樓群，襯托前景三棟招牌建築 -->
-  <rect x="0" y="48" width="8" height="26" fill="url(#hkGlass2)" stroke="#355f7a" stroke-width="0.4"/>
-  <rect x="8" y="54" width="7" height="20" fill="url(#hkGlass1)" stroke="#355f7a" stroke-width="0.4"/>
-  <rect x="62" y="50" width="8" height="24" fill="url(#hkGlass1)" stroke="#355f7a" stroke-width="0.4"/>
-  <rect x="70" y="56" width="10" height="18" fill="url(#hkGlass2)" stroke="#355f7a" stroke-width="0.4"/>
+  <rect x="0" y="48" width="8" height="26" fill="url(#hkRose)" stroke="#6a4646" stroke-width="0.4"/>
+  <rect x="8" y="54" width="7" height="20" fill="url(#hkGlass1)" stroke="#1f5a55" stroke-width="0.4"/>
+  <rect x="62" y="50" width="8" height="24" fill="url(#hkDark)" stroke="#1e232c" stroke-width="0.4"/>
+  <rect x="70" y="56" width="10" height="18" fill="url(#hkGlass1)" stroke="#1f5a55" stroke-width="0.4"/>
 
   <!-- 中銀大廈：四片三角稜面層層削切、頂端雙天線，是最具識別度的香港地標之一 -->
   <path d="M16,74 L16,52 L20,44 L24,52 L24,74 Z" fill="url(#hkBoc)" stroke="#2c4f66" stroke-width="0.4"/>
@@ -37,11 +51,13 @@
   <line x1="19.4" y1="9" x2="19.4" y2="3" stroke="#2c4f66" stroke-width="0.7"/>
   <line x1="20.6" y1="9" x2="20.6" y2="4.5" stroke="#2c4f66" stroke-width="0.7"/>
   <path d="M16,52 L20,44 L20,74 Z" fill="#ffffff" opacity="0.12"/>
+  <!-- 中銀大廈招牌的白色 X 形斜撐 -->
+  <path d="M16,74 L24,62 M24,74 L16,62 M16,62 L24,52 M24,62 L16,52" stroke="#ffffff" stroke-width="0.7" opacity="0.85"/>
   <path d="M17,30 L20,44 L20,18 Z" fill="#ffffff" opacity="0.12"/>
 
   <!-- 國際金融中心二期（IFC Two）：筆直向上，頂端削出一個斜角缺口收尖 -->
-  <path d="M32,74 L32,24 L38,24 L38,18 L41,12 L44,18 L44,24 L47,24 L47,74 Z" fill="url(#hkGlass2)" stroke="#2c4f66" stroke-width="0.4"/>
-  <g stroke="#2c4f66" stroke-width="0.3" opacity="0.5">
+  <path d="M32,74 L32,24 L38,24 L38,18 L41,12 L44,18 L44,24 L47,24 L47,74 Z" fill="url(#hkGlass2)" stroke="#6b604c" stroke-width="0.4"/>
+  <g stroke="#6b604c" stroke-width="0.3" opacity="0.6">
     <line x1="32" y1="32" x2="47" y2="32"/><line x1="32" y1="42" x2="47" y2="42"/>
     <line x1="32" y1="52" x2="47" y2="52"/><line x1="32" y1="62" x2="47" y2="62"/>
   </g>
@@ -51,14 +67,16 @@
   </circle>
 
   <!-- 中環廣場：六邊形截面向上收窄成金字塔頂，頂端豎立燈柱 -->
-  <path d="M54,74 L54,40 L58,36 L66,36 L70,40 L70,74 Z" fill="url(#hkPlaza)" stroke="#20465c" stroke-width="0.4"/>
-  <path d="M58,36 L62,22 L66,36 Z" fill="url(#hkPlaza)" stroke="#20465c" stroke-width="0.4"/>
-  <line x1="62" y1="22" x2="62" y2="14" stroke="#20465c" stroke-width="0.8"/>
+  <path d="M54,74 L54,40 L58,36 L66,36 L70,40 L70,74 Z" fill="url(#hkPlaza)" stroke="#6e4a14" stroke-width="0.4"/>
+  <path d="M58,36 L62,22 L66,36 Z" fill="url(#hkPlaza)" stroke="#6e4a14" stroke-width="0.4"/>
+  <line x1="62" y1="22" x2="62" y2="14" stroke="#6e4a14" stroke-width="0.8"/>
+  <!-- 中環廣場頂上的霓虹燈環 -->
+  <path d="M57,38 L67,38" stroke="#ff5aa8" stroke-width="1.1"><animate attributeName="stroke" values="#ff5aa8;#7ad7ff;#ffd24a;#ff5aa8" dur="4s" repeatCount="indefinite"/></path>
   <g fill="#ffb84d" opacity="0.85">
     <rect x="62" y="14" width="1.6" height="2.2"/>
     <animate attributeName="opacity" values="0.4;1;0.4" dur="2.4s" repeatCount="indefinite"/>
   </g>
-  <g stroke="#20465c" stroke-width="0.3" opacity="0.5">
+  <g stroke="#6e4a14" stroke-width="0.3" opacity="0.6">
     <line x1="54" y1="50" x2="70" y2="50"/><line x1="54" y1="60" x2="70" y2="60"/>
   </g>
 

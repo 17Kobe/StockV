@@ -8,11 +8,17 @@
       <stop offset="0" stop-color="#f1c49a"/>
       <stop offset="1" stop-color="#d9a876"/>
     </radialGradient>
+    <radialGradient id="enHair" cx="0.45" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.7" stop-color="#eeede8"/>
+      <stop offset="1" stop-color="#c9c7bf"/>
+    </radialGradient>
     <linearGradient id="enBoard" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#2f4a3a"/>
       <stop offset="1" stop-color="#1c2f24"/>
     </linearGradient>
   </defs>
+  <!-- 愛因斯坦：招牌是「往兩側、往後亂翹的蓬鬆白髮」＋前額高、頭頂稀疏＋濃密的白色八字鬍 -->
   <rect x="4" y="46" width="18" height="14" rx="0.8" fill="url(#enBoard)" stroke="#132019" stroke-width="0.5"/>
   <text x="13" y="55" font-size="6" fill="#eef0e8" text-anchor="middle" font-family="serif">E=mc²</text>
   <ellipse cx="34" cy="78" rx="6" ry="2.4" fill="#2a2a2a"/>
@@ -25,12 +31,31 @@
   <circle cx="19" cy="60" r="2.6" fill="#eac095"/>
   <circle cx="63" cy="60" r="2.6" fill="#eac095"/>
   <rect x="36" y="30" width="8" height="7" fill="#eac095"/>
-  <path d="M33 27.5 Q40 32 47 27.5" stroke="#e4e4de" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <!-- 頭後方的一大團亂髮：往左右兩側炸開、尾端一撮一撮翹起來（畫在臉後面） -->
+  <g>
+    <path d="M40 6
+             C33 5 28 8 26 12 L20 9 L23 14 L15 13 L21 18 L13 20 L21 22 L15 27 L24 26 L22 31 L29 27
+             L51 27 L58 31 L56 26 L65 27 L59 22 L67 20 L59 18 L65 13 L57 14 L60 9 L54 12
+             C52 8 47 5 40 6 Z"
+          fill="url(#enHair)" stroke="#b9b6aa" stroke-width="0.5" stroke-linejoin="round"/>
+    <!-- 髮絲紋路 -->
+    <path d="M24 14 L17 15 M23 19 L15 20 M24 23 L17 25 M56 14 L63 15 M57 19 L65 20 M56 23 L63 25"
+          stroke="#c4c1b6" stroke-width="0.6" fill="none" stroke-linecap="round"/>
+    <animateTransform attributeName="transform" type="rotate" values="-1.2 40 18; 1.2 40 18; -1.2 40 18" dur="5s" repeatCount="indefinite"/>
+  </g>
   <circle cx="40" cy="21" r="9.5" fill="url(#enFace)" stroke="#b08858" stroke-width="0.4"/>
-  <path d="M34.5 20.5 Q36 19.5 37.5 20.5" stroke="#3a2a1a" stroke-width="0.8" fill="none"/>
-  <path d="M42.5 20.5 Q44 19.5 45.5 20.5" stroke="#3a2a1a" stroke-width="0.8" fill="none"/>
-  <path d="M40 20.5 L38.8 25.5 L41.2 25.5" stroke="#b08858" stroke-width="0.6" fill="none"/>
-  <path d="M24 18 C20 10 26 2 40 2 C54 2 60 10 56 18 C58 14 59 8 54 6 C55 10 52 14 49 10 C50 13 47 16 44 12 C45 15 42 17 39 13 C39 16 36 18 33 14 C33 17 30 18 27 14 C27 17 24 18 22 15 C22 17 23 18 24 18 Z" fill="#eceae4" stroke="#c9c6ba" stroke-width="0.4">
-    <animateTransform attributeName="transform" type="rotate" values="-1 40 10; 1 40 10; -1 40 10" dur="5s" repeatCount="indefinite"/>
-  </path>
+  <!-- 前額的抬頭紋 -->
+  <path d="M35.5 15.2 Q40 14 44.5 15.2 M36.5 17 Q40 16 43.5 17" stroke="#b9895a" stroke-width="0.45" fill="none" stroke-linecap="round"/>
+  <!-- 頭頂只剩稀疏的幾撮，前額露出來 -->
+  <path d="M31 16 C31 11 34 9 37 10 C35 11 34 13 34 15 Z M49 16 C49 11 46 9 43 10 C45 11 46 13 46 15 Z"
+        fill="#f4f3ee" stroke="#c4c1b6" stroke-width="0.4"/>
+  <!-- 粗粗的白眉 -->
+  <path d="M34 19.2 Q36 17.8 38 19 M42 19 Q44 17.8 46 19.2" stroke="#e6e4dc" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+  <circle cx="36.2" cy="21" r="0.9" fill="#3a2a1a"/>
+  <circle cx="43.8" cy="21" r="0.9" fill="#3a2a1a"/>
+  <path d="M40 21 L39 24.6 L41 24.6" stroke="#b08858" stroke-width="0.6" fill="none" stroke-linejoin="round"/>
+  <!-- 濃密的白色八字鬍 -->
+  <path d="M34.6 27.4 C35.4 25 38 24.8 40 25.8 C42 24.8 44.6 25 45.4 27.4 C43.6 26.9 42 27.2 40 27.6 C38 27.2 36.4 26.9 34.6 27.4 Z"
+        fill="#f2f1ec" stroke="#c4c1b6" stroke-width="0.4" stroke-linejoin="round"/>
+  <path d="M38.2 28.8 Q40 29.6 41.8 28.8" stroke="#8a5a3a" stroke-width="0.6" fill="none" stroke-linecap="round"/>
 </svg>

@@ -770,15 +770,17 @@ function render(e) {
       const ci = clamp(py | 0, 0, TS - 1), cj = clamp(px | 0, 0, TS - 1), i = ci * TS + cj;
       if (water[i]) continue;
       const al = Math.abs(lat[ci]);
-      // 熱帶 / 亞熱帶（南北緯 27° 內）靠海的地方：種椰子樹（例如台灣南部、東南亞島嶼、加勒比海），可以種到離岸比較近
-      // 北回歸線以南的低地（例如台灣南部、海南島）就算離海遠一點也種椰子樹
-      const coast = al < 27 && (lw[i] < 0.97 || (al < 23.6 && Hh[i] < 250));
+      // 熱帶 / 亞熱帶（南北緯 27° 內）靠海的地方：種椰子樹（例如台灣南部、東南亞島嶼、加勒比海），可以種到離岸比較近。
+      // 只看「離海多近」（lw：周圍的陸地比例），不再把北回歸線以南的低地全部算進來，內陸（例如泰國、越南中部）才不會長滿椰子樹
+      const coast = al < 27 && lw[i] < 0.88 && Hh[i] < 300;
       if (lb[i] < (coast ? 0.6 : 0.9)) continue;
       const b = bio[i], p = rnd(gx, gy, z + 3), q = rnd(gx, gy, z + 4);
       if (rock[i] > 0.35) continue; // 陡峭山地不種樹
-      const dense = b === 1 ? p < 0.92 : b === 5 ? p < 0.35 : b === 0 ? p < 0.04 : false;
+      // 樹的密度：舊版森林幾乎每格都種（92%），東南亞整片被樹蓋滿、看不到底下的土色；
+      // 改成森林約 6 成、熱帶森林（多半是農田與森林混雜，例如泰國、越南）再少一點，疏林 / 黃土色的草原只零星幾棵
+      const dense = b === 1 ? p < (al < 25 ? 0.5 : 0.62) : b === 5 ? p < 0.14 : b === 0 ? p < 0.02 : false;
       // 熱帶沒有凍原：灰色低彩度（b === 4）在這裡多半是城鎮 / 農田，也可以種
-      const palmy = coast && b !== 3 && (b === 2 ? p < 0.15 : p < 0.45);
+      const palmy = coast && b !== 3 && (b === 2 ? p < 0.06 : p < 0.3);
       if (!dense && !palmy) continue;
       let type;
       if (coast && (!dense || q < 0.6)) type = 'palm';

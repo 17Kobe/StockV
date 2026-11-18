@@ -468,7 +468,7 @@
         // ── 第二批地標 ────────────────────────────────────────────────
         { src: 'critters/mongolian-ger.svg', lon: 106.9, lat: 47.9, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 蒙古包
         { src: 'critters/tipi.svg', lon: -105.0, lat: 45.0, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true },         // 北美 Tipi
-        { src: 'critters/gassho-house.svg', lon: 136.9, lat: 36.2, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true },  // 白川鄉合掌造
+        { src: 'critters/gassho-house.svg', lon: 136.9, lat: 36.2, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true },  // 白川鄉合掌村
         { src: 'critters/tulou.svg', lon: 117.1, lat: 24.7, mode: 'still', face: 'F', s: 1.2, deco: true, landmark: true },         // 福建土樓
         { src: 'critters/overwater-bungalow.svg', lon: 73.5, lat: 4.2, mode: 'bob', s: 1.0, sea: true, deco: true, landmark: true }, // 馬爾地夫水上屋
         { src: 'critters/sigiriya.svg', lon: 80.76, lat: 7.96, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 斯里蘭卡：獅子岩
@@ -657,7 +657,7 @@
         { src: 'critters/confucius.svg', lon: 117, lat: 35.6, mode: 'still', face: 'F', s: 1.0, deco: true }, // 孔子
         { src: 'critters/leonardo-da-vinci.svg', lon: 10.93, lat: 43.78, mode: 'still', face: 'F', s: 1.0, deco: true }, // 李奧納多·達文西
         { src: 'critters/aristotle.svg', lon: 23.55, lat: 40.57, mode: 'still', face: 'F', s: 1.0, deco: true }, // 亞里斯多德
-        { src: 'critters/michelangelo.svg', lon: 12.5, lat: 41.9, mode: 'still', face: 'F', s: 1.0, deco: true }, // 米開朗基羅
+        { src: 'critters/michelangelo.svg', lon: 14.2, lat: 41.6, mode: 'still', face: 'F', s: 1.0, deco: true }, // 米開朗基羅：原座標和羅馬競技場完全重疊，往東南（羅馬到拿坡里之間）拉開約 1.7 度
         { src: 'critters/isaac-newton.svg', lon: -0.63, lat: 52.8, mode: 'still', face: 'F', s: 1.0, deco: true }, // 伊薩克·牛頓
         { src: 'critters/albert-einstein.svg', lon: 9.99, lat: 48.4, mode: 'still', face: 'F', s: 1.0, deco: true }, // 愛因斯坦
         { src: 'critters/thomas-edison.svg', lon: -74.5, lat: 41, mode: 'still', face: 'F', s: 1.0, deco: true }, // 湯瑪斯·愛迪生
@@ -680,7 +680,7 @@
         { src: 'critters/parthenon.svg', lon: 22.44, lat: 37.98, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 希臘：帕德嫩神廟（素材本來就有畫，之前漏了放進地圖清單；跟雅典衛城拉開一點距離）
         { src: 'critters/versailles.svg', lon: 2.1204, lat: 48.8049, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 法國：凡爾賽宮
         { src: 'critters/budapest-parliament.svg', lon: 19.0469, lat: 47.5076, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 匈牙利：布達佩斯國會大廈
-        { src: 'critters/pantheon-rome.svg', lon: 12.4768, lat: 41.8986, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 義大利：萬神殿
+        { src: 'critters/pantheon-rome.svg', lon: 11.4, lat: 42.5, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 義大利：萬神殿：真實位置和羅馬競技場只差 0.02 度、完全疊在一起，往西北拉開約 1.2 度（也和佛羅倫斯的穹頂、達文西保持距離）
         { src: 'critters/hagia-sophia.svg', lon: 28.9802, lat: 41.0086, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 土耳其：聖索菲亞大教堂
         { src: 'critters/blue-mosque.svg', lon: 28.9768, lat: 41.0054, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 土耳其：伊斯坦堡歷史區（藍色清真寺）
         { src: 'critters/chartres-cathedral.svg', lon: 1.4360, lat: 48.4474, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 法國：沙特爾大教堂
@@ -690,7 +690,7 @@
         { src: 'critters/guggenheim-nyc.svg', lon: -73.9590, lat: 40.7829, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 美國：古根漢美術館（紐約）
         { src: 'critters/pompidou-centre.svg', lon: 2.3522, lat: 48.8606, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 法國：龐畢度中心
         { src: 'critters/guggenheim-bilbao.svg', lon: -2.9336, lat: 43.2686, mode: 'still', face: 'F', s: 1.0, sea: true, deco: true, landmark: true }, // 西班牙：畢爾包古根漢美術館
-        { src: 'critters/birds-nest.svg', lon: 116.3972, lat: 39.9929, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 中國：北京國家體育場（鳥巢）
+        { src: 'critters/birds-nest.svg', lon: 118.0, lat: 41.0, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 中國：北京國家體育場（鳥巢）：真實位置離紫禁城只差 0.1 度，中等縮放時兩個疊在一起，往東北拉開約 1.9 度
         { src: 'critters/bosco-verticale.svg', lon: 9.1900, lat: 45.4846, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 義大利：米蘭垂直森林
         { src: 'critters/karnak-temple.svg', lon: 32.6573, lat: 25.7188, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 埃及：卡納克神廟
         { src: 'critters/mesa-verde.svg', lon: -108.4618, lat: 37.1853, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 美國：梅薩維德國家公園崖居
@@ -2761,7 +2761,7 @@
 
     // ── 煙火 & 烏雲效果 ───────────────────────────────────────────────────────
     // 主要指數漲≥2%：上空放煙火；跌≥2%：上空出現烏雲+雨滴
-    // 使用 #fx canvas（在 SVG 之上），確保烏雲覆蓋船隻/動物
+    // 使用 #wfx canvas（在國界之上、#map 之下），不擋卡片
     const WEATHER_T = { t: 0, cv: null, ctx: null, hadFx: false }; // 獨立時間，不和極光共用
 
     // 預繪 sprite：煙火粒子（小圓點漸層）、烏雲（積雨雲外形）
@@ -2830,8 +2830,10 @@
                     bumps.push([x + Math.cos(a) * R * 0.86, Math.max(br + 1, y + Math.sin(a) * R * 0.86), br]);
                 }
             }
-            // 先用統一的底色填滿整朵雲的外形，雲內部就不會有一圈一圈的硬邊（不然會像一串葡萄）
-            g.fillStyle = '#5f6580';
+            // 先用統一的底色填滿整朵雲的外形，雲內部就不會有一圈一圈的硬邊（不然會像一串葡萄）。
+            // 顏色：真的積雨雲不是單一灰色，是「頂部被陽光照到的銀白 → 中段帶藍的石板色 → 雲底很深的靛灰」，
+            // 明暗差要拉開，雲才有體積感；舊版從頭到尾都在中灰附近，看起來就是一團灰
+            g.fillStyle = '#46506e';
             g.beginPath();
             for (const [x, y, rr] of P.concat(bumps)) {
                 g.moveTo(x + rr, y);
@@ -2839,32 +2841,47 @@
             }
             g.fill();
             g.globalCompositeOperation = 'source-atop';
-            // 整朵雲由上往下：頂部受光偏亮、往下漸暗
+            // 整朵雲由上往下：頂部偏亮的藍灰、往下漸暗
             const sky = g.createLinearGradient(0, 0, 0, STORM_H);
-            sky.addColorStop(0, 'rgba(150,156,180,.55)');
-            sky.addColorStop(0.55, 'rgba(150,156,180,0)');
+            sky.addColorStop(0, 'rgba(170,182,210,.75)');
+            sky.addColorStop(0.5, 'rgba(110,122,156,.2)');
+            sky.addColorStop(1, 'rgba(110,122,156,0)');
             g.fillStyle = sky;
             g.fillRect(0, 0, STORM_W, STORM_H);
-            // 每團雲球的上方加一塊柔和的受光（往外漸漸透明），由後往前畫，前排的亮頂會蓋在後排的暗部上
+            // 每團雲球的上方加一塊受光（左上方的光，偏暖的銀白），由後往前畫，前排的亮頂會蓋在後排的暗部上
             for (const [x, y, rr] of P) {
-                const gr = g.createRadialGradient(x - rr * 0.15, y - rr * 0.6, 0, x - rr * 0.1, y - rr * 0.35, rr * 1.15);
-                gr.addColorStop(0, 'rgba(172,178,200,.42)');
-                gr.addColorStop(0.5, 'rgba(128,134,158,.18)');
-                gr.addColorStop(1, 'rgba(128,134,158,0)');
+                const gr = g.createRadialGradient(x - rr * 0.25, y - rr * 0.62, 0, x - rr * 0.1, y - rr * 0.3, rr * 1.1);
+                gr.addColorStop(0, 'rgba(232,234,242,.55)');
+                gr.addColorStop(0.4, 'rgba(170,180,208,.26)');
+                gr.addColorStop(1, 'rgba(120,130,166,0)');
                 g.fillStyle = gr;
                 g.fillRect(x - rr * 1.2, y - rr * 1.6, rr * 2.4, rr * 2.6);
-                // 雲球下緣一點點陰影，讓前後層次分得出來，但不畫出硬邊
-                const sh = g.createRadialGradient(x, y + rr * 0.9, 0, x, y + rr * 0.9, rr * 0.9);
-                sh.addColorStop(0, 'rgba(46,50,70,.28)');
-                sh.addColorStop(1, 'rgba(46,50,70,0)');
+                // 雲球下緣的陰影（偏靛藍），前後層次才分得出來
+                const sh = g.createRadialGradient(x + rr * 0.1, y + rr * 0.85, 0, x, y + rr * 0.85, rr);
+                sh.addColorStop(0, 'rgba(26,30,52,.2)');
+                sh.addColorStop(1, 'rgba(26,30,52,0)');
                 g.fillStyle = sh;
-                g.fillRect(x - rr, y, rr * 2, rr * 1.8);
+                g.fillRect(x - rr * 1.1, y - rr * 0.1, rr * 2.2, rr * 2);
             }
-            const under = g.createLinearGradient(0, STORM_H * 0.45, 0, STORM_H);
-            under.addColorStop(0, 'rgba(40,43,62,0)');
-            under.addColorStop(1, 'rgba(40,43,62,.55)');
+            // 雲底：很深的靛灰，是「要下雨」的感覺
+            const under = g.createLinearGradient(0, STORM_H * 0.42, 0, STORM_H);
+            under.addColorStop(0, 'rgba(22,26,44,0)');
+            under.addColorStop(1, 'rgba(22,26,44,.78)');
             g.fillStyle = under;
             g.fillRect(0, 0, STORM_W, STORM_H);
+            // 外緣一圈細細的亮邊（逆光的銀邊），輪廓從深色地圖上跳出來
+            g.globalCompositeOperation = 'source-over';
+            const rim = document.createElement('canvas');
+            rim.width = STORM_W;
+            rim.height = STORM_H;
+            const rg = rim.getContext('2d');
+            rg.drawImage(c, 0, 0);
+            rg.globalCompositeOperation = 'source-in';
+            rg.fillStyle = 'rgba(214,222,244,.55)';
+            rg.fillRect(0, 0, STORM_W, STORM_H * 0.62);
+            rg.globalCompositeOperation = 'destination-out';
+            rg.drawImage(c, 0, 1.6);
+            g.drawImage(rim, 0, 0);
             // 邊緣柔化一點，才不會像剪紙
             const out = document.createElement('canvas');
             out.width = STORM_W;
@@ -2929,9 +2946,7 @@
 
 
     function drawWeather(dt) {
-        // 畫在獨立的 #wfx canvas（在 SVG 之後，蓋在國界/旗幟/卡片上面）：
-        // 煙火、烏雲蓋在卡片上沒關係（烏雲有形成→消散的呼吸週期，不會一直擋住），
-        // 但要跟一般裝飾雲（#clouds，在 SVG 之前）分開，裝飾雲不能擋卡片
+        // 畫在獨立的 #wfx canvas：在國界之上、#map（動物 / 旗幟 / 卡片）之下，手機畫面上才不會擋到卡片的數值
         const WT = WEATHER_T;
         if (!WT.cv) {
             WT.cv = $('#wfx');
