@@ -22,6 +22,9 @@
       <stop offset="1" stop-color="#8a5a30"/>
     </linearGradient>
   </defs>
+  <!-- 外形做成不規則的圓角（像一片從上空看到的森林），貼在地圖上才不會是一塊硬硬的正方形 -->
+  <defs><mask id="amzBlob"><path d="M8 20 Q4 8 16 6 Q26 0 38 5 Q50 0 60 5 Q74 4 76 16 Q80 28 76 40 Q80 54 76 64 Q74 76 60 76 Q46 80 34 76 Q20 80 10 74 Q2 64 5 50 Q0 36 8 20Z" fill="#fff"/></mask></defs>
+  <g mask="url(#amzBlob)">
 
   <!-- 遠景樹冠 -->
   <g fill="url(#amzFar)" stroke="#4a7a3e" stroke-width="0.4">
@@ -116,5 +119,6 @@
       <path d="M0,1.8 Q-1,6 3,8 Q3.4,4.6 2.4,2 Z" fill="#2a6ad8"/>
       <animateTransform attributeName="transform" type="scale" values="1 1;1 0.5;1 1" dur="0.7s" repeatCount="indefinite"/>
     </g>
+  </g>
   </g>
 </svg>
