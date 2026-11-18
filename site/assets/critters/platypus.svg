@@ -1,71 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-<defs>
-<linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0%" stop-color="#8fd4de"/>
-<stop offset="45%" stop-color="#4a9fb8"/>
-<stop offset="100%" stop-color="#1c5870"/>
-</linearGradient>
-<linearGradient id="fur" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0%" stop-color="#b98455"/>
-<stop offset="55%" stop-color="#8a5c35"/>
-<stop offset="100%" stop-color="#5c3a1f"/>
-</linearGradient>
-<linearGradient id="furHead" x1="0" y1="0" x2="1" y2="1">
-<stop offset="0%" stop-color="#a97a4d"/>
-<stop offset="100%" stop-color="#6b4526"/>
-</linearGradient>
-<linearGradient id="bill" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0%" stop-color="#5a5a5a"/>
-<stop offset="50%" stop-color="#2e2e2e"/>
-<stop offset="100%" stop-color="#121212"/>
-</linearGradient>
-<linearGradient id="tail" x1="0" y1="0" x2="1" y2="0">
-<stop offset="0%" stop-color="#6b4526"/>
-<stop offset="100%" stop-color="#3f2a16"/>
-</linearGradient>
-<radialGradient id="eyeShine" cx="0.35" cy="0.3" r="0.7">
-<stop offset="0%" stop-color="#8a8a8a"/>
-<stop offset="100%" stop-color="#0a0a0a"/>
-</radialGradient>
-</defs>
-
-<g>
-<animateTransform attributeName="transform" type="translate" values="0,0; 0,-2.2; 0,0.3; 0,0" keyTimes="0;0.4;0.75;1" dur="3.2s" repeatCount="indefinite"/>
-
-<path d="M48,40 Q60,34 69,39 Q72,44 68,49 Q58,52 48,47 Z" fill="url(#tail)" stroke="#2a1a0d" stroke-width="0.5"/>
-<path d="M52,41 Q60,39 65,42" fill="none" stroke="#2a1a0d" stroke-width="0.4" opacity="0.6"/>
-<path d="M51,45 Q59,45 64,46" fill="none" stroke="#2a1a0d" stroke-width="0.4" opacity="0.6"/>
-
-<path d="M40,49 Q43,53 47,52 Q44,50 42,47 Z" fill="#3f2a16" opacity="0.8"/>
-
-<ellipse cx="36" cy="40" rx="19" ry="11.5" fill="url(#fur)" stroke="#3d2814" stroke-width="0.5"/>
-<path d="M22,33 Q34,29 48,33" fill="none" stroke="#d9a66e" stroke-width="1.1" opacity="0.4" stroke-linecap="round"/>
-
-<path d="M26,49 Q29,53 33,52 Q30,50 28,47 Z" fill="#3f2a16" opacity="0.8"/>
-
-<circle cx="19" cy="37" r="8.5" fill="url(#furHead)" stroke="#3d2814" stroke-width="0.5"/>
-
-<path d="M19,33 Q9,31 4,34.5 Q2,37 4,39.5 Q9,43 19,41 Q22,37 19,33 Z" fill="url(#bill)" stroke="#0a0a0a" stroke-width="0.5"/>
-<path d="M6,35 Q11,33.3 16,34.3" fill="none" stroke="#6a6a6a" stroke-width="0.5" opacity="0.5" stroke-linecap="round"/>
-<path d="M5,38 Q11,40.3 17,39.3" fill="none" stroke="#050505" stroke-width="0.5" opacity="0.6" stroke-linecap="round"/>
-
-<circle cx="21" cy="34" r="1.3" fill="url(#eyeShine)"/>
-</g>
-
-<path d="M0,47 Q10,44.5 20,47 T40,47 T60,46.5 T80,48 L80,80 L0,80 Z" fill="url(#water)" opacity="0.88"/>
-
-<g opacity="0.55" stroke="#dff4f7" fill="none" stroke-width="0.8">
-<ellipse cx="38" cy="48" rx="10" ry="3">
-<animate attributeName="rx" values="10;22;10" dur="3.2s" repeatCount="indefinite"/>
-<animate attributeName="opacity" values="0.6;0;0.6" dur="3.2s" repeatCount="indefinite"/>
-</ellipse>
-<ellipse cx="38" cy="48" rx="5" ry="1.6">
-<animate attributeName="rx" values="5;15;5" dur="3.2s" begin="0.4s" repeatCount="indefinite"/>
-<animate attributeName="opacity" values="0.7;0;0.7" dur="3.2s" begin="0.4s" repeatCount="indefinite"/>
-</ellipse>
-</g>
-
-<path d="M2,37 Q-1,35 2,33" fill="none" stroke="#dff4f7" stroke-width="0.8" opacity="0.5">
-<animate attributeName="opacity" values="0.6;0.1;0.6" dur="1.8s" repeatCount="indefinite"/>
-</path>
+  <defs>
+    <radialGradient id="ppFur" cx="45%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#b07a4c"/>
+      <stop offset=".6" stop-color="#7e5030"/>
+      <stop offset="1" stop-color="#4e2e18"/>
+    </radialGradient>
+    <linearGradient id="ppBill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5a5e66"/>
+      <stop offset="1" stop-color="#2a2c32"/>
+    </linearGradient>
+    <linearGradient id="ppTail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6a4224"/>
+      <stop offset="1" stop-color="#3e2412"/>
+    </linearGradient>
+    <linearGradient id="ppBelly" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d8b48a"/>
+      <stop offset="1" stop-color="#b08860"/>
+    </linearGradient>
+  </defs>
+  <!-- 鴨嘴獸（朝左）：扁平的灰黑色鴨嘴、圓滾滾的棕色毛皮身體、像海狸一樣又寬又扁的尾巴、有蹼的短腳。
+       不畫河：地圖上的海就是水面 -->
+  <ellipse cx="42" cy="66" rx="32" ry="3.4" fill="#000" opacity=".18"/>
+  <!-- 寬扁的尾巴 -->
+  <path d="M60 50 Q72 46 78 52 Q79 58 72 62 Q64 64 58 60Z" fill="url(#ppTail)" stroke="#2a1608" stroke-width=".6"/>
+  <path d="M64 52 Q70 52 74 55 M63 56 Q69 57 73 59" stroke="#8a6040" stroke-width=".6" fill="none" opacity=".7"/>
+  <!-- 後腳（有蹼） -->
+  <path d="M54 58 Q58 64 64 66 L56 67 Q52 64 50 60Z" fill="#3a2a22" stroke="#1a100a" stroke-width=".5"/>
+  <!-- 身體：長而扁的橢圓 -->
+  <path d="M18 50 Q18 36 36 34 Q56 32 62 46 Q64 58 50 62 Q34 64 24 60 Q18 56 18 50Z" fill="url(#ppFur)" stroke="#3a2010" stroke-width=".8"/>
+  <!-- 肚子較淺 -->
+  <path d="M24 58 Q38 64 54 58 Q46 62 36 62 Q28 62 24 58Z" fill="url(#ppBelly)" opacity=".85"/>
+  <!-- 毛的光澤 -->
+  <path d="M28 40 Q38 36 50 38" stroke="#d4a070" stroke-width="1.6" fill="none" opacity=".55" stroke-linecap="round"/>
+  <!-- 前腳（有蹼，腳趾張開） -->
+  <path d="M26 58 Q22 64 16 66 L18 67 L20 66 L22 67.4 L24 66 L26 67 Q30 64 30 60Z" fill="#3a2a22" stroke="#1a100a" stroke-width=".5"/>
+  <!-- 頭 -->
+  <path d="M10 46 Q12 38 22 38 Q30 40 30 48 Q28 54 20 54 Q12 54 10 46Z" fill="url(#ppFur)" stroke="#3a2010" stroke-width=".8"/>
+  <!-- 鴨嘴：又寬又扁、前端圓圓的 -->
+  <path d="M12 44 Q4 42 1 46 Q0 50 4 52 Q10 53 14 50Z" fill="url(#ppBill)" stroke="#16181c" stroke-width=".6"/>
+  <path d="M2.6 48.4 Q8 49.4 13 48.6" stroke="#16181c" stroke-width=".6" fill="none"/>
+  <circle cx="4" cy="45.6" r=".6" fill="#16181c"/>
+  <path d="M3 45.4 Q7 43.6 11 44.6" stroke="#8a8e96" stroke-width=".6" fill="none" opacity=".7"/>
+  <!-- 眼睛 -->
+  <circle cx="17.6" cy="43.4" r="1.7" fill="#120a06"/>
+  <circle cx="17" cy="42.8" r=".6" fill="#fff"/>
+  <path d="M15.4 41.4 Q17.6 40.4 19.6 41.6" stroke="#4a2a14" stroke-width=".5" fill="none"/>
+  <!-- 水花（游動時） -->
+  <g fill="#e4f4ff" opacity=".8">
+    <circle cx="6" cy="58" r="1.2"><animate attributeName="opacity" values="0;1;0" dur="2.2s" repeatCount="indefinite"/></circle>
+    <circle cx="72" cy="66" r="1"><animate attributeName="opacity" values="1;0;1" dur="2.2s" repeatCount="indefinite"/></circle>
+  </g>
 </svg>

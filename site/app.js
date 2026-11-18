@@ -41,8 +41,8 @@
             desc: $t('指數、商品、匯率、債券、利率、經濟數據、地緣'),
             ready: true,
         },
-        { k: 'picks', icon: '📊', label: $t('價差股利'), title: $t('價差股利'), desc: $t('個股報價、走勢與公司資訊') },
-        { k: 'holdings', icon: '💼', label: $t('持倉'), title: $t('持倉'), desc: $t('我的持股、成本與損益') },
+        { k: 'picks', icon: '📊', label: $t('個股'), title: $t('個股'), desc: $t('個股報價、走勢與公司資訊') },
+        { k: 'holdings', icon: '💼', label: $t('價差股利'), title: $t('價差股利'), desc: $t('我的持股、成本與損益') },
         { k: 'balance', icon: '⚖️', label: $t('資產負債'), title: $t('資產負債'), desc: $t('資產、負債與淨值') },
     ];
     // 左側圖層列的簡單線條圖示（取代 emoji，風格更統一乾淨）：key 對應 LAYERS 的 k
@@ -533,7 +533,7 @@
         { src: 'critters/piranha.svg', lon: -60.0, lat: -2.0, mode: 'swim', face: 'R', s: 0.8, sea: true, deco: true }, // 南美：食人魚群游（素材朝右畫）
         // ── 國家代表動物改成獨立裝飾項目（原本掛在旗幟卡片上，跟旗幟卡片脫勾）：跟其它裝飾動物
         // 一樣受全球視角名額限制（見 LOD_DEMOTE），markets.json 對應的 "a" 欄位已拿掉 ──────────
-        { src: 'animals/deer.png', lon: 121.3, lat: 23.9, mode: 'wander', s: 0.9, deco: true, maxDeg: 2 }, // 台灣：鹿
+        { src: 'critters/formosan-sika-deer.svg', lon: 121.3, lat: 23.9, mode: 'wander', s: 1.0, deco: true, maxDeg: 2 }, // 台灣：梅花鹿（台灣特有亞種，原本用一般的鹿）
         { src: 'animals/deer.png', lon: 16.5, lat: 60.5, mode: 'wander', s: 0.9, deco: true, maxDeg: 2 }, // 瑞典：鹿
         { src: 'animals/dog.png', lon: 139.5, lat: 35.8, mode: 'wander', s: 0.9, deco: true, maxDeg: 2 }, // 日本：柴犬
         { src: 'animals/dragon.png', lon: 110.0, lat: 32.0, mode: 'wander', face: 'L', s: 1.0, deco: true, maxDeg: 2 }, // 中國：中國龍
@@ -574,7 +574,7 @@
         { src: 'critters/mermaid.svg', lon: 5.0, lat: 61.0, mode: 'bob', face: 'F', s: 1.0, sea: true, deco: true }, // 北歐海域：美人魚
         { src: 'critters/chupacabra.svg', lon: -66.5, lat: 18.2, mode: 'wander', s: 0.95, deco: true, maxDeg: 2 }, // 波多黎各：卓柏卡布拉
         { src: 'critters/kiwi-bird.svg', lon: 173.5, lat: -41.2, mode: 'wander', gait: 'waddle', s: 0.85, deco: true, maxDeg: 2 }, // 紐西蘭：奇異鳥
-        { src: 'critters/platypus.svg', lon: 151.0, lat: -33.5, mode: 'bob', face: 'F', s: 0.85, sea: true, deco: true }, // 澳洲：鴨嘴獸
+        { src: 'critters/platypus.svg', lon: 151.0, lat: -33.5, mode: 'bob', face: 'F', s: 1.15, sea: true, deco: true }, // 澳洲：鴨嘴獸（不畫河，放大一點）
         { src: 'critters/snow-leopard.svg', lon: 78.0, lat: 39.0, mode: 'wander', s: 1.0, deco: true, maxDeg: 2 }, // 中亞帕米爾高原：雪豹
         { src: 'critters/puffin.svg', lon: -14.0, lat: 65.5, mode: 'bob', face: 'F', s: 0.8, sea: true, deco: true }, // 冰島：海鸚
         // ── 第七批補充（用戶列的 12 個世界地標） ──────────────────────
@@ -640,7 +640,6 @@
         { src: 'critters/rms-olympic.svg', lon: -40, lat: 48, mode: 'boat', s: 1.0, sea: true, deco: true }, // 奧林匹克號
         { src: 'critters/venice-gondola.svg', lon: 12.5, lat: 45.5, mode: 'boat', s: 1.0, sea: true, deco: true }, // 威尼斯貢多拉
         { src: 'critters/nile-felucca.svg', lon: 32.64, lat: 25.69, mode: 'boat', s: 1.0, sea: true, deco: true }, // 尼羅河路卡索帆船
-        { src: 'critters/viking-longship.svg', lon: 6.5, lat: 61, mode: 'boat', s: 1.0, sea: true, deco: true }, // 維京龍頭長船
         { src: 'critters/greek-trireme.svg', lon: 24, lat: 37.5, mode: 'boat', s: 1.0, sea: true, deco: true }, // 希臘三列槳座戰船
         { src: 'critters/haikou-arcade-street.svg', lon: 110.35, lat: 20.02, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 海口騎樓老街
         { src: 'critters/hongkong-skyline.svg', lon: 114.05, lat: 22.35, mode: 'still', face: 'F', s: 1.0, sea: true, deco: true, landmark: true }, // 香港摩天大樓群

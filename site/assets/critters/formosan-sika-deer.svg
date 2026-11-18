@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="sdBody" cx="45%" cy="35%" r="80%">
+      <stop offset="0" stop-color="#e0904a"/>
+      <stop offset=".6" stop-color="#c06a2c"/>
+      <stop offset="1" stop-color="#8a4518"/>
+    </radialGradient>
+    <linearGradient id="sdLeg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b86428"/>
+      <stop offset="1" stop-color="#7a3c14"/>
+    </linearGradient>
+    <linearGradient id="sdAnt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2e2c4"/>
+      <stop offset="1" stop-color="#a88a62"/>
+    </linearGradient>
+  </defs>
+  <!-- 台灣梅花鹿（朝左走）：紅棕色身體、背上兩排白色梅花斑點、白色屁股和短尾巴、公鹿有分叉的鹿角 -->
+  <ellipse cx="66" cy="120" rx="40" ry="4" fill="#000" opacity=".18"/>
+  <!-- 後排的腳（顏色深一點） -->
+  <path d="M46 84 L42 116 L47 116 L52 86Z" fill="#7a3c14"/>
+  <path d="M90 84 L94 116 L99 116 L98 84Z" fill="#7a3c14"/>
+  <!-- 尾巴與白屁股 -->
+  <path d="M100 64 Q108 62 108 70 Q106 74 101 72Z" fill="#fff8ee" stroke="#c9b08a" stroke-width=".8"/>
+  <path d="M100 63 Q105 61 106 65" stroke="#2a1608" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <!-- 身體 -->
+  <path d="M38 70 Q36 56 52 54 Q72 50 92 56 Q104 60 102 74 Q100 88 86 88 L52 88 Q40 86 38 70Z" fill="url(#sdBody)" stroke="#6a3410" stroke-width="1"/>
+  <!-- 白屁股 -->
+  <path d="M96 60 Q104 66 101 80 Q98 86 92 86 Q98 74 96 60Z" fill="#fff8ee" opacity=".95"/>
+  <!-- 背脊的深色線 -->
+  <path d="M48 56 Q72 50 96 58" stroke="#6a3410" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".7"/>
+  <!-- 梅花斑點：沿背脊兩排、側腹再散一些 -->
+  <g fill="#fff6e4">
+    <circle cx="54" cy="60" r="2.2"/><circle cx="62" cy="58" r="2.2"/><circle cx="70" cy="57" r="2.2"/><circle cx="78" cy="57" r="2.2"/><circle cx="86" cy="59" r="2.2"/><circle cx="93" cy="62" r="2"/>
+    <circle cx="50" cy="66" r="2"/><circle cx="58" cy="65" r="2.1"/><circle cx="66" cy="64" r="2.1"/><circle cx="74" cy="64" r="2.1"/><circle cx="82" cy="65" r="2.1"/><circle cx="90" cy="67" r="2"/>
+    <circle cx="56" cy="72" r="1.8"/><circle cx="64" cy="71" r="1.8"/><circle cx="72" cy="71" r="1.8"/><circle cx="80" cy="72" r="1.8"/><circle cx="88" cy="74" r="1.7"/>
+  </g>
+  <!-- 肚子的淺色 -->
+  <path d="M50 86 Q70 92 88 86" stroke="#f4dcb8" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7"/>
+  <!-- 前排的腳 -->
+  <path d="M50 84 L48 116 L54 116 L58 86Z" fill="url(#sdLeg)" stroke="#5a2a0c" stroke-width=".6"/>
+  <path d="M84 84 L86 116 L92 116 L92 84Z" fill="url(#sdLeg)" stroke="#5a2a0c" stroke-width=".6"/>
+  <g fill="#2a1608"><rect x="47.6" y="114" width="6.6" height="3" rx="1"/><rect x="85.6" y="114" width="6.6" height="3" rx="1"/><rect x="41.6" y="114" width="5.6" height="3" rx="1"/><rect x="93.6" y="114" width="5.6" height="3" rx="1"/></g>
+  <!-- 脖子 -->
+  <path d="M38 68 Q30 52 30 40 L42 36 Q46 52 52 60Z" fill="url(#sdBody)" stroke="#6a3410" stroke-width="1"/>
+  <path d="M33 44 Q34 54 40 64" stroke="#f4dcb8" stroke-width="2.4" fill="none" opacity=".6" stroke-linecap="round"/>
+  <!-- 鹿角：每邊三個分叉 -->
+  <g fill="none" stroke="url(#sdAnt)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M36 26 Q38 16 34 6 M37 18 Q42 14 44 8 M35 11 Q30 9 28 5"/>
+    <path d="M30 26 Q26 18 22 12 M27 20 Q20 20 16 16 M24 15 Q24 9 26 6"/>
+  </g>
+  <!-- 頭 -->
+  <path d="M26 30 Q34 24 42 30 Q44 36 38 40 L24 48 Q16 50 14 45 Q13 41 18 38Z" fill="url(#sdBody)" stroke="#6a3410" stroke-width="1"/>
+  <!-- 耳朵 -->
+  <path d="M36 28 Q46 20 50 24 Q46 30 40 32Z" fill="#c06a2c" stroke="#6a3410" stroke-width=".8"/>
+  <path d="M39 28 Q45 24 47 25 Q44 29 41 30Z" fill="#f4c9a4"/>
+  <!-- 鼻頭、眼睛、嘴邊白色 -->
+  <ellipse cx="15.5" cy="43.5" rx="2.6" ry="2.2" fill="#2a1608"/>
+  <path d="M17 47 Q22 49 27 46" stroke="#fff6e4" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <circle cx="28.5" cy="34" r="2.3" fill="#1a0c04"/>
+  <circle cx="27.8" cy="33.2" r=".8" fill="#fff"/>
+  <path d="M30.5 36 Q31 38 30 39.5" stroke="#3a1c08" stroke-width=".8" fill="none"/>
+</svg>

@@ -1,17 +1,66 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
 <defs>
-  <linearGradient id="gbTitan" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#e8e2d4"/>
-    <stop offset="0.5" stop-color="#b8b0a0"/>
-    <stop offset="1" stop-color="#8a8276"/>
+  <!-- 鈦金屬：亮銀帶一點暖色，每片曲面的明暗都不一樣 -->
+  <linearGradient id="gbTi1" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#e2e2e0"/>
+    <stop offset=".5" stop-color="#b4b2ae"/>
+    <stop offset="1" stop-color="#7a7874"/>
+  </linearGradient>
+  <linearGradient id="gbTi2" x1="1" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#d8d4cc"/>
+    <stop offset=".6" stop-color="#a49e94"/>
+    <stop offset="1" stop-color="#6a665e"/>
+  </linearGradient>
+  <linearGradient id="gbTi3" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#cfd2d8"/>
+    <stop offset="1" stop-color="#868a94"/>
+  </linearGradient>
+  <linearGradient id="gbGlass" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#a8d4ec"/>
+    <stop offset="1" stop-color="#4a86aa"/>
+  </linearGradient>
+  <linearGradient id="gbStone" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#e8d2a6"/>
+    <stop offset="1" stop-color="#b89a6a"/>
   </linearGradient>
 </defs>
-<!-- 畢爾包古根漢美術館：鈦金屬包覆的不規則曲面量體，像揚起的船帆，是解構主義建築代表作 -->
-<path d="M10,66 Q8,40 26,28 Q20,20 34,16 Q50,12 54,26 Q68,24 70,40 Q72,58 56,64 Q40,70 10,66 Z"
-      fill="url(#gbTitan)" stroke="#6b6458" stroke-width="0.6"/>
-<path d="M26,28 Q34,22 44,24 Q54,27 54,26" fill="none" stroke="#f4f0e4" stroke-width="1.2" opacity="0.7"/>
-<path d="M34,16 Q40,18 44,24" fill="none" stroke="#8a8276" stroke-width="0.8" opacity="0.6"/>
-<path d="M56,64 Q62,54 68,40" fill="none" stroke="#6b6458" stroke-width="0.8" opacity="0.5"/>
-<!-- 河面倒影 -->
-<ellipse cx="40" cy="72" rx="34" ry="4" fill="#4a7fa0" opacity="0.4"/>
+<!-- 畢爾包古根漢美術館（蓋瑞設計）：一大群彎曲扭轉的鈦金屬曲面疊在一起，像船帆、像魚鱗，
+     底下是米黃色石材的方塊量體和玻璃帷幕，前面是內維翁河，右邊有一座穿過美術館的高架橋和塔 -->
+<!-- 右邊的拉薩爾維橋＋塔 -->
+<rect x="66" y="22" width="4" height="46" fill="url(#gbTi3)" stroke="#6e727c" stroke-width=".4"/>
+<path d="M54 46 H80 V50 H54Z" fill="#8a7f6a" stroke="#5a5244" stroke-width=".4"/>
+<!-- 石材方塊量體（底座） -->
+<rect x="6" y="54" width="16" height="14" fill="url(#gbStone)" stroke="#8a7450" stroke-width=".4"/>
+<rect x="48" y="52" width="16" height="16" fill="url(#gbStone)" stroke="#8a7450" stroke-width=".4"/>
+<path d="M6 59 H22 M6 64 H22 M48 57 H64 M48 62 H64" stroke="#a88c60" stroke-width=".35"/>
+<!-- 玻璃帷幕（中間的中庭） -->
+<path d="M28 68 V40 Q34 32 40 38 V68Z" fill="url(#gbGlass)" stroke="#2e5a78" stroke-width=".4"/>
+<path d="M31 68 V38 M34 68 V35.6 M37 68 V36.4 M28 48 H40 M28 56 H40" stroke="#dff2fb" stroke-width=".35" opacity=".7"/>
+<!-- 鈦金屬曲面：一團團圓鼓鼓、往旁邊扭曲膨起的量體（像揉皺又攤開的金屬片），由後往前畫，互相交疊 -->
+<!-- 後方最高的量體：頂端圓鼓、往右扭 -->
+<path d="M30 42 Q26 30 32 22 Q38 14 46 18 Q52 22 48 30 Q46 36 44 42Z" fill="url(#gbTi2)" stroke="#5e5a54" stroke-width=".5"/>
+<!-- 左邊往左下翻捲的寬量體 -->
+<path d="M8 58 Q4 46 12 40 Q20 34 30 38 Q34 44 30 50 Q22 52 18 58Z" fill="url(#gbTi1)" stroke="#5e5a54" stroke-width=".5"/>
+<!-- 中間膨起的一團 -->
+<path d="M34 50 Q30 40 38 34 Q48 28 56 34 Q60 40 54 46 Q46 46 42 52Z" fill="url(#gbTi3)" stroke="#5e5a54" stroke-width=".5"/>
+<!-- 右邊伸向河面、像魚身一樣的長量體 -->
+<path d="M46 56 Q46 46 56 42 Q68 38 76 44 Q78 50 70 52 Q60 52 54 58Z" fill="url(#gbTi1)" stroke="#5e5a54" stroke-width=".5"/>
+<!-- 前方低矮的弧形量體 -->
+<path d="M16 64 Q14 54 24 50 Q36 46 44 54 Q46 60 40 62 Q30 60 24 64Z" fill="url(#gbTi2)" stroke="#5e5a54" stroke-width=".5"/>
+<!-- 鈦金屬板的橫向接縫（跟著曲面彎） -->
+<g stroke="#6e6a64" stroke-width=".35" fill="none" opacity=".6">
+  <path d="M30 26 Q38 22 47 24 M28 32 Q38 28 49 30 M28 38 Q36 35 46 36"/>
+  <path d="M8 46 Q18 40 30 42 M8 52 Q18 46 31 47"/>
+  <path d="M33 40 Q44 34 57 38 M34 45 Q44 40 56 43"/>
+  <path d="M48 48 Q60 42 75 46 M50 53 Q60 48 72 50"/>
+  <path d="M16 56 Q28 50 42 55 M18 61 Q28 56 41 59"/>
+</g>
+<!-- 反光：鈦金屬是灰銀色的，只在鼓起的地方有細細的高光 -->
+<path d="M33 21 Q38 17 44 18.6 M12 41 Q18 37 25 37.4 M40 33 Q46 30 52 31.6 M56 43 Q64 40 71 41.4 M22 51 Q30 48 37 49.4" stroke="#ffffff" stroke-width=".9" fill="none" opacity=".75" stroke-linecap="round"/>
+<!-- 河岸與內維翁河（含倒影） -->
+<rect x="0" y="67" width="80" height="2" fill="#8a7f6a"/>
+<rect x="0" y="69" width="80" height="11" fill="#3f7896"/>
+<path d="M12 71 Q24 70 34 71.6 M42 72 Q54 71 66 72.6" stroke="#d8e8f2" stroke-width=".9" fill="none" opacity=".6">
+  <animate attributeName="opacity" values=".3;.75;.3" dur="2.8s" repeatCount="indefinite"/>
+</path>
 </svg>

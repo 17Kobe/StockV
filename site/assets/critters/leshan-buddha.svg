@@ -1,73 +1,74 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
   <defs>
-    <linearGradient id="lsCliff" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#b9ab8e"/>
-      <stop offset="100%" stop-color="#7a6c52"/>
+    <linearGradient id="lsCliff" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a65a3a"/>
+      <stop offset=".5" stop-color="#c47650"/>
+      <stop offset="1" stop-color="#8a4630"/>
     </linearGradient>
-    <linearGradient id="lsStone" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d7c9a3"/>
-      <stop offset="45%" stop-color="#b5a177"/>
-      <stop offset="100%" stop-color="#8a7650"/>
+    <linearGradient id="lsNiche" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6a3424"/>
+      <stop offset="1" stop-color="#8a4a32"/>
     </linearGradient>
-    <linearGradient id="lsRiver" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bfe0d8"/>
-      <stop offset="100%" stop-color="#4f8f85"/>
-    </linearGradient>
-    <radialGradient id="lsHalo" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fff6cf" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#fff6cf" stop-opacity="0"/>
+    <radialGradient id="lsStone" cx="42%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#e8b48a"/>
+      <stop offset=".6" stop-color="#c88a62"/>
+      <stop offset="1" stop-color="#9a6040"/>
     </radialGradient>
+    <linearGradient id="lsRobe" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d89a70"/>
+      <stop offset=".5" stop-color="#c4845c"/>
+      <stop offset="1" stop-color="#9c6444"/>
+    </linearGradient>
   </defs>
-
-  <!-- river at the base -->
-  <path d="M0,80 L0,70 Q40,64 80,70 L80,80 Z" fill="url(#lsRiver)" stroke="#2c6a62" stroke-width="0.5"/>
-
-  <!-- cliff the buddha is carved into -->
-  <path d="M4,72 L4,10 L76,10 L76,72 Q40,78 4,72 Z" fill="url(#lsCliff)" stroke="#5a4d38" stroke-width="0.6"/>
-  <g stroke="#6a5c42" stroke-width="0.5" opacity="0.4" fill="none">
-    <path d="M10,12 L8,70"/>
-    <path d="M70,12 L72,70"/>
+  <!-- 樂山大佛：在紅色砂岩山壁上鑿出的坐佛，雙手平放在膝蓋上，頭頂一顆顆螺髮、長耳垂，山頂長滿樹，腳下是江水 -->
+  <!-- 山壁 -->
+  <path d="M2 74 V14 Q6 8 14 9 Q22 4 32 6 Q40 2 50 5 Q60 3 68 8 Q76 9 78 14 V74Z" fill="url(#lsCliff)" stroke="#6a3424" stroke-width=".6"/>
+  <!-- 山頂的樹 -->
+  <g fill="#3f8a3a" stroke="#2a5e26" stroke-width=".4">
+    <circle cx="8" cy="11" r="4"/><circle cx="16" cy="8" r="4.4"/><circle cx="26" cy="6.4" r="4"/><circle cx="56" cy="6" r="4.2"/><circle cx="66" cy="8" r="4.4"/><circle cx="74" cy="11.6" r="3.8"/>
   </g>
-
-  <!-- soft halo glow behind the head -->
-  <circle cx="40" cy="23" r="12" fill="url(#lsHalo)">
-    <animate attributeName="opacity" values="0.5;0.9;0.5" dur="3s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- 盤坐的雙腿（蓮花座姿）：寬平的底座，是「坐姿」最重要的識別線索 -->
-  <path d="M16,72 Q14,66 20,62 Q28,58 40,58 Q52,58 60,62 Q66,66 64,72 Q40,77 16,72 Z"
-        fill="url(#lsStone)" stroke="#5f512f" stroke-width="0.6"/>
-  <path d="M22,68 Q40,72 58,68" fill="none" stroke="#5f512f" stroke-width="0.5" opacity="0.5"/>
-  <path d="M26,64 Q40,61 54,64" fill="none" stroke="#5f512f" stroke-width="0.5" opacity="0.5"/>
-
-  <!-- 疊放在腿上的雙手（禪定印），取代原本分開放在膝蓋的手 -->
-  <ellipse cx="40" cy="60.5" rx="6.5" ry="3.6" fill="url(#lsStone)" stroke="#5f512f" stroke-width="0.5"/>
-  <ellipse cx="40" cy="58.5" rx="5.2" ry="2.8" fill="url(#lsStone)" stroke="#5f512f" stroke-width="0.4" opacity="0.9"/>
-
-  <!-- 上身：肩膀略寬、往頸部收窄 -->
-  <path d="M24,60 Q21,48 26,38 Q22,34 24,26 Q28,16 40,14 Q52,16 56,26 Q58,34 54,38 Q59,48 56,60 Q40,64 24,60 Z"
-        fill="url(#lsStone)" stroke="#5f512f" stroke-width="0.6"/>
-  <!-- head -->
-  <ellipse cx="40" cy="22" rx="10.5" ry="11.5" fill="url(#lsStone)" stroke="#5f512f" stroke-width="0.6"/>
-  <!-- 肉髻（頭頂凸起），大佛的另一個識別特徵 -->
-  <ellipse cx="40" cy="10.5" rx="4.2" ry="3.4" fill="url(#lsStone)" stroke="#5f512f" stroke-width="0.5"/>
-  <!-- 招牌：垂肩長耳垂，是樂山大佛最醒目的識別特徵 -->
-  <path d="M29.5,18 Q24,24 25,34 Q25.5,42 30,45 Q31.5,38 30.5,30 Q30,23 32,19 Z" fill="url(#lsStone)" stroke="#5f512f" stroke-width="0.6"/>
-  <path d="M50.5,18 Q56,24 55,34 Q54.5,42 50,45 Q48.5,38 49.5,30 Q50,23 48,19 Z" fill="url(#lsStone)" stroke="#5f512f" stroke-width="0.6"/>
-  <!-- hair curls texture -->
-  <g fill="#6c5c3c" opacity="0.6">
-    <circle cx="34" cy="13" r="1"/><circle cx="38" cy="11.5" r="1"/><circle cx="42" cy="11.5" r="1"/><circle cx="46" cy="13" r="1"/>
-    <circle cx="31" cy="16" r="1"/><circle cx="49" cy="16" r="1"/>
+  <g fill="#5aa84e"><circle cx="15" cy="7" r="2"/><circle cx="65" cy="7" r="2"/></g>
+  <!-- 佛龕（鑿進去的凹槽） -->
+  <path d="M14 74 V22 Q14 10 40 10 Q66 10 66 22 V74Z" fill="url(#lsNiche)"/>
+  <!-- 身體與袈裟 -->
+  <path d="M20 66 Q18 44 26 36 Q33 32 40 32 Q47 32 54 36 Q62 44 60 66Z" fill="url(#lsRobe)" stroke="#7a4430" stroke-width=".6"/>
+  <!-- 袈裟的衣褶 -->
+  <path d="M30 36 Q32 50 30 64 M40 34 V62 M50 36 Q48 50 50 64 M26 44 Q34 48 40 46" stroke="#8a5238" stroke-width=".6" fill="none" opacity=".7"/>
+  <!-- 膝蓋 -->
+  <ellipse cx="28" cy="66" rx="10" ry="5" fill="url(#lsRobe)" stroke="#7a4430" stroke-width=".6"/>
+  <ellipse cx="52" cy="66" rx="10" ry="5" fill="url(#lsRobe)" stroke="#7a4430" stroke-width=".6"/>
+  <!-- 手臂沿身體垂下，雙手掌心朝下平放在膝蓋上（手指一根根並排） -->
+  <path d="M25 40 Q21 50 22 60" stroke="#b07450" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M55 40 Q59 50 58 60" stroke="#b07450" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M19 60 Q22 57.5 27 58.5 Q30 59.5 30 62 Q25 63.5 20 63 Q18.4 62 19 60Z" fill="url(#lsStone)" stroke="#8a5238" stroke-width=".5"/>
+  <path d="M61 60 Q58 57.5 53 58.5 Q50 59.5 50 62 Q55 63.5 60 63 Q61.6 62 61 60Z" fill="url(#lsStone)" stroke="#8a5238" stroke-width=".5"/>
+  <path d="M22 60.4 V62.8 M24.4 60 V63 M26.8 60.2 V62.8 M58 60.4 V62.8 M55.6 60 V63 M53.2 60.2 V62.8" stroke="#8a5238" stroke-width=".45"/>
+  <!-- 腳 -->
+  <path d="M30 70 Q40 72 50 70 L50 74 H30Z" fill="#b07450" stroke="#7a4430" stroke-width=".5"/>
+  <!-- 脖子 -->
+  <rect x="36" y="28" width="8" height="6" fill="#c08058"/>
+  <path d="M36 31 Q40 32.4 44 31" stroke="#8a5238" stroke-width=".5" fill="none"/>
+  <!-- 長耳垂 -->
+  <path d="M29.4 18 Q26.6 20 27.4 28 Q28.4 30 30.4 28Z" fill="url(#lsStone)" stroke="#8a5238" stroke-width=".5"/>
+  <path d="M50.6 18 Q53.4 20 52.6 28 Q51.6 30 49.6 28Z" fill="url(#lsStone)" stroke="#8a5238" stroke-width=".5"/>
+  <!-- 臉 -->
+  <path d="M30 16 Q30 8 40 8 Q50 8 50 16 L50 22 Q49 30 40 31 Q31 30 30 22Z" fill="url(#lsStone)" stroke="#8a5238" stroke-width=".6"/>
+  <!-- 螺髮（一顆顆捲髮）＋頭頂的肉髻 -->
+  <path d="M30 15 Q30 6 40 6 Q50 6 50 15 Q45 12 40 12 Q35 12 30 15Z" fill="#4a2a1c"/>
+  <ellipse cx="40" cy="5.6" rx="4.4" ry="3" fill="#4a2a1c"/>
+  <g fill="#6a4030">
+    <circle cx="32.4" cy="12" r="1"/><circle cx="35" cy="10" r="1"/><circle cx="38" cy="9.2" r="1"/><circle cx="41" cy="9.2" r="1"/><circle cx="44" cy="9.8" r="1"/><circle cx="46.8" cy="11.6" r="1"/>
+    <circle cx="37" cy="5.6" r=".9"/><circle cx="40" cy="4.4" r=".9"/><circle cx="43" cy="5.6" r=".9"/>
   </g>
-  <!-- serene half-closed meditating eyes -->
-  <path d="M34,25 Q36,27 38,25" fill="none" stroke="#4a3f28" stroke-width="0.8" stroke-linecap="round"/>
-  <path d="M42,25 Q44,27 46,25" fill="none" stroke="#4a3f28" stroke-width="0.8" stroke-linecap="round"/>
-  <path d="M36,30 Q40,33 44,30" fill="none" stroke="#4a3f28" stroke-width="1" stroke-linecap="round"/>
-  <!-- shoulders / draped robe folds -->
-  <path d="M26,46 Q40,41 54,46" fill="none" stroke="#5f512f" stroke-width="0.6" opacity="0.6"/>
-  <path d="M25,54 Q40,50 55,54" fill="none" stroke="#5f512f" stroke-width="0.6" opacity="0.5"/>
-
-  <!-- tiny sightseeing boats on the river for scale -->
-  <path d="M8,74 q4,-2 8,0 l-1,2 l-6,0 Z" fill="#2c3a40" opacity="0.7"/>
-  <path d="M64,76 q4,-2 8,0 l-1,2 l-6,0 Z" fill="#2c3a40" opacity="0.7"/>
+  <!-- 半閉的雙眼、眉心、鼻子、微笑 -->
+  <path d="M33 18.4 Q35 17.2 37.2 18.4 M42.8 18.4 Q45 17.2 47 18.4" stroke="#5a3020" stroke-width=".7" fill="none" stroke-linecap="round"/>
+  <path d="M33.4 20.4 Q35.2 21.4 37 20.4 M43 20.4 Q44.8 21.4 46.6 20.4" stroke="#3a1c10" stroke-width=".8" fill="none" stroke-linecap="round"/>
+  <circle cx="40" cy="16.6" r=".6" fill="#7a4430"/>
+  <path d="M40 19 L39 24 Q40 25 41 24" stroke="#8a5238" stroke-width=".6" fill="none" stroke-linejoin="round"/>
+  <path d="M37.4 26.6 Q40 27.8 42.6 26.6" stroke="#6a3424" stroke-width=".7" fill="none" stroke-linecap="round"/>
+  <!-- 山壁上的苔痕 -->
+  <path d="M6 30 Q8 40 6 50 M74 34 Q72 44 74 56" stroke="#5a7a3a" stroke-width="1.4" fill="none" opacity=".5" stroke-linecap="round"/>
+  <!-- 腳下的江水與小小的遊客（襯托大佛有多大） -->
+  <path d="M0 74 Q10 72 20 74 T40 74 T60 74 T80 74 V80 H0Z" fill="#4a8aa8"/>
+  <g fill="#2a2a2a"><circle cx="24" cy="70.6" r=".7"/><rect x="23.5" y="71.2" width="1" height="2"/><circle cx="56" cy="70.6" r=".7"/><rect x="55.5" y="71.2" width="1" height="2"/></g>
 </svg>

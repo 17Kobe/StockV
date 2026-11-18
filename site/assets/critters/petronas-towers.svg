@@ -1,95 +1,110 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
   <defs>
-    <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#eaf7ff"/>
-      <stop offset="40%" stop-color="#9fd0e8"/>
-      <stop offset="75%" stop-color="#4f87ab"/>
-      <stop offset="100%" stop-color="#274a63"/>
+    <!-- 不鏽鋼外牆：亮銀帶一點香檳金（和新加坡金沙酒店的藍灰色區分開） -->
+    <linearGradient id="ptSteel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fffbef"/>
+      <stop offset=".35" stop-color="#e9e0c6"/>
+      <stop offset=".7" stop-color="#bfb38f"/>
+      <stop offset="1" stop-color="#8a7f62"/>
     </linearGradient>
-    <linearGradient id="metalGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#fdfefe"/>
-      <stop offset="50%" stop-color="#c3ccd2"/>
-      <stop offset="100%" stop-color="#7c8a93"/>
-    </linearGradient>
-    <linearGradient id="plazaGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9aa7af"/>
-      <stop offset="100%" stop-color="#5c6971"/>
-    </linearGradient>
-    <linearGradient id="glintGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
-    <radialGradient id="warmGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffd9a0" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#ffd9a0" stop-opacity="0"/>
+    <radialGradient id="ptGlow" cx="50%" cy="60%" r="55%">
+      <stop offset="0" stop-color="#ffd27a" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#ffd27a" stop-opacity="0"/>
     </radialGradient>
-    <clipPath id="clipL">
-      <path d="M13,78 L13,50 L16,50 L16,30 L18.5,30 L18.5,14 L21.5,14 L23,5 L24.5,14 L27.5,14 L27.5,30 L30,30 L30,50 L33,50 L33,78 Z"/>
-    </clipPath>
-    <clipPath id="clipR">
-      <path d="M47,78 L47,50 L50,50 L50,30 L52.5,30 L52.5,14 L55.5,14 L57,5 L58.5,14 L61.5,14 L61.5,30 L64,30 L64,50 L67,50 L67,78 Z"/>
-    </clipPath>
   </defs>
-
-  <path d="M8,74 Q8,72 10,72 L70,72 Q72,72 72,74 L72,80 L8,80 Z" fill="url(#plazaGrad)" stroke="#44505a" stroke-width="0.5"/>
-
-  <path d="M13,78 L13,50 L16,50 L16,30 L18.5,30 L18.5,14 L21.5,14 L23,5 L24.5,14 L27.5,14 L27.5,30 L30,30 L30,50 L33,50 L33,78 Z"
-        fill="url(#glassGrad)" stroke="#1b3348" stroke-width="0.6"/>
-  <g clip-path="url(#clipL)">
-    <polygon points="23,5 24.5,14 27.5,14 27.5,30 30,30 30,50 33,50 33,78 23,78" fill="#0f2130" opacity="0.18"/>
-    <g stroke="#13314a" stroke-width="0.4" opacity="0.35">
-      <line x1="14" y1="6" x2="14" y2="78"/>
-      <line x1="16.5" y1="6" x2="16.5" y2="78"/>
-      <line x1="19" y1="6" x2="19" y2="78"/>
-      <line x1="21.5" y1="6" x2="21.5" y2="78"/>
-      <line x1="24" y1="6" x2="24" y2="78"/>
-      <line x1="26.5" y1="6" x2="26.5" y2="78"/>
-      <line x1="29" y1="6" x2="29" y2="78"/>
-      <line x1="31.5" y1="6" x2="31.5" y2="78"/>
-    </g>
-    <line x1="13" y1="50" x2="33" y2="50" stroke="#eaf6ff" stroke-width="0.5" opacity="0.5"/>
-    <line x1="16" y1="30" x2="30" y2="30" stroke="#eaf6ff" stroke-width="0.5" opacity="0.5"/>
-    <line x1="18.5" y1="14" x2="27.5" y2="14" stroke="#eaf6ff" stroke-width="0.5" opacity="0.5"/>
-    <ellipse cx="20" cy="20" rx="6" ry="14" fill="url(#warmGlow)"/>
-    <polygon points="5,0 9,0 25,80 21,80" fill="url(#glintGrad)">
-      <animateTransform attributeName="transform" type="translate" values="-12 0; 42 0; -12 0" dur="4s" repeatCount="indefinite"/>
-    </polygon>
+  <!-- 吉隆坡雙峰塔：兩棟一模一樣、一層層往上收窄的不鏽鋼塔（八角星平面，外牆是一條條直的稜線），
+       頂端錐形尖塔加細長天線，中間由一座有 A 字形支撐的雙層空橋相連 -->
+  <ellipse cx="40" cy="60" rx="36" ry="26" fill="url(#ptGlow)"/>
+  <rect x="12" y="34" width="16" height="44" fill="url(#ptSteel)" stroke="#6a6250" stroke-width=".4"/>
+  <line x1="14.67" y1="34.6" x2="14.67" y2="77.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="17.33" y1="34.6" x2="17.33" y2="77.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="20.00" y1="34.6" x2="20.00" y2="77.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="22.67" y1="34.6" x2="22.67" y2="77.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="25.33" y1="34.6" x2="25.33" y2="77.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <rect x="11.5" y="33.4" width="17" height="1.2" fill="#f6efd8" stroke="#8a7f62" stroke-width=".3"/>
+  <rect x="13.4" y="27" width="13.2" height="7" fill="url(#ptSteel)" stroke="#6a6250" stroke-width=".4"/>
+  <line x1="15.60" y1="27.6" x2="15.60" y2="33.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="17.80" y1="27.6" x2="17.80" y2="33.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="20.00" y1="27.6" x2="20.00" y2="33.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="22.20" y1="27.6" x2="22.20" y2="33.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="24.40" y1="27.6" x2="24.40" y2="33.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <rect x="12.9" y="26.4" width="14.2" height="1.2" fill="#f6efd8" stroke="#8a7f62" stroke-width=".3"/>
+  <rect x="14.6" y="21" width="10.8" height="6" fill="url(#ptSteel)" stroke="#6a6250" stroke-width=".4"/>
+  <line x1="17.30" y1="21.6" x2="17.30" y2="26.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="20.00" y1="21.6" x2="20.00" y2="26.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="22.70" y1="21.6" x2="22.70" y2="26.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <rect x="14.1" y="20.4" width="11.8" height="1.2" fill="#f6efd8" stroke="#8a7f62" stroke-width=".3"/>
+  <rect x="15.8" y="16.5" width="8.4" height="4.5" fill="url(#ptSteel)" stroke="#6a6250" stroke-width=".4"/>
+  <line x1="17.90" y1="17.1" x2="17.90" y2="20.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="20.00" y1="17.1" x2="20.00" y2="20.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="22.10" y1="17.1" x2="22.10" y2="20.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <rect x="15.3" y="15.9" width="9.4" height="1.2" fill="#f6efd8" stroke="#8a7f62" stroke-width=".3"/>
+  <rect x="16.9" y="13" width="6.2" height="3.5" fill="url(#ptSteel)" stroke="#6a6250" stroke-width=".4"/>
+  <line x1="18.45" y1="13.6" x2="18.45" y2="16.1" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="20.00" y1="13.6" x2="20.00" y2="16.1" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="21.55" y1="13.6" x2="21.55" y2="16.1" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <rect x="16.4" y="12.4" width="7.2" height="1.2" fill="#f6efd8" stroke="#8a7f62" stroke-width=".3"/>
+  <path d="M17.6 13 L20 6.5 L22.4 13Z" fill="url(#ptSteel)" stroke="#6a6250" stroke-width=".4"/>
+  <line x1="20" y1="7" x2="20" y2="0.6" stroke="#d8d0b8" stroke-width=".9"/>
+  <circle cx="20" cy="0.9" r=".7" fill="#ff5a4a"><animate attributeName="opacity" values="1;.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
+  <line x1="12" y1="38" x2="28" y2="38" stroke="#4a4a3e" stroke-width=".35" opacity=".45"/>
+  <line x1="12" y1="43" x2="28" y2="43" stroke="#4a4a3e" stroke-width=".35" opacity=".45"/>
+  <line x1="12" y1="48" x2="28" y2="48" stroke="#4a4a3e" stroke-width=".35" opacity=".45"/>
+  <line x1="12" y1="53" x2="28" y2="53" stroke="#4a4a3e" stroke-width=".35" opacity=".45"/>
+  <line x1="12" y1="58" x2="28" y2="58" stroke="#4a4a3e" stroke-width=".35" opacity=".45"/>
+  <line x1="12" y1="63" x2="28" y2="63" stroke="#4a4a3e" stroke-width=".35" opacity=".45"/>
+  <line x1="12" y1="68" x2="28" y2="68" stroke="#4a4a3e" stroke-width=".35" opacity=".45"/>
+  <line x1="12" y1="73" x2="28" y2="73" stroke="#4a4a3e" stroke-width=".35" opacity=".45"/>
+  <rect x="22" y="34" width="6" height="44" fill="#3a3528" opacity=".18"/>
+  <rect x="52" y="34" width="16" height="44" fill="url(#ptSteel)" stroke="#6a6250" stroke-width=".4"/>
+  <line x1="54.67" y1="34.6" x2="54.67" y2="77.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="57.33" y1="34.6" x2="57.33" y2="77.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="60.00" y1="34.6" x2="60.00" y2="77.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="62.67" y1="34.6" x2="62.67" y2="77.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="65.33" y1="34.6" x2="65.33" y2="77.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <rect x="51.5" y="33.4" width="17" height="1.2" fill="#f6efd8" stroke="#8a7f62" stroke-width=".3"/>
+  <rect x="53.4" y="27" width="13.2" height="7" fill="url(#ptSteel)" stroke="#6a6250" stroke-width=".4"/>
+  <line x1="55.60" y1="27.6" x2="55.60" y2="33.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="57.80" y1="27.6" x2="57.80" y2="33.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="60.00" y1="27.6" x2="60.00" y2="33.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="62.20" y1="27.6" x2="62.20" y2="33.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="64.40" y1="27.6" x2="64.40" y2="33.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <rect x="52.9" y="26.4" width="14.2" height="1.2" fill="#f6efd8" stroke="#8a7f62" stroke-width=".3"/>
+  <rect x="54.6" y="21" width="10.8" height="6" fill="url(#ptSteel)" stroke="#6a6250" stroke-width=".4"/>
+  <line x1="57.30" y1="21.6" x2="57.30" y2="26.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="60.00" y1="21.6" x2="60.00" y2="26.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="62.70" y1="21.6" x2="62.70" y2="26.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <rect x="54.1" y="20.4" width="11.8" height="1.2" fill="#f6efd8" stroke="#8a7f62" stroke-width=".3"/>
+  <rect x="55.8" y="16.5" width="8.4" height="4.5" fill="url(#ptSteel)" stroke="#6a6250" stroke-width=".4"/>
+  <line x1="57.90" y1="17.1" x2="57.90" y2="20.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="60.00" y1="17.1" x2="60.00" y2="20.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="62.10" y1="17.1" x2="62.10" y2="20.6" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <rect x="55.3" y="15.9" width="9.4" height="1.2" fill="#f6efd8" stroke="#8a7f62" stroke-width=".3"/>
+  <rect x="56.9" y="13" width="6.2" height="3.5" fill="url(#ptSteel)" stroke="#6a6250" stroke-width=".4"/>
+  <line x1="58.45" y1="13.6" x2="58.45" y2="16.1" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="60.00" y1="13.6" x2="60.00" y2="16.1" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <line x1="61.55" y1="13.6" x2="61.55" y2="16.1" stroke="#ffffff" stroke-width=".55" opacity=".55"/>
+  <rect x="56.4" y="12.4" width="7.2" height="1.2" fill="#f6efd8" stroke="#8a7f62" stroke-width=".3"/>
+  <path d="M57.6 13 L60 6.5 L62.4 13Z" fill="url(#ptSteel)" stroke="#6a6250" stroke-width=".4"/>
+  <line x1="60" y1="7" x2="60" y2="0.6" stroke="#d8d0b8" stroke-width=".9"/>
+  <circle cx="60" cy="0.9" r=".7" fill="#ff5a4a"><animate attributeName="opacity" values="1;.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
+  <line x1="52" y1="38" x2="68" y2="38" stroke="#4a4a3e" stroke-width=".35" opacity=".45"/>
+  <line x1="52" y1="43" x2="68" y2="43" stroke="#4a4a3e" stroke-width=".35" opacity=".45"/>
+  <line x1="52" y1="48" x2="68" y2="48" stroke="#4a4a3e" stroke-width=".35" opacity=".45"/>
+  <line x1="52" y1="53" x2="68" y2="53" stroke="#4a4a3e" stroke-width=".35" opacity=".45"/>
+  <line x1="52" y1="58" x2="68" y2="58" stroke="#4a4a3e" stroke-width=".35" opacity=".45"/>
+  <line x1="52" y1="63" x2="68" y2="63" stroke="#4a4a3e" stroke-width=".35" opacity=".45"/>
+  <line x1="52" y1="68" x2="68" y2="68" stroke="#4a4a3e" stroke-width=".35" opacity=".45"/>
+  <line x1="52" y1="73" x2="68" y2="73" stroke="#4a4a3e" stroke-width=".35" opacity=".45"/>
+  <rect x="62" y="34" width="6" height="44" fill="#3a3528" opacity=".18"/>
+  <!-- 空橋（第 41、42 樓）＋ A 字形支撐 -->
+  <path d="M30 50 L40 44 L50 50" stroke="#a89c7c" stroke-width="1.2" fill="none"/>
+  <rect x="28" y="42" width="24" height="3.4" fill="url(#ptSteel)" stroke="#6a6250" stroke-width=".4"/>
+  <line x1="28" y1="43.7" x2="52" y2="43.7" stroke="#5a5444" stroke-width=".4"/>
+  <!-- 窗燈 -->
+  <g fill="#ffe08a">
+    <rect x="17" y="56" width="1.4" height="1.4"><animate attributeName="opacity" values=".4;1;.4" dur="2.2s" repeatCount="indefinite"/></rect>
+    <rect x="62" y="64" width="1.4" height="1.4"><animate attributeName="opacity" values="1;.4;1" dur="2.6s" repeatCount="indefinite"/></rect>
+    <rect x="22" y="70" width="1.4" height="1.4"><animate attributeName="opacity" values=".3;.9;.3" dur="3s" repeatCount="indefinite"/></rect>
   </g>
-  <line x1="23" y1="5" x2="23" y2="2" stroke="url(#metalGrad)" stroke-width="1"/>
-  <circle cx="23" cy="2" r="1.1" fill="#ff5a4d">
-    <animate attributeName="opacity" values="1;0.25;1" dur="1.4s" repeatCount="indefinite"/>
-  </circle>
-
-  <path d="M47,78 L47,50 L50,50 L50,30 L52.5,30 L52.5,14 L55.5,14 L57,5 L58.5,14 L61.5,14 L61.5,30 L64,30 L64,50 L67,50 L67,78 Z"
-        fill="url(#glassGrad)" stroke="#1b3348" stroke-width="0.6"/>
-  <g clip-path="url(#clipR)">
-    <polygon points="57,5 58.5,14 61.5,14 61.5,30 64,30 64,50 67,50 67,78 57,78" fill="#0f2130" opacity="0.18"/>
-    <g stroke="#13314a" stroke-width="0.4" opacity="0.35">
-      <line x1="48" y1="6" x2="48" y2="78"/>
-      <line x1="50.5" y1="6" x2="50.5" y2="78"/>
-      <line x1="53" y1="6" x2="53" y2="78"/>
-      <line x1="55.5" y1="6" x2="55.5" y2="78"/>
-      <line x1="58" y1="6" x2="58" y2="78"/>
-      <line x1="60.5" y1="6" x2="60.5" y2="78"/>
-      <line x1="63" y1="6" x2="63" y2="78"/>
-      <line x1="65.5" y1="6" x2="65.5" y2="78"/>
-    </g>
-    <line x1="47" y1="50" x2="67" y2="50" stroke="#eaf6ff" stroke-width="0.5" opacity="0.5"/>
-    <line x1="50" y1="30" x2="64" y2="30" stroke="#eaf6ff" stroke-width="0.5" opacity="0.5"/>
-    <line x1="52.5" y1="14" x2="61.5" y2="14" stroke="#eaf6ff" stroke-width="0.5" opacity="0.5"/>
-    <ellipse cx="54" cy="20" rx="6" ry="14" fill="url(#warmGlow)"/>
-    <polygon points="39,0 43,0 59,80 55,80" fill="url(#glintGrad)">
-      <animateTransform attributeName="transform" type="translate" values="-12 0; 42 0; -12 0" dur="4.6s" begin="0.8s" repeatCount="indefinite"/>
-    </polygon>
-  </g>
-  <line x1="57" y1="5" x2="57" y2="2" stroke="url(#metalGrad)" stroke-width="1"/>
-  <circle cx="57" cy="2" r="1.1" fill="#ff5a4d">
-    <animate attributeName="opacity" values="1;0.25;1" dur="1.4s" begin="0.7s" repeatCount="indefinite"/>
-  </circle>
-
-  <line x1="33" y1="68" x2="40" y2="54" stroke="url(#metalGrad)" stroke-width="1.2"/>
-  <line x1="47" y1="68" x2="40" y2="54" stroke="url(#metalGrad)" stroke-width="1.2"/>
-  <rect x="33" y="54" width="14" height="3" fill="url(#metalGrad)" stroke="#5a6871" stroke-width="0.4"/>
-  <rect x="33" y="58" width="14" height="3" fill="url(#glassGrad)" stroke="#1b3348" stroke-width="0.4"/>
 </svg>
