@@ -3953,16 +3953,22 @@
                 pb = 20;
             const aw = Math.max(80, W - ins.l - ins.r - px * 2),
                 ah = Math.max(80, H - ins.t - ins.b - px - pb);
-            const p0 = projection([-20, 60]),
-                p1 = projection([150, -10]);
+            // 手機直式畫面窄：以日本為右邊界（東經 160 度，日本右側留一些海），左邊切到中東 / 東非也可以；
+            // 電腦版橫向很寬，維持完整的歐亞大陸
+            const mobile = !desktopMQ.matches;
+            const p0 = projection([mobile ? 35 : -20, 60]),
+                p1 = projection([mobile ? 160 : 150, -10]);
             const bb = [Math.min(p0[0], p1[0]), Math.min(p0[1], p1[1]), Math.max(p0[0], p1[0]), Math.max(p0[1], p1[1])];
             const k = Math.max(1, Math.min(REGION_MAX_K, Math.min(aw / (bb[2] - bb[0]), ah / (bb[3] - bb[1]))));
             const cx = (bb[0] + bb[2]) / 2,
                 cy = (bb[1] + bb[3]) / 2;
             const sx = ins.l + px + aw / 2,
                 sy = ins.t + px + ah / 2;
+            // 手機直式畫面最小縮放時世界仍比螢幕寬，框不進整個歐亞大陸：改成讓東經 157 度（日本右側的海）貼著右緣，
+            // 往左能看到多少算多少
+            const tx = mobile ? W - 12 - k * projection([157, 0])[0] : sx - k * cx;
             return zoomB.constrain()(
-                d3.zoomIdentity.translate(sx - k * cx, sy - k * cy).scale(k),
+                d3.zoomIdentity.translate(tx, sy - k * cy).scale(k),
                 [
                     [0, 0],
                     [W, H],

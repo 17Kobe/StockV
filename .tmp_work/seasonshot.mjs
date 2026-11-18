@@ -13,7 +13,7 @@ let id = 0; const pend = new Map();
 ws.onmessage = (m) => { const d = JSON.parse(m.data); if (d.method === 'Runtime.consoleAPICalled' && /warn|error/.test(d.params.type)) console.log('CON', JSON.stringify(d.params.args.map(a=>a.value||a.description)).slice(0, 300)); if (d.method === 'Runtime.exceptionThrown') console.log('EXC', JSON.stringify(d.params.exceptionDetails).slice(0, 300)); if (d.id && pend.has(d.id)) { pend.get(d.id)(d); pend.delete(d.id); } };
 const send = (method, params = {}) => new Promise((r) => { const i = ++id; pend.set(i, r); ws.send(JSON.stringify({ id: i, method, params })); });
 const ev = async (e) => (await send('Runtime.evaluate', { expression: e, awaitPromise: true, returnByValue: true })).result?.result?.value;
-await send('Page.enable'); await send('Runtime.enable');
+await send('Page.enable'); await send('Runtime.enable'); if (process.env.MOBILE) { const [mw, mh] = process.env.MOBILE.split(',').map(Number); await send('Emulation.setDeviceMetricsOverride', { width: mw, height: mh, deviceScaleFactor: 2, mobile: true }); }
 const url = `http://localhost:8000/?season=${season}`;
 await send('Page.navigate', { url }); await sleep(1500);
 await ev(`localStorage.setItem('activeRegion', JSON.stringify('${region}'))`);
