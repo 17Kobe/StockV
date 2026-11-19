@@ -1,67 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-  <defs>
-    <linearGradient id="hjSail" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#f2a66a"/>
-      <stop offset="100%" stop-color="#c2642f"/>
-    </linearGradient>
-    <linearGradient id="hjHull" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7a2e20"/>
-      <stop offset="100%" stop-color="#4a1811"/>
-    </linearGradient>
-    <linearGradient id="hjWater" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9fe0ec"/>
-      <stop offset="100%" stop-color="#2d7ea0"/>
-    </linearGradient>
-  </defs>
-
-  <!-- harbour water -->
-  <path d="M0,80 L0,62 Q20,57 40,61 Q60,65 80,59 L80,80 Z" fill="url(#hjWater)"/>
-  <g stroke="#eaf8fc" stroke-width="0.6" fill="none" opacity="0.6">
-    <path d="M4,68 Q12,66 20,68"/>
-    <path d="M50,70 Q58,68 66,70"/>
+  <!-- 香港紅帆船（2.5D）：木造中式帆船，船尾高起的船樓與金色腰線，兩面有一條條竹骨的紅色硬帆，船頭浪花閃動（動畫）。光源左上，不描邊 -->
+  <g transform="translate(41.43 57.22) scale(1.29)">
+    <path d="M20.78 14L18.32 14.92L15.09 15.31L11.22 15.14L6.84 14.44L2.14 13.21L-2.72 11.52L-7.53 9.42L-12.12 7L-16.32 4.35L-19.95 1.57L-22.88 -1.23L-25 -3.95L-26.23 -6.48L-26.51 -8.71L-25.84 -10.58L-24.25 -12L-21.79 -12.92L-18.56 -13.31L-14.68 -13.14L-10.31 -12.44L-5.6 -11.21L-0.75 -9.52L4.07 -7.42L8.66 -5L12.85 -2.35L16.49 0.43L19.42 3.23L21.54 5.95L22.76 8.48L23.05 10.71L22.38 12.58Z" fill="#52c3dc" opacity="0.85"/>
+    <path d="M-20.78 -8L-13.86 -12L22.52 9L24.31 10.49L17.38 14.49L-19 -6.51Z" fill="#000000" opacity="0.2"/>
+    <path d="M8.14 10.3L-20.78 -7L-20.78 -12L8.14 5.3Z" fill="#7d5a3a"/>
+    <path d="M19.05 12L8.14 10.3L8.14 5.3L19.05 7Z" fill="#7d5a3a"/>
+    <path d="M-13.86 -16L16.11 0.7L19.05 7L8.14 5.3L-20.78 -12Z" fill="#a37a52"/>
+    <path d="M-10.39 -14L-17.32 -10L-17.32 -13L-10.39 -17Z" fill="#5a3f28"/>
+    <path d="M-22.52 -13L-17.32 -10L-17.32 -13L-22.52 -16Z" fill="#7d5a3a"/>
+    <path d="M-15.59 -20L-10.39 -17L-17.32 -13L-22.52 -16Z" fill="#a37a52"/>
+    <path d="M-9.7 -16.6L-17.32 -12.2L-17.32 -12.8L-9.7 -17.2Z" fill="#99352b"/>
+    <path d="M-23.21 -15.6L-17.32 -12.2L-17.32 -12.8L-23.21 -16.2Z" fill="#cc4a3c"/>
+    <path d="M-19.57 -8.3L6.41 6.7L6.41 5.9L-19.57 -9.1Z" fill="#e6b84a"/>
+    <path d="M8.14 8.3L11.6 10.3L11.6 7.9L8.14 5.9Z" fill="#ffffff"/>
+    <path d="M-7.97 -9L-8.66 -8.6L-8.66 -36.6L-7.97 -37Z" fill="#5a3f28"/>
+    <path d="M-9.35 -9L-8.66 -8.6L-8.66 -36.6L-9.35 -37Z" fill="#7d5a3a"/>
+    <path d="M-8.66 -37.4L-7.97 -37L-8.66 -36.6L-9.35 -37Z" fill="#a37a52"/>
+    <path d="M-9.26 -11L3.34 -17L2.14 -40.4L-9.26 -37Z" fill="#cc4a3c"/>
+    <path d="M-9.26 -11L-2.96 -14L-3.56 -38.7L-9.26 -37Z" fill="#ef6a5a" opacity="0.7"/>
+    <path d="M-9.26 -15.33L3.14 -20.9L3.14 -20.4L-9.26 -14.83Z" fill="#99352b"/>
+    <path d="M-9.26 -19.67L2.94 -24.8L2.94 -24.3L-9.26 -19.17Z" fill="#99352b"/>
+    <path d="M-9.26 -24L2.74 -28.7L2.74 -28.2L-9.26 -23.5Z" fill="#99352b"/>
+    <path d="M-9.26 -28.33L2.54 -32.6L2.54 -32.1L-9.26 -27.83Z" fill="#99352b"/>
+    <path d="M-9.26 -32.67L2.34 -36.5L2.34 -36L-9.26 -32.17Z" fill="#99352b"/>
+    <path d="M5.89 -1L5.2 -0.6L5.2 -22.6L5.89 -23Z" fill="#5a3f28"/>
+    <path d="M4.5 -1L5.2 -0.6L5.2 -22.6L4.5 -23Z" fill="#7d5a3a"/>
+    <path d="M5.2 -23.4L5.89 -23L5.2 -22.6L4.5 -23Z" fill="#a37a52"/>
+    <path d="M4.6 -3L14.2 -7.5L13.3 -25.05L4.6 -23Z" fill="#cc4a3c"/>
+    <path d="M4.6 -3L9.4 -5.25L8.95 -24.02L4.6 -23Z" fill="#ef6a5a" opacity="0.7"/>
+    <path d="M4.6 -6.33L14.05 -10.43L14.05 -9.93L4.6 -5.83Z" fill="#99352b"/>
+    <path d="M4.6 -9.67L13.9 -13.35L13.9 -12.85L4.6 -9.17Z" fill="#99352b"/>
+    <path d="M4.6 -13L13.75 -16.27L13.75 -15.77L4.6 -12.5Z" fill="#99352b"/>
+    <path d="M4.6 -16.33L13.6 -19.2L13.6 -18.7L4.6 -15.83Z" fill="#99352b"/>
+    <path d="M4.6 -19.67L13.45 -22.12L13.45 -21.62L4.6 -19.17Z" fill="#99352b"/>
+    <ellipse cx="21.65" cy="11.50" rx="3" ry="0.7" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".8;.2;.8" dur="1.8s" repeatCount="indefinite"/></ellipse>
+    <ellipse cx="22.52" cy="14.00" rx="3" ry="0.7" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".8;.2;.8" dur="2.4s" repeatCount="indefinite"/></ellipse>
   </g>
-
-  <!-- gentle rocking of the whole junk -->
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="-1.5 40 62;1.5 40 62;-1.5 40 62" dur="3.4s" repeatCount="indefinite"/>
-
-    <!-- hull, upswept bow and stern -->
-    <path d="M10,58 Q8,66 14,70 L50,70 Q58,68 62,58 Q56,61 44,61 L18,61 Q12,61 10,58 Z"
-          fill="url(#hjHull)" stroke="#2a0f0a" stroke-width="0.6"/>
-    <path d="M10,58 C6,54 6,48 12,46" fill="none" stroke="url(#hjHull)" stroke-width="2.6" stroke-linecap="round"/>
-    <path d="M62,58 C67,56 69,50 65,46" fill="none" stroke="url(#hjHull)" stroke-width="2.6" stroke-linecap="round"/>
-    <path d="M8,62 L64,62" stroke="#2a0f0a" stroke-width="0.8" opacity="0.5"/>
-
-    <!-- mast -->
-    <line x1="34" y1="60" x2="34" y2="14" stroke="#4a3018" stroke-width="1.4"/>
-    <line x1="48" y1="60" x2="48" y2="24" stroke="#4a3018" stroke-width="1.1"/>
-
-    <!-- large battened mainsail with the characteristic horizontal bamboo ribs -->
-    <path d="M34,16 L58,24 L56,52 L34,58 Z" fill="url(#hjSail)" stroke="#7c3a1c" stroke-width="0.6"/>
-    <g stroke="#7c3a1c" stroke-width="0.6" opacity="0.7">
-      <line x1="35" y1="23" x2="57" y2="27"/>
-      <line x1="35" y1="31" x2="57" y2="34"/>
-      <line x1="35" y1="39" x2="56" y2="41"/>
-      <line x1="35" y1="47" x2="56" y2="48"/>
-    </g>
-
-    <!-- smaller foresail -->
-    <path d="M48,26 L63,32 L61,50 L48,54 Z" fill="url(#hjSail)" stroke="#7c3a1c" stroke-width="0.5" opacity="0.95"/>
-    <g stroke="#7c3a1c" stroke-width="0.5" opacity="0.6">
-      <line x1="49" y1="33" x2="62" y2="35"/>
-      <line x1="49" y1="41" x2="61" y2="42"/>
-    </g>
-
-    <!-- red lanterns at the stern -->
-    <g>
-      <ellipse cx="14" cy="52" rx="2.2" ry="2.8" fill="#e23b2f" stroke="#7a1a12" stroke-width="0.4"/>
-      <ellipse cx="18" cy="56" rx="1.8" ry="2.3" fill="#e23b2f" stroke="#7a1a12" stroke-width="0.4"/>
-      <animate attributeName="opacity" values="0.85;1;0.85" dur="2s" repeatCount="indefinite"/>
-    </g>
-  </g>
-
-  <!-- gulls over the harbour -->
-  <path d="M60,16 Q63,13 66,16 Q63,15 60,16 Z" fill="none" stroke="#5c5c5c" stroke-width="0.8">
-    <animate attributeName="d" values="M60,16 Q63,13 66,16 Q63,15 60,16 Z;M60,16 Q63,18 66,16 Q63,15 60,16 Z;M60,16 Q63,13 66,16 Q63,15 60,16 Z" dur="1.4s" repeatCount="indefinite"/>
-  </path>
 </svg>

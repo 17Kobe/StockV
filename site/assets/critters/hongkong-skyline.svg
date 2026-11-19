@@ -1,88 +1,108 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-  <defs>
-    <!-- 後排陪襯樓：青綠玻璃 / 灰粉色 / 深炭灰，顏色各不相同 -->
-    <linearGradient id="hkGlass1" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7fd6c8"/><stop offset="100%" stop-color="#2f7f78"/>
-    </linearGradient>
-    <linearGradient id="hkRose" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e7b9b4"/><stop offset="100%" stop-color="#9c6a6a"/>
-    </linearGradient>
-    <linearGradient id="hkDark" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#6a7280"/><stop offset="100%" stop-color="#2e3440"/>
-    </linearGradient>
-    <!-- 國際金融中心二期：香檳銀 -->
-    <linearGradient id="hkGlass2" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#f4ead6"/><stop offset="55%" stop-color="#cbbd9f"/><stop offset="100%" stop-color="#857a64"/>
-    </linearGradient>
-    <linearGradient id="hkPeak" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#5f9a5a"/><stop offset="100%" stop-color="#2f5e3a"/>
-    </linearGradient>
-    <linearGradient id="hkBoc" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#7fa8c9"/><stop offset="50%" stop-color="#d4ecf8"/><stop offset="100%" stop-color="#5f8fb5"/>
-    </linearGradient>
-    <!-- 中環廣場：金色玻璃帷幕 -->
-    <linearGradient id="hkPlaza" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ffe08a"/><stop offset="55%" stop-color="#d9a441"/><stop offset="100%" stop-color="#8f6420"/>
-    </linearGradient>
-    <linearGradient id="hkWater" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1c4a6e"/><stop offset="100%" stop-color="#0d2b45"/>
-    </linearGradient>
-  </defs>
-
-  <!-- 維多利亞港水面 -->
-  <rect x="0" y="73" width="80" height="7" fill="url(#hkWater)"/>
-  <path d="M0,76 Q10,74.5 20,76 T40,76 T60,76 T80,76" stroke="#cfe8f8" stroke-width="0.5" opacity="0.4" fill="none">
-    <animate attributeName="opacity" values="0.25;0.55;0.25" dur="3s" repeatCount="indefinite"/>
-  </path>
-
-  <!-- 太平山：大樓群後面的綠色山頭 -->
-  <path d="M0,60 Q12,40 30,44 Q44,30 60,40 Q72,44 80,52 V74 H0 Z" fill="url(#hkPeak)" opacity="0.9"/>
-  <!-- 後排陪襯樓群，襯托前景三棟招牌建築 -->
-  <rect x="0" y="48" width="8" height="26" fill="url(#hkRose)" stroke="#6a4646" stroke-width="0.4"/>
-  <rect x="8" y="54" width="7" height="20" fill="url(#hkGlass1)" stroke="#1f5a55" stroke-width="0.4"/>
-  <rect x="62" y="50" width="8" height="24" fill="url(#hkDark)" stroke="#1e232c" stroke-width="0.4"/>
-  <rect x="70" y="56" width="10" height="18" fill="url(#hkGlass1)" stroke="#1f5a55" stroke-width="0.4"/>
-
-  <!-- 中銀大廈：四片三角稜面層層削切、頂端雙天線，是最具識別度的香港地標之一 -->
-  <path d="M16,74 L16,52 L20,44 L24,52 L24,74 Z" fill="url(#hkBoc)" stroke="#2c4f66" stroke-width="0.4"/>
-  <path d="M20,44 L17,30 L23,30 Z" fill="url(#hkBoc)" stroke="#2c4f66" stroke-width="0.4"/>
-  <path d="M17,30 L18.4,18 L21.6,18 L23,30 Z" fill="url(#hkBoc)" stroke="#2c4f66" stroke-width="0.4"/>
-  <path d="M18.4,18 L19.4,9 L20.6,9 L21.6,18 Z" fill="url(#hkBoc)" stroke="#2c4f66" stroke-width="0.4"/>
-  <line x1="19.4" y1="9" x2="19.4" y2="3" stroke="#2c4f66" stroke-width="0.7"/>
-  <line x1="20.6" y1="9" x2="20.6" y2="4.5" stroke="#2c4f66" stroke-width="0.7"/>
-  <path d="M16,52 L20,44 L20,74 Z" fill="#ffffff" opacity="0.12"/>
-  <!-- 中銀大廈招牌的白色 X 形斜撐 -->
-  <path d="M16,74 L24,62 M24,74 L16,62 M16,62 L24,52 M24,62 L16,52" stroke="#ffffff" stroke-width="0.7" opacity="0.85"/>
-  <path d="M17,30 L20,44 L20,18 Z" fill="#ffffff" opacity="0.12"/>
-
-  <!-- 國際金融中心二期（IFC Two）：筆直向上，頂端削出一個斜角缺口收尖 -->
-  <path d="M32,74 L32,24 L38,24 L38,18 L41,12 L44,18 L44,24 L47,24 L47,74 Z" fill="url(#hkGlass2)" stroke="#6b604c" stroke-width="0.4"/>
-  <g stroke="#6b604c" stroke-width="0.3" opacity="0.6">
-    <line x1="32" y1="32" x2="47" y2="32"/><line x1="32" y1="42" x2="47" y2="42"/>
-    <line x1="32" y1="52" x2="47" y2="52"/><line x1="32" y1="62" x2="47" y2="62"/>
+  <!-- 香港維港天際線（2.5D）：斜線分割三角切面的中銀大廈、最高的國際金融中心二期與一排玻璃大樓，後方是太平山，前方維多利亞港上有綠白色的天星小輪，大樓燈光閃爍（動畫）。光源左上，不描邊 -->
+  <g transform="translate(37.53 57.06) scale(0.71)">
+    <path d="M-19.05 -23L-3.46 -32L6.93 -42Z" fill="#86c770"/>
+    <path d="M-3.46 -32L31.18 -12L6.93 -42Z" fill="#86c770"/>
+    <path d="M15.59 -3L-19.05 -23L6.93 -42Z" fill="#62a652"/>
+    <path d="M31.18 -12L15.59 -3L6.93 -42Z" fill="#46823d"/>
+    <path d="M6.93 -10L24.25 -20L32.91 -25Z" fill="#86c770"/>
+    <path d="M24.25 -20L55.43 -2L32.91 -25Z" fill="#86c770"/>
+    <path d="M38.11 8L6.93 -10L32.91 -25Z" fill="#62a652"/>
+    <path d="M55.43 -2L38.11 8L32.91 -25Z" fill="#46823d"/>
+    <path d="M-38.11 -12L20.78 22L10.39 28L-48.5 -6Z" fill="#52c3dc"/>
+    <path d="M41.57 11L20.78 23L20.78 22L41.57 10Z" fill="#ab9f87"/>
+    <path d="M-38.11 -11L20.78 23L20.78 22L-38.11 -12Z" fill="#d3c9b3"/>
+    <path d="M-17.32 -24L41.57 10L20.78 22L-38.11 -12Z" fill="#efe8d8"/>
+    <path d="M-32.91 -11L-15.59 -21L36.37 9L42.34 13.96L25.02 23.96L-26.94 -6.04Z" fill="#000000" opacity="0.2"/>
+    <path d="M5.2 -5L-1.73 -1L-1.73 -37L5.2 -41Z" fill="#84a2bf"/>
+    <path d="M-8.66 -5L-1.73 -1L-1.73 -37L-8.66 -41Z" fill="#b8cfe2"/>
+    <path d="M-1.73 -45L5.2 -41L-1.73 -37L-8.66 -41Z" fill="#e6f0f7"/>
+    <path d="M-8.66 -7L-1.73 -9L-1.73 -9.8L-8.66 -7.8Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M-1.73 -3L-8.66 -13L-8.66 -13.8L-1.73 -3.8Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M5.2 -7L-1.73 -9L-1.73 -9.8L5.2 -7.8Z" fill="#b8cfe2" opacity="0.7"/>
+    <path d="M-8.66 -15L-1.73 -17L-1.73 -17.8L-8.66 -15.8Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M-1.73 -11L-8.66 -21L-8.66 -21.8L-1.73 -11.8Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M5.2 -15L-1.73 -17L-1.73 -17.8L5.2 -15.8Z" fill="#b8cfe2" opacity="0.7"/>
+    <path d="M-8.66 -23L-1.73 -25L-1.73 -25.8L-8.66 -23.8Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M-1.73 -19L-8.66 -29L-8.66 -29.8L-1.73 -19.8Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M5.2 -23L-1.73 -25L-1.73 -25.8L5.2 -23.8Z" fill="#b8cfe2" opacity="0.7"/>
+    <path d="M-8.66 -31L-1.73 -33L-1.73 -33.8L-8.66 -31.8Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M-1.73 -27L-8.66 -37L-8.66 -37.8L-1.73 -27.8Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M5.2 -31L-1.73 -33L-1.73 -33.8L5.2 -31.8Z" fill="#b8cfe2" opacity="0.7"/>
+    <path d="M-8.66 -39L-1.73 -41L-1.73 -41.8L-8.66 -39.8Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M-1.73 -35L-8.66 -45L-8.66 -45.8L-1.73 -35.8Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M5.2 -39L-1.73 -41L-1.73 -41.8L5.2 -39.8Z" fill="#b8cfe2" opacity="0.7"/>
+    <path d="M5.2 -41L-1.73 -37L-1.73 -48.4L-0.69 -49Z" fill="#84a2bf"/>
+    <path d="M-8.66 -41L-1.73 -37L-1.73 -48.4L-2.77 -49Z" fill="#b8cfe2"/>
+    <path d="M-1.73 -49.6L-0.69 -49L-1.73 -48.4L-2.77 -49Z" fill="#e6f0f7"/>
+    <path d="M-1.91 -49.3L-2.25 -49.1L-2.25 -55.1L-1.91 -55.3Z" fill="#7c858f"/>
+    <path d="M-2.6 -49.3L-2.25 -49.1L-2.25 -55.1L-2.6 -55.3Z" fill="#a9b1ba"/>
+    <path d="M-2.25 -55.5L-1.91 -55.3L-2.25 -55.1L-2.6 -55.3Z" fill="#d8dde3"/>
+    <path d="M-0.87 -48.7L-1.21 -48.5L-1.21 -54.5L-0.87 -54.7Z" fill="#7c858f"/>
+    <path d="M-1.56 -48.7L-1.21 -48.5L-1.21 -54.5L-1.56 -54.7Z" fill="#a9b1ba"/>
+    <path d="M-1.21 -54.9L-0.87 -54.7L-1.21 -54.5L-1.56 -54.7Z" fill="#d8dde3"/>
+    <path d="M26.67 3L19.05 7.4L19.05 -44L24.25 -47Z" fill="#a9b8c8"/>
+    <path d="M11.43 3L19.05 7.4L19.05 -44L13.86 -47Z" fill="#d4dde6"/>
+    <path d="M24.25 -47L19.05 -44L19.05 -51.2L22.17 -53Z" fill="#a9b8c8"/>
+    <path d="M13.86 -47L19.05 -44L19.05 -51.2L15.93 -53Z" fill="#d4dde6"/>
+    <path d="M19.05 -54.8L22.17 -53L19.05 -51.2L15.93 -53Z" fill="#f2f5f8"/>
+    <path d="M12.74 -0.36L17.94 2.64L17.94 2.04L12.74 -0.96Z" fill="#ffffff" opacity="0.5"/>
+    <path d="M12.89 -6.44L18.08 -3.44L18.08 -4.04L12.89 -7.04Z" fill="#ffffff" opacity="0.5"/>
+    <path d="M13.03 -12.52L18.23 -9.52L18.23 -10.12L13.03 -13.12Z" fill="#ffffff" opacity="0.5"/>
+    <path d="M13.18 -18.61L18.37 -15.61L18.37 -16.21L13.18 -19.21Z" fill="#ffffff" opacity="0.5"/>
+    <path d="M13.32 -24.69L18.52 -21.69L18.52 -22.29L13.32 -25.29Z" fill="#ffffff" opacity="0.5"/>
+    <path d="M13.47 -30.78L18.66 -27.78L18.66 -28.38L13.47 -31.38Z" fill="#ffffff" opacity="0.5"/>
+    <path d="M13.61 -36.86L18.81 -33.86L18.81 -34.46L13.61 -37.46Z" fill="#ffffff" opacity="0.5"/>
+    <path d="M13.76 -42.94L18.96 -39.94L18.96 -40.54L13.76 -43.54Z" fill="#ffffff" opacity="0.5"/>
+    <path d="M-9.53 -15.5L-15.59 -12L-15.59 -34L-9.53 -37.5Z" fill="#a9b8c8"/>
+    <path d="M-21.65 -15.5L-15.59 -12L-15.59 -34L-21.65 -37.5Z" fill="#d4dde6"/>
+    <path d="M-15.59 -41L-9.53 -37.5L-15.59 -34L-21.65 -37.5Z" fill="#f2f5f8"/>
+    <path d="M-21.13 -18.2L-16.11 -15.3L-16.11 -16.5L-21.13 -19.4Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M-21.13 -22.2L-16.11 -19.3L-16.11 -20.5L-21.13 -23.4Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M-21.13 -26.2L-16.11 -23.3L-16.11 -24.5L-21.13 -27.4Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M-21.13 -30.2L-16.11 -27.3L-16.11 -28.5L-21.13 -31.4Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M-21.13 -34.2L-16.11 -31.3L-16.11 -32.5L-21.13 -35.4Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M-10.39 -8L-15.59 -5L-15.59 -33L-10.39 -36Z" fill="#7c858f"/>
+    <path d="M-20.78 -8L-15.59 -5L-15.59 -33L-20.78 -36Z" fill="#a9b1ba"/>
+    <path d="M-15.59 -39L-10.39 -36L-15.59 -33L-20.78 -36Z" fill="#d8dde3"/>
+    <path d="M-20.26 -10.7L-16.11 -8.3L-16.11 -9.5L-20.26 -11.9Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M-20.26 -14.7L-16.11 -12.3L-16.11 -13.5L-20.26 -15.9Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M-20.26 -18.7L-16.11 -16.3L-16.11 -17.5L-20.26 -19.9Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M-20.26 -22.7L-16.11 -20.3L-16.11 -21.5L-20.26 -23.9Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M-20.26 -26.7L-16.11 -24.3L-16.11 -25.5L-20.26 -27.9Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M-20.26 -30.7L-16.11 -28.3L-16.11 -29.5L-20.26 -31.9Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M8.66 3L3.46 6L3.46 -18L8.66 -21Z" fill="#a9b8c8"/>
+    <path d="M-1.73 3L3.46 6L3.46 -18L-1.73 -21Z" fill="#d4dde6"/>
+    <path d="M3.46 -24L8.66 -21L3.46 -18L-1.73 -21Z" fill="#f2f5f8"/>
+    <path d="M-1.21 0.3L2.94 2.7L2.94 1.5L-1.21 -0.9Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M-1.21 -3.7L2.94 -1.3L2.94 -2.5L-1.21 -4.9Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M-1.21 -7.7L2.94 -5.3L2.94 -6.5L-1.21 -8.9Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M-1.21 -11.7L2.94 -9.3L2.94 -10.5L-1.21 -12.9Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M-1.21 -15.7L2.94 -13.3L2.94 -14.5L-1.21 -16.9Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M25.11 14.5L19.05 18L19.05 0L25.11 -3.5Z" fill="#7c858f"/>
+    <path d="M12.99 14.5L19.05 18L19.05 0L12.99 -3.5Z" fill="#a9b1ba"/>
+    <path d="M19.05 -7L25.11 -3.5L19.05 0L12.99 -3.5Z" fill="#d8dde3"/>
+    <path d="M13.51 11.8L18.53 14.7L18.53 13.5L13.51 10.6Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M13.51 7.8L18.53 10.7L18.53 9.5L13.51 6.6Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M13.51 3.8L18.53 6.7L18.53 5.5L13.51 2.6Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M13.51 -0.2L18.53 2.7L18.53 1.5L13.51 -1.4Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M-22.52 -11L-27.71 -8L-27.71 -20L-22.52 -23Z" fill="#84a2bf"/>
+    <path d="M-32.91 -11L-27.71 -8L-27.71 -20L-32.91 -23Z" fill="#b8cfe2"/>
+    <path d="M-27.71 -26L-22.52 -23L-27.71 -20L-32.91 -23Z" fill="#e6f0f7"/>
+    <path d="M-32.39 -13.7L-28.23 -11.3L-28.23 -12.5L-32.39 -14.9Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M-32.39 -17.7L-28.23 -15.3L-28.23 -16.5L-32.39 -18.9Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M9.53 7.5L5.2 10L5.2 -4L9.53 -6.5Z" fill="#7c858f"/>
+    <path d="M0.87 7.5L5.2 10L5.2 -4L0.87 -6.5Z" fill="#a9b1ba"/>
+    <path d="M5.2 -9L9.53 -6.5L5.2 -4L0.87 -6.5Z" fill="#d8dde3"/>
+    <path d="M1.39 4.8L4.68 6.7L4.68 5.5L1.39 3.6Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M1.39 0.8L4.68 2.7L4.68 1.5L1.39 -0.4Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M1.39 -3.2L4.68 -1.3L4.68 -2.5L1.39 -4.4Z" fill="#b8cfe2" opacity="0.6"/>
+    <path d="M-16.39 9L-4.39 9L-5.39 11.6L-15.39 11.6Z" fill="#2f8f5a"/>
+    <path d="M-14.39 6.6L-6.39 6.6L-6.39 9L-14.39 9Z" fill="#ffffff"/>
+    <circle cx="19.05" cy="-7.00" r="0.50" fill="#fff6b0"><animate attributeName="opacity" values="1;0.3;1" dur="1.6s" begin="0.0s" repeatCount="indefinite"/></circle>
+    <circle cx="19.05" cy="-16.00" r="0.50" fill="#fff6b0"><animate attributeName="opacity" values="1;0.3;1" dur="1.6s" begin="0.3s" repeatCount="indefinite"/></circle>
+    <circle cx="19.05" cy="-25.00" r="0.50" fill="#fff6b0"><animate attributeName="opacity" values="1;0.3;1" dur="1.6s" begin="0.6s" repeatCount="indefinite"/></circle>
+    <circle cx="19.05" cy="-34.00" r="0.50" fill="#fff6b0"><animate attributeName="opacity" values="1;0.3;1" dur="1.6s" begin="0.8999999999999999s" repeatCount="indefinite"/></circle>
+    <circle cx="19.05" cy="-43.00" r="0.50" fill="#fff6b0"><animate attributeName="opacity" values="1;0.3;1" dur="1.6s" begin="1.2s" repeatCount="indefinite"/></circle>
   </g>
-  <line x1="41" y1="12" x2="41" y2="5" stroke="#2c4f66" stroke-width="0.8"/>
-  <circle cx="41" cy="4" r="0.9" fill="#ffd97a">
-    <animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- 中環廣場：六邊形截面向上收窄成金字塔頂，頂端豎立燈柱 -->
-  <path d="M54,74 L54,40 L58,36 L66,36 L70,40 L70,74 Z" fill="url(#hkPlaza)" stroke="#6e4a14" stroke-width="0.4"/>
-  <path d="M58,36 L62,22 L66,36 Z" fill="url(#hkPlaza)" stroke="#6e4a14" stroke-width="0.4"/>
-  <line x1="62" y1="22" x2="62" y2="14" stroke="#6e4a14" stroke-width="0.8"/>
-  <!-- 中環廣場頂上的霓虹燈環 -->
-  <path d="M57,38 L67,38" stroke="#ff5aa8" stroke-width="1.1"><animate attributeName="stroke" values="#ff5aa8;#7ad7ff;#ffd24a;#ff5aa8" dur="4s" repeatCount="indefinite"/></path>
-  <g fill="#ffb84d" opacity="0.85">
-    <rect x="62" y="14" width="1.6" height="2.2"/>
-    <animate attributeName="opacity" values="0.4;1;0.4" dur="2.4s" repeatCount="indefinite"/>
-  </g>
-  <g stroke="#6e4a14" stroke-width="0.3" opacity="0.6">
-    <line x1="54" y1="50" x2="70" y2="50"/><line x1="54" y1="60" x2="70" y2="60"/>
-  </g>
-
-  <!-- 窗燈點點 -->
-  <rect x="2" y="56" width="2" height="2" fill="#ffd97a"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.2s" repeatCount="indefinite"/></rect>
-  <rect x="34" y="46" width="2" height="2" fill="#ffd97a"><animate attributeName="opacity" values="1;0.4;1" dur="2.6s" repeatCount="indefinite"/></rect>
-  <rect x="73" y="60" width="2" height="2" fill="#ffd97a"><animate attributeName="opacity" values="0.5;1;0.5" dur="1.9s" repeatCount="indefinite"/></rect>
-  <rect x="42" y="58" width="2" height="2" fill="#ffd97a"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="3s" repeatCount="indefinite"/></rect>
 </svg>

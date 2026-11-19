@@ -1,111 +1,57 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-  <!-- 三峽大壩：從下游斜看，一道又長又直的灰色混凝土重力壩橫跨兩側青綠峽谷，中段一排洩洪閘門噴出白色水瀑，壩後是高水位水庫，壩前是長江，左側有升船機塔樓 -->
-  <defs>
-    <linearGradient id="tgdLake" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#7cc4dc"/>
-      <stop offset="1" stop-color="#3f8fb0"/>
-    </linearGradient>
-    <linearGradient id="tgdRiver" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#6fa8b0"/>
-      <stop offset="1" stop-color="#3f7380"/>
-    </linearGradient>
-    <linearGradient id="tgdFace" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#d6dadc"/>
-      <stop offset=".6" stop-color="#a9b0b4"/>
-      <stop offset="1" stop-color="#7f878c"/>
-    </linearGradient>
-    <linearGradient id="tgdMtnL" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#86c068"/>
-      <stop offset="1" stop-color="#3c7434"/>
-    </linearGradient>
-    <linearGradient id="tgdMtnR" x1="1" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#6aa654"/>
-      <stop offset="1" stop-color="#2e5e2a"/>
-    </linearGradient>
-    <linearGradient id="tgdFall" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#d8f0f8"/>
-    </linearGradient>
-  </defs>
-
-  <!-- 遠山 -->
-  <path d="M10,30 Q20,14 30,24 Q40,12 52,22 Q62,14 72,28 L72,32 L10,32 Z" fill="#8fb7a0" stroke="#5f8a72" stroke-width="0.4" opacity="0.8"/>
-  <!-- 壩後水庫（較高水位） -->
-  <path d="M8,30.5 Q40,27 74,31 L74,35.5 L8,31.8 Z" fill="url(#tgdLake)"/>
-
-  <!-- 壩頂 -->
-  <path d="M8,31.6 L74,35.4 L74,37 L8,33.6 Z" fill="#eef0f0" stroke="#5d6468" stroke-width="0.5" stroke-linejoin="round"/>
-  <!-- 下游壩面（左近右遠，呈透視） -->
-  <path d="M8,33.6 L74,37 L74,52 L8,60 Z" fill="url(#tgdFace)" stroke="#5d6468" stroke-width="0.6" stroke-linejoin="round"/>
-  <!-- 壩段分縫 -->
-  <g stroke="#7a8286" stroke-width="0.35" opacity="0.8">
-    <path d="M16,34 V59 M24,34.4 V58 M60,36.3 V53.7 M67,36.7 V52.8"/>
-  </g>
-  <!-- 壩頂護欄與門機 -->
-  <g stroke="#5d6468" stroke-width="0.4">
-    <path d="M8,31.6 L74,35.4" stroke="#8a9296"/>
-    <rect x="30" y="29.2" width="3" height="3.4" fill="#e9b04a"/>
-    <rect x="46" y="30.1" width="3" height="3.3" fill="#e9b04a"/>
-  </g>
-
-  <!-- 升船機塔樓（左端） -->
-  <path d="M9,25 L17,25.4 L17,59 L9,60 Z" fill="#c5cbce" stroke="#5d6468" stroke-width="0.5"/>
-  <path d="M9.6,23 H11.6 V25 H9.6 Z M14.4,23.2 H16.4 V25.3 H14.4 Z" fill="#9aa2a6" stroke="#5d6468" stroke-width="0.4"/>
-  <g fill="#6d767a">
-    <rect x="10.2" y="28" width="1.2" height="1.6"/><rect x="14.4" y="28.2" width="1.2" height="1.6"/>
-    <rect x="10.2" y="32" width="1.2" height="1.6"/><rect x="14.4" y="32.2" width="1.2" height="1.6"/>
-    <rect x="10.2" y="36" width="1.2" height="1.6"/><rect x="14.4" y="36.2" width="1.2" height="1.6"/>
-  </g>
-
-  <!-- 洩洪閘門（暗色方孔） -->
-  <g fill="#3e464a" stroke="#2a3033" stroke-width="0.3">
-    <rect x="28" y="37" width="2.6" height="3.6"/>
-    <rect x="32" y="37.2" width="2.6" height="3.6"/>
-    <rect x="36" y="37.5" width="2.6" height="3.5"/>
-    <rect x="40" y="37.7" width="2.6" height="3.5"/>
-    <rect x="44" y="38" width="2.6" height="3.4"/>
-    <rect x="48" y="38.2" width="2.6" height="3.4"/>
-    <rect x="52" y="38.5" width="2.6" height="3.3"/>
-  </g>
-  <!-- 噴湧而下的白色水瀑 -->
-  <g fill="url(#tgdFall)" stroke="#9fd0e0" stroke-width="0.3">
-    <path d="M28,40.6 H30.6 L31.4,56.6 H27.4 Z"/>
-    <path d="M32,40.8 H34.6 L35.4,56.2 H31.4 Z"/>
-    <path d="M36,41 H38.6 L39.4,55.7 H35.4 Z"/>
-    <path d="M40,41.2 H42.6 L43.4,55.2 H39.4 Z"/>
-    <path d="M44,41.4 H46.6 L47.4,54.8 H43.4 Z"/>
-    <path d="M48,41.6 H50.6 L51.4,54.3 H47.4 Z"/>
-    <path d="M52,41.8 H54.6 L55.4,53.9 H51.4 Z"/>
-    <animate attributeName="opacity" values="1;0.82;1" dur="1.6s" repeatCount="indefinite"/>
-  </g>
-  <g stroke="#a8d4e4" stroke-width="0.4" opacity="0.8" stroke-dasharray="2 2">
-    <path d="M29.3,43 V54 M33.3,43 V53.6 M37.3,43.2 V53.2 M41.3,43.4 V52.8 M45.3,43.6 V52.4 M49.3,43.8 V52 M53.3,44 V51.6">
-      <animate attributeName="stroke-dashoffset" values="0;-4" dur="0.8s" repeatCount="indefinite"/>
-    </path>
-  </g>
-
-  <!-- 下游長江 -->
-  <path d="M8,60 L74,52 L80,54 L80,76 L0,76 L0,62 Z" fill="url(#tgdRiver)"/>
-  <g stroke="#cfe8ee" stroke-width="0.5" fill="none" opacity="0.7" stroke-linecap="round">
-    <path d="M14,68 Q20,67 26,68 M44,66 Q50,65 56,66 M30,72 Q36,71 42,72 M60,70 Q65,69 70,70"/>
-  </g>
-  <!-- 水瀑底部浪花 -->
-  <g fill="#ffffff" stroke="#b8dce8" stroke-width="0.3">
-    <ellipse cx="34" cy="57.4" rx="8" ry="2.4"/>
-    <ellipse cx="47" cy="55.8" rx="8" ry="2.2"/>
-    <ellipse cx="41" cy="58.6" rx="6" ry="1.6" opacity="0.9"/>
-    <animate attributeName="opacity" values="1;0.8;1" dur="1.2s" repeatCount="indefinite"/>
-  </g>
-
-  <!-- 左側峽谷山 -->
-  <path d="M0,16 Q4,12 7,18 Q10,24 9,34 Q8,48 12,62 L0,70 Z" fill="url(#tgdMtnL)" stroke="#2f5a28" stroke-width="0.6" stroke-linejoin="round"/>
-  <path d="M2,30 Q5,36 4,44 M6,22 Q8,28 7,34" stroke="#3c6a32" stroke-width="0.5" fill="none" opacity="0.7"/>
-  <!-- 右側峽谷山 -->
-  <path d="M80,20 Q76,18 74,24 Q71,30 72,38 Q72,46 70,54 L80,58 Z" fill="url(#tgdMtnR)" stroke="#2f5a28" stroke-width="0.6" stroke-linejoin="round"/>
-  <path d="M77,28 Q75,34 76,40 M75,44 Q74,48 75,52" stroke="#24481f" stroke-width="0.5" fill="none" opacity="0.7"/>
-  <!-- 山上小樹 -->
-  <g fill="#3f7e36" stroke="#264f22" stroke-width="0.3">
-    <circle cx="3" cy="20" r="1.6"/><circle cx="6" cy="26" r="1.4"/><circle cx="3" cy="38" r="1.5"/>
-    <circle cx="77" cy="24" r="1.5"/><circle cx="75" cy="33" r="1.3"/><circle cx="78" cy="46" r="1.4"/>
+  <!-- 三峽大壩（2.5D）：灰色混凝土大壩橫跨兩岸青山，後方是高水位的水庫，洩洪道沖下五道白色水瀑並揚起水霧（動畫），下游是寬闊河道。光源左上，不描邊 -->
+  <g transform="translate(36.42 55.64) scale(0.69)">
+    <path d="M-3.46 -42L48.5 -12L29.44 -1L-22.52 -31Z" fill="#52c3dc"/>
+    <path d="M1.73 -35.02L36.37 -15.02L29.44 -11.02L-5.2 -31.02Z" fill="#9be3ea" opacity="0.5"/>
+    <path d="M-5.2 -33L10.39 -24L-19.05 -43Z" fill="#86c770"/>
+    <path d="M-48.5 -8L-5.2 -33L-19.05 -43Z" fill="#86c770"/>
+    <path d="M10.39 -24L-32.91 1L-19.05 -43Z" fill="#46823d"/>
+    <path d="M-32.91 1L-48.5 -8L-19.05 -43Z" fill="#62a652"/>
+    <path d="M24.25 10L19.05 13L19.05 -3L24.25 -6Z" fill="#636974"/>
+    <path d="M-19.05 -9L19.05 13L19.05 -3L-19.05 -25Z" fill="#8c929c"/>
+    <path d="M-13.86 -28L24.25 -6L19.05 -3L-19.05 -25Z" fill="#b7bcc4"/>
+    <path d="M24.25 -6L19.05 -3L19.05 -4.6L24.25 -7.6Z" fill="#ab9f87"/>
+    <path d="M-19.05 -25L19.05 -3L19.05 -4.6L-19.05 -26.6Z" fill="#d3c9b3"/>
+    <path d="M-13.86 -29.6L24.25 -7.6L19.05 -4.6L-19.05 -26.6Z" fill="#efe8d8"/>
+    <path d="M-8.14 -26.9L-9.87 -25.9L-9.87 -28.9L-8.14 -29.9Z" fill="#ab9f87"/>
+    <path d="M-11.6 -26.9L-9.87 -25.9L-9.87 -28.9L-11.6 -29.9Z" fill="#d3c9b3"/>
+    <path d="M-9.87 -30.9L-8.14 -29.9L-9.87 -28.9L-11.6 -29.9Z" fill="#efe8d8"/>
+    <path d="M-3.81 -24.4L-5.54 -23.4L-5.54 -26.4L-3.81 -27.4Z" fill="#ab9f87"/>
+    <path d="M-7.27 -24.4L-5.54 -23.4L-5.54 -26.4L-7.27 -27.4Z" fill="#d3c9b3"/>
+    <path d="M-5.54 -28.4L-3.81 -27.4L-5.54 -26.4L-7.27 -27.4Z" fill="#efe8d8"/>
+    <path d="M0.52 -21.9L-1.21 -20.9L-1.21 -23.9L0.52 -24.9Z" fill="#ab9f87"/>
+    <path d="M-2.94 -21.9L-1.21 -20.9L-1.21 -23.9L-2.94 -24.9Z" fill="#d3c9b3"/>
+    <path d="M-1.21 -25.9L0.52 -24.9L-1.21 -23.9L-2.94 -24.9Z" fill="#efe8d8"/>
+    <path d="M4.85 -19.4L3.12 -18.4L3.12 -21.4L4.85 -22.4Z" fill="#ab9f87"/>
+    <path d="M1.39 -19.4L3.12 -18.4L3.12 -21.4L1.39 -22.4Z" fill="#d3c9b3"/>
+    <path d="M3.12 -23.4L4.85 -22.4L3.12 -21.4L1.39 -22.4Z" fill="#efe8d8"/>
+    <path d="M9.18 -16.9L7.45 -15.9L7.45 -18.9L9.18 -19.9Z" fill="#ab9f87"/>
+    <path d="M5.72 -16.9L7.45 -15.9L7.45 -18.9L5.72 -19.9Z" fill="#d3c9b3"/>
+    <path d="M7.45 -20.9L9.18 -19.9L7.45 -18.9L5.72 -19.9Z" fill="#efe8d8"/>
+    <path d="M13.51 -14.4L11.78 -13.4L11.78 -16.4L13.51 -17.4Z" fill="#ab9f87"/>
+    <path d="M10.05 -14.4L11.78 -13.4L11.78 -16.4L10.05 -17.4Z" fill="#d3c9b3"/>
+    <path d="M11.78 -18.4L13.51 -17.4L11.78 -16.4L10.05 -17.4Z" fill="#efe8d8"/>
+    <path d="M17.84 -11.9L16.11 -10.9L16.11 -13.9L17.84 -14.9Z" fill="#ab9f87"/>
+    <path d="M14.38 -11.9L16.11 -10.9L16.11 -13.9L14.38 -14.9Z" fill="#d3c9b3"/>
+    <path d="M16.11 -15.9L17.84 -14.9L16.11 -13.9L14.38 -14.9Z" fill="#efe8d8"/>
+    <path d="M22.17 -9.4L20.44 -8.4L20.44 -11.4L22.17 -12.4Z" fill="#ab9f87"/>
+    <path d="M18.71 -9.4L20.44 -8.4L20.44 -11.4L18.71 -12.4Z" fill="#d3c9b3"/>
+    <path d="M20.44 -13.4L22.17 -12.4L20.44 -11.4L18.71 -12.4Z" fill="#efe8d8"/>
+    <path d="M-10.39 -4L-7.79 -2.5L-7.79 -16.5L-10.39 -18Z" fill="#ffffff" opacity="0.9"/>
+    <circle cx="-10.83" cy="-2.75" r="2.40" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.8;0" dur="2.4s" begin="0.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;1.8 -6.0" dur="2.4s" begin="0.0s" repeatCount="indefinite"/></circle>
+    <path d="M-5.2 -1L-2.6 0.5L-2.6 -13.5L-5.2 -15Z" fill="#ffffff" opacity="0.9"/>
+    <circle cx="-5.63" cy="0.25" r="2.40" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.8;0" dur="2.4s" begin="0.4s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;1.8 -6.0" dur="2.4s" begin="0.4s" repeatCount="indefinite"/></circle>
+    <path d="M0 2L2.6 3.5L2.6 -10.5L0 -12Z" fill="#ffffff" opacity="0.9"/>
+    <circle cx="-0.43" cy="3.25" r="2.40" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.8;0" dur="2.4s" begin="0.8s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;1.8 -6.0" dur="2.4s" begin="0.8s" repeatCount="indefinite"/></circle>
+    <path d="M5.2 5L7.79 6.5L7.79 -7.5L5.2 -9Z" fill="#ffffff" opacity="0.9"/>
+    <circle cx="4.76" cy="6.25" r="2.40" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.8;0" dur="2.4s" begin="1.2000000000000002s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;1.8 -6.0" dur="2.4s" begin="1.2000000000000002s" repeatCount="indefinite"/></circle>
+    <path d="M10.39 8L12.99 9.5L12.99 -4.5L10.39 -6Z" fill="#ffffff" opacity="0.9"/>
+    <circle cx="9.96" cy="9.25" r="2.40" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.8;0" dur="2.4s" begin="1.6s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;1.8 -6.0" dur="2.4s" begin="1.6s" repeatCount="indefinite"/></circle>
+    <path d="M-19.05 -9L19.05 13L-1.73 25L-39.84 3Z" fill="#52c3dc"/>
+    <path d="M-12.12 -3.02L13.86 11.98L8.66 14.98L-17.32 -0.02Z" fill="#ffffff" opacity="0.6"/>
+    <path d="M46.77 -3L58.89 4L31.18 -10Z" fill="#86c770"/>
+    <path d="M0 24L46.77 -3L31.18 -10Z" fill="#86c770"/>
+    <path d="M58.89 4L12.12 31L31.18 -10Z" fill="#46823d"/>
+    <path d="M12.12 31L0 24L31.18 -10Z" fill="#62a652"/>
   </g>
 </svg>
