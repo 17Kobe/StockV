@@ -1,0 +1,222 @@
+<html><body style="margin:0;background:#c99a5a"><canvas id=c width=900 height=320></canvas><script>
+const cv=document.getElementById('c'),g=cv.getContext('2d');
+const gr=g.createLinearGradient(0,0,900,320);gr.addColorStop(0,'#d8b07a');gr.addColorStop(.5,'#9fbf6a');gr.addColorStop(1,'#3a9ac8');g.fillStyle=gr;g.fillRect(0,0,900,320);
+function A(){    const rng = (seed) => {
+        let s = seed >>> 0;
+        return () => (s = (s * 1664525 + 1013904223) >>> 0) / 4294967296;
+    };
+const STORM_W = 192, STORM_H = 120; let _cloudSprite=null;
+    function stormSprites() {
+        if (_cloudSprite) return _cloudSprite;
+        const mk = (seed, side) => {
+            const r = rng(seed),
+                j = (v) => v + (r() - 0.5) * 0.05, // 位置微抖
+                s = (v) => v * (0.88 + r() * 0.24), // 大小微抖
+                tx = side > 0 ? 0.4 : 0.6;
+            // [x(寬度比例), y(高度比例), 半徑(高度比例)]，由後往前畫
+            const puffs = [
+                [j(tx), j(0.46), s(0.32)], // 主雲塔
+                [j(tx + side * 0.25), j(0.57), s(0.23)], // 肩部（中）
+                [j(tx - side * 0.21), j(0.62), s(0.19)], // 另一側（中偏小）
+                [j(tx + side * 0.37), j(0.66), s(0.13)], // 邊緣小雲團（只留一顆，太多小球反而不自然）
+                [j(tx + side * 0.05), j(0.68), s(0.2)], // 前下方把底部連起來
+            ];
+            const c = document.createElement('canvas');
+            c.width = STORM_W;
+            c.height = STORM_H;
+            const g = c.getContext('2d');
+            const P = puffs.map(([x, y, rr]) => {
+                const R = rr * STORM_H;
+                // 留邊：雲團（含邊緣小凸起）不要超出畫布被切掉
+                return [Math.max(R * 1.15 + 2, Math.min(STORM_W - R * 1.15 - 2, x * STORM_W)), y * STORM_H, R];
+            });
+            // 大雲團上緣再長幾顆不規則的小凸起（像花椰菜），輪廓才不會是一顆顆光滑的球；
+            // 小凸起只加在外形上、不另外打光，看起來是大雲團表面的起伏，不會變成一堆小球
+            const bumps = [];
+            for (const [x, y, R] of P) {
+                if (R < STORM_H * 0.17) continue;
+                const n = 2 + Math.floor(r() * 3);
+                for (let i = 0; i < n; i++) {
+                    const a = -Math.PI * (0.12 + r() * 0.76),
+                        br = R * (0.22 + r() * 0.2);
+                    bumps.push([x + Math.cos(a) * R * 0.86, Math.max(br + 1, y + Math.sin(a) * R * 0.86), br]);
+                }
+            }
+            // 先用統一的底色填滿整朵雲的外形，雲內部就不會有一圈一圈的硬邊（不然會像一串葡萄）。
+            // 顏色：真的積雨雲不是單一灰色，是「頂部被陽光照到的銀白 → 中段帶藍的石板色 → 雲底很深的靛灰」，
+            // 明暗差要拉開，雲才有體積感；舊版從頭到尾都在中灰附近，看起來就是一團灰
+            g.fillStyle = '#46506e';
+            g.beginPath();
+            for (const [x, y, rr] of P.concat(bumps)) {
+                g.moveTo(x + rr, y);
+                g.arc(x, y, rr, 0, Math.PI * 2);
+            }
+            g.fill();
+            g.globalCompositeOperation = 'source-atop';
+            // 整朵雲由上往下：頂部偏亮的藍灰、往下漸暗
+            const sky = g.createLinearGradient(0, 0, 0, STORM_H);
+            sky.addColorStop(0, 'rgba(170,182,210,.75)');
+            sky.addColorStop(0.5, 'rgba(110,122,156,.2)');
+            sky.addColorStop(1, 'rgba(110,122,156,0)');
+            g.fillStyle = sky;
+            g.fillRect(0, 0, STORM_W, STORM_H);
+            // 每團雲球的上方加一塊受光（左上方的光，偏暖的銀白），由後往前畫，前排的亮頂會蓋在後排的暗部上
+            for (const [x, y, rr] of P) {
+                const gr = g.createRadialGradient(x - rr * 0.25, y - rr * 0.62, 0, x - rr * 0.1, y - rr * 0.3, rr * 1.1);
+                gr.addColorStop(0, 'rgba(232,234,242,.55)');
+                gr.addColorStop(0.4, 'rgba(170,180,208,.26)');
+                gr.addColorStop(1, 'rgba(120,130,166,0)');
+                g.fillStyle = gr;
+                g.fillRect(x - rr * 1.2, y - rr * 1.6, rr * 2.4, rr * 2.6);
+                // 雲球下緣的陰影（偏靛藍），前後層次才分得出來
+                const sh = g.createRadialGradient(x + rr * 0.1, y + rr * 0.85, 0, x, y + rr * 0.85, rr);
+                sh.addColorStop(0, 'rgba(26,30,52,.2)');
+                sh.addColorStop(1, 'rgba(26,30,52,0)');
+                g.fillStyle = sh;
+                g.fillRect(x - rr * 1.1, y - rr * 0.1, rr * 2.2, rr * 2);
+            }
+            // 雲底：很深的靛灰，是「要下雨」的感覺
+            const under = g.createLinearGradient(0, STORM_H * 0.42, 0, STORM_H);
+            under.addColorStop(0, 'rgba(22,26,44,0)');
+            under.addColorStop(1, 'rgba(22,26,44,.78)');
+            g.fillStyle = under;
+            g.fillRect(0, 0, STORM_W, STORM_H);
+            // 外緣一圈細細的亮邊（逆光的銀邊），輪廓從深色地圖上跳出來
+            g.globalCompositeOperation = 'source-over';
+            const rim = document.createElement('canvas');
+            rim.width = STORM_W;
+            rim.height = STORM_H;
+            const rg = rim.getContext('2d');
+            rg.drawImage(c, 0, 0);
+            rg.globalCompositeOperation = 'source-in';
+            rg.fillStyle = 'rgba(214,222,244,.55)';
+            rg.fillRect(0, 0, STORM_W, STORM_H * 0.62);
+            rg.globalCompositeOperation = 'destination-out';
+            rg.drawImage(c, 0, 1.6);
+            g.drawImage(rim, 0, 0);
+            // 邊緣柔化一點，才不會像剪紙
+            const out = document.createElement('canvas');
+            out.width = STORM_W;
+            out.height = STORM_H;
+            const o = out.getContext('2d');
+            o.filter = 'blur(1.2px)';
+            o.drawImage(c, 0, 0);
+            return out;
+        };
+        return (_cloudSprite = [mk(11, 1), mk(29, -1), mk(47, 1)]);
+    }
+
+; return stormSprites();}
+function B(){    const rng = (seed) => {
+        let s = seed >>> 0;
+        return () => (s = (s * 1664525 + 1013904223) >>> 0) / 4294967296;
+    };
+const STORM_W = 192, STORM_H = 120; let _cloudSprite=null;
+    function stormSprites() {
+        if (_cloudSprite) return _cloudSprite;
+        const mk = (seed, side) => {
+            const r = rng(seed),
+                j = (v) => v + (r() - 0.5) * 0.05, // 位置微抖
+                s = (v) => v * (0.88 + r() * 0.24), // 大小微抖
+                tx = side > 0 ? 0.4 : 0.6;
+            // [x(寬度比例), y(高度比例), 半徑(高度比例)]，由後往前畫
+            const puffs = [
+                [j(tx), j(0.46), s(0.32)], // 主雲塔
+                [j(tx + side * 0.25), j(0.57), s(0.23)], // 肩部（中）
+                [j(tx - side * 0.21), j(0.62), s(0.19)], // 另一側（中偏小）
+                [j(tx + side * 0.37), j(0.66), s(0.13)], // 邊緣小雲團（只留一顆，太多小球反而不自然）
+                [j(tx + side * 0.05), j(0.68), s(0.2)], // 前下方把底部連起來
+            ];
+            const c = document.createElement('canvas');
+            c.width = STORM_W;
+            c.height = STORM_H;
+            const g = c.getContext('2d');
+            const P = puffs.map(([x, y, rr]) => {
+                const R = rr * STORM_H;
+                // 留邊：雲團（含邊緣小凸起）不要超出畫布被切掉
+                return [Math.max(R * 1.15 + 2, Math.min(STORM_W - R * 1.15 - 2, x * STORM_W)), y * STORM_H, R];
+            });
+            // 大雲團上緣再長幾顆不規則的小凸起（像花椰菜），輪廓才不會是一顆顆光滑的球；
+            // 小凸起只加在外形上、不另外打光，看起來是大雲團表面的起伏，不會變成一堆小球
+            const bumps = [];
+            for (const [x, y, R] of P) {
+                if (R < STORM_H * 0.17) continue;
+                const n = 2 + Math.floor(r() * 3);
+                for (let i = 0; i < n; i++) {
+                    const a = -Math.PI * (0.12 + r() * 0.76),
+                        br = R * (0.22 + r() * 0.2);
+                    bumps.push([x + Math.cos(a) * R * 0.86, Math.max(br + 1, y + Math.sin(a) * R * 0.86), br]);
+                }
+            }
+            // 先用統一的底色填滿整朵雲的外形，雲內部就不會有一圈一圈的硬邊（不然會像一串葡萄）。
+            // 顏色：真的積雨雲不是單一灰色，是「頂部被陽光照到的銀白 → 中段帶藍的石板色 → 雲底很深的靛灰」，
+            // 明暗差要拉開，雲才有體積感；舊版從頭到尾都在中灰附近，看起來就是一團灰
+            // 11-19 調整：舊版底色太深（#46506e）、受光與銀邊又太亮，明暗對比過強像貼紙。
+            // 改成中間調的藍灰雨雲，亮部與暗部都收斂，整體更像真的陰天雲
+            g.fillStyle = '#5f677b';
+            g.beginPath();
+            for (const [x, y, rr] of P.concat(bumps)) {
+                g.moveTo(x + rr, y);
+                g.arc(x, y, rr, 0, Math.PI * 2);
+            }
+            g.fill();
+            g.globalCompositeOperation = 'source-atop';
+            // 整朵雲由上往下：頂部偏亮的藍灰、往下漸暗
+            const sky = g.createLinearGradient(0, 0, 0, STORM_H);
+            sky.addColorStop(0, 'rgba(206,210,222,.5)');
+            sky.addColorStop(0.55, 'rgba(150,158,178,.12)');
+            sky.addColorStop(1, 'rgba(150,158,178,0)');
+            g.fillStyle = sky;
+            g.fillRect(0, 0, STORM_W, STORM_H);
+            // 每團雲球的上方加一塊受光（左上方的光，偏暖的銀白），由後往前畫，前排的亮頂會蓋在後排的暗部上
+            for (const [x, y, rr] of P) {
+                const gr = g.createRadialGradient(x - rr * 0.25, y - rr * 0.62, 0, x - rr * 0.1, y - rr * 0.3, rr * 1.1);
+                gr.addColorStop(0, 'rgba(222,225,233,.46)');
+                gr.addColorStop(0.45, 'rgba(176,182,198,.2)');
+                gr.addColorStop(1, 'rgba(150,156,176,0)');
+                g.fillStyle = gr;
+                g.fillRect(x - rr * 1.2, y - rr * 1.6, rr * 2.4, rr * 2.6);
+                // 雲球下緣的陰影（偏靛藍），前後層次才分得出來
+                const sh = g.createRadialGradient(x + rr * 0.1, y + rr * 0.85, 0, x, y + rr * 0.85, rr);
+                sh.addColorStop(0, 'rgba(44,48,62,.2)');
+                sh.addColorStop(1, 'rgba(60,66,84,0)');
+                g.fillStyle = sh;
+                g.fillRect(x - rr * 1.1, y - rr * 0.1, rr * 2.2, rr * 2);
+            }
+            // 雲底：很深的靛灰，是「要下雨」的感覺
+            const under = g.createLinearGradient(0, STORM_H * 0.42, 0, STORM_H);
+            under.addColorStop(0, 'rgba(58,64,82,0)');
+            under.addColorStop(1, 'rgba(42,46,60,.6)');
+            g.fillStyle = under;
+            g.fillRect(0, 0, STORM_W, STORM_H);
+            // 外緣一圈細細的亮邊（逆光的銀邊），輪廓從深色地圖上跳出來
+            g.globalCompositeOperation = 'source-over';
+            const rim = document.createElement('canvas');
+            rim.width = STORM_W;
+            rim.height = STORM_H;
+            const rg = rim.getContext('2d');
+            rg.drawImage(c, 0, 0);
+            rg.globalCompositeOperation = 'source-in';
+            rg.fillStyle = 'rgba(214,220,232,.22)';
+            rg.fillRect(0, 0, STORM_W, STORM_H * 0.62);
+            rg.globalCompositeOperation = 'destination-out';
+            rg.drawImage(c, 0, 1.6);
+            g.drawImage(rim, 0, 0);
+            // 邊緣柔化一點，才不會像剪紙
+            const out = document.createElement('canvas');
+            out.width = STORM_W;
+            out.height = STORM_H;
+            const o = out.getContext('2d');
+            o.filter = 'blur(1.6px)';
+            o.drawImage(c, 0, 0);
+            return out;
+        };
+        return (_cloudSprite = [mk(11, 1), mk(29, -1), mk(47, 1)]);
+    }
+
+; return stormSprites();}
+const a=A(),b=B();
+g.font='16px sans-serif';g.fillStyle='#000';g.fillText('舊',10,20);g.fillText('新',10,180);
+a.forEach((s,i)=>g.drawImage(s,40+i*280,10,240,150));
+g.globalAlpha=.92;b.forEach((s,i)=>g.drawImage(s,40+i*280,165,240,150));
+</script></body></html>

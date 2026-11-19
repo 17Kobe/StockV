@@ -152,7 +152,7 @@
             vis: 0.4,
         }, // 長白山天池水怪
         { src: 'critters/yeti.svg', lon: 86.5, lat: 28.2, mode: 'wander', gait: 'heavy', s: 1.1, deco: true, maxDeg: 0.8 }, // 喜馬拉雅雪人
-        { src: 'critters/capybara-onsen.svg', lon: 139.4, lat: 36.6, mode: 'bob', face: 'F', iso: 'small', deco: true }, // 日本水豚泡溫泉
+        { src: 'critters/capybara-onsen.svg', lon: 139.4, lat: 36.6, mode: 'still', face: 'F', iso: 'small', deco: true }, // 日本水豚泡溫泉
         {
             src: 'critters/camel-caravan.svg',
             lon: 5,
@@ -497,7 +497,7 @@
         { src: 'critters/socotra.svg', lon: 53.87, lat: 12.47, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true },           // 索科特拉島
         { src: 'critters/maasai.svg', lon: 36.8, lat: -2.5, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true },              // 馬賽族
         { src: 'critters/angel-falls.svg', lon: -62.54, lat: 5.97, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true },       // 安赫爾瀑布
-        { src: 'critters/halong-bay.svg', lon: 107.08, lat: 20.91, mode: 'bob', iso: 'nature', sea: true, deco: true, landmark: true },         // 下龍灣
+        { src: 'critters/halong-bay.svg', lon: 107.08, lat: 20.91, mode: 'still', iso: 'nature', sea: true, deco: true, landmark: true },         // 下龍灣
         { src: 'critters/pamukkale.svg', lon: 29.12, lat: 37.92, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true },         // 棉堡
         { src: 'critters/giants-causeway.svg', lon: -6.51, lat: 55.24, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 巨人堤道
         { src: 'critters/pearl-harbor.svg', lon: -157.95, lat: 21.37, mode: 'bob', s: 1.0, sea: true, deco: true, landmark: true },      // 珍珠港
@@ -605,7 +605,7 @@
         { src: 'critters/arc-de-triomphe.svg', lon: 2.295, lat: 48.8738, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 法國：凱旋門
         // ── 第十批補充（剩下 9 個：黑熊、龜船、天壇、舞龍、海狸、騎警、熱氣球、啤酒節、嘟嘟車） ──
         { src: 'critters/formosan-black-bear.svg', lon: 121.05, lat: 23.25, mode: 'wander', iso: 'animal', deco: true, maxDeg: 1 }, // 台灣：台灣黑熊：往南移到中央山脈南段，讓出日月潭的位置
-        { src: 'critters/turtle-ship.svg', lon: 128.3, lat: 33.8, mode: 'bob', iso: 'vehicle', sea: true, deco: true, landmark: true }, // 南韓：李舜臣龜船（移到濟州島北側外海，離任何海岸線至少 0.9 度，確實在開闊海面上）
+        { src: 'critters/turtle-ship.svg', lon: 128.3, lat: 33.8, mode: 'still', iso: 'vehicle', sea: true, deco: true, landmark: true }, // 南韓：李舜臣龜船（移到濟州島北側外海，離任何海岸線至少 0.9 度，確實在開闊海面上）
         { src: 'critters/temple-of-heaven.svg', lon: 114.0, lat: 36.0, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 中國：天壇：上次修正後離紫禁城仍只差 0.64 度，實測要縮放到跟長城/紫禁城同框後再深縮 8 格才會冒出來，再拉大到確實跟兩者都有安全距離（實測一放大就會一起出現）
         { src: 'critters/dragon-dance.svg', lon: 108.0, lat: 30.0, mode: 'still', face: 'F', iso: 'building', deco: true }, // 中國：舞龍
         { src: 'critters/beaver.svg', lon: -95.0, lat: 54.0, mode: 'bob', s: 1.0, sea: true, deco: true }, // 加拿大：海狸
@@ -614,7 +614,7 @@
         { src: 'critters/oktoberfest.svg', lon: 11.55, lat: 48.14, mode: 'still', face: 'F', s: 1.0, deco: true }, // 德國：慕尼黑啤酒節
         { src: 'critters/tuk-tuk.svg', lon: 77.0, lat: 20.5, mode: 'wander', s: 1.0, deco: true, maxDeg: 2 }, // 印度：嘟嘟車
         // ── 第十一批補充 ──────────────────────────────────────────────
-        { src: 'critters/guilin-karst.svg', lon: 110.3, lat: 25.27, mode: 'bob', iso: 'nature', sea: true, deco: true, landmark: true }, // 中國：桂林山水與竹筏
+        { src: 'critters/guilin-karst.svg', lon: 110.3, lat: 25.27, mode: 'still', iso: 'nature', sea: true, deco: true, landmark: true }, // 中國：桂林山水與竹筏
         // ── 第十二批補充（用戶列的清單：主題樂園、K-pop、中國景點、南北美洲、俄羅斯） ──
         { src: 'critters/universal-studios-osaka.svg', lon: 134.468, lat: 35.527, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 日本：大阪環球影城：原座標跟大阪城太近，實測要放到 k>=9 才會出現，拉開距離修正
         { src: 'critters/tokyo-disneyland.svg', lon: 140.15, lat: 35.75, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 日本：東京迪士尼樂園：改放在真實的東京灣千葉縣位置附近，同時跟東京鐵塔、雷門保持安全距離
@@ -623,8 +623,8 @@
         { src: 'critters/mogao-crescent-lake.svg', lon: 94.66, lat: 40.03, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 中國：敦煌莫高窟及月牙泉
         { src: 'critters/leshan-buddha.svg', lon: 103.77, lat: 29.54, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 中國：樂山大佛
         { src: 'critters/huangshan-pine.svg', lon: 118.17, lat: 30.13, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 中國：黃山迎客松
-        { src: 'critters/hk-junk-boat.svg', lon: 114.3, lat: 22.1, mode: 'bob', iso: 'vehicle', sea: true, deco: true }, // 香港：中式紅帆船
-        { src: 'critters/west-lake-three-pools.svg', lon: 120.13, lat: 30.23, mode: 'bob', iso: 'nature', sea: true, deco: true, landmark: true }, // 中國：杭州西湖三潭印月
+        { src: 'critters/hk-junk-boat.svg', lon: 114.3, lat: 22.1, mode: 'still', iso: 'vehicle', sea: true, deco: true }, // 香港：中式紅帆船
+        { src: 'critters/west-lake-three-pools.svg', lon: 120.13, lat: 30.23, mode: 'still', iso: 'nature', sea: true, deco: true, landmark: true }, // 中國：杭州西湖三潭印月
         { src: 'critters/three-gorges-dam.svg', lon: 111.0, lat: 30.82, mode: 'still', face: 'F', iso: 'building', sea: true, deco: true, landmark: true }, // 中國：三峽大壩
         { src: 'critters/wall-street-bull.svg', lon: -74.25, lat: 40.5, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 美國：華爾街銅牛
         { src: 'critters/mississippi-steamboat.svg', lon: -90.07, lat: 29.95, mode: 'bob', s: 1.1, sea: true, deco: true }, // 美國：密西西比河蒸汽船
@@ -673,7 +673,7 @@
         { src: 'critters/beethoven.svg', lon: 16.37, lat: 48.21, mode: 'still', face: 'F', s: 1.0, deco: true }, // 貝多芬
         { src: 'critters/steve-jobs.svg', lon: -122.03, lat: 37.33, mode: 'still', face: 'F', s: 1.0, deco: true }, // 史蒂夫‧賈伯斯
         { src: 'critters/bill-gates.svg', lon: -122.12, lat: 47.67, mode: 'still', face: 'F', s: 1.0, deco: true }, // 比爾‧蓋茲
-        { src: 'critters/hokkaido-king-crab.svg', lon: 141.5, lat: 43.8, mode: 'bob', iso: 'small', sea: true, deco: true }, // 北海道帝王蟹
+        { src: 'critters/hokkaido-king-crab.svg', lon: 141.5, lat: 43.8, mode: 'still', iso: 'small', sea: true, deco: true }, // 北海道帝王蟹
         { src: 'critters/dalai-lama.svg', lon: 76.32, lat: 32.22, mode: 'still', face: 'F', s: 1.0, deco: true }, // 達賴喇嘛：原座標跟布達拉宮完全重疊，改放到他流亡後長居的印度達蘭薩拉
         // ── 第十一批補充（世界地標，不用在前 80 名額內，只要畫出來、放大能看到就好） ──────────
         { src: 'critters/parthenon.svg', lon: 22.44, lat: 37.98, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 希臘：帕德嫩神廟（素材本來就有畫，之前漏了放進地圖清單；跟雅典衛城拉開一點距離）
@@ -2022,7 +2022,9 @@
                 pct >= 0.15
                     ? `📈 大盤 +${pct.toFixed(2)}%：居民高舉雙手歡呼、蹦蹦跳跳！`
                     : pct <= -0.15
-                      ? `📉 大盤 ${pct.toFixed(2)}%：居民垂頭喪氣，邊哭邊擦眼淚。`
+                      ? d.look && d.look.iso
+                          ? `📉 大盤 ${pct.toFixed(2)}%：居民垂頭喪氣、唉聲嘆氣。`
+                          : `📉 大盤 ${pct.toFixed(2)}%：居民垂頭喪氣，邊哭邊擦眼淚。`
                       : '➖ 大盤平盤：居民悠閒散步，偶爾揮揮手。';
             const outfit = (window.FOLK_OUTFITS || {})[d.market];
             return {
@@ -2152,6 +2154,11 @@
             hop = -s * R * (big ? 0.2 : 0.12);
             sy = 1 + s * 0.05 - Math.pow(1 - s, 6) * 0.08; // 騰空拉長、落地壓扁
             rot = Math.sin(beat * Math.PI) * 2;
+        } else if (mood === 'down' && c.d.look && c.d.look.iso) {
+            // 2.5D 版：垂頭喪氣、慢慢嘆氣（不哭、頭上也沒有烏雲），身體緩緩左右晃
+            pose = Math.floor(T * tempo * 0.45) % 2 ? 'sadB' : 'sadA';
+            rot = Math.sin(T * 0.9 * tempo) * 1.6;
+            sy = 0.975 + Math.sin(T * 0.9) * 0.01;
         } else if (mood === 'down') {
             pose = Math.floor(T * tempo * 1.2) % 2 ? 'sadB' : 'sadA';
             rot = Math.sin(T * 9 * tempo) * 1.1; // 抽泣時肩膀顫抖
@@ -2839,7 +2846,9 @@
             // 先用統一的底色填滿整朵雲的外形，雲內部就不會有一圈一圈的硬邊（不然會像一串葡萄）。
             // 顏色：真的積雨雲不是單一灰色，是「頂部被陽光照到的銀白 → 中段帶藍的石板色 → 雲底很深的靛灰」，
             // 明暗差要拉開，雲才有體積感；舊版從頭到尾都在中灰附近，看起來就是一團灰
-            g.fillStyle = '#46506e';
+            // 11-19 調整：舊版底色太深（#46506e）、受光與銀邊又太亮，明暗對比過強像貼紙。
+            // 改成中間調的藍灰雨雲，亮部與暗部都收斂，整體更像真的陰天雲
+            g.fillStyle = '#5f677b';
             g.beginPath();
             for (const [x, y, rr] of P.concat(bumps)) {
                 g.moveTo(x + rr, y);
@@ -2849,30 +2858,30 @@
             g.globalCompositeOperation = 'source-atop';
             // 整朵雲由上往下：頂部偏亮的藍灰、往下漸暗
             const sky = g.createLinearGradient(0, 0, 0, STORM_H);
-            sky.addColorStop(0, 'rgba(170,182,210,.75)');
-            sky.addColorStop(0.5, 'rgba(110,122,156,.2)');
-            sky.addColorStop(1, 'rgba(110,122,156,0)');
+            sky.addColorStop(0, 'rgba(206,210,222,.5)');
+            sky.addColorStop(0.55, 'rgba(150,158,178,.12)');
+            sky.addColorStop(1, 'rgba(150,158,178,0)');
             g.fillStyle = sky;
             g.fillRect(0, 0, STORM_W, STORM_H);
             // 每團雲球的上方加一塊受光（左上方的光，偏暖的銀白），由後往前畫，前排的亮頂會蓋在後排的暗部上
             for (const [x, y, rr] of P) {
                 const gr = g.createRadialGradient(x - rr * 0.25, y - rr * 0.62, 0, x - rr * 0.1, y - rr * 0.3, rr * 1.1);
-                gr.addColorStop(0, 'rgba(232,234,242,.55)');
-                gr.addColorStop(0.4, 'rgba(170,180,208,.26)');
-                gr.addColorStop(1, 'rgba(120,130,166,0)');
+                gr.addColorStop(0, 'rgba(222,225,233,.46)');
+                gr.addColorStop(0.45, 'rgba(176,182,198,.2)');
+                gr.addColorStop(1, 'rgba(150,156,176,0)');
                 g.fillStyle = gr;
                 g.fillRect(x - rr * 1.2, y - rr * 1.6, rr * 2.4, rr * 2.6);
                 // 雲球下緣的陰影（偏靛藍），前後層次才分得出來
                 const sh = g.createRadialGradient(x + rr * 0.1, y + rr * 0.85, 0, x, y + rr * 0.85, rr);
-                sh.addColorStop(0, 'rgba(26,30,52,.2)');
-                sh.addColorStop(1, 'rgba(26,30,52,0)');
+                sh.addColorStop(0, 'rgba(44,48,62,.2)');
+                sh.addColorStop(1, 'rgba(60,66,84,0)');
                 g.fillStyle = sh;
                 g.fillRect(x - rr * 1.1, y - rr * 0.1, rr * 2.2, rr * 2);
             }
             // 雲底：很深的靛灰，是「要下雨」的感覺
             const under = g.createLinearGradient(0, STORM_H * 0.42, 0, STORM_H);
-            under.addColorStop(0, 'rgba(22,26,44,0)');
-            under.addColorStop(1, 'rgba(22,26,44,.78)');
+            under.addColorStop(0, 'rgba(58,64,82,0)');
+            under.addColorStop(1, 'rgba(42,46,60,.6)');
             g.fillStyle = under;
             g.fillRect(0, 0, STORM_W, STORM_H);
             // 外緣一圈細細的亮邊（逆光的銀邊），輪廓從深色地圖上跳出來
@@ -2883,7 +2892,7 @@
             const rg = rim.getContext('2d');
             rg.drawImage(c, 0, 0);
             rg.globalCompositeOperation = 'source-in';
-            rg.fillStyle = 'rgba(214,222,244,.55)';
+            rg.fillStyle = 'rgba(214,220,232,.22)';
             rg.fillRect(0, 0, STORM_W, STORM_H * 0.62);
             rg.globalCompositeOperation = 'destination-out';
             rg.drawImage(c, 0, 1.6);
@@ -2893,7 +2902,7 @@
             out.width = STORM_W;
             out.height = STORM_H;
             const o = out.getContext('2d');
-            o.filter = 'blur(1.2px)';
+            o.filter = 'blur(1.6px)';
             o.drawImage(c, 0, 0);
             return out;
         };
@@ -2928,6 +2937,15 @@
                 // 每層每點各自的閃爍相位
                 seeds: FW_RINGS.map(ring => Array.from({ length: ring.n }, () => Math.random() * 10)),
             };
+            // 火花：每顆有自己的方向、初速、顏色（主色＋少量第二色），爆開後減速、受重力往下墜
+            const col2 = FW_COLORS[Math.floor(Math.random() * FW_COLORS.length)];
+            const N = 30;
+            sh.parts = Array.from({ length: N }, (_, i) => ({
+                a: (i / N) * Math.PI * 2 + (Math.random() - 0.5) * 0.25,
+                v: 0.78 + Math.random() * 0.3,
+                col: Math.random() < 0.25 ? col2 : sh.col,
+                tw: Math.random() * 10,
+            }));
             FW_STATE.set(key, sh);
         }
         sh.t += dt;
@@ -2937,7 +2955,7 @@
             sh.y = (cy + 55) + (sh.ty - (cy + 55)) * (1 - Math.pow(1 - p, 2)); // ease-out 上升
             if (p >= 1) { sh.phase = 'burst'; sh.t = 0; sh.bx = sh.x; sh.by = sh.ty; }
         } else if (sh.phase === 'burst') {
-            const dur = 1.7;
+            const dur = 1.9;
             const p = Math.min(1, sh.t / dur);
             sh.maxRadius = 42 * (1 - Math.pow(1 - p, 2)); // 最外層半徑上限（ease-out）
             // 亮度曲線：前 70% 維持全亮，最後 30% 才淡出（避免整段都在變暗，看起來忽隱忽現）
@@ -3001,42 +3019,68 @@
                 const sh = stepFw(m.s, T, dt, sx, skyY);
                 if (sh.phase === 'launch') {
                     // 上升軌跡：亮點 + 拖尾（原本墊了一層深色暈提升對比，但在亮色底圖上看起來像黑煙，拿掉）
-                    const spr = fwSprite(sh.col);
-                    ctx.globalCompositeOperation = 'lighter';
+                    // 上升：一條往下淡出的細尾巴＋頂端的亮點（平塗，不發光）
+                    const [r, g, b] = sh.col;
+                    const tail = ctx.createLinearGradient(0, sh.y, 0, sh.y + 16);
+                    tail.addColorStop(0, `rgba(255,236,190,.9)`);
+                    tail.addColorStop(1, `rgba(255,236,190,0)`);
+                    ctx.globalCompositeOperation = 'source-over';
                     ctx.globalAlpha = 1;
-                    ctx.drawImage(spr, 0, 0, 16, 16, sh.x - 3.5, sh.y - 3.5, 7, 7);
-                    ctx.globalAlpha = 0.5;
-                    ctx.drawImage(spr, 0, 0, 16, 16, sh.x - 2, sh.y + 5, 4, 10);
+                    ctx.strokeStyle = tail;
+                    ctx.lineWidth = 1.6;
+                    ctx.lineCap = 'round';
+                    ctx.beginPath();
+                    ctx.moveTo(sh.x, sh.y);
+                    ctx.lineTo(sh.x + Math.sin(sh.t * 20) * 0.6, sh.y + 16);
+                    ctx.stroke();
+                    ctx.fillStyle = `rgb(${Math.min(255, r + 80)},${Math.min(255, g + 80)},${Math.min(255, b + 80)})`;
+                    ctx.beginPath();
+                    ctx.arc(sh.x, sh.y, 2, 0, Math.PI * 2);
+                    ctx.fill();
                 } else if (sh.phase === 'burst') {
-                    // 多層同心圓：每層各自延遲展開、各自半徑比例，點與點之間用各自相位閃爍
-                    const spr = fwSprite(sh.col);
-                    for (let ri = 0; ri < FW_RINGS.length; ri++) {
-                        const ring = FW_RINGS[ri];
-                        // 這層的展開進度：扣掉延遲後才開始跑（延遲前半徑是 0，不畫）
-                        const localT = Math.max(0, sh.t - ring.delay);
-                        if (localT <= 0) continue;
-                        const radius = sh.maxRadius * ring.scale;
-                        if (radius <= 0) continue;
-                        for (let i = 0; i < ring.n; i++) {
-                            const a = (i / ring.n) * Math.PI * 2 + ri * 0.3; // 每層錯開角度，不會疊成放射線
-                            const px = sh.bx + Math.cos(a) * radius,
-                                  py = sh.by + Math.sin(a) * radius * 0.85; // 略扁一點更像煙火
-                            const twinkle = 0.5 + 0.5 * Math.sin(T * 9 + sh.seeds[ri][i]);
-                            const sz = 4.2 + twinkle * 2.2;
-                            // 亮點用 lighter 疊加發光感（原本墊的深色暈拿掉了，亮色底圖上不會再有黑圈）
-                            ctx.globalCompositeOperation = 'lighter';
-                            const alpha = sh.fade * (0.7 + twinkle * 0.3); // 基礎亮度拉高
-                            ctx.globalAlpha = alpha;
-                            ctx.drawImage(spr, 0, 0, 16, 16,
-                                px - sz, py - sz, sz * 2, sz * 2);
-                        }
+                    // 11-19 改版：火花從中心往外噴（初速快、空氣阻力慢慢減速）、受重力往下墜，每顆拖一小段尾巴；
+                    // 平塗顏色、不再用 lighter 疊出發光圓點，跟 2.5D 圖示的扁平風格一致，看起來也比較像真的煙火
+                    const tt = sh.t,
+                        DRAG = 2.4,
+                        REACH = 46, // 爆開的半徑（px）
+                        GRAV = 26; // 重力（px/s²）
+                    const posAt = (p, u) => {
+                        const d = REACH * p.v * (1 - Math.exp(-DRAG * u));
+                        return [sh.bx + Math.cos(p.a) * d, sh.by + Math.sin(p.a) * d * 0.85 + 0.5 * GRAV * u * u];
+                    };
+                    ctx.globalCompositeOperation = 'source-over';
+                    ctx.lineCap = 'round';
+                    // 剛爆開的一瞬間：中心一團白光
+                    if (tt < 0.18) {
+                        ctx.globalAlpha = 1 - tt / 0.18;
+                        ctx.fillStyle = '#fffbe6';
+                        ctx.beginPath();
+                        ctx.arc(sh.bx, sh.by, 4 + tt * 30, 0, Math.PI * 2);
+                        ctx.fill();
                     }
-                    // 中心核心光球（讓整體看起來更圓更飽滿）
-                    ctx.globalCompositeOperation = 'lighter';
-                    ctx.globalAlpha = sh.fade * 0.6;
-                    const coreSz = sh.maxRadius * 0.28;
-                    ctx.drawImage(spr, 0, 0, 16, 16,
-                        sh.bx - coreSz, sh.by - coreSz, coreSz * 2, coreSz * 2);
+                    for (const p of sh.parts) {
+                        const [x1, y1] = posAt(p, tt),
+                            [x0, y0] = posAt(p, Math.max(0, tt - 0.16));
+                        // 後段火花會閃爍、慢慢熄滅
+                        const late = Math.max(0, (tt - 0.9) / 0.8);
+                        const blink = late > 0 ? 0.55 + 0.45 * Math.sin(T * 28 + p.tw) : 1;
+                        const a = sh.fade * blink;
+                        if (a <= 0.02) continue;
+                        const [r, g, b] = p.col;
+                        ctx.globalAlpha = a * 0.55;
+                        ctx.strokeStyle = `rgb(${r},${g},${b})`;
+                        ctx.lineWidth = 1.6;
+                        ctx.beginPath();
+                        ctx.moveTo(x0, y0);
+                        ctx.lineTo(x1, y1);
+                        ctx.stroke();
+                        // 火花的頭：亮一點的同色小圓點
+                        ctx.globalAlpha = a;
+                        ctx.fillStyle = `rgb(${Math.min(255, r + 60)},${Math.min(255, g + 60)},${Math.min(255, b + 60)})`;
+                        ctx.beginPath();
+                        ctx.arc(x1, y1, 1.6, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
                 }
                 ctx.globalCompositeOperation = 'source-over';
             } else {
@@ -3066,8 +3110,8 @@
                     const rw = cloudW * 0.6,
                         rh = 46;
                     const gr = ctx.createLinearGradient(0, baseY, 0, baseY + rh);
-                    gr.addColorStop(0, 'rgba(70,82,110,.32)');
-                    gr.addColorStop(1, 'rgba(70,82,110,0)');
+                    gr.addColorStop(0, 'rgba(110,120,140,.22)');
+                    gr.addColorStop(1, 'rgba(110,120,140,0)');
                     ctx.globalAlpha = rainAmt * fade;
                     ctx.fillStyle = gr;
                     ctx.beginPath();
@@ -3086,7 +3130,7 @@
                             len = near ? 12 : 8,
                             fall = near ? 50 : 40;
                         ctx.lineWidth = near ? 1.5 : 1;
-                        ctx.strokeStyle = near ? 'rgb(190,210,245)' : 'rgb(150,170,210)';
+                        ctx.strokeStyle = near ? 'rgb(200,212,232)' : 'rgb(170,182,204)';
                         const rr = rng(seed * 7 + layer * 101);
                         for (let i = 0; i < n; i++) {
                             const ux = rr() - 0.5,
@@ -3166,7 +3210,7 @@
                     bg.globalCompositeOperation = 'source-over';
                 }
                 bg.globalAlpha = 1;
-                ctx.globalAlpha = fade;
+                ctx.globalAlpha = fade * 0.92; // 稍微透一點，邊緣跟底圖融在一起，不像一塊硬貼上去的灰色
                 ctx.drawImage(buf, 0, 0, bpw, bph, sx - bw / 2, skyY - bh / 2, bpw / wd, bph / wd);
             }
         }

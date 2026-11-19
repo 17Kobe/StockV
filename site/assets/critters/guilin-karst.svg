@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-  <!-- 桂林山水（2.5D）：灕江上一座座圓柱形、頂端圓潤的綠色喀斯特石峰，江面上一艘竹筏，戴斗笠的漁夫撐竹竿，船頭站著一隻鸕鶿，水波擴散（動畫）。光源左上，不描邊 -->
+  <!-- 桂林山水（2.5D）：灕江上一座座圓柱形、頂端圓潤的綠色喀斯特石峰，江面上一艘竹筏，戴斗笠的漁夫撐竹竿，船頭站著一隻鸕鶿；竹筏在江面上慢慢來回漂、江面一圈圈水波擴散（動畫，山和水面本身不動）。光源左上，不描邊 -->
   <g transform="translate(40 55.64) scale(0.82)">
     <path d="M-6.93 -26L45.03 4L6.93 26L-45.03 -4Z" fill="#52c3dc"/>
     <path d="M-29.44 -13.01L22.52 16.99L15.59 20.99L-36.37 -9.01Z" fill="#9be3ea" opacity="0.5"/>
@@ -171,6 +171,7 @@
     <path d="M17.7 -1.39L17.64 -0.77L17.46 -0.18L17.16 0.34L16.78 0.78L16.31 1.11L15.79 1.31L15.25 1.38L14.7 1.31L14.18 1.11L13.72 0.78L13.33 0.34L13.04 -0.18L12.85 -0.77L12.79 -1.39L12.85 -2L13.04 -2.59L13.33 -3.11L13.72 -3.55L14.18 -3.88L14.7 -4.09L15.25 -4.16L15.79 -4.09L16.31 -3.88L16.78 -3.55L17.16 -3.11L17.46 -2.59L17.64 -2Z" fill="#4f9a5a"/>
     <path d="M15.53 -2.29L15.51 -2.04L15.43 -1.81L15.31 -1.61L15.14 -1.43L14.95 -1.3L14.73 -1.22L14.5 -1.19L14.28 -1.22L14.06 -1.3L13.86 -1.43L13.7 -1.61L13.58 -1.81L13.5 -2.04L13.48 -2.29L13.5 -2.53L13.58 -2.76L13.7 -2.97L13.86 -3.14L14.06 -3.27L14.28 -3.36L14.5 -3.38L14.73 -3.36L14.95 -3.27L15.14 -3.14L15.31 -2.97L15.43 -2.76L15.51 -2.53Z" fill="#7cc47a"/>
     <path d="M11.63 11L19.54 11L18.35 14L12.83 14Z" fill="#356f42" opacity="0.25"/>
+    <g><animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;3 -1.2;0 0;-3 1.2;0 0" dur="10s" begin="0.0s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/><animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;0 -0.35;0 0;0 0.35;0 0" dur="2.2s" begin="0.0s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
     <path d="M-21.12 6L-3.12 4.6L-3.12 5.1L-21.12 6.5Z" fill="#a8884a"/>
     <path d="M-21.12 6.6L-3.12 5.2L-3.12 5.7L-21.12 7.1Z" fill="#d4b26a"/>
     <path d="M-21.12 7.2L-3.12 5.8L-3.12 6.3L-21.12 7.7Z" fill="#a8884a"/>
@@ -193,7 +194,10 @@
     <path d="M-18.16 3.84L-18.18 3.95L-18.22 4.05L-18.3 4.14L-18.4 4.21L-18.53 4.27L-18.66 4.3L-18.81 4.32L-18.95 4.3L-19.09 4.27L-19.21 4.21L-19.31 4.14L-19.39 4.05L-19.44 3.95L-19.46 3.84L-19.44 3.73L-19.39 3.63L-19.31 3.54L-19.21 3.47L-19.09 3.41L-18.95 3.38L-18.81 3.36L-18.66 3.38L-18.53 3.41L-18.4 3.47L-18.3 3.54L-18.22 3.63L-18.18 3.73Z" fill="#4a4f5c"/>
     <path d="M-19.12 3.4L-18.32 3.4L-19.52 0L-20.12 0.4Z" fill="#2c2f38"/>
     <path d="M-20.12 0L-21.92 0.6L-20.12 0.6Z" fill="#e6b84a"/>
-    <ellipse cx="-19.05" cy="-3.00" rx="3" ry="0.6" fill="#ffffff" opacity=".8"><animate attributeName="rx" values="2;5;2" dur="2.4s" repeatCount="indefinite"/></ellipse>
-    <ellipse cx="-3.46" cy="10.00" rx="3" ry="0.6" fill="#ffffff" opacity=".8"><animate attributeName="rx" values="2;5;2" dur="3.4s" repeatCount="indefinite"/></ellipse>
+    </g>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-20.05 -3.00a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM-19.87 -3.00a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z"><animate attributeName="d" values="M-20.05 -3.00a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM-19.87 -3.00a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z;M-23.45 -3.00a4.40 2.20 0 1 0 8.80 0a4.40 2.20 0 1 0 -8.80 0ZM-22.66 -3.00a3.61 1.80 0 1 0 7.22 0a3.61 1.80 0 1 0 -7.22 0Z" dur="3.2s" begin="0.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;0" dur="3.2s" begin="0.0s" repeatCount="indefinite"/></path>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-4.46 10.00a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM-4.28 10.00a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z"><animate attributeName="d" values="M-4.46 10.00a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM-4.28 10.00a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z;M-7.86 10.00a4.40 2.20 0 1 0 8.80 0a4.40 2.20 0 1 0 -8.80 0ZM-7.07 10.00a3.61 1.80 0 1 0 7.22 0a3.61 1.80 0 1 0 -7.22 0Z" dur="3.2s" begin="0.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;0" dur="3.2s" begin="0.8s" repeatCount="indefinite"/></path>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-6.20 -1.00a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM-6.02 -1.00a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z"><animate attributeName="d" values="M-6.20 -1.00a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM-6.02 -1.00a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z;M-9.60 -1.00a4.40 2.20 0 1 0 8.80 0a4.40 2.20 0 1 0 -8.80 0ZM-8.80 -1.00a3.61 1.80 0 1 0 7.22 0a3.61 1.80 0 1 0 -7.22 0Z" dur="3.2s" begin="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;0" dur="3.2s" begin="1.6s" repeatCount="indefinite"/></path>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M9.39 12.00a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM9.57 12.00a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z"><animate attributeName="d" values="M9.39 12.00a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM9.57 12.00a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z;M5.99 12.00a4.40 2.20 0 1 0 8.80 0a4.40 2.20 0 1 0 -8.80 0ZM6.78 12.00a3.61 1.80 0 1 0 7.22 0a3.61 1.80 0 1 0 -7.22 0Z" dur="3.2s" begin="2.4000000000000004s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;0" dur="3.2s" begin="2.4000000000000004s" repeatCount="indefinite"/></path>
   </g>
 </svg>

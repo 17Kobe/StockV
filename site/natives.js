@@ -148,44 +148,9 @@
                 k: 0.8,
             }),
         ],
-        // 中國：中山裝 / 旗袍 + 髮簪 / 熊貓帽小朋友
-        cn: [
-            mk({
-                skin: SK.light,
-                top: ['#2f5fa8', '#1b3a73'],
-                pattern: 'plain',
-                frog: '#ffd24d',
-                collar: '#ffd24d',
-                pants: PANTS.black,
-                hair: HAIR.black,
-            }),
-            mk({
-                skin: SK.light,
-                top: ['#d9344a', '#9a1c33'],
-                trim: ['#ffd24d', '#ffe9a0'],
-                pattern: 'plain',
-                outfit: 'qipao',
-                pants: ['#d9344a', '#9a1c33'],
-                frog: '#ffd24d',
-                collar: '#ffd24d',
-                hair: HAIR.black,
-                hairStyle: 'bun',
-                gear: 'pin',
-                gearColors: ['#ffd24d', '#ff6f61', '#ffffff'],
-                k: 0.96,
-            }),
-            mk({
-                skin: SK.light,
-                top: ['#f2b63c', '#c88a12'],
-                trim: ['#e24a3b', '#e24a3b'],
-                pattern: 'plain',
-                pants: PANTS.navy,
-                hair: HAIR.black,
-                gear: 'panda',
-                gearColors: ['#ffffff', '#1d1d24', '#ffffff'],
-                k: 0.8,
-            }),
-        ],
+        // 中國：改成一個人、2.5D 統一風格（紅色唐裝＋瓜皮帽），圖形在 folk25.js（gen_folk.py 產生）。
+        // 舊版三人（中山裝 / 旗袍 + 髮簪 / 熊貓帽小朋友）見 git 歷史
+        cn: [{ iso: 'cn', k: 1 }],
         // 日本：法被 + 頭巾 / 和服 + 髮簪 / 甚平小朋友
         jp: [
             mk({
@@ -485,8 +450,14 @@
         { ox: 0.15, oy: -0.1, s: 1.65, ph: 1.7 },
         { ox: 1.2, oy: 0.12, s: 1.4, ph: 3.1 },
     ];
-    for (const [cc, market, lon, lat] of COUNTRY_FOLK)
-        COUNTRY_LOOKS[cc].forEach((look, i) => FOLK.push({ id: `${cc}-${i + 1}`, market, lon, lat, ...SLOTS[i], minK: 1, look }));
+    // 只有一個人的國家（2.5D 統一風格版）站在正中間，稍微大一點
+    const SOLO = { ox: 0, oy: 0, s: 1.8, ph: 0 };
+    for (const [cc, market, lon, lat] of COUNTRY_FOLK) {
+        const looks = COUNTRY_LOOKS[cc];
+        looks.forEach((look, i) =>
+            FOLK.push({ id: `${cc}-${i + 1}`, market, lon, lat, ...(looks.length === 1 ? SOLO : SLOTS[i]), minK: 1, look }),
+        );
+    }
 
     // 各姿勢：aL / aR = 左右手臂 [手肘, 手], front 表示手臂畫在頭的前面（擦眼淚）；
     // head = [旋轉角度, 往下偏移]；eyes：open / happy / sad / closed；mouth：smile / open / frown / wail；
@@ -1100,6 +1071,13 @@
 
     // 一個角色：定義漸層 + 所有姿勢。uid 要唯一（同一頁面有多個角色時 id 不能重複）
     function markup(look, uid) {
+        // 2.5D 統一風格的人物：每個姿勢是預先畫好的 SVG（folk25.js），座標系一樣
+        if (look.iso) {
+            const P = (window.FOLK25 || {})[look.iso] || {};
+            return Object.keys(POSES)
+                .map((p) => `<g data-pose="${p}" style="display:none">${P[p] || P.idle || ''}</g>`)
+                .join('');
+        }
         const id = `nv-${uid}`;
         const lin = (n, c) =>
             `<linearGradient id="${id}-${n}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c[0]}"/><stop offset="1" stop-color="${c[1]}"/></linearGradient>`;

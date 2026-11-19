@@ -1,7 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-  <!-- 香港紅帆船（2.5D）：木造中式帆船，船尾高起的船樓與金色腰線，兩面有一條條竹骨的紅色硬帆，船頭浪花閃動（動畫）。光源左上，不描邊 -->
+  <!-- 香港紅帆船（2.5D）：木造中式帆船，船尾高起的船樓與金色腰線，兩面有一條條竹骨的紅色硬帆，船身在水面上輕輕起伏，四周水波擴散（動畫，水面本身不動）。光源左上，不描邊 -->
   <g transform="translate(41.43 57.22) scale(1.29)">
     <path d="M20.78 14L18.32 14.92L15.09 15.31L11.22 15.14L6.84 14.44L2.14 13.21L-2.72 11.52L-7.53 9.42L-12.12 7L-16.32 4.35L-19.95 1.57L-22.88 -1.23L-25 -3.95L-26.23 -6.48L-26.51 -8.71L-25.84 -10.58L-24.25 -12L-21.79 -12.92L-18.56 -13.31L-14.68 -13.14L-10.31 -12.44L-5.6 -11.21L-0.75 -9.52L4.07 -7.42L8.66 -5L12.85 -2.35L16.49 0.43L19.42 3.23L21.54 5.95L22.76 8.48L23.05 10.71L22.38 12.58Z" fill="#52c3dc" opacity="0.85"/>
+    <g><animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;0 -0.5;0 0;0 0.5;0 0" dur="2.6s" begin="0.0s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/><animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;1.2 0;0 0;-1.2 0;0 0" dur="9s" begin="0.0s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
     <path d="M-20.78 -8L-13.86 -12L22.52 9L24.31 10.49L17.38 14.49L-19 -6.51Z" fill="#000000" opacity="0.2"/>
     <path d="M8.14 10.3L-20.78 -7L-20.78 -12L8.14 5.3Z" fill="#7d5a3a"/>
     <path d="M19.05 12L8.14 10.3L8.14 5.3L19.05 7Z" fill="#7d5a3a"/>
@@ -33,7 +34,9 @@
     <path d="M4.6 -13L13.75 -16.27L13.75 -15.77L4.6 -12.5Z" fill="#99352b"/>
     <path d="M4.6 -16.33L13.6 -19.2L13.6 -18.7L4.6 -15.83Z" fill="#99352b"/>
     <path d="M4.6 -19.67L13.45 -22.12L13.45 -21.62L4.6 -19.17Z" fill="#99352b"/>
-    <ellipse cx="21.65" cy="11.50" rx="3" ry="0.7" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".8;.2;.8" dur="1.8s" repeatCount="indefinite"/></ellipse>
-    <ellipse cx="22.52" cy="14.00" rx="3" ry="0.7" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".8;.2;.8" dur="2.4s" repeatCount="indefinite"/></ellipse>
+    </g>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M19.38 12.00a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM19.64 12.00a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z"><animate attributeName="d" values="M19.38 12.00a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM19.64 12.00a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z;M14.78 12.00a6.00 3.00 0 1 0 12.00 0a6.00 3.00 0 1 0 -12.00 0ZM15.86 12.00a4.92 2.46 0 1 0 9.84 0a4.92 2.46 0 1 0 -9.84 0Z" dur="3s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;0" dur="3s" begin="0s" repeatCount="indefinite"/></path>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-25.65 -8.00a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM-25.40 -8.00a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z"><animate attributeName="d" values="M-25.65 -8.00a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM-25.40 -8.00a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z;M-30.25 -8.00a6.00 3.00 0 1 0 12.00 0a6.00 3.00 0 1 0 -12.00 0ZM-29.17 -8.00a4.92 2.46 0 1 0 9.84 0a4.92 2.46 0 1 0 -9.84 0Z" dur="3s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;0" dur="3s" begin="1s" repeatCount="indefinite"/></path>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-4.00 7.50a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM-3.75 7.50a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z"><animate attributeName="d" values="M-4.00 7.50a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM-3.75 7.50a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z;M-8.60 7.50a6.00 3.00 0 1 0 12.00 0a6.00 3.00 0 1 0 -12.00 0ZM-7.52 7.50a4.92 2.46 0 1 0 9.84 0a4.92 2.46 0 1 0 -9.84 0Z" dur="3s" begin="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;0" dur="3s" begin="2s" repeatCount="indefinite"/></path>
   </g>
 </svg>

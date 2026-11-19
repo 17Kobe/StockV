@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-  <!-- 北海道帝王蟹（2.5D 俯視斜角）：紅色甲殼上一排排尖刺，左右三對分節長腳與一對螯，趴在白色冰塊上，嘴邊冒泡泡（動畫）。光源左上，不描邊 -->
+  <!-- 北海道帝王蟹（2.5D 俯視斜角）：紅色甲殼上一排排尖刺，左右三對分節長腳與一對螯，趴在白色冰塊上左右輕輕挪動，嘴邊冒泡泡（動畫，冰塊本身不動）。光源左上，不描邊 -->
   <g transform="translate(40 57.42) scale(1.47)">
     <path d="M-15.75 6.43L-19.6 0.59L-19.6 -1.41L-15.75 4.43Z" fill="#e4edf7"/>
     <path d="M19.6 3.41L18.2 8.88L18.2 6.88L19.6 1.41Z" fill="#bccbe0"/>
@@ -9,6 +9,7 @@
     <path d="M11.92 12.51L2.45 13.31L2.45 11.31L11.92 10.51Z" fill="#bccbe0"/>
     <path d="M11.92 10.51L2.45 11.31L-7.68 9.09L-15.75 4.43L-19.6 -1.41L-18.2 -6.88L-11.92 -10.51L-2.45 -11.31L7.68 -9.09L15.75 -4.43L19.6 1.41L18.2 6.88Z" fill="#ffffff"/>
     <path d="M-12.1 1.11L-10.91 -3.21L-5.56 -6.3L1.92 -6.98L8.66 -5L10.45 -3.51L13.89 0.38L12.7 4.7L7.35 7.79L-0.13 8.47L-6.87 6.49L-8.66 5Z" fill="#000000" opacity="0.2"/>
+    <g><animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;0.8 0;0 0;-0.8 0;0 0" dur="2.4s" begin="0.0s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
     <path d="M-6 -5L-9 -8.4L-9 -5.8L-6 -3Z" fill="#d24e3a"/>
     <path d="M-9 -8.4L-17 -12.1L-17 -9.9L-9 -5.8Z" fill="#d24e3a"/>
     <path d="M-17 -12.1L-21 -4L-17.4 -9.9Z" fill="#d24e3a"/>
@@ -50,6 +51,7 @@
     <path d="M3.4 -0.4L3.37 -0.18L3.3 0.03L3.18 0.22L3.02 0.38L2.83 0.5L2.62 0.57L2.4 0.6L2.18 0.57L1.97 0.5L1.78 0.38L1.62 0.22L1.5 0.03L1.43 -0.18L1.4 -0.4L1.43 -0.62L1.5 -0.83L1.62 -1.02L1.78 -1.18L1.97 -1.3L2.18 -1.37L2.4 -1.4L2.62 -1.37L2.83 -1.3L3.02 -1.18L3.18 -1.02L3.3 -0.83L3.37 -0.62Z" fill="#1b1d22"/>
     <path d="M-2.35 -0.7L-2.36 -0.62L-2.38 -0.55L-2.43 -0.48L-2.48 -0.43L-2.55 -0.38L-2.62 -0.36L-2.7 -0.35L-2.78 -0.36L-2.85 -0.38L-2.92 -0.43L-2.97 -0.48L-3.02 -0.55L-3.04 -0.62L-3.05 -0.7L-3.04 -0.78L-3.02 -0.85L-2.97 -0.92L-2.92 -0.97L-2.85 -1.02L-2.78 -1.04L-2.7 -1.05L-2.62 -1.04L-2.55 -1.02L-2.48 -0.97L-2.43 -0.92L-2.38 -0.85L-2.36 -0.78Z" fill="#ffffff"/>
     <path d="M2.45 -0.7L2.44 -0.62L2.42 -0.55L2.37 -0.48L2.32 -0.43L2.25 -0.38L2.18 -0.36L2.1 -0.35L2.02 -0.36L1.95 -0.38L1.88 -0.43L1.83 -0.48L1.78 -0.55L1.76 -0.62L1.75 -0.7L1.76 -0.78L1.78 -0.85L1.83 -0.92L1.88 -0.97L1.95 -1.02L2.02 -1.04L2.1 -1.05L2.18 -1.04L2.25 -1.02L2.32 -0.97L2.37 -0.92L2.42 -0.85L2.44 -0.78Z" fill="#ffffff"/>
+    </g>
     <circle cx="-5.20" cy="-2.00" r="0.90" fill="#e6f6ff" opacity="0"><animate attributeName="opacity" values="0;0.9;0" dur="2.6s" begin="0.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;2.4 -8.0" dur="2.6s" begin="0.0s" repeatCount="indefinite"/></circle>
     <circle cx="-1.73" cy="0.00" r="0.90" fill="#e6f6ff" opacity="0"><animate attributeName="opacity" values="0;0.9;0" dur="2.6s" begin="1.3s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;2.4 -8.0" dur="2.6s" begin="1.3s" repeatCount="indefinite"/></circle>
   </g>
