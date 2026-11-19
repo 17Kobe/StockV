@@ -1,131 +1,100 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-<!-- 白川鄉合掌村 Shirakawa-go：三棟大小不同的合掌造民家，極陡的厚茅草三角屋頂幾乎觸地，屋脊覆雪 -->
-<!-- 山牆露出深色木樑與白色障子窗，四周是綠色梯田水田，後方有杉林與小雪山 -->
-<defs>
-  <linearGradient id="gshThatch" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#e2b46a"/>
-    <stop offset="1" stop-color="#a87634"/>
-  </linearGradient>
-  <linearGradient id="gshThatchSide" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#c8944a"/>
-    <stop offset="1" stop-color="#8a5a24"/>
-  </linearGradient>
-  <linearGradient id="gshMtn" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#5a8a74"/>
-    <stop offset="1" stop-color="#2e5a40"/>
-  </linearGradient>
-  <linearGradient id="gshField" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#9ad860"/>
-    <stop offset="1" stop-color="#5a9a34"/>
-  </linearGradient>
-</defs>
-<!-- 後方小山與杉林 -->
-<path d="M2 46 L16 22 L22 28 L32 14 L46 30 L54 24 L78 46 Z" fill="url(#gshMtn)" stroke="#24463a" stroke-width="0.5" stroke-linejoin="round"/>
-<path d="M28 20 L32 14 L36 19 L34 18.5 L32 20 L30 18.6 Z" fill="#ffffff"/>
-<path d="M13 27 L16 22 L19 25.5 L17 25 Z" fill="#ffffff"/>
-<g fill="#2a5a34" stroke="#1a3a22" stroke-width="0.4">
-  <path d="M4 50 L7 40 L10 50 Z"/><path d="M8 52 L11.5 41 L15 52 Z"/>
-  <path d="M68 50 L71.5 38 L75 50 Z"/><path d="M73 52 L76 42 L79 52 Z"/>
-</g>
-<!-- 梯田水田 -->
-<path d="M1 54 Q40 48 79 54 L79 74 Q40 79 1 74 Z" fill="url(#gshField)" stroke="#3e7a28" stroke-width="0.5"/>
-<path d="M2 62 Q40 57 78 62 M3 69 Q40 65 77 69" fill="none" stroke="#e8f4c0" stroke-width="0.8" opacity="0.8"/>
-<path d="M8 66 Q20 64 30 65.5 M50 66 Q62 64.5 72 66" fill="none" stroke="#7ac8e8" stroke-width="1" opacity="0.8" stroke-linecap="round"/>
-<ellipse cx="44" cy="67.5" rx="24" ry="3" fill="#24461c" opacity="0.3"/>
-<g transform="translate(14 31) scale(0.5)">
-  <!-- 側面屋頂（茅草） -->
-  <path d="M0 -2 L14 -8 L33 36 L19 42 Z" fill="url(#gshThatchSide)" stroke="#5a3a16" stroke-width="0.7" stroke-linejoin="round"/>
-  <path d="M1.6 -2.7 L20.6 41.3 M3.1 -3.3 L22.1 40.7 M4.7 -4.0 L23.7 40.0 M6.2 -4.7 L25.2 39.3 M7.8 -5.3 L26.8 38.7 M9.3 -6.0 L28.3 38.0 M10.9 -6.7 L29.9 37.3 M12.4 -7.3 L31.4 36.7" stroke="#8a5e28" stroke-width="0.5" opacity="0.7"/>
-  <!-- 屋頂積雪 -->
-  <path d="M0 -2 L14 -8 L19.5 4.5 Q16 6 14 4.5 Q11 7 8.5 6 Q6 9 4 8 Z" fill="#ffffff" stroke="#b8cce0" stroke-width="0.5" stroke-linejoin="round"/>
-  <path d="M25 22 Q28 20 29.5 24 L27.5 25 Z" fill="#ffffff" opacity="0.9"/>
-  <!-- 牆身 -->
-  <path d="M19 40 L31 35 L31 43 L19 49 Z" fill="#5a3a20" stroke="#2e1c0c" stroke-width="0.5"/>
-  <path d="M21.5 41.5 L28.5 38.6 L28.5 42 L21.5 45 Z" fill="#f2ecd8" stroke="#2e1c0c" stroke-width="0.4"/>
-  <rect x="-17" y="40" width="36" height="9" fill="#6a4628" stroke="#2e1c0c" stroke-width="0.5"/>
-  <rect x="-14" y="42" width="7" height="5" fill="#f4eedc" stroke="#2e1c0c" stroke-width="0.5"/>
-  <rect x="-4" y="42" width="7" height="7" fill="#3a2414" stroke="#2e1c0c" stroke-width="0.5"/>
-  <rect x="7" y="42" width="8" height="5" fill="#f4eedc" stroke="#2e1c0c" stroke-width="0.5"/>
-  <path d="M-10.5 42 V47 M10.5 42 V47 M14 42 V47" stroke="#6a4628" stroke-width="0.4"/>
-  <!-- 正面山牆的茅草厚邊 -->
-  <path d="M0 -2 L20 42.5 L15 42.5 L0 7 L-15 42.5 L-20 42.5 Z" fill="url(#gshThatch)" stroke="#5a3a16" stroke-width="0.7" stroke-linejoin="round"/>
-  <path d="M0 -2 L-20 42.5 L-17 42.5 L0 3 L17 42.5 L20 42.5 Z" fill="#7a5226" opacity="0.35"/>
-  <!-- 山牆：木樑與障子窗 -->
-  <clipPath id="gshGable1"><path d="M0 7 L15 42 L-15 42 Z"/></clipPath>
-  <path d="M0 7 L15 42 L-15 42 Z" fill="#4a2e18"/>
-  <g clip-path="url(#gshGable1)">
-    <rect x="-12" y="33" width="24" height="7" fill="#f4eedc"/>
-    <rect x="-7.5" y="23.5" width="15" height="6" fill="#f4eedc"/>
-    <rect x="-3" y="15" width="6" height="5" fill="#f4eedc"/>
-    <path d="M-20 31.5 H20 M-20 40.5 H20 M-20 22 H20 M-20 13.5 H20" stroke="#8a5a30" stroke-width="1.2"/>
-    <path d="M-6 33 V40 M0 33 V40 M6 33 V40 M-2.5 23.5 V29.5 M2.5 23.5 V29.5 M0 15 V20" stroke="#4a2e18" stroke-width="0.7"/>
-    <path d="M-12 36.5 H12 M-7.5 26.5 H7.5" stroke="#4a2e18" stroke-width="0.4"/>
+  <!-- 白川鄉合掌村（2.5D）：三棟茅草屋頂非常陡的合掌造民家（木造牆、山牆上的格子窗），前方是水田，後方是長滿杉林的山。光源左上，不描邊 -->
+  <g transform="translate(44.83 54.71) scale(0.93)">
+    <path d="M-13.86 -20L-3.46 -26L3.46 -30Z" fill="#5fb071"/>
+    <path d="M-3.46 -26L17.32 -14L3.46 -30Z" fill="#5fb071"/>
+    <path d="M6.93 -8L-13.86 -20L3.46 -30Z" fill="#3f8a55"/>
+    <path d="M17.32 -14L6.93 -8L3.46 -30Z" fill="#2b663f"/>
+    <path d="M3.46 -10L15.59 -17L20.78 -18Z" fill="#5fb071"/>
+    <path d="M15.59 -17L34.64 -6L20.78 -18Z" fill="#5fb071"/>
+    <path d="M22.52 1L3.46 -10L20.78 -18Z" fill="#3f8a55"/>
+    <path d="M34.64 -6L22.52 1L20.78 -18Z" fill="#2b663f"/>
+    <path d="M27.71 6L-3.46 24L-3.46 22L27.71 4Z" fill="#46823d"/>
+    <path d="M-45.03 0L-3.46 24L-3.46 22L-45.03 -2Z" fill="#62a652"/>
+    <path d="M-13.86 -20L27.71 4L-3.46 22L-45.03 -2Z" fill="#86c770"/>
+    <path d="M-6.93 7.95L-1.73 10.95L-6.93 13.95L-12.12 10.95Z" fill="#9be3ea" opacity="0.9"/>
+    <path d="M-6.93 8.9L-3.46 10.9L-6.93 12.9L-10.39 10.9Z" fill="#a8e07a" opacity="0.6"/>
+    <path d="M-0.87 11.45L4.33 14.45L-0.87 17.45L-6.06 14.45Z" fill="#9be3ea" opacity="0.9"/>
+    <path d="M-0.87 12.4L2.6 14.4L-0.87 16.4L-4.33 14.4Z" fill="#a8e07a" opacity="0.6"/>
+    <path d="M-12.56 11.2L-7.36 14.2L-12.56 17.2L-17.75 14.2Z" fill="#9be3ea" opacity="0.9"/>
+    <path d="M-12.56 12.15L-9.09 14.15L-12.56 16.15L-16.02 14.15Z" fill="#a8e07a" opacity="0.6"/>
+    <path d="M-25.11 -9.5L-13.86 -16L0 -8L5.07 -3.79L-6.19 2.71L-20.04 -5.29Z" fill="#000000" opacity="0.2"/>
+    <path d="M0 -8L-11.26 -1.5L-11.26 -5.9L0 -12.4Z" fill="#4a3a30"/>
+    <path d="M-25.11 -9.5L-11.26 -1.5L-11.26 -5.9L-25.11 -13.9Z" fill="#6b5546"/>
+    <path d="M-0.87 -8.5L-3.18 -7.17L-3.18 -9.97L-0.87 -11.3Z" fill="#e8dcc0" opacity="0.9"/>
+    <path d="M-4.04 -6.67L-6.35 -5.33L-6.35 -8.13L-4.04 -9.47Z" fill="#e8dcc0" opacity="0.9"/>
+    <path d="M-7.22 -4.83L-9.53 -3.5L-9.53 -6.3L-7.22 -7.63Z" fill="#e8dcc0" opacity="0.9"/>
+    <path d="M0 -12.4L-11.26 -5.9L-5.63 -26.15Z" fill="#4a3a30"/>
+    <path d="M-1.65 -14.85L-9.61 -10.25L-9.61 -12.63L-1.65 -17.23Z" fill="#e8dcc0" opacity="0.85"/>
+    <path d="M-3.05 -18.29L-8.21 -15.31L-8.21 -17.69L-3.05 -20.67Z" fill="#e8dcc0" opacity="0.85"/>
+    <path d="M-4.46 -21.72L-6.8 -20.37L-6.8 -22.75L-4.46 -24.1Z" fill="#e8dcc0" opacity="0.85"/>
+    <path d="M-27.54 -12.9L-11.26 -3.5L-4.42 -26.05L-20.7 -35.45Z" fill="#bf9a5a"/>
+    <path d="M-23.09 -27.52L-6.81 -18.12L-4.42 -26.05L-20.7 -35.45Z" fill="#e2c385"/>
+    <path d="M-11.26 -3.5L-4.42 -26.05L-4.42 -24.85L-11.26 -2.3Z" fill="#8e6e3c"/>
+    <path d="M-4.42 -26.05L2.42 -11.4L2.42 -10.2L-4.42 -24.85Z" fill="#8e6e3c"/>
+    <path d="M-3.9 -25.95L-4.94 -25.35L-4.94 -26.35L-3.9 -26.95Z" fill="#5a3f28"/>
+    <path d="M-21.22 -34.75L-4.94 -25.35L-4.94 -26.35L-21.22 -35.75Z" fill="#7d5a3a"/>
+    <path d="M-20.18 -36.35L-3.9 -26.95L-4.94 -26.35L-21.22 -35.75Z" fill="#a37a52"/>
+    <path d="M-3.46 -1L6.06 -6.5L17.32 0L21.5 3.47L11.97 8.97L0.71 2.47Z" fill="#000000" opacity="0.2"/>
+    <path d="M17.32 0L7.79 5.5L7.79 1.5L17.32 -4Z" fill="#4a3a30"/>
+    <path d="M-3.46 -1L7.79 5.5L7.79 1.5L-3.46 -5Z" fill="#6b5546"/>
+    <path d="M16.45 -0.5L14.72 0.5L14.72 -1.9L16.45 -2.9Z" fill="#e8dcc0" opacity="0.9"/>
+    <path d="M13.86 1L12.12 2L12.12 -0.4L13.86 -1.4Z" fill="#e8dcc0" opacity="0.9"/>
+    <path d="M11.26 2.5L9.53 3.5L9.53 1.1L11.26 0.1Z" fill="#e8dcc0" opacity="0.9"/>
+    <path d="M17.32 -4L7.79 1.5L12.56 -15.25Z" fill="#4a3a30"/>
+    <path d="M15.85 -5.95L9.27 -2.15L9.27 -4.11L15.85 -7.91Z" fill="#e8dcc0" opacity="0.85"/>
+    <path d="M14.66 -8.76L10.46 -6.34L10.46 -8.3L14.66 -10.72Z" fill="#e8dcc0" opacity="0.85"/>
+    <path d="M13.47 -11.57L11.65 -10.52L11.65 -12.48L13.47 -13.54Z" fill="#e8dcc0" opacity="0.85"/>
+    <path d="M-5.89 -4L7.79 3.9L13.77 -15.15L0.09 -23.05Z" fill="#bf9a5a"/>
+    <path d="M-2 -16.34L11.68 -8.44L13.77 -15.15L0.09 -23.05Z" fill="#e2c385"/>
+    <path d="M7.79 3.9L13.77 -15.15L13.77 -13.95L7.79 5.1Z" fill="#8e6e3c"/>
+    <path d="M13.77 -15.15L19.75 -3L19.75 -1.8L13.77 -13.95Z" fill="#8e6e3c"/>
+    <path d="M14.29 -15.05L13.25 -14.45L13.25 -15.45L14.29 -16.05Z" fill="#5a3f28"/>
+    <path d="M-0.43 -22.35L13.25 -14.45L13.25 -15.45L-0.43 -23.35Z" fill="#7d5a3a"/>
+    <path d="M0.61 -23.95L14.29 -16.05L13.25 -15.45L-0.43 -23.35Z" fill="#a37a52"/>
+    <path d="M-35.51 -1.5L-26.85 -6.5L-16.45 -0.5L-12.88 2.47L-21.54 7.47L-31.93 1.47Z" fill="#000000" opacity="0.2"/>
+    <path d="M-16.45 -0.5L-25.11 4.5L-25.11 0.9L-16.45 -4.1Z" fill="#4a3a30"/>
+    <path d="M-35.51 -1.5L-25.11 4.5L-25.11 0.9L-35.51 -5.1Z" fill="#6b5546"/>
+    <path d="M-17.32 -1L-18.76 -0.17L-18.76 -2.17L-17.32 -3Z" fill="#e8dcc0" opacity="0.9"/>
+    <path d="M-19.63 0.33L-21.07 1.17L-21.07 -0.83L-19.63 -1.67Z" fill="#e8dcc0" opacity="0.9"/>
+    <path d="M-21.94 1.67L-23.38 2.5L-23.38 0.5L-21.94 -0.33Z" fill="#e8dcc0" opacity="0.9"/>
+    <path d="M-16.45 -4.1L-25.11 0.9L-20.78 -13.6Z" fill="#4a3a30"/>
+    <path d="M-17.84 -5.7L-23.73 -2.3L-23.73 -3.98L-17.84 -7.38Z" fill="#e8dcc0" opacity="0.85"/>
+    <path d="M-18.92 -8.07L-22.65 -5.93L-22.65 -7.61L-18.92 -9.75Z" fill="#e8dcc0" opacity="0.85"/>
+    <path d="M-20.01 -10.45L-21.56 -9.55L-21.56 -11.23L-20.01 -12.13Z" fill="#e8dcc0" opacity="0.85"/>
+    <path d="M-37.93 -4.1L-25.11 3.3L-19.57 -13.5L-32.39 -20.9Z" fill="#bf9a5a"/>
+    <path d="M-34.33 -14.98L-21.51 -7.58L-19.57 -13.5L-32.39 -20.9Z" fill="#e2c385"/>
+    <path d="M-25.11 3.3L-19.57 -13.5L-19.57 -12.3L-25.11 4.5Z" fill="#8e6e3c"/>
+    <path d="M-19.57 -13.5L-14.03 -3.1L-14.03 -1.9L-19.57 -12.3Z" fill="#8e6e3c"/>
+    <path d="M-19.05 -13.4L-20.09 -12.8L-20.09 -13.8L-19.05 -14.4Z" fill="#5a3f28"/>
+    <path d="M-32.91 -20.2L-20.09 -12.8L-20.09 -13.8L-32.91 -21.2Z" fill="#7d5a3a"/>
+    <path d="M-31.87 -21.8L-19.05 -14.4L-20.09 -13.8L-32.91 -21.2Z" fill="#a37a52"/>
+    <path d="M15.67 8.48L15.61 8.67L15.41 8.85L15.1 9.02L14.68 9.16L14.18 9.26L13.62 9.32L13.03 9.34L12.44 9.32L11.89 9.26L11.39 9.16L10.97 9.02L10.65 8.85L10.46 8.67L10.39 8.48L10.46 8.29L10.65 8.11L10.97 7.94L11.39 7.8L11.89 7.7L12.44 7.64L13.03 7.62L13.62 7.64L14.18 7.7L14.68 7.8L15.1 7.94L15.41 8.11L15.61 8.29Z" fill="#000000" opacity="0.2"/>
+    <path d="M11.09 8L10.39 8.4L10.39 6.4L11.09 6Z" fill="#7d5a34"/>
+    <path d="M9.7 8L10.39 8.4L10.39 6.4L9.7 6Z" fill="#a77e4c"/>
+    <path d="M7.99 6.4L12.79 6.4L10.39 2Z" fill="#3f8a55"/>
+    <path d="M10.75 6.64L12.79 6.4L10.39 2Z" fill="#2b663f"/>
+    <path d="M7.99 6.4L9.07 6.4L10.39 2Z" fill="#5fb071" opacity="0.8"/>
+    <path d="M8.66 4L12.12 4L10.39 0Z" fill="#3f8a55"/>
+    <path d="M10.65 4.17L12.12 4L10.39 0Z" fill="#2b663f"/>
+    <path d="M8.66 4L9.44 4L10.39 0Z" fill="#5fb071" opacity="0.8"/>
+    <path d="M-17.24 7.48L-17.3 7.67L-17.5 7.85L-17.81 8.02L-18.23 8.16L-18.73 8.26L-19.29 8.32L-19.88 8.34L-20.46 8.32L-21.02 8.26L-21.52 8.16L-21.94 8.02L-22.26 7.85L-22.45 7.67L-22.52 7.48L-22.45 7.29L-22.26 7.11L-21.94 6.94L-21.52 6.8L-21.02 6.7L-20.46 6.64L-19.88 6.62L-19.29 6.64L-18.73 6.7L-18.23 6.8L-17.81 6.94L-17.5 7.11L-17.3 7.29Z" fill="#000000" opacity="0.2"/>
+    <path d="M-21.82 7L-22.52 7.4L-22.52 5.4L-21.82 5Z" fill="#7d5a34"/>
+    <path d="M-23.21 7L-22.52 7.4L-22.52 5.4L-23.21 5Z" fill="#a77e4c"/>
+    <path d="M-24.92 5.4L-20.12 5.4L-22.52 1Z" fill="#3f8a55"/>
+    <path d="M-22.16 5.64L-20.12 5.4L-22.52 1Z" fill="#2b663f"/>
+    <path d="M-24.92 5.4L-23.84 5.4L-22.52 1Z" fill="#5fb071" opacity="0.8"/>
+    <path d="M-24.24 3L-20.79 3L-22.52 -1Z" fill="#3f8a55"/>
+    <path d="M-22.26 3.17L-20.79 3L-22.52 -1Z" fill="#2b663f"/>
+    <path d="M-24.24 3L-23.47 3L-22.52 -1Z" fill="#5fb071" opacity="0.8"/>
+    <path d="M26.06 4.48L26 4.67L25.8 4.85L25.49 5.02L25.07 5.16L24.57 5.26L24.01 5.32L23.42 5.34L22.84 5.32L22.28 5.26L21.78 5.16L21.36 5.02L21.05 4.85L20.85 4.67L20.78 4.48L20.85 4.29L21.05 4.11L21.36 3.94L21.78 3.8L22.28 3.7L22.84 3.64L23.42 3.62L24.01 3.64L24.57 3.7L25.07 3.8L25.49 3.94L25.8 4.11L26 4.29Z" fill="#000000" opacity="0.2"/>
+    <path d="M21.48 4L20.78 4.4L20.78 2.4L21.48 2Z" fill="#7d5a34"/>
+    <path d="M20.09 4L20.78 4.4L20.78 2.4L20.09 2Z" fill="#a77e4c"/>
+    <path d="M18.38 2.4L23.18 2.4L20.78 -2Z" fill="#3f8a55"/>
+    <path d="M21.14 2.64L23.18 2.4L20.78 -2Z" fill="#2b663f"/>
+    <path d="M18.38 2.4L19.46 2.4L20.78 -2Z" fill="#5fb071" opacity="0.8"/>
+    <path d="M19.06 0L22.51 0L20.78 -4Z" fill="#3f8a55"/>
+    <path d="M21.04 0.17L22.51 0L20.78 -4Z" fill="#2b663f"/>
+    <path d="M19.06 0L19.83 0L20.78 -4Z" fill="#5fb071" opacity="0.8"/>
   </g>
-  <path d="M0 -2 L1.6 0.8 Q0 1.8 -1.6 0.8 Z" fill="#ffffff"/>
-  <path d="M0 -2.2 L-3.5 5.5 Q-2 5 -1 6.2 Q0 4.6 1 6.2 Q2 5 3.5 5.5 Z" fill="#ffffff" stroke="#b8cce0" stroke-width="0.4"/>
-</g>
-<g transform="translate(60 28) scale(0.6)">
-  <!-- 側面屋頂（茅草） -->
-  <path d="M0 -2 L14 -8 L33 36 L19 42 Z" fill="url(#gshThatchSide)" stroke="#5a3a16" stroke-width="0.7" stroke-linejoin="round"/>
-  <path d="M1.6 -2.7 L20.6 41.3 M3.1 -3.3 L22.1 40.7 M4.7 -4.0 L23.7 40.0 M6.2 -4.7 L25.2 39.3 M7.8 -5.3 L26.8 38.7 M9.3 -6.0 L28.3 38.0 M10.9 -6.7 L29.9 37.3 M12.4 -7.3 L31.4 36.7" stroke="#8a5e28" stroke-width="0.5" opacity="0.7"/>
-  <!-- 屋頂積雪 -->
-  <path d="M0 -2 L14 -8 L19.5 4.5 Q16 6 14 4.5 Q11 7 8.5 6 Q6 9 4 8 Z" fill="#ffffff" stroke="#b8cce0" stroke-width="0.5" stroke-linejoin="round"/>
-  <path d="M25 22 Q28 20 29.5 24 L27.5 25 Z" fill="#ffffff" opacity="0.9"/>
-  <!-- 牆身 -->
-  <path d="M19 40 L31 35 L31 43 L19 49 Z" fill="#5a3a20" stroke="#2e1c0c" stroke-width="0.5"/>
-  <path d="M21.5 41.5 L28.5 38.6 L28.5 42 L21.5 45 Z" fill="#f2ecd8" stroke="#2e1c0c" stroke-width="0.4"/>
-  <rect x="-17" y="40" width="36" height="9" fill="#6a4628" stroke="#2e1c0c" stroke-width="0.5"/>
-  <rect x="-14" y="42" width="7" height="5" fill="#f4eedc" stroke="#2e1c0c" stroke-width="0.5"/>
-  <rect x="-4" y="42" width="7" height="7" fill="#3a2414" stroke="#2e1c0c" stroke-width="0.5"/>
-  <rect x="7" y="42" width="8" height="5" fill="#f4eedc" stroke="#2e1c0c" stroke-width="0.5"/>
-  <path d="M-10.5 42 V47 M10.5 42 V47 M14 42 V47" stroke="#6a4628" stroke-width="0.4"/>
-  <!-- 正面山牆的茅草厚邊 -->
-  <path d="M0 -2 L20 42.5 L15 42.5 L0 7 L-15 42.5 L-20 42.5 Z" fill="url(#gshThatch)" stroke="#5a3a16" stroke-width="0.7" stroke-linejoin="round"/>
-  <path d="M0 -2 L-20 42.5 L-17 42.5 L0 3 L17 42.5 L20 42.5 Z" fill="#7a5226" opacity="0.35"/>
-  <!-- 山牆：木樑與障子窗 -->
-  <clipPath id="gshGable2"><path d="M0 7 L15 42 L-15 42 Z"/></clipPath>
-  <path d="M0 7 L15 42 L-15 42 Z" fill="#4a2e18"/>
-  <g clip-path="url(#gshGable2)">
-    <rect x="-12" y="33" width="24" height="7" fill="#f4eedc"/>
-    <rect x="-7.5" y="23.5" width="15" height="6" fill="#f4eedc"/>
-    <rect x="-3" y="15" width="6" height="5" fill="#f4eedc"/>
-    <path d="M-20 31.5 H20 M-20 40.5 H20 M-20 22 H20 M-20 13.5 H20" stroke="#8a5a30" stroke-width="1.2"/>
-    <path d="M-6 33 V40 M0 33 V40 M6 33 V40 M-2.5 23.5 V29.5 M2.5 23.5 V29.5 M0 15 V20" stroke="#4a2e18" stroke-width="0.7"/>
-    <path d="M-12 36.5 H12 M-7.5 26.5 H7.5" stroke="#4a2e18" stroke-width="0.4"/>
-  </g>
-  <path d="M0 -2 L1.6 0.8 Q0 1.8 -1.6 0.8 Z" fill="#ffffff"/>
-  <path d="M0 -2.2 L-3.5 5.5 Q-2 5 -1 6.2 Q0 4.6 1 6.2 Q2 5 3.5 5.5 Z" fill="#ffffff" stroke="#b8cce0" stroke-width="0.4"/>
-</g>
-<g transform="translate(34 22) scale(1.0)">
-  <!-- 側面屋頂（茅草） -->
-  <path d="M0 -2 L14 -8 L33 36 L19 42 Z" fill="url(#gshThatchSide)" stroke="#5a3a16" stroke-width="0.7" stroke-linejoin="round"/>
-  <path d="M1.6 -2.7 L20.6 41.3 M3.1 -3.3 L22.1 40.7 M4.7 -4.0 L23.7 40.0 M6.2 -4.7 L25.2 39.3 M7.8 -5.3 L26.8 38.7 M9.3 -6.0 L28.3 38.0 M10.9 -6.7 L29.9 37.3 M12.4 -7.3 L31.4 36.7" stroke="#8a5e28" stroke-width="0.5" opacity="0.7"/>
-  <!-- 屋頂積雪 -->
-  <path d="M0 -2 L14 -8 L19.5 4.5 Q16 6 14 4.5 Q11 7 8.5 6 Q6 9 4 8 Z" fill="#ffffff" stroke="#b8cce0" stroke-width="0.5" stroke-linejoin="round"/>
-  <path d="M25 22 Q28 20 29.5 24 L27.5 25 Z" fill="#ffffff" opacity="0.9"/>
-  <!-- 牆身 -->
-  <path d="M19 40 L31 35 L31 43 L19 49 Z" fill="#5a3a20" stroke="#2e1c0c" stroke-width="0.5"/>
-  <path d="M21.5 41.5 L28.5 38.6 L28.5 42 L21.5 45 Z" fill="#f2ecd8" stroke="#2e1c0c" stroke-width="0.4"/>
-  <rect x="-17" y="40" width="36" height="9" fill="#6a4628" stroke="#2e1c0c" stroke-width="0.5"/>
-  <rect x="-14" y="42" width="7" height="5" fill="#f4eedc" stroke="#2e1c0c" stroke-width="0.5"/>
-  <rect x="-4" y="42" width="7" height="7" fill="#3a2414" stroke="#2e1c0c" stroke-width="0.5"/>
-  <rect x="7" y="42" width="8" height="5" fill="#f4eedc" stroke="#2e1c0c" stroke-width="0.5"/>
-  <path d="M-10.5 42 V47 M10.5 42 V47 M14 42 V47" stroke="#6a4628" stroke-width="0.4"/>
-  <!-- 正面山牆的茅草厚邊 -->
-  <path d="M0 -2 L20 42.5 L15 42.5 L0 7 L-15 42.5 L-20 42.5 Z" fill="url(#gshThatch)" stroke="#5a3a16" stroke-width="0.7" stroke-linejoin="round"/>
-  <path d="M0 -2 L-20 42.5 L-17 42.5 L0 3 L17 42.5 L20 42.5 Z" fill="#7a5226" opacity="0.35"/>
-  <!-- 山牆：木樑與障子窗 -->
-  <clipPath id="gshGable3"><path d="M0 7 L15 42 L-15 42 Z"/></clipPath>
-  <path d="M0 7 L15 42 L-15 42 Z" fill="#4a2e18"/>
-  <g clip-path="url(#gshGable3)">
-    <rect x="-12" y="33" width="24" height="7" fill="#f4eedc"/>
-    <rect x="-7.5" y="23.5" width="15" height="6" fill="#f4eedc"/>
-    <rect x="-3" y="15" width="6" height="5" fill="#f4eedc"/>
-    <path d="M-20 31.5 H20 M-20 40.5 H20 M-20 22 H20 M-20 13.5 H20" stroke="#8a5a30" stroke-width="1.2"/>
-    <path d="M-6 33 V40 M0 33 V40 M6 33 V40 M-2.5 23.5 V29.5 M2.5 23.5 V29.5 M0 15 V20" stroke="#4a2e18" stroke-width="0.7"/>
-    <path d="M-12 36.5 H12 M-7.5 26.5 H7.5" stroke="#4a2e18" stroke-width="0.4"/>
-  </g>
-  <path d="M0 -2 L1.6 0.8 Q0 1.8 -1.6 0.8 Z" fill="#ffffff"/>
-  <path d="M0 -2.2 L-3.5 5.5 Q-2 5 -1 6.2 Q0 4.6 1 6.2 Q2 5 3.5 5.5 Z" fill="#ffffff" stroke="#b8cce0" stroke-width="0.4"/>
-</g>
 </svg>

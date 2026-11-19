@@ -1,27 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <defs>
-    <linearGradient id="h" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b2c35"/><stop offset="1" stop-color="#0c0c11"/></linearGradient>
-  </defs>
-  <!-- 日本的「黑船」：1853 年培里提督的蒸汽明輪軍艦，黑色船身、冒煙的煙囪、兩側有明輪 -->
-  <!-- 煙 -->
-  <g fill="#8f95a3"><circle cx="62" cy="30" r="8" opacity=".75"/><circle cx="50" cy="20" r="9" opacity=".6"/><circle cx="36" cy="12" r="10" opacity=".45"/><circle cx="22" cy="8" r="9" opacity=".3"/></g>
-  <!-- 桅杆與收起的帆 -->
-  <g fill="#2a2a33"><rect x="19" y="36" width="2.6" height="48"/><rect x="42" y="30" width="2.8" height="54"/><rect x="100" y="40" width="2.6" height="42"/></g>
-  <g fill="#e6e3da" stroke="#9c998c" stroke-width="1"><rect x="8" y="44" width="25" height="6" rx="3"/><rect x="10" y="60" width="21" height="6" rx="3"/><rect x="30" y="38" width="28" height="6" rx="3"/><rect x="32" y="56" width="24" height="6" rx="3"/><rect x="90" y="48" width="22" height="6" rx="3"/></g>
-  <path d="M2 82 L19 52 L19 80Z" fill="#e6e3da" stroke="#9c998c" stroke-width="1"/>
-  <!-- 煙囪 -->
-  <rect x="62" y="34" width="14" height="48" fill="#17171d"/>
-  <rect x="62" y="34" width="14" height="5" fill="#c0302a"/>
-  <!-- 船身：黑色，舷側一排砲門 -->
-  <path d="M2 84 L124 78 L120 100 Q110 114 90 116 L24 116 Q8 110 2 84Z" fill="url(#h)"/>
-  <path d="M6 93 L118 90" stroke="#e8d28a" stroke-width="4"/>
-  <g fill="#0c0c11"><rect x="12" y="91" width="5" height="4"/><rect x="24" y="91" width="5" height="4"/><rect x="36" y="91" width="5" height="4"/><rect x="82" y="91" width="5" height="4"/><rect x="94" y="91" width="5" height="4"/><rect x="106" y="91" width="5" height="4"/></g>
-  <!-- 明輪 -->
-  <path d="M50 88 A19 19 0 0 1 88 88Z" fill="#3a3b46" stroke="#17171d" stroke-width="2"/>
-  <g stroke="#d9d6cb" stroke-width="1.6"><path d="M69 88 L69 71 M69 88 L56 76 M69 88 L82 76"/></g>
-  <!-- 星條旗 -->
-  <rect x="115" y="50" width="2" height="30" fill="#2a2a33"/>
-  <rect x="106" y="50" width="9" height="8" fill="#f4f4f4"/>
-  <g fill="#c0302a"><rect x="106" y="50" width="9" height="1.6"/><rect x="106" y="53.2" width="9" height="1.6"/><rect x="106" y="56.4" width="9" height="1.6"/></g>
-  <rect x="106" y="50" width="4.4" height="4.4" fill="#2a4a9a"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 黑船（2.5D）：培里艦隊的黑色蒸汽明輪船，金色腰線、白色舷窗，側面大大的明輪罩，中央煙囪冒黑煙（動畫），三根桅杆掛白帆，船尾拖著浪花，桅頂掛星條旗。光源左上，不描邊 -->
+  <g transform="translate(45.52 58.24) scale(0.96)">
+    <path d="M-28.58 -11.5L-19.92 -16.5L30.31 12.5L32.7 14.48L24.04 19.48L-26.19 -9.52Z" fill="#000000" opacity="0.2"/>
+    <path d="M-19.92 -16.5L-28.58 -25.5L-32.91 -21Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M-28.58 -11.5L-44.17 -16.5L-36.37 -19Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M12.99 13.5L-28.58 -10.5L-28.58 -17.5L12.99 6.5Z" fill="#3a3e4a"/>
+    <path d="M23.38 15.5L12.99 13.5L12.99 6.5L23.38 8.5Z" fill="#3a3e4a"/>
+    <path d="M25.98 16L23.38 15.5L23.38 8.5L25.98 9Z" fill="#3a3e4a"/>
+    <path d="M-19.92 -22.5L21.65 1.5L25.11 7.5L25.98 9L23.38 8.5L12.99 6.5L-28.58 -17.5Z" fill="#5a5f6e"/>
+    <path d="M-26.85 -15.1L12.99 7.9L12.99 7.1L-26.85 -15.9Z" fill="#e6b84a"/>
+    <path d="M-23.38 -10.9L-22 -10.1L-22 -11.5L-23.38 -12.3Z" fill="#e3e7ee"/>
+    <path d="M-18.19 -7.9L-16.8 -7.1L-16.8 -8.5L-18.19 -9.3Z" fill="#e3e7ee"/>
+    <path d="M-12.99 -4.9L-11.6 -4.1L-11.6 -5.5L-12.99 -6.3Z" fill="#e3e7ee"/>
+    <path d="M-7.79 -1.9L-6.41 -1.1L-6.41 -2.5L-7.79 -3.3Z" fill="#e3e7ee"/>
+    <path d="M-2.6 1.1L-1.21 1.9L-1.21 0.5L-2.6 -0.3Z" fill="#e3e7ee"/>
+    <path d="M2.6 4.1L3.98 4.9L3.98 3.5L2.6 2.7Z" fill="#e3e7ee"/>
+    <path d="M7.79 7.1L9.18 7.9L9.18 6.5L7.79 5.7Z" fill="#e3e7ee"/>
+    <path d="M-0.18 -3.2L-0.34 -1.78L-0.82 -0.42L-1.58 0.79L-2.59 1.8L-3.8 2.57L-5.16 3.04L-6.58 3.2L-8.01 3.04L-9.36 2.57L-10.57 1.8L-11.59 0.79L-12.35 -0.42L-12.82 -1.78L-12.98 -3.2L-12.82 -4.62L-12.35 -5.98L-11.59 -7.19L-10.57 -8.2L-9.36 -8.97L-8.01 -9.44L-6.58 -9.6L-5.16 -9.44L-3.8 -8.97L-2.59 -8.2L-1.58 -7.19L-0.82 -5.98L-0.34 -4.62Z" fill="#3a3e4a"/>
+    <path d="M-2.18 -4L-2.31 -2.84L-2.7 -1.74L-3.32 -0.76L-4.14 0.07L-5.13 0.69L-6.22 1.07L-7.38 1.2L-8.54 1.07L-9.64 0.69L-10.62 0.07L-11.45 -0.76L-12.07 -1.74L-12.45 -2.84L-12.58 -4L-12.45 -5.16L-12.07 -6.26L-11.45 -7.24L-10.62 -8.07L-9.64 -8.69L-8.54 -9.07L-7.38 -9.2L-6.22 -9.07L-5.13 -8.69L-4.14 -8.07L-3.32 -7.24L-2.7 -6.26L-2.31 -5.16Z" fill="#5a5f6e"/>
+    <path d="M-6.58 -3.2L-1.58 -3.2L-1.68 -4.19Z" fill="#23262e"/>
+    <path d="M-6.58 -3.2L-2.25 -5.7L-2.83 -6.51Z" fill="#23262e"/>
+    <path d="M-6.58 -3.2L-4.08 -7.53L-4.99 -7.94Z" fill="#23262e"/>
+    <path d="M-6.58 -3.2L-6.58 -8.2L-7.58 -8.1Z" fill="#23262e"/>
+    <path d="M-6.58 -3.2L-9.08 -7.53L-9.89 -6.95Z" fill="#23262e"/>
+    <path d="M-6.58 -3.2L-10.91 -5.7L-11.32 -4.79Z" fill="#23262e"/>
+    <path d="M0.47 -7L0.18 -6.36L0.18 -18.36L0.47 -19Z" fill="#23262e"/>
+    <path d="M-3.64 -6.36L-3.94 -7L-3.94 -19L-3.64 -18.36Z" fill="#3a3e4a"/>
+    <path d="M0.18 -6.36L-0.63 -5.9L-0.63 -17.9L0.18 -18.36Z" fill="#23262e"/>
+    <path d="M-2.83 -5.9L-3.64 -6.36L-3.64 -18.36L-2.83 -17.9Z" fill="#3a3e4a"/>
+    <path d="M-0.63 -5.9L-1.73 -5.73L-1.73 -17.73L-0.63 -17.9Z" fill="#23262e"/>
+    <path d="M-1.73 -5.73L-2.83 -5.9L-2.83 -17.9L-1.73 -17.73Z" fill="#3a3e4a"/>
+    <path d="M-0.63 -17.9L-1.73 -17.73L-2.83 -17.9L-3.64 -18.36L-3.94 -19L-3.64 -19.64L-2.83 -20.1L-1.73 -20.27L-0.63 -20.1L0.18 -19.64L0.47 -19L0.18 -18.36Z" fill="#5a5f6e"/>
+    <circle cx="-1.73" cy="-20.00" r="2.00" fill="#7c858f" opacity="0"><animate attributeName="opacity" values="0;0.8;0" dur="3s" begin="0.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;3.6 -12.0" dur="3s" begin="0.0s" repeatCount="indefinite"/></circle>
+    <circle cx="-1.73" cy="-20.50" r="2.40" fill="#7c858f" opacity="0"><animate attributeName="opacity" values="0;0.8;0" dur="3s" begin="0.75s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;3.6 -12.0" dur="3s" begin="0.75s" repeatCount="indefinite"/></circle>
+    <circle cx="-1.73" cy="-21.00" r="2.80" fill="#7c858f" opacity="0"><animate attributeName="opacity" values="0;0.8;0" dur="3s" begin="1.5s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;3.6 -12.0" dur="3s" begin="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="-1.73" cy="-21.50" r="3.20" fill="#7c858f" opacity="0"><animate attributeName="opacity" values="0;0.8;0" dur="3s" begin="2.25s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;3.6 -12.0" dur="3s" begin="2.25s" repeatCount="indefinite"/></circle>
+    <path d="M-16.63 -16L-17.32 -15.6L-17.32 -41.6L-16.63 -42Z" fill="#5a3f28"/>
+    <path d="M-18.01 -16L-17.32 -15.6L-17.32 -41.6L-18.01 -42Z" fill="#7d5a3a"/>
+    <path d="M-17.32 -42.4L-16.63 -42L-17.32 -41.6L-18.01 -42Z" fill="#a37a52"/>
+    <path d="M-10.39 -26L-24.25 -18L-23.56 -23.4L-11.09 -30.6Z" fill="#e3e7ee"/>
+    <path d="M-10.39 -26L-17.32 -22L-17.32 -27L-11.09 -30.6Z" fill="#ffffff"/>
+    <path d="M-11.78 -33.2L-22.86 -26.8L-22.31 -32.12L-12.33 -37.88Z" fill="#e3e7ee"/>
+    <path d="M-11.78 -33.2L-17.32 -30L-17.32 -35L-12.33 -37.88Z" fill="#ffffff"/>
+    <path d="M11.09 0L10.39 0.4L10.39 -27.6L11.09 -28Z" fill="#5a3f28"/>
+    <path d="M9.7 0L10.39 0.4L10.39 -27.6L9.7 -28Z" fill="#7d5a3a"/>
+    <path d="M10.39 -28.4L11.09 -28L10.39 -27.6L9.7 -28Z" fill="#a37a52"/>
+    <path d="M17.32 -10L3.46 -2L4.16 -7.4L16.63 -14.6Z" fill="#e3e7ee"/>
+    <path d="M17.32 -10L10.39 -6L10.39 -11L16.63 -14.6Z" fill="#ffffff"/>
+    <path d="M15.93 -17.2L4.85 -10.8L5.4 -16.12L15.38 -21.88Z" fill="#e3e7ee"/>
+    <path d="M15.93 -17.2L10.39 -14L10.39 -19L15.38 -21.88Z" fill="#ffffff"/>
+    <path d="M19.75 5L19.05 5.4L19.05 -16.6L19.75 -17Z" fill="#5a3f28"/>
+    <path d="M18.36 5L19.05 5.4L19.05 -16.6L18.36 -17Z" fill="#7d5a3a"/>
+    <path d="M19.05 -17.4L19.75 -17L19.05 -16.6L18.36 -17Z" fill="#a37a52"/>
+    <path d="M25.98 -5L12.12 3L12.82 -2.4L25.29 -9.6Z" fill="#e3e7ee"/>
+    <path d="M25.98 -5L19.05 -1L19.05 -6L25.29 -9.6Z" fill="#ffffff"/>
+    <path d="M24.6 -12.2L13.51 -5.8L14.06 -11.12L24.04 -16.88Z" fill="#e3e7ee"/>
+    <path d="M24.6 -12.2L19.05 -9L19.05 -14L24.04 -16.88Z" fill="#ffffff"/>
+    <path d="M19.05 -17L24.05 -16.4L24.05 -13.4L19.05 -14Z" fill="#ffffff"/>
+    <path d="M19.05 -17L24.05 -16.4L24.05 -15.9L19.05 -16.5Z" fill="#d8302a"/>
+    <path d="M19.05 -15.9L24.05 -15.3L24.05 -14.8L19.05 -15.4Z" fill="#d8302a"/>
+    <path d="M19.05 -14.8L24.05 -14.2L24.05 -13.7L19.05 -14.3Z" fill="#d8302a"/>
+    <path d="M19.05 -17L21.25 -16.7L21.25 -15.2L19.05 -15.5Z" fill="#1f3f9a"/>
+  </g>
 </svg>
