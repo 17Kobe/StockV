@@ -480,7 +480,7 @@
         { src: 'critters/forbidden-city.svg', lon: 116.4, lat: 39.9, mode: 'still', face: 'F', s: 1.2, deco: true, landmark: true }, // 紫禁城
         { src: 'critters/terracotta-army.svg', lon: 109.3, lat: 34.4, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 兵馬俑
         { src: 'critters/zhangjiajie.svg', lon: 110.5, lat: 29.1, mode: 'still', face: 'F', s: 1.2, deco: true, landmark: true },   // 張家界
-        { src: 'critters/gyeongbokgung.svg', lon: 126.98, lat: 37.58, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 景福宮
+        { src: 'critters/gyeongbokgung.svg', lon: 126.98, lat: 37.58, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 景福宮
         { src: 'critters/n-seoul-tower.svg', lon: 127.542, lat: 36.51, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 首爾塔（南山）：原座標和景福宮幾乎重疊（僅差 0.03 度），地標碰撞收起邏輯會讓它幾乎永遠被景福宮蓋住而不顯示，拉開距離修正
         { src: 'critters/varanasi.svg', lon: 83.0, lat: 25.3, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true },       // 瓦拉納西
         { src: 'critters/red-fort.svg', lon: 77.24, lat: 28.66, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true },     // 紅堡
@@ -566,7 +566,7 @@
         { src: 'critters/marina-bay-sands.svg', lon: 103.86, lat: 1.15, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 新加坡：濱海灣金沙酒店：改回新加坡附近海灣（原本拉到南海太遠、不像在新加坡），排在魚尾獅前面，兩個距離夠近時優先顯示金沙
         { src: 'critters/merlion.svg', lon: 103.854, lat: 1.287, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 新加坡：魚尾獅
         { src: 'critters/petronas-towers.svg', lon: 101.712, lat: 3.158, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 馬來西亞：雙峰塔
-        { src: 'critters/boracay.svg', lon: 121.93, lat: 11.97, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 菲律賓：長灘島
+        { src: 'critters/boracay.svg', lon: 121.93, lat: 11.97, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 菲律賓：長灘島
         { src: 'critters/bran-castle.svg', lon: 25.367, lat: 45.514, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 羅馬尼亞：布蘭城堡
         { src: 'critters/djenne-mosque.svg', lon: -4.555, lat: 13.906, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 馬利：傑內大清真寺
         { src: 'critters/persepolis.svg', lon: 52.891, lat: 29.935, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 伊朗：波斯波利斯
@@ -618,7 +618,7 @@
         // ── 第十二批補充（用戶列的清單：主題樂園、K-pop、中國景點、南北美洲、俄羅斯） ──
         { src: 'critters/universal-studios-osaka.svg', lon: 134.468, lat: 35.527, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 日本：大阪環球影城：原座標跟大阪城太近，實測要放到 k>=9 才會出現，拉開距離修正
         { src: 'critters/tokyo-disneyland.svg', lon: 140.15, lat: 35.75, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 日本：東京迪士尼樂園：改放在真實的東京灣千葉縣位置附近，同時跟東京鐵塔、雷門保持安全距離
-        { src: 'critters/lotte-world-tower.svg', lon: 128.519, lat: 36.794, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 南韓：樂天世界塔：原座標跟首爾一帶地標太近，實測要放到 k>=9.5 才會出現，拉開距離修正
+        { src: 'critters/lotte-world-tower.svg', lon: 128.519, lat: 36.794, mode: 'still', face: 'F', iso: 'tower', deco: true, landmark: true }, // 南韓：樂天世界塔：原座標跟首爾一帶地標太近，實測要放到 k>=9.5 才會出現，拉開距離修正
         { src: 'critters/kpop-concert.svg', lon: 126.0, lat: 36.2, mode: 'still', face: 'F', s: 1.0, deco: true }, // 南韓：K-pop 演唱會
         { src: 'critters/mogao-crescent-lake.svg', lon: 94.66, lat: 40.03, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 中國：敦煌莫高窟及月牙泉
         { src: 'critters/leshan-buddha.svg', lon: 103.77, lat: 29.54, mode: 'still', face: 'F', s: 1.1, sea: true, deco: true, landmark: true }, // 中國：樂山大佛
@@ -653,7 +653,7 @@
         { src: 'critters/napoleon-bonaparte.svg', lon: 1.5, lat: 48, mode: 'still', face: 'F', s: 1.0, deco: true }, // 拿破崙·波拿巴
         { src: 'critters/william-shakespeare.svg', lon: -1.7, lat: 52.2, mode: 'still', face: 'F', s: 1.0, deco: true }, // 威廉·莎士比亞
         { src: 'critters/mahatma-gandhi.svg', lon: 69.6, lat: 21.64, mode: 'still', face: 'F', s: 1.0, deco: true }, // 聖雄甘地
-        { src: 'critters/confucius.svg', lon: 117, lat: 35.6, mode: 'still', face: 'F', s: 1.0, deco: true }, // 孔子
+        { src: 'critters/confucius.svg', lon: 117, lat: 35.6, mode: 'still', face: 'F', iso: 'person', deco: true }, // 孔子
         { src: 'critters/leonardo-da-vinci.svg', lon: 10.93, lat: 43.78, mode: 'still', face: 'F', s: 1.0, deco: true }, // 李奧納多·達文西
         { src: 'critters/aristotle.svg', lon: 23.55, lat: 40.57, mode: 'still', face: 'F', s: 1.0, deco: true }, // 亞里斯多德
         { src: 'critters/michelangelo.svg', lon: 14.2, lat: 41.6, mode: 'still', face: 'F', s: 1.0, deco: true }, // 米開朗基羅：原座標和羅馬競技場完全重疊，往東南（羅馬到拿坡里之間）拉開約 1.7 度
@@ -698,10 +698,14 @@
         { src: 'critters/national-palace-museum.svg', lon: 121.5, lat: 25.2, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 台灣：國立故宮博物院：真實位置在外雙溪（121.55, 25.10），往北移一點，和 101、總統府拉開
         { src: 'critters/cks-memorial-hall.svg', lon: 121.45, lat: 24.78, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 台灣：中正紀念堂：真實位置（121.52, 25.03）和總統府、101 幾乎重疊，往南移約 0.25 度
         { src: 'critters/sun-moon-lake.svg', lon: 120.91, lat: 23.86, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 台灣：日月潭（真實位置）
-        { src: 'critters/pier-2.svg', lon: 120.2823, lat: 22.6187, mode: 'still', face: 'F', s: 1.0, sea: true, deco: true, landmark: true }, // 台灣：駁二藝術特區
+        { src: 'critters/pier-2.svg', lon: 120.2823, lat: 22.6187, mode: 'still', face: 'F', iso: 'building', sea: true, deco: true, landmark: true }, // 台灣：駁二藝術特區
         { src: 'critters/carp-island.svg', lon: 134.47, lat: 7.12, mode: 'still', face: 'F', s: 1.0, sea: true, deco: true, landmark: true }, // 帛琉：星象島（Ngercheu／Carp Island）
         { src: 'critters/beirut-terraces.svg', lon: 35.5018, lat: 33.8938, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 黎巴嫩：貝魯特垂直森林（Beirut Terraces）
     ];
+    // 統一 2.5D 風格的圖示（規格見 docs/icons.html）：不各自手調 s，改用 iso 類別統一決定地圖上的大小，
+    // 人物、建築、高塔、自然景觀之間的比例才會一致。以人物為 1 單位：建築約 1.6 倍、高塔與自然景觀約 1.9 倍
+    const ISO_SCALE = { person: 1.8, building: 1.7, tower: 2.0, nature: 2.0 };
+    for (const d of CRITTERS) if (d.iso) d.s = ISO_SCALE[d.iso];
     // 原住民小人（natives.js）：該國主要指數漲就歡呼跳舞、跌就沮喪哭泣，平盤時散步 / 揮手 / 眨眼
     // mode 'folk'；market = 看哪個指數；ox / oy = 相對位置點的偏移（單位：小角色基準大小）；minK = 縮小到這個倍率以下就收起來
     if (window.Natives)

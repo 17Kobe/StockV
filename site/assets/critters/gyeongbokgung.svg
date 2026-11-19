@@ -1,117 +1,78 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-  <defs>
-    <linearGradient id="gb-stone" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#b4b4b4"/><stop offset="100%" stop-color="#7c7c7c"/></linearGradient>
-    <linearGradient id="gb-wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d14a32"/><stop offset="100%" stop-color="#8a2016"/></linearGradient>
-    <linearGradient id="gb-panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9c2410"/><stop offset="100%" stop-color="#4a0e06"/></linearGradient>
-    <linearGradient id="gb-arch" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2c2c42"/><stop offset="100%" stop-color="#141420"/></linearGradient>
-    <linearGradient id="gb-roof" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#567a56"/><stop offset="100%" stop-color="#203820"/></linearGradient>
-    <radialGradient id="gb-gold" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#f7d878"/><stop offset="100%" stop-color="#a87818"/></radialGradient>
-    <radialGradient id="gb-lantern" cx="35%" cy="25%" r="80%"><stop offset="0%" stop-color="#ff7a52"/><stop offset="100%" stop-color="#8a1410"/></radialGradient>
-  </defs>
-
-  <!-- Ground shadow -->
-  <ellipse cx="40" cy="74" rx="28" ry="4" fill="#00000033"/>
-
-  <!-- Stone base / gatehouse foundation -->
-  <rect x="10" y="52" width="60" height="18" rx="2" fill="url(#gb-stone)" stroke="#6e6e6e" stroke-width="0.5"/>
-  <!-- Arch gate opening -->
-  <path d="M32 70 L32 60 Q40 54 48 60 L48 70 Z" fill="url(#gb-arch)" stroke="#0d0d16" stroke-width="0.4"/>
-  <!-- Stone texture lines on base -->
-  <line x1="11" y1="58" x2="79" y2="58" stroke="#8a8a8a" stroke-width="0.4" opacity="0.4"/>
-  <line x1="11" y1="64" x2="79" y2="64" stroke="#8a8a8a" stroke-width="0.4" opacity="0.4"/>
-  <!-- Vertical stone joints -->
-  <line x1="20" y1="52" x2="20" y2="70" stroke="#6e6e6e" stroke-width="0.4" opacity="0.35"/>
-  <line x1="30" y1="52" x2="30" y2="70" stroke="#6e6e6e" stroke-width="0.4" opacity="0.35"/>
-  <line x1="50" y1="52" x2="50" y2="70" stroke="#6e6e6e" stroke-width="0.4" opacity="0.35"/>
-  <line x1="60" y1="52" x2="60" y2="70" stroke="#6e6e6e" stroke-width="0.4" opacity="0.35"/>
-
-  <!-- Lower gate tower body (red wood) -->
-  <rect x="16" y="36" width="48" height="18" rx="1" fill="url(#gb-wood)" stroke="#5c130a" stroke-width="0.5"/>
-  <!-- Windows / decorative panels on lower tower -->
-  <rect x="20" y="40" width="8" height="10" rx="1" fill="url(#gb-panel)" stroke="#380a04" stroke-width="0.4"/>
-  <rect x="52" y="40" width="8" height="10" rx="1" fill="url(#gb-panel)" stroke="#380a04" stroke-width="0.4"/>
-  <!-- Center door on tower -->
-  <rect x="34" y="40" width="12" height="14" rx="1" fill="url(#gb-panel)" stroke="#2a0604" stroke-width="0.4"/>
-
-  <!-- Lower roof (1st level) -->
-  <g>
-    <!-- Roof base band -->
-    <rect x="14" y="32" width="52" height="5" rx="1" fill="url(#gb-roof)" stroke="#1c301c" stroke-width="0.5"/>
-    <!-- Main roof shape -->
-    <path d="M8 34 Q40 22 72 34" fill="url(#gb-roof)" stroke="#1c301c" stroke-width="0.6"/>
-    <!-- Roof ridgeline highlight -->
-    <path d="M8 34 Q40 22 72 34" fill="none" stroke="#5a8a5a" stroke-width="0.8"/>
-    <!-- Upswept eave tips -->
-    <path d="M8 34 Q5 33 6 30" fill="none" stroke="#1c301c" stroke-width="0.5"/>
-    <path d="M72 34 Q75 33 74 30" fill="none" stroke="#1c301c" stroke-width="0.5"/>
-    <!-- Roof tile lines -->
-    <path d="M16 33 Q40 23 64 33" fill="none" stroke="#86a886" stroke-width="0.35" opacity="0.45"/>
-    <path d="M20 33.5 Q40 24 60 33.5" fill="none" stroke="#86a886" stroke-width="0.35" opacity="0.45"/>
-    <!-- Ridge ornament (chiwen) -->
-    <circle cx="8" cy="30" r="2" fill="url(#gb-gold)" stroke="#7a5810" stroke-width="0.4"/>
-    <circle cx="72" cy="30" r="2" fill="url(#gb-gold)" stroke="#7a5810" stroke-width="0.4"/>
-    <!-- Center ridge cap -->
-    <rect x="36" y="20" width="8" height="3" rx="1" fill="url(#gb-gold)" stroke="#7a5810" stroke-width="0.4"/>
+  <!-- 景福宮・勤政殿（2.5D）：兩層花崗岩月台與階梯、紅柱門扇、綠色丹青彩畫帶、兩層屋角上翹的灰瓦屋頂，後方是北岳山。光源左上，不描邊 -->
+  <g transform="translate(30.45 36.72) scale(0.91)">
+    <path d="M-3.46 -24L-25.98 -11L-1.73 -35Z" fill="#86c770"/>
+    <path d="M-25.98 -11L1.73 5L-1.73 -35Z" fill="#62a652"/>
+    <path d="M1.73 5L24.25 -8L-1.73 -35Z" fill="#46823d"/>
+    <path d="M20.78 -18L0 -6L24.25 -25Z" fill="#86c770"/>
+    <path d="M0 -6L24.25 8L24.25 -25Z" fill="#62a652"/>
+    <path d="M24.25 8L45.03 -4L24.25 -25Z" fill="#46823d"/>
+    <path d="M-29.44 13L0 -4L41.57 20L50.52 27.43L21.07 44.43L-20.5 20.43Z" fill="#000000" opacity="0.2"/>
+    <path d="M41.57 20L12.12 37L12.12 34L41.57 17Z" fill="#ab9f87"/>
+    <path d="M-29.44 13L12.12 37L12.12 34L-29.44 10Z" fill="#d3c9b3"/>
+    <path d="M0 -7L41.57 17L12.12 34L-29.44 10Z" fill="#efe8d8"/>
+    <path d="M-5.2 27L-6.58 27.8L-6.58 24.8L-5.2 24Z" fill="#ab9f87"/>
+    <path d="M-13.51 23.8L-6.58 27.8L-6.58 24.8L-13.51 20.8Z" fill="#d3c9b3"/>
+    <path d="M-12.12 20L-5.2 24L-6.58 24.8L-13.51 20.8Z" fill="#efe8d8"/>
+    <path d="M-6.58 27.8L-7.97 28.6L-7.97 27.1L-6.58 26.3Z" fill="#ab9f87"/>
+    <path d="M-14.9 24.6L-7.97 28.6L-7.97 27.1L-14.9 23.1Z" fill="#d3c9b3"/>
+    <path d="M-13.51 22.3L-6.58 26.3L-7.97 27.1L-14.9 23.1Z" fill="#efe8d8"/>
+    <path d="M34.64 17L12.12 30L12.12 27L34.64 14Z" fill="#ab9f87"/>
+    <path d="M-22.52 10L12.12 30L12.12 27L-22.52 7Z" fill="#d3c9b3"/>
+    <path d="M0 -6L34.64 14L12.12 27L-22.52 7Z" fill="#efe8d8"/>
+    <path d="M-1.73 22L-3.12 22.8L-3.12 19.8L-1.73 19Z" fill="#ab9f87"/>
+    <path d="M-10.05 18.8L-3.12 22.8L-3.12 19.8L-10.05 15.8Z" fill="#d3c9b3"/>
+    <path d="M-8.66 15L-1.73 19L-3.12 19.8L-10.05 15.8Z" fill="#efe8d8"/>
+    <path d="M-3.12 22.8L-4.5 23.6L-4.5 22.1L-3.12 21.3Z" fill="#ab9f87"/>
+    <path d="M-11.43 19.6L-4.5 23.6L-4.5 22.1L-11.43 18.1Z" fill="#d3c9b3"/>
+    <path d="M-10.05 17.3L-3.12 21.3L-4.5 22.1L-11.43 18.1Z" fill="#efe8d8"/>
+    <path d="M27.71 14L12.12 23L12.12 13.5L27.71 4.5Z" fill="#8a3222"/>
+    <path d="M-15.59 7L12.12 23L12.12 13.5L-15.59 -2.5Z" fill="#b9442f"/>
+    <path d="M-14.81 7.05L-11.75 8.82L-11.75 2.02L-14.81 0.25Z" fill="#84492f"/>
+    <path d="M-14.81 2.05L-11.75 3.82L-11.75 2.02L-14.81 0.25Z" fill="#a8643f" opacity="0.6"/>
+    <path d="M-10.19 9.72L-7.13 11.48L-7.13 4.68L-10.19 2.92Z" fill="#84492f"/>
+    <path d="M-10.19 4.72L-7.13 6.48L-7.13 4.68L-10.19 2.92Z" fill="#a8643f" opacity="0.6"/>
+    <path d="M-5.57 12.38L-2.51 14.15L-2.51 7.35L-5.57 5.58Z" fill="#84492f"/>
+    <path d="M-5.57 7.38L-2.51 9.15L-2.51 7.35L-5.57 5.58Z" fill="#a8643f" opacity="0.6"/>
+    <path d="M-0.95 15.05L2.11 16.82L2.11 10.02L-0.95 8.25Z" fill="#84492f"/>
+    <path d="M-0.95 10.05L2.11 11.82L2.11 10.02L-0.95 8.25Z" fill="#a8643f" opacity="0.6"/>
+    <path d="M3.67 17.72L6.73 19.48L6.73 12.68L3.67 10.92Z" fill="#84492f"/>
+    <path d="M3.67 12.72L6.73 14.48L6.73 12.68L3.67 10.92Z" fill="#a8643f" opacity="0.6"/>
+    <path d="M8.28 20.38L11.34 22.15L11.34 15.35L8.28 13.58Z" fill="#84492f"/>
+    <path d="M8.28 15.38L11.34 17.15L11.34 15.35L8.28 13.58Z" fill="#a8643f" opacity="0.6"/>
+    <path d="M26.93 14.05L23.3 16.15L23.3 9.35L26.93 7.25Z" fill="#5f3322"/>
+    <path d="M21.74 17.05L18.1 19.15L18.1 12.35L21.74 10.25Z" fill="#5f3322"/>
+    <path d="M16.54 20.05L12.9 22.15L12.9 15.35L16.54 13.25Z" fill="#5f3322"/>
+    <path d="M28.41 6.4L12.12 15.8L12.12 13.8L28.41 4.4Z" fill="#2c745c"/>
+    <path d="M-16.28 -0.6L12.12 15.8L12.12 13.8L-16.28 -2.6Z" fill="#3f9d7e"/>
+    <path d="M0 -17.2Q17.32 -4 34.64 2.8L13.81 0.38L-1.69 -8.58Z" fill="#566475"/>
+    <path d="M-22.52 -4.2Q-11.26 -7.5 0 -17.2L-1.69 -8.58Z" fill="#7a8898"/>
+    <path d="M-22.52 -4.2Q-5.2 9 12.12 15.8L12.12 16.9Q-5.2 10.1 -22.52 -3.1Z" fill="#3b4655"/>
+    <path d="M12.12 15.8Q23.38 12.5 34.64 2.8L34.64 3.9Q23.38 13.6 12.12 16.9Z" fill="#3b4655"/>
+    <path d="M-22.52 -4.2Q-5.2 9 12.12 15.8L13.81 0.38L-1.69 -8.58Z" fill="#566475"/>
+    <path d="M-13.14 -6.17L12.88 8.86L13.81 0.38L-1.69 -8.58Z" fill="#7a8898" opacity="0.55"/>
+    <path d="M12.12 15.8Q23.38 12.5 34.64 2.8L13.81 0.38Z" fill="#3b4655"/>
+    <path d="M14.42 0.32L13.21 1.03L13.21 -0.27L14.42 -0.98Z" fill="#3b4655"/>
+    <path d="M-2.29 -7.93L13.21 1.03L13.21 -0.27L-2.29 -9.23Z" fill="#566475"/>
+    <path d="M-1.08 -9.93L14.42 -0.98L13.21 -0.27L-2.29 -9.23Z" fill="#7a8898"/>
+    <path d="M19.92 -0.1L11.26 4.9L11.26 0.3L19.92 -4.7Z" fill="#8a3222"/>
+    <path d="M-7.79 -6.1L11.26 4.9L11.26 0.3L-7.79 -10.7Z" fill="#b9442f"/>
+    <path d="M-7.1 -5.9L-3.72 -3.95L-3.72 -6.75L-7.1 -8.7Z" fill="#84492f"/>
+    <path d="M-2.34 -3.15L1.04 -1.2L1.04 -4L-2.34 -5.95Z" fill="#84492f"/>
+    <path d="M2.42 -0.4L5.8 1.55L5.8 -1.25L2.42 -3.2Z" fill="#84492f"/>
+    <path d="M7.19 2.35L10.57 4.3L10.57 1.5L7.19 -0.45Z" fill="#84492f"/>
+    <path d="M18.36 0.6L11.95 4.3L11.95 1.5L18.36 -2.2Z" fill="#5f3322"/>
+    <path d="M20.61 -3.3L11.26 2.1L11.26 0.3L20.61 -5.1Z" fill="#2c745c"/>
+    <path d="M-8.49 -9.3L11.26 2.1L11.26 0.3L-8.49 -11.1Z" fill="#3f9d7e"/>
+    <path d="M0.87 -22.7Q14.38 -10.9 27.89 -7.1L12.51 -11.98L-0.38 -19.42Z" fill="#566475"/>
+    <path d="M-15.76 -13.1Q-7.45 -13.9 0.87 -22.7L-0.38 -19.42Z" fill="#7a8898"/>
+    <path d="M-15.76 -13.1Q-2.25 -1.3 11.26 2.5L11.26 3.6Q-2.25 -0.2 -15.76 -12Z" fill="#3b4655"/>
+    <path d="M11.26 2.5Q19.57 1.7 27.89 -7.1L27.89 -6Q19.57 2.8 11.26 3.6Z" fill="#3b4655"/>
+    <path d="M-15.76 -13.1Q-2.25 -1.3 11.26 2.5L12.51 -11.98L-0.38 -19.42Z" fill="#566475"/>
+    <path d="M-8.84 -15.94L11.82 -4.02L12.51 -11.98L-0.38 -19.42Z" fill="#7a8898" opacity="0.55"/>
+    <path d="M11.26 2.5Q19.57 1.7 27.89 -7.1L12.51 -11.98Z" fill="#3b4655"/>
+    <path d="M13.11 -12.03L11.9 -11.33L11.9 -12.63L13.11 -13.33Z" fill="#3b4655"/>
+    <path d="M-0.99 -18.77L11.9 -11.33L11.9 -12.63L-0.99 -20.07Z" fill="#566475"/>
+    <path d="M0.23 -20.77L13.11 -13.33L11.9 -12.63L-0.99 -20.07Z" fill="#7a8898"/>
   </g>
-
-  <!-- Upper gate tower body (narrower, red) -->
-  <rect x="22" y="22" width="36" height="12" rx="1" fill="url(#gb-wood)" stroke="#5c130a" stroke-width="0.5"/>
-  <!-- Upper tower windows -->
-  <rect x="26" y="25" width="6" height="7" rx="1" fill="url(#gb-panel)" stroke="#380a04" stroke-width="0.4"/>
-  <rect x="48" y="25" width="6" height="7" rx="1" fill="url(#gb-panel)" stroke="#380a04" stroke-width="0.4"/>
-  <rect x="37" y="25" width="6" height="7" rx="1" fill="url(#gb-panel)" stroke="#380a04" stroke-width="0.4"/>
-
-  <!-- Upper roof (2nd level) -->
-  <g>
-    <!-- Roof base band upper -->
-    <rect x="19" y="18" width="42" height="5" rx="1" fill="url(#gb-roof)" stroke="#1c301c" stroke-width="0.5"/>
-    <!-- Main upper roof -->
-    <path d="M14 20 Q40 8 66 20" fill="url(#gb-roof)" stroke="#1c301c" stroke-width="0.6"/>
-    <!-- Upswept eave tips upper -->
-    <path d="M14 20 Q11 19 12 16" fill="none" stroke="#1c301c" stroke-width="0.5"/>
-    <path d="M66 20 Q69 19 68 16" fill="none" stroke="#1c301c" stroke-width="0.5"/>
-    <!-- Roof tile lines upper -->
-    <path d="M22 19 Q40 10 58 19" fill="none" stroke="#86a886" stroke-width="0.35" opacity="0.45"/>
-    <!-- Ridge ornaments upper -->
-    <circle cx="14" cy="16" r="1.8" fill="url(#gb-gold)" stroke="#7a5810" stroke-width="0.4"/>
-    <circle cx="66" cy="16" r="1.8" fill="url(#gb-gold)" stroke="#7a5810" stroke-width="0.4"/>
-    <!-- Center finial -->
-    <rect x="37" y="6" width="6" height="3" rx="1" fill="url(#gb-gold)" stroke="#7a5810" stroke-width="0.4"/>
-    <polygon points="40,4 38,7 42,7" fill="url(#gb-gold)" stroke="#7a5810" stroke-width="0.4"/>
-  </g>
-
-  <!-- Decorative red lanterns hanging from lower eave -->
-  <g>
-    <!-- Left lantern -->
-    <line x1="18" y1="32" x2="18" y2="37" stroke="#c8a020" stroke-width="0.8"/>
-    <ellipse cx="18" cy="39" rx="2.5" ry="3.5" fill="url(#gb-lantern)" stroke="#6e0e0a" stroke-width="0.4">
-      <animate attributeName="rx" values="2.5;2.8;2.5" dur="2s" repeatCount="indefinite"/>
-      <animate attributeName="ry" values="3.5;3.2;3.5" dur="2s" repeatCount="indefinite"/>
-    </ellipse>
-    <line x1="18" y1="42.5" x2="18" y2="44.5" stroke="#c8a020" stroke-width="0.8"/>
-    <!-- Right lantern -->
-    <line x1="62" y1="32" x2="62" y2="37" stroke="#c8a020" stroke-width="0.8"/>
-    <ellipse cx="62" cy="39" rx="2.5" ry="3.5" fill="url(#gb-lantern)" stroke="#6e0e0a" stroke-width="0.4">
-      <animate attributeName="rx" values="2.5;2.8;2.5" dur="2.3s" repeatCount="indefinite"/>
-      <animate attributeName="ry" values="3.5;3.2;3.5" dur="2.3s" repeatCount="indefinite"/>
-    </ellipse>
-    <line x1="62" y1="42.5" x2="62" y2="44.5" stroke="#c8a020" stroke-width="0.8"/>
-  </g>
-
-  <!-- Animated birds flying around -->
-  <g>
-    <g transform="translate(5, 12)">
-      <animateTransform attributeName="transform" type="translate"
-        values="5,12; 15,9; 25,12; 35,10; 45,13"
-        dur="6s" repeatCount="indefinite"/>
-      <path d="M0,0 Q2,-2 4,0 Q2,-1 0,0" fill="none" stroke="#555" stroke-width="0.8"/>
-    </g>
-    <g transform="translate(55, 10)">
-      <animateTransform attributeName="transform" type="translate"
-        values="55,10; 65,8; 70,11; 75,9"
-        dur="5s" repeatCount="indefinite"/>
-      <path d="M0,0 Q2,-2 4,0 Q2,-1 0,0" fill="none" stroke="#555" stroke-width="0.8"/>
-    </g>
-  </g>
-
 </svg>
