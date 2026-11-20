@@ -1,37 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-  <defs>
-    <linearGradient id="op-shell-outer" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d4dae0"/></linearGradient>
-    <linearGradient id="op-shell-inner" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e8edf0"/></linearGradient>
-    <linearGradient id="op-base" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d6d6d2"/><stop offset="1" stop-color="#aaaaa6"/></linearGradient>
-    <linearGradient id="op-base2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c8c8c4"/><stop offset="1" stop-color="#9c9c98"/></linearGradient>
-  </defs>
-  <!-- 底座平台（薄橫台，非背景矩形） -->
-  <rect x="10" y="66" width="60" height="6" rx="2"
-    fill="url(#op-base)" stroke="#86867f" stroke-width="0.5"/>
-  <rect x="14" y="62" width="52" height="5" rx="1.5"
-    fill="url(#op-base2)" stroke="#78786f" stroke-width="0.5"/>
-
-  <!-- 貝殼組 1（最小，左側） -->
-  <path d="M22,62 Q22,48 28,40 Q32,36 34,36 Q30,40 28,48 Q26,56 26,62 Z"
-    fill="url(#op-shell-outer)" stroke="#9aa0a6" stroke-width="0.5" stroke-linejoin="round"/>
-  <path d="M22,62 Q22,48 26,42 Q28,38 30,37 Q26,41 24,50 Q23,56 22,62 Z"
-    fill="url(#op-shell-inner)" stroke="#9aa0a6" stroke-width="0.4" stroke-linejoin="round"/>
-  <path d="M22,62 Q24,52 28,44 Q30,40 32,37"
-    fill="none" stroke="#b8871c" stroke-width="1" stroke-linecap="round"/>
-
-  <!-- 貝殼組 2（中型，中央） -->
-  <path d="M34,62 Q34,44 42,32 Q46,26 50,25 Q46,30 42,40 Q38,52 38,62 Z"
-    fill="url(#op-shell-outer)" stroke="#9aa0a6" stroke-width="0.6" stroke-linejoin="round"/>
-  <path d="M34,62 Q34,46 38,36 Q40,30 44,28 Q40,33 37,44 Q35,54 34,62 Z"
-    fill="url(#op-shell-inner)" stroke="#9aa0a6" stroke-width="0.5" stroke-linejoin="round"/>
-  <path d="M34,62 Q37,50 42,38 Q44,32 48,27"
-    fill="none" stroke="#b8871c" stroke-width="1.1" stroke-linecap="round"/>
-
-  <!-- 貝殼組 3（最大，右側） -->
-  <path d="M46,62 Q48,42 58,26 Q62,18 66,16 Q62,22 56,36 Q50,50 50,62 Z"
-    fill="url(#op-shell-outer)" stroke="#9aa0a6" stroke-width="0.7" stroke-linejoin="round"/>
-  <path d="M46,62 Q47,44 52,32 Q56,22 60,18 Q56,24 52,38 Q48,52 48,62 Z"
-    fill="url(#op-shell-inner)" stroke="#9aa0a6" stroke-width="0.6" stroke-linejoin="round"/>
-  <path d="M46,62 Q50,46 56,32 Q60,22 64,18"
-    fill="none" stroke="#b8871c" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- 雪梨歌劇院（2.5D）：花崗岩基座上兩排白色貝殼形的屋頂（帆片上有磁磚細紋，正面亮、側面暗），殼底露出琥珀色玻璃帷幕；前方港灣的綠色渡輪來回漂、水波擴散（動畫）。光源左上，不描邊 -->
+  <g transform="translate(48.54 53.45) scale(1.37)">
+    <path d="M8.66 17L7.52 17.2L5.62 16.93L3.04 16.2L-0.12 15.04L-3.75 13.5L-7.69 11.62L-11.81 9.5L-15.93 7.2L-19.92 4.82L-23.6 2.44L-26.84 0.16L-29.52 -1.93L-31.52 -3.76L-32.79 -5.24L-33.25 -6.34L-32.91 -7L-31.77 -7.2L-29.87 -6.93L-27.29 -6.2L-24.13 -5.04L-20.5 -3.5L-16.56 -1.62L-12.44 0.5L-8.31 2.8L-4.33 5.18L-0.65 7.56L2.59 9.84L5.27 11.93L7.27 13.76L8.54 15.24L9 16.34Z" fill="#52c3dc" opacity="0.85"/>
+    <path d="M0.52 11.7L-0.19 11.8L-1.4 11.59L-3.07 11.07L-5.13 10.28L-7.51 9.23L-10.11 7.96L-12.84 6.54L-15.59 5L-18.25 3.41L-20.72 1.84L-22.91 0.34L-24.73 -1.04L-26.11 -2.23L-27 -3.19L-27.37 -3.89L-27.19 -4.3L-26.49 -4.4L-25.28 -4.19L-23.61 -3.67L-21.54 -2.88L-19.16 -1.83L-16.56 -0.56L-13.83 0.86L-11.09 2.4L-8.43 3.99L-5.95 5.56L-3.77 7.06L-1.95 8.44L-0.56 9.63L0.33 10.59L0.69 11.29Z" fill="#9be3ea" opacity="0.4"/>
+    <path d="M20.78 4L10.39 10L10.39 6.8L20.78 0.8Z" fill="#9a8466"/>
+    <path d="M-20.78 -8L10.39 10L10.39 6.8L-20.78 -11.2Z" fill="#c9b28e"/>
+    <path d="M-10.39 -17.2L20.78 0.8L10.39 6.8L-20.78 -11.2Z" fill="#e9d6b8"/>
+    <path d="M-1.73 3L-5.2 5L-5.2 3.6L-1.73 1.6Z" fill="#9a8466"/>
+    <path d="M-17.32 -2L-5.2 5L-5.2 3.6L-17.32 -3.4Z" fill="#c9b28e"/>
+    <path d="M-13.86 -5.4L-1.73 1.6L-5.2 3.6L-17.32 -3.4Z" fill="#e9d6b8"/>
+    <path d="M-12.12 -14.2Q-11.69 -22.45 -6.46 -25.93Q-5.72 -17 -6.06 -10.7Z" fill="#eef0ea"/>
+    <path d="M-12.12 -14.2Q-11.69 -22.45 -6.46 -25.93Q-8.57 -19.15 -10 -12.98Z" fill="#ffffff"/>
+    <path d="M-6.46 -25.93Q-5.72 -17 -6.06 -10.7L-7.27 -11.4Q-6.5 -17.45 -6.46 -25.93Z" fill="#c8ccc2"/>
+    <path d="M-10 -12.98L-6.87 -23.92L-6.66 -23.79L-9.74 -12.82Z" fill="#c8ccc2" opacity="0.35"/>
+    <path d="M-8.49 -12.1L-6.42 -23.66L-6.2 -23.53L-8.23 -11.95Z" fill="#c8ccc2" opacity="0.35"/>
+    <path d="M-6.93 -11.2Q-6.5 -21.55 -1.26 -25.93Q-0.52 -15.65 -0.87 -7.7Z" fill="#eef0ea"/>
+    <path d="M-6.93 -11.2Q-6.5 -21.55 -1.26 -25.93Q-3.38 -17.65 -4.81 -9.98Z" fill="#ffffff"/>
+    <path d="M-1.26 -25.93Q-0.52 -15.65 -0.87 -7.7L-2.08 -8.4Q-1.3 -15.95 -1.26 -25.93Z" fill="#c8ccc2"/>
+    <path d="M-4.81 -9.98L-1.68 -23.47L-1.46 -23.34L-4.55 -9.82Z" fill="#c8ccc2" opacity="0.35"/>
+    <path d="M-3.29 -9.1L-1.22 -23.21L-1.01 -23.08L-3.03 -8.95Z" fill="#c8ccc2" opacity="0.35"/>
+    <path d="M-1.73 -8.2Q-1.3 -17.15 3.93 -20.93Q4.68 -11.55 4.33 -4.7Z" fill="#eef0ea"/>
+    <path d="M-1.73 -8.2Q-1.3 -17.15 3.93 -20.93Q1.82 -13.65 0.39 -6.98Z" fill="#ffffff"/>
+    <path d="M3.93 -20.93Q4.68 -11.55 4.33 -4.7L3.12 -5.4Q3.9 -11.95 3.93 -20.93Z" fill="#c8ccc2"/>
+    <path d="M0.39 -6.98L3.52 -18.77L3.74 -18.64L0.65 -6.83Z" fill="#c8ccc2" opacity="0.35"/>
+    <path d="M1.91 -6.1L3.97 -18.51L4.19 -18.38L2.17 -5.95Z" fill="#c8ccc2" opacity="0.35"/>
+    <path d="M-15.59 -12.2L12.12 3.8L12.12 1L-15.59 -15Z" fill="#f3c47e" opacity="0.9"/>
+    <path d="M-11.26 -6.7Q-10.57 -17.9 -4.35 -22.71Q-2.94 -10.8 -3.46 -2.2Z" fill="#eef0ea"/>
+    <path d="M-11.26 -6.7Q-10.57 -17.9 -4.35 -22.71Q-6.84 -13.55 -8.53 -5.12Z" fill="#ffffff"/>
+    <path d="M-4.35 -22.71Q-2.94 -10.8 -3.46 -2.2L-4.68 -2.9Q-3.64 -11.1 -4.35 -22.71Z" fill="#c8ccc2"/>
+    <path d="M-8.53 -5.12L-4.82 -19.98L-4.61 -19.86L-8.27 -4.97Z" fill="#c8ccc2" opacity="0.35"/>
+    <path d="M-6.58 -4L-4.24 -19.65L-4.02 -19.52L-6.32 -3.85Z" fill="#c8ccc2" opacity="0.35"/>
+    <path d="M-4.33 -2.7Q-3.64 -16.7 2.58 -22.71Q3.98 -9 3.46 1.8Z" fill="#eef0ea"/>
+    <path d="M-4.33 -2.7Q-3.64 -16.7 2.58 -22.71Q0.09 -11.55 -1.6 -1.12Z" fill="#ffffff"/>
+    <path d="M2.58 -22.71Q3.98 -9 3.46 1.8L2.25 1.1Q3.29 -9.1 2.58 -22.71Z" fill="#c8ccc2"/>
+    <path d="M-1.6 -1.12L2.11 -19.38L2.32 -19.26L-1.34 -0.98Z" fill="#c8ccc2" opacity="0.35"/>
+    <path d="M0.35 -0L2.69 -19.05L2.91 -18.92L0.61 0.15Z" fill="#c8ccc2" opacity="0.35"/>
+    <path d="M2.6 1.3Q3.29 -10.6 9.32 -15.82Q10.05 -3.85 9.53 5.3Z" fill="#eef0ea"/>
+    <path d="M2.6 1.3Q3.29 -10.6 9.32 -15.82Q6.75 -6.2 5.02 2.7Z" fill="#ffffff"/>
+    <path d="M9.32 -15.82Q10.05 -3.85 9.53 5.3L8.31 4.6Q9.35 -4.1 9.32 -15.82Z" fill="#c8ccc2"/>
+    <path d="M5.02 2.7L8.81 -12.96L9.03 -12.84L5.28 2.85Z" fill="#c8ccc2" opacity="0.35"/>
+    <path d="M6.75 3.7L9.33 -12.66L9.55 -12.54L7.01 3.85Z" fill="#c8ccc2" opacity="0.35"/>
+    <path d="M7.79 4.3Q8.49 -3.4 13.94 -7.15Q12.64 0.95 12.12 6.8Z" fill="#eef0ea"/>
+    <path d="M7.79 4.3Q8.49 -3.4 13.94 -7.15Q11.17 -0.65 9.31 5.17Z" fill="#ffffff"/>
+    <path d="M13.94 -7.15Q12.64 0.95 12.12 6.8L10.91 6.1Q11.95 0.4 13.94 -7.15Z" fill="#c8ccc2"/>
+    <path d="M9.31 5.17L13.33 -5.25L13.55 -5.13L9.57 5.33Z" fill="#c8ccc2" opacity="0.35"/>
+    <path d="M10.39 5.8L13.66 -5.06L13.87 -4.94L10.65 5.95Z" fill="#c8ccc2" opacity="0.35"/>
+    <g><animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;4 0.6;0 0;-4 -0.6;0 0" dur="8s" begin="0.0s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
+    <path d="M-25.13 -0.8L-17.13 -0.8L-18.13 0.8L-24.53 0.8Z" fill="#2f6a46"/>
+    <path d="M-23.73 -2.8L-18.53 -2.8L-18.53 -0.8L-23.73 -0.8Z" fill="#fff4c8"/>
+    <path d="M-23.73 -2.2L-18.53 -2.2L-18.53 -1.6L-23.73 -1.6Z" fill="#2f6a46" opacity="0.6"/>
+    </g>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-8.79 8.50a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM-8.61 8.50a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z"><animate attributeName="d" values="M-8.79 8.50a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM-8.61 8.50a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z;M-12.79 8.50a5.00 2.50 0 1 0 10.00 0a5.00 2.50 0 1 0 -10.00 0ZM-11.89 8.50a4.10 2.05 0 1 0 8.20 0a4.10 2.05 0 1 0 -8.20 0Z" dur="3.4s" begin="0.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0" dur="3.4s" begin="0.0s" repeatCount="indefinite"/></path>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-1.87 12.50a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM-1.69 12.50a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z"><animate attributeName="d" values="M-1.87 12.50a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM-1.69 12.50a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z;M-5.87 12.50a5.00 2.50 0 1 0 10.00 0a5.00 2.50 0 1 0 -10.00 0ZM-4.97 12.50a4.10 2.05 0 1 0 8.20 0a4.10 2.05 0 1 0 -8.20 0Z" dur="3.4s" begin="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0" dur="3.4s" begin="1.5s" repeatCount="indefinite"/></path>
+  </g>
 </svg>

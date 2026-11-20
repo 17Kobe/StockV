@@ -1,103 +1,76 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-
-  <defs>
-    <linearGradient id="vr-water" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#6cc3ec"/><stop offset="1" stop-color="#2e7eb8"/>
-    </linearGradient>
-    <linearGradient id="vr-step1" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#e2d4b4"/><stop offset="1" stop-color="#c3b08a"/>
-    </linearGradient>
-    <linearGradient id="vr-step2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#d7c6a0"/><stop offset="1" stop-color="#b6a27a"/>
-    </linearGradient>
-    <linearGradient id="vr-step3" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#ccba98"/><stop offset="1" stop-color="#a9956e"/>
-    </linearGradient>
-    <linearGradient id="vr-step4" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#c0ad8c"/><stop offset="1" stop-color="#9d8863"/>
-    </linearGradient>
-    <linearGradient id="vr-temple1" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f0996a"/><stop offset="1" stop-color="#c76a3a"/>
-    </linearGradient>
-    <linearGradient id="vr-temple2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#e8834a"/><stop offset="1" stop-color="#b85e30"/>
-    </linearGradient>
-  </defs>
-
-  <!-- Ground / water base -->
-  <ellipse cx="40" cy="72" rx="30" ry="5" fill="#3d86c0" stroke="#215f8e" stroke-width="0.5"/>
-
-  <!-- Water surface with wave lines -->
-  <rect x="12" y="60" width="56" height="14" rx="2" fill="url(#vr-water)" stroke="#215f8e" stroke-width="0.5"/>
-  <path d="M14 63 Q20 61 26 63 Q32 65 38 63 Q44 61 50 63 Q56 65 62 63 Q66 61 68 63" fill="none" stroke="#eaf6ff" stroke-width="0.8" opacity="0.7"/>
-  <path d="M14 67 Q20 65 26 67 Q32 69 38 67 Q44 65 50 67 Q56 69 62 67 Q66 65 68 67" fill="none" stroke="#eaf6ff" stroke-width="0.8" opacity="0.7">
-    <animate attributeName="d"
-      values="M14 67 Q20 65 26 67 Q32 69 38 67 Q44 65 50 67 Q56 69 62 67 Q66 65 68 67;
-              M14 67 Q20 69 26 67 Q32 65 38 67 Q44 69 50 67 Q56 65 62 67 Q66 69 68 67;
-              M14 67 Q20 65 26 67 Q32 69 38 67 Q44 65 50 67 Q56 69 62 67 Q66 65 68 67"
-      dur="2.5s" repeatCount="indefinite"/>
-  </path>
-
-  <!-- Stone steps (ghats) - multiple layers -->
-  <!-- Bottom step -->
-  <rect x="18" y="57" width="44" height="5" rx="1" fill="url(#vr-step1)" stroke="#8f7c56" stroke-width="0.5"/>
-  <!-- Step 2 -->
-  <rect x="20" y="51" width="40" height="6" rx="1" fill="url(#vr-step2)" stroke="#8f7c56" stroke-width="0.5"/>
-  <!-- Step 3 -->
-  <rect x="22" y="45" width="36" height="6" rx="1" fill="url(#vr-step3)" stroke="#8f7c56" stroke-width="0.5"/>
-  <!-- Step 4 -->
-  <rect x="24" y="40" width="32" height="5" rx="1" fill="url(#vr-step4)" stroke="#8f7c56" stroke-width="0.5"/>
-  <!-- Step lines for depth -->
-  <line x1="18" y1="57" x2="62" y2="57" stroke="#8f7c56" stroke-width="0.4" opacity="0.5"/>
-  <line x1="20" y1="51" x2="60" y2="51" stroke="#8f7c56" stroke-width="0.4" opacity="0.5"/>
-
-  <!-- Temple / Shikara on left -->
-  <rect x="23" y="28" width="12" height="14" rx="1" fill="url(#vr-temple1)" stroke="#8a4a26" stroke-width="0.5"/>
-  <!-- Shikara tower (cone-like spire) -->
-  <polygon points="29,8 23,28 35,28" fill="url(#vr-temple1)" stroke="#8a4a26" stroke-width="0.5"/>
-  <!-- Spire detail bands -->
-  <line x1="24" y1="24" x2="34" y2="24" stroke="#b5622f" stroke-width="0.7" opacity="0.7"/>
-  <line x1="25" y1="20" x2="33" y2="20" stroke="#b5622f" stroke-width="0.7" opacity="0.7"/>
-  <line x1="26" y1="16" x2="32" y2="16" stroke="#b5622f" stroke-width="0.7" opacity="0.7"/>
-  <!-- Temple top ornament -->
-  <circle cx="29" cy="7" r="2" fill="#f5c842" stroke="#a3850a" stroke-width="0.5"/>
-
-  <!-- Second smaller temple on right -->
-  <rect x="46" y="32" width="10" height="11" rx="1" fill="url(#vr-temple2)" stroke="#8a4a26" stroke-width="0.5"/>
-  <polygon points="51,15 46,32 56,32" fill="url(#vr-temple2)" stroke="#8a4a26" stroke-width="0.5"/>
-  <line x1="47" y1="28" x2="55" y2="28" stroke="#9c5428" stroke-width="0.6" opacity="0.6"/>
-  <line x1="47.5" y1="24" x2="54.5" y2="24" stroke="#9c5428" stroke-width="0.6" opacity="0.6"/>
-  <circle cx="51" cy="14" r="1.5" fill="#f5c842" stroke="#a3850a" stroke-width="0.5"/>
-
-  <!-- Small silhouette people on steps -->
-  <!-- Person 1 -->
-  <circle cx="33" cy="49" r="1.5" fill="#8b6914" stroke="#5c460d" stroke-width="0.4"/>
-  <line x1="33" y1="50.5" x2="33" y2="54" stroke="#8b6914" stroke-width="1.2" stroke-linecap="round"/>
-  <!-- Person 2 (praying pose - arms up) -->
-  <circle cx="41" cy="53" r="1.5" fill="#8b6914" stroke="#5c460d" stroke-width="0.4"/>
-  <line x1="41" y1="54.5" x2="41" y2="58" stroke="#8b6914" stroke-width="1.2" stroke-linecap="round"/>
-  <!-- Person 3 sitting -->
-  <circle cx="50" cy="49" r="1.5" fill="#a07830" stroke="#6c501f" stroke-width="0.4"/>
-
-  <!-- Marigold flower decorations (orange balls) -->
-  <!-- Flower 1 -->
-  <circle cx="40" cy="42" r="2.5" fill="#f5a623" stroke="#b3760f" stroke-width="0.5"/>
-  <circle cx="40" cy="42" r="1.2" fill="#f7c462" stroke="none"/>
-  <!-- Flower 2 -->
-  <circle cx="28" cy="39" r="2" fill="#f5a623" stroke="#b3760f" stroke-width="0.5"/>
-  <circle cx="28" cy="39" r="1" fill="#f7c462" stroke="none"/>
-  <!-- Flower 3 -->
-  <circle cx="54" cy="42" r="2" fill="#e8834a" stroke="#a85a28" stroke-width="0.5"/>
-  <circle cx="54" cy="42" r="1" fill="#f5a623" stroke="none"/>
-
-  <!-- Floating flower petal on water (animated) -->
-  <ellipse cx="25" cy="64" rx="3" ry="1.5" fill="#f5a623" stroke="#b3760f" stroke-width="0.5">
-    <animate attributeName="cx" values="25;55;25" dur="8s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="1;0.7;1" dur="8s" repeatCount="indefinite"/>
-  </ellipse>
-  <ellipse cx="50" cy="66" rx="2.5" ry="1.2" fill="#f0c040" stroke="#b3900f" stroke-width="0.5">
-    <animate attributeName="cx" values="50;20;50" dur="10s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.8;1;0.8" dur="10s" repeatCount="indefinite"/>
-  </ellipse>
-
+  <!-- 瓦拉納西恆河河壇（2.5D）：一層層降到恆河的砂岩河階，上面是橘紅色曲線尖塔的印度教寺廟與草傘，河上漂著小木船（動畫）與點著燭火的花燈（閃爍動畫）。光源左上，不描邊 -->
+  <g transform="translate(44.07 53.51) scale(0.94)">
+    <path d="M-29.44 -11L19.05 17L5.2 25L-43.3 -3Z" fill="#7fb8a4"/>
+    <path d="M-32.04 -9.51L16.45 18.49L14.72 19.49L-33.77 -8.51Z" fill="#b8d8c8" opacity="0.6"/>
+    <path d="M34.64 6L31.18 8L31.18 -2L34.64 -4Z" fill="#946640"/>
+    <path d="M-13.86 -18L31.18 8L31.18 -2L-13.86 -28Z" fill="#c39064"/>
+    <path d="M-10.39 -30L34.64 -4L31.18 -2L-13.86 -28Z" fill="#e3b98a"/>
+    <path d="M31.18 8L27.71 10L27.71 2L31.18 0Z" fill="#946640"/>
+    <path d="M-17.32 -16L27.71 10L27.71 2L-17.32 -24Z" fill="#c39064"/>
+    <path d="M-13.86 -26L31.18 0L27.71 2L-17.32 -24Z" fill="#e3b98a"/>
+    <path d="M27.71 10L24.25 12L24.25 6L27.71 4Z" fill="#946640"/>
+    <path d="M-20.78 -14L24.25 12L24.25 6L-20.78 -20Z" fill="#c39064"/>
+    <path d="M-17.32 -22L27.71 4L24.25 6L-20.78 -20Z" fill="#e3b98a"/>
+    <path d="M24.25 12L20.78 14L20.78 10L24.25 8Z" fill="#946640"/>
+    <path d="M-24.25 -12L20.78 14L20.78 10L-24.25 -16Z" fill="#c39064"/>
+    <path d="M-20.78 -18L24.25 8L20.78 10L-24.25 -16Z" fill="#e3b98a"/>
+    <path d="M20.78 14L17.32 16L17.32 14L20.78 12Z" fill="#946640"/>
+    <path d="M-27.71 -10L17.32 16L17.32 14L-27.71 -12Z" fill="#c39064"/>
+    <path d="M-24.25 -14L20.78 12L17.32 14L-27.71 -12Z" fill="#e3b98a"/>
+    <path d="M6.24 -26L0 -22.4L0 -27.44L6.24 -31.04Z" fill="#ab9f87"/>
+    <path d="M-6.24 -26L0 -22.4L0 -27.44L-6.24 -31.04Z" fill="#d3c9b3"/>
+    <path d="M0 -34.64L6.24 -31.04L0 -27.44L-6.24 -31.04Z" fill="#efe8d8"/>
+    <path d="M-5.04 -29.6Q-4.32 -43.64 0 -49.04Q4.32 -43.64 5.04 -29.6Z" fill="#ef8a2e"/>
+    <path d="M0.72 -28.88Q1.8 -41.84 0 -49.04Q4.32 -43.64 5.04 -29.6Z" fill="#b8621c"/>
+    <path d="M-4.68 -35.54L4.68 -35.54L4.49 -36.04L-4.49 -36.04Z" fill="#ffb35a" opacity="0.7"/>
+    <path d="M-3.51 -39.5L3.51 -39.5L3.37 -40L-3.37 -40Z" fill="#ffb35a" opacity="0.7"/>
+    <path d="M-2.34 -43.46L2.34 -43.46L2.25 -43.96L-2.25 -43.96Z" fill="#ffb35a" opacity="0.7"/>
+    <path d="M0.7 -49.64L0.68 -49.48L0.63 -49.34L0.55 -49.2L0.44 -49.09L0.3 -49.01L0.16 -48.96L0 -48.94L-0.16 -48.96L-0.3 -49.01L-0.44 -49.09L-0.55 -49.2L-0.63 -49.34L-0.68 -49.48L-0.7 -49.64L-0.68 -49.8L-0.63 -49.94L-0.55 -50.08L-0.44 -50.19L-0.3 -50.27L-0.16 -50.32L-0 -50.34L0.16 -50.32L0.3 -50.27L0.44 -50.19L0.55 -50.08L0.63 -49.94L0.68 -49.8Z" fill="#b08632"/>
+    <path d="M0.52 -49.72L0.5 -49.59L0.46 -49.46L0.39 -49.35L0.29 -49.25L0.18 -49.18L0.05 -49.14L-0.08 -49.12L-0.22 -49.14L-0.35 -49.18L-0.46 -49.25L-0.55 -49.35L-0.63 -49.46L-0.67 -49.59L-0.69 -49.72L-0.67 -49.86L-0.63 -49.99L-0.55 -50.1L-0.46 -50.19L-0.35 -50.27L-0.22 -50.31L-0.08 -50.33L0.05 -50.31L0.18 -50.27L0.29 -50.19L0.39 -50.1L0.46 -49.99L0.5 -49.86Z" fill="#e6b84a"/>
+    <path d="M-0.01 -49.92L-0.02 -49.87L-0.04 -49.82L-0.07 -49.77L-0.11 -49.73L-0.16 -49.71L-0.21 -49.69L-0.27 -49.68L-0.32 -49.69L-0.38 -49.71L-0.42 -49.73L-0.46 -49.77L-0.49 -49.82L-0.51 -49.87L-0.52 -49.92L-0.51 -49.97L-0.49 -50.02L-0.46 -50.07L-0.42 -50.11L-0.38 -50.13L-0.32 -50.15L-0.27 -50.16L-0.21 -50.15L-0.16 -50.13L-0.11 -50.11L-0.07 -50.07L-0.04 -50.02L-0.02 -49.97Z" fill="#ffe08a"/>
+    <path d="M0 -50.04L2.4 -50.84L0 -51.64Z" fill="#ef6a5a"/>
+    <path d="M32.04 -11.5L26.85 -8.5L26.85 -12.7L32.04 -15.7Z" fill="#ab9f87"/>
+    <path d="M21.65 -11.5L26.85 -8.5L26.85 -12.7L21.65 -15.7Z" fill="#d3c9b3"/>
+    <path d="M26.85 -18.7L32.04 -15.7L26.85 -12.7L21.65 -15.7Z" fill="#efe8d8"/>
+    <path d="M22.65 -14.5Q23.25 -25.5 26.85 -29.7Q30.45 -25.5 31.05 -14.5Z" fill="#ef8a2e"/>
+    <path d="M27.45 -13.9Q28.35 -24.1 26.85 -29.7Q30.45 -25.5 31.05 -14.5Z" fill="#b8621c"/>
+    <path d="M22.95 -19.2L30.75 -19.2L30.59 -19.7L23.1 -19.7Z" fill="#ffb35a" opacity="0.7"/>
+    <path d="M23.92 -22.28L29.77 -22.28L29.65 -22.78L24.04 -22.78Z" fill="#ffb35a" opacity="0.7"/>
+    <path d="M24.9 -25.36L28.8 -25.36L28.72 -25.86L24.97 -25.86Z" fill="#ffb35a" opacity="0.7"/>
+    <path d="M27.55 -30.3L27.53 -30.14L27.48 -30L27.39 -29.86L27.28 -29.75L27.15 -29.67L27 -29.62L26.85 -29.6L26.69 -29.62L26.54 -29.67L26.41 -29.75L26.3 -29.86L26.22 -30L26.16 -30.14L26.15 -30.3L26.16 -30.46L26.22 -30.6L26.3 -30.74L26.41 -30.85L26.54 -30.93L26.69 -30.98L26.85 -31L27 -30.98L27.15 -30.93L27.28 -30.85L27.39 -30.74L27.48 -30.6L27.53 -30.46Z" fill="#b08632"/>
+    <path d="M27.36 -30.38L27.35 -30.25L27.31 -30.12L27.23 -30.01L27.14 -29.91L27.02 -29.84L26.9 -29.8L26.76 -29.78L26.63 -29.8L26.5 -29.84L26.39 -29.91L26.29 -30.01L26.22 -30.12L26.18 -30.25L26.16 -30.38L26.18 -30.52L26.22 -30.65L26.29 -30.76L26.39 -30.85L26.5 -30.93L26.63 -30.97L26.76 -30.99L26.9 -30.97L27.02 -30.93L27.14 -30.85L27.23 -30.76L27.31 -30.65L27.35 -30.52Z" fill="#e6b84a"/>
+    <path d="M26.83 -30.58L26.83 -30.53L26.81 -30.48L26.78 -30.43L26.74 -30.39L26.69 -30.37L26.64 -30.35L26.58 -30.34L26.52 -30.35L26.47 -30.37L26.42 -30.39L26.38 -30.43L26.35 -30.48L26.34 -30.53L26.33 -30.58L26.34 -30.63L26.35 -30.68L26.38 -30.73L26.42 -30.77L26.47 -30.79L26.52 -30.81L26.58 -30.82L26.64 -30.81L26.69 -30.79L26.74 -30.77L26.78 -30.73L26.81 -30.68L26.83 -30.63Z" fill="#ffe08a"/>
+    <path d="M26.85 -30.7L29.25 -31.5L26.85 -32.3Z" fill="#ef6a5a"/>
+    <path d="M20.78 -16L15.59 -13L15.59 -20L20.78 -23Z" fill="#b3a891"/>
+    <path d="M5.2 -19L15.59 -13L15.59 -20L5.2 -26Z" fill="#ddd4c2"/>
+    <path d="M10.39 -29L20.78 -23L15.59 -20L5.2 -26Z" fill="#f6f1e6"/>
+    <path d="M6.06 -19.5L7.27 -18.8L7.27 -22.8L6.06 -23.5Z" fill="#8a5a3a" opacity="0.8"/>
+    <path d="M8.66 -18L9.87 -17.3L9.87 -21.3L8.66 -22Z" fill="#8a5a3a" opacity="0.8"/>
+    <path d="M11.26 -16.5L12.47 -15.8L12.47 -19.8L11.26 -20.5Z" fill="#8a5a3a" opacity="0.8"/>
+    <path d="M13.86 -15L15.07 -14.3L15.07 -18.3L13.86 -19Z" fill="#8a5a3a" opacity="0.8"/>
+    <path d="M-14.06 -18L-13.66 -18L-13.66 -23L-14.06 -23Z" fill="#5a3f28"/>
+    <path d="M-17.86 -22.4L-9.86 -22.4L-13.86 -25Z" fill="#d9b46a"/>
+    <path d="M-13.86 -22.4L-9.86 -22.4L-13.86 -25Z" fill="#b08a45"/>
+    <path d="M6.73 -6L7.13 -6L7.13 -11L6.73 -11Z" fill="#5a3f28"/>
+    <path d="M2.93 -10.4L10.93 -10.4L6.93 -13Z" fill="#d9b46a"/>
+    <path d="M6.93 -10.4L10.93 -10.4L6.93 -13Z" fill="#b08a45"/>
+    <path d="M15.39 5L15.79 5L15.79 0L15.39 0Z" fill="#5a3f28"/>
+    <path d="M11.59 0.6L19.59 0.6L15.59 -2Z" fill="#d9b46a"/>
+    <path d="M15.59 0.6L19.59 0.6L15.59 -2Z" fill="#b08a45"/>
+    <g><animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;2 0;0 0;-2 0;0 0" dur="6s" begin="0.0s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
+    <path d="M-26.65 1.5L-16.65 1.5L-18.05 3.5L-25.25 3.5Z" fill="#7d5a3a"/>
+    <path d="M-26.65 1.5L-16.65 1.5L-17.05 0.9L-26.25 0.9Z" fill="#a37a52"/>
+    </g>
+    <path d="M-5.93 8L-5.95 8.09L-6.03 8.17L-6.15 8.25L-6.3 8.31L-6.49 8.36L-6.71 8.39L-6.93 8.4L-7.15 8.39L-7.36 8.36L-7.55 8.31L-7.71 8.25L-7.83 8.17L-7.9 8.09L-7.93 8L-7.9 7.91L-7.83 7.83L-7.71 7.75L-7.55 7.69L-7.36 7.64L-7.15 7.61L-6.93 7.6L-6.71 7.61L-6.49 7.64L-6.3 7.69L-6.15 7.75L-6.03 7.83L-5.95 7.91Z" fill="#ffb35a"/>
+    <circle cx="-6.93" cy="7.40" r="0.55" fill="#fff3a0"><animate attributeName="opacity" values="1;0.3;1" dur="1.2s" begin="0.0s" repeatCount="indefinite"/></circle>
+    <path d="M-4.2 13L-4.22 13.09L-4.3 13.17L-4.41 13.25L-4.57 13.31L-4.76 13.36L-4.97 13.39L-5.2 13.4L-5.42 13.39L-5.63 13.36L-5.82 13.31L-5.98 13.25L-6.1 13.17L-6.17 13.09L-6.2 13L-6.17 12.91L-6.1 12.83L-5.98 12.75L-5.82 12.69L-5.63 12.64L-5.42 12.61L-5.2 12.6L-4.97 12.61L-4.76 12.64L-4.57 12.69L-4.41 12.75L-4.3 12.83L-4.22 12.91Z" fill="#ffb35a"/>
+    <circle cx="-5.20" cy="12.40" r="0.55" fill="#fff3a0"><animate attributeName="opacity" values="1;0.3;1" dur="1.4s" begin="0.3s" repeatCount="indefinite"/></circle>
+    <path d="M3.6 14.5L3.57 14.59L3.5 14.67L3.38 14.75L3.22 14.81L3.03 14.86L2.82 14.89L2.6 14.9L2.38 14.89L2.16 14.86L1.97 14.81L1.82 14.75L1.7 14.67L1.62 14.59L1.6 14.5L1.62 14.41L1.7 14.33L1.82 14.25L1.97 14.19L2.16 14.14L2.38 14.11L2.6 14.1L2.82 14.11L3.03 14.14L3.22 14.19L3.38 14.25L3.5 14.33L3.57 14.41Z" fill="#ffb35a"/>
+    <circle cx="2.60" cy="13.90" r="0.55" fill="#fff3a0"><animate attributeName="opacity" values="1;0.3;1" dur="1.6s" begin="0.6s" repeatCount="indefinite"/></circle>
+    <path d="M-16.32 8L-16.35 8.09L-16.42 8.17L-16.54 8.25L-16.7 8.31L-16.89 8.36L-17.1 8.39L-17.32 8.4L-17.54 8.39L-17.75 8.36L-17.94 8.31L-18.1 8.25L-18.22 8.17L-18.3 8.09L-18.32 8L-18.3 7.91L-18.22 7.83L-18.1 7.75L-17.94 7.69L-17.75 7.64L-17.54 7.61L-17.32 7.6L-17.1 7.61L-16.89 7.64L-16.7 7.69L-16.54 7.75L-16.42 7.83L-16.35 7.91Z" fill="#ffb35a"/>
+    <circle cx="-17.32" cy="7.40" r="0.55" fill="#fff3a0"><animate attributeName="opacity" values="1;0.3;1" dur="1.8s" begin="0.8999999999999999s" repeatCount="indefinite"/></circle>
+    <path d="M5.33 19.5L5.31 19.59L5.23 19.67L5.11 19.75L4.95 19.81L4.76 19.86L4.55 19.89L4.33 19.9L4.11 19.89L3.9 19.86L3.71 19.81L3.55 19.75L3.43 19.67L3.36 19.59L3.33 19.5L3.36 19.41L3.43 19.33L3.55 19.25L3.71 19.19L3.9 19.14L4.11 19.11L4.33 19.1L4.55 19.11L4.76 19.14L4.95 19.19L5.11 19.25L5.23 19.33L5.31 19.41Z" fill="#ffb35a"/>
+    <circle cx="4.33" cy="18.90" r="0.55" fill="#fff3a0"><animate attributeName="opacity" values="1;0.3;1" dur="2.0s" begin="1.2s" repeatCount="indefinite"/></circle>
+  </g>
 </svg>

@@ -1,21 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <defs>
-    <linearGradient id="h" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9824a"/><stop offset="1" stop-color="#6a4020"/></linearGradient>
-  </defs>
-  <!-- 阿拉伯三角帆船（Dhow）：長斜桁上掛大三角帆，船尾高翹 -->
-  <!-- 斜桁（長長的斜杆）與桅杆 -->
-  <rect x="50" y="52" width="3" height="40" fill="#4a2f17"/>
-  <path d="M18 100 L100 4" stroke="#4a2f17" stroke-width="3" stroke-linecap="round"/>
-  <!-- 三角帆 -->
-  <path d="M22 96 L98 8 L84 96Z" fill="#f4e8c8" stroke="#b9a273" stroke-width="1.3"/>
-  <g stroke="#cdb980" stroke-width="1" opacity=".9"><path d="M40 76 L86 84 M52 62 L86 70 M64 48 L86 56 M76 34 L86 42"/></g>
-  <path d="M60 60 L76 80 L58 80Z" fill="#c9a24a" opacity=".55"/>
-  <!-- 船身：細長、船首尖、船尾高 -->
-  <path d="M2 88 L12 94 L96 96 L112 72 L116 72 L114 100 Q104 112 84 113 L30 113 Q10 108 2 88Z" fill="url(#h)"/>
-  <path d="M110 72 L124 64 L120 78 L114 80Z" fill="#8a5a2c"/>
-  <path d="M10 96 L112 96" stroke="#f2e2b4" stroke-width="2.6"/>
-  <g fill="#2a3a52"><circle cx="102" cy="85" r="3"/></g>
-  <g stroke="#6a4020" stroke-width="2"><path d="M30 106 L90 107"/></g>
-  <path d="M2 88 L-0 82" stroke="#4a2f17" stroke-width="3" stroke-linecap="round"/>
-  <path d="M100 4 L116 8 L100 12Z" fill="#c4312b"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 阿拉伯三角帆船（2.5D）：往來印度洋的傳統木造貿易船，船首高高翹起，一面巨大的米白色三角帆（帆布接縫）掛在斜桁上，桁頂的紅色小旗飄動，四周水波擴散（動畫）。光源左上，不描邊 -->
+  <g transform="translate(40 55.64) scale(1.67)">
+    <path d="M20.78 12L18.86 12.65L16.22 12.81L12.95 12.48L9.19 11.67L5.07 10.41L0.75 8.75L-3.59 6.75L-7.79 4.5L-11.7 2.07L-15.15 -0.43L-18.03 -2.93L-20.21 -5.3L-21.61 -7.48L-22.19 -9.36L-21.91 -10.89L-20.78 -12L-18.86 -12.65L-16.22 -12.81L-12.95 -12.48L-9.19 -11.67L-5.07 -10.41L-0.75 -8.75L3.59 -6.75L7.79 -4.5L11.7 -2.07L15.15 0.43L18.03 2.93L20.21 5.3L21.61 7.48L22.19 9.36L21.91 10.89Z" fill="#52c3dc" opacity="0.6"/>
+    <path d="M-12.99 -4.5L-7.79 -7.5L12.99 4.5L14.18 5.49L8.99 8.49L-11.8 -3.51Z" fill="#000000" opacity="0.2"/>
+    <path d="M7.27 7.8L-13.51 -4.2L-13.51 -8.2L7.27 3.8Z" fill="#7d5a3a"/>
+    <path d="M13.86 8L7.27 7.8L7.27 3.8L13.86 4Z" fill="#7d5a3a"/>
+    <path d="M-7.27 -11.2L12.82 0.4L12.99 3.5L7.62 3.4L-12.47 -8.2L-11.09 -10.4Z" fill="#5a3f28"/>
+    <path d="M-1.91 -8.7L-8.14 -5.1L-8.14 -7.5L-1.91 -11.1Z" fill="#5a3f28"/>
+    <path d="M-14.2 -8.6L-8.14 -5.1L-8.14 -7.5L-14.2 -11Z" fill="#7d5a3a"/>
+    <path d="M-7.97 -14.6L-1.91 -11.1L-8.14 -7.5L-14.2 -11Z" fill="#a37a52"/>
+    <path d="M12.86 4L14.26 4.4L16.85 0.5L16.05 0.1Z" fill="#7d5a3a"/>
+    <path d="M-13.51 -6.8L7.27 5.2L7.27 4.6L-13.51 -7.4Z" fill="#e8e2d2" opacity="0.9"/>
+    <path d="M0.52 -3.5L1.22 -3.5L1.17 -25.5L0.57 -25.5Z" fill="#5a3f28"/>
+    <path d="M-11.78 -12.2Q-1.21 -17.3 12.47 -21.2Q4.33 -8.5 1.21 -3.1Z" fill="#eee4cf"/>
+    <path d="M-11.78 -12.2Q-1.21 -17.3 12.47 -21.2L1.39 -10.8Z" fill="#fffaf0" opacity="0.85"/>
+    <path d="M-5.37 -14.4L-0.45 -5.16L-0.1 -4.96L-4.94 -14.15Z" fill="#c9bc9e" opacity="0.35"/>
+    <path d="M-0.03 -16.38L0.62 -5.56L0.96 -5.36L0.4 -16.13Z" fill="#c9bc9e" opacity="0.35"/>
+    <path d="M5.3 -18.36L1.68 -5.95L2.03 -5.75L5.73 -18.11Z" fill="#c9bc9e" opacity="0.35"/>
+    <path d="M-11.78 -12.5L12.47 -21.5L12.47 -20.9L-11.78 -11.9Z" fill="#5a3f28"/>
+    <g><animateTransform attributeName="transform" type="skewY" values="0;-6;0;6;0" dur="1.2s" repeatCount="indefinite"/><rect x="12.47" y="-23.20" width="3.4" height="0.82" fill="#ef6a5a"/><rect x="12.47" y="-22.40" width="3.4" height="0.82" fill="#ef6a5a"/></g>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-17.85 -4.50a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM-17.60 -4.50a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z"><animate attributeName="d" values="M-17.85 -4.50a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM-17.60 -4.50a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z;M-22.45 -4.50a6.00 3.00 0 1 0 12.00 0a6.00 3.00 0 1 0 -12.00 0ZM-21.37 -4.50a4.92 2.46 0 1 0 9.84 0a4.92 2.46 0 1 0 -9.84 0Z" dur="3s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.45;0" dur="3s" begin="0s" repeatCount="indefinite"/></path>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-6.60 2.00a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM-6.34 2.00a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z"><animate attributeName="d" values="M-6.60 2.00a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM-6.34 2.00a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z;M-11.20 2.00a6.00 3.00 0 1 0 12.00 0a6.00 3.00 0 1 0 -12.00 0ZM-10.12 2.00a4.92 2.46 0 1 0 9.84 0a4.92 2.46 0 1 0 -9.84 0Z" dur="3s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.45;0" dur="3s" begin="1s" repeatCount="indefinite"/></path>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M4.66 8.50a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM4.91 8.50a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z"><animate attributeName="d" values="M4.66 8.50a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM4.91 8.50a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z;M0.06 8.50a6.00 3.00 0 1 0 12.00 0a6.00 3.00 0 1 0 -12.00 0ZM1.14 8.50a4.92 2.46 0 1 0 9.84 0a4.92 2.46 0 1 0 -9.84 0Z" dur="3s" begin="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.45;0" dur="3s" begin="2s" repeatCount="indefinite"/></path>
+  </g>
 </svg>

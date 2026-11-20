@@ -1,65 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-<defs>
-  <linearGradient id="bodyYellow" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#FFE066"/>
-    <stop offset="1" stop-color="#F2A900"/>
-  </linearGradient>
-  <linearGradient id="roofBlack" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#3a3a3a"/>
-    <stop offset="1" stop-color="#0d0d0d"/>
-  </linearGradient>
-  <radialGradient id="tireGrad" cx="0.35" cy="0.35" r="0.75">
-    <stop offset="0" stop-color="#4a4a4a"/>
-    <stop offset="0.6" stop-color="#1a1a1a"/>
-    <stop offset="1" stop-color="#000000"/>
-  </radialGradient>
-  <radialGradient id="hubGrad" cx="0.35" cy="0.35" r="0.8">
-    <stop offset="0" stop-color="#eeeeee"/>
-    <stop offset="1" stop-color="#8a8a8a"/>
-  </radialGradient>
-  <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#e3f3fb"/>
-    <stop offset="1" stop-color="#9fc9dc"/>
-  </linearGradient>
-  <radialGradient id="headlightGrad" cx="0.5" cy="0.5" r="0.5">
-    <stop offset="0" stop-color="#fffbe0"/>
-    <stop offset="1" stop-color="#ffd84a"/>
-  </radialGradient>
-</defs>
-<g>
-  <animateTransform attributeName="transform" type="translate" values="0 0; 0 -1.3; 0 0" dur="0.55s" repeatCount="indefinite"/>
-  <ellipse cx="40" cy="75.5" rx="33" ry="4" fill="#000000" opacity="0.22"/>
-  <g>
-    <animateTransform attributeName="transform" type="rotate" from="0 57 69" to="360 57 69" dur="0.9s" repeatCount="indefinite"/>
-    <circle cx="57" cy="69" r="10" fill="url(#tireGrad)" stroke="#000000" stroke-width="0.5"/>
-    <circle cx="57" cy="69" r="4.3" fill="url(#hubGrad)" stroke="#555555" stroke-width="0.3"/>
-    <line x1="57" y1="63" x2="57" y2="75" stroke="#555555" stroke-width="1.1"/>
-    <line x1="51" y1="69" x2="63" y2="69" stroke="#555555" stroke-width="1.1"/>
-    <line x1="52.8" y1="64.8" x2="61.2" y2="73.2" stroke="#555555" stroke-width="1"/>
-    <line x1="52.8" y1="73.2" x2="61.2" y2="64.8" stroke="#555555" stroke-width="1"/>
+  <!-- 嘟嘟車（2.5D，朝左下）：印度街頭的三輪計程車，綠色車身、黃色弧形車篷與黑色骨架，前面一顆輪子、後面兩顆，車頭燈閃爍（動畫）。光源左上，不描邊 -->
+  <g transform="translate(37.8 56.98) scale(2.36)">
+    <path d="M-11.26 1.5L2.6 -6.5L11.26 -1.5L13.64 0.48L-0.21 8.48L-8.87 3.48Z" fill="#000000" opacity="0.2"/>
+    <path d="M10.16 -1.85L10.13 -1.4L10.04 -0.98L9.89 -0.6L9.69 -0.29L9.46 -0.05L9.2 0.1L8.92 0.15L8.64 0.1L8.38 -0.05L8.15 -0.29L7.95 -0.6L7.8 -0.98L7.71 -1.4L7.68 -1.85L7.71 -2.3L7.8 -2.72L7.95 -3.1L8.15 -3.41L8.38 -3.65L8.64 -3.8L8.92 -3.85L9.2 -3.8L9.46 -3.65L9.69 -3.41L9.89 -3.1L10.04 -2.72L10.13 -2.3Z" fill="#2a2a33"/>
+    <path d="M9.66 -1.85L9.64 -1.63L9.6 -1.42L9.52 -1.23L9.42 -1.07L9.3 -0.95L9.16 -0.88L9.02 -0.85L8.88 -0.88L8.74 -0.95L8.62 -1.07L8.52 -1.23L8.44 -1.42L8.4 -1.63L8.38 -1.85L8.4 -2.07L8.44 -2.28L8.52 -2.47L8.62 -2.63L8.74 -2.75L8.88 -2.82L9.02 -2.85L9.16 -2.82L9.3 -2.75L9.42 -2.63L9.52 -2.47L9.6 -2.28L9.64 -2.07Z" fill="#9aa3ad"/>
+    <path d="M11.26 -3.1L0.87 2.9L0.87 -2.1L11.26 -8.1Z" fill="#2a7a40"/>
+    <path d="M-7.79 -2.1L0.87 2.9L0.87 -2.1L-7.79 -7.1Z" fill="#3fa85a"/>
+    <path d="M2.6 -13.1L11.26 -8.1L0.87 -2.1L-7.79 -7.1Z" fill="#6fcf7a"/>
+    <path d="M1.04 2.8L-2.77 5L-3.46 -1.2L-1.04 -2.6Z" fill="#2a7a40"/>
+    <path d="M-11.43 -0L-2.77 5L-3.46 -1.2L-9.35 -4.6Z" fill="#3fa85a"/>
+    <path d="M-6.93 -6L-1.04 -2.6L-3.46 -1.2L-9.35 -4.6Z" fill="#6fcf7a"/>
+    <path d="M11.6 -8.1L0.87 -1.9L0.87 -2.9L11.6 -9.1Z" fill="#b88a1e"/>
+    <path d="M-8.14 -7.1L0.87 -1.9L0.87 -2.9L-8.14 -8.1Z" fill="#f0bf3a"/>
+    <path d="M2.6 -14.3L11.6 -9.1L0.87 -2.9L-8.14 -8.1Z" fill="#ffe27a"/>
+    <path d="M3.29 -14.1L2.6 -13.7L2.6 -18.9L3.29 -19.3Z" fill="#23262e"/>
+    <path d="M1.91 -14.1L2.6 -13.7L2.6 -18.9L1.91 -19.3Z" fill="#3a3e4a"/>
+    <path d="M11.95 -9.1L11.26 -8.7L11.26 -13.9L11.95 -14.3Z" fill="#23262e"/>
+    <path d="M10.57 -9.1L11.26 -8.7L11.26 -13.9L10.57 -14.3Z" fill="#3a3e4a"/>
+    <path d="M-7.1 -8.1L-7.79 -7.7L-7.79 -12.9L-7.1 -13.3Z" fill="#23262e"/>
+    <path d="M-8.49 -8.1L-7.79 -7.7L-7.79 -12.9L-8.49 -13.3Z" fill="#3a3e4a"/>
+    <path d="M1.56 -3.1L0.87 -2.7L0.87 -7.9L1.56 -8.3Z" fill="#23262e"/>
+    <path d="M0.17 -3.1L0.87 -2.7L0.87 -7.9L0.17 -8.3Z" fill="#3a3e4a"/>
+    <path d="M-9.18 -5.5L-3.64 -2.3L-3.98 -6.9L-8.83 -9.7Z" fill="#bfe6f5" opacity="0.85"/>
+    <path d="M2.6 -19.5L12.3 -13.9L-2.08 -5.6L-11.78 -11.2Z" fill="#b88a1e"/>
+    <path d="M12.3 -13.9L-2.08 -5.6L-2.08 -7L12.3 -15.3Z" fill="#b88a1e"/>
+    <path d="M-11.78 -11.2L-2.08 -5.6L-2.08 -7L-11.78 -12.6Z" fill="#f0bf3a"/>
+    <path d="M2.6 -20.9L12.3 -15.3L-2.08 -7L-11.78 -12.6Z" fill="#ffe27a"/>
+    <path d="M10.57 -15.3L-2.08 -8L-2.08 -9L10.57 -16.3Z" fill="#b88a1e"/>
+    <path d="M-10.05 -12.6L-2.08 -8L-2.08 -9L-10.05 -13.6Z" fill="#f0bf3a"/>
+    <path d="M2.6 -20.9L10.57 -16.3L-2.08 -9L-10.05 -13.6Z" fill="#ffe27a"/>
+    <path d="M-5.58 -0.8L-5.61 -0.6L-5.68 -0.41L-5.8 -0.24L-5.96 -0.1L-6.15 0.01L-6.36 0.08L-6.58 0.1L-6.8 0.08L-7.02 0.01L-7.21 -0.1L-7.36 -0.24L-7.48 -0.41L-7.56 -0.6L-7.58 -0.8L-7.56 -1L-7.48 -1.19L-7.36 -1.36L-7.21 -1.5L-7.02 -1.61L-6.8 -1.68L-6.58 -1.7L-6.36 -1.68L-6.15 -1.61L-5.96 -1.5L-5.8 -1.36L-5.68 -1.19L-5.61 -1Z" fill="#fff6b0"/>
+    <circle cx="-6.58" cy="-0.80" r="0.50" fill="#ffffff"><animate attributeName="opacity" values="1;0.4;1" dur="2s" begin="0s" repeatCount="indefinite"/></circle>
+    <path d="M9.53 -3.1L2.61 0.9L2.61 0.1L9.53 -3.9Z" fill="#2a2a33" opacity="0.7"/>
+    <path d="M10.4 -8.59L5.2 -5.59L5.2 -9.39L10.4 -12.39Z" fill="#2a3866" opacity="0.35"/>
+    <path d="M-5.92 2.2L-5.95 2.62L-6.04 3.02L-6.18 3.38L-6.37 3.69L-6.59 3.91L-6.84 4.05L-7.1 4.1L-7.36 4.05L-7.61 3.91L-7.84 3.69L-8.02 3.38L-8.16 3.02L-8.25 2.62L-8.28 2.2L-8.25 1.78L-8.16 1.38L-8.02 1.02L-7.84 0.71L-7.61 0.49L-7.36 0.35L-7.1 0.3L-6.84 0.35L-6.59 0.49L-6.37 0.71L-6.18 1.02L-6.04 1.38L-5.95 1.78Z" fill="#2a2a33"/>
+    <path d="M-6.39 2.2L-6.41 2.41L-6.45 2.61L-6.53 2.79L-6.62 2.94L-6.74 3.06L-6.87 3.13L-7 3.15L-7.14 3.13L-7.27 3.06L-7.38 2.94L-7.48 2.79L-7.55 2.61L-7.59 2.41L-7.61 2.2L-7.59 1.99L-7.55 1.79L-7.48 1.61L-7.38 1.46L-7.27 1.34L-7.14 1.27L-7 1.25L-6.87 1.27L-6.74 1.34L-6.62 1.46L-6.53 1.61L-6.45 1.79L-6.41 1.99Z" fill="#9aa3ad"/>
   </g>
-  <g>
-    <animateTransform attributeName="transform" type="rotate" from="0 21 69" to="360 21 69" dur="0.9s" repeatCount="indefinite"/>
-    <circle cx="21" cy="69" r="9" fill="url(#tireGrad)" stroke="#000000" stroke-width="0.5"/>
-    <circle cx="21" cy="69" r="3.6" fill="url(#hubGrad)" stroke="#555555" stroke-width="0.3"/>
-    <line x1="21" y1="63" x2="21" y2="75" stroke="#555555" stroke-width="1"/>
-    <line x1="15" y1="69" x2="27" y2="69" stroke="#555555" stroke-width="1"/>
-    <line x1="16.8" y1="64.8" x2="25.2" y2="73.2" stroke="#555555" stroke-width="0.9"/>
-    <line x1="16.8" y1="73.2" x2="25.2" y2="64.8" stroke="#555555" stroke-width="0.9"/>
-  </g>
-  <path d="M46,64 Q57,44 68,64 Z" fill="url(#roofBlack)" stroke="#000000" stroke-width="0.4"/>
-  <path d="M11,64 Q21,48 31,64 Z" fill="url(#roofBlack)" stroke="#000000" stroke-width="0.4"/>
-  <path d="M16,63 L16,50 Q16,46 20,46 L60,46 Q64,46 64,50 L64,61 Q64,63 62,63 Z" fill="url(#bodyYellow)" stroke="#8a5e00" stroke-width="0.5"/>
-  <rect x="16" y="58" width="48" height="5" fill="#0d0d0d" opacity="0.85"/>
-  <rect x="18" y="51.5" width="44" height="1.6" fill="#2f8f3e" opacity="0.9"/>
-  <path d="M22,46 Q22,27 40,26 Q58,27 60,46 Z" fill="url(#roofBlack)" stroke="#000000" stroke-width="0.4"/>
-  <path d="M18,46 L18,38 Q18,34 22,33 L26,33 L26,46 Z" fill="url(#glassGrad)" stroke="#6a97a8" stroke-width="0.4"/>
-  <circle cx="22.5" cy="38" r="2.6" fill="#232323"/>
-  <path d="M19,46 Q19,41 22.5,40.5 Q26,41 26,46 Z" fill="#232323"/>
-  <path d="M10,63 L10,54 Q10,47 16,46 L18,46 L18,63 Z" fill="url(#roofBlack)" stroke="#000000" stroke-width="0.4"/>
-  <circle cx="12.5" cy="54" r="2.4" fill="url(#headlightGrad)" stroke="#b38f00" stroke-width="0.3"/>
-  <line x1="18" y1="46" x2="18" y2="40" stroke="#1a1a1a" stroke-width="1.1"/>
-  <circle cx="17.3" cy="38.7" r="1.5" fill="#1a1a1a"/>
-  <circle cx="62.5" cy="54" r="1.8" fill="#e63b3b" stroke="#8a1515" stroke-width="0.3"/>
-</g>
 </svg>

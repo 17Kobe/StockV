@@ -1,96 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-<defs>
-<radialGradient id="kiwiBody" cx="38%" cy="32%" r="75%">
-<stop offset="0%" stop-color="#9c7148"/>
-<stop offset="55%" stop-color="#6b4527"/>
-<stop offset="100%" stop-color="#432813"/>
-</radialGradient>
-<linearGradient id="beakGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-<stop offset="0%" stop-color="#cfa877"/>
-<stop offset="100%" stop-color="#8a6a48"/>
-</linearGradient>
-<linearGradient id="legGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-<stop offset="0%" stop-color="#6e5a42"/>
-<stop offset="100%" stop-color="#352a1c"/>
-</linearGradient>
-<linearGradient id="groundGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-<stop offset="0%" stop-color="#4a3c24" stop-opacity="0"/>
-<stop offset="100%" stop-color="#2c2213"/>
-</linearGradient>
-<linearGradient id="fernGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-<stop offset="0%" stop-color="#5d8a3f"/>
-<stop offset="100%" stop-color="#2e4a1f"/>
-</linearGradient>
-</defs>
-
-<ellipse cx="40" cy="78" rx="40" ry="6" fill="url(#groundGrad)"/>
-<ellipse cx="14" cy="76" rx="6" ry="2.4" fill="#8a5a2a" transform="rotate(-15 14 76)"/>
-<ellipse cx="24" cy="79" rx="5" ry="2" fill="#6b4420" transform="rotate(10 24 79)"/>
-<ellipse cx="60" cy="77" rx="6" ry="2.3" fill="#9c6b2f" transform="rotate(20 60 77)"/>
-<ellipse cx="69" cy="79" rx="5" ry="2" fill="#5a3d1c" transform="rotate(-8 69 79)"/>
-<ellipse cx="46" cy="79" rx="4.5" ry="1.8" fill="#4a3318" transform="rotate(5 46 79)"/>
-
-<g>
-  <path d="M10,80 C9,60 14,40 12,22" fill="none" stroke="#2e4a1f" stroke-width="1.4" stroke-linecap="round"/>
-  <path d="M12,70 C6,66 4,62 2,58" fill="none" stroke="url(#fernGrad)" stroke-width="2" stroke-linecap="round"/>
-  <path d="M12,60 C18,57 21,53 24,49" fill="none" stroke="url(#fernGrad)" stroke-width="2" stroke-linecap="round"/>
-  <path d="M12,50 C6,47 4,43 2,39" fill="none" stroke="url(#fernGrad)" stroke-width="1.8" stroke-linecap="round"/>
-  <path d="M12,40 C17,37 20,33 22,29" fill="none" stroke="url(#fernGrad)" stroke-width="1.6" stroke-linecap="round"/>
-  <animateTransform attributeName="transform" type="rotate" values="-2 10 80;2 10 80;-2 10 80" dur="4.5s" repeatCount="indefinite"/>
-</g>
-<g>
-  <path d="M72,80 C73,62 69,44 71,28" fill="none" stroke="#2e4a1f" stroke-width="1.3" stroke-linecap="round"/>
-  <path d="M71,68 C76,64 78,60 79,55" fill="none" stroke="url(#fernGrad)" stroke-width="1.8" stroke-linecap="round"/>
-  <path d="M71,56 C65,53 62,49 59,45" fill="none" stroke="url(#fernGrad)" stroke-width="1.8" stroke-linecap="round"/>
-  <path d="M71,46 C76,43 78,39 79,34" fill="none" stroke="url(#fernGrad)" stroke-width="1.5" stroke-linecap="round"/>
-  <animateTransform attributeName="transform" type="rotate" values="2 72 80;-2 72 80;2 72 80" dur="5s" repeatCount="indefinite"/>
-</g>
-
-<g>
-  <path d="M50,55 L48,74" stroke="url(#legGrad)" stroke-width="5" stroke-linecap="round" fill="none"/>
-  <path d="M48,74 L40,78" stroke="url(#legGrad)" stroke-width="2.6" stroke-linecap="round" fill="none"/>
-  <path d="M48,74 L48,79" stroke="url(#legGrad)" stroke-width="2.6" stroke-linecap="round" fill="none"/>
-  <path d="M48,74 L57,77" stroke="url(#legGrad)" stroke-width="2.6" stroke-linecap="round" fill="none"/>
-  <animateTransform attributeName="transform" type="rotate" values="8 50 55;-8 50 55;8 50 55" dur="1.1s" repeatCount="indefinite"/>
-</g>
-
-<ellipse cx="62" cy="46" rx="11" ry="13" fill="url(#kiwiBody)" stroke="#3a2415" stroke-width="0.6"/>
-
-<ellipse cx="42" cy="43" rx="22" ry="19" fill="url(#kiwiBody)" stroke="#3a2415" stroke-width="0.6"/>
-
-<g stroke="#2a1708" stroke-opacity="0.35" stroke-width="1" fill="none" stroke-linecap="round">
-<path d="M28,30 q4,-3 8,-1"/>
-<path d="M34,26 q5,-2 9,0"/>
-<path d="M42,25 q5,-1 9,1"/>
-<path d="M50,27 q5,0 8,3"/>
-<path d="M56,32 q4,2 6,5"/>
-<path d="M25,38 q4,-1 7,1"/>
-<path d="M60,40 q4,1 5,5"/>
-<path d="M30,52 q4,2 8,2"/>
-<path d="M40,56 q5,2 9,1"/>
-<path d="M50,55 q5,1 8,-1"/>
-<path d="M22,45 q4,0 6,3"/>
-<path d="M58,50 q4,2 5,5"/>
-</g>
-
-<ellipse cx="46" cy="40" rx="5" ry="8" fill="#3a2614" stroke="#241408" stroke-width="0.5" transform="rotate(-15 46 40)"/>
-<path d="M44,34 q3,4 2,10" stroke="#241408" stroke-width="0.6" fill="none" opacity="0.6"/>
-
-<g>
-  <path d="M34,56 L32,76" stroke="url(#legGrad)" stroke-width="5.5" stroke-linecap="round" fill="none"/>
-  <path d="M32,76 L24,79" stroke="url(#legGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
-  <path d="M32,76 L32,80" stroke="url(#legGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
-  <path d="M32,76 L41,79" stroke="url(#legGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
-  <animateTransform attributeName="transform" type="rotate" values="-8 34 56;8 34 56;-8 34 56" dur="1.1s" repeatCount="indefinite"/>
-</g>
-
-<circle cx="23" cy="33" r="10" fill="url(#kiwiBody)" stroke="#3a2415" stroke-width="0.6"/>
-<circle cx="19" cy="30" r="1.8" fill="#160d05"/>
-<circle cx="18.4" cy="29.4" r="0.5" fill="#fff" opacity="0.85"/>
-
-<g>
-<path d="M28,31 C18,27 8,32 3,48 C6,50 10,50 13,47 C20,42 27,37 28,31 Z" fill="url(#beakGrad)" stroke="#5a4328" stroke-width="0.5"/>
-<circle cx="7" cy="46" r="0.7" fill="#3a2a14"/>
-<animateTransform attributeName="transform" type="rotate" values="0 25 33; -9 25 33; 1 25 33; 0 25 33" dur="2.4s" repeatCount="indefinite"/>
-</g>
+  <!-- 奇異鳥（2.5D，朝左）：紐西蘭的國鳥，圓滾滾、羽毛像毛髮一樣的褐色身體，細細的腳，又細又長的嘴每隔一下往地上啄、兩腳交替走路（動畫）。光源左上，不描邊 -->
+  <g transform="translate(45.25 71.4) scale(1.75)">
+    <path d="M13 1L12.75 1.49L12.01 1.95L10.82 2.37L9.23 2.72L7.34 2.98L5.23 3.14L3 3.2L0.77 3.14L-1.34 2.98L-3.23 2.72L-4.82 2.37L-6.01 1.95L-6.75 1.49L-7 1L-6.75 0.51L-6.01 0.05L-4.82 -0.37L-3.23 -0.72L-1.34 -0.98L0.77 -1.14L3 -1.2L5.23 -1.14L7.34 -0.98L9.23 -0.72L10.82 -0.37L12.01 0.05L12.75 0.51Z" fill="#000000" opacity="0.2"/>
+    <g><animateTransform attributeName="transform" type="rotate" values="12 4.00 -6.00;-12 4.00 -6.00;12 4.00 -6.00" dur="0.6s" begin="0s" repeatCount="indefinite"/>
+    <path d="M3.1 -6.09L2.6 -0.08L4.2 0.08L4.9 -5.91Z" fill="#b89a6a"/>
+    <path d="M4.9 -6L4.88 -5.8L4.81 -5.61L4.7 -5.44L4.56 -5.3L4.39 -5.19L4.2 -5.12L4 -5.1L3.8 -5.12L3.61 -5.19L3.44 -5.3L3.3 -5.44L3.19 -5.61L3.12 -5.8L3.1 -6L3.12 -6.2L3.19 -6.39L3.3 -6.56L3.44 -6.7L3.61 -6.81L3.8 -6.88L4 -6.9L4.2 -6.88L4.39 -6.81L4.56 -6.7L4.7 -6.56L4.81 -6.39L4.88 -6.2Z" fill="#b89a6a"/>
+    <path d="M4.2 0L4.18 0.18L4.12 0.35L4.03 0.5L3.9 0.63L3.75 0.72L3.58 0.78L3.4 0.8L3.22 0.78L3.05 0.72L2.9 0.63L2.77 0.5L2.68 0.35L2.62 0.18L2.6 0L2.62 -0.18L2.68 -0.35L2.77 -0.5L2.9 -0.63L3.05 -0.72L3.22 -0.78L3.4 -0.8L3.58 -0.78L3.75 -0.72L3.9 -0.63L4.03 -0.5L4.12 -0.35L4.18 -0.18Z" fill="#b89a6a"/>
+    <path d="M1 0.4L5 0.4L3.4 -0.8Z" fill="#b89a6a"/>
+    </g>
+    <g><animateTransform attributeName="transform" type="rotate" values="-12 0.00 -6.00;12 0.00 -6.00;-12 0.00 -6.00" dur="0.6s" begin="0s" repeatCount="indefinite"/>
+    <path d="M-0.9 -6.09L-1.4 -0.08L0.2 0.08L0.9 -5.91Z" fill="#d8b888"/>
+    <path d="M0.9 -6L0.88 -5.8L0.81 -5.61L0.7 -5.44L0.56 -5.3L0.39 -5.19L0.2 -5.12L0 -5.1L-0.2 -5.12L-0.39 -5.19L-0.56 -5.3L-0.7 -5.44L-0.81 -5.61L-0.88 -5.8L-0.9 -6L-0.88 -6.2L-0.81 -6.39L-0.7 -6.56L-0.56 -6.7L-0.39 -6.81L-0.2 -6.88L-0 -6.9L0.2 -6.88L0.39 -6.81L0.56 -6.7L0.7 -6.56L0.81 -6.39L0.88 -6.2Z" fill="#d8b888"/>
+    <path d="M0.2 0L0.18 0.18L0.12 0.35L0.03 0.5L-0.1 0.63L-0.25 0.72L-0.42 0.78L-0.6 0.8L-0.78 0.78L-0.95 0.72L-1.1 0.63L-1.23 0.5L-1.32 0.35L-1.38 0.18L-1.4 0L-1.38 -0.18L-1.32 -0.35L-1.23 -0.5L-1.1 -0.63L-0.95 -0.72L-0.78 -0.78L-0.6 -0.8L-0.42 -0.78L-0.25 -0.72L-0.1 -0.63L0.03 -0.5L0.12 -0.35L0.18 -0.18Z" fill="#d8b888"/>
+    <path d="M-3 0.4L1 0.4L-0.6 -0.8Z" fill="#d8b888"/>
+    </g>
+    <path d="M13 -11L12.75 -9.22L12.01 -7.53L10.82 -6.01L9.23 -4.75L7.34 -3.79L5.23 -3.2L3 -3L0.77 -3.2L-1.34 -3.79L-3.23 -4.75L-4.82 -6.01L-6.01 -7.53L-6.75 -9.22L-7 -11L-6.75 -12.78L-6.01 -14.47L-4.82 -15.99L-3.23 -17.25L-1.34 -18.21L0.77 -18.8L3 -19L5.23 -18.8L7.34 -18.21L9.23 -17.25L10.82 -15.99L12.01 -14.47L12.75 -12.78Z" fill="#634a30"/>
+    <path d="M10.4 -11.96L10.18 -10.43L9.55 -8.97L8.52 -7.67L7.16 -6.58L5.53 -5.76L3.71 -5.25L1.8 -5.08L-0.11 -5.25L-1.93 -5.76L-3.56 -6.58L-4.92 -7.67L-5.95 -8.97L-6.58 -10.43L-6.8 -11.96L-6.58 -13.49L-5.95 -14.95L-4.92 -16.25L-3.56 -17.34L-1.93 -18.16L-0.11 -18.67L1.8 -18.84L3.71 -18.67L5.53 -18.16L7.16 -17.34L8.52 -16.25L9.55 -14.95L10.18 -13.49Z" fill="#8e6c48"/>
+    <path d="M2.8 -14.2L2.71 -13.59L2.44 -13.02L2.01 -12.5L1.44 -12.07L0.76 -11.75L0 -11.55L-0.8 -11.48L-1.6 -11.55L-2.36 -11.75L-3.04 -12.07L-3.61 -12.5L-4.04 -13.02L-4.31 -13.59L-4.4 -14.2L-4.31 -14.81L-4.04 -15.38L-3.61 -15.9L-3.04 -16.33L-2.36 -16.65L-1.6 -16.85L-0.8 -16.92L0 -16.85L0.76 -16.65L1.44 -16.33L2.01 -15.9L2.44 -15.38L2.71 -14.81Z" fill="#b8946a"/>
+    <path d="M-3.4 -15L-0.6 -15.6L-1.4 -13.4Z" fill="#634a30" opacity="0.5"/>
+    <path d="M2.6 -16L5.4 -16.6L4.6 -14.4Z" fill="#634a30" opacity="0.5"/>
+    <path d="M7.6 -13L10.4 -13.6L9.6 -11.4Z" fill="#634a30" opacity="0.5"/>
+    <path d="M-0.4 -9L2.4 -9.6L1.6 -7.4Z" fill="#634a30" opacity="0.5"/>
+    <path d="M5.6 -8L8.4 -8.6L7.6 -6.4Z" fill="#634a30" opacity="0.5"/>
+    <path d="M-5.4 -10L-2.6 -10.6L-3.4 -8.4Z" fill="#634a30" opacity="0.5"/>
+    <g><animateTransform attributeName="transform" type="rotate" values="0 -4.00 -14.00;0 -4.00 -14.00;-22 -4.00 -14.00;0 -4.00 -14.00;0 -4.00 -14.00" keyTimes="0;.5;.6;.7;1" dur="2.4s" begin="0s" repeatCount="indefinite"/>
+    <path d="M-1.6 -15L-1.71 -14.11L-2.04 -13.26L-2.56 -12.51L-3.26 -11.87L-4.09 -11.4L-5.02 -11.1L-6 -11L-6.98 -11.1L-7.91 -11.4L-8.74 -11.87L-9.44 -12.51L-9.96 -13.26L-10.29 -14.11L-10.4 -15L-10.29 -15.89L-9.96 -16.74L-9.44 -17.49L-8.74 -18.13L-7.91 -18.6L-6.98 -18.9L-6 -19L-5.02 -18.9L-4.09 -18.6L-3.26 -18.13L-2.56 -17.49L-2.04 -16.74L-1.71 -15.89Z" fill="#634a30"/>
+    <path d="M-2.74 -15.48L-2.84 -14.71L-3.12 -13.99L-3.57 -13.34L-4.17 -12.79L-4.89 -12.38L-5.69 -12.13L-6.53 -12.04L-7.37 -12.13L-8.17 -12.38L-8.89 -12.79L-9.49 -13.34L-9.94 -13.99L-10.22 -14.71L-10.31 -15.48L-10.22 -16.25L-9.94 -16.97L-9.49 -17.62L-8.89 -18.17L-8.17 -18.58L-7.37 -18.83L-6.53 -18.92L-5.69 -18.83L-4.89 -18.58L-4.17 -18.17L-3.57 -17.62L-3.12 -16.97L-2.84 -16.25Z" fill="#8e6c48"/>
+    <path d="M-6.09 -16.6L-6.13 -16.3L-6.24 -16.01L-6.43 -15.75L-6.68 -15.54L-6.98 -15.37L-7.32 -15.27L-7.67 -15.24L-8.02 -15.27L-8.36 -15.37L-8.66 -15.54L-8.91 -15.75L-9.1 -16.01L-9.22 -16.3L-9.26 -16.6L-9.22 -16.9L-9.1 -17.19L-8.91 -17.45L-8.66 -17.66L-8.36 -17.83L-8.02 -17.93L-7.67 -17.96L-7.32 -17.93L-6.98 -17.83L-6.68 -17.66L-6.43 -17.45L-6.24 -17.19L-6.13 -16.9Z" fill="#b8946a"/>
+    <path d="M-6.9 -16L-6.92 -15.82L-6.97 -15.65L-7.05 -15.5L-7.16 -15.37L-7.3 -15.28L-7.44 -15.22L-7.6 -15.2L-7.76 -15.22L-7.9 -15.28L-8.04 -15.37L-8.15 -15.5L-8.23 -15.65L-8.28 -15.82L-8.3 -16L-8.28 -16.18L-8.23 -16.35L-8.15 -16.5L-8.04 -16.63L-7.9 -16.72L-7.76 -16.78L-7.6 -16.8L-7.44 -16.78L-7.3 -16.72L-7.16 -16.63L-7.05 -16.5L-6.97 -16.35L-6.92 -16.18Z" fill="#1d2230"/>
+    <path d="M-7.55 -16.3L-7.56 -16.24L-7.57 -16.19L-7.6 -16.14L-7.64 -16.1L-7.69 -16.07L-7.74 -16.06L-7.8 -16.05L-7.86 -16.06L-7.91 -16.07L-7.96 -16.1L-8 -16.14L-8.03 -16.19L-8.04 -16.24L-8.05 -16.3L-8.04 -16.36L-8.03 -16.41L-8 -16.46L-7.96 -16.5L-7.91 -16.53L-7.86 -16.54L-7.8 -16.55L-7.74 -16.54L-7.69 -16.53L-7.64 -16.5L-7.6 -16.46L-7.57 -16.41L-7.56 -16.36Z" fill="#ffffff"/>
+    <path d="M-9.6 -15.6Q-15 -11 -19 -3L-18.2 -2.6Q-14 -10 -9.4 -13.6Z" fill="#e8d8b0"/>
+    <path d="M-9.6 -15.6Q-15 -11 -19 -3L-18.6 -2.8Q-14.6 -11 -9.6 -14.6Z" fill="#f6eccc"/>
+    </g>
+  </g>
 </svg>

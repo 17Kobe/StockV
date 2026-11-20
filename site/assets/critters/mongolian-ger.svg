@@ -1,63 +1,52 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-<defs>
-  <linearGradient id="mg-ground" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#6fae46"/><stop offset="1" stop-color="#4a7e2c"/>
-  </linearGradient>
-  <radialGradient id="mg-dome1" cx="35%" cy="25%" r="85%">
-    <stop offset="0" stop-color="#fdf8ec"/><stop offset="1" stop-color="#d8cba4"/>
-  </radialGradient>
-  <radialGradient id="mg-dome2" cx="35%" cy="20%" r="85%">
-    <stop offset="0" stop-color="#fbf4e2"/><stop offset="1" stop-color="#cdbf96"/>
-  </radialGradient>
-</defs>
-<!-- Ground -->
-<ellipse cx="40" cy="68" rx="30" ry="7" fill="url(#mg-ground)" stroke="#355f1e" stroke-width="0.5"/>
-
-<!-- Main dome body -->
-<ellipse cx="40" cy="52" rx="26" ry="14" fill="url(#mg-dome1)" stroke="#9c8a62" stroke-width="0.5"/>
-
-<!-- Decorative band - orange/blue traditional pattern -->
-<path d="M14 52 Q14 60 40 63 Q66 60 66 52" fill="#e07820" stroke="#a3550f" stroke-width="0.5"/>
-<!-- Blue pattern dots on band -->
-<circle cx="25" cy="57" r="2" fill="#2a7abf" stroke="#15466f" stroke-width="0.4"/>
-<circle cx="33" cy="58.5" r="2" fill="#2a7abf" stroke="#15466f" stroke-width="0.4"/>
-<circle cx="41" cy="59" r="2" fill="#2a7abf" stroke="#15466f" stroke-width="0.4"/>
-<circle cx="49" cy="58.5" r="2" fill="#2a7abf" stroke="#15466f" stroke-width="0.4"/>
-<circle cx="57" cy="57" r="2" fill="#2a7abf" stroke="#15466f" stroke-width="0.4"/>
-
-<!-- Upper dome -->
-<ellipse cx="40" cy="47" rx="20" ry="10" fill="url(#mg-dome2)" stroke="#9c8a62" stroke-width="0.5"/>
-
-<!-- Dome top cap / skylight ring -->
-<ellipse cx="40" cy="38" rx="8" ry="4" fill="#ddd0b8" stroke="#9c8a62" stroke-width="0.5"/>
-<!-- Skylight center -->
-<ellipse cx="40" cy="38" rx="4" ry="2" fill="#a0b8d0" stroke="#5c7898" stroke-width="0.4"/>
-
-<!-- Vertical ribs on dome -->
-<path d="M40 37 L40 52" stroke="#c8b89a" stroke-width="0.8" fill="none"/>
-<path d="M32 39 L28 52" stroke="#c8b89a" stroke-width="0.8" fill="none"/>
-<path d="M48 39 L52 52" stroke="#c8b89a" stroke-width="0.8" fill="none"/>
-
-<!-- Door frame -->
-<rect x="35" y="51" width="10" height="12" rx="1" fill="#c0392b" stroke="#7a1f14" stroke-width="0.5"/>
-<!-- Door panel lines -->
-<line x1="40" y1="51" x2="40" y2="63" stroke="#a03020" stroke-width="0.8"/>
-<line x1="35" y1="57" x2="45" y2="57" stroke="#a03020" stroke-width="0.8"/>
-
-<!-- Campfire group (right side) -->
-<!-- Fire logs -->
-<line x1="61" y1="65" x2="67" y2="63" stroke="#8B4513" stroke-width="2" stroke-linecap="round"/>
-<line x1="64" y1="65" x2="70" y2="63" stroke="#8B4513" stroke-width="2" stroke-linecap="round"/>
-
-<!-- Fire outer flame -->
-<g transform-origin="65 62">
-  <path d="M62 65 Q61 61 63 59 Q64 63 65 60 Q66 57 67 59 Q69 61 68 65 Z" fill="#e8a020" stroke="none">
-    <animateTransform attributeName="transform" type="scale" values="1 1;1.08 1.12;0.95 1.05;1.05 1.08;1 1" dur="0.8s" repeatCount="indefinite" additive="sum" from="0 0" to="0 0"/>
-    <animate attributeName="opacity" values="1;0.85;1;0.9;1" dur="0.8s" repeatCount="indefinite"/>
-  </path>
-  <!-- Fire inner flame -->
-  <path d="M63 65 Q62.5 62 64 60.5 Q65 63 66 61 Q66.5 63 66 65 Z" fill="#f5d020" stroke="none">
-    <animateTransform attributeName="transform" type="scale" values="1 1;0.95 1.1;1.05 0.95;1 1.08;1 1" dur="0.6s" repeatCount="indefinite" additive="sum" from="0 0" to="0 0"/>
-  </path>
-</g>
+  <!-- 蒙古包（2.5D）：白色毛氈圍成的圓形帳篷，牆上兩道藍色裝飾帶，金色放射狀骨架的錐形屋頂，頂上天窗冒出炊煙，正面是橘紅色的木門，門邊的藍色哈達隨風飄（動畫）。光源左上，不描邊 -->
+  <g transform="translate(38.51 57.09) scale(1.91)">
+    <path d="M-14.6 -0.95L-12.44 -4.51L-7.82 -7.18L-1.65 -8.43L4.85 -8.01L10.39 -6L12.78 -4.02L16.26 -0.82L16.99 2.93L14.83 6.5L10.21 9.17L4.03 10.41L-2.47 9.99L-8.01 7.98L-10.39 6L-13.87 2.8Z" fill="#000000" opacity="0.2"/>
+    <path d="M14.7 -0L13.98 2.62L13.98 -4.38L14.7 -7Z" fill="#c8c0ae"/>
+    <path d="M-13.98 2.62L-14.7 0L-14.7 -7L-13.98 -4.38Z" fill="#ece8de"/>
+    <path d="M13.98 2.62L11.89 4.99L11.89 -2.01L13.98 -4.38Z" fill="#c8c0ae"/>
+    <path d="M-11.89 4.99L-13.98 2.62L-13.98 -4.38L-11.89 -2.01Z" fill="#ece8de"/>
+    <path d="M11.89 4.99L8.64 6.86L8.64 -0.14L11.89 -2.01Z" fill="#c8c0ae"/>
+    <path d="M-8.64 6.86L-11.89 4.99L-11.89 -2.01L-8.64 -0.14Z" fill="#ece8de"/>
+    <path d="M-4.54 8.07L-8.64 6.86L-8.64 -0.14L-4.54 1.07Z" fill="#ece8de"/>
+    <path d="M8.64 6.86L4.54 8.07L4.54 1.07L8.64 -0.14Z" fill="#c8c0ae"/>
+    <path d="M0 8.49L-4.54 8.07L-4.54 1.07L0 1.49Z" fill="#ece8de"/>
+    <path d="M4.54 8.07L0 8.49L0 1.49L4.54 1.07Z" fill="#c8c0ae"/>
+    <path d="M14.67 -6.94L14.67 -5.46L14.22 -4L13.34 -2.61L12.06 -1.32L10.41 -0.19L8.44 0.76L6.22 1.5L3.81 2.01L1.28 2.27L-1.28 2.27L-3.81 2.01L-6.22 1.5L-8.44 0.76L-10.41 -0.19L-12.06 -1.32L-13.34 -2.61L-14.22 -4L-14.67 -5.46L-14.67 -6.94L-14.67 -6.34L-14.67 -4.86L-14.22 -3.4L-13.34 -2.01L-12.06 -0.72L-10.41 0.41L-8.44 1.36L-6.22 2.1L-3.81 2.61L-1.28 2.87L1.28 2.87L3.81 2.61L6.22 2.1L8.44 1.36L10.41 0.41L12.06 -0.72L13.34 -2.01L14.22 -3.4L14.67 -4.86L14.67 -6.34Z" fill="#3b7fc0"/>
+    <path d="M14.67 -2.54L14.67 -1.06L14.22 0.4L13.34 1.79L12.06 3.08L10.41 4.21L8.44 5.16L6.22 5.9L3.81 6.41L1.28 6.67L-1.28 6.67L-3.81 6.41L-6.22 5.9L-8.44 5.16L-10.41 4.21L-12.06 3.08L-13.34 1.79L-14.22 0.4L-14.67 -1.06L-14.67 -2.54L-14.67 -1.94L-14.67 -0.46L-14.22 1L-13.34 2.39L-12.06 3.68L-10.41 4.81L-8.44 5.76L-6.22 6.5L-3.81 7.01L-1.28 7.27L1.28 7.27L3.81 7.01L6.22 6.5L8.44 5.76L10.41 4.81L12.06 3.68L13.34 2.39L14.22 1L14.67 -0.46L14.67 -1.94Z" fill="#3b7fc0"/>
+    <path d="M15.43 -7L14.68 -4.25L3.49 -11.34L3.67 -12Z" fill="#c8c0ae"/>
+    <path d="M-14.68 -4.25L-15.43 -7L-3.67 -12L-3.49 -11.34Z" fill="#ffffff"/>
+    <path d="M14.68 -4.25L12.48 -1.76L2.97 -10.75L3.49 -11.34Z" fill="#c8c0ae"/>
+    <path d="M-12.48 -1.76L-14.68 -4.25L-3.49 -11.34L-2.97 -10.75Z" fill="#ffffff"/>
+    <path d="M12.48 -1.76L9.07 0.21L2.16 -10.28L2.97 -10.75Z" fill="#c8c0ae"/>
+    <path d="M-9.07 0.21L-12.48 -1.76L-2.97 -10.75L-2.16 -10.28Z" fill="#ece8de"/>
+    <path d="M-4.77 1.47L-9.07 0.21L-2.16 -10.28L-1.14 -9.98Z" fill="#ece8de"/>
+    <path d="M9.07 0.21L4.77 1.47L1.14 -9.98L2.16 -10.28Z" fill="#c8c0ae"/>
+    <path d="M0 1.91L-4.77 1.47L-1.14 -9.98L0 -9.88Z" fill="#ece8de"/>
+    <path d="M4.77 1.47L0 1.91L0 -9.88L1.14 -9.98Z" fill="#c8c0ae"/>
+    <path d="M2.16 -10.28L1.14 -9.98L0 -9.88L-1.14 -9.98L-2.16 -10.28L-2.97 -10.75L-3.49 -11.34L-3.67 -12L-3.49 -12.66L-2.97 -13.25L-2.16 -13.72L-1.14 -14.02L-0 -14.12L1.14 -14.02L2.16 -13.72L2.97 -13.25L3.49 -12.66L3.67 -12L3.49 -11.34L2.97 -10.75Z" fill="#ffffff"/>
+    <path d="M15.37 -6.22L15.24 -5.6L3.63 -11.67L3.66 -11.82Z" fill="#c8a44a" opacity="0.55"/>
+    <path d="M14.21 -3.52L13.75 -2.95L3.27 -11.04L3.38 -11.17Z" fill="#c8a44a" opacity="0.55"/>
+    <path d="M11.65 -1.15L10.91 -0.7L2.6 -10.5L2.77 -10.61Z" fill="#c8a44a" opacity="0.55"/>
+    <path d="M7.95 0.64L7 0.94L1.67 -10.11L1.89 -10.18Z" fill="#c8a44a" opacity="0.55"/>
+    <path d="M3.47 1.68L2.41 1.8L0.57 -9.9L0.83 -9.93Z" fill="#c8a44a" opacity="0.55"/>
+    <path d="M-1.34 1.88L-2.42 1.8L-0.58 -9.9L-0.32 -9.89Z" fill="#c8a44a" opacity="0.55"/>
+    <path d="M-6.03 1.2L-7.01 0.94L-1.67 -10.11L-1.44 -10.05Z" fill="#c8a44a" opacity="0.55"/>
+    <path d="M-10.12 -0.28L-10.91 -0.7L-2.6 -10.5L-2.41 -10.4Z" fill="#c8a44a" opacity="0.55"/>
+    <path d="M-13.23 -2.41L-13.75 -2.96L-3.27 -11.04L-3.15 -10.91Z" fill="#c8a44a" opacity="0.55"/>
+    <path d="M-15.04 -5L-15.24 -5.61L-3.63 -11.67L-3.58 -11.52Z" fill="#c8a44a" opacity="0.55"/>
+    <path d="M3.67 -12L3.18 -10.94L3.18 -11.94L3.67 -13Z" fill="#5a3f28"/>
+    <path d="M-3.18 -10.94L-3.67 -12L-3.67 -13L-3.18 -11.94Z" fill="#7d5a3a"/>
+    <path d="M3.18 -10.94L1.84 -10.16L1.84 -11.16L3.18 -11.94Z" fill="#5a3f28"/>
+    <path d="M-1.84 -10.16L-3.18 -10.94L-3.18 -11.94L-1.84 -11.16Z" fill="#7d5a3a"/>
+    <path d="M0 -9.88L-1.84 -10.16L-1.84 -11.16L0 -10.88Z" fill="#7d5a3a"/>
+    <path d="M1.84 -10.16L0 -9.88L0 -10.88L1.84 -11.16Z" fill="#5a3f28"/>
+    <path d="M1.84 -11.16L0 -10.88L-1.84 -11.16L-3.18 -11.94L-3.67 -13L-3.18 -14.06L-1.84 -14.84L-0 -15.12L1.84 -14.84L3.18 -14.06L3.67 -13L3.18 -11.94Z" fill="#a37a52"/>
+    <circle cx="0.00" cy="-13.00" r="1.40" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.8;0" dur="3s" begin="0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;2.7 -9.0" dur="3s" begin="0s" repeatCount="indefinite"/></circle>
+    <circle cx="0.00" cy="-13.00" r="1.20" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.7;0" dur="3s" begin="1.5s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;2.7 -9.0" dur="3s" begin="1.5s" repeatCount="indefinite"/></circle>
+    <path d="M2.69 8.52L-2.69 8.52L-2.69 3.12L2.69 3.12Z" fill="#ef8a2e"/>
+    <path d="M1.89 7.92L-1.89 7.92L-1.89 3.72L1.89 3.72Z" fill="#d8342a"/>
+    <path d="M0.6 5.72L0.58 5.85L0.54 5.98L0.47 6.09L0.37 6.19L0.26 6.26L0.13 6.31L0 6.32L-0.13 6.31L-0.26 6.26L-0.37 6.19L-0.47 6.09L-0.54 5.98L-0.58 5.85L-0.6 5.72L-0.58 5.59L-0.54 5.46L-0.47 5.35L-0.37 5.25L-0.26 5.18L-0.13 5.14L-0 5.12L0.13 5.14L0.26 5.18L0.37 5.25L0.47 5.35L0.54 5.46L0.58 5.59Z" fill="#ffd45a"/>
+    <g><animateTransform attributeName="transform" type="skewY" values="0;-6;0;6;0" dur="1.4s" repeatCount="indefinite"/><rect x="-3.77" y="1.12" width="1.4" height="4.02" fill="#5aa0e0"/></g>
+  </g>
 </svg>

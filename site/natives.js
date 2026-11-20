@@ -61,10 +61,11 @@
     };
 
     // 台灣：三位小人住在中央山脈東側，ox / oy 是相對於位置點的偏移（單位：小角色的基準大小）
+    // 2.5D 統一風格（folk25.js 的 tw / tw_f / tw_c），間距跟其他國家一樣肩並肩站在一起；上面的 LOOKS 是舊版畫法，保留給參考
     const FOLK = [
-        { id: 'tw-1', market: '^TWII', lon: 121.3, lat: 23.4, ox: -0.95, oy: 0.1, s: 1.7, look: LOOKS.red, ph: 0 },
-        { id: 'tw-2', market: '^TWII', lon: 121.3, lat: 23.4, ox: 0.15, oy: -0.1, s: 1.65, look: LOOKS.blue, ph: 1.7 },
-        { id: 'tw-3', market: '^TWII', lon: 121.3, lat: 23.4, ox: 1.2, oy: 0.12, s: 1.4, look: LOOKS.green, ph: 3.1 },
+        { id: 'tw-1', market: '^TWII', lon: 121.3, lat: 23.4, ox: -0.5, oy: 0, s: 1.7, look: { iso: 'tw', k: 1 }, ph: 0 },
+        { id: 'tw-2', market: '^TWII', lon: 121.3, lat: 23.4, ox: 0.08, oy: -0.06, s: 1.65, look: { iso: 'tw_f', k: 0.96 }, ph: 1.7 },
+        { id: 'tw-3', market: '^TWII', lon: 121.3, lat: 23.4, ox: 0.6, oy: 0.14, s: 1.4, look: { iso: 'tw_c', k: 0.8 }, ph: 3.1 },
     ];
 
     // ───────── 全球十大國家的代表人物 ─────────
@@ -151,122 +152,12 @@
         // 中國：三人（爸爸紅色唐裝＋瓜皮帽 / 媽媽翠綠旗袍＋髮髻小花 / 熊貓帽小朋友），2.5D 統一風格，
         // 圖形在 folk25.js（gen_folk.py 產生）。更舊的漸層版見 git 歷史
         cn: [{ iso: 'cn', k: 1 }, { iso: 'cn_f', k: 0.96 }, { iso: 'cn_c', k: 0.8 }],
-        // 日本：法被 + 頭巾 / 和服 + 髮簪 / 甚平小朋友
-        jp: [
-            mk({
-                skin: SK.light,
-                top: ['#1f3a7a', '#12224d'],
-                pattern: 'diamond',
-                pants: ['#2c3347', '#1a1f2e'],
-                hair: HAIR.black,
-                gear: 'hachimaki',
-                gearColors: ['#ffffff', '#e24a3b', '#ffffff'],
-            }),
-            mk({
-                skin: SK.light,
-                top: ['#f08fb0', '#c9577f'],
-                trim: ['#ffd9e6', '#ffffff'],
-                pattern: 'dots',
-                outfit: 'kimono',
-                pants: ['#f08fb0', '#c9577f'],
-                obi: ['#e8b83a', '#a8780f'],
-                collar: '#ffffff',
-                hair: HAIR.black,
-                hairStyle: 'bun',
-                gear: 'pin',
-                gearColors: ['#ffd24d', '#ffffff', '#ff6f91'],
-                k: 0.96,
-            }),
-            mk({
-                skin: SK.light,
-                top: ['#2d9c93', '#1b625d'],
-                pattern: 'plain',
-                shorts: true,
-                pants: ['#2d9c93', '#1b625d'],
-                hair: HAIR.black,
-                hairStyle: 'bob',
-                k: 0.8,
-            }),
-        ],
-        // 韓國：韓服 + 갓（黑色寬簷帽）/ 韓服 + 髮簪 / 韓服 + 小帽子的小朋友
-        kr: [
-            mk({
-                skin: SK.light,
-                top: ['#f4f1e6', '#d5cfb9'],
-                pattern: 'plain',
-                vcollar: '#2f5fb0',
-                bow: '#2f5fb0',
-                pants: ['#4a78c0', '#2e5192'],
-                hair: HAIR.black,
-                gear: 'gat',
-                gearColors: ['#15151c', '#4a4a58', '#c8283c'],
-            }),
-            mk({
-                skin: SK.light,
-                top: ['#ffb7c5', '#e57b92'],
-                trim: ['#ffe3ea', '#ffffff'],
-                pattern: 'plain',
-                outfit: 'hanbok',
-                pants: ['#3f6fd0', '#264a96'],
-                vcollar: '#ffffff',
-                bow: '#c8283c',
-                hair: HAIR.black,
-                hairStyle: 'bun',
-                gear: 'pin',
-                gearColors: ['#ffd24d', '#e24a3b', '#ffffff'],
-                k: 0.96,
-            }),
-            mk({
-                skin: SK.light,
-                top: ['#ffd24d', '#e0a81a'],
-                pattern: 'stripe',
-                stripeColors: ['#e24a3b', GREEN, '#2f7fd1'],
-                pants: ['#e24a8f', '#b02a68'],
-                hair: HAIR.black,
-                bow: '#c8283c',
-                gear: 'jobawi',
-                gearColors: ['#1b1b22', '#ffd24d', '#e24a3b'],
-                k: 0.8,
-            }),
-        ],
-        // 印度：頭巾 + 庫爾塔 / 紗麗 + 額頭紅點 / 甘地帽小朋友
-        in: [
-            mk({
-                skin: SK.brown,
-                top: ['#f6efe0', '#d8cfb4'],
-                pattern: 'plain',
-                collar: '#e8a23a',
-                buttons: '#c9831a',
-                pants: PANTS.white,
-                hair: HAIR.black,
-                gear: 'turban',
-                gearColors: ['#f2a33a', '#c9751a', '#d9344a'],
-            }),
-            mk({
-                skin: SK.brown,
-                top: ['#2fa293', '#1b6b60'],
-                trim: ['#ffd24d', '#fff1b0'],
-                pattern: 'plain',
-                outfit: 'sari',
-                pants: ['#dd3c63', '#a01f45'],
-                hair: HAIR.black,
-                hairStyle: 'long',
-                gear: 'bindi',
-                gearColors: ['#d9344a', '#ffd24d', '#ffffff'],
-                k: 0.96,
-            }),
-            mk({
-                skin: SK.brown,
-                top: ['#f28a2e', '#c4601a'],
-                pattern: 'plain',
-                buttons: '#ffffff',
-                pants: PANTS.white,
-                hair: HAIR.black,
-                gear: 'gandhicap',
-                gearColors: ['#ffffff', '#e4dfcf', '#ffffff'],
-                k: 0.8,
-            }),
-        ],
+        // 日本：深藍法被＋頭巾 / 粉紅和服＋金色腰帶與花簪 / 藍綠甚平的小朋友（2.5D 統一風格，圖形在 folk25.js，gen_folk2.py 產生）
+        jp: [{ iso: 'jp', k: 1 }, { iso: 'jp_f', k: 0.96 }, { iso: 'jp_c', k: 0.8 }],
+        // 南韓：白色韓服＋黑色紗帽 갓 / 粉紅上衣＋藍色高腰長裙與髮簪 / 七彩袖子 색동＋暖帽 조바위 的小朋友（2.5D）
+        kr: [{ iso: 'kr', k: 1 }, { iso: 'kr_f', k: 0.96 }, { iso: 'kr_c', k: 0.8 }],
+        // 印度：米白庫爾塔＋橘色頭巾 / 藍綠上衣＋桃紅紗麗與額頭紅點 / 橘色庫爾塔＋甘地帽的小朋友（2.5D）
+        in: [{ iso: 'in', k: 1 }, { iso: 'in_f', k: 0.96 }, { iso: 'in_c', k: 0.8 }],
         // 英國：圓頂禮帽 + 領帶 / 紅外套 + 蘇格蘭裙 + 小帽 / 戴報童帽的學生
         uk: [
             mk({
@@ -451,13 +342,12 @@
         { ox: 1.2, oy: 0.12, s: 1.4, ph: 3.1 },
     ];
     // 2.5D 統一風格的人物比舊版窄，用舊的間距三個人會分太開：改成肩並肩站在一起（小朋友站在爸媽前面一點）
-    const COUNTRY_SLOTS = {
-        cn: [
-            { ox: -0.5, oy: 0, s: 1.7, ph: 0 },
-            { ox: 0.08, oy: -0.06, s: 1.65, ph: 1.7 },
-            { ox: 0.6, oy: 0.14, s: 1.4, ph: 3.1 },
-        ],
-    };
+    const ISO_SLOTS = [
+        { ox: -0.5, oy: 0, s: 1.7, ph: 0 },
+        { ox: 0.08, oy: -0.06, s: 1.65, ph: 1.7 },
+        { ox: 0.6, oy: 0.14, s: 1.4, ph: 3.1 },
+    ];
+    const COUNTRY_SLOTS = { cn: ISO_SLOTS, jp: ISO_SLOTS, kr: ISO_SLOTS, in: ISO_SLOTS };
     // 只有一個人的國家（2.5D 統一風格版）站在正中間，稍微大一點
     const SOLO = { ox: 0, oy: 0, s: 1.8, ph: 0 };
     for (const [cc, market, lon, lat] of COUNTRY_FOLK) {
