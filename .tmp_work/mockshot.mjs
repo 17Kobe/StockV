@@ -17,7 +17,7 @@ const MOCK = Object.fromEntries((process.env.PCT || '').split(',').filter(Boolea
 async function onPaused(p) {
   const q = {}; for (const [k, v] of Object.entries(MOCK)) q[k] = { p: 3000, c: 30 * v, pct: v, prev: 3000 };
   const body = JSON.stringify({ generated: new Date().toISOString(), quotes: q });
-  await send('Fetch.fulfillRequest', { requestId: p.requestId, responseCode: 200, responseHeaders: [{ name: 'Content-Type', value: 'application/json' }], body: Buffer.from(body).toString('base64') });
+  await send('Fetch.fulfillRequest', { requestId: p.requestId, responseCode: 200, responseHeaders: [{ name: 'Content-Type', value: 'application/json' }, { name: 'Access-Control-Allow-Origin', value: '*' }], body: Buffer.from(body).toString('base64') });
 }
 await send('Fetch.enable', { patterns: [{ urlPattern: '*quotes.json*', requestStage: 'Request' }] });
 await send('Page.enable'); await send('Runtime.enable'); if (process.env.MOBILE) { const [mw, mh] = process.env.MOBILE.split(',').map(Number); await send('Emulation.setDeviceMetricsOverride', { width: mw, height: mh, deviceScaleFactor: 2, mobile: true }); }
@@ -32,8 +32,12 @@ if (process.env.ZOOM) { const [x, y, n] = process.env.ZOOM.split(',').map(Number
 if (process.env.DRAG) { const [ax, ay, bx, by] = process.env.DRAG.split(',').map(Number); await send('Input.dispatchMouseEvent', { type: 'mousePressed', x: ax, y: ay, button: 'left', clickCount: 1 }); for (let i = 1; i <= 12; i++) { await send('Input.dispatchMouseEvent', { type: 'mouseMoved', x: ax + (bx - ax) * i / 12, y: ay + (by - ay) * i / 12, button: 'left', buttons: 1 }); await sleep(30); } await send('Input.dispatchMouseEvent', { type: 'mouseReleased', x: bx, y: by, button: 'left', clickCount: 1 }); }
 if (js) { await ev(js); await sleep(9000); } else await sleep(+(process.env.WAIT || 6000));
 const clip = process.env.CLIP ? (([x, y, width, height]) => ({ x, y, width, height, scale: 2 }))(process.env.CLIP.split(',').map(Number)) : undefined;
-const r = await send('Page.captureScreenshot', { format: 'png', ...(clip ? { clip } : {}) });
-const name = `season_${season}_${process.env.TAG || region}.png`;
-fs.writeFileSync(name, Buffer.from(r.result.data, 'base64'));
-console.log(name);
+const nShots = +(process.env.SHOTS || 1);
+for (let k = 0; k < nShots; k++) {
+  const r = await send('Page.captureScreenshot', { format: 'png', ...(clip ? { clip } : {}) });
+  const name = `season_${season}_${process.env.TAG || region}${nShots > 1 ? '_' + k : ''}.png`;
+  fs.writeFileSync(name, Buffer.from(r.result.data, 'base64'));
+  console.log(name);
+  if (k < nShots - 1) await sleep(+(process.env.GAP || 350));
+}
 ws.close(); proc.kill(); process.exit(0);
