@@ -1,10 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
   <!-- 哈爾濱冰雪大世界（2.5D）：用半透明冰磚砌成的城堡，淡藍、淡紫、淡綠三色冰塔頂著彩色圓頂，城牆有拱門，各處燈光變色閃爍（動畫），地面是白雪。光源左上，不描邊 -->
-  <g transform="translate(40 54.71) scale(0.93)">
+  <g transform="translate(36.51 53.39) scale(1.07)">
     <path d="M-31.18 -4L-5.2 -19L32.91 3L37.68 6.96L11.7 21.96L-26.4 -0.04Z" fill="#000000" opacity="0.2"/>
-    <path d="M39.84 4L5.2 24L5.2 23L39.84 3Z" fill="#bccbe0"/>
-    <path d="M-39.84 -2L5.2 24L5.2 23L-39.84 -3Z" fill="#e4edf7"/>
-    <path d="M-5.2 -23L39.84 3L5.2 23L-39.84 -3Z" fill="#ffffff"/>
     <path d="M24.25 2L6.93 12L6.93 2L24.25 -8Z" fill="#86c3df"/>
     <path d="M-20.78 -4L6.93 12L6.93 2L-20.78 -14Z" fill="#b9e6f5"/>
     <path d="M-3.46 -24L24.25 -8L6.93 2L-20.78 -14Z" fill="#e8fbff"/>

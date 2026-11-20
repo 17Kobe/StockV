@@ -148,9 +148,9 @@
                 k: 0.8,
             }),
         ],
-        // 中國：改成一個人、2.5D 統一風格（紅色唐裝＋瓜皮帽），圖形在 folk25.js（gen_folk.py 產生）。
-        // 舊版三人（中山裝 / 旗袍 + 髮簪 / 熊貓帽小朋友）見 git 歷史
-        cn: [{ iso: 'cn', k: 1 }],
+        // 中國：三人（爸爸紅色唐裝＋瓜皮帽 / 媽媽翠綠旗袍＋髮髻小花 / 熊貓帽小朋友），2.5D 統一風格，
+        // 圖形在 folk25.js（gen_folk.py 產生）。更舊的漸層版見 git 歷史
+        cn: [{ iso: 'cn', k: 1 }, { iso: 'cn_f', k: 0.96 }, { iso: 'cn_c', k: 0.8 }],
         // 日本：法被 + 頭巾 / 和服 + 髮簪 / 甚平小朋友
         jp: [
             mk({
@@ -1074,9 +1074,11 @@
         // 2.5D 統一風格的人物：每個姿勢是預先畫好的 SVG（folk25.js），座標系一樣
         if (look.iso) {
             const P = (window.FOLK25 || {})[look.iso] || {};
-            return Object.keys(POSES)
+            const body = Object.keys(POSES)
                 .map((p) => `<g data-pose="${p}" style="display:none">${P[p] || P.idle || ''}</g>`)
                 .join('');
+            const k = look.k || 1;
+            return k === 1 ? body : `<g transform="translate(64 124) scale(${k}) translate(-64 -124)">${body}</g>`;
         }
         const id = `nv-${uid}`;
         const lin = (n, c) =>

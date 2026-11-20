@@ -2774,7 +2774,7 @@
 
     // ── 煙火 & 烏雲效果 ───────────────────────────────────────────────────────
     // 主要指數漲≥2%：上空放煙火；跌≥2%：上空出現烏雲+雨滴
-    // 使用 #wfx canvas（在國界之上、#map 之下），不擋卡片
+    // 使用 #wfx canvas（疊在 #map 上面，蓋過動物與地標；卡片的區域每幀挖空，不擋卡片）
     const WEATHER_T = { t: 0, cv: null, ctx: null, hadFx: false }; // 獨立時間，不和極光共用
 
     // 預繪 sprite：煙火粒子（小圓點漸層）、烏雲（積雨雲外形）
@@ -2970,7 +2970,7 @@
 
 
     function drawWeather(dt) {
-        // 畫在獨立的 #wfx canvas：在國界之上、#map（動物 / 旗幟 / 卡片）之下，手機畫面上才不會擋到卡片的數值
+        // 畫在獨立的 #wfx canvas：疊在 #map 上面（烏雲要蓋過 101 等地標才自然），最後把卡片所在的區域挖空，手機畫面上才不會擋到卡片的數值
         const WT = WEATHER_T;
         if (!WT.cv) {
             WT.cv = $('#wfx');
@@ -3213,6 +3213,23 @@
                 ctx.globalAlpha = fade * 0.92; // 稍微透一點，邊緣跟底圖融在一起，不像一塊硬貼上去的灰色
                 ctx.drawImage(buf, 0, 0, bpw, bph, sx - bw / 2, skyY - bh / 2, bpw / wd, bph / wd);
             }
+        }
+        // #wfx 疊在 #map 上面（烏雲才會蓋過 101 等地標圖示）；卡片所在的區域挖空，不擋卡片的數值。
+        // 卡片位置每 0.25 秒或地圖移動時才重新量一次，不用每幀都 getBoundingClientRect
+        if (!WT.cards || fxViewMoved || T - WT.cardsAt > 0.25) {
+            const s0 = WT.cv.getBoundingClientRect();
+            WT.cards = [];
+            for (const el of document.querySelectorAll('#map .bk, #map .tk')) {
+                const r = el.getBoundingClientRect();
+                if (r.width > 0 && r.height > 0) WT.cards.push([r.left - s0.left - 2, r.top - s0.top - 2, r.width + 4, r.height + 4]);
+            }
+            WT.cardsAt = T;
+        }
+        if (WT.cards.length) {
+            ctx.globalAlpha = 1;
+            ctx.globalCompositeOperation = 'destination-out';
+            ctx.fillStyle = '#000';
+            for (const [x, y, w, h] of WT.cards) ctx.fillRect(x, y, w, h);
         }
         ctx.globalAlpha = 1;
         ctx.globalCompositeOperation = 'source-over';

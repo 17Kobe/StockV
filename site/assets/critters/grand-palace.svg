@@ -1,12 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
   <!-- 曼谷大皇宮與玉佛寺（2.5D）：白色基座上的佛殿，牆面金色拱門，三層橘綠相間的陡峭泰式屋頂與金色翹角，右後方一座金色鐘形舍利塔、右前方白綠相間的尖塔。光源左上，不描邊 -->
-  <g transform="translate(40 55.64) scale(0.97)">
+  <g transform="translate(40.49 54.42) scale(1.1)">
     <path d="M-27.71 -4L-6.93 -16L27.71 4L33.08 8.46L12.3 20.46L-22.34 0.46Z" fill="#000000" opacity="0.2"/>
-    <path d="M38.11 4L6.93 22L6.93 21L38.11 3Z" fill="#ab9f87"/>
-    <path d="M-38.11 -4L6.93 22L6.93 21L-38.11 -5Z" fill="#d3c9b3"/>
-    <path d="M-6.93 -23L38.11 3L6.93 21L-38.11 -5Z" fill="#efe8d8"/>
-    <path d="M17.32 1L5.2 8L5.2 6L17.32 -1Z" fill="#b9c0cc"/>
-    <path d="M-20.78 -7L5.2 8L5.2 6L-20.78 -9Z" fill="#e3e7ee"/>
+    <path d="M17.32 2L5.2 9L5.2 6L17.32 -1Z" fill="#b9c0cc"/>
+    <path d="M-20.78 -6L5.2 9L5.2 6L-20.78 -9Z" fill="#e3e7ee"/>
     <path d="M-8.66 -16L17.32 -1L5.2 6L-20.78 -9Z" fill="#ffffff"/>
     <path d="M13.86 -1L5.2 4L5.2 -4L13.86 -9Z" fill="#b9c0cc"/>
     <path d="M-17.32 -9L5.2 4L5.2 -4L-17.32 -17Z" fill="#e3e7ee"/>

@@ -38,10 +38,10 @@
             <canvas id="clouds" aria-hidden="true"></canvas>
             <!-- 國界：獨立一張 SVG，和會動的動物分開光柵化（見 app.js buildSvg） -->
             <svg id="borders" aria-hidden="true"></svg>
-            <!-- 煙火 / 烏雲等漲跌特效：放在 #map（動物、旗幟、卡片）下面，手機畫面上才不會擋到卡片的數值。
-                 北極光、藍眼淚（#aurora）也一樣在卡片下面 -->
-            <canvas id="wfx" aria-hidden="true"></canvas>
             <svg id="map" role="img" aria-label="世界股市地圖" data-i18n-aria="世界股市地圖"></svg>
+            <!-- 煙火 / 烏雲等漲跌特效：疊在 #map 上面（烏雲要蓋過 101 等地標圖示才自然），
+                 但卡片所在的區域每一幀都挖空（app.js drawWeather），手機畫面上一樣不會擋到卡片的數值 -->
+            <canvas id="wfx" aria-hidden="true"></canvas>
             <!-- 上帝視角的災難效果（disasters.js），疊在地圖上面、不擋滑鼠 -->
             <canvas id="fx" aria-hidden="true"></canvas>
             <div id="attrib">地形資料 © Mapzen/AWS Terrain Tiles · Esri, Maxar, Earthstar Geographics</div>
@@ -84,9 +84,9 @@
         <script src="geoscenes.js"></script>
         <script src="corp-logos.js"></script>
         <script src="corps.js"></script>
-        <script src="folk25.js?v=20251119a"></script>
-        <script src="natives.js?v=20251119a"></script>
-        <script src="tips.js?v=20251119c"></script>
-        <script src="app.js?v=20251119c"></script>
+        <script src="folk25.js?v=20251120a"></script>
+        <script src="natives.js?v=20251120a"></script>
+        <script src="tips.js?v=20251120a"></script>
+        <script src="app.js?v=20251120a"></script>
     </body>
 </html>
