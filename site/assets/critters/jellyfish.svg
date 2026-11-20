@@ -1,162 +1,107 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-<defs>
-  <!-- 水母傘部主體：半透明藍紫漸層 -->
-  <radialGradient id="jellyGrad" cx="42%" cy="35%" r="58%" fx="42%" fy="30%">
-    <stop offset="0%"   stop-color="#c084fc" stop-opacity="0.95"/>
-    <stop offset="35%"  stop-color="#a855f7" stop-opacity="0.88"/>
-    <stop offset="70%"  stop-color="#7c3aed" stop-opacity="0.82"/>
-    <stop offset="100%" stop-color="#4c1d95" stop-opacity="0.50"/>
-  </radialGradient>
-  <!-- 傘部光澤高光 -->
-  <radialGradient id="jellyShine" cx="38%" cy="28%" r="38%">
-    <stop offset="0%"   stop-color="white" stop-opacity="0.55"/>
-    <stop offset="60%"  stop-color="white" stop-opacity="0.10"/>
-    <stop offset="100%" stop-color="white" stop-opacity="0"/>
-  </radialGradient>
-  <!-- 觸鬚漸層 A -->
-  <linearGradient id="tentA" x1="0%" y1="0%" x2="0%" y2="100%">
-    <stop offset="0%"   stop-color="#c084fc" stop-opacity="0.85"/>
-    <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.20"/>
-  </linearGradient>
-  <!-- 觸鬚漸層 B -->
-  <linearGradient id="tentB" x1="0%" y1="0%" x2="0%" y2="100%">
-    <stop offset="0%"   stop-color="#a78bfa" stop-opacity="0.80"/>
-    <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.15"/>
-  </linearGradient>
-  <!-- 觸鬚漸層 C -->
-  <linearGradient id="tentC" x1="0%" y1="0%" x2="0%" y2="100%">
-    <stop offset="0%"   stop-color="#ddd6fe" stop-opacity="0.75"/>
-    <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.10"/>
-  </linearGradient>
-  <!-- 波浪裙邊 -->
-  <linearGradient id="frillGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-    <stop offset="0%"   stop-color="#c084fc" stop-opacity="0.70"/>
-    <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.30"/>
-  </linearGradient>
-</defs>
-
-<!-- 整體上下浮動動畫群組 -->
-<g>
-  <animateTransform
-    attributeName="transform"
-    type="translate"
-    values="0,0; 0,-3; 0,0; 0,2; 0,0"
-    dur="3.2s"
-    repeatCount="indefinite"
-    calcMode="spline"
-    keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"/>
-
-  <!-- ===== 7條觸鬚（先畫，在傘下方） ===== -->
-
-  <!-- 觸鬚 1（最左） -->
-  <path d="M28,46 Q22,56 26,66 Q28,72 24,78"
-        fill="none" stroke="url(#tentA)" stroke-width="2" stroke-linecap="round">
-    <animateTransform attributeName="transform" type="rotate"
-      values="0 28 46; -5 28 46; 0 28 46; 4 28 46; 0 28 46"
-      dur="2.8s" repeatCount="indefinite" calcMode="spline"
-      keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"/>
-  </path>
-
-  <!-- 觸鬚 2 -->
-  <path d="M32,48 Q27,58 30,68 Q32,74 29,80"
-        fill="none" stroke="url(#tentB)" stroke-width="1.8" stroke-linecap="round">
-    <animateTransform attributeName="transform" type="rotate"
-      values="0 32 48; 4 32 48; 0 32 48; -3 32 48; 0 32 48"
-      dur="2.4s" repeatCount="indefinite" calcMode="spline"
-      keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"/>
-  </path>
-
-  <!-- 觸鬚 3 -->
-  <path d="M36,49 Q33,60 36,69 Q38,75 35,80"
-        fill="none" stroke="url(#tentC)" stroke-width="1.5" stroke-linecap="round">
-    <animateTransform attributeName="transform" type="rotate"
-      values="0 36 49; -4 36 49; 0 36 49; 5 36 49; 0 36 49"
-      dur="3.5s" repeatCount="indefinite" calcMode="spline"
-      keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"/>
-  </path>
-
-  <!-- 觸鬚 4（中間，最長） -->
-  <path d="M40,50 Q36,62 40,71 Q43,76 40,80"
-        fill="none" stroke="url(#tentA)" stroke-width="2" stroke-linecap="round">
-    <animateTransform attributeName="transform" type="rotate"
-      values="0 40 50; 3 40 50; 0 40 50; -4 40 50; 0 40 50"
-      dur="2.1s" repeatCount="indefinite" calcMode="spline"
-      keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"/>
-  </path>
-
-  <!-- 觸鬚 5 -->
-  <path d="M44,49 Q48,60 45,69 Q43,75 46,80"
-        fill="none" stroke="url(#tentB)" stroke-width="1.5" stroke-linecap="round">
-    <animateTransform attributeName="transform" type="rotate"
-      values="0 44 49; -5 44 49; 0 44 49; 3 44 49; 0 44 49"
-      dur="3.1s" repeatCount="indefinite" calcMode="spline"
-      keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"/>
-  </path>
-
-  <!-- 觸鬚 6 -->
-  <path d="M48,48 Q52,58 49,67 Q47,73 50,79"
-        fill="none" stroke="url(#tentC)" stroke-width="1.8" stroke-linecap="round">
-    <animateTransform attributeName="transform" type="rotate"
-      values="0 48 48; 4 48 48; 0 48 48; -3 48 48; 0 48 48"
-      dur="2.6s" repeatCount="indefinite" calcMode="spline"
-      keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"/>
-  </path>
-
-  <!-- 觸鬚 7（最右） -->
-  <path d="M52,46 Q57,56 53,65 Q51,71 55,77"
-        fill="none" stroke="url(#tentA)" stroke-width="2" stroke-linecap="round">
-    <animateTransform attributeName="transform" type="rotate"
-      values="0 52 46; -4 52 46; 0 52 46; 5 52 46; 0 52 46"
-      dur="3.8s" repeatCount="indefinite" calcMode="spline"
-      keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"/>
-  </path>
-
-  <!-- ===== 波浪裙邊（傘下緣裝飾） ===== -->
-  <path d="M22,42
-           Q24,46 27,44 Q29,48 32,46 Q34,50 37,48
-           Q39,52 40,50 Q41,52 43,48 Q46,50 48,46
-           Q51,48 53,44 Q56,46 58,42"
-        fill="url(#frillGrad)"
-        stroke="#5b21b6" stroke-width="0.4"
-        stroke-linejoin="round" stroke-linecap="round"/>
-
-  <!-- ===== 水母傘主體（半球形橢圓） ===== -->
-  <ellipse cx="40" cy="28" rx="20" ry="18"
-           fill="url(#jellyGrad)"
-           stroke="#5b21b6" stroke-width="0.6"/>
-
-  <!-- 傘下半部連接至裙邊的填充區 -->
-  <path d="M20,28 Q20,44 22,44 Q31,50 40,50 Q49,50 58,44 Q60,44 60,28"
-        fill="url(#jellyGrad)" stroke="none"/>
-
-  <!-- 傘部光澤高光 -->
-  <ellipse cx="37" cy="22" rx="12" ry="9"
-           fill="url(#jellyShine)"/>
-
-  <!-- 傘部放射紋路（半透明，增加質感） -->
-  <line x1="40" y1="12" x2="40" y2="46" stroke="white" stroke-width="0.8" stroke-opacity="0.25"/>
-  <line x1="26" y1="18" x2="34" y2="46" stroke="white" stroke-width="0.6" stroke-opacity="0.20"/>
-  <line x1="54" y1="18" x2="46" y2="46" stroke="white" stroke-width="0.6" stroke-opacity="0.20"/>
-  <line x1="22" y1="28" x2="30" y2="48" stroke="white" stroke-width="0.5" stroke-opacity="0.15"/>
-  <line x1="58" y1="28" x2="50" y2="48" stroke="white" stroke-width="0.5" stroke-opacity="0.15"/>
-
-  <!-- ===== 左眼 ===== -->
-  <circle cx="33" cy="30" r="4" fill="white" stroke="white" stroke-width="1"/>
-  <circle cx="33.8" cy="30.5" r="2.2" fill="#1a0a2e"/>
-  <circle cx="34.6" cy="29.5" r="0.8" fill="white"/>
-
-  <!-- ===== 右眼 ===== -->
-  <circle cx="47" cy="30" r="4" fill="white" stroke="white" stroke-width="1"/>
-  <circle cx="47.8" cy="30.5" r="2.2" fill="#1a0a2e"/>
-  <circle cx="48.6" cy="29.5" r="0.8" fill="white"/>
-
-  <!-- ===== 腮紅 ===== -->
-  <ellipse cx="30" cy="35" rx="3.5" ry="2.2" fill="#ff8fab" fill-opacity="0.65"/>
-  <ellipse cx="50" cy="35" rx="3.5" ry="2.2" fill="#ff8fab" fill-opacity="0.65"/>
-
-  <!-- ===== 嘴巴（微笑弧線） ===== -->
-  <path d="M37,37 Q40,40 43,37"
-        fill="none" stroke="#6d28d9" stroke-width="1.5"
-        stroke-linecap="round" stroke-opacity="0.8"/>
-</g>
+  <!-- 帛琉水母湖（2.5D）：被長滿熱帶樹林的石灰岩小島圍住的碧綠海水湖，湖裡一隻隻金黃色、幾乎無毒的水母一縮一放地游，旁邊的浮潛遊客漂在水面、腳蹼上下踢，水波擴散（動畫）。光源左上，不描邊 -->
+  <g transform="translate(40.07 57.24) scale(1.14)">
+    <path d="M19.05 11L15.98 12.35L12.3 13.22L8.14 13.59L3.67 13.44L-0.94 12.76L-5.51 11.6L-9.87 9.99L-13.86 8L-17.31 5.7L-20.09 3.18L-22.11 0.54L-23.27 -2.12L-23.54 -4.7L-22.9 -7.1L-21.39 -9.23L-19.05 -11L-15.98 -12.35L-12.3 -13.22L-8.14 -13.59L-3.67 -13.44L0.94 -12.76L5.51 -11.6L9.87 -9.99L13.86 -8L17.31 -5.7L20.09 -3.18L22.11 -0.54L23.27 2.12L23.54 4.7L22.9 7.1L21.39 9.23Z" fill="#5fcfc8"/>
+    <path d="M12.12 5L10.19 5.83L7.82 6.34L5.12 6.51L2.2 6.34L-0.85 5.82L-3.9 4.99L-6.83 3.87L-9.53 2.5L-11.89 0.94L-13.84 -0.75L-15.28 -2.51L-16.18 -4.27L-16.48 -5.96L-16.18 -7.52L-15.3 -8.88L-13.86 -10L-11.92 -10.83L-9.55 -11.34L-6.86 -11.51L-3.93 -11.34L-0.88 -10.82L2.16 -9.99L5.09 -8.87L7.79 -7.5L10.16 -5.94L12.11 -4.25L13.55 -2.49L14.44 -0.73L14.75 0.96L14.45 2.52L13.56 3.88Z" fill="#b8f2ea" opacity="0.5"/>
+    <path d="M27.34 10.21L27.03 12.25L26.37 8.78L26.63 7.02Z" fill="#857c62"/>
+    <path d="M18.05 12.71L17.13 10.72L17.85 7.47L18.65 9.17Z" fill="#d8d0b8"/>
+    <path d="M27.03 12.25L24.51 13.71L24.2 10.03L26.37 8.78Z" fill="#857c62"/>
+    <path d="M20.97 13.89L18.05 12.71L18.65 9.17L21.15 10.19Z" fill="#b0a688"/>
+    <path d="M24.51 13.71L20.97 13.89L21.15 10.19L24.2 10.03Z" fill="#b0a688"/>
+    <path d="M24.2 10.03L21.15 10.19L18.65 9.17L17.85 7.47L19.15 5.87L21.92 5.12L24.88 5.58L26.63 7.02L26.37 8.78Z" fill="#d8d0b8"/>
+    <path d="M26.63 7.02L26.37 8.78L24.67 5.04L24.82 4.01Z" fill="#356f36"/>
+    <path d="M18.65 9.17L17.85 7.47L19.72 4.27L20.18 5.26Z" fill="#7cc46a"/>
+    <path d="M26.37 8.78L24.2 10.03L23.41 5.76L24.67 5.04Z" fill="#356f36"/>
+    <path d="M21.15 10.19L18.65 9.17L20.18 5.26L21.64 5.85Z" fill="#4f9a4a"/>
+    <path d="M24.2 10.03L21.15 10.19L21.64 5.85L23.41 5.76Z" fill="#4f9a4a"/>
+    <path d="M23.41 5.76L21.64 5.85L20.18 5.26L19.72 4.27L20.47 3.34L22.08 2.9L23.8 3.17L24.82 4.01L24.67 5.04Z" fill="#7cc46a"/>
+    <path d="M5.39 13.71L5.09 15.72L4.44 12.24L4.7 10.52Z" fill="#857c62"/>
+    <path d="M-3.7 16.16L-4.6 14.22L-3.89 10.95L-3.12 12.62Z" fill="#d8d0b8"/>
+    <path d="M5.09 15.72L2.62 17.14L2.32 13.46L4.44 12.24Z" fill="#857c62"/>
+    <path d="M-0.85 17.31L-3.7 16.16L-3.12 12.62L-0.66 13.61Z" fill="#b0a688"/>
+    <path d="M2.62 17.14L-0.85 17.31L-0.66 13.61L2.32 13.46Z" fill="#b0a688"/>
+    <path d="M2.32 13.46L-0.66 13.61L-3.12 12.62L-3.89 10.95L-2.63 9.38L0.09 8.65L2.98 9.1L4.7 10.52L4.44 12.24Z" fill="#d8d0b8"/>
+    <path d="M4.7 10.52L4.44 12.24L2.78 8.49L2.93 7.49Z" fill="#356f36"/>
+    <path d="M-3.12 12.62L-3.89 10.95L-2.07 7.74L-1.62 8.71Z" fill="#7cc46a"/>
+    <path d="M4.44 12.24L2.32 13.46L1.55 9.2L2.78 8.49Z" fill="#356f36"/>
+    <path d="M-0.66 13.61L-3.12 12.62L-1.62 8.71L-0.19 9.29Z" fill="#4f9a4a"/>
+    <path d="M2.32 13.46L-0.66 13.61L-0.19 9.29L1.55 9.2Z" fill="#4f9a4a"/>
+    <path d="M1.55 9.2L-0.19 9.29L-1.62 8.71L-2.07 7.74L-1.33 6.83L0.25 6.4L1.93 6.66L2.93 7.49L2.78 8.49Z" fill="#7cc46a"/>
+    <path d="M-18.25 -1.79L-18.69 1.06L-19.61 -3.22L-19.23 -5.67Z" fill="#857c62"/>
+    <path d="M-31.2 1.69L-32.48 -1.07L-31.47 -5.05L-30.37 -2.67Z" fill="#d8d0b8"/>
+    <path d="M-18.69 1.06L-22.19 3.09L-22.62 -1.48L-19.61 -3.22Z" fill="#857c62"/>
+    <path d="M-27.13 3.34L-31.2 1.69L-30.37 -2.67L-26.87 -1.26Z" fill="#b0a688"/>
+    <path d="M-22.19 3.09L-27.13 3.34L-26.87 -1.26L-22.62 -1.48Z" fill="#b0a688"/>
+    <path d="M-22.62 -1.48L-26.87 -1.26L-30.37 -2.67L-31.47 -5.05L-29.67 -7.29L-25.8 -8.33L-21.68 -7.69L-19.23 -5.67L-19.61 -3.22Z" fill="#d8d0b8"/>
+    <path d="M-19.23 -5.67L-19.61 -3.22L-21.97 -7.88L-21.76 -9.31Z" fill="#356f36"/>
+    <path d="M-30.37 -2.67L-31.47 -5.05L-28.87 -8.95L-28.23 -7.57Z" fill="#7cc46a"/>
+    <path d="M-19.61 -3.22L-22.62 -1.48L-23.73 -6.87L-21.97 -7.88Z" fill="#356f36"/>
+    <path d="M-26.87 -1.26L-30.37 -2.67L-28.23 -7.57L-26.2 -6.75Z" fill="#4f9a4a"/>
+    <path d="M-22.62 -1.48L-26.87 -1.26L-26.2 -6.75L-23.73 -6.87Z" fill="#4f9a4a"/>
+    <path d="M-23.73 -6.87L-26.2 -6.75L-28.23 -7.57L-28.87 -8.95L-27.82 -10.25L-25.57 -10.86L-23.18 -10.48L-21.76 -9.31L-21.97 -7.88Z" fill="#7cc46a"/>
+    <path d="M-16.13 -11.89L-16.52 -9.35L-17.34 -12.62L-17.01 -14.81Z" fill="#857c62"/>
+    <path d="M-27.69 -8.78L-28.84 -11.25L-27.94 -14.26L-26.95 -12.14Z" fill="#d8d0b8"/>
+    <path d="M-16.52 -9.35L-19.65 -7.54L-20.03 -11.07L-17.34 -12.62Z" fill="#857c62"/>
+    <path d="M-24.06 -7.32L-27.69 -8.78L-26.95 -12.14L-23.83 -10.87Z" fill="#b0a688"/>
+    <path d="M-19.65 -7.54L-24.06 -7.32L-23.83 -10.87L-20.03 -11.07Z" fill="#b0a688"/>
+    <path d="M-20.03 -11.07L-23.83 -10.87L-26.95 -12.14L-27.94 -14.26L-26.32 -16.25L-22.87 -17.18L-19.19 -16.61L-17.01 -14.81L-17.34 -12.62Z" fill="#d8d0b8"/>
+    <path d="M-17.01 -14.81L-17.34 -12.62L-19.45 -16.24L-19.26 -17.52Z" fill="#356f36"/>
+    <path d="M-26.95 -12.14L-27.94 -14.26L-25.61 -17.2L-25.04 -15.96Z" fill="#7cc46a"/>
+    <path d="M-17.34 -12.62L-20.03 -11.07L-21.02 -15.34L-19.45 -16.24Z" fill="#356f36"/>
+    <path d="M-23.83 -10.87L-26.95 -12.14L-25.04 -15.96L-23.22 -15.23Z" fill="#4f9a4a"/>
+    <path d="M-20.03 -11.07L-23.83 -10.87L-23.22 -15.23L-21.02 -15.34Z" fill="#4f9a4a"/>
+    <path d="M-21.02 -15.34L-23.22 -15.23L-25.04 -15.96L-25.61 -17.2L-24.68 -18.36L-22.67 -18.9L-20.53 -18.57L-19.26 -17.52L-19.45 -16.24Z" fill="#7cc46a"/>
+    <path d="M4.75 -15.22L4.44 -13.17L3.78 -16.28L4.04 -18.04Z" fill="#857c62"/>
+    <path d="M-4.56 -12.72L-5.48 -14.71L-4.75 -17.6L-3.96 -15.89Z" fill="#d8d0b8"/>
+    <path d="M4.44 -13.17L1.92 -11.72L1.61 -15.03L3.78 -16.28Z" fill="#857c62"/>
+    <path d="M-1.64 -11.54L-4.56 -12.72L-3.96 -15.89L-1.45 -14.88Z" fill="#b0a688"/>
+    <path d="M1.92 -11.72L-1.64 -11.54L-1.45 -14.88L1.61 -15.03Z" fill="#b0a688"/>
+    <path d="M1.61 -15.03L-1.45 -14.88L-3.96 -15.89L-4.75 -17.6L-3.46 -19.2L-0.68 -19.95L2.28 -19.49L4.04 -18.04L3.78 -16.28Z" fill="#d8d0b8"/>
+    <path d="M4.04 -18.04L3.78 -16.28L2.07 -19.67L2.23 -20.69Z" fill="#356f36"/>
+    <path d="M-3.96 -15.89L-4.75 -17.6L-2.88 -20.43L-2.42 -19.44Z" fill="#7cc46a"/>
+    <path d="M3.78 -16.28L1.61 -15.03L0.81 -18.94L2.07 -19.67Z" fill="#356f36"/>
+    <path d="M-1.45 -14.88L-3.96 -15.89L-2.42 -19.44L-0.96 -18.85Z" fill="#4f9a4a"/>
+    <path d="M1.61 -15.03L-1.45 -14.88L-0.96 -18.85L0.81 -18.94Z" fill="#4f9a4a"/>
+    <path d="M0.81 -18.94L-0.96 -18.85L-2.42 -19.44L-2.88 -20.43L-2.13 -21.37L-0.51 -21.8L1.21 -21.54L2.23 -20.69L2.07 -19.67Z" fill="#7cc46a"/>
+    <path d="M32.37 -0.33L31.93 2.56L31 -1.81L31.37 -4.29Z" fill="#857c62"/>
+    <path d="M19.27 3.2L17.97 0.4L19 -3.66L20.11 -1.26Z" fill="#d8d0b8"/>
+    <path d="M31.93 2.56L28.38 4.6L27.95 -0.05L31 -1.81Z" fill="#857c62"/>
+    <path d="M23.38 4.86L19.27 3.2L20.11 -1.26L23.65 0.17Z" fill="#b0a688"/>
+    <path d="M28.38 4.6L23.38 4.86L23.65 0.17L27.95 -0.05Z" fill="#b0a688"/>
+    <path d="M27.95 -0.05L23.65 0.17L20.11 -1.26L19 -3.66L20.82 -5.92L24.73 -6.98L28.9 -6.33L31.37 -4.29L31 -1.81Z" fill="#d8d0b8"/>
+    <path d="M31.37 -4.29L31 -1.81L28.6 -6.57L28.82 -8.01Z" fill="#356f36"/>
+    <path d="M20.11 -1.26L19 -3.66L21.63 -7.65L22.28 -6.25Z" fill="#7cc46a"/>
+    <path d="M31 -1.81L27.95 -0.05L26.83 -5.54L28.6 -6.57Z" fill="#356f36"/>
+    <path d="M23.65 0.17L20.11 -1.26L22.28 -6.25L24.33 -5.42Z" fill="#4f9a4a"/>
+    <path d="M27.95 -0.05L23.65 0.17L24.33 -5.42L26.83 -5.54Z" fill="#4f9a4a"/>
+    <path d="M26.83 -5.54L24.33 -5.42L22.28 -6.25L21.63 -7.65L22.69 -8.96L24.96 -9.57L27.38 -9.2L28.82 -8.01L28.6 -6.57Z" fill="#7cc46a"/>
+    <g><animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;1.7913099482373975 -1.5434486322731913;0 0;-1.7913099482373975 1.5434486322731913;0 0" dur="4.169743990317843s" begin="0.0s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
+    <g><animateTransform attributeName="transform" type="scale" additive="sum" values="1 1;1.15 .85;1 1" dur="1.2s" begin="0.00s" repeatCount="indefinite"/><g transform="translate(-8.66 -3.00)"><path d="M-2.56 0Q-2.56 -3.33 0 -3.33Q2.56 -3.33 2.56 0Q0 0.77 -2.56 0Z" fill="#f2b23a" opacity=".92"/><path d="M-1.80 -0.77Q-1.54 -2.82 0 -2.95Q-0.51 -1.80 -1.80 -0.77Z" fill="#ffe27a"/><path d="M-1.54 0L-1.29 0L-1.44 3.08Z" fill="#e8a83a" opacity=".8"/><path d="M-0.51 0L-0.26 0L-0.41 3.08Z" fill="#e8a83a" opacity=".8"/><path d="M0.51 0L0.76 0L0.61 3.08Z" fill="#e8a83a" opacity=".8"/><path d="M1.41 0L1.66 0L1.51 3.08Z" fill="#e8a83a" opacity=".8"/></g></g>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;0.9438799562740932 -0.9302695985597792;0 0;-0.9438799562740932 0.9302695985597792;0 0" dur="4.616272915178288s" begin="0.7s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
+    <g><animateTransform attributeName="transform" type="scale" additive="sum" values="1 1;1.15 .85;1 1" dur="1.2s" begin="0.25s" repeatCount="indefinite"/><g transform="translate(5.20 -1.00)"><path d="M-2.47 0Q-2.47 -3.21 0 -3.21Q2.47 -3.21 2.47 0Q0 0.74 -2.47 0Z" fill="#f2b23a" opacity=".92"/><path d="M-1.73 -0.74Q-1.48 -2.72 0 -2.84Q-0.49 -1.73 -1.73 -0.74Z" fill="#ffe27a"/><path d="M-1.48 0L-1.23 0L-1.38 2.96Z" fill="#e8a83a" opacity=".8"/><path d="M-0.49 0L-0.24 0L-0.39 2.96Z" fill="#e8a83a" opacity=".8"/><path d="M0.49 0L0.74 0L0.59 2.96Z" fill="#e8a83a" opacity=".8"/><path d="M1.36 0L1.61 0L1.46 2.96Z" fill="#e8a83a" opacity=".8"/></g></g>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;0.42720693456335157 -1.018795982887997;0 0;-0.42720693456335157 1.018795982887997;0 0" dur="4.316765740509611s" begin="1.4s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
+    <g><animateTransform attributeName="transform" type="scale" additive="sum" values="1 1;1.15 .85;1 1" dur="1.2s" begin="0.50s" repeatCount="indefinite"/><g transform="translate(1.73 7.00)"><path d="M-2.28 0Q-2.28 -2.97 0 -2.97Q2.28 -2.97 2.28 0Q0 0.69 -2.28 0Z" fill="#f2b23a" opacity=".92"/><path d="M-1.60 -0.69Q-1.37 -2.51 0 -2.63Q-0.46 -1.60 -1.60 -0.69Z" fill="#ffe27a"/><path d="M-1.37 0L-1.12 0L-1.27 2.74Z" fill="#e8a83a" opacity=".8"/><path d="M-0.46 0L-0.21 0L-0.36 2.74Z" fill="#e8a83a" opacity=".8"/><path d="M0.46 0L0.71 0L0.56 2.74Z" fill="#e8a83a" opacity=".8"/><path d="M1.26 0L1.51 0L1.36 2.74Z" fill="#e8a83a" opacity=".8"/></g></g>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;-0.42587271917851455 -0.8769879187625342;0 0;0.42587271917851455 0.8769879187625342;0 0" dur="5.989639125899485s" begin="2.0999999999999996s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
+    <g><animateTransform attributeName="transform" type="scale" additive="sum" values="1 1;1.15 .85;1 1" dur="1.2s" begin="0.75s" repeatCount="indefinite"/><g transform="translate(-10.39 4.00)"><path d="M-2.14 0Q-2.14 -2.79 0 -2.79Q2.14 -2.79 2.14 0Q0 0.64 -2.14 0Z" fill="#f2b23a" opacity=".92"/><path d="M-1.50 -0.64Q-1.29 -2.36 0 -2.47Q-0.43 -1.50 -1.50 -0.64Z" fill="#ffe27a"/><path d="M-1.29 0L-1.04 0L-1.19 2.57Z" fill="#e8a83a" opacity=".8"/><path d="M-0.43 0L-0.18 0L-0.33 2.57Z" fill="#e8a83a" opacity=".8"/><path d="M0.43 0L0.68 0L0.53 2.57Z" fill="#e8a83a" opacity=".8"/><path d="M1.18 0L1.43 0L1.28 2.57Z" fill="#e8a83a" opacity=".8"/></g></g>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;0.1767081897172833 -1.1551458112741466;0 0;-0.1767081897172833 1.1551458112741466;0 0" dur="4.536481483298656s" begin="2.8s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
+    <g><animateTransform attributeName="transform" type="scale" additive="sum" values="1 1;1.15 .85;1 1" dur="1.2s" begin="1.00s" repeatCount="indefinite"/><g transform="translate(12.12 5.00)"><path d="M-2.56 0Q-2.56 -3.33 0 -3.33Q2.56 -3.33 2.56 0Q0 0.77 -2.56 0Z" fill="#f2b23a" opacity=".92"/><path d="M-1.79 -0.77Q-1.54 -2.82 0 -2.94Q-0.51 -1.79 -1.79 -0.77Z" fill="#ffe27a"/><path d="M-1.54 0L-1.29 0L-1.44 3.07Z" fill="#e8a83a" opacity=".8"/><path d="M-0.51 0L-0.26 0L-0.41 3.07Z" fill="#e8a83a" opacity=".8"/><path d="M0.51 0L0.76 0L0.61 3.07Z" fill="#e8a83a" opacity=".8"/><path d="M1.41 0L1.66 0L1.51 3.07Z" fill="#e8a83a" opacity=".8"/></g></g>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;3 1;0 0;-3 -1;0 0" dur="7s" begin="0.0s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
+    <g><animateTransform attributeName="transform" type="rotate" values="-14 -1.20 -9.00;14 -1.20 -9.00;-14 -1.20 -9.00" dur="0.8s" begin="0s" repeatCount="indefinite"/>
+    <path d="M-1.6 -9.4L2.4 -10.6L2.4 -8.4L-1.6 -8.4Z" fill="#2f7fd1"/>
+    </g>
+    <path d="M-1.2 -9L-1.3 -8.69L-1.59 -8.39L-2.07 -8.13L-2.7 -7.91L-3.46 -7.74L-4.31 -7.64L-5.2 -7.6L-6.09 -7.64L-6.93 -7.74L-7.69 -7.91L-8.32 -8.13L-8.8 -8.39L-9.1 -8.69L-9.2 -9L-9.1 -9.31L-8.8 -9.61L-8.32 -9.87L-7.69 -10.09L-6.93 -10.26L-6.09 -10.36L-5.2 -10.4L-4.31 -10.36L-3.46 -10.26L-2.7 -10.09L-2.07 -9.87L-1.59 -9.61L-1.3 -9.31Z" fill="#ef6a5a"/>
+    <path d="M-8 -9.6L-8.04 -9.29L-8.15 -8.99L-8.35 -8.73L-8.6 -8.51L-8.9 -8.34L-9.24 -8.24L-9.6 -8.2L-9.95 -8.24L-10.29 -8.34L-10.59 -8.51L-10.85 -8.73L-11.04 -8.99L-11.16 -9.29L-11.2 -9.6L-11.16 -9.91L-11.04 -10.21L-10.85 -10.47L-10.59 -10.69L-10.29 -10.86L-9.95 -10.96L-9.6 -11L-9.24 -10.96L-8.9 -10.86L-8.6 -10.69L-8.35 -10.47L-8.15 -10.21L-8.04 -9.91Z" fill="#d39d76"/>
+    <path d="M-8.41 -9.77L-8.45 -9.5L-8.55 -9.25L-8.71 -9.02L-8.93 -8.83L-9.19 -8.68L-9.48 -8.59L-9.79 -8.56L-10.09 -8.59L-10.39 -8.68L-10.65 -8.83L-10.86 -9.02L-11.03 -9.25L-11.13 -9.5L-11.16 -9.77L-11.13 -10.04L-11.03 -10.29L-10.86 -10.52L-10.65 -10.71L-10.39 -10.85L-10.09 -10.94L-9.79 -10.97L-9.48 -10.94L-9.19 -10.85L-8.93 -10.71L-8.71 -10.52L-8.55 -10.29L-8.45 -10.04Z" fill="#f2c39c"/>
+    <path d="M-9.63 -10.16L-9.64 -10.05L-9.69 -9.95L-9.75 -9.86L-9.85 -9.79L-9.95 -9.73L-10.08 -9.7L-10.2 -9.68L-10.33 -9.7L-10.45 -9.73L-10.56 -9.79L-10.65 -9.86L-10.72 -9.95L-10.77 -10.05L-10.78 -10.16L-10.77 -10.27L-10.72 -10.37L-10.65 -10.46L-10.56 -10.53L-10.45 -10.59L-10.33 -10.62L-10.2 -10.64L-10.08 -10.62L-9.95 -10.59L-9.85 -10.53L-9.75 -10.46L-9.69 -10.37L-9.64 -10.27Z" fill="#ffe0c2"/>
+    <path d="M-9.2 -9.8L-9.22 -9.67L-9.3 -9.54L-9.41 -9.43L-9.57 -9.33L-9.76 -9.26L-9.97 -9.22L-10.2 -9.2L-10.42 -9.22L-10.63 -9.26L-10.82 -9.33L-10.98 -9.43L-11.1 -9.54L-11.17 -9.67L-11.2 -9.8L-11.17 -9.93L-11.1 -10.06L-10.98 -10.17L-10.82 -10.27L-10.63 -10.34L-10.42 -10.38L-10.2 -10.4L-9.97 -10.38L-9.76 -10.34L-9.57 -10.27L-9.41 -10.17L-9.3 -10.06L-9.22 -9.93Z" fill="#5aa0e0"/>
+    <path d="M-9.2 -10.6L-8.6 -10.6L-8.6 -13.6L-9.2 -13.6Z" fill="#ffd45a"/>
+    </g>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-6.20 -9.00a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM-6.02 -9.00a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z"><animate attributeName="d" values="M-6.20 -9.00a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM-6.02 -9.00a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z;M-10.20 -9.00a5.00 2.50 0 1 0 10.00 0a5.00 2.50 0 1 0 -10.00 0ZM-9.30 -9.00a4.10 2.05 0 1 0 8.20 0a4.10 2.05 0 1 0 -8.20 0Z" dur="3.4s" begin="0.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;0" dur="3.4s" begin="0.0s" repeatCount="indefinite"/></path>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M2.46 4.00a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM2.64 4.00a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z"><animate attributeName="d" values="M2.46 4.00a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM2.64 4.00a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z;M-1.54 4.00a5.00 2.50 0 1 0 10.00 0a5.00 2.50 0 1 0 -10.00 0ZM-0.64 4.00a4.10 2.05 0 1 0 8.20 0a4.10 2.05 0 1 0 -8.20 0Z" dur="3.4s" begin="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;0" dur="3.4s" begin="1.6s" repeatCount="indefinite"/></path>
+  </g>
 </svg>
