@@ -450,12 +450,20 @@
         { ox: 0.15, oy: -0.1, s: 1.65, ph: 1.7 },
         { ox: 1.2, oy: 0.12, s: 1.4, ph: 3.1 },
     ];
+    // 2.5D 統一風格的人物比舊版窄，用舊的間距三個人會分太開：改成肩並肩站在一起（小朋友站在爸媽前面一點）
+    const COUNTRY_SLOTS = {
+        cn: [
+            { ox: -0.5, oy: 0, s: 1.7, ph: 0 },
+            { ox: 0.08, oy: -0.06, s: 1.65, ph: 1.7 },
+            { ox: 0.6, oy: 0.14, s: 1.4, ph: 3.1 },
+        ],
+    };
     // 只有一個人的國家（2.5D 統一風格版）站在正中間，稍微大一點
     const SOLO = { ox: 0, oy: 0, s: 1.8, ph: 0 };
     for (const [cc, market, lon, lat] of COUNTRY_FOLK) {
         const looks = COUNTRY_LOOKS[cc];
         looks.forEach((look, i) =>
-            FOLK.push({ id: `${cc}-${i + 1}`, market, lon, lat, ...(looks.length === 1 ? SOLO : SLOTS[i]), minK: 1, look }),
+            FOLK.push({ id: `${cc}-${i + 1}`, market, lon, lat, ...(looks.length === 1 ? SOLO : (COUNTRY_SLOTS[cc] || SLOTS)[i]), minK: 1, look }),
         );
     }
 

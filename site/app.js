@@ -599,7 +599,7 @@
         { src: 'critters/table-mountain.svg', lon: 18.4232, lat: -33.9628, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 南非：桌山
         { src: 'critters/darvaza-crater.svg', lon: 58.4396, lat: 40.2522, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 土庫曼：地獄之門
         // ── 第九批補充（太魯閣、雷門燈籠、雙層巴士、凱旋門） ──────────
-        { src: 'critters/taroko-gorge.svg', lon: 121.62, lat: 24.16, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 台灣：太魯閣峽谷
+        { src: 'critters/taroko-gorge.svg', lon: 121.62, lat: 24.16, mode: 'still', face: 'F', iso: 'building', sea: true, deco: true, landmark: true }, // 台灣：太魯閣峽谷（11-20 改用 building 尺寸：跟阿里山小火車差不多大）
         { src: 'critters/kaminarimon-lantern.svg', lon: 139.296, lat: 36.581, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 日本：淺草寺雷門燈籠
         { src: 'critters/double-decker-bus.svg', lon: -1.5, lat: 52.3, mode: 'wander', s: 1.0, deco: true, maxDeg: 2 }, // 英國：紅色雙層巴士
         { src: 'critters/arc-de-triomphe.svg', lon: 2.295, lat: 48.8738, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 法國：凱旋門
@@ -697,7 +697,7 @@
         { src: 'critters/taiwan-presidential-office.svg', lon: 121.3, lat: 25.0, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 台灣：總統府：真實位置（121.51, 25.04）和台北 101 只差 0.05 度，台北又多了故宮、中正紀念堂，往西拉開約 0.25 度
         { src: 'critters/national-palace-museum.svg', lon: 121.5, lat: 25.2, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 台灣：國立故宮博物院：真實位置在外雙溪（121.55, 25.10），往北移一點，和 101、總統府拉開
         { src: 'critters/cks-memorial-hall.svg', lon: 121.45, lat: 24.78, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 台灣：中正紀念堂：真實位置（121.52, 25.03）和總統府、101 幾乎重疊，往南移約 0.25 度
-        { src: 'critters/sun-moon-lake.svg', lon: 120.91, lat: 23.86, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 台灣：日月潭（真實位置）
+        { src: 'critters/sun-moon-lake.svg', lon: 120.91, lat: 23.86, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 台灣：日月潭（真實位置；11-20 改用 building 尺寸：跟阿里山小火車差不多大）
         { src: 'critters/pier-2.svg', lon: 120.2823, lat: 22.6187, mode: 'still', face: 'F', iso: 'building', sea: true, deco: true, landmark: true }, // 台灣：駁二藝術特區
         { src: 'critters/carp-island.svg', lon: 134.47, lat: 7.12, mode: 'still', face: 'F', s: 1.0, sea: true, deco: true, landmark: true }, // 帛琉：星象島（Ngercheu／Carp Island）
         { src: 'critters/beirut-terraces.svg', lon: 35.5018, lat: 33.8938, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 黎巴嫩：貝魯特垂直森林（Beirut Terraces）
