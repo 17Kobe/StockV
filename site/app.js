@@ -1994,16 +1994,6 @@
             landmark: true,
         }, // 帛琉：牛奶湖
         {
-            src: 'critters/taiwan-presidential-office.svg',
-            lon: 121.3,
-            lat: 25.0,
-            mode: 'still',
-            face: 'F',
-            iso: 'building',
-            deco: true,
-            landmark: true,
-        }, // 台灣：總統府：真實位置（121.51, 25.04）和台北 101 只差 0.05 度，台北又多了故宮、中正紀念堂，往西拉開約 0.25 度
-        {
             src: 'critters/national-palace-museum.svg',
             lon: 121.5,
             lat: 25.2,
@@ -2011,7 +2001,7 @@
             face: 'F',
             iso: 'building',
             deco: true,
-            landmark: true,
+            landmark: false,
         }, // 台灣：國立故宮博物院：真實位置在外雙溪（121.55, 25.10），往北移一點，和 101、總統府拉開
         {
             src: 'critters/taipei101.svg',
@@ -2023,6 +2013,16 @@
             deco: true,
             landmark: true,
         }, // 台北 101
+        {
+            src: 'critters/taiwan-presidential-office.svg',
+            lon: 121.3,
+            lat: 25.0,
+            mode: 'still',
+            face: 'F',
+            iso: 'building',
+            deco: true,
+            landmark: true,
+        }, // 台灣：總統府：真實位置（121.51, 25.04）和台北 101 只差 0.05 度，台北又多了故宮、中正紀念堂，往西拉開約 0.25 度
         {
             src: 'critters/cks-memorial-hall.svg',
             lon: 121.45,
