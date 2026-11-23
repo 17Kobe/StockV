@@ -121,7 +121,7 @@
         { src: 'critters/black-ship.svg', lon: 146, lat: 30, mode: 'boat', face: 'F', iso: 'vehicle', sea: true, maxDeg: 1 }, // 原座標跟東京鐵塔、迪士尼太近（全球視角互相遮擋，一直沒顯示），拉遠到太平洋上
         // 大航海時代的船隊：馬尼拉大帆船（太平洋）、鄭和寶船（印度洋）
         { src: 'critters/galleon-manila.svg', lon: -118, lat: 14, mode: 'boat', face: 'F', s: 1.3, sea: true },
-        { src: 'critters/treasure-ship.svg', lon: 84, lat: 4, mode: 'boat', face: 'F', s: 1.4, sea: true },
+        { src: 'critters/treasure-ship.svg', lon: 84, lat: 4, mode: 'boat', face: 'F', iso: 'vehicle', sea: true },
         // 地理大發現：哥倉布（1492）、達伽馬（1498）、麥哲倫（1519~1522）；阿拉伯三角帆船、Vendée Globe 環球賽艇
         { src: 'critters/fleet-columbus.svg', lon: -66, lat: 22, mode: 'boat', face: 'F', s: 1.9, sea: true },
         { src: 'critters/caravel-dias.svg', lon: 21, lat: -40.5, mode: 'boat', face: 'F', s: 1.3, sea: true, maxDeg: 1.5 }, // 迪亞士 1488 繞過好望角
@@ -271,7 +271,7 @@
         // 美國西海岸外海的大白鯊：只露出背鰭，拖著水痕在海面上慢慢巡游
         { src: 'critters/shark-fin.svg', lon: -127.5, lat: 36.8, mode: 'fin', s: 1.15, sea: true, deco: true },
         // ── 世界地標 ──────────────────────────────────────────────────
-        { src: 'critters/jellyfish.svg', lon: 134.5, lat: 7.5, mode: 'bob', s: 0.9, sea: true, deco: true, landmark: true }, // 帛琉水母
+        { src: 'critters/jellyfish.svg', lon: 134.6, lat: 8.4, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 帛琉水母（帛琉三個景點真實位置只差 0.4 度，會被地標重疊檢查收起，往北、西、東三向拉開）
         { src: 'critters/fuji.svg', lon: 138.3, lat: 34.4, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 富士山
         {
             src: 'critters/great-wall.svg',
@@ -414,7 +414,8 @@
             lat: 11.4,
             mode: 'bob',
             face: 'F',
-            s: 1.1,
+            iso: 'vehicle',
+            isoK: 0.8,
             sea: true,
             deco: true,
             noShadow: true,
@@ -425,7 +426,8 @@
             lat: 9.6,
             mode: 'ghost',
             face: 'L',
-            s: 0.9,
+            iso: 'animal',
+            isoK: 0.8,
             sea: true,
             noShadow: true,
             maxDeg: 1.5,
@@ -1197,8 +1199,8 @@
             deco: true,
             maxDeg: 2,
         }, // 紐西蘭：奇異鳥
-        { src: 'critters/platypus.svg', lon: 151.0, lat: -33.5, mode: 'still', face: 'F', iso: 'animal', sea: true, deco: true }, // 澳洲：鴨嘴獸（不畫河，放大一點）
-        { src: 'critters/snow-leopard.svg', lon: 78.0, lat: 39.0, mode: 'wander', s: 1.0, deco: true, maxDeg: 2 }, // 中亞帕米爾高原：雪豹
+        { src: 'critters/platypus.svg', lon: 150.2, lat: -31.8, mode: 'still', face: 'F', iso: 'animal', sea: true, deco: true }, // 澳洲：鴨嘴獸（不畫河，放大一點；往內陸西北挪，讓出雪梨港灣大橋的位置）
+        { src: 'critters/snow-leopard.svg', lon: 78.0, lat: 39.0, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 中亞帕米爾高原：雪豹
         { src: 'critters/puffin.svg', lon: -14.0, lat: 65.5, mode: 'bob', face: 'F', s: 0.8, sea: true, deco: true }, // 冰島：海鸚
         // ── 第七批補充（用戶列的 12 個世界地標） ──────────────────────
         {
@@ -1470,6 +1472,13 @@
             deco: true,
             landmark: true,
         }, // 中國：桂林山水與竹筏
+        // ── 第十四批補充（11-20 用戶列的清單：北韓、澳洲、印度，全部 2.5D 統一風格） ──
+        { src: 'critters/juche-tower.svg', lon: 125.77, lat: 39.02, mode: 'still', face: 'F', iso: 'tower', deco: true, landmark: true }, // 北韓：平壤主體思想塔
+        { src: 'critters/sydney-harbour-bridge.svg', lon: 151.6, lat: -34.0, mode: 'still', face: 'F', iso: 'building', sea: true, deco: true, landmark: true }, // 澳洲：雪梨港灣大橋（歌劇院在東南外海，兩個錯開）
+        { src: 'critters/twelve-apostles.svg', lon: 143.1, lat: -38.9, mode: 'still', face: 'F', iso: 'nature', isoK: 0.8, sea: true, deco: true, landmark: true }, // 澳洲：大洋路十二使徒岩
+        { src: 'critters/amber-fort.svg', lon: 75.5, lat: 27.4, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 印度：齋浦爾琥珀堡（往西北拉開，跟風之宮錯開）
+        { src: 'critters/hawa-mahal.svg', lon: 76.5, lat: 25.9, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 印度：齋浦爾風之宮
+        { src: 'critters/qutub-minar.svg', lon: 76.0, lat: 29.9, mode: 'still', face: 'F', iso: 'tower', isoK: 0.8, deco: true, landmark: true }, // 印度：德里古達明納塔（紅堡在東南邊，太近會被地標重疊檢查收起，往西北拉開）
         // ── 第十三批補充（11-20 用戶列的清單：日本、南韓、台灣、中國，全部 2.5D 統一風格） ──
         {
             src: 'critters/aso-volcano.svg',
@@ -1984,15 +1993,15 @@
         }, // 美國：梅薩維德國家公園崖居
         {
             src: 'critters/palau-milky-way.svg',
-            lon: 134.34,
-            lat: 7.23,
+            lon: 133.2,
+            lat: 6.8,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'nature',
             sea: true,
             deco: true,
             landmark: true,
-        }, // 帛琉：牛奶湖
+        }, // 帛琉：牛奶湖（往西拉開）
         {
             src: 'critters/national-palace-museum.svg',
             lon: 121.5,
@@ -2057,15 +2066,15 @@
         }, // 台灣：駁二藝術特區
         {
             src: 'critters/carp-island.svg',
-            lon: 134.47,
-            lat: 7.12,
+            lon: 135.9,
+            lat: 6.6,
             mode: 'still',
             face: 'F',
-            s: 1.0,
+            iso: 'nature',
             sea: true,
             deco: true,
             landmark: true,
-        }, // 帛琉：星象島（Ngercheu／Carp Island）
+        }, // 帛琉：星象島（Ngercheu／Carp Island，往東拉開）
         {
             src: 'critters/beirut-terraces.svg',
             lon: 35.5018,
@@ -6414,6 +6423,8 @@
         box(-1.6, -8, 3.2, 7, '#6b5d45');
         for (const x of [-17, -14, 13.5, 16.5]) box(x, -8, 2, 3.4, '#7f93b5');
     }
+    // 已經改成 2.5D 統一風格的地緣地標（gen_geo.py 產生 SVG），其餘的仍用 emoji PNG
+    const LM_SVG = new Set(['dove', 'crossed_swords']);
     function buildLandmarks() {
         gLm.selectAll('*').remove();
         for (const lm of state.landmarks) {
@@ -6432,10 +6443,10 @@
             else
                 i.append('image')
                     .attr('class', 'lm-img')
-                    .attr('href', `assets/icons/${lm.icon}.png`)
+                    .attr('href', `assets/icons/${lm.icon}.${LM_SVG.has(lm.icon) ? 'svg' : 'png'}`)
                     .attr('preserveAspectRatio', 'xMidYMax meet');
             // 衝突時迸出的火花
-            if (lm.anim === 'clash') g.append('image').attr('class', 'lm-spark').attr('href', 'assets/icons/collision.png');
+            if (lm.anim === 'clash') g.append('image').attr('class', 'lm-spark').attr('href', 'assets/icons/collision.svg');
             g.append('text').attr('class', 'lm-t').text(lm.label);
         }
     }

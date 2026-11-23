@@ -218,7 +218,7 @@
     for (let i = 0; i < 8; i++) {
       const g = el(fxG, 'g', { style: 'display:none' });
       const ring = el(g, 'circle', { r: 1, fill: 'none', stroke: '#ffd37a', 'stroke-width': 1.6 });
-      const img = el(g, 'image', { href: 'assets/icons/collision.png', preserveAspectRatio: 'xMidYMid meet' });
+      const img = el(g, 'image', { href: 'assets/icons/collision.svg', preserveAspectRatio: 'xMidYMid meet' });
       bursts.push({ g, ring, img, age: 99, dur: 0.9, x: 0, y: 0, u: 1 });
     }
   }
