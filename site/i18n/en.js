@@ -2,6 +2,11 @@
 I18n.add('en', {
   "商品": "Commodities",
   "匯率": "FX",
+  "冒險": "Adventure",
+  "擲骰子環遊世界": "Roll the dice and travel the world",
+  "資金": "Funds",
+  "目標": "Goal",
+  "還差 {n}": "{n} to go",
   "全球市場": "Global Markets",
   "遊戲": "Game",
   "價差股利": "Gain & Div",

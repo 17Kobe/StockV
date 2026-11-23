@@ -33,6 +33,8 @@
 
     // 左側圖層列（手機版是底部導覽列）。之後要加新地圖，在這裡加一筆並把 ready 設成 true 即可
     const LAYERS = [
+        // 冒險：原本「全球市場」裡的「遊戲」篩選獨立出來。只顯示地圖、動畫與骰子，沒有篩選列，概況卡改顯示玩家資金
+        { k: 'adventure', icon: '🎲', label: $t('冒險'), title: $t('冒險'), desc: $t('擲骰子環遊世界'), ready: true },
         {
             k: 'stocks',
             icon: '📈',
@@ -42,14 +44,14 @@
             ready: true,
         },
         { k: 'picks', icon: '📊', label: $t('個股'), title: $t('個股'), desc: $t('個股報價、走勢與公司資訊') },
-        { k: 'holdings', icon: '💼', label: $t('價差股利'), title: $t('價差股利'), desc: $t('我的持股、成本與損益') },
         { k: 'balance', icon: '⚖️', label: $t('資產負債'), title: $t('資產負債'), desc: $t('資產、負債與淨值') },
     ];
     // 左側圖層列的簡單線條圖示（取代 emoji，風格更統一乾淨）：key 對應 LAYERS 的 k
     const RAIL_ICONS = {
+        // 指南針
+        adventure: '<circle cx="12" cy="12" r="9"/><polygon points="15.5 8.5 13.5 13.5 8.5 15.5 10.5 10.5"/>',
         stocks: '<polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/>',
         picks: '<line x1="6" y1="20" x2="6" y2="14" stroke-width="3"/><line x1="12" y1="20" x2="12" y2="4" stroke-width="3"/><line x1="18" y1="20" x2="18" y2="10" stroke-width="3"/>',
-        holdings: '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
         balance:
             '<line x1="12" y1="3" x2="12" y2="21"/><line x1="5" y1="7" x2="19" y2="7"/><path d="M5 7l-3 6a3 3 0 0 0 6 0z"/><path d="M19 7l-3 6a3 3 0 0 0 6 0z"/><line x1="8" y1="21" x2="16" y2="21"/>',
         settings:
@@ -2287,6 +2289,8 @@
         demo: false,
         activeRegion: 'all',
         layer: 'stocks',
+        // 冒險的玩家資金與目標資金（先放起始值，之後擲骰子玩法再更新）
+        adv: { cash: 1000, goal: 10000 },
         topics: [], // markets.json 的 topics（商品 / 債券 / 利率 / 匯率 / 地緣 / 經濟數據卡片）
         landmarks: [], // 永遠留在地圖上的圖示（央行、白宮、地緣動畫）
         redUp: store.get('redUp', true),
@@ -4827,7 +4831,7 @@
             });
         // 股市地圖的雙擊不放大：左鍵是用來降下災難的，連點時地圖才不會一直縮放
         zoomB.filter(
-            (e) => (!e.ctrlKey || e.type === 'wheel') && !e.button && !(e.type === 'dblclick' && state.layer === 'stocks'),
+            (e) => (!e.ctrlKey || e.type === 'wheel') && !e.button && !(e.type === 'dblclick' && onMapLayer()),
         );
         svg.call(zoomB);
 
@@ -4836,11 +4840,11 @@
         // 上帝之手先隱藏（ENABLE_GOD_HAND=false）：按鈕、點擊觸發都先關閉，未來真的要用再打開；程式碼整套保留不動
         if (ENABLE_GOD_HAND) {
             svg.on('click.dz', (e) => {
-                if (state.layer !== 'stocks' || !window.Disasters || e.target.closest('.mk')) return;
+                if (!onMapLayer() || !window.Disasters || e.target.closest('.mk')) return;
                 Disasters.handleClick(e.clientX, e.clientY);
             });
             svg.on('contextmenu.dz', (e) => {
-                if (state.layer !== 'stocks' || !window.Disasters) return;
+                if (!onMapLayer() || !window.Disasters) return;
                 e.preventDefault();
                 Disasters.openMenu(e.clientX, e.clientY);
             });
@@ -4861,7 +4865,7 @@
             worldW: () => S0 * state.t.k,
             size: () => [W, H, dpr],
             zoom: () => state.t.k,
-            enabled: () => state.layer === 'stocks', // 股市地圖的任何篩選都顯示
+            enabled: () => onMapLayer(), // 股市地圖的任何篩選都顯示
             reduce: () => !state.anim || reduceMotion.matches,
             tone: (id) => {
                 const c = state.topics.find((x) => x.id === id),
@@ -4878,7 +4882,7 @@
             stage: $('#stage'),
             canvas: $('#fx'),
             shakeEls: ['#terrain', '#clouds', '#aurora', '#borders', '#map', '#fx'].map((s) => $(s)),
-            enabled: () => state.layer === 'stocks',
+            enabled: () => onMapLayer(),
             toScreen: screenXY,
             toGeo: geoAt,
             zoom: () => state.t.k,
@@ -8024,7 +8028,38 @@
             if (!b) return;
             const l = LAYERS.find((x) => x.k === b.dataset.k);
             if (!l.ready) toast(`🚧 ${l.icon} ${$t('{title}（{desc}）即將推出', { title: l.title, desc: l.desc })}`);
+            else if (l.k !== state.layer) switchLayer(l.k, true);
         };
+    }
+    // 目前圖層是否顯示世界地圖（冒險、全球市場共用同一張地圖）
+    function onMapLayer() {
+        return state.layer === 'stocks' || state.layer === 'adventure';
+    }
+    // 切換圖層。冒險沿用原本「遊戲」篩選的視角與顯示規則（activeRegion = 'game'）；
+    // 回到全球市場時還原使用者上次選的篩選
+    function setLayer(k) {
+        state.layer = k;
+        store.set('layer', k);
+        $('#stage')?.classList.toggle('layer-adventure', k === 'adventure');
+        document.querySelectorAll('#layers .rl').forEach((b) => {
+            const on = b.dataset.k === k;
+            b.classList.toggle('on', on);
+            b.setAttribute('aria-pressed', on);
+        });
+    }
+    function switchLayer(k, animate) {
+        setLayer(k);
+        state.activeRegion = k === 'adventure' ? 'game' : marketRegion();
+        updateChips();
+        applyRegion(animate);
+        renderHud();
+        scheduleLayout();
+    }
+    // 全球市場要顯示的篩選：自動選區域，或使用者上次手動選的（舊版存過 'game' 的話回退到全球）
+    function marketRegion() {
+        if (autoRegionOn()) return pickAutoRegion();
+        const r = store.get('activeRegion', 'all');
+        return r === 'game' ? 'all' : r;
     }
     let toastT = 0;
     function toast(msg) {
@@ -8037,7 +8072,6 @@
 
     function buildChips() {
         const defs = [
-            ['game', '🎮', $t('遊戲')], // 遊戲：只顯示地圖，隱藏所有卡片
             ['all', '🌍', $t('全球')],
             ['americas', '🗽', $t('美洲')], // 美洲移到亞太左邊
             ['asia', '⛩️', $t('亞太')],
@@ -8085,7 +8119,7 @@
     function renderFng() {
         const f = state.fng;
         const fill = $('#hpFill');
-        const hp = $('.hp');
+        const hp = $('#hpFng');
         const setBar = (pct, color) => {
             fill.style.clipPath = `inset(0 ${100 - pct}% 0 0 round 99px)`;
             $('#hpKnob').style.left = pct + '%';
@@ -8116,7 +8150,18 @@
             });
     }
 
+    // 冒險的概況卡：資金 / 目標資金，進度條是達成比例
+    function renderAdv() {
+        const { cash, goal } = state.adv;
+        const fmt = (v) => Math.round(v).toLocaleString(I18n.intl);
+        const pct = Math.max(0, Math.min(100, (cash / goal) * 100));
+        $('#advFill').style.width = pct + '%';
+        $('#advText').textContent = `$${fmt(cash)}`;
+        $('#hpAdv').title = `${$t('資金')} $${fmt(cash)}　${$t('目標')} $${fmt(goal)}`;
+        $('#statusLine').textContent = `🏁 ${$t('目標')} $${fmt(goal)} · ${$t('還差 {n}', { n: '$' + fmt(Math.max(0, goal - cash)) })}`;
+    }
     function renderHud() {
+        if (state.layer === 'adventure') return renderAdv();
         const open = state.maps.filter((m) => marketStatus(m) === 'open');
         renderFng();
         let line;
@@ -8377,13 +8422,22 @@
         // 預設從「全球」開始；開啟 autoRegionOn() 時改選「現在正在開盤」的區域（都休市就選最快開盤的）。
         // 沒開自動選區域的話，改用使用者上次手動選的篩選（存在 localStorage，點篩選列時會存），
         // 重新整理或下次打開都要維持上次選的，不是每次都跳回全球；都沒存過才回退到全球
-        state.activeRegion = autoRegionOn() ? pickAutoRegion() : store.get('activeRegion', 'all');
-        // 網址加上 #fx、#geo、#asia… 可以直接開在指定的篩選
+        // 圖層也還原上次的（冒險 / 全球市場）；舊版把「遊戲」存成篩選的，視為冒險
+        const legacyGame = store.get('activeRegion', 'all') === 'game';
+        let layer = store.get('layer', legacyGame ? 'adventure' : 'stocks');
+        if (!LAYERS.some((l) => l.k === layer && l.ready)) layer = 'stocks';
+        state.activeRegion = marketRegion();
+        // 網址加上 #fx、#geo、#asia… 可以直接開在指定的篩選（全球市場）；#adventure 直接開冒險
         const hash = location.hash.slice(1);
-        if (TOPICS[hash] || ['all', 'asia', 'americas', 'europe', 'mea'].includes(hash)) state.activeRegion = hash;
+        if (TOPICS[hash] || ['all', 'asia', 'americas', 'europe', 'mea'].includes(hash)) {
+            state.activeRegion = hash;
+            layer = 'stocks';
+        } else if (hash === 'adventure') layer = 'adventure';
+        if (layer === 'adventure') state.activeRegion = 'game';
 
         buildSvg();
         buildRail();
+        setLayer(layer);
         buildChips();
         layoutGeometry();
         updateChips();

@@ -136,6 +136,12 @@ button{font:inherit;color:inherit;cursor:pointer}
   border:1px solid var(--outline);box-shadow:0 0 0 1px var(--rim),0 0 6px rgba(255,231,163,.8);
   transition:left .8s;
 }
+/* 冒險圖層：概況卡改顯示玩家資金（金色進度條 = 離目標資金的達成比例），並收起篩選列 */
+#hpAdv{display:none}
+#stage.layer-adventure #hpAdv{display:flex}
+#stage.layer-adventure #hpFng,#stage.layer-adventure #chips{display:none}
+.advi{--fc:#f0c75e}
+.bar.adv i{width:0;background:linear-gradient(180deg,#fff0bf 0%,#f0c75e 50%,#c89533 100%)}
 .sub{font-size:11px;opacity:.8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:1px}
 
 /* ---------- 篩選列（Google 地圖式的膠囊按鈕，浮在地圖上方，可橫向捲動） ---------- */
@@ -301,7 +307,7 @@ button{font:inherit;color:inherit;cursor:pointer}
   55% {transform:scale(.5);opacity:.35}
   100%{transform:scale(1);opacity:1}
 }
-/* 骰子只在「遊戲」篩選才有意義（之後桃太郎電鐵式玩法），其他篩選下隱藏，避免佔位置又讓人誤以為是上帝之手 */
+/* 骰子只在「冒險」圖層（內部仍沿用 region-game）才有意義（之後桃太郎電鐵式玩法），其他篩選下隱藏，避免佔位置又讓人誤以為是上帝之手 */
 #stage.region-game #diceBtn{display:flex}
 #diceBtn:hover{transform:translateY(-2px) scale(1.04)}
 #diceBtn:active{transform:translateY(1px) scale(.97)}

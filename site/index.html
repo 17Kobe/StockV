@@ -19,7 +19,7 @@
             href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Barlow+Semi+Condensed:wght@600;700&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="style.css?v=20251118a" />
+        <link rel="stylesheet" href="style.css?v=20251121a" />
     </head>
     <body>
         <!-- 左側直式圖層列（手機版變成底部導覽列），內容由 app.js 的 LAYERS 產生 -->
@@ -56,10 +56,16 @@
             <div id="side">
                 <section id="hud" class="gpanel" aria-label="全球概況" data-i18n-aria="全球概況">
                     <div class="logo">🌏 <b data-i18n="股市村">股市村</b></div>
-                    <div class="hp" title="CNN 貪婪與恐慌指數" data-i18n-title="CNN 貪婪與恐慌指數">
+                    <div id="hpFng" class="hp" title="CNN 貪婪與恐慌指數" data-i18n-title="CNN 貪婪與恐慌指數">
                         <span id="hpIcon" class="hpl fngi">😐</span>
                         <div class="bar fng"><i id="hpFill"></i><b id="hpKnob"></b></div>
                         <span id="hpText" class="hpt">--</span>
+                    </div>
+                    <!-- 冒險圖層：玩家目前的資金，進度條是離目標資金還差多少 -->
+                    <div id="hpAdv" class="hp">
+                        <span class="hpl fngi advi">💰</span>
+                        <div class="bar adv"><i id="advFill"></i></div>
+                        <span id="advText" class="hpt">--</span>
                     </div>
                     <div id="statusLine" class="sub" data-i18n="正在連線世界…">正在連線世界…</div>
                 </section>
@@ -87,6 +93,6 @@
         <script src="folk25.js?v=20251120c"></script>
         <script src="natives.js?v=20251120c"></script>
         <script src="tips.js?v=20251120d"></script>
-        <script src="app.js?v=20251120d"></script>
+        <script src="app.js?v=20251121a"></script>
     </body>
 </html>
