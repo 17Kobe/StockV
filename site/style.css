@@ -363,11 +363,12 @@ button{font:inherit;color:inherit;cursor:pointer}
   0%,100%{opacity:1}
   50%{opacity:.55}
 }
-/* Hover 高亮：比點擊輕，國土微微發亮，邊線加粗但不脈衝。要「立刻」亮起：不轉場、不用 filter 模糊（大國家每次重畫模糊很貴），光暈靠寬的半透明描邊 */
+/* Hover 高亮：比點擊輕，國土微微發亮，邊線加粗但不脈衝。要「立刻」亮起：不轉場、不用 filter 模糊（大國家每次重畫模糊很貴），光暈靠寬的半透明描邊；
+   改用青色（而非點擊高亮的黃色）純靠色相跟地形的暖色調（綠/棕/黃）區隔，不加發光 */
 #borders .land path.hv-land{
   display:inline;
-  fill:rgba(255,231,130,.28);
-  stroke:rgba(255,215,60,.55);
+  fill:rgba(96,225,255,.28);
+  stroke:rgba(72,210,255,.6);
   stroke-width:13;
   stroke-linejoin:round;
   vector-effect:non-scaling-stroke;
@@ -376,7 +377,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 #borders .line path.hv-line{
   display:inline;
   fill:none;
-  stroke:#ffd840;
+  stroke:#4ad8ff;
   stroke-width:3.5;
   stroke-linejoin:round;
   vector-effect:non-scaling-stroke;
