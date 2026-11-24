@@ -833,6 +833,12 @@
             deco: true,
             landmark: true,
         }, // 下龍灣
+        { src: 'critters/miharu-takizakura.svg', lon: 140.48, lat: 37.43, mode: 'still', face: 'F', iso: 'nature', isoK: 0.55, deco: true, landmark: true }, // 日本：福島三春瀧櫻（花冠是密實的圓形色塊，跟其他 nature 類比視覺上大很多，isoK 縮小）
+        { src: 'critters/mekong-floating-market.svg', lon: 105.75, lat: 10.03, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 越南：湄公河水上浮市
+        { src: 'critters/bromo-volcano.svg', lon: 112.95, lat: -7.94, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 印尼：東爪哇布羅莫火山
+        { src: 'critters/puerto-princesa-underground-river.svg', lon: 118.92, lat: 10.19, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 菲律賓：巴拉望地下河
+        { src: 'critters/golden-bridge-danang.svg', lon: 107.99, lat: 16.0, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 越南：峴港巴拿山黃金橋
+        { src: 'critters/phuket-longtail.svg', lon: 98.3, lat: 7.9, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 泰國：普吉島
         { src: 'critters/pamukkale.svg', lon: 29.12, lat: 37.92, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 棉堡
         {
             src: 'critters/giants-causeway.svg',
@@ -1685,6 +1691,15 @@
             deco: true,
             landmark: true,
         }, // 中國：三峽大壩
+        { src: 'critters/summer-palace.svg', lon: 114.4, lat: 40.0, mode: 'still', face: 'F', iso: 'building', sea: true, deco: true, landmark: true }, // 中國：北京頤和園（真實位置離紫禁城僅 0.16 度會重疊，仿鳥巢做法往西拉開約 1.9 度）
+        { src: 'critters/shaolin-temple.svg', lon: 112.94, lat: 34.51, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 中國：河南少林寺
+        { src: 'critters/emei-mountain.svg', lon: 103.33, lat: 29.52, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 中國：四川峨眉山金頂
+        { src: 'critters/ruins-of-st-paul.svg', lon: 113.54, lat: 22.2, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 中國：澳門大三巴牌坊
+        { src: 'critters/lijiang-old-town.svg', lon: 100.23, lat: 26.87, mode: 'still', face: 'F', iso: 'building', sea: true, deco: true, landmark: true }, // 中國：雲南麗江古城
+        { src: 'critters/pingyao-ancient-city.svg', lon: 112.17, lat: 37.2, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 中國：山西平遙古城
+        { src: 'critters/jiayuguan-pass.svg', lon: 98.3, lat: 39.81, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 中國：甘肅嘉峪關
+        { src: 'critters/qinghai-lake.svg', lon: 100.2, lat: 36.9, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 中國：青海湖
+        { src: 'critters/canton-tower.svg', lon: 113.32, lat: 23.11, mode: 'still', face: 'F', iso: 'tower', isoK: 0.8, sea: true, deco: true, landmark: true }, // 中國：廣州塔（跟古達明納塔形狀相近，isoK 0.8 讓高瘦塔身跟其他地標差不多大）
         {
             src: 'critters/wall-street-bull.svg',
             lon: -74.25,
