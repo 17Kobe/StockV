@@ -33,6 +33,8 @@
 
         <main id="stage">
             <canvas id="terrain" aria-hidden="true"></canvas>
+            <!-- 海面特效（sea.js，WebGL）：海浪、波光、焦散、水下生物、船的水波 -->
+            <canvas id="sea" aria-hidden="true"></canvas>
             <canvas id="aurora" aria-hidden="true"></canvas>
             <!-- 一般裝飾雲：在國界/旗幟/卡片下面，不擋內容 -->
             <canvas id="clouds" aria-hidden="true"></canvas>
@@ -86,6 +88,7 @@
         <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
         <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
         <script src="terrain.js?v=20251118a"></script>
+        <script src="sea.js?v=20261125c"></script>
         <script src="disasters.js"></script>
         <script src="geoscenes.js?v=20251120d"></script>
         <script src="corp-logos.js"></script>
@@ -93,6 +96,6 @@
         <script src="folk25.js?v=20251120c"></script>
         <script src="natives.js?v=20251120c"></script>
         <script src="tips.js?v=20261123a"></script>
-        <script src="app.js?v=20261123a"></script>
+        <script src="app.js?v=20261125a"></script>
     </body>
 </html>

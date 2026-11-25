@@ -267,7 +267,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 #stage{position:relative;flex:1;min-height:0;min-width:0;overflow:hidden;background:#2378b8}
 /* 地圖四周的暗角，像遊戲畫面的鏡頭邊緣 */
 #stage::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:1;box-shadow:inset 0 0 60px rgba(8,16,32,.55)}
-#terrain,#clouds,#aurora,#fx,#wfx{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none}
+#terrain,#sea,#clouds,#aurora,#fx,#wfx{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none}
 
 /* ---------- 上帝視角的災難（只在股市地圖；效果畫在 #fx，邏輯在 disasters.js） ---------- */
 #dzBtn{
@@ -631,7 +631,7 @@ body.lowfx #stage *,body.lowfx #stage *::before{animation-play-state:paused!impo
    裝飾動物圖片是用 <image href="critters/xxx.svg"> 外部參照載入的，裡面的 SMIL 動畫不受
    JS 的 requestAnimationFrame 節流控制，只有真的從渲染樹拿掉才會讓瀏覽器停止解碼動畫，
    省下持續的 CPU / GPU 負擔 */
-body.tab-hidden #map,body.tab-hidden #borders,body.tab-hidden #terrain,body.tab-hidden #aurora,body.tab-hidden #clouds,body.tab-hidden #wfx,body.tab-hidden #fx{display:none!important}
+body.tab-hidden #map,body.tab-hidden #borders,body.tab-hidden #terrain,body.tab-hidden #sea,body.tab-hidden #aurora,body.tab-hidden #clouds,body.tab-hidden #wfx,body.tab-hidden #fx{display:none!important}
 
 /* ---------- 嵌入模式（?embed=1）：只留股市地圖，隱藏概況卡與圖層列（也就沒有旅遊等其它圖層、設定按鈕） ---------- */
 html.embed #rail,html.embed #hud{display:none}

@@ -2789,8 +2789,52 @@
         terrainRaf = 0;
         if (tctx && W) {
             Terrain.draw(tctx, state.t, S0, W, H, dpr);
+            // 海面特效的陸海遮罩要在蓋夜色之前取（夜色會把海水的藍色洗掉）
+            if (window.Sea) Sea.snapshot(tctx.canvas);
             drawNight();
+            drawSea(0, true);
         }
+    }
+
+    /* ---------- 海面特效（sea.js）：海浪、波光、焦散、水下生物、船的水波 ----------
+       sync：地形剛重畫（平移 / 縮放），同一幀立刻跟著畫，不然會跟地圖脫節；
+       其餘由主迴圈以 fxFps 節流。動畫關閉 / 系統要求減少動態時只在地圖移動時畫靜態的一張 */
+    const SEA = { t: 0, acc: 0 };
+    function drawSea(dt, sync) {
+        if (!window.Sea || !Sea.ready() || !W || !projection) return;
+        const live = state.anim && !reduceMotion.matches;
+        let step = 0;
+        if (!sync) {
+            if (!live) return;
+            SEA.acc += dt;
+            if (SEA.acc < 1 / fxFps() - 0.004) return;
+            step = Math.min(0.2, SEA.acc);
+            SEA.acc = 0;
+            SEA.t += step;
+        }
+        const { sunLon, decl } = sunParams();
+        Sea.render({ t: state.t, S0, time: SEA.t, dt: step, sunLon, decl, wakes: seaWakes() });
+    }
+    // 海上的小角色（船、鯨魚、海豚…）：移動中的拖出尾流，停著的周圍一圈圈漣漪；動得快的優先
+    function seaWakes() {
+        const out = [];
+        for (const c of critters) {
+            if (!c.vis || !c.d.sea || !(c.seaAmp > 0.02)) continue;
+            const z = c.size,
+                sp = Math.hypot(c.vx || 0, c.vy || 0),
+                mv = Math.min(1, sp / (z * 0.1));
+            out.push({
+                x: c.sx + c.x,
+                y: c.sy + c.y - z * 0.02,
+                dx: sp > 0 ? c.vx / sp : 1,
+                dy: sp > 0 ? c.vy / sp : 0,
+                size: z * 0.45,
+                speed: mv < 0.05 ? 0 : mv,
+                amp: c.seaAmp,
+                ph: c.ph,
+            });
+        }
+        return out.sort((a, b) => b.speed * b.size - a.speed * a.size);
     }
 
     /* ---------- 遊戲風元件用的 SVG 定義 ---------- */
@@ -3334,6 +3378,7 @@
             );
         }
         stepCritters(dt, t);
+        drawSea(dt);
         stepCssAnims();
         stepLive(dt);
         if (window.GeoScenes) GeoScenes.step(dt, t);
@@ -3835,6 +3880,18 @@
                 const cv = 1 - cloudCover(c.sx + c.x, c.sy + c.y - c.size * 0.3);
                 op *= cv;
                 wake *= cv;
+            }
+            if (c.d.sea) {
+                // 給海面特效（seaWakes）：平滑過的移動速度（螢幕 px/s）與水波強度
+                const k = dt > 0 ? Math.min(1, dt * 5) : 1;
+                let vx = dt > 0 && c.lx != null ? (c.x - c.lx) / dt : 0,
+                    vy = dt > 0 && c.ly != null ? (c.y - c.ly) / dt : 0;
+                if (Math.hypot(vx, vy) > R * 3) vx = vy = 0; // 重新排版造成的跳動，不是真的在移動
+                c.vx = (c.vx || 0) + (vx - (c.vx || 0)) * k;
+                c.vy = (c.vy || 0) + (vy - (c.vy || 0)) * k;
+                c.lx = c.x;
+                c.ly = c.y;
+                c.seaAmp = wake;
             }
             const lift = Math.max(0, Math.min(1, -hop / (R * 0.35)));
             c.shadow.setAttribute('transform', `scale(${(1 - lift * 0.4).toFixed(3)})`);
@@ -4669,6 +4726,7 @@
         svg = d3.select('#map');
         const cv = $('#terrain');
         tctx = cv.getContext('2d', { alpha: false });
+        if (window.Sea) Sea.init($('#sea'), { bright: nightBrightAt, onReady: () => drawSea(0, true) });
         Terrain.init({
             dem: DEM_URL,
             img: IMG_URL,
@@ -4896,7 +4954,7 @@
         Disasters.init({
             stage: $('#stage'),
             canvas: $('#fx'),
-            shakeEls: ['#terrain', '#clouds', '#aurora', '#borders', '#map', '#fx'].map((s) => $(s)),
+            shakeEls: ['#terrain', '#sea', '#clouds', '#aurora', '#borders', '#map', '#fx'].map((s) => $(s)),
             enabled: () => onMapLayer(),
             toScreen: screenXY,
             toGeo: geoAt,
@@ -5199,6 +5257,7 @@
         cctx.canvas.width = Math.round(W * fxDpr());
         cctx.canvas.height = Math.round(H * fxDpr());
         cloudDrawn = false;
+        if (window.Sea) Sea.resize(W, H, dpr);
 
         // Web Mercator：世界是邊長 S0 的正方形，與圖磚座標完全對齊
         const unit = d3
