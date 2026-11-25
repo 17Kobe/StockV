@@ -103,7 +103,7 @@
             sea: true,
             maxDeg: 1.1,
         }, // 澳洲：猴子米亞野生海豚
-        { src: 'critters/shark.png', lon: 19.42, lat: -34.75, mode: 'dolphin', s: 0.9, sea: true, maxDeg: 1.1 }, // 南非甘斯拜：大白鯊之都
+        { src: 'critters/shark.svg', lon: 19.42, lat: -34.75, mode: 'dolphin', iso: 'animal', isoK: 0.8, sea: true, maxDeg: 1.1 }, // 南非甘斯拜：大白鯊之都
         { src: 'critters/seal.png', lon: -27, lat: 66, mode: 'bob', s: 0.75, sea: true },
         // 南島民族（由台灣出發往太平洋、印度洋拓展）：蘭嶼達悟族拼板舟，和往太平洋、馬達加斯加遠航的拼板舟
         {
@@ -142,7 +142,8 @@
             lat: 66,
             mode: 'emerge',
             face: 'F',
-            s: 1.7,
+            iso: 'animal',
+            isoK: 1.3,
             sea: true,
             deco: true,
             cyc: 16,
@@ -155,7 +156,7 @@
             lat: 57.3,
             mode: 'emerge',
             face: 'F',
-            s: 0.9,
+            iso: 'animal',
             sea: true,
             deco: true,
             cyc: 11,
@@ -181,20 +182,20 @@
             lat: 24,
             mode: 'trek',
             face: 'L',
-            s: 1.9,
+            iso: 'vehicle',
             deco: true,
             noShadow: true,
             maxDeg: 4,
         }, // 北非駝駝商隊
         // 北海小英雄：維京長船在北海巡航
-        { src: 'people/viking.svg', lon: 3.5, lat: 59.5, mode: 'boat', face: 'R', s: 1.35, sea: true },
+        { src: 'people/viking.svg', lon: 3.5, lat: 59.5, mode: 'boat', face: 'R', iso: 'vehicle', sea: true },
         // 非洲莽原：獵人追斑馬，旁邊有長頸鹿散步
-        { src: 'critters/zebra.png', lon: 33.5, lat: -6, mode: 'chase', lag: 0, s: 0.95 },
-        { src: 'critters/hunter.png', lon: 33.5, lat: -6, mode: 'chase', lag: 1.05, s: 0.85 },
-        { src: 'critters/giraffe.png', lon: 29, lat: -10, mode: 'wander', s: 1.2, maxDeg: 2 }, // 原本沒設 maxDeg，長時間開著頁面會不設限亂走
-        { src: 'critters/lion.svg', lon: 38.5, lat: -3.5, mode: 'wander', gait: 'heavy', s: 1.05, deco: true, maxDeg: 2 }, // 非洲獅
-        { src: 'animals/leopard.png', lon: 26, lat: 3, mode: 'wander', s: 0.95, deco: true, maxDeg: 2 }, // 非洲豹
-        { src: 'animals/rhinoceros.png', lon: 22, lat: -19, mode: 'wander', gait: 'heavy', s: 1.15, deco: true, maxDeg: 2 }, // 犀牛
+        { src: 'critters/zebra.svg', lon: 33.5, lat: -6, mode: 'chase', lag: 0, iso: 'animal' },
+        { src: 'critters/hunter.svg', lon: 33.5, lat: -6, mode: 'chase', lag: 1.05, iso: 'person' },
+        { src: 'critters/giraffe.svg', lon: 29, lat: -10, mode: 'wander', iso: 'animal', maxDeg: 2 }, // 原本沒設 maxDeg，長時間開著頁面會不設限亂走
+        { src: 'critters/lion.svg', lon: 38.5, lat: -3.5, mode: 'wander', gait: 'heavy', iso: 'animal', deco: true, maxDeg: 2 }, // 非洲獅
+        { src: 'critters/leopard.svg', lon: 26, lat: 3, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 非洲豹
+        { src: 'critters/rhinoceros.svg', lon: 22, lat: -19, mode: 'wander', gait: 'heavy', iso: 'animal', deco: true, maxDeg: 2 }, // 犀牛
         // 北極：因紐特（愛斯基摩）人在冰屋旁走來走去
         { src: 'people/igloo.svg', lon: -74, lat: 68.5, mode: 'still', face: 'F', s: 1 },
         { src: 'people/eskimo.svg', lon: -69, lat: 67.6, mode: 'wander', face: 'F', gait: 'waddle', s: 0.85, maxDeg: 2 }, // 原本沒設 maxDeg
@@ -214,7 +215,7 @@
             deco: true,
             noShadow: true,
         },
-        { src: 'critters/skier.png', lon: 14, lat: 65, mode: 'ski', face: 'R', s: 0.85 }, // 挪威山上滑雪
+        { src: 'critters/skier.svg', lon: 14, lat: 65, mode: 'ski', face: 'R', iso: 'person' }, // 挪威山上滑雪
         // 各地代表動物
         {
             src: 'critters/panda.svg',
@@ -325,13 +326,13 @@
             deco: true,
             landmark: true,
         }, // 馬丘比丘
-        { src: 'critters/eiffel-tower.svg', lon: 2.3, lat: 48.3, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 艾菲爾鐵塔
-        { src: 'critters/big-ben.svg', lon: 0.8, lat: 51.0, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 大笨鐘
-        { src: 'critters/leaning-tower.svg', lon: 10.4, lat: 42.8, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 比薩斜塔
-        { src: 'critters/colosseum.svg', lon: 12.5, lat: 41.9, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 羅馬競技場
-        { src: 'critters/greek-house.svg', lon: 25.4, lat: 36.4, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 希臘聖托里尼
-        { src: 'critters/pyramid.svg', lon: 31.1, lat: 29.97, mode: 'still', face: 'F', s: 1.2, deco: true, landmark: true }, // 吉薩金字塔
-        { src: 'critters/hot-balloon.svg', lon: 36.6, lat: 38.2, mode: 'bob', s: 1.0, deco: true, landmark: true }, // 卡帕多奇亞熱氣球
+        { src: 'critters/eiffel-tower.svg', lon: 2.3, lat: 48.3, mode: 'still', face: 'F', iso: 'tower', deco: true, landmark: true }, // 艾菲爾鐵塔
+        { src: 'critters/big-ben.svg', lon: 0.8, lat: 51.0, mode: 'still', face: 'F', iso: 'tower', deco: true, landmark: true }, // 大笨鐘
+        { src: 'critters/leaning-tower.svg', lon: 10.4, lat: 42.8, mode: 'still', face: 'F', iso: 'tower', deco: true, landmark: true }, // 比薩斜塔
+        { src: 'critters/colosseum.svg', lon: 12.5, lat: 41.9, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 羅馬競技場
+        { src: 'critters/greek-house.svg', lon: 25.4, lat: 36.4, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 希臘聖托里尼
+        { src: 'critters/pyramid.svg', lon: 31.1, lat: 29.97, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 吉薩金字塔
+        { src: 'critters/hot-balloon.svg', lon: 36.6, lat: 38.2, mode: 'still', iso: 'nature', deco: true, landmark: true }, // 卡帕多奇亞熱氣球
         {
             src: 'critters/kremlin-moscow.svg',
             lon: 36.4,
@@ -357,15 +358,15 @@
             src: 'critters/siberian-train.svg',
             lon: 90,
             lat: 57,
-            mode: 'trek',
-            face: 'L',
+            mode: 'rail',
             iso: 'vehicle',
             deco: true,
             noShadow: true,
-            maxDeg: 8,
-            amp: 3.5,
-            rock: 0.3,
-            bounce: 0.004,
+            // 鐵軌是另一張固定不動的圖，墊在火車底下；vb = 鐵軌圖的 viewBox（跟火車圖同一套 80×80 座標）
+            rail: { src: 'critters/siberian-rail.svg', vb: [-58, -6, 202, 122] },
+            // 火車沿著鐵軌（圖上往左下的斜線）單向行駛：從起點到終點的半程位移（火車圖 viewBox 單位），cyc = 一趟秒數
+            run: [-49.6, 28.6],
+            cyc: 13,
         }, // 西伯利亞小火車
         {
             src: 'critters/santa-sleigh.svg',
@@ -373,7 +374,7 @@
             lat: 66.8,
             mode: 'trek',
             face: 'L',
-            s: 2.2,
+            iso: 'vehicle',
             deco: true,
             noShadow: true,
             maxDeg: 3,
@@ -394,10 +395,10 @@
             noShadow: true,
         }, // 巴西足球員
         { src: 'critters/cactus-mexico.svg', lon: -102, lat: 24.5, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 墨西哥仙人掌
-        { src: 'critters/baobab.svg', lon: 37.5, lat: -9.5, mode: 'still', face: 'F', s: 1.2, deco: true, landmark: true }, // 非洲猴麵包樹
+        { src: 'critters/baobab.svg', lon: 37.5, lat: -9.5, mode: 'still', face: 'F', iso: 'nature', isoK: 0.8, deco: true, landmark: true }, // 非洲猴麵包樹
         { src: 'critters/uluru.svg', lon: 131, lat: -25.3, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 烏魯魯巨岩
         { src: 'critters/danxia.svg', lon: 100, lat: 38.9, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 七彩丹霞
-        { src: 'critters/iceland-volcano.svg', lon: -19, lat: 64.8, mode: 'bob', face: 'F', s: 1.2, deco: true, landmark: true }, // 冰島戴雪帽的小火山
+        { src: 'critters/iceland-volcano.svg', lon: -19, lat: 64.8, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 冰島戴雪帽的小火山
         { src: 'critters/ring-tailed-lemur.svg', lon: 46.5, lat: -19.5, mode: 'wander', iso: 'animal', deco: true, maxDeg: 1.5 }, // 馬達加斯加環尾狐猴
         {
             src: 'critters/bermuda.svg',
@@ -449,14 +450,14 @@
         }, // 大峽谷
         { src: 'critters/yellowstone.svg', lon: -110.6, lat: 44.5, mode: 'still', face: 'F', s: 1.2, deco: true, landmark: true }, // 黃石公園
         { src: 'critters/rushmore.svg', lon: -103.5, lat: 43.85, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 拉什莫爾山
-        { src: 'critters/acropolis.svg', lon: 22.4, lat: 38.6, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 雅典衛城
+        { src: 'critters/acropolis.svg', lon: 22.4, lat: 38.6, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 雅典衛城
         {
             src: 'critters/milan-cathedral.svg',
             lon: 9.19,
             lat: 45.46,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 米蘭大教堂
@@ -468,7 +469,7 @@
             lat: -2.35,
             mode: 'still',
             face: 'F',
-            s: 2.0,
+            iso: 'nature',
             deco: true,
             landmark: true,
             noShadow: true,
@@ -500,16 +501,16 @@
             lat: -23.9,
             mode: 'still',
             face: 'F',
-            s: 2.0,
+            iso: 'nature',
             deco: true,
             landmark: true,
             noShadow: true,
         }, // 克留格爾
         { src: 'critters/galapagos.svg', lon: -90.5, lat: -0.6, mode: 'still', face: 'F', s: 1.2, deco: true, landmark: true }, // 加拉巴哥
-        { src: 'critters/noah-ark.svg', lon: 44.3, lat: 39.7, mode: 'still', face: 'F', s: 1.2, deco: true, landmark: true }, // 諾亞方舟（亞拉臘山）
-        { src: 'critters/louvre.svg', lon: 4.6, lat: 48.7, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 羅浮宮
-        { src: 'critters/stonehenge.svg', lon: -3.0, lat: 51.3, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 巨石陣
-        { src: 'critters/minoan-bull.svg', lon: 25.2, lat: 35.2, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 米諾斯躍牛壁畫
+        { src: 'critters/noah-ark.svg', lon: 44.3, lat: 39.7, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 諾亞方舟（亞拉臘山）
+        { src: 'critters/louvre.svg', lon: 4.6, lat: 48.7, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 羅浮宮
+        { src: 'critters/stonehenge.svg', lon: -3.0, lat: 51.3, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 巨石陣
+        { src: 'critters/minoan-bull.svg', lon: 25.2, lat: 35.2, mode: 'still', face: 'F', iso: 'animal', deco: true, landmark: true }, // 米諾斯躍牛壁畫
         {
             src: 'critters/shanghai.svg',
             lon: 121.6,
@@ -520,7 +521,7 @@
             deco: true,
             landmark: true,
         }, // 上海外灘、陸家嘴
-        { src: 'critters/burj-khalifa.svg', lon: 55.27, lat: 25.2, mode: 'still', face: 'F', s: 1.3, deco: true, landmark: true }, // 杜拜哈里發塔
+        { src: 'critters/burj-khalifa.svg', lon: 55.27, lat: 25.2, mode: 'still', face: 'F', iso: 'tower', deco: true, landmark: true }, // 杜拜哈里發塔
         {
             src: 'critters/tokyo-tower.svg',
             lon: 139.9,
@@ -553,15 +554,15 @@
             noShadow: true,
         }, // 火箭發射
         { src: 'critters/ufo-aliens.svg', lon: -116.5, lat: 35, mode: 'ufo', face: 'F', s: 1.4, deco: true, noShadow: true }, // 加州沙漠的 UFO 和外星人
-        { src: 'critters/troy-horse.svg', lon: 26.24, lat: 39.96, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 特洛伊木馬
-        { src: 'critters/pompeii.svg', lon: 15.6, lat: 40.4, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 龐貝古城
+        { src: 'critters/troy-horse.svg', lon: 26.24, lat: 39.96, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 特洛伊木馬
+        { src: 'critters/pompeii.svg', lon: 15.6, lat: 40.4, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 龐貝古城
         {
             src: 'critters/western-wall.svg',
             lon: 35.23,
             lat: 31.78,
             mode: 'still',
             face: 'F',
-            s: 1.0,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 以色列西牆
@@ -582,11 +583,11 @@
             lat: 32.54,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 巴比倫空中花園
-        { src: 'critters/petra.svg', lon: 35.44, lat: 30.33, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 佩特拉古城
+        { src: 'critters/petra.svg', lon: 35.44, lat: 30.33, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 佩特拉古城
         {
             src: 'critters/polar-bear-l.svg',
             lon: -40.0,
@@ -652,7 +653,7 @@
             deco: true,
             landmark: true,
         }, // 斯里蘭卡：獅子岩
-        { src: 'critters/windmill.svg', lon: 4.9, lat: 52.3, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 荷蘭風車
+        { src: 'critters/windmill.svg', lon: 4.9, lat: 52.3, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 荷蘭風車
         {
             src: 'critters/great-blue-hole.svg',
             lon: -87.5,
@@ -664,7 +665,7 @@
             deco: true,
             landmark: true,
         }, // 大藍洞
-        { src: 'critters/chernobyl.svg', lon: 30.1, lat: 51.4, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 車諾比
+        { src: 'critters/chernobyl.svg', lon: 30.1, lat: 51.4, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 車諾比
         {
             src: 'critters/kiyomizudera.svg',
             lon: 135.8,
@@ -762,7 +763,7 @@
             lat: -17.92,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'nature',
             deco: true,
             landmark: true,
         }, // 維多利亞瀑布
@@ -807,8 +808,8 @@
             deco: true,
             landmark: true,
         }, // 蒲甘
-        { src: 'critters/abu-simbel.svg', lon: 31.63, lat: 22.34, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 阿布辛貝
-        { src: 'critters/samarkand.svg', lon: 66.97, lat: 39.65, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 撒馬爾罕
+        { src: 'critters/abu-simbel.svg', lon: 31.63, lat: 22.34, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 阿布辛貝
+        { src: 'critters/samarkand.svg', lon: 66.97, lat: 39.65, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 撒馬爾罕
         {
             src: 'critters/komodo-dragon.svg',
             lon: 119.49,
@@ -820,8 +821,8 @@
             landmark: true,
             maxDeg: 2,
         }, // 科莫多巨蜥（素材朝右畫）：原本漏了 maxDeg，長時間開著頁面會不設限亂走，難怪跑到墨西哥那邊去
-        { src: 'critters/socotra.svg', lon: 53.87, lat: 12.47, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 索科特拉島
-        { src: 'critters/maasai.svg', lon: 36.8, lat: -2.5, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 馬賽族
+        { src: 'critters/socotra.svg', lon: 53.87, lat: 12.47, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 索科特拉島
+        { src: 'critters/maasai.svg', lon: 36.8, lat: -2.5, mode: 'still', face: 'F', iso: 'person', deco: true, landmark: true }, // 馬賽族
         { src: 'critters/angel-falls.svg', lon: -62.54, lat: 5.97, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 安赫爾瀑布
         {
             src: 'critters/halong-bay.svg',
@@ -839,14 +840,14 @@
         { src: 'critters/puerto-princesa-underground-river.svg', lon: 118.92, lat: 10.19, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 菲律賓：巴拉望地下河
         { src: 'critters/golden-bridge-danang.svg', lon: 107.99, lat: 16.0, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 越南：峴港巴拿山黃金橋
         { src: 'critters/phuket-longtail.svg', lon: 98.3, lat: 7.9, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 泰國：普吉島
-        { src: 'critters/pamukkale.svg', lon: 29.12, lat: 37.92, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 棉堡
+        { src: 'critters/pamukkale.svg', lon: 29.12, lat: 37.92, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 棉堡
         {
             src: 'critters/giants-causeway.svg',
             lon: -6.51,
             lat: 55.24,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'nature',
             sea: true,
             deco: true,
             landmark: true,
@@ -867,13 +868,13 @@
             lat: 49.34,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'nature',
             sea: true,
             deco: true,
             landmark: true,
         }, // 諾曼第登陸
-        { src: 'critters/berlin-wall.svg', lon: 13.39, lat: 52.52, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 柏林圍牆
-        { src: 'critters/okavango.svg', lon: 22.9, lat: -19.3, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 奧卡萬戈三角洲
+        { src: 'critters/berlin-wall.svg', lon: 13.39, lat: 52.52, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 柏林圍牆
+        { src: 'critters/okavango.svg', lon: 22.9, lat: -19.3, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 奧卡萬戈三角洲
         {
             src: 'critters/waitomo-caves.svg',
             lon: 175.1,
@@ -891,7 +892,7 @@
             lat: 31.214,
             mode: 'still',
             face: 'F',
-            s: 1.2,
+            iso: 'tower',
             sea: true,
             deco: true,
             landmark: true,
@@ -902,7 +903,7 @@
             lat: 36.451,
             mode: 'still',
             face: 'F',
-            s: 1.2,
+            iso: 'tower',
             sea: true,
             deco: true,
             landmark: true,
@@ -944,7 +945,7 @@
             lat: 41.4,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'tower',
             deco: true,
             landmark: true,
         }, // 聖家堂
@@ -954,7 +955,7 @@
             lat: 47.56,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 新天鵝堡
@@ -964,13 +965,13 @@
             lat: 48.64,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'building',
             sea: true,
             deco: true,
             landmark: true,
         }, // 聖米歇爾山
-        { src: 'critters/alhambra.svg', lon: -3.59, lat: 37.18, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 阿爾罕布拉宮
-        { src: 'critters/lalibela.svg', lon: 39.04, lat: 12.03, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 拉利貝拉岩石教堂
+        { src: 'critters/alhambra.svg', lon: -3.59, lat: 37.18, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 阿爾罕布拉宮
+        { src: 'critters/lalibela.svg', lon: 39.04, lat: 12.03, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 拉利貝拉岩石教堂
         {
             src: 'critters/teotihuacan.svg',
             lon: -98.84,
@@ -1006,8 +1007,8 @@
         { src: 'critters/bengal-tiger.svg', lon: 79.0, lat: 21.0, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 印度：老虎在森林漫步
         { src: 'critters/wombat.svg', lon: 146.0, lat: -42.0, mode: 'still', face: 'F', iso: 'animal', deco: true }, // 澳洲：袋熊鑽洞
         { src: 'critters/jaguar.svg', lon: -65.0, lat: -6.0, mode: 'wander', s: 1.0, deco: true, maxDeg: 2 }, // 南美：美洲豹穿越雨林（素材已重畫為朝左）
-        { src: 'critters/hippo.svg', lon: 31.0, lat: 1.0, mode: 'bob', s: 1.0, sea: true, deco: true }, // 非洲：河馬探頭
-        { src: 'animals/elephant.png', lon: 37.5, lat: -3.0, mode: 'wander', gait: 'heavy', s: 1.05, deco: true, maxDeg: 2 }, // 非洲：象群遷徙
+        { src: 'critters/hippo.svg', lon: 31.0, lat: 1.0, mode: 'still', iso: 'animal', sea: true, deco: true }, // 非洲：河馬探頭
+        { src: 'critters/african-elephant.svg', lon: 37.5, lat: -3.0, mode: 'wander', gait: 'heavy', iso: 'animal', deco: true, maxDeg: 2 }, // 非洲：象群遷徙
         { src: 'animals/penguin.png', lon: -60.0, lat: -62.0, mode: 'wander', gait: 'waddle', s: 0.85, deco: true, maxDeg: 2 }, // 南極：企鵝冰上搖擺
         { src: 'critters/japanese-macaque-onsen.svg', lon: 138.5, lat: 36.7, mode: 'still', face: 'F', iso: 'small', deco: true }, // 日本：獼猴泡溫泉
         { src: 'critters/golden-monkey.svg', lon: 103.0, lat: 31.0, mode: 'wander', iso: 'small', deco: true, maxDeg: 2 }, // 中國：金絲猴森林跳躍（素材朝右畫）
@@ -1016,7 +1017,7 @@
         // ── 國家代表動物改成獨立裝飾項目（原本掛在旗幟卡片上，跟旗幟卡片脫勾）：跟其它裝飾動物
         // 一樣受全球視角名額限制（見 LOD_DEMOTE），markets.json 對應的 "a" 欄位已拿掉 ──────────
         { src: 'critters/formosan-sika-deer.svg', lon: 121.3, lat: 23.9, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 台灣：梅花鹿（台灣特有亞種，原本用一般的鹿）
-        { src: 'animals/deer.png', lon: 16.5, lat: 60.5, mode: 'wander', s: 0.9, deco: true, maxDeg: 2 }, // 瑞典：鹿
+        { src: 'critters/deer.svg', lon: 16.5, lat: 60.5, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 瑞典：鹿
         { src: 'critters/shiba-inu.svg', lon: 139.5, lat: 35.8, mode: 'wander', iso: 'small', deco: true, maxDeg: 2 }, // 日本：柴犬
         {
             src: 'critters/chinese-dragon.svg',
@@ -1029,13 +1030,13 @@
             maxDeg: 2,
         }, // 中國：中國龍
         { src: 'critters/merino-sheep.svg', lon: 173.5, lat: -41.5, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 紐西蘭：美麗諾羊
-        { src: 'animals/hedgehog.png', lon: -1.5, lat: 52.0, mode: 'wander', s: 0.85, deco: true, maxDeg: 2 }, // 英國：歐洲刺蝟
-        { src: 'animals/badger.png', lon: 11.5, lat: 50.5, mode: 'wander', s: 0.9, deco: true, maxDeg: 2 }, // 德國：歐洲獾
-        { src: 'animals/rooster.png', lon: 3.5, lat: 47.2, mode: 'wander', face: 'R', s: 0.9, deco: true, maxDeg: 2 }, // 法國：高盧雄雞
-        { src: 'animals/goat.png', lon: 13.2, lat: 43.0, mode: 'wander', s: 0.9, deco: true, maxDeg: 2 }, // 義大利：阿爾卑斯山羊
-        { src: 'animals/cow.png', lon: 8.6, lat: 46.9, mode: 'wander', gait: 'heavy', s: 0.95, deco: true, maxDeg: 2 }, // 瑞士：瑞士乳牛
-        { src: 'animals/rabbit.png', lon: 5.3, lat: 52.1, mode: 'wander', s: 0.85, deco: true, maxDeg: 2 }, // 荷蘭：歐洲穴兔
-        { src: 'animals/turkey.png', lon: 34.0, lat: 39.0, mode: 'wander', s: 0.9, deco: true, maxDeg: 2 }, // 土耳其：火雞
+        { src: 'critters/hedgehog.svg', lon: -1.5, lat: 52.0, mode: 'wander', iso: 'small', deco: true, maxDeg: 2 }, // 英國：歐洲刺蝟
+        { src: 'critters/badger.svg', lon: 11.5, lat: 50.5, mode: 'wander', iso: 'small', deco: true, maxDeg: 2 }, // 德國：歐洲獾
+        { src: 'critters/rooster.svg', lon: 3.5, lat: 47.2, mode: 'wander', iso: 'small', deco: true, maxDeg: 2 }, // 法國：高盧雄雞
+        { src: 'critters/goat.svg', lon: 13.2, lat: 43.0, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 義大利：阿爾卑斯山羊
+        { src: 'critters/cow.svg', lon: 8.6, lat: 46.9, mode: 'wander', gait: 'heavy', iso: 'animal', deco: true, maxDeg: 2 }, // 瑞士：瑞士乳牛
+        { src: 'critters/rabbit.svg', lon: 5.3, lat: 52.1, mode: 'wander', iso: 'small', deco: true, maxDeg: 2 }, // 荷蘭：歐洲穴兔
+        { src: 'critters/turkey.svg', lon: 34.0, lat: 39.0, mode: 'wander', iso: 'small', deco: true, maxDeg: 2 }, // 土耳其：火雞
         { src: 'animals/eagle.png', lon: -100.0, lat: 40.0, mode: 'wander', s: 1.0, deco: true, maxDeg: 2 }, // 美國：白頭鷹
         { src: 'animals/toucan.svg', lon: -58.0, lat: -8.0, mode: 'still', face: 'F', s: 0.85, deco: true }, // 巴西：巨嘴鳥
         { src: 'animals/axolotl.svg', lon: -99.5, lat: 19.3, mode: 'wander', s: 0.9, deco: true, maxDeg: 1.5 }, // 墨西哥：六角恐龍（墨西哥市近郊湖泊）
@@ -1050,7 +1051,7 @@
             lat: 36.0,
             mode: 'still',
             face: 'F',
-            s: 1.2,
+            iso: 'building',
             sea: true,
             deco: true,
             landmark: true,
@@ -1084,7 +1085,7 @@
             lat: 41.53,
             mode: 'still',
             face: 'F',
-            s: 1.0,
+            iso: 'animal',
             deco: true,
             landmark: true,
         }, // 葡萄牙：巴塞盧什公雞
@@ -1094,11 +1095,11 @@
             lat: 21.12,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'nature',
             deco: true,
             landmark: true,
         }, // 撒哈拉之眼
-        { src: 'critters/fennec-fox.svg', lon: 20.0, lat: 18.0, mode: 'wander', s: 0.8, deco: true, maxDeg: 2 }, // 撒哈拉：耳廓狐
+        { src: 'critters/fennec-fox.svg', lon: 20.0, lat: 18.0, mode: 'wander', iso: 'small', deco: true, maxDeg: 2 }, // 撒哈拉：耳廓狐
         {
             src: 'critters/grizzly-salmon.svg',
             lon: -155.8,
@@ -1170,7 +1171,7 @@
             lat: 45.514,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 羅馬尼亞：布蘭城堡
@@ -1180,7 +1181,7 @@
             lat: 13.906,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 馬利：傑內大清真寺
@@ -1190,12 +1191,12 @@
             lat: 29.935,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 伊朗：波斯波利斯
         { src: 'critters/bigfoot.svg', lon: -122.5, lat: 48.0, mode: 'wander', s: 1.1, deco: true, maxDeg: 2 }, // 北美森林：大腳怪
-        { src: 'critters/mermaid.svg', lon: 5.0, lat: 61.0, mode: 'bob', face: 'F', s: 1.0, sea: true, deco: true }, // 北歐海域：美人魚
+        { src: 'critters/mermaid.svg', lon: 5.0, lat: 61.0, mode: 'still', face: 'F', iso: 'person', sea: true, deco: true }, // 北歐海域：美人魚
         { src: 'critters/chupacabra.svg', lon: -66.5, lat: 18.2, mode: 'wander', s: 0.95, deco: true, maxDeg: 2 }, // 波多黎各：卓柏卡布拉
         {
             src: 'critters/kiwi-bird.svg',
@@ -1209,7 +1210,7 @@
         }, // 紐西蘭：奇異鳥
         { src: 'critters/platypus.svg', lon: 150.2, lat: -31.8, mode: 'still', face: 'F', iso: 'animal', sea: true, deco: true }, // 澳洲：鴨嘴獸（不畫河，放大一點；往內陸西北挪，讓出雪梨港灣大橋的位置）
         { src: 'critters/snow-leopard.svg', lon: 78.0, lat: 39.0, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 中亞帕米爾高原：雪豹
-        { src: 'critters/puffin.svg', lon: -14.0, lat: 65.5, mode: 'bob', face: 'F', s: 0.8, sea: true, deco: true }, // 冰島：海鸚
+        { src: 'critters/puffin.svg', lon: -14.0, lat: 65.5, mode: 'still', face: 'F', iso: 'small', sea: true, deco: true }, // 冰島：海鸚
         // ── 第七批補充（用戶列的 12 個世界地標） ──────────────────────
         {
             src: 'critters/grand-palace.svg',
@@ -1238,7 +1239,7 @@
             lat: 53.256,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 德國：布蘭登堡門
@@ -1248,7 +1249,7 @@
             lat: 51.5055,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'building',
             sea: true,
             deco: true,
             landmark: true,
@@ -1259,7 +1260,7 @@
             lat: 45.4408,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'building',
             sea: true,
             deco: true,
             landmark: true,
@@ -1321,7 +1322,7 @@
             lat: 24.2,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'tower',
             sea: true,
             deco: true,
             landmark: true,
@@ -1342,7 +1343,7 @@
             lat: 32,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'nature',
             sea: true,
             deco: true,
             landmark: true,
@@ -1354,7 +1355,7 @@
             lat: 45.9763,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'nature',
             deco: true,
             landmark: true,
         }, // 瑞士/義大利：馬特洪峰
@@ -1364,7 +1365,7 @@
             lat: -3.0674,
             mode: 'still',
             face: 'F',
-            s: 1.3,
+            iso: 'nature',
             deco: true,
             landmark: true,
         }, // 坦尚尼亞：吉力馬札羅山
@@ -1385,7 +1386,7 @@
             lat: -33.9628,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'nature',
             deco: true,
             landmark: true,
         }, // 南非：桌山
@@ -1395,7 +1396,7 @@
             lat: 40.2522,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'nature',
             deco: true,
             landmark: true,
         }, // 土庫曼：地獄之門
@@ -1422,14 +1423,14 @@
             deco: true,
             landmark: true,
         }, // 日本：淺草寺雷門燈籠
-        { src: 'critters/double-decker-bus.svg', lon: -1.5, lat: 52.3, mode: 'wander', s: 1.0, deco: true, maxDeg: 2 }, // 英國：紅色雙層巴士
+        { src: 'critters/double-decker-bus.svg', lon: -1.5, lat: 52.3, mode: 'wander', iso: 'vehicle', deco: true, maxDeg: 2 }, // 英國：紅色雙層巴士
         {
             src: 'critters/arc-de-triomphe.svg',
             lon: 2.295,
             lat: 48.8738,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 法國：凱旋門
@@ -1466,8 +1467,8 @@
         { src: 'critters/dragon-dance.svg', lon: 108.0, lat: 30.0, mode: 'still', face: 'F', iso: 'building', deco: true }, // 中國：舞龍
         { src: 'critters/beaver.svg', lon: -95.0, lat: 54.0, mode: 'bob', s: 1.0, sea: true, deco: true }, // 加拿大：海狸
         { src: 'critters/mountie.svg', lon: -106.0, lat: 50.45, mode: 'still', face: 'F', s: 1.0, deco: true }, // 加拿大：皇家騎警
-        { src: 'critters/montgolfier-balloon.svg', lon: 2.5, lat: 47.0, mode: 'bob', s: 1.0, deco: true, landmark: true }, // 法國：蒙格菲熱氣球
-        { src: 'critters/oktoberfest.svg', lon: 11.55, lat: 48.14, mode: 'still', face: 'F', s: 1.0, deco: true }, // 德國：慕尼黑啤酒節
+        { src: 'critters/montgolfier-balloon.svg', lon: 2.5, lat: 47.0, mode: 'bob', iso: 'vehicle', deco: true, landmark: true }, // 法國：蒙格菲熱氣球
+        { src: 'critters/oktoberfest.svg', lon: 11.55, lat: 48.14, mode: 'still', face: 'F', iso: 'building', deco: true }, // 德國：慕尼黑啤酒節
         { src: 'critters/tuk-tuk.svg', lon: 77.0, lat: 20.5, mode: 'wander', iso: 'vehicle', deco: true, maxDeg: 2 }, // 印度：嘟嘟車
         // ── 第十一批補充 ──────────────────────────────────────────────
         {
@@ -1767,9 +1768,9 @@
             maxDeg: 0.5,
         }, // 長榮海運貨櫃輪：原座標（120.3, 24）離台中海岸只有 0.3 度、又沒有 maxDeg 限制，會漂到台灣陸地上；移到高雄外海西南方，並限制漂動範圍
         { src: 'critters/rms-olympic.svg', lon: -40, lat: 48, mode: 'boat', s: 1.0, sea: true, deco: true }, // 奧林匹克號
-        { src: 'critters/venice-gondola.svg', lon: 12.5, lat: 45.5, mode: 'boat', s: 1.0, sea: true, deco: true }, // 威尼斯貢多拉
-        { src: 'critters/nile-felucca.svg', lon: 32.64, lat: 25.69, mode: 'boat', s: 1.0, sea: true, deco: true }, // 尼羅河路卡索帆船
-        { src: 'critters/greek-trireme.svg', lon: 24, lat: 37.5, mode: 'boat', s: 1.0, sea: true, deco: true }, // 希臘三列槳座戰船
+        { src: 'critters/venice-gondola.svg', lon: 12.5, lat: 45.5, mode: 'boat', iso: 'vehicle', sea: true, deco: true }, // 威尼斯貢多拉
+        { src: 'critters/nile-felucca.svg', lon: 32.64, lat: 25.69, mode: 'boat', face: 'R', iso: 'vehicle', sea: true, deco: true }, // 尼羅河路卡索帆船
+        { src: 'critters/greek-trireme.svg', lon: 24, lat: 37.5, mode: 'boat', face: 'R', iso: 'vehicle', sea: true, deco: true }, // 希臘三列槳座戰船
         {
             src: 'critters/haikou-arcade-street.svg',
             lon: 110.35,
@@ -1816,41 +1817,41 @@
         { src: 'critters/siberian-tiger.svg', lon: 130.5, lat: 45, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 東北虎
         { src: 'critters/genghis-khan.svg', lon: 102.5, lat: 46.0, mode: 'still', face: 'F', iso: 'person', deco: true }, // 成吉思汗：原座標跟蒙古包完全重疊，往西南移開
         { src: 'critters/abraham-lincoln.svg', lon: -77, lat: 38.9, mode: 'still', face: 'F', s: 1.0, deco: true }, // 亞伯拉罕·林肯
-        { src: 'critters/marco-polo.svg', lon: 11, lat: 44.5, mode: 'still', face: 'F', s: 1.0, deco: true }, // 馬可·波羅
-        { src: 'critters/napoleon-bonaparte.svg', lon: 1.5, lat: 48, mode: 'still', face: 'F', s: 1.0, deco: true }, // 拿破崙·波拿巴
-        { src: 'critters/william-shakespeare.svg', lon: -1.7, lat: 52.2, mode: 'still', face: 'F', s: 1.0, deco: true }, // 威廉·莎士比亞
+        { src: 'critters/marco-polo.svg', lon: 11, lat: 44.5, mode: 'still', face: 'F', iso: 'person', deco: true }, // 馬可·波羅
+        { src: 'critters/napoleon-bonaparte.svg', lon: 1.5, lat: 48, mode: 'still', face: 'F', iso: 'person', deco: true }, // 拿破崙·波拿巴
+        { src: 'critters/william-shakespeare.svg', lon: -1.7, lat: 52.2, mode: 'still', face: 'F', iso: 'person', deco: true }, // 威廉·莎士比亞
         { src: 'critters/mahatma-gandhi.svg', lon: 69.6, lat: 21.64, mode: 'still', face: 'F', iso: 'person', deco: true }, // 聖雄甘地
         { src: 'critters/confucius.svg', lon: 117, lat: 35.6, mode: 'still', face: 'F', iso: 'person', deco: true }, // 孔子
-        { src: 'critters/leonardo-da-vinci.svg', lon: 10.93, lat: 43.78, mode: 'still', face: 'F', s: 1.0, deco: true }, // 李奧納多·達文西
-        { src: 'critters/aristotle.svg', lon: 23.55, lat: 40.57, mode: 'still', face: 'F', s: 1.0, deco: true }, // 亞里斯多德
-        { src: 'critters/michelangelo.svg', lon: 14.2, lat: 41.6, mode: 'still', face: 'F', s: 1.0, deco: true }, // 米開朗基羅：原座標和羅馬競技場完全重疊，往東南（羅馬到拿坡里之間）拉開約 1.7 度
-        { src: 'critters/isaac-newton.svg', lon: -0.63, lat: 52.8, mode: 'still', face: 'F', s: 1.0, deco: true }, // 伊薩克·牛頓
-        { src: 'critters/albert-einstein.svg', lon: 9.99, lat: 48.4, mode: 'still', face: 'F', s: 1.0, deco: true }, // 愛因斯坦
+        { src: 'critters/leonardo-da-vinci.svg', lon: 10.93, lat: 43.78, mode: 'still', face: 'F', iso: 'person', deco: true }, // 李奧納多·達文西
+        { src: 'critters/aristotle.svg', lon: 23.55, lat: 40.57, mode: 'still', face: 'F', iso: 'person', deco: true }, // 亞里斯多德
+        { src: 'critters/michelangelo.svg', lon: 14.2, lat: 41.6, mode: 'still', face: 'F', iso: 'person', deco: true }, // 米開朗基羅：原座標和羅馬競技場完全重疊，往東南（羅馬到拿坡里之間）拉開約 1.7 度
+        { src: 'critters/isaac-newton.svg', lon: -0.63, lat: 52.8, mode: 'still', face: 'F', iso: 'person', deco: true }, // 伊薩克·牛頓
+        { src: 'critters/albert-einstein.svg', lon: 9.99, lat: 48.4, mode: 'still', face: 'F', iso: 'person', deco: true }, // 愛因斯坦
         { src: 'critters/thomas-edison.svg', lon: -74.5, lat: 41, mode: 'still', face: 'F', s: 1.0, deco: true }, // 湯瑪斯·愛迪生
         { src: 'critters/nikola-tesla.svg', lon: -104.82, lat: 38.83, mode: 'still', face: 'F', s: 1.0, deco: true }, // 尼古拉·特斯拉：改放到他著名的科羅拉多泉實驗站，避開與帝國大廈重疊
         { src: 'critters/michael-jordan.svg', lon: -87.65, lat: 41.88, mode: 'still', face: 'F', s: 1.0, deco: true }, // 麥可·喬丹
         { src: 'critters/babe-ruth.svg', lon: -76.6, lat: 39.28, mode: 'still', face: 'F', s: 1.0, deco: true }, // 貝比·魯斯
         { src: 'critters/shohei-ohtani.svg', lon: 141.13, lat: 39.14, mode: 'still', face: 'F', iso: 'person', deco: true }, // 大谷翔平
         { src: 'critters/muhammad-ali.svg', lon: -85.76, lat: 38.25, mode: 'still', face: 'F', s: 1.0, deco: true }, // 穆罕默德·阿里
-        { src: 'critters/michael-schumacher.svg', lon: 6.65, lat: 50.87, mode: 'still', face: 'F', s: 1.0, deco: true }, // 麥可·舒馬赫
+        { src: 'critters/michael-schumacher.svg', lon: 6.65, lat: 50.87, mode: 'still', face: 'F', iso: 'person', deco: true }, // 麥可·舒馬赫
         { src: 'critters/wright-brothers.svg', lon: -75.67, lat: 36.02, mode: 'still', face: 'F', s: 1.0, deco: true }, // 萊特兄弟
-        { src: 'critters/jesus-christ.svg', lon: 35.3, lat: 32.7, mode: 'still', face: 'F', s: 1.0, deco: true }, // 耶穌
+        { src: 'critters/jesus-christ.svg', lon: 35.3, lat: 32.7, mode: 'still', face: 'F', iso: 'person', deco: true }, // 耶穌
         { src: 'critters/buddha-siddhartha.svg', lon: 83.28, lat: 27.47, mode: 'still', face: 'F', iso: 'person', deco: true }, // 釋迦牟尼
-        { src: 'critters/plato-aristotle.svg', lon: 23.73, lat: 37.98, mode: 'still', face: 'F', s: 1.0, deco: true }, // 柏拉圖與亞里斯多德
-        { src: 'critters/beethoven.svg', lon: 16.37, lat: 48.21, mode: 'still', face: 'F', s: 1.0, deco: true }, // 貝多芬
+        { src: 'critters/plato-aristotle.svg', lon: 23.73, lat: 37.98, mode: 'still', face: 'F', iso: 'person', deco: true }, // 柏拉圖與亞里斯多德
+        { src: 'critters/beethoven.svg', lon: 16.37, lat: 48.21, mode: 'still', face: 'F', iso: 'person', deco: true }, // 貝多芬
         { src: 'critters/steve-jobs.svg', lon: -122.03, lat: 37.33, mode: 'still', face: 'F', s: 1.0, deco: true }, // 史蒂夫‧賈伯斯
         { src: 'critters/bill-gates.svg', lon: -122.12, lat: 47.67, mode: 'still', face: 'F', s: 1.0, deco: true }, // 比爾‧蓋茲
         { src: 'critters/hokkaido-king-crab.svg', lon: 141.5, lat: 43.8, mode: 'still', iso: 'small', sea: true, deco: true }, // 北海道帝王蟹
         { src: 'critters/dalai-lama.svg', lon: 76.32, lat: 32.22, mode: 'still', face: 'F', iso: 'person', deco: true }, // 達賴喇嘛：原座標跟布達拉宮完全重疊，改放到他流亡後長居的印度達蘭薩拉
         // ── 第十一批補充（世界地標，不用在前 80 名額內，只要畫出來、放大能看到就好） ──────────
-        { src: 'critters/parthenon.svg', lon: 22.44, lat: 37.98, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 希臘：帕德嫩神廟（素材本來就有畫，之前漏了放進地圖清單；跟雅典衛城拉開一點距離）
+        { src: 'critters/parthenon.svg', lon: 22.44, lat: 37.98, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 希臘：帕德嫩神廟（素材本來就有畫，之前漏了放進地圖清單；跟雅典衛城拉開一點距離）
         {
             src: 'critters/versailles.svg',
             lon: 2.1204,
             lat: 48.8049,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 法國：凡爾賽宮
@@ -1860,19 +1861,19 @@
             lat: 47.5076,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'building',
             sea: true,
             deco: true,
             landmark: true,
         }, // 匈牙利：布達佩斯國會大廈
-        { src: 'critters/pantheon-rome.svg', lon: 11.4, lat: 42.5, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 義大利：萬神殿：真實位置和羅馬競技場只差 0.02 度、完全疊在一起，往西北拉開約 1.2 度（也和佛羅倫斯的穹頂、達文西保持距離）
+        { src: 'critters/pantheon-rome.svg', lon: 11.4, lat: 42.5, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 義大利：萬神殿：真實位置和羅馬競技場只差 0.02 度、完全疊在一起，往西北拉開約 1.2 度（也和佛羅倫斯的穹頂、達文西保持距離）
         {
             src: 'critters/hagia-sophia.svg',
             lon: 28.9802,
             lat: 41.0086,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 土耳其：聖索菲亞大教堂
@@ -1882,7 +1883,7 @@
             lat: 41.0054,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 土耳其：伊斯坦堡歷史區（藍色清真寺）
@@ -1892,7 +1893,7 @@
             lat: 48.4474,
             mode: 'still',
             face: 'F',
-            s: 1.0,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 法國：沙特爾大教堂
@@ -1902,7 +1903,7 @@
             lat: 43.7731,
             mode: 'still',
             face: 'F',
-            s: 1.0,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 義大利：布魯內萊斯基穹頂（佛羅倫斯大教堂）
@@ -1923,7 +1924,7 @@
             lat: 48.9169,
             mode: 'still',
             face: 'F',
-            s: 1.0,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 法國：薩伏伊別墅
@@ -1943,7 +1944,7 @@
             lat: 48.8606,
             mode: 'still',
             face: 'F',
-            s: 1.0,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 法國：龐畢度中心
@@ -1953,7 +1954,7 @@
             lat: 43.2686,
             mode: 'still',
             face: 'F',
-            s: 1.0,
+            iso: 'building',
             sea: true,
             deco: true,
             landmark: true,
@@ -1984,7 +1985,7 @@
             lat: 45.4846,
             mode: 'still',
             face: 'F',
-            s: 1.0,
+            iso: 'tower',
             deco: true,
             landmark: true,
         }, // 義大利：米蘭垂直森林
@@ -1994,7 +1995,7 @@
             lat: 25.7188,
             mode: 'still',
             face: 'F',
-            s: 1.0,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 埃及：卡納克神廟
@@ -2098,7 +2099,7 @@
             lat: 33.8938,
             mode: 'still',
             face: 'F',
-            s: 1.0,
+            iso: 'tower',
             deco: true,
             landmark: true,
         }, // 黎巴嫩：貝魯特垂直森林（Beirut Terraces）
@@ -2206,7 +2207,7 @@
         };
     }
     // 雲：固定在地球上（經緯度），隨西風慢慢往東飄，地圖拖曳時跟著地面走
-    const CLOUD_N = 17,
+    const CLOUD_N = 20,
         CLOUD_WIND = 0.5; // 每秒往東飄幾度經度
 
     // 地圖上的 3D 動物（Microsoft Fluent Emoji 3D，MIT 授權，已存在 assets/animals/）
@@ -3406,6 +3407,10 @@
         }
         for (const d of CRITTERS) {
             const g = (d.folk ? gFolk : gDecor).append('g').attr('class', 'cr').style('display', 'none');
+            // 有鐵軌的交通工具：鐵軌固定在原地（不跟著 wk 移動），火車在上面開
+            const rail = d.rail
+                ? g.append('image').attr('preserveAspectRatio', 'none').attr('href', 'assets/' + d.rail.src).style('pointer-events', 'none')
+                : null;
             const wk = g.append('g');
             const shadow = wk.append('ellipse').attr('class', d.sea ? 'wake' : 'shadow');
             const body = wk.append('g');
@@ -3444,6 +3449,7 @@
                 body: body.node(),
                 shadow: shadow.node(),
                 img: img.node(),
+                rail: rail && rail.node(),
                 // 非原住民小人才有外部 SVG 參照：收起來（畫面外 / 被擋住）時連 href 一起拔掉，
                 // 讓瀏覽器真的釋放掉那個動畫圖片的解碼資源，不是只靠 display:none 盲目信任瀏覽器會自己停
                 href: d.folk ? null : 'assets/' + d.src,
@@ -3821,6 +3827,17 @@
                 c.dir = faceDir(c, Math.cos(w));
                 hop = -Math.abs(Math.sin(T * 3)) * R * (c.d.bounce ?? 0.025);
                 rot = Math.sin(T * 3) * (c.d.rock ?? 1.5);
+            } else if (m === 'rail') {
+                // 鐵道車輛：沿著鐵軌（d.run 指的斜向）單向行駛，從一端淡入、開到另一端淡出再回到起點，
+                // 不會像 trek 那樣原地掉頭、也不會離開鐵軌橫著走；只有一點點上下的行駛震動
+                const cyc = c.d.cyc || 13,
+                    u = ((t + c.ph) % cyc) / cyc,
+                    k = (2 * u - 1) * (c.size / 80);
+                c.x = c.d.run[0] * k;
+                c.y = c.d.run[1] * k;
+                c.dir = 1;
+                op = Math.min(1, u / 0.12, (1 - u) / 0.12);
+                hop = -Math.abs(Math.sin((t + c.ph) * 9)) * R * 0.006;
             } else if (m === 'race') {
                 // 賽艇在南大洋來回疊式航行，轉向時調頭，船頭略抬、船身傾斜
                 const T = t + c.ph,
@@ -3907,6 +3924,7 @@
                 if (c.nf !== nf) {
                     c.nf = nf;
                     c.body.style.filter = nf;
+                    if (c.rail) c.rail.style.filter = nf;
                 }
             }
             c.wk.setAttribute('transform', `translate(${c.x.toFixed(2)},${c.y.toFixed(2)})`);
@@ -3927,93 +3945,241 @@
         let s = seed >>> 0;
         return () => (s = (s * 1664525 + 1013904223) >>> 0) / 4294967296;
     };
-    // 用幾顆圓疊出蓬鬆的雲：底色偏藍灰，每顆圓往上偏一點蓋白色漸層，底部切平，最後輕微模糊讓邊緣柔和
-    function makeCloudSprite(seed) {
+    // 雲的貼圖：不再用幾顆實心圓拼（像貼紙），改成「密度場」——一群大小不一的柔邊雲團疊加，
+    // 中間高、兩邊低（積雲的圓頂），底部稍微壓平；邊緣用碎形雜訊侵蝕出絲絲的雲邊。
+    // 光影跟地形一樣從左上（西北）來：朝光那一側亮、被自己擋住的一側和底部偏藍灰。
+    // 同一個外形預先畫好白天 / 晨昏（暖橘粉）/ 夜晚（月光下的暗藍灰）三種顏色，畫的時候依晨昏線交叉淡入，
+    // 雲影則是縮小的低解析度剪影（放大貼上去自然就是柔邊，不用跑模糊濾鏡）。只在載入時算一次
+    const CLOUD_PAL = {
+        day: { lit: [255, 255, 255], shade: [192, 207, 228], base: [146, 166, 198], a: 1 },
+        dusk: { lit: [255, 208, 166], shade: [184, 152, 184], base: [122, 108, 150], a: 1 },
+        night: { lit: [116, 134, 170], shade: [68, 82, 116], base: [48, 58, 88], a: 0.82 },
+    };
+    function makeCloudSprite(seed, cirrus) {
         const r = rng(seed),
-            w = 320,
-            h = 200,
-            base = h * 0.74;
+            w = cirrus ? 320 : 256,
+            h = cirrus ? 100 : 160;
+        // 平滑的值雜訊（3 層碎形），種子不同外形就不同
+        const hs = (seed * 2654435761) | 0;
+        const hash = (x, y) => {
+            let n = Math.imul(x, 374761393) ^ Math.imul(y, 668265263) ^ hs;
+            n = Math.imul(n ^ (n >>> 13), 1274126177);
+            return ((n ^ (n >>> 16)) >>> 0) / 4294967296;
+        };
+        const vn = (x, y) => {
+            const xi = Math.floor(x),
+                yi = Math.floor(y),
+                fx = x - xi,
+                fy = y - yi,
+                ux = fx * fx * (3 - 2 * fx),
+                uy = fy * fy * (3 - 2 * fy);
+            const a = hash(xi, yi),
+                b = hash(xi + 1, yi),
+                c = hash(xi, yi + 1),
+                d = hash(xi + 1, yi + 1);
+            return a + (b - a) * ux + (c - a) * uy + (a - b - c + d) * ux * uy;
+        };
+        const fbm = (x, y) => vn(x, y) * 0.55 + vn(x * 2.1, y * 2.1) * 0.3 + vn(x * 4.3, y * 4.3) * 0.15;
+        // 雲團：[x, y, 半徑, 橫向拉長]
         const puffs = [];
-        const nb = 4 + Math.floor(r() * 2);
-        for (let i = 0; i < nb; i++)
-            puffs.push([w * (0.2 + (0.6 * i) / (nb - 1)) + (r() - 0.5) * 14, h * 0.62, w * (0.11 + r() * 0.05)]);
-        const nt = 2 + Math.floor(r() * 2);
-        for (let i = 0; i < nt; i++)
-            puffs.push([
-                w * (0.36 + (0.28 * i) / Math.max(1, nt - 1)) + (r() - 0.5) * 20,
-                h * (0.42 + r() * 0.06),
-                w * (0.14 + r() * 0.06),
-            ]);
-        const canvas = () => {
+        const baseY = h * (cirrus ? 0.5 : 0.7);
+        if (cirrus) {
+            // 卷雲：沿著一條微彎的線排細長的小雲團，像高空被風拉開的雲絲
+            const bend = (r() - 0.5) * 0.3;
+            for (let i = 0; i < 48; i++) {
+                const u = r();
+                puffs.push([
+                    w * (0.08 + 0.84 * u),
+                    baseY + Math.sin(u * Math.PI) * h * bend + (r() - 0.5) * h * 0.26,
+                    h * (0.06 + 0.09 * r()) * Math.sin(Math.PI * (0.1 + 0.8 * u)),
+                    5,
+                ]);
+            }
+        } else {
+            const n = 26 + Math.floor(r() * 8),
+                skew = (r() - 0.5) * 0.16; // 主雲塔不一定在正中間
+            for (let i = 0; i < n; i++) {
+                const u = Math.min(0.86, Math.max(0.14, (r() + r() + r()) / 3 + skew * 0.5)),
+                    dc = Math.min(1, Math.abs(u - 0.5 - skew) * 2.2),
+                    rad = w * (0.05 + 0.1 * (1 - dc) * (0.5 + 0.5 * r()));
+                puffs.push([w * (0.1 + 0.8 * u), baseY - rad * (0.1 + 1.0 * r() * (1 - dc * 0.6)), rad, 1.1]);
+            }
+            // 只留跟主體連在一起的雲團（從中間往外檢查），不然會多出一顆孤零零的小球
+            const cx = w * (0.5 + skew * 0.8);
+            puffs.sort((a, b) => Math.abs(a[0] - cx) - Math.abs(b[0] - cx));
+            const kept = [puffs[0]];
+            for (const p of puffs.slice(1))
+                if (kept.some((q) => Math.hypot(p[0] - q[0], p[1] - q[1]) < (p[2] + q[2]) * 0.6)) kept.push(p);
+            puffs.length = 0;
+            puffs.push(...kept);
+        }
+        const D = new Float32Array(w * h),
+            E = new Float32Array(w * h); // 平滑聯集的高度場：每個雲團是一顆半球，交界自然接起來
+        const KH = 0.55;
+        for (const [px, py, pr, sx] of puffs) {
+            if (pr < 1) continue;
+            const rx = pr * sx;
+            const x0 = Math.max(0, Math.floor(px - rx)),
+                x1 = Math.min(w - 1, Math.ceil(px + rx)),
+                y0 = Math.max(0, Math.floor(py - pr)),
+                y1 = Math.min(h - 1, Math.ceil(py + pr));
+            for (let y = y0; y <= y1; y++) {
+                for (let x = x0; x <= x1; x++) {
+                    const dx = (x - px) / rx,
+                        dy = (y - py) / pr,
+                        q = 1 - (dx * dx + dy * dy);
+                    if (q > 0) {
+                        D[y * w + x] += q * q;
+                        E[y * w + x] += Math.exp(KH * pr * Math.sqrt(q));
+                    }
+                }
+            }
+        }
+        // 底部稍微壓平（積雲的雲底），但留柔邊
+        if (!cirrus)
+            for (let y = 0; y < h; y++) {
+                const f = 1 - 0.85 * Math.min(1, Math.max(0, (y - baseY + 4) / 16));
+                for (let x = 0; x < w; x++) D[y * w + x] *= f;
+            }
+        const Hf = new Float32Array(w * h);
+        for (let i = 0; i < w * h; i++) Hf[i] = E[i] > 1 ? Math.log(E[i]) / KH : 0;
+        const hAt = (x, y) => Hf[Math.min(h - 1, Math.max(0, y)) * w + Math.min(w - 1, Math.max(0, x))];
+        let top = h;
+        for (let i = 0; i < w * h; i++) if (D[i] > 0.3) top = Math.min(top, Math.floor(i / w));
+        const sst = (a, b, v) => {
+            const t = Math.min(1, Math.max(0, (v - a) / (b - a)));
+            return t * t * (3 - 2 * t);
+        };
+        const out = {};
+        const A = new Float32Array(w * h),
+            L = new Float32Array(w * h),
+            B = new Float32Array(w * h);
+        // 光從左上方、偏上空照下來（和地形一樣）
+        const lx = -0.5,
+            ly = -0.6,
+            lz = 0.62;
+        for (let y = 0, i = 0; y < h; y++) {
+            for (let x = 0; x < w; x++, i++) {
+                const d = D[i];
+                if (d <= 0.02) continue;
+                if (cirrus) {
+                    // 卷雲：順著風向拉長、微微斜的薄紗，紋路放大放柔，縮小顯示時才不會變成一條條閃爍的細線
+                    const fib = fbm((x + y * 1.5) / 70, y / 14);
+                    A[i] = sst(0.04, 0.6, d) * sst(0.2, 0.8, fib) * 0.7;
+                    L[i] = 0.92;
+                    continue;
+                }
+                const nz = fbm(x / 20, y / 20);
+                A[i] = sst(0.22, 0.7, d + (nz - 0.5) * 0.45);
+                const gx = (hAt(x + 1, y) - hAt(x - 1, y)) * 0.8,
+                    gy = (hAt(x, y + 1) - hAt(x, y - 1)) * 0.8,
+                    nl = Math.hypot(gx, gy, 1);
+                const lam = Math.max(0, (-gx * lx - gy * ly + lz) / nl);
+                L[i] = Math.min(1, Math.max(0, 0.15 + lam * 1.05 + (nz - 0.5) * 0.18));
+                B[i] = sst(0.55, 1.05, (y - top) / Math.max(1, baseY - top));
+            }
+        }
+        const canvasOf = (cw, ch) => {
             const c = document.createElement('canvas');
-            c.width = w;
-            c.height = h;
+            c.width = cw;
+            c.height = ch;
             return c;
         };
-        const blob = (g, fill) => {
-            g.fillStyle = fill;
-            g.beginPath();
-            for (const [x, y, rr] of puffs) {
-                g.moveTo(x + rr, y);
-                g.arc(x, y, rr, 0, Math.PI * 2);
+        for (const [name, P] of Object.entries(CLOUD_PAL)) {
+            const c = canvasOf(w, h),
+                g = c.getContext('2d'),
+                img = g.createImageData(w, h),
+                o = img.data;
+            for (let i = 0; i < w * h; i++) {
+                if (!A[i]) continue;
+                const l = L[i],
+                    b = B[i] * 0.75,
+                    j = i * 4;
+                for (let k = 0; k < 3; k++) {
+                    const v = P.shade[k] + (P.lit[k] - P.shade[k]) * l;
+                    o[j + k] = v + (P.base[k] - v) * b;
+                }
+                o[j + 3] = A[i] * P.a * 255;
             }
-            g.fill();
-        };
-        const raw = canvas(),
-            g = raw.getContext('2d');
-        blob(g, '#a7b9d2');
-        for (const [x, y, rr] of puffs) {
-            const gr = g.createRadialGradient(x - rr * 0.35, y - rr * 0.5, rr * 0.1, x, y - rr * 0.12, rr);
-            gr.addColorStop(0, '#ffffff');
-            gr.addColorStop(0.65, '#f4f8fd');
-            gr.addColorStop(1, '#d3dfee');
-            g.fillStyle = gr;
-            g.beginPath();
-            g.arc(x, y - rr * 0.13, rr * 0.93, 0, Math.PI * 2);
-            g.fill();
+            g.putImageData(img, 0, 0);
+            out[name] = mipChain(c);
         }
-        // 底部漸漸變透明（不要一刀切平，否則像貼紙）
-        g.globalCompositeOperation = 'destination-out';
-        const cut = g.createLinearGradient(0, base - 18, 0, base + 14);
-        cut.addColorStop(0, 'rgba(0,0,0,0)');
-        cut.addColorStop(1, 'rgba(0,0,0,1)');
-        g.fillStyle = cut;
-        g.fillRect(0, base - 18, w, h - base + 18);
-        g.globalCompositeOperation = 'source-atop';
-        const band = g.createLinearGradient(0, base - 34, 0, base);
-        band.addColorStop(0, 'rgba(150,172,204,0)');
-        band.addColorStop(1, 'rgba(150,172,204,.75)');
-        g.fillStyle = band;
-        g.fillRect(0, base - 34, w, 34);
-        const body = canvas(),
-            b = body.getContext('2d');
-        b.filter = 'blur(1.2px)';
-        b.drawImage(raw, 0, 0);
-        // 地上的雲影：同樣的外形塗深色，再大幅模糊
-        const sil = canvas(),
-            s = sil.getContext('2d');
-        s.drawImage(raw, 0, 0);
-        s.globalCompositeOperation = 'source-in';
-        s.fillStyle = '#0a1a2c';
-        s.fillRect(0, 0, w, h);
-        const shadow = canvas(),
-            sh = shadow.getContext('2d');
-        sh.filter = 'blur(9px)';
-        sh.drawImage(sil, 0, 0);
-        return { body, shadow };
+        // 雲影：1/8 大小的剪影，貼回原尺寸時瀏覽器的放大內插就是柔和的模糊
+        if (!cirrus) {
+            const sw = Math.ceil(w / 8),
+                sh = Math.ceil(h / 8),
+                big = canvasOf(w, h),
+                bg = big.getContext('2d'),
+                img = bg.createImageData(w, h);
+            for (let i = 0; i < w * h; i++) {
+                img.data[i * 4] = 10;
+                img.data[i * 4 + 1] = 26;
+                img.data[i * 4 + 2] = 44;
+                img.data[i * 4 + 3] = A[i] * 255;
+            }
+            bg.putImageData(img, 0, 0);
+            const s = canvasOf(sw + 2, sh + 2),
+                sg = s.getContext('2d');
+            sg.imageSmoothingQuality = 'high';
+            sg.drawImage(big, 1, 1, sw, sh);
+            out.shadow = s;
+        }
+        out.ratio = h / w;
+        return out;
     }
+    // 預先縮好 1/2、1/4、1/8 的版本：雲在畫面上只有幾十 px，直接把 256px 的圖縮小 5~10 倍來畫，
+    // 取樣點每一幀都在漂移，細節會一閃一閃（摩爾紋）；改成挑大小最接近的那一層
+    function mipChain(c) {
+        const chain = [c];
+        while (chain.length < 4) {
+            const p = chain[chain.length - 1],
+                n = document.createElement('canvas');
+            n.width = Math.max(1, Math.round(p.width / 2));
+            n.height = Math.max(1, Math.round(p.height / 2));
+            const g = n.getContext('2d');
+            g.imageSmoothingQuality = 'high';
+            g.drawImage(p, 0, 0, n.width, n.height);
+            chain.push(n);
+        }
+        return chain;
+    }
+    const mipPick = (chain, px) => {
+        let i = 0;
+        while (i < chain.length - 1 && chain[i + 1].width >= px) i++;
+        return chain[i];
+    };
     function buildClouds() {
         cctx = $('#clouds').getContext('2d');
-        const sprites = [0, 1, 2, 3].map((i) => makeCloudSprite(1234 + i * 777));
+        // 貼圖約要 100ms 以上，不在開場時一次做完：等地形先畫，再趁空檔一張一張做（還沒做好的雲先不畫）
+        const cu = [],
+            ci = [];
+        const jobs = [0, 1, 2, 3, 4, 5].map((i) => () => cu.push(makeCloudSprite(1234 + i * 777, false)));
+        jobs.splice(2, 0, () => ci.push(makeCloudSprite(9001, true)));
+        jobs.push(() => ci.push(makeCloudSprite(9314, true)));
+        const idle = window.requestIdleCallback || ((f) => setTimeout(f, 30));
+        const next = () => {
+            if (!jobs.length) return;
+            jobs.shift()();
+            cloudDrawn = false;
+            idle(next, { timeout: 500 });
+        };
+        setTimeout(() => idle(next, { timeout: 500 }), 1500);
         const r = rng(42);
         for (let i = 0; i < CLOUD_N; i++) {
+            const cirrus = i % 5 === 4; // 每 5 朵裡有 1 朵是高空的卷雲
             clouds.push({
                 lon: -180 + 360 * ((i + r() * 0.8) / CLOUD_N),
                 lat: -42 + r() * 104,
-                w: 24 + r() * 42, // 縮小整體尺寸（之前 48~108），比較不佔畫面空間
-                sp: sprites[i % 4],
-                a: 0.38 + r() * 0.32, // 更透明、深淺不一，看起來比較自然（之前 0.6~0.8 偏厚重）
-                v: 0.7 + r() * 0.6,
+                w: cirrus ? 60 + r() * 50 : 26 + r() * 44,
+                cirrus,
+                pool: cirrus ? ci : cu,
+                si: i % (cirrus ? 2 : 6),
+                a: cirrus ? 0.25 + r() * 0.15 : 0.55 + r() * 0.3,
+                v: (0.7 + r() * 0.6) * (cirrus ? 1.6 : 1), // 高空風比較快
+                // 生成 / 消散：每朵雲各自有 70~140 秒的週期慢慢長出來、再慢慢散掉
+                lf: (Math.PI * 2) / (70 + r() * 70),
+                lp: r() * Math.PI * 2,
+                gone: false,
             });
         }
     }
@@ -4054,55 +4220,103 @@
         const sc = Math.pow(Math.min(k, 30), 0.6); // 位置完全跟著地圖；大小只略微放大，放大超過30倍就不再變大，免得整片白
         const list = [];
         for (const c of clouds) {
+            const sp = c.pool[c.si];
+            if (!sp) continue;
+            // 生成 / 消散：完全散掉的那一刻換個緯度、外形、大小，下一輪在別處重新長出來
+            const life = smooth01((Math.sin(cloudT * c.lf + c.lp) + 0.75) / 0.85);
+            if (life <= 0) {
+                if (!c.gone) {
+                    c.gone = true;
+                    c.lat = -42 + Math.random() * 104;
+                    c.si = Math.floor(Math.random() * c.pool.length);
+                    c.w = c.cirrus ? 60 + Math.random() * 50 : 26 + Math.random() * 44;
+                }
+                continue;
+            }
+            c.gone = false;
             const lon = c.lon + cloudT * CLOUD_WIND * c.v;
             const fx = ((((lon + 180) / 360) % 1) + 1) % 1;
-            const w = c.w * sc,
-                h = w * 0.625;
+            // 長出來時從小慢慢變大、橫向微微伸縮，不是整朵直接淡入
+            const w = c.w * sc * (0.78 + 0.22 * life) * (1 + 0.04 * Math.sin(cloudT * c.lf * 3 + c.lp)),
+                h = w * sp.ratio;
             const y = t.applyY(projection([0, c.lat])[1]) - h * 0.6;
             if (y > H || y + h < 0) continue;
+            let nb = -1;
             for (const x0 of [t.x + fx * ww - ww, t.x + fx * ww, t.x + fx * ww + ww]) {
                 const x = x0 - w / 2;
-                if (x < W + w * 0.3 && x + w * 1.3 > 0) list.push([c, x, y, w, h]);
+                if (x < W + w * 0.3 && x + w * 1.3 > 0) {
+                    if (nb < 0) nb = nightBrightAt(lon, c.lat);
+                    list.push([c, sp, x, y, w, h, life, nb]);
+                }
             }
         }
-        // 先畫全部雲影（往右下偏，光從左上來），再畫雲
-        ctx.globalAlpha = 0.2 * fade;
-        for (const [c, x, y, w, h] of list) ctx.drawImage(c.sp.shadow, x + w * 0.16, y + w * 0.3, w, h);
-        for (const [c, x, y, w, h] of list) {
-            ctx.globalAlpha = c.a * fade;
-            ctx.drawImage(c.sp.body, x, y, w, h);
-            cloudHits.push({ cx: x + w * 0.5, cy: y + h * 0.55, rx: w * 0.42, ry: h * 0.26, a: c.a * fade });
+        // 先畫全部雲影（往右下偏，光從左上來；夜晚沒有太陽就沒有影子），再畫雲
+        for (const [c, sp, x, y, w, h, life, nb] of list) {
+            if (c.cirrus || nb < 0.05) continue;
+            ctx.globalAlpha = 0.24 * fade * life * nb;
+            ctx.drawImage(sp.shadow, 1, 1, sp.shadow.width - 2, sp.shadow.height - 2, x + w * 0.16, y + w * 0.3, w, h);
+        }
+        // 依晨昏線交叉淡入：夜晚（暗藍灰）→ 白天（白），晨昏帶再疊一層暖橘粉
+        for (const [c, sp, x, y, w, h, life, nb] of list) {
+            const a = c.a * fade * life,
+                tw = Math.max(0, 1 - Math.abs(nb - 0.5) * 2.6),
+                px = w * cd;
+            if (nb < 0.98) {
+                ctx.globalAlpha = a * (1 - nb);
+                ctx.drawImage(mipPick(sp.night, px), x, y, w, h);
+            }
+            if (nb > 0.02) {
+                ctx.globalAlpha = a * nb;
+                ctx.drawImage(mipPick(sp.day, px), x, y, w, h);
+            }
+            if (tw > 0.02) {
+                ctx.globalAlpha = a * tw * 0.85;
+                ctx.drawImage(mipPick(sp.dusk, px), x, y, w, h);
+            }
+            if (!c.cirrus) cloudHits.push({ cx: x + w * 0.5, cy: y + h * 0.55, rx: w * 0.4, ry: h * 0.28, a: a });
         }
         ctx.globalAlpha = 1;
     }
+    const smooth01 = (v) => (v <= 0 ? 0 : v >= 1 ? 1 : v * v * (3 - 2 * v));
 
     // 北歐極光：用低解析度的大張畫布畫結光簾（預先繪好的 1×128 漸層條拉伸、疊加），24fps，不在畫面內或放大太多就不畫
     const AURORA = { cv: null, ctx: null, sprites: null, acc: 0, t: 0, drawn: false, freshFrame: false };
+    // 光簾的一束：直向是顏色漸層，橫向是高斯柔邊（以前是 1px 寬硬拉成長方形，一條條直線很明顯）
     function auroraSprites() {
+        const SW = 32,
+            SH = 128;
         const mk = (stops) => {
             const c = document.createElement('canvas');
-            c.width = 1;
-            c.height = 128;
+            c.width = SW;
+            c.height = SH;
             const g = c.getContext('2d'),
-                gr = g.createLinearGradient(0, 128, 0, 0);
+                gr = g.createLinearGradient(0, SH, 0, 0);
             stops.forEach(([o, col]) => gr.addColorStop(o, col));
             g.fillStyle = gr;
-            g.fillRect(0, 0, 1, 128);
+            g.fillRect(0, 0, SW, SH);
+            const img = g.getImageData(0, 0, SW, SH),
+                d = img.data;
+            for (let x = 0; x < SW; x++) {
+                const u = (x + 0.5 - SW / 2) / (SW * 0.22),
+                    k = Math.exp(-u * u);
+                for (let y = 0; y < SH; y++) d[(y * SW + x) * 4 + 3] *= k;
+            }
+            g.putImageData(img, 0, 0);
             return c;
         };
         return [
             mk([
                 [0, 'rgba(60,255,160,0)'],
-                [0.06, 'rgba(150,255,205,.95)'],
-                [0.3, 'rgba(70,235,150,.6)'],
-                [0.65, 'rgba(60,180,220,.28)'],
+                [0.08, 'rgba(150,255,205,.9)'],
+                [0.3, 'rgba(70,235,150,.55)'],
+                [0.65, 'rgba(60,180,220,.24)'],
                 [1, 'rgba(150,90,230,0)'],
             ]),
             mk([
                 [0, 'rgba(120,255,200,0)'],
-                [0.1, 'rgba(90,240,230,.7)'],
-                [0.45, 'rgba(110,140,255,.35)'],
-                [0.8, 'rgba(200,90,240,.3)'],
+                [0.12, 'rgba(90,240,230,.65)'],
+                [0.45, 'rgba(110,140,255,.32)'],
+                [0.8, 'rgba(200,90,240,.26)'],
                 [1, 'rgba(230,80,200,0)'],
             ]),
         ];
@@ -4140,16 +4354,21 @@
         const fade = Math.max(0.35, Math.min(1, (9 - state.t.k) / 3));
         const LON0 = -6,
             LON1 = 44,
-            N = 72;
-        const xa = screenXY(LON0, 70)[0],
-            xb = screenXY(LON1, 70)[0],
+            N = 90;
+        // 經度在 Mercator 上是線性的：從中心經度推算，不用 screenXY（它會把畫面左邊外的經度繞到右邊那份世界，
+        // 放大時光簾起點跑到終點右邊，整片光簾就不畫了）
+        const wwA = S0 * state.t.k,
+            xc = screenXY(18, 70)[0],
+            lonX = (lon) => xc + ((lon - 18) / 360) * wwA;
+        const xa = lonX(LON0),
+            xb = lonX(LON1),
             yTop = screenXY(18, 80)[1],
             yBot = screenXY(18, 64)[1];
         if (xb < 0 || xa > W || yBot < 0 || yTop > H || xb <= xa) return;
         const T = A.t,
             gap = (xb - xa) / (N - 1),
-            // 放大很多時 gap 會跟著變很大，這裡設一個上限，不然光簾會寬到塞滿整個畫面
-            colW = Math.min(Math.max(1.6, gap * 1.9), 40),
+            // 每一束寬約 3 個間距，彼此重疊融成一片光簾、只留柔和的光束紋理；放大很多時設上限，不然會塞滿畫面
+            colW = Math.min(Math.max(4, gap * 3), 70),
             night = 0.7 + 0.3 * (1 - nightBrightAt(18, 69));
         ctx.globalCompositeOperation = 'lighter';
         for (let cu = 0; cu < 3; cu++) {
@@ -4158,15 +4377,18 @@
             for (let i = 0; i < N; i++) {
                 const lon = LON0 + ((LON1 - LON0) * i) / (N - 1),
                     lat = 66.5 + cu * 2.2 + 2.4 * Math.sin(lon * 0.085 + cu * 1.9) + 0.9 * Math.sin(lon * 0.31 + T * 0.4 + cu);
-                const [x, y] = screenXY(lon, lat),
+                const x = lonX(lon),
+                    y = screenXY(lon, lat)[1],
                     // 放大很多時這個高度也會跟著爆增，設一個上限避免光柱塞滿整個畫面
                     hpx = Math.min((y - screenXY(lon, lat + 9)[1]) * 1.15, 260);
-                const env = Math.pow(Math.sin((Math.PI * i) / (N - 1)), 0.7),
-                    ray = 0.55 + 0.3 * Math.sin(i * 0.45 + T * 0.9 + cu * 2) + 0.15 * Math.sin(i * 1.7 - T * 1.6),
+                // 高度和亮度都只做低頻的緩慢起伏（光簾的皺褶），相鄰幾束接近，不會長短交錯變成一根根直線
+                const env = Math.pow(Math.sin((Math.PI * i) / (N - 1)), 0.8),
+                    ray = 0.8 + 0.13 * Math.sin(i * 0.15 + T * 0.45 + cu * 2) + 0.07 * Math.sin(i * 0.37 - T * 0.7),
                     h = hpx * ray,
-                    sx = x + Math.sin(T * 0.5 + i * 0.15 + cu) * hpx * 0.08;
-                ctx.globalAlpha = Math.max(0, fade * env * night * gain * (0.55 + 0.3 * Math.sin(T * 1.1 + i * 0.2 + cu)));
-                ctx.drawImage(spr, 0, 0, 1, 128, (sx - colW / 2) * S, (y - h) * S, colW * S, h * S);
+                    sx = x + Math.sin(T * 0.5 + i * 0.12 + cu) * hpx * 0.06,
+                    glow = 0.55 + 0.2 * Math.sin(T * 0.8 + i * 0.09 + cu) + 0.25 * Math.sin(i * 0.7 - T * 1.1 + cu * 1.3);
+                ctx.globalAlpha = Math.max(0, fade * env * night * gain * glow);
+                ctx.drawImage(spr, (sx - colW / 2) * S, (y - h) * S, colW * S, h * S);
             }
         }
         ctx.globalAlpha = 1;
@@ -7741,19 +7963,19 @@
             'critters/rms-olympic.svg',
             'critters/dhow.svg',
             // 原本掛在旗幟卡片上的國家代表動物，現在獨立成裝飾項目，一樣排在最低優先度
-            'animals/deer.png',
+            'critters/deer.svg',
             'animals/dog.png',
             'critters/shiba-inu.svg',
             'animals/dragon.png',
             'critters/chinese-dragon.svg',
             'critters/merino-sheep.svg',
-            'animals/hedgehog.png',
-            'animals/badger.png',
-            'animals/rooster.png',
-            'animals/goat.png',
-            'animals/cow.png',
-            'animals/rabbit.png',
-            'animals/turkey.png',
+            'critters/hedgehog.svg',
+            'critters/badger.svg',
+            'critters/rooster.svg',
+            'critters/goat.svg',
+            'critters/cow.svg',
+            'critters/rabbit.svg',
+            'critters/turkey.svg',
             'animals/eagle.png',
             'animals/toucan.svg',
             'animals/axolotl.svg',
@@ -7880,6 +8102,14 @@
             setQ(c.img, 'y', -z);
             setQ(c.img, 'width', z);
             setQ(c.img, 'height', z);
+            if (c.rail) {
+                const [vx, vy, vw, vh] = c.d.rail.vb,
+                    k = z / 80;
+                setQ(c.rail, 'x', -z / 2 + vx * k);
+                setQ(c.rail, 'y', -z + vy * k);
+                setQ(c.rail, 'width', vw * k);
+                setQ(c.rail, 'height', vh * k);
+            }
             setQ(c.shadow, 'rx', z * (c.d.sea ? 0.46 : 0.36));
             setQ(c.shadow, 'ry', z * (c.d.sea ? 0.12 : 0.1));
             setQ(c.shadow, 'cy', -z * 0.03);

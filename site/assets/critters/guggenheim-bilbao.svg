@@ -1,66 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-<defs>
-  <!-- 鈦金屬：亮銀帶一點暖色，每片曲面的明暗都不一樣 -->
-  <linearGradient id="gbTi1" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#e2e2e0"/>
-    <stop offset=".5" stop-color="#b4b2ae"/>
-    <stop offset="1" stop-color="#7a7874"/>
-  </linearGradient>
-  <linearGradient id="gbTi2" x1="1" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#d8d4cc"/>
-    <stop offset=".6" stop-color="#a49e94"/>
-    <stop offset="1" stop-color="#6a665e"/>
-  </linearGradient>
-  <linearGradient id="gbTi3" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#cfd2d8"/>
-    <stop offset="1" stop-color="#868a94"/>
-  </linearGradient>
-  <linearGradient id="gbGlass" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#a8d4ec"/>
-    <stop offset="1" stop-color="#4a86aa"/>
-  </linearGradient>
-  <linearGradient id="gbStone" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#e8d2a6"/>
-    <stop offset="1" stop-color="#b89a6a"/>
-  </linearGradient>
-</defs>
-<!-- 畢爾包古根漢美術館（蓋瑞設計）：一大群彎曲扭轉的鈦金屬曲面疊在一起，像船帆、像魚鱗，
-     底下是米黃色石材的方塊量體和玻璃帷幕，前面是內維翁河，右邊有一座穿過美術館的高架橋和塔 -->
-<!-- 右邊的拉薩爾維橋＋塔 -->
-<rect x="66" y="22" width="4" height="46" fill="url(#gbTi3)" stroke="#6e727c" stroke-width=".4"/>
-<path d="M54 46 H80 V50 H54Z" fill="#8a7f6a" stroke="#5a5244" stroke-width=".4"/>
-<!-- 石材方塊量體（底座） -->
-<rect x="6" y="54" width="16" height="14" fill="url(#gbStone)" stroke="#8a7450" stroke-width=".4"/>
-<rect x="48" y="52" width="16" height="16" fill="url(#gbStone)" stroke="#8a7450" stroke-width=".4"/>
-<path d="M6 59 H22 M6 64 H22 M48 57 H64 M48 62 H64" stroke="#a88c60" stroke-width=".35"/>
-<!-- 玻璃帷幕（中間的中庭） -->
-<path d="M28 68 V40 Q34 32 40 38 V68Z" fill="url(#gbGlass)" stroke="#2e5a78" stroke-width=".4"/>
-<path d="M31 68 V38 M34 68 V35.6 M37 68 V36.4 M28 48 H40 M28 56 H40" stroke="#dff2fb" stroke-width=".35" opacity=".7"/>
-<!-- 鈦金屬曲面：一團團圓鼓鼓、往旁邊扭曲膨起的量體（像揉皺又攤開的金屬片），由後往前畫，互相交疊 -->
-<!-- 後方最高的量體：頂端圓鼓、往右扭 -->
-<path d="M30 42 Q26 30 32 22 Q38 14 46 18 Q52 22 48 30 Q46 36 44 42Z" fill="url(#gbTi2)" stroke="#5e5a54" stroke-width=".5"/>
-<!-- 左邊往左下翻捲的寬量體 -->
-<path d="M8 58 Q4 46 12 40 Q20 34 30 38 Q34 44 30 50 Q22 52 18 58Z" fill="url(#gbTi1)" stroke="#5e5a54" stroke-width=".5"/>
-<!-- 中間膨起的一團 -->
-<path d="M34 50 Q30 40 38 34 Q48 28 56 34 Q60 40 54 46 Q46 46 42 52Z" fill="url(#gbTi3)" stroke="#5e5a54" stroke-width=".5"/>
-<!-- 右邊伸向河面、像魚身一樣的長量體 -->
-<path d="M46 56 Q46 46 56 42 Q68 38 76 44 Q78 50 70 52 Q60 52 54 58Z" fill="url(#gbTi1)" stroke="#5e5a54" stroke-width=".5"/>
-<!-- 前方低矮的弧形量體 -->
-<path d="M16 64 Q14 54 24 50 Q36 46 44 54 Q46 60 40 62 Q30 60 24 64Z" fill="url(#gbTi2)" stroke="#5e5a54" stroke-width=".5"/>
-<!-- 鈦金屬板的橫向接縫（跟著曲面彎） -->
-<g stroke="#6e6a64" stroke-width=".35" fill="none" opacity=".6">
-  <path d="M30 26 Q38 22 47 24 M28 32 Q38 28 49 30 M28 38 Q36 35 46 36"/>
-  <path d="M8 46 Q18 40 30 42 M8 52 Q18 46 31 47"/>
-  <path d="M33 40 Q44 34 57 38 M34 45 Q44 40 56 43"/>
-  <path d="M48 48 Q60 42 75 46 M50 53 Q60 48 72 50"/>
-  <path d="M16 56 Q28 50 42 55 M18 61 Q28 56 41 59"/>
-</g>
-<!-- 反光：鈦金屬是灰銀色的，只在鼓起的地方有細細的高光 -->
-<path d="M33 21 Q38 17 44 18.6 M12 41 Q18 37 25 37.4 M40 33 Q46 30 52 31.6 M56 43 Q64 40 71 41.4 M22 51 Q30 48 37 49.4" stroke="#ffffff" stroke-width=".9" fill="none" opacity=".75" stroke-linecap="round"/>
-<!-- 河岸與內維翁河（含倒影） -->
-<rect x="0" y="67" width="80" height="2" fill="#8a7f6a"/>
-<rect x="0" y="69" width="80" height="11" fill="#3f7896"/>
-<path d="M12 71 Q24 70 34 71.6 M42 72 Q54 71 66 72.6" stroke="#d8e8f2" stroke-width=".9" fill="none" opacity=".6">
-  <animate attributeName="opacity" values=".3;.75;.3" dur="2.8s" repeatCount="indefinite"/>
-</path>
+  <!-- 畢爾包古根漢美術館（2.5D）：蓋瑞設計的解構主義美術館，一片片鈦金屬曲面像揚起的船帆和魚鱗層層疊起（色塊分面），底下是石灰岩方塊與玻璃中庭，前方是河；陽光在鈦金屬上閃爍、河面水波擴散（動畫）。光源左上，不描邊 -->
+  <g transform="translate(44.2 53.22) scale(1.13)">
+    <path d="M-27.71 -8L13.86 16L5.2 21L-36.37 -3Z" fill="#52c3dc"/>
+    <path d="M-22.95 -4.55L6.15 12.25L0.43 15.55L-28.67 -1.25Z" fill="#9be3ea" opacity="0.4"/>
+    <path d="M-22.77 -2.41L-21.57 -2.76L-20.37 -2.41L-21.57 -2.06Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="2.2s" begin="0.0s" repeatCount="indefinite"/></path>
+    <path d="M-6.99 7.08L-5.79 6.73L-4.59 7.08L-5.79 7.43Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="2.7s" begin="0.6s" repeatCount="indefinite"/></path>
+    <path d="M-24.43 -0.70L-23.23 -1.05L-22.03 -0.70L-23.23 -0.35Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="3.2s" begin="1.2s" repeatCount="indefinite"/></path>
+    <path d="M-13.21 3.77L-12.01 3.42L-10.81 3.77L-12.01 4.12Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="3.7s" begin="1.8s" repeatCount="indefinite"/></path>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-5.33 10.50a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM-5.15 10.50a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z"><animate attributeName="d" values="M-5.33 10.50a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM-5.15 10.50a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z;M-8.33 10.50a4.00 2.00 0 1 0 8.00 0a4.00 2.00 0 1 0 -8.00 0ZM-7.61 10.50a3.28 1.64 0 1 0 6.56 0a3.28 1.64 0 1 0 -6.56 0Z" dur="3s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0" dur="3s" begin="0s" repeatCount="indefinite"/></path>
+    <path d="M-24.25 -6L-6.93 -16L25.98 3L28.96 5.48L11.64 15.48L-21.27 -3.52Z" fill="#000000" opacity="0.2"/>
+    <path d="M3.46 -8L-5.2 -3L-5.2 -11L3.46 -16Z" fill="#b09c72"/>
+    <path d="M-17.32 -10L-5.2 -3L-5.2 -11L-17.32 -18Z" fill="#dccaa0"/>
+    <path d="M-8.66 -23L3.46 -16L-5.2 -11L-17.32 -18Z" fill="#f3e8cc"/>
+    <path d="M25.98 3L19.05 7L19.05 1L25.98 -3Z" fill="#b09c72"/>
+    <path d="M12.12 3L19.05 7L19.05 1L12.12 -3Z" fill="#dccaa0"/>
+    <path d="M19.05 -7L25.98 -3L19.05 1L12.12 -3Z" fill="#f3e8cc"/>
+    <path d="M-16.39 -8C-19.39 -17.6 -10.39 -27.2 -7.39 -24C-2.39 -20.8 -3.39 -12.8 -4.39 -8Q-10.39 -6 -16.39 -8Z" fill="#c6ccd6"/>
+    <path d="M-9.89 -6.8C-7.39 -16 -5.59 -22.4 -7.39 -24C-2.39 -20.8 -3.39 -12.8 -4.39 -8Q-6.39 -6.6 -9.89 -6.8Z" fill="#8e96a4"/>
+    <path d="M-15.89 -11.2C-18.39 -17.6 -10.39 -25.6 -9.39 -23.68C-12.39 -19.2 -13.89 -14.4 -13.39 -8.8Z" fill="#f2f4f8" opacity="0.8"/>
+    <path d="M-15.39 -11.4Q-10.39 -12.6 -5.39 -11.4L-5.39 -11.15Q-10.39 -12.35 -15.39 -11.15Z" fill="#8e96a4" opacity="0.35"/>
+    <path d="M-15.39 -15.4Q-10.39 -16.6 -5.39 -15.4L-5.39 -15.15Q-10.39 -16.35 -15.39 -15.15Z" fill="#8e96a4" opacity="0.35"/>
+    <path d="M-15.39 -19.4Q-10.39 -20.6 -5.39 -19.4L-5.39 -19.15Q-10.39 -20.35 -15.39 -19.15Z" fill="#8e96a4" opacity="0.35"/>
+    <path d="M-5.47 -5C-9.07 -18.2 -3.67 -31.4 5.33 -27C11.33 -22.6 10.13 -11.6 8.93 -5Q1.73 -3 -5.47 -5Z" fill="#c6ccd6"/>
+    <path d="M2.33 -3.8C5.33 -16 5.33 -24.8 5.33 -27C11.33 -22.6 10.13 -11.6 8.93 -5Q6.53 -3.6 2.33 -3.8Z" fill="#8e96a4"/>
+    <path d="M-4.87 -9.4C-7.87 -18.2 -3.67 -29.2 2.93 -26.56C-0.67 -20.4 -2.47 -13.8 -1.87 -6.1Z" fill="#f2f4f8" opacity="0.8"/>
+    <path d="M-4.27 -9.9Q1.73 -11.1 7.73 -9.9L7.73 -9.65Q1.73 -10.85 -4.27 -9.65Z" fill="#8e96a4" opacity="0.35"/>
+    <path d="M-4.27 -15.4Q1.73 -16.6 7.73 -15.4L7.73 -15.15Q1.73 -16.35 -4.27 -15.15Z" fill="#8e96a4" opacity="0.35"/>
+    <path d="M-4.27 -20.9Q1.73 -22.1 7.73 -20.9L7.73 -20.65Q1.73 -21.85 -4.27 -20.65Z" fill="#8e96a4" opacity="0.35"/>
+    <path d="M0.93 2C-2.07 -8.8 8.93 -19.6 9.93 -16C14.93 -12.4 13.93 -3.4 12.93 2Q6.93 4 0.93 2Z" fill="#c6ccd6"/>
+    <path d="M7.43 3.2C9.93 -7 12.53 -14.2 9.93 -16C14.93 -12.4 13.93 -3.4 12.93 2Q10.93 3.4 7.43 3.2Z" fill="#8e96a4"/>
+    <path d="M1.43 -1.6C-1.07 -8.8 8.93 -17.8 7.93 -15.64C4.93 -10.6 3.43 -5.2 3.93 1.1Z" fill="#f2f4f8" opacity="0.8"/>
+    <path d="M1.93 -1.9Q6.93 -3.1 11.93 -1.9L11.93 -1.65Q6.93 -2.85 1.93 -1.65Z" fill="#8e96a4" opacity="0.35"/>
+    <path d="M1.93 -6.4Q6.93 -7.6 11.93 -6.4L11.93 -6.15Q6.93 -7.35 1.93 -6.15Z" fill="#8e96a4" opacity="0.35"/>
+    <path d="M1.93 -10.9Q6.93 -12.1 11.93 -10.9L11.93 -10.65Q6.93 -11.85 1.93 -10.65Z" fill="#8e96a4" opacity="0.35"/>
+    <path d="M5.59 8C3.19 0.8 6.79 -6.4 12.79 -4C16.79 -1.6 15.99 4.4 15.19 8Q10.39 10 5.59 8Z" fill="#c6ccd6"/>
+    <path d="M10.79 9.2C12.79 2 12.79 -2.8 12.79 -4C16.79 -1.6 15.99 4.4 15.19 8Q13.59 9.4 10.79 9.2Z" fill="#8e96a4"/>
+    <path d="M5.99 5.6C3.99 0.8 6.79 -5.2 11.19 -3.76C8.79 -0.4 7.59 3.2 7.99 7.4Z" fill="#f2f4f8" opacity="0.8"/>
+    <path d="M6.39 5.6Q10.39 4.4 14.39 5.6L14.39 5.85Q10.39 4.65 6.39 5.85Z" fill="#8e96a4" opacity="0.35"/>
+    <path d="M6.39 2.6Q10.39 1.4 14.39 2.6L14.39 2.85Q10.39 1.65 6.39 2.85Z" fill="#8e96a4" opacity="0.35"/>
+    <path d="M6.39 -0.4Q10.39 -1.6 14.39 -0.4L14.39 -0.15Q10.39 -1.35 6.39 -0.15Z" fill="#8e96a4" opacity="0.35"/>
+    <path d="M-13.6 1C-17.8 -6.2 -7 -13.4 -1 -11C6 -8.6 4.6 -2.6 3.2 1Q-5.2 3 -13.6 1Z" fill="#c6ccd6"/>
+    <path d="M-4.5 2.2C-1 -5 0.8 -9.8 -1 -11C6 -8.6 4.6 -2.6 3.2 1Q0.4 2.4 -4.5 2.2Z" fill="#8e96a4"/>
+    <path d="M-12.9 -1.4C-16.4 -6.2 -7 -12.2 -3.8 -10.76C-8 -7.4 -10.1 -3.8 -9.4 0.4Z" fill="#f2f4f8" opacity="0.8"/>
+    <path d="M-12.2 -1.4Q-5.2 -2.6 1.8 -1.4L1.8 -1.15Q-5.2 -2.35 -12.2 -1.15Z" fill="#8e96a4" opacity="0.35"/>
+    <path d="M-12.2 -4.4Q-5.2 -5.6 1.8 -4.4L1.8 -4.15Q-5.2 -5.35 -12.2 -4.15Z" fill="#8e96a4" opacity="0.35"/>
+    <path d="M-12.2 -7.4Q-5.2 -8.6 1.8 -7.4L1.8 -7.15Q-5.2 -8.35 -12.2 -7.15Z" fill="#8e96a4" opacity="0.35"/>
+    <path d="M-11.66 1L-5.66 1L-6.66 -11L-9.66 -13Z" fill="#a6d0ee" opacity="0.9"/>
+    <path d="M-8.06 1L-5.66 1L-6.66 -11L-8.26 -11.6Z" fill="#6a9cc8" opacity="0.9"/>
+    <path d="M-12.39 -20.08L-11.94 -18.45L-10.31 -18.00L-11.94 -17.55L-12.39 -15.92L-12.85 -17.55L-14.47 -18.00L-12.85 -18.45Z" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="3.2s" begin="0s" repeatCount="indefinite"/></path>
+    <path d="M-0.27 -23.08L0.19 -21.45L1.81 -21.00L0.19 -20.55L-0.27 -18.92L-0.72 -20.55L-2.35 -21.00L-0.72 -21.45Z" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="3.2s" begin="0.8s" repeatCount="indefinite"/></path>
+    <path d="M4.93 -12.08L5.38 -10.46L7.01 -10.00L5.38 -9.54L4.93 -7.92L4.47 -9.54L2.85 -10.00L4.47 -10.46Z" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="3.2s" begin="1.6s" repeatCount="indefinite"/></path>
+    <path d="M8.39 -2.08L8.85 -0.45L10.47 0.00L8.85 0.45L8.39 2.08L7.94 0.45L6.31 0.00L7.94 -0.45Z" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="3.2s" begin="2.4s" repeatCount="indefinite"/></path>
+  </g>
 </svg>

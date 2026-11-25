@@ -99,6 +99,7 @@ uniform float uZoom; // 0 = 全球視角 ~ 1 = 放大很多
 uniform float uTime;
 uniform float uShore; // 岸邊浪的相位（0~1 循環）
 uniform vec2 uDecl; // sin / cos(太陽赤緯)
+uniform float uSunLon; // 太陽直射經度（弳）：vGeo.x 是時角，加回來就是真正的經度
 uniform vec4 uC0[MAXC];
 uniform vec4 uC1[MAXC];
 uniform int uNC;
@@ -161,6 +162,15 @@ float creature(vec2 q, float type, float ph) {
 }
 vec2 nrm(vec2 uv) { return texture2D(uNoise, uv).rg * 2.0 - 1.0; }
 float sinh_(float x) { float e = exp(x); return 0.5 * (e - 1.0 / e); }
+// 經緯度方框（度），邊緣 1.5 度內漸變
+float box(vec2 g, vec4 b) {
+  return smoothstep(b.x - 1.5, b.x + 1.5, g.x) * smoothstep(b.y + 1.5, b.y - 1.5, g.x)
+       * smoothstep(b.z - 1.5, b.z + 1.5, g.y) * smoothstep(b.w + 1.5, b.w - 1.5, g.y);
+}
+// 內陸海（黑海 + 亞速海、裏海）：沒有大洋湧浪，浪小、浪花少、波光細碎
+float inland(vec2 g) {
+  return max(box(g, vec4(27.0, 42.0, 40.5, 47.5)), box(g, vec4(46.5, 55.0, 36.5, 47.3)));
+}
 
 void main() {
   vec4 m = texture2D(uMask, vCss / uRes);
@@ -173,6 +183,8 @@ void main() {
   float sinAlt = sin(lat) * uDecl.x + cos(lat) * uDecl.y * cos(vGeo.x);
   float day = clamp((sinAlt + 0.1045) / 0.209, 0.0, 1.0);
   float night = 1.0 - day;
+  float lonD = mod(degrees(vGeo.x + uSunLon) + 180.0, 360.0) - 180.0;
+  float calm = inland(vec2(lonD, degrees(lat)));
 
   // 海浪法線：兩個尺度依縮放淡入淡出，各自兩層往不同方向捲動。
   // 第二層用整數矩陣旋轉放大（貼圖照樣無縫循環），兩層的紋路才不會每一格都一模一樣
@@ -183,7 +195,7 @@ void main() {
   // 大範圍的明暗斑塊（四格一循環、慢慢飄）：讓波光一區多一區少，看不出貼圖重複
   float patch = mix(nrm(vUv.xy * uPatch.x + uT3.zw).x, nrm(vUv.zw * uPatch.y + uT3.zw).x, uLodF);
   patch = smoothstep(-0.35, 0.5, patch);
-  n *= 0.65 + 0.35 * patch;
+  n *= (0.65 + 0.35 * patch) * (1.0 - 0.6 * calm);
 
   // 水下生物（影子會跟著水面折射輕輕扭動）
   float cov = 0.0;
@@ -252,10 +264,10 @@ void main() {
   vec3 moonC = vec3(0.6, 0.72, 1.0);
   float sunSpot = 0.06 + 0.5 * pow(smoothstep(0.35, 0.95, sinAlt), 2.0);
   vec3 glint = (sunC * day * sunSpot * (spec + glit * 0.7)
-             + moonC * night * 0.08 * (pow(nh, 900.0) + glit * 0.4)) * patch * patch * mix(1.0, 0.45, uZoom);
+             + moonC * night * 0.08 * (pow(nh, 900.0) + glit * 0.4)) * patch * patch * mix(1.0, 0.45, uZoom) * (1.0 - 0.7 * calm);
 
   float slope = dot(n, vec2(-0.55, -0.6));
-  float wv = slope * mix(0.015, 0.03, day) * mix(1.0, 0.5, uZoom);
+  float wv = slope * mix(0.015, 0.03, day) * mix(1.0, 0.5, uZoom) * (1.0 - 0.4 * calm);
   vec3 add = max(wv, 0.0) * mix(vec3(0.35, 0.5, 0.8), vec3(0.9, 1.0, 1.0), day);
   float dark = max(-wv, 0.0);
 
@@ -271,6 +283,7 @@ void main() {
   // 浪的形狀沿著「離岸遠近」的等高線走，再用平滑雜訊打斷，不會整圈一模一樣
   float cd = texture2D(uCoast, vCss / uRes).r;
   float near = smoothstep(0.95, 0.6, cd);
+  if (calm > 0.0) near *= 1.0 - 0.75 * calm;
   if (near > 0.0) {
     float brk = nrm(vUv.xy + vec2(0.5, 0.25) + uT3.zw).y;
     float ph = uShore + brk * 0.3;
@@ -280,7 +293,7 @@ void main() {
     // 拍岸：每一道浪打到岸邊時，岸邊那條白邊跟著亮起來
     float fs = fract(0.56 * 6.5 + ph);
     float wash = smoothstep(0.72, 0.54, cd) * (0.25 + 0.75 * smoothstep(0.45, 0.64, fs) * (1.0 - smoothstep(0.64, 0.95, fs)));
-    float foam = max(crest, wash) * mix(0.55, 1.0, uZoom) * (1.0 - cov * 0.5);
+    float foam = max(crest, wash * (1.0 - 0.6 * calm)) * mix(0.55, 1.0, uZoom) * (1.0 - cov * 0.5);
     add += mix(vec3(0.3, 0.45, 0.62), vec3(0.95, 1.0, 1.0), day) * foam * 0.85;
   }
 
@@ -447,7 +460,7 @@ void main() {
     gl.enableVertexAttribArray(0);
     gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
     loc = {};
-    for (const k of ['uNoise', 'uMask', 'uCoast', 'uRes', 'uLodA', 'uLodB', 'uGeo', 'uT1', 'uT2', 'uT3', 'uPatch', 'uLodF', 'uZoom', 'uTime', 'uShore', 'uDecl', 'uC0', 'uC1', 'uNC', 'uW0', 'uW1', 'uNW'])
+    for (const k of ['uNoise', 'uMask', 'uCoast', 'uRes', 'uLodA', 'uLodB', 'uGeo', 'uT1', 'uT2', 'uT3', 'uPatch', 'uLodF', 'uZoom', 'uTime', 'uShore', 'uDecl', 'uSunLon', 'uC0', 'uC1', 'uNC', 'uW0', 'uW1', 'uNW'])
       loc[k] = gl.getUniformLocation(prog, k);
     gl.uniform1i(loc.uNoise, 0);
     gl.uniform1i(loc.uMask, 1);
@@ -794,6 +807,7 @@ void main() {
     gl.uniform2f(loc.uPatch, Math.max(0.25, 1 / PA), Math.max(0.25, 1 / (PA * 2)));
     gl.uniform4f(loc.uGeo, (-t.x / ww) * 2 * Math.PI - Math.PI - (p.sunLon * Math.PI) / 180, (2 * Math.PI) / ww, -t.y / ww, 1 / ww);
     gl.uniform2f(loc.uDecl, Math.sin(p.decl), Math.cos(p.decl));
+    gl.uniform1f(loc.uSunLon, (p.sunLon * Math.PI) / 180);
     const T = p.time;
     gl.uniform4f(loc.uT1, fr(T * 0.011), fr(T * 0.004), fr(-T * 0.006), fr(T * 0.013));
     gl.uniform4f(loc.uT2, fr(T * 0.021), fr(T * 0.009), fr(-T * 0.012), fr(-T * 0.017));

@@ -1,1 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><defs><linearGradient id="nileWater" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfe3c6"/><stop offset="1" stop-color="#3f8f72"/></linearGradient><linearGradient id="nileSail" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fdf6df"/><stop offset="1" stop-color="#eadfb8"/></linearGradient></defs><path d="M0 68 Q10 64 20 68 T40 68 T60 68 T80 68 L80 80 L0 80 Z" fill="url(#nileWater)"><animate attributeName="d" dur="4s" repeatCount="indefinite" values="M0 68 Q10 64 20 68 T40 68 T60 68 T80 68 L80 80 L0 80 Z;M0 69 Q10 66 20 69 T40 69 T60 69 T80 69 L80 80 L0 80 Z;M0 68 Q10 64 20 68 T40 68 T60 68 T80 68 L80 80 L0 80 Z"/></path><path d="M14 75 Q13 69 20 68 L54 68 Q61 69 60 75 Q37 79 14 75 Z" fill="#b98a4e" stroke="#6e4c24" stroke-width="0.4"/><line x1="30" y1="18" x2="42" y2="69" stroke="#6e4c24" stroke-width="1.3"/><line x1="24" y1="30" x2="46" y2="22" stroke="#6e4c24" stroke-width="1"/><path d="M30 18 L46 22 L35 69 Z" fill="url(#nileSail)" stroke="#cbb77f" stroke-width="0.3"><animateTransform attributeName="transform" type="skewX" values="0;3;0" dur="3s" repeatCount="indefinite"/></path></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 尼羅河三角帆船（2.5D，船頭朝右下）：埃及路克索尼羅河上的木造費盧卡帆船，藍白腰線的船身上立著短桅，長長的斜桁掛著米白色三角帆，帆布隨風鼓起擺動，白袍船夫在船尾掌舵，船身隨水波輕晃（動畫）。光源左上，不描邊 -->
+  <g transform="translate(41.09 67.77) scale(1.85)">
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-3.73 -1.00a2.00 1.00 0 1 0 4.00 0a2.00 1.00 0 1 0 -4.00 0ZM-3.37 -1.00a1.64 0.82 0 1 0 3.28 0a1.64 0.82 0 1 0 -3.28 0Z"><animate attributeName="d" values="M-3.73 -1.00a2.00 1.00 0 1 0 4.00 0a2.00 1.00 0 1 0 -4.00 0ZM-3.37 -1.00a1.64 0.82 0 1 0 3.28 0a1.64 0.82 0 1 0 -3.28 0Z;M-9.73 -1.00a8.00 4.00 0 1 0 16.00 0a8.00 4.00 0 1 0 -16.00 0ZM-8.29 -1.00a6.56 3.28 0 1 0 13.12 0a6.56 3.28 0 1 0 -13.12 0Z" dur="3s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0" dur="3s" begin="0s" repeatCount="indefinite"/></path>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-3.73 -1.00a2.00 1.00 0 1 0 4.00 0a2.00 1.00 0 1 0 -4.00 0ZM-3.37 -1.00a1.64 0.82 0 1 0 3.28 0a1.64 0.82 0 1 0 -3.28 0Z"><animate attributeName="d" values="M-3.73 -1.00a2.00 1.00 0 1 0 4.00 0a2.00 1.00 0 1 0 -4.00 0ZM-3.37 -1.00a1.64 0.82 0 1 0 3.28 0a1.64 0.82 0 1 0 -3.28 0Z;M-9.73 -1.00a8.00 4.00 0 1 0 16.00 0a8.00 4.00 0 1 0 -16.00 0ZM-8.29 -1.00a6.56 3.28 0 1 0 13.12 0a6.56 3.28 0 1 0 -13.12 0Z" dur="3s" begin="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0" dur="3s" begin="1.5s" repeatCount="indefinite"/></path>
+    <g><animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;0.5 -0.4;0 0;-0.5 0.4;0 0" dur="3s" begin="0.0s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
+    <path d="M2.94 4.3L-10.05 -3.2L-10.05 -5.4L2.94 2.1Z" fill="#7d5a3a"/>
+    <path d="M8.66 5L2.94 4.3L2.94 2.1L8.66 2.8Z" fill="#7d5a3a"/>
+    <path d="M-5.54 -7.4L6.75 -0.3L7.79 2.3L3.29 1.7L-9.01 -5.4L-8.49 -7.1Z" fill="#5a3f28"/>
+    <path d="M-10.05 -4.6L2.94 2.9L2.94 2.1L-10.05 -5.4Z" fill="#3a6ac4"/>
+    <path d="M-10.05 -4L2.94 3.5L2.94 2.9L-10.05 -4.6Z" fill="#ffffff"/>
+    <path d="M1.48 -1.2L1.98 -1.2L1.98 -17.2L1.48 -17.2Z" fill="#7d5a3a"/>
+    <path d="M-7.13 -34L-6.73 -34L8.86 1.6L8.46 1.6Z" fill="#7d5a3a"/>
+    <g><animateTransform attributeName="transform" type="skewX" values="0;-2;0;1.5;0" dur="3s" repeatCount="indefinite"/>
+    <path d="M-6.93 -34Q4.87 -14.2 8.66 1.6L-3.46 -6Q-5.46 -20 -6.93 -34Z" fill="#f2e6cc"/>
+    <path d="M-6.93 -34Q4.87 -14.2 8.66 1.6L5.66 0.8Q1.87 -15.2 -6.93 -34Z" fill="#cdbc9a"/>
+    <path d="M-6.93 -34L-2.46 -7Q-4.46 -20 -6.93 -34Z" fill="#fffaf0" opacity="0.8"/>
+    </g>
+    <path d="M-7.46 -5.7L-4.66 -5.7L-4.86 -9.7L-7.26 -9.7Z" fill="#f4f2ec"/>
+    <path d="M-5.86 -5.7L-4.66 -5.7L-4.86 -9.7L-5.86 -9.7Z" fill="#d8d4c8"/>
+    <path d="M-4.86 -10.9L-4.89 -10.63L-4.98 -10.38L-5.12 -10.15L-5.31 -9.96L-5.54 -9.82L-5.8 -9.73L-6.06 -9.7L-6.33 -9.73L-6.58 -9.82L-6.81 -9.96L-7 -10.15L-7.14 -10.38L-7.23 -10.63L-7.26 -10.9L-7.23 -11.17L-7.14 -11.42L-7 -11.65L-6.81 -11.84L-6.58 -11.98L-6.33 -12.07L-6.06 -12.1L-5.8 -12.07L-5.54 -11.98L-5.31 -11.84L-5.12 -11.65L-4.98 -11.42L-4.89 -11.17Z" fill="#56351f"/>
+    <path d="M-5.17 -11.04L-5.2 -10.81L-5.28 -10.6L-5.4 -10.4L-5.56 -10.24L-5.76 -10.11L-5.98 -10.04L-6.21 -10.01L-6.44 -10.04L-6.65 -10.11L-6.85 -10.24L-7.01 -10.4L-7.14 -10.6L-7.21 -10.81L-7.24 -11.04L-7.21 -11.27L-7.14 -11.49L-7.01 -11.69L-6.85 -11.85L-6.65 -11.97L-6.44 -12.05L-6.21 -12.08L-5.98 -12.05L-5.76 -11.97L-5.56 -11.85L-5.4 -11.69L-5.28 -11.49L-5.2 -11.27Z" fill="#7a4e32"/>
+    <path d="M-6.09 -11.38L-6.1 -11.29L-6.13 -11.2L-6.18 -11.13L-6.25 -11.06L-6.33 -11.01L-6.42 -10.98L-6.52 -10.97L-6.61 -10.98L-6.71 -11.01L-6.79 -11.06L-6.86 -11.13L-6.91 -11.2L-6.94 -11.29L-6.95 -11.38L-6.94 -11.47L-6.91 -11.56L-6.86 -11.63L-6.79 -11.7L-6.71 -11.75L-6.61 -11.78L-6.52 -11.79L-6.42 -11.78L-6.33 -11.75L-6.25 -11.7L-6.18 -11.63L-6.13 -11.56L-6.1 -11.47Z" fill="#9a6a48"/>
+    <path d="M-7.46 -11.1Q-6.06 -13.1 -4.66 -11.1Z" fill="#ffffff"/>
+    </g>
+  </g>
+</svg>

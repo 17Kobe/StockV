@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 大白鯊（2.5D，朝左）：南非甘斯拜海域的大白鯊，灰色流線身體與白色腹部，高高的三角背鰭、胸鰭與鰓裂，張著滿是尖牙的嘴，尾鰭左右擺動、身邊濺起水花（動畫；整隻跳出水面由地圖的 dolphin 模式負責）。光源左上，不描邊 -->
+  <g transform="translate(38.18 75.18) scale(1.82)">
+    <g><animateTransform attributeName="transform" type="rotate" values="-6 10.00 -8.00;6 10.00 -8.00;-6 10.00 -8.00" dur="1.4s" begin="0s" repeatCount="indefinite"/>
+    <path d="M10 -9L18 -16Q16 -9 17 -3L10 -7Z" fill="#56627a"/>
+    </g>
+    <path d="M-16 -6Q-10 -14 2 -13Q10 -12 11 -8Q8 -4 0 -3Q-10 -2 -16 -6Z" fill="#7c8a9e"/>
+    <path d="M-16 -6Q-8 -3 2 -3.6Q8 -4.4 11 -8Q8 -5.4 2 -5Q-8 -4.4 -14 -6.4Z" fill="#f4f6f8"/>
+    <path d="M-12 -9Q-4 -13 6 -12Q-2 -11.6 -12 -9Z" fill="#a8b4c4" opacity="0.7"/>
+    <path d="M-2 -12.6Q0 -18 3 -20Q3 -15 4 -12.6Z" fill="#56627a"/>
+    <path d="M-4 -5Q-2 -1 2 0Q0 -3 0 -5Z" fill="#56627a"/>
+    <path d="M-7 -9.6L-6.6 -9.6L-6.8 -7.4L-7.2 -7.4Z" fill="#56627a" opacity="0.7"/>
+    <path d="M-6.1 -9.6L-5.7 -9.6L-5.9 -7.4L-6.3 -7.4Z" fill="#56627a" opacity="0.7"/>
+    <path d="M-5.2 -9.6L-4.8 -9.6L-5 -7.4L-5.4 -7.4Z" fill="#56627a" opacity="0.7"/>
+    <path d="M-4.3 -9.6L-3.9 -9.6L-4.1 -7.4L-4.5 -7.4Z" fill="#56627a" opacity="0.7"/>
+    <path d="M-10.45 -8.4L-10.46 -8.27L-10.5 -8.14L-10.57 -8.02L-10.66 -7.93L-10.76 -7.85L-10.88 -7.81L-11 -7.79L-11.12 -7.81L-11.24 -7.85L-11.34 -7.93L-11.43 -8.02L-11.5 -8.14L-11.54 -8.27L-11.55 -8.4L-11.54 -8.53L-11.5 -8.66L-11.43 -8.78L-11.34 -8.87L-11.24 -8.95L-11.12 -8.99L-11 -9.01L-10.88 -8.99L-10.76 -8.95L-10.66 -8.87L-10.57 -8.78L-10.5 -8.66L-10.46 -8.53Z" fill="#1d2230"/>
+    <path d="M-10.97 -8.59L-10.98 -8.55L-10.99 -8.51L-11.01 -8.47L-11.04 -8.44L-11.08 -8.42L-11.12 -8.4L-11.16 -8.4L-11.21 -8.4L-11.25 -8.42L-11.29 -8.44L-11.32 -8.47L-11.34 -8.51L-11.35 -8.55L-11.36 -8.59L-11.35 -8.64L-11.34 -8.68L-11.32 -8.71L-11.29 -8.74L-11.25 -8.77L-11.21 -8.78L-11.16 -8.79L-11.12 -8.78L-11.08 -8.77L-11.04 -8.74L-11.01 -8.71L-10.99 -8.68L-10.98 -8.64Z" fill="#ffffff"/>
+    <path d="M-15.4 -6.2Q-12 -4.6 -9 -5.6Q-12 -5.2 -15.4 -6.2Z" fill="#4a3a4a"/>
+    <path d="M-14.4 -5.8L-13.8 -5.6L-14 -4.8Z" fill="#ffffff"/>
+    <path d="M-13.1 -5.8L-12.5 -5.6L-12.7 -4.8Z" fill="#ffffff"/>
+    <path d="M-11.8 -5.8L-11.2 -5.6L-11.4 -4.8Z" fill="#ffffff"/>
+    <path d="M-10.5 -5.8L-9.9 -5.6L-10.1 -4.8Z" fill="#ffffff"/>
+    <circle cx="-4" cy="0" r=".8" fill="#e8fbff" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="1.2s" begin="0.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;-1 -3" dur="1.2s" begin="0.0s" repeatCount="indefinite"/></circle>
+    <circle cx="2" cy="0" r=".8" fill="#e8fbff" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="1.2s" begin="0.4s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;0 -3" dur="1.2s" begin="0.4s" repeatCount="indefinite"/></circle>
+    <circle cx="8" cy="0" r=".8" fill="#e8fbff" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="1.2s" begin="0.8s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;1 -3" dur="1.2s" begin="0.8s" repeatCount="indefinite"/></circle>
+  </g>
+</svg>

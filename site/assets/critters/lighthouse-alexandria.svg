@@ -1,51 +1,101 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-  <defs>
-    <linearGradient id="stoneG1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ece2c4"/><stop offset="1" stop-color="#c2b690"/></linearGradient>
-    <linearGradient id="stoneG2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2e8ce"/><stop offset="1" stop-color="#cfc29c"/></linearGradient>
-    <linearGradient id="stoneG3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8f0da"/><stop offset="1" stop-color="#d8cca8"/></linearGradient>
-  </defs>
-  <!-- 海面 -->
-  <ellipse cx="40" cy="73" rx="34" ry="5" fill="#2a7ab8" stroke="#1a4f78" stroke-width="0.6"/>
-  <ellipse cx="40" cy="73" rx="30" ry="3.5" fill="#4a9ad8" opacity="0.6"/>
-
-  <!-- 燈塔底座（最寬，方形） -->
-  <path d="M20,70 L22,52 L58,52 L60,70 Z" fill="url(#stoneG1)" stroke="#9a8c64" stroke-width="0.6" stroke-linejoin="round"/>
-  <!-- 底座裝飾線 -->
-  <line x1="24" y1="60" x2="56" y2="60" stroke="#b8ac8a" stroke-width="1.2"/>
-  <!-- 底座窗洞 -->
-  <rect x="36" y="56" width="8" height="10" rx="1" fill="#5a4a30" stroke="#2e2414" stroke-width="0.4"/>
-
-  <!-- 中段（八角形輪廓，稍窄） -->
-  <path d="M27,52 L29,34 L51,34 L53,52 Z" fill="url(#stoneG2)" stroke="#a89a74" stroke-width="0.6" stroke-linejoin="round"/>
-  <line x1="32" y1="42" x2="48" y2="42" stroke="#c0b490" stroke-width="1"/>
-
-  <!-- 上段（圓柱形，最窄） -->
-  <path d="M33,34 L34,20 L46,20 L47,34 Z" fill="url(#stoneG3)" stroke="#b8aa80" stroke-width="0.5" stroke-linejoin="round"/>
-
-  <!-- 燈塔頂部平台 -->
-  <ellipse cx="40" cy="20" rx="8" ry="2.5" fill="#c8bc9a" stroke="#8a7c58" stroke-width="0.5"/>
-
-  <!-- 火焰信號燈 -->
-  <g>
-    <path d="M37,19 Q35,13 38,8 Q40,12 40,8 Q42,12 42,8 Q45,13 43,19 Z" fill="#ff8c30" stroke="#e05a10" stroke-width="0.8">
-      <animate attributeName="d"
-        values="M37,19 Q35,13 38,8 Q40,12 40,8 Q42,12 42,8 Q45,13 43,19 Z;
-                 M37,19 Q34,14 37,7 Q40,11 40,7 Q43,11 43,7 Q46,14 43,19 Z;
-                 M37,19 Q35,13 38,8 Q40,12 40,8 Q42,12 42,8 Q45,13 43,19 Z"
-        dur="1.2s" repeatCount="indefinite"/>
-    </path>
-    <path d="M38,19 Q37,15 39,11 Q40,13 40,11 Q41,13 41,11 Q43,15 42,19 Z" fill="#ffd060">
-      <animate attributeName="opacity" values="0.9;0.6;0.9" dur="0.9s" repeatCount="indefinite"/>
-    </path>
+  <!-- 亞歷山大燈塔（2.5D）：古代世界七大奇蹟之一，埃及法羅斯島上的白色大理石燈塔，方形高塔、八角形中段、圓柱亭三層往上收，頂端立著手持三叉戟的波賽頓銅像；亭中的烽火跳動，光束左右掃過海面、水波擴散（動畫）。光源左上，不描邊 -->
+  <g transform="translate(40.9 58.38) scale(1.03)">
+    <path d="M-5.2 -17L29.44 3L3.46 18L-31.18 -2Z" fill="#52c3dc"/>
+    <path d="M-4.42 -12.45L19.83 1.55L2.68 11.45L-21.56 -2.55Z" fill="#9be3ea" opacity="0.4"/>
+    <path d="M-5.12 -10.12L-3.92 -10.47L-2.72 -10.12L-3.92 -9.77Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="2.2s" begin="0.0s" repeatCount="indefinite"/></path>
+    <path d="M7.32 -1.81L8.52 -2.16L9.72 -1.81L8.52 -1.46Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="2.7s" begin="0.6s" repeatCount="indefinite"/></path>
+    <path d="M-11.50 -5.81L-10.30 -6.16L-9.10 -5.81L-10.30 -5.46Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="3.2s" begin="1.2s" repeatCount="indefinite"/></path>
+    <path d="M1.61 -4.26L2.81 -4.61L4.01 -4.26L2.81 -3.91Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="3.7s" begin="1.8s" repeatCount="indefinite"/></path>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M0.73 11.00a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM0.91 11.00a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z"><animate attributeName="d" values="M0.73 11.00a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM0.91 11.00a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z;M-2.27 11.00a4.00 2.00 0 1 0 8.00 0a4.00 2.00 0 1 0 -8.00 0ZM-1.55 11.00a3.28 1.64 0 1 0 6.56 0a3.28 1.64 0 1 0 -6.56 0Z" dur="3s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0" dur="3s" begin="0s" repeatCount="indefinite"/></path>
+    <path d="M15.39 -1.41L14.14 4.16L11.44 0.36L12.53 -4.15Z" fill="#6c5f4f"/>
+    <path d="M-11.02 6.36L-15.68 1.43L-12.68 -1.84L-8.97 2.18Z" fill="#b9a892"/>
+    <path d="M14.14 4.16L7.21 8.17L5.83 3.6L11.44 0.36Z" fill="#6c5f4f"/>
+    <path d="M-2.18 7.96L-11.02 6.36L-8.97 2.18L-1.86 3.77Z" fill="#93836e"/>
+    <path d="M7.21 8.17L-2.18 7.96L-1.86 3.77L5.83 3.6Z" fill="#6c5f4f"/>
+    <path d="M5.83 3.6L-1.86 3.77L-8.97 2.18L-12.68 -1.84L-10.59 -6.11L-5.76 -9.53L2.01 -10.32L8.4 -7.85L12.53 -4.15L11.44 0.36Z" fill="#b9a892"/>
+    <path d="M13.86 -3L0 5L0 3L13.86 -5Z" fill="#b8b0a0"/>
+    <path d="M-13.86 -3L0 5L0 3L-13.86 -5Z" fill="#e2dccd"/>
+    <path d="M0 -13L13.86 -5L0 3L-13.86 -5Z" fill="#fbf8f1"/>
+    <path d="M10.39 -5L0 1L0 -21L8.66 -26Z" fill="#b8b0a0"/>
+    <path d="M-10.39 -5L0 1L0 -21L-8.66 -26Z" fill="#e2dccd"/>
+    <path d="M0 -31L8.66 -26L0 -21L-8.66 -26Z" fill="#fbf8f1"/>
+    <path d="M-7.16 -6.95L-6.47 -6.55L-6.47 -7.91L-7.16 -8.31Z" fill="#5a5a68"/>
+    <path d="M-7.16 -10.35L-6.47 -9.95L-6.47 -11.31L-7.16 -11.71Z" fill="#5a5a68"/>
+    <path d="M-7.16 -13.75L-6.47 -13.35L-6.47 -14.71L-7.16 -15.11Z" fill="#5a5a68"/>
+    <path d="M-7.16 -17.15L-6.47 -16.75L-6.47 -18.11L-7.16 -18.51Z" fill="#5a5a68"/>
+    <path d="M-7.16 -20.55L-6.47 -20.15L-6.47 -21.51L-7.16 -21.91Z" fill="#5a5a68"/>
+    <path d="M-4.85 -5.62L-4.16 -5.22L-4.16 -6.58L-4.85 -6.98Z" fill="#5a5a68"/>
+    <path d="M-4.85 -9.02L-4.16 -8.62L-4.16 -9.98L-4.85 -10.38Z" fill="#5a5a68"/>
+    <path d="M-4.85 -12.42L-4.16 -12.02L-4.16 -13.38L-4.85 -13.78Z" fill="#5a5a68"/>
+    <path d="M-4.85 -15.82L-4.16 -15.42L-4.16 -16.78L-4.85 -17.18Z" fill="#5a5a68"/>
+    <path d="M-4.85 -19.22L-4.16 -18.82L-4.16 -20.18L-4.85 -20.58Z" fill="#5a5a68"/>
+    <path d="M-2.54 -4.29L-1.85 -3.89L-1.85 -5.25L-2.54 -5.65Z" fill="#5a5a68"/>
+    <path d="M-2.54 -7.69L-1.85 -7.29L-1.85 -8.65L-2.54 -9.05Z" fill="#5a5a68"/>
+    <path d="M-2.54 -11.09L-1.85 -10.69L-1.85 -12.05L-2.54 -12.45Z" fill="#5a5a68"/>
+    <path d="M-2.54 -14.49L-1.85 -14.09L-1.85 -15.45L-2.54 -15.85Z" fill="#5a5a68"/>
+    <path d="M-2.54 -17.89L-1.85 -17.49L-1.85 -18.85L-2.54 -19.25Z" fill="#5a5a68"/>
+    <path d="M7.16 -6.95L6.47 -6.55L6.47 -7.91L7.16 -8.31Z" fill="#4a4a58"/>
+    <path d="M7.16 -10.35L6.47 -9.95L6.47 -11.31L7.16 -11.71Z" fill="#4a4a58"/>
+    <path d="M7.16 -13.75L6.47 -13.35L6.47 -14.71L7.16 -15.11Z" fill="#4a4a58"/>
+    <path d="M7.16 -17.15L6.47 -16.75L6.47 -18.11L7.16 -18.51Z" fill="#4a4a58"/>
+    <path d="M7.16 -20.55L6.47 -20.15L6.47 -21.51L7.16 -21.91Z" fill="#4a4a58"/>
+    <path d="M4.85 -5.62L4.16 -5.22L4.16 -6.58L4.85 -6.98Z" fill="#4a4a58"/>
+    <path d="M4.85 -9.02L4.16 -8.62L4.16 -9.98L4.85 -10.38Z" fill="#4a4a58"/>
+    <path d="M4.85 -12.42L4.16 -12.02L4.16 -13.38L4.85 -13.78Z" fill="#4a4a58"/>
+    <path d="M4.85 -15.82L4.16 -15.42L4.16 -16.78L4.85 -17.18Z" fill="#4a4a58"/>
+    <path d="M4.85 -19.22L4.16 -18.82L4.16 -20.18L4.85 -20.58Z" fill="#4a4a58"/>
+    <path d="M2.54 -4.29L1.85 -3.89L1.85 -5.25L2.54 -5.65Z" fill="#4a4a58"/>
+    <path d="M2.54 -7.69L1.85 -7.29L1.85 -8.65L2.54 -9.05Z" fill="#4a4a58"/>
+    <path d="M2.54 -11.09L1.85 -10.69L1.85 -12.05L2.54 -12.45Z" fill="#4a4a58"/>
+    <path d="M2.54 -14.49L1.85 -14.09L1.85 -15.45L2.54 -15.85Z" fill="#4a4a58"/>
+    <path d="M2.54 -17.89L1.85 -17.49L1.85 -18.85L2.54 -19.25Z" fill="#4a4a58"/>
+    <path d="M9.7 -26L0 -20.4L0 -21.4L9.7 -27Z" fill="#b8b0a0"/>
+    <path d="M-9.7 -26L0 -20.4L0 -21.4L-9.7 -27Z" fill="#e2dccd"/>
+    <path d="M0 -32.6L9.7 -27L0 -21.4L-9.7 -27Z" fill="#fbf8f1"/>
+    <path d="M-4.3 -25.97L-4.3 -28.03L-4.3 -38.03L-4.3 -35.97Z" fill="#e2dccd"/>
+    <path d="M4.3 -25.97L1.78 -24.52L1.78 -34.52L4.3 -35.97Z" fill="#b8b0a0"/>
+    <path d="M-1.78 -24.52L-4.3 -25.97L-4.3 -35.97L-1.78 -34.52Z" fill="#e2dccd"/>
+    <path d="M1.78 -24.52L-1.78 -24.52L-1.78 -34.52L1.78 -34.52Z" fill="#e2dccd"/>
+    <path d="M1.78 -34.52L-1.78 -34.52L-4.3 -35.97L-4.3 -38.03L-1.78 -39.48L1.78 -39.48L4.3 -38.03L4.3 -35.97Z" fill="#fbf8f1"/>
+    <path d="M-4.98 -35.81L-4.98 -38.19L-4.98 -38.99L-4.98 -36.61Z" fill="#e2dccd"/>
+    <path d="M4.98 -35.81L2.06 -34.13L2.06 -34.93L4.98 -36.61Z" fill="#b8b0a0"/>
+    <path d="M-2.06 -34.13L-4.98 -35.81L-4.98 -36.61L-2.06 -34.93Z" fill="#e2dccd"/>
+    <path d="M2.06 -34.13L-2.06 -34.13L-2.06 -34.93L2.06 -34.93Z" fill="#e2dccd"/>
+    <path d="M2.06 -34.93L-2.06 -34.93L-4.98 -36.61L-4.98 -38.99L-2.06 -40.67L2.06 -40.67L4.98 -38.99L4.98 -36.61Z" fill="#fbf8f1"/>
+    <path d="M1.14 -35.97L1.01 -36.25L1.01 -41.25L1.14 -40.97Z" fill="#e2dccd"/>
+    <path d="M1.96 -36.1L1.61 -35.9L1.61 -40.9L1.96 -41.1Z" fill="#b8b0a0"/>
+    <path d="M1.61 -35.9L1.14 -35.97L1.14 -40.97L1.61 -40.9Z" fill="#e2dccd"/>
+    <path d="M-2.04 -36.04L-2.17 -36.32L-2.17 -41.32L-2.04 -41.04Z" fill="#e2dccd"/>
+    <path d="M-1.22 -36.17L-1.57 -35.97L-1.57 -40.97L-1.22 -41.17Z" fill="#b8b0a0"/>
+    <path d="M-1.57 -35.97L-2.04 -36.04L-2.04 -41.04L-1.57 -40.97Z" fill="#e2dccd"/>
+    <path d="M-3.53 -37.67L-3.66 -37.94L-3.66 -42.94L-3.53 -42.67Z" fill="#e2dccd"/>
+    <path d="M-2.71 -37.8L-3.06 -37.6L-3.06 -42.6L-2.71 -42.8Z" fill="#b8b0a0"/>
+    <path d="M-3.06 -37.6L-3.53 -37.67L-3.53 -42.67L-3.06 -42.6Z" fill="#e2dccd"/>
+    <path d="M-1.83 -39.23L-1.96 -39.5L-1.96 -44.5L-1.83 -44.23Z" fill="#e2dccd"/>
+    <path d="M-1.01 -39.35L-1.36 -39.15L-1.36 -44.15L-1.01 -44.35Z" fill="#b8b0a0"/>
+    <path d="M-1.36 -39.15L-1.83 -39.23L-1.83 -44.23L-1.36 -44.15Z" fill="#e2dccd"/>
+    <path d="M1.35 -39.16L1.22 -39.43L1.22 -44.43L1.35 -44.16Z" fill="#e2dccd"/>
+    <path d="M2.17 -39.28L1.82 -39.08L1.82 -44.08L2.17 -44.28Z" fill="#b8b0a0"/>
+    <path d="M1.82 -39.08L1.35 -39.16L1.35 -44.16L1.82 -44.08Z" fill="#e2dccd"/>
+    <path d="M2.84 -37.53L2.71 -37.8L2.71 -42.8L2.84 -42.53Z" fill="#e2dccd"/>
+    <path d="M3.66 -37.66L3.31 -37.46L3.31 -42.46L3.66 -42.66Z" fill="#b8b0a0"/>
+    <path d="M3.31 -37.46L2.84 -37.53L2.84 -42.53L3.31 -42.46Z" fill="#e2dccd"/>
+    <g transform="translate(0.00 -37.80)"><path d="M-1.92 0Q-1.92 -3.60 0 -6.00Q1.92 -3.60 1.92 0Z" fill="#ff8a3a"><animateTransform attributeName="transform" type="scale" values="1 1;1.1 1.25;.95 .9;1 1" dur="0.45s" begin="0s" repeatCount="indefinite"/></path></g>
+    <g transform="translate(0.00 -37.80)"><path d="M-1.15 0Q-1.15 -2.16 0 -3.60Q1.15 -2.16 1.15 0Z" fill="#ffd45a"><animateTransform attributeName="transform" type="scale" values="1 1;1.1 1.25;.95 .9;1 1" dur="0.60s" begin="0s" repeatCount="indefinite"/></path></g>
+    <path d="M3.92 -42.8L3.39 -41.67L3.39 -42.47L3.92 -43.6Z" fill="#b8b0a0"/>
+    <path d="M-3.39 -41.67L-3.92 -42.8L-3.92 -43.6L-3.39 -42.47Z" fill="#e2dccd"/>
+    <path d="M3.39 -41.67L1.96 -40.84L1.96 -41.64L3.39 -42.47Z" fill="#b8b0a0"/>
+    <path d="M-1.96 -40.84L-3.39 -41.67L-3.39 -42.47L-1.96 -41.64Z" fill="#e2dccd"/>
+    <path d="M0 -40.54L-1.96 -40.84L-1.96 -41.64L0 -41.34Z" fill="#e2dccd"/>
+    <path d="M1.96 -40.84L0 -40.54L0 -41.34L1.96 -41.64Z" fill="#b8b0a0"/>
+    <path d="M1.96 -41.64L0 -41.34L-1.96 -41.64L-3.39 -42.47L-3.92 -43.6L-3.39 -44.73L-1.96 -45.56L-0 -45.86L1.96 -45.56L3.39 -44.73L3.92 -43.6L3.39 -42.47Z" fill="#fbf8f1"/>
+    <path d="M-0.8 -43.6L0.8 -43.6L0.6 -47.2L-0.6 -47.2Z" fill="#b07a3e"/>
+    <path d="M0.7 -47.8L0.68 -47.64L0.63 -47.5L0.55 -47.36L0.44 -47.25L0.3 -47.17L0.16 -47.12L0 -47.1L-0.16 -47.12L-0.3 -47.17L-0.44 -47.25L-0.55 -47.36L-0.63 -47.5L-0.68 -47.64L-0.7 -47.8L-0.68 -47.96L-0.63 -48.1L-0.55 -48.24L-0.44 -48.35L-0.3 -48.43L-0.16 -48.48L-0 -48.5L0.16 -48.48L0.3 -48.43L0.44 -48.35L0.55 -48.24L0.63 -48.1L0.68 -47.96Z" fill="#d9a060"/>
+    <path d="M0.8 -46.6L1.1 -46.6L1.1 -50.6L0.8 -50.6Z" fill="#7c5428"/>
+    <path d="M0.35 -50.6L0.55 -50.6L0.45 -51.6Z" fill="#7c5428"/>
+    <path d="M0.85 -50.6L1.05 -50.6L0.95 -51.6Z" fill="#7c5428"/>
+    <path d="M1.35 -50.6L1.55 -50.6L1.45 -51.6Z" fill="#7c5428"/>
+    <g transform="translate(0.00 -40.00)"><g><animateTransform attributeName="transform" type="scale" values="1 1;-1 1;1 1" dur="4s" repeatCount="indefinite"/><path d="M0 -1L22 -5L22 4L0 1Z" fill="#fff3b0" opacity=".45"><animate attributeName="opacity" values=".1;.5;.1" dur="2s" repeatCount="indefinite"/></path></g></g>
   </g>
-
-  <!-- 光暈 -->
-  <ellipse cx="40" cy="14" rx="14" ry="10" fill="#ffe8a0" opacity="0.25">
-    <animate attributeName="opacity" values="0.15;0.35;0.15" dur="1.5s" repeatCount="indefinite"/>
-  </ellipse>
-
-  <!-- 遠處小船 -->
-  <path d="M8,68 L14,68 L12,64 Z" fill="#8a7050" stroke="#4a3a24" stroke-width="0.4"/>
-  <line x1="12" y1="64" x2="12" y2="60" stroke="#8a7050" stroke-width="1"/>
-  <path d="M12,61 L17,63 L12,64 Z" fill="#e8e0c8"/>
 </svg>

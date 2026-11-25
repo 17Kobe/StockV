@@ -1,116 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-<defs>
-<linearGradient id="bodyRed" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0" stop-color="#e2423f"/>
-<stop offset="0.5" stop-color="#c81e2c"/>
-<stop offset="1" stop-color="#8f0f1c"/>
-</linearGradient>
-<linearGradient id="darkRed" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0" stop-color="#7a0f1a"/>
-<stop offset="1" stop-color="#4c0a10"/>
-</linearGradient>
-<linearGradient id="roofShine" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0" stop-color="#ff8a74" stop-opacity="0.6"/>
-<stop offset="1" stop-color="#ff8a74" stop-opacity="0"/>
-</linearGradient>
-<linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0" stop-color="#d6edf4"/>
-<stop offset="1" stop-color="#5c8ba3"/>
-</linearGradient>
-<radialGradient id="tire" cx="0.35" cy="0.3" r="0.75">
-<stop offset="0" stop-color="#4c4c4c"/>
-<stop offset="0.6" stop-color="#1c1c1c"/>
-<stop offset="1" stop-color="#040404"/>
-</radialGradient>
-<radialGradient id="hub" cx="0.35" cy="0.3" r="0.8">
-<stop offset="0" stop-color="#f4f4f4"/>
-<stop offset="1" stop-color="#999999"/>
-</radialGradient>
-<radialGradient id="shadow" cx="0.5" cy="0.5" r="0.5">
-<stop offset="0" stop-color="#000000" stop-opacity="0.35"/>
-<stop offset="1" stop-color="#000000" stop-opacity="0"/>
-</radialGradient>
-</defs>
-
-<ellipse cx="40" cy="78" rx="34" ry="3" fill="url(#shadow)"/>
-
-<g>
-<animateTransform attributeName="transform" type="translate" values="0 0;0 -0.5;0 0" dur="0.5s" repeatCount="indefinite"/>
-
-<rect x="6" y="16" width="66" height="50" rx="6" fill="url(#bodyRed)" stroke="#6e0b14" stroke-width="0.6"/>
-<path d="M8,21 Q39,13 70,21" fill="none" stroke="url(#roofShine)" stroke-width="5" stroke-linecap="round" opacity="0.85"/>
-<rect x="6" y="42.5" width="66" height="3.5" fill="url(#darkRed)"/>
-
-<rect x="13" y="21" width="8" height="18" rx="1.5" fill="#f2f6f7" stroke="#b9c4c6" stroke-width="0.4"/>
-<rect x="14" y="22" width="6" height="16" rx="1" fill="url(#glass)"/>
-
-<rect x="23" y="21" width="8" height="18" rx="1.5" fill="#f2f6f7" stroke="#b9c4c6" stroke-width="0.4"/>
-<rect x="24" y="22" width="6" height="16" rx="1" fill="url(#glass)"/>
-<circle cx="27" cy="27.5" r="1.5" fill="#3a2a20"/>
-<rect x="25.3" y="29.3" width="4.4" height="5" fill="#8a5a30"/>
-
-<rect x="33" y="21" width="8" height="18" rx="1.5" fill="#f2f6f7" stroke="#b9c4c6" stroke-width="0.4"/>
-<rect x="34" y="22" width="6" height="16" rx="1" fill="url(#glass)"/>
-
-<rect x="43" y="21" width="8" height="18" rx="1.5" fill="#f2f6f7" stroke="#b9c4c6" stroke-width="0.4"/>
-<rect x="44" y="22" width="6" height="16" rx="1" fill="url(#glass)"/>
-<circle cx="47" cy="27.5" r="1.5" fill="#202020"/>
-<rect x="45.3" y="29.3" width="4.4" height="5" fill="#406080"/>
-
-<rect x="53" y="21" width="8" height="18" rx="1.5" fill="#f2f6f7" stroke="#b9c4c6" stroke-width="0.4"/>
-<rect x="54" y="22" width="6" height="16" rx="1" fill="url(#glass)"/>
-
-<rect x="9" y="45" width="11" height="17" rx="2" fill="#f2f6f7" stroke="#b9c4c6" stroke-width="0.4"/>
-<rect x="10" y="46" width="9" height="15" rx="1.3" fill="url(#glass)"/>
-
-<rect x="22" y="47" width="12" height="15" rx="1.5" fill="url(#darkRed)" stroke="#4a0a10" stroke-width="0.4"/>
-<line x1="28" y1="48" x2="28" y2="61" stroke="#d8dde0" stroke-width="0.6"/>
-<line x1="22.5" y1="60" x2="33.5" y2="60" stroke="#d8dde0" stroke-width="0.5"/>
-
-<rect x="38" y="49" width="7" height="13" rx="1.3" fill="#f2f6f7" stroke="#b9c4c6" stroke-width="0.4"/>
-<rect x="38.8" y="49.8" width="5.4" height="11.4" rx="0.8" fill="url(#glass)"/>
-
-<rect x="46" y="49" width="7" height="13" rx="1.3" fill="#f2f6f7" stroke="#b9c4c6" stroke-width="0.4"/>
-<rect x="46.8" y="49.8" width="5.4" height="11.4" rx="0.8" fill="url(#glass)"/>
-
-<rect x="54" y="49" width="7" height="13" rx="1.3" fill="#f2f6f7" stroke="#b9c4c6" stroke-width="0.4"/>
-<rect x="54.8" y="49.8" width="5.4" height="11.4" rx="0.8" fill="url(#glass)"/>
-
-<circle cx="9" cy="61" r="1.8" fill="#fff6c0" stroke="#c9a93a" stroke-width="0.4"/>
-<rect x="5" y="63" width="6" height="4" rx="1.2" fill="#575757" stroke="#2b2b2b" stroke-width="0.4"/>
-
-<circle cx="69" cy="51" r="1.6" fill="#ffb14d" stroke="#a65c10" stroke-width="0.4"/>
-<rect x="69" y="63" width="4" height="4" rx="1" fill="#575757" stroke="#2b2b2b" stroke-width="0.4"/>
-
-<line x1="14" y1="16" x2="14" y2="7" stroke="#5a5a5a" stroke-width="0.8"/>
-<rect x="14" y="5.5" width="7" height="4.5" fill="#1a2b6b" stroke="#0d1740" stroke-width="0.3"/>
-<line x1="14" y1="7.75" x2="21" y2="7.75" stroke="#ffffff" stroke-width="1.1"/>
-<line x1="16.3" y1="5.5" x2="16.3" y2="10" stroke="#ffffff" stroke-width="1.1"/>
-<line x1="14" y1="7.75" x2="21" y2="7.75" stroke="#c81e2c" stroke-width="0.5"/>
-<line x1="16.3" y1="5.5" x2="16.3" y2="10" stroke="#c81e2c" stroke-width="0.5"/>
-</g>
-
-<g>
-<circle cx="23" cy="67" r="10" fill="url(#tire)" stroke="#000000" stroke-width="0.5"/>
-<g>
-<animateTransform attributeName="transform" type="rotate" from="0 23 67" to="360 23 67" dur="1s" repeatCount="indefinite"/>
-<circle cx="23" cy="67" r="4" fill="url(#hub)" stroke="#777777" stroke-width="0.3"/>
-<circle cx="25.3" cy="67" r="0.5" fill="#555555"/>
-<circle cx="23" cy="69.3" r="0.5" fill="#555555"/>
-<circle cx="20.7" cy="67" r="0.5" fill="#555555"/>
-<circle cx="23" cy="64.7" r="0.5" fill="#555555"/>
-</g>
-</g>
-
-<g>
-<circle cx="57" cy="67" r="10" fill="url(#tire)" stroke="#000000" stroke-width="0.5"/>
-<g>
-<animateTransform attributeName="transform" type="rotate" from="0 57 67" to="360 57 67" dur="1s" repeatCount="indefinite"/>
-<circle cx="57" cy="67" r="4" fill="url(#hub)" stroke="#777777" stroke-width="0.3"/>
-<circle cx="59.3" cy="67" r="0.5" fill="#555555"/>
-<circle cx="57" cy="69.3" r="0.5" fill="#555555"/>
-<circle cx="54.7" cy="67" r="0.5" fill="#555555"/>
-<circle cx="57" cy="64.7" r="0.5" fill="#555555"/>
-</g>
-</g>
+  <!-- 倫敦紅色雙層巴士（2.5D，朝左下開）：經典 Routemaster 紅色雙層公車，上下兩排車窗、白色腰帶、黃色廣告條、後方開放式上車平台，車頭有路線牌、大燈與水箱罩；車身隨路面輕輕顛、輪子轉動（動畫）。光源左上，不描邊 -->
+  <g transform="translate(38.54 59.31) scale(2.28)">
+    <path d="M-11.6 3.3L5.72 -6.7L11.6 -3.3L12.88 -2.24L-4.44 7.76L-10.33 4.36Z" fill="#000000" opacity="0.2"/>
+    <g><animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;0 -0.35;0 0" dur="0.45s" begin="0s" repeatCount="indefinite"/>
+    <path d="M11.09 -4.2L-5.54 5.4L-5.54 -7.6L11.09 -17.2Z" fill="#99352b"/>
+    <path d="M-11.09 2.2L-5.54 5.4L-5.54 -7.6L-11.09 -10.8Z" fill="#cc4a3c"/>
+    <path d="M5.54 -20.4L11.09 -17.2L-5.54 -7.6L-11.09 -10.8Z" fill="#ef6a5a"/>
+    <path d="M11.43 -17.2L-5.54 -7.4L-5.54 -8L11.43 -17.8Z" fill="#99352b"/>
+    <path d="M-11.43 -10.8L-5.54 -7.4L-5.54 -8L-11.43 -11.4Z" fill="#cc4a3c"/>
+    <path d="M5.54 -21.2L11.43 -17.8L-5.54 -8L-11.43 -11.4Z" fill="#ef6a5a"/>
+    <path d="M5.54 -21.2L11.43 -17.8L-5.54 -8L-11.43 -11.4Z" fill="#ef6a5a"/>
+    <path d="M10.22 -7.7L7.88 -6.35L7.88 -9.15L10.22 -10.5Z" fill="#2a3448"/>
+    <path d="M10.22 -9.7L7.88 -8.35L7.88 -9.15L10.22 -10.5Z" fill="#5a6a84"/>
+    <path d="M7.36 -6.05L5.02 -4.7L5.02 -7.5L7.36 -8.85Z" fill="#2a3448"/>
+    <path d="M7.36 -8.05L5.02 -6.7L5.02 -7.5L7.36 -8.85Z" fill="#5a6a84"/>
+    <path d="M4.5 -4.4L2.17 -3.05L2.17 -5.85L4.5 -7.2Z" fill="#2a3448"/>
+    <path d="M4.5 -6.4L2.17 -5.05L2.17 -5.85L4.5 -7.2Z" fill="#5a6a84"/>
+    <path d="M1.65 -2.75L-0.69 -1.4L-0.69 -4.2L1.65 -5.55Z" fill="#2a3448"/>
+    <path d="M1.65 -4.75L-0.69 -3.4L-0.69 -4.2L1.65 -5.55Z" fill="#5a6a84"/>
+    <path d="M-1.21 -1.1L-3.55 0.25L-3.55 -2.55L-1.21 -3.9Z" fill="#2a3448"/>
+    <path d="M-1.21 -3.1L-3.55 -1.75L-3.55 -2.55L-1.21 -3.9Z" fill="#5a6a84"/>
+    <path d="M10.22 -12.7L7.88 -11.35L7.88 -14.15L10.22 -15.5Z" fill="#2a3448"/>
+    <path d="M10.22 -14.7L7.88 -13.35L7.88 -14.15L10.22 -15.5Z" fill="#5a6a84"/>
+    <path d="M7.36 -11.05L5.02 -9.7L5.02 -12.5L7.36 -13.85Z" fill="#2a3448"/>
+    <path d="M7.36 -13.05L5.02 -11.7L5.02 -12.5L7.36 -13.85Z" fill="#5a6a84"/>
+    <path d="M4.5 -9.4L2.17 -8.05L2.17 -10.85L4.5 -12.2Z" fill="#2a3448"/>
+    <path d="M4.5 -11.4L2.17 -10.05L2.17 -10.85L4.5 -12.2Z" fill="#5a6a84"/>
+    <path d="M1.65 -7.75L-0.69 -6.4L-0.69 -9.2L1.65 -10.55Z" fill="#2a3448"/>
+    <path d="M1.65 -9.75L-0.69 -8.4L-0.69 -9.2L1.65 -10.55Z" fill="#5a6a84"/>
+    <path d="M-1.21 -6.1L-3.55 -4.75L-3.55 -7.55L-1.21 -8.9Z" fill="#2a3448"/>
+    <path d="M-1.21 -8.1L-3.55 -6.75L-3.55 -7.55L-1.21 -8.9Z" fill="#5a6a84"/>
+    <path d="M11.09 -11.8L-5.54 -2.2L-5.54 -2.9L11.09 -12.5Z" fill="#f4efe0"/>
+    <path d="M10.57 -5.7L1.04 -0.2L1.04 -1.6L10.57 -7.1Z" fill="#f4c24a"/>
+    <path d="M11.09 -4.2L9.18 -3.1L9.18 -9.7L11.09 -10.8Z" fill="#3a2420"/>
+    <path d="M10.31 -3.75L10.05 -3.6L10.05 -10.2L10.31 -10.35Z" fill="#c9c9c9"/>
+    <path d="M-10.74 -1.8L-5.89 1L-5.89 -2L-10.74 -4.8Z" fill="#2a3448"/>
+    <path d="M-10.57 -6.7L-6.06 -4.1L-6.06 -6.7L-10.57 -9.3Z" fill="#2a3448"/>
+    <path d="M-10.22 -5.4L-6.41 -3.2L-6.41 -4.1L-10.22 -6.3Z" fill="#1a1a1a"/>
+    <path d="M-9.87 -5.35L-6.75 -3.55L-6.75 -4.15L-9.87 -5.95Z" fill="#ffffff"/>
+    <path d="M-9.35 2.6L-7.27 3.8L-7.27 0.8L-9.35 -0.4Z" fill="#c9c9c9"/>
+    <path d="M-9.7 0.8L-9.8 0.39L-10.06 0.02L-10.38 -0.16L-10.64 -0.1L-10.74 0.2L-10.64 0.61L-10.38 0.98L-10.06 1.16L-9.8 1.1Z" fill="#fff6c8"/>
+    <path d="M-5.89 3L-5.99 2.59L-6.25 2.22L-6.57 2.04L-6.83 2.1L-6.93 2.4L-6.83 2.81L-6.57 3.18L-6.25 3.36L-5.99 3.3Z" fill="#fff6c8"/>
+    <path d="M-11.09 2.2L-5.54 5.4L-5.54 4.8L-11.09 1.6Z" fill="#2a2a2a"/>
+    </g>
+    <path d="M10.39 -3.3L10.34 -2.81L10.2 -2.35L9.97 -1.93L9.67 -1.58L9.31 -1.32L8.91 -1.16L8.49 -1.1L8.06 -1.16L7.66 -1.32L7.3 -1.58L7 -1.93L6.78 -2.35L6.63 -2.81L6.59 -3.3L6.63 -3.79L6.78 -4.25L7 -4.67L7.3 -5.02L7.66 -5.28L8.06 -5.44L8.49 -5.5L8.91 -5.44L9.31 -5.28L9.67 -5.02L9.97 -4.67L10.2 -4.25L10.34 -3.79Z" fill="#1f2229"/>
+    <path d="M9.49 -3.3L9.46 -3.03L9.39 -2.78L9.27 -2.55L9.11 -2.36L8.92 -2.22L8.71 -2.13L8.49 -2.1L8.26 -2.13L8.05 -2.22L7.86 -2.36L7.71 -2.55L7.59 -2.78L7.51 -3.03L7.49 -3.3L7.51 -3.57L7.59 -3.82L7.71 -4.05L7.86 -4.24L8.05 -4.38L8.26 -4.47L8.49 -4.5L8.71 -4.47L8.92 -4.38L9.11 -4.24L9.27 -4.05L9.39 -3.82L9.46 -3.57Z" fill="#b9c0cc"/>
+    <g transform="translate(8.49 -3.30)"><g><animateTransform attributeName="transform" type="rotate" values="0;-360" dur=".8s" repeatCount="indefinite"/><rect x="-.15" y="-1.1" width=".3" height="2.2" fill="#6a717e"/><rect x="-1" y="-.15" width="2" height=".3" fill="#6a717e"/></g></g>
+    <path d="M-0.35 2.9L-0.4 3.39L-0.54 3.85L-0.77 4.27L-1.07 4.62L-1.43 4.88L-1.83 5.04L-2.25 5.1L-2.67 5.04L-3.08 4.88L-3.44 4.62L-3.74 4.27L-3.96 3.85L-4.1 3.39L-4.15 2.9L-4.1 2.41L-3.96 1.95L-3.74 1.53L-3.44 1.18L-3.08 0.92L-2.67 0.76L-2.25 0.7L-1.83 0.76L-1.43 0.92L-1.07 1.18L-0.77 1.53L-0.54 1.95L-0.4 2.41Z" fill="#1f2229"/>
+    <path d="M-1.25 2.9L-1.28 3.17L-1.35 3.42L-1.47 3.65L-1.63 3.84L-1.82 3.98L-2.03 4.07L-2.25 4.1L-2.47 4.07L-2.69 3.98L-2.88 3.84L-3.03 3.65L-3.15 3.42L-3.23 3.17L-3.25 2.9L-3.23 2.63L-3.15 2.38L-3.03 2.15L-2.88 1.96L-2.69 1.82L-2.47 1.73L-2.25 1.7L-2.03 1.73L-1.82 1.82L-1.63 1.96L-1.47 2.15L-1.35 2.38L-1.28 2.63Z" fill="#b9c0cc"/>
+    <g transform="translate(-2.25 2.90)"><g><animateTransform attributeName="transform" type="rotate" values="0;-360" dur=".8s" repeatCount="indefinite"/><rect x="-.15" y="-1.1" width=".3" height="2.2" fill="#6a717e"/><rect x="-1" y="-.15" width="2" height=".3" fill="#6a717e"/></g></g>
+  </g>
 </svg>

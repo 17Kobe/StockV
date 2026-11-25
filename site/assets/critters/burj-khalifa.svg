@@ -1,31 +1,131 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <defs>
-    <linearGradient id="bk" x1="0" x2="1"><stop offset="0" stop-color="#e6edf6"/><stop offset=".5" stop-color="#a9bbd2"/><stop offset="1" stop-color="#6d83a0"/></linearGradient>
-    <linearGradient id="bkSteel" x1="0" x2="1"><stop offset="0" stop-color="#8a96a8"/><stop offset="1" stop-color="#3c4454"/></linearGradient>
-    <linearGradient id="bkGold" x1="0" x2="1"><stop offset="0" stop-color="#ffe49a"/><stop offset=".55" stop-color="#e0aa48"/><stop offset="1" stop-color="#9a6a22"/></linearGradient>
-    <linearGradient id="bkBronze" x1="0" x2="1"><stop offset="0" stop-color="#e3a274"/><stop offset="1" stop-color="#8c4e2c"/></linearGradient>
-    <linearGradient id="bkTeal" x1="0" x2="1"><stop offset="0" stop-color="#8fe0e6"/><stop offset="1" stop-color="#2c8896"/></linearGradient>
-  </defs>
-  <!-- 杜拜：哈里發塔（世界最高樓，三葉狀收窄的階梯）與旁邊的摩天樓、沙漠 -->
-  <!-- 旁邊的摩天樓各用不同顏色：阿聯酋塔（深色鋼構、三角斜頂）、金色玻璃大樓、卡揚塔（扭轉的古銅色）、藍綠玻璃大樓 -->
-  <!-- 阿聯酋塔 -->
-  <path d="M16 116 V58 L28 46 V116Z" fill="url(#bkSteel)" stroke="#2a3140" stroke-width=".8"/>
-  <path d="M18 70 H26 M18 82 H26 M18 94 H26 M18 106 H26" stroke="#b8c4d4" stroke-width=".7" opacity=".5"/>
-  <!-- 金色玻璃大樓 -->
-  <path d="M31 116 V56 Q35 50 40 56 V116Z" fill="url(#bkGold)" stroke="#8a6420" stroke-width=".8"/>
-  <path d="M32 66 H39 M32 76 H39 M32 86 H39 M32 96 H39 M32 106 H39" stroke="#fff3c4" stroke-width=".7" opacity=".6"/>
-  <!-- 卡揚塔：扭轉 90 度的螺旋 -->
-  <path d="M87 116 C86 98 90 84 88 60 L100 60 C102 84 98 98 99 116Z" fill="url(#bkBronze)" stroke="#6a3c22" stroke-width=".8"/>
-  <path d="M88 64 C92 70 96 72 100 78 M87 76 C91 82 95 86 99 92 M87 90 C91 96 95 100 99 106" stroke="#f3c9a0" stroke-width=".8" fill="none" opacity=".7"/>
-  <!-- 藍綠玻璃大樓 -->
-  <rect x="102" y="70" width="14" height="46" fill="url(#bkTeal)" stroke="#1f5a66" stroke-width=".8"/>
-  <path d="M104 80 H114 M104 90 H114 M104 100 H114" stroke="#d6f6fa" stroke-width=".8" opacity=".6"/>
-  <!-- 哈里發塔 -->
-  <path d="M52 116 L53 90 L56 90 L56 72 L59 72 L59 56 L61.5 56 L61.5 40 L63 40 L63 24 L63.8 24 L64 4 L64.2 24 L65 24 L65 40 L66.5 40 L66.5 56 L69 56 L69 72 L72 72 L72 90 L75 90 L76 116Z" fill="url(#bk)" stroke="#5f7494" stroke-width=".9"/>
-  <path d="M64 6 V116" stroke="#ffffff" stroke-width="1" opacity=".6"/>
-  <g stroke="#7b8fab" stroke-width=".8" opacity=".8"><path d="M56 90 H72 M59 72 H69 M61.5 56 H66.5 M63 40 H65"/></g>
-  <circle cx="64" cy="3" r="1.4" fill="#ff5a4a"><animate attributeName="opacity" values="1;.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
-  <!-- 沙漠地面 -->
-  <path d="M0 114 Q32 108 64 114 T128 112 V124 H0Z" fill="#e8c98a"/>
-  <path d="M4 118 Q24 114 44 118 M70 120 Q92 116 118 120" stroke="#c9a561" stroke-width="1.4" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 哈里發塔（2.5D）：杜拜 828 公尺的世界最高樓，銀藍與藍綠玻璃帷幕的塔身一節節往上收，最頂端是細長的尖塔與閃爍的航空燈，樓層燈光點點閃亮，塔腳的杜拜噴泉水柱此起彼落（動畫）。光源左上，不描邊 -->
+  <g transform="translate(41.81 67.02) scale(0.71)">
+    <path d="M-13.86 0L0 -8L13.86 0L19.18 4.42L5.33 12.43L-8.53 4.42Z" fill="#000000" opacity="0.2"/>
+    <path d="M-17.32 -4L6.93 10L0 14L-24.25 0Z" fill="#52c3dc"/>
+    <path d="M-14.86 -2.22L2.11 7.58L-2.46 10.22L-19.43 0.42Z" fill="#9be3ea" opacity="0.4"/>
+    <path d="M-17.72 0.00L-16.92 0.00L-17.32 -8.00Z" fill="#e8fbff" opacity=".85"><animate attributeName="d" values="M-17.72 0.00L-16.92 0.00L-17.32 -3.00Z;M-17.82 0.00L-16.82 0.00L-17.32 -8.00Z;M-17.72 0.00L-16.92 0.00L-17.32 -3.00Z" dur="1.6s" begin="0.0s" repeatCount="indefinite"/></path>
+    <path d="M-14.78 1.70L-13.98 1.70L-14.38 -8.30Z" fill="#e8fbff" opacity=".85"><animate attributeName="d" values="M-14.78 1.70L-13.98 1.70L-14.38 -2.30Z;M-14.88 1.70L-13.88 1.70L-14.38 -8.30Z;M-14.78 1.70L-13.98 1.70L-14.38 -2.30Z" dur="1.9s" begin="0.2s" repeatCount="indefinite"/></path>
+    <path d="M-11.83 3.40L-11.03 3.40L-11.43 -8.60Z" fill="#e8fbff" opacity=".85"><animate attributeName="d" values="M-11.83 3.40L-11.03 3.40L-11.43 -1.60Z;M-11.93 3.40L-10.93 3.40L-11.43 -8.60Z;M-11.83 3.40L-11.03 3.40L-11.43 -1.60Z" dur="2.2s" begin="0.4s" repeatCount="indefinite"/></path>
+    <path d="M-8.89 5.10L-8.09 5.10L-8.49 -2.90Z" fill="#e8fbff" opacity=".85"><animate attributeName="d" values="M-8.89 5.10L-8.09 5.10L-8.49 2.10Z;M-8.99 5.10L-7.99 5.10L-8.49 -2.90Z;M-8.89 5.10L-8.09 5.10L-8.49 2.10Z" dur="1.6s" begin="0.6s" repeatCount="indefinite"/></path>
+    <path d="M-5.94 6.80L-5.14 6.80L-5.54 -3.20Z" fill="#e8fbff" opacity=".85"><animate attributeName="d" values="M-5.94 6.80L-5.14 6.80L-5.54 2.80Z;M-6.04 6.80L-5.04 6.80L-5.54 -3.20Z;M-5.94 6.80L-5.14 6.80L-5.54 2.80Z" dur="1.9s" begin="0.8s" repeatCount="indefinite"/></path>
+    <path d="M-3.00 8.50L-2.20 8.50L-2.60 -3.50Z" fill="#e8fbff" opacity=".85"><animate attributeName="d" values="M-3.00 8.50L-2.20 8.50L-2.60 3.50Z;M-3.10 8.50L-2.10 8.50L-2.60 -3.50Z;M-3.00 8.50L-2.20 8.50L-2.60 3.50Z" dur="2.2s" begin="1.0s" repeatCount="indefinite"/></path>
+    <path d="M-0.05 10.20L0.75 10.20L0.35 2.20Z" fill="#e8fbff" opacity=".85"><animate attributeName="d" values="M-0.05 10.20L0.75 10.20L0.35 7.20Z;M-0.15 10.20L0.85 10.20L0.35 2.20Z;M-0.05 10.20L0.75 10.20L0.35 7.20Z" dur="1.6s" begin="1.2s" repeatCount="indefinite"/></path>
+    <path d="M6.67 -3.85L0.61 -0.35L0.61 -14.35L6.67 -17.85Z" fill="#5a80c2"/>
+    <path d="M-5.46 -3.85L0.61 -0.35L0.61 -14.35L-5.46 -17.85Z" fill="#8fb4ee"/>
+    <path d="M0.61 -21.35L6.67 -17.85L0.61 -14.35L-5.46 -17.85Z" fill="#d2e4ff"/>
+    <path d="M10.91 1.4L4.85 4.9L4.85 -7.9L10.91 -11.4Z" fill="#4c9c98"/>
+    <path d="M-1.21 1.4L4.85 4.9L4.85 -7.9L-1.21 -11.4Z" fill="#7fd0c6"/>
+    <path d="M4.85 -14.9L10.91 -11.4L4.85 -7.9L-1.21 -11.4Z" fill="#c4f2ea"/>
+    <path d="M1.21 1.4L-4.85 4.9L-4.85 -9.1L1.21 -12.6Z" fill="#5a80c2"/>
+    <path d="M-10.91 1.4L-4.85 4.9L-4.85 -9.1L-10.91 -12.6Z" fill="#8fb4ee"/>
+    <path d="M-4.85 -16.1L1.21 -12.6L-4.85 -9.1L-10.91 -12.6Z" fill="#d2e4ff"/>
+    <path d="M6.67 0L0 3.85L0 -10.15L6.67 -14Z" fill="#84a2bf"/>
+    <path d="M-6.67 0L0 3.85L0 -10.15L-6.67 -14Z" fill="#b8cfe2"/>
+    <path d="M0 -17.85L6.67 -14L0 -10.15L-6.67 -14Z" fill="#e6f0f7"/>
+    <path d="M-6.67 -1L0 2.85L0 2.55L-6.67 -1.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-6.67 -3L0 0.85L0 0.55L-6.67 -3.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-6.67 -5L0 -1.15L0 -1.45L-6.67 -5.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-6.67 -7L0 -3.15L0 -3.45L-6.67 -7.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-6.67 -9L0 -5.15L0 -5.45L-6.67 -9.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-6.67 -11L0 -7.15L0 -7.45L-6.67 -11.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-6.67 -13L0 -9.15L0 -9.45L-6.67 -13.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M5.72 -17.3L0.52 -14.3L0.52 -26.3L5.72 -29.3Z" fill="#5a80c2"/>
+    <path d="M-4.68 -17.3L0.52 -14.3L0.52 -26.3L-4.68 -29.3Z" fill="#8fb4ee"/>
+    <path d="M0.52 -32.3L5.72 -29.3L0.52 -26.3L-4.68 -29.3Z" fill="#d2e4ff"/>
+    <path d="M9.35 -12.8L4.16 -9.8L4.16 -20.6L9.35 -23.6Z" fill="#4c9c98"/>
+    <path d="M-1.04 -12.8L4.16 -9.8L4.16 -20.6L-1.04 -23.6Z" fill="#7fd0c6"/>
+    <path d="M4.16 -26.6L9.35 -23.6L4.16 -20.6L-1.04 -23.6Z" fill="#c4f2ea"/>
+    <path d="M1.04 -12.8L-4.16 -9.8L-4.16 -21.8L1.04 -24.8Z" fill="#5a80c2"/>
+    <path d="M-9.35 -12.8L-4.16 -9.8L-4.16 -21.8L-9.35 -24.8Z" fill="#8fb4ee"/>
+    <path d="M-4.16 -27.8L1.04 -24.8L-4.16 -21.8L-9.35 -24.8Z" fill="#d2e4ff"/>
+    <path d="M5.72 -14L0 -10.7L0 -22.7L5.72 -26Z" fill="#84a2bf"/>
+    <path d="M-5.72 -14L0 -10.7L0 -22.7L-5.72 -26Z" fill="#b8cfe2"/>
+    <path d="M0 -29.3L5.72 -26L0 -22.7L-5.72 -26Z" fill="#e6f0f7"/>
+    <path d="M-5.72 -15L0 -11.7L0 -12L-5.72 -15.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-5.72 -17L0 -13.7L0 -14L-5.72 -17.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-5.72 -19L0 -15.7L0 -16L-5.72 -19.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-5.72 -21L0 -17.7L0 -18L-5.72 -21.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-5.72 -23L0 -19.7L0 -20L-5.72 -23.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-5.72 -25L0 -21.7L0 -22L-5.72 -25.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M4.76 -28.75L0.43 -26.25L0.43 -38.25L4.76 -40.75Z" fill="#5a80c2"/>
+    <path d="M-3.9 -28.75L0.43 -26.25L0.43 -38.25L-3.9 -40.75Z" fill="#8fb4ee"/>
+    <path d="M0.43 -43.25L4.76 -40.75L0.43 -38.25L-3.9 -40.75Z" fill="#d2e4ff"/>
+    <path d="M7.79 -25L3.46 -22.5L3.46 -33.3L7.79 -35.8Z" fill="#4c9c98"/>
+    <path d="M-0.87 -25L3.46 -22.5L3.46 -33.3L-0.87 -35.8Z" fill="#7fd0c6"/>
+    <path d="M3.46 -38.3L7.79 -35.8L3.46 -33.3L-0.87 -35.8Z" fill="#c4f2ea"/>
+    <path d="M0.87 -25L-3.46 -22.5L-3.46 -34.5L0.87 -37Z" fill="#5a80c2"/>
+    <path d="M-7.79 -25L-3.46 -22.5L-3.46 -34.5L-7.79 -37Z" fill="#8fb4ee"/>
+    <path d="M-3.46 -39.5L0.87 -37L-3.46 -34.5L-7.79 -37Z" fill="#d2e4ff"/>
+    <path d="M4.76 -26L0 -23.25L0 -35.25L4.76 -38Z" fill="#84a2bf"/>
+    <path d="M-4.76 -26L0 -23.25L0 -35.25L-4.76 -38Z" fill="#b8cfe2"/>
+    <path d="M0 -40.75L4.76 -38L0 -35.25L-4.76 -38Z" fill="#e6f0f7"/>
+    <path d="M-4.76 -27L0 -24.25L0 -24.55L-4.76 -27.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-4.76 -29L0 -26.25L0 -26.55L-4.76 -29.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-4.76 -31L0 -28.25L0 -28.55L-4.76 -31.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-4.76 -33L0 -30.25L0 -30.55L-4.76 -33.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-4.76 -35L0 -32.25L0 -32.55L-4.76 -35.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-4.76 -37L0 -34.25L0 -34.55L-4.76 -37.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M3.81 -40.2L0.35 -38.2L0.35 -50.2L3.81 -52.2Z" fill="#5a80c2"/>
+    <path d="M-3.12 -40.2L0.35 -38.2L0.35 -50.2L-3.12 -52.2Z" fill="#8fb4ee"/>
+    <path d="M0.35 -54.2L3.81 -52.2L0.35 -50.2L-3.12 -52.2Z" fill="#d2e4ff"/>
+    <path d="M6.24 -37.2L2.77 -35.2L2.77 -46L6.24 -48Z" fill="#4c9c98"/>
+    <path d="M-0.69 -37.2L2.77 -35.2L2.77 -46L-0.69 -48Z" fill="#7fd0c6"/>
+    <path d="M2.77 -50L6.24 -48L2.77 -46L-0.69 -48Z" fill="#c4f2ea"/>
+    <path d="M0.69 -37.2L-2.77 -35.2L-2.77 -47.2L0.69 -49.2Z" fill="#5a80c2"/>
+    <path d="M-6.24 -37.2L-2.77 -35.2L-2.77 -47.2L-6.24 -49.2Z" fill="#8fb4ee"/>
+    <path d="M-2.77 -51.2L0.69 -49.2L-2.77 -47.2L-6.24 -49.2Z" fill="#d2e4ff"/>
+    <path d="M3.81 -38L0 -35.8L0 -47.8L3.81 -50Z" fill="#84a2bf"/>
+    <path d="M-3.81 -38L0 -35.8L0 -47.8L-3.81 -50Z" fill="#b8cfe2"/>
+    <path d="M0 -52.2L3.81 -50L0 -47.8L-3.81 -50Z" fill="#e6f0f7"/>
+    <path d="M-3.81 -39L0 -36.8L0 -37.1L-3.81 -39.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-3.81 -41L0 -38.8L0 -39.1L-3.81 -41.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-3.81 -43L0 -40.8L0 -41.1L-3.81 -43.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-3.81 -45L0 -42.8L0 -43.1L-3.81 -45.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-3.81 -47L0 -44.8L0 -45.1L-3.81 -47.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-3.81 -49L0 -46.8L0 -47.1L-3.81 -49.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M2.86 -51.65L0.26 -50.15L0.26 -60.15L2.86 -61.65Z" fill="#5a80c2"/>
+    <path d="M-2.34 -51.65L0.26 -50.15L0.26 -60.15L-2.34 -61.65Z" fill="#8fb4ee"/>
+    <path d="M0.26 -63.15L2.86 -61.65L0.26 -60.15L-2.34 -61.65Z" fill="#d2e4ff"/>
+    <path d="M4.68 -49.4L2.08 -47.9L2.08 -57.9L4.68 -59.4Z" fill="#4c9c98"/>
+    <path d="M-0.52 -49.4L2.08 -47.9L2.08 -57.9L-0.52 -59.4Z" fill="#7fd0c6"/>
+    <path d="M2.08 -60.9L4.68 -59.4L2.08 -57.9L-0.52 -59.4Z" fill="#c4f2ea"/>
+    <path d="M0.52 -49.4L-2.08 -47.9L-2.08 -57.9L0.52 -59.4Z" fill="#5a80c2"/>
+    <path d="M-4.68 -49.4L-2.08 -47.9L-2.08 -57.9L-4.68 -59.4Z" fill="#8fb4ee"/>
+    <path d="M-2.08 -60.9L0.52 -59.4L-2.08 -57.9L-4.68 -59.4Z" fill="#d2e4ff"/>
+    <path d="M2.86 -50L0 -48.35L0 -58.35L2.86 -60Z" fill="#84a2bf"/>
+    <path d="M-2.86 -50L0 -48.35L0 -58.35L-2.86 -60Z" fill="#b8cfe2"/>
+    <path d="M0 -61.65L2.86 -60L0 -58.35L-2.86 -60Z" fill="#e6f0f7"/>
+    <path d="M-2.86 -51L0 -49.35L0 -49.65L-2.86 -51.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-2.86 -53L0 -51.35L0 -51.65L-2.86 -53.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-2.86 -55L0 -53.35L0 -53.65L-2.86 -55.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-2.86 -57L0 -55.35L0 -55.65L-2.86 -57.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-2.86 -59L0 -57.35L0 -57.65L-2.86 -59.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M0.38 -59.56L-1.52 -58.46L-1.52 -66.46L0.38 -67.56Z" fill="#5a80c2"/>
+    <path d="M-3.43 -59.56L-1.52 -58.46L-1.52 -66.46L-3.43 -67.56Z" fill="#8fb4ee"/>
+    <path d="M-1.52 -68.66L0.38 -67.56L-1.52 -66.46L-3.43 -67.56Z" fill="#d2e4ff"/>
+    <path d="M2.1 -60L0 -58.79L0 -66.79L2.1 -68Z" fill="#84a2bf"/>
+    <path d="M-2.1 -60L0 -58.79L0 -66.79L-2.1 -68Z" fill="#b8cfe2"/>
+    <path d="M0 -69.21L2.1 -68L0 -66.79L-2.1 -68Z" fill="#e6f0f7"/>
+    <path d="M-2.1 -61L0 -59.79L0 -60.09L-2.1 -61.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-2.1 -63L0 -61.79L0 -62.09L-2.1 -63.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-2.1 -65L0 -63.79L0 -64.09L-2.1 -65.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-2.1 -67L0 -65.79L0 -66.09L-2.1 -67.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M0.26 -67.7L-1.04 -66.95L-1.04 -72.95L0.26 -73.7Z" fill="#5a80c2"/>
+    <path d="M-2.34 -67.7L-1.04 -66.95L-1.04 -72.95L-2.34 -73.7Z" fill="#8fb4ee"/>
+    <path d="M-1.04 -74.45L0.26 -73.7L-1.04 -72.95L-2.34 -73.7Z" fill="#d2e4ff"/>
+    <path d="M1.43 -68L0 -67.17L0 -73.17L1.43 -74Z" fill="#84a2bf"/>
+    <path d="M-1.43 -68L0 -67.17L0 -73.17L-1.43 -74Z" fill="#b8cfe2"/>
+    <path d="M0 -74.83L1.43 -74L0 -73.17L-1.43 -74Z" fill="#e6f0f7"/>
+    <path d="M-1.43 -69L0 -68.17L0 -68.47L-1.43 -69.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-1.43 -71L0 -70.17L0 -70.47L-1.43 -71.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-1.43 -73L0 -72.17L0 -72.47L-1.43 -73.3Z" fill="#5a80c2" opacity="0.45"/>
+    <path d="M-0.6 -74L0.6 -74L0 -86Z" fill="#d8dde3"/>
+    <path d="M0 -74L0.6 -74L0 -86Z" fill="#a9b1ba"/>
+    <circle cx="0.00" cy="-86.00" r=".7" fill="#ff5a4a"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle>
+    <circle cx="-0.87" cy="-19.50" r="0.50" fill="#fff3b0"><animate attributeName="opacity" values="1;0.25;1" dur="2s" begin="0.0s" repeatCount="indefinite"/></circle>
+    <circle cx="-0.87" cy="-33.50" r="0.50" fill="#fff3b0"><animate attributeName="opacity" values="1;0.25;1" dur="2s" begin="0.5s" repeatCount="indefinite"/></circle>
+    <circle cx="-0.87" cy="-47.50" r="0.50" fill="#fff3b0"><animate attributeName="opacity" values="1;0.25;1" dur="2s" begin="1.0s" repeatCount="indefinite"/></circle>
+    <circle cx="-0.87" cy="-61.50" r="0.50" fill="#fff3b0"><animate attributeName="opacity" values="1;0.25;1" dur="2s" begin="1.5s" repeatCount="indefinite"/></circle>
+  </g>
 </svg>

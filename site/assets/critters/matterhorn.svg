@@ -1,52 +1,83 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-  <defs>
-    <linearGradient id="mh-rock" x1="0.2" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#8a8488"/>
-      <stop offset="55%" stop-color="#5f5a60"/>
-      <stop offset="100%" stop-color="#3c383e"/>
-    </linearGradient>
-    <linearGradient id="mh-rock-dark" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#2c2a30" stop-opacity="0.75"/>
-      <stop offset="100%" stop-color="#2c2a30" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="mh-snow" x1="0" y1="0" x2="0.3" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#cfe0ec"/>
-    </linearGradient>
-    <linearGradient id="mh-ground" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#6d7a5c"/>
-      <stop offset="100%" stop-color="#4c5940"/>
-    </linearGradient>
-  </defs>
-
-  <!-- drifting wisp cloud near the peak -->
-  <ellipse cx="34" cy="16" rx="8" ry="2.6" fill="#ffffff" opacity="0.5">
-    <animate attributeName="opacity" values="0.15;0.55;0.15" dur="4.5s" repeatCount="indefinite"/>
-    <animateTransform attributeName="transform" type="translate" values="-3,0;4,0;-3,0" dur="7s" repeatCount="indefinite"/>
-  </ellipse>
-
-  <!-- the iconic asymmetric pyramid horn, slightly twisted silhouette -->
-  <path d="M38 5 L52 34 L66 58 Q70 66 62 70 L18 70 Q10 66 15 58 L26 36 Z"
-    fill="url(#mh-rock)" stroke="#2c2a30" stroke-width="0.6" stroke-linejoin="round"/>
-
-  <!-- shaded east face -->
-  <path d="M38 5 L52 34 L66 58 Q70 66 62 70 L44 70 L40 40 Z" fill="url(#mh-rock-dark)"/>
-
-  <!-- ridge line -->
-  <path d="M38 5 L30 52 L24 70 M38 5 L46 44 L52 70" fill="none" stroke="#242228" stroke-width="0.6" opacity="0.55"/>
-
-  <!-- rock striations -->
-  <path d="M34 30 L28 54 M44 26 L50 56 M30 46 L22 64" stroke="#2c2a30" stroke-width="0.5" opacity="0.4" fill="none" stroke-linecap="round"/>
-
-  <!-- snow cap, wraps the summit asymmetrically -->
-  <path d="M38 5 L45 20 Q40 24 35 20 Q31 24 27 22 Z" fill="url(#mh-snow)" stroke="#bcd0da" stroke-width="0.4"/>
-  <path d="M26 36 Q30 32 35 34 L32 40 Q27 40 24 37 Z" fill="url(#mh-snow)" opacity="0.9"/>
-  <path d="M52 34 Q57 31 61 34 L57 39 Q53 38 50 35 Z" fill="url(#mh-snow)" opacity="0.85"/>
-
-  <!-- snow highlight -->
-  <line x1="38" y1="7" x2="34" y2="18" stroke="#ffffff" stroke-width="0.8" opacity="0.7"/>
-
-  <!-- alpine scree/meadow ground at the base -->
-  <path d="M0 70 Q20 65 40 69 Q60 65 80 70 L80 80 L0 80 Z" fill="url(#mh-ground)"/>
-  <path d="M4 73 Q14 71 24 73 M50 72 Q62 70 74 73" stroke="#3b4632" stroke-width="1" opacity="0.5" fill="none" stroke-linecap="round"/>
+  <!-- 馬特洪峰（2.5D）：瑞士與義大利邊界的阿爾卑斯名峰，尖銳的金字塔形岩峰沿著稜線積著白雪，山腳是綠色山坡、松樹和紅頂木屋；山峰旁的旗雲緩緩飄過（動畫）。光源左上，不描邊 -->
+  <g transform="translate(39.84 59.14) scale(1.2)">
+    <path d="M28.56 -0L22.17 7.39L16.46 -0.51L20.3 -6Z" fill="#46823d"/>
+    <path d="M-22.17 7.39L-28.29 0L-20.18 -6L-16.46 -0.51Z" fill="#86c770"/>
+    <path d="M22.17 7.39L14.15 14.15L10.09 4.09L16.46 -0.51Z" fill="#46823d"/>
+    <path d="M-14.28 14.28L-22.17 7.39L-16.46 -0.51L-10.15 4.15Z" fill="#62a652"/>
+    <path d="M14.15 14.15L0 14.93L0 5.04L10.09 4.09Z" fill="#46823d"/>
+    <path d="M0 14.93L-14.28 14.28L-10.15 4.15L0 5.04Z" fill="#62a652"/>
+    <path d="M10.09 4.09L0 5.04L-10.15 4.15L-16.46 -0.51L-20.18 -6L-16.56 -11.52L-10.15 -16.15L-0 -16.97L10.09 -16.09L16.56 -11.52L20.3 -6L16.46 -0.51Z" fill="#86c770"/>
+    <path d="M-3.46 -18L20.78 -6L2.6 -44.5Z" fill="#b9a892"/>
+    <path d="M-20.78 -4L-3.46 -18L2.6 -44.5Z" fill="#b9a892"/>
+    <path d="M20.78 -6L3.46 6L2.6 -44.5Z" fill="#6c5f4f"/>
+    <path d="M3.46 6L-20.78 -4L2.6 -44.5Z" fill="#93836e"/>
+    <path d="M0.66 -36.02L8.42 -32.18L2.6 -44.5Z" fill="#ffffff"/>
+    <path d="M-4.88 -31.54L0.66 -36.02L2.6 -44.5Z" fill="#ffffff"/>
+    <path d="M8.42 -32.18L2.88 -28.34L2.6 -44.5Z" fill="#bccbe0"/>
+    <path d="M2.88 -28.34L-4.88 -31.54L2.6 -44.5Z" fill="#e4edf7"/>
+    <path d="M3.71 -33.92L6.91 -33.92L5.51 -30.32Z" fill="#dce6f2"/>
+    <path d="M5.43 -31.42L8.63 -31.42L7.23 -27.82Z" fill="#dce6f2"/>
+    <path d="M3.49 -30.08L6.69 -30.08L5.29 -26.48Z" fill="#dce6f2"/>
+    <path d="M-0.66 -29.34L2.54 -29.34L1.14 -25.74Z" fill="#ffffff"/>
+    <path d="M-3.38 -30.46L-0.18 -30.46L-1.58 -26.86Z" fill="#ffffff"/>
+    <path d="M-5.1 -32.86L-1.9 -32.86L-3.3 -29.26Z" fill="#ffffff"/>
+    <path d="M8.78 -31.41L11.8 -23.32L13.4 -22.72Z" fill="#ffffff" opacity="0.9"/>
+    <path d="M2.89 -27.33L2.11 -16.73L4.03 -16.12Z" fill="#ffffff" opacity="0.9"/>
+    <path d="M-5.35 -30.73L-11.14 -22.23L-9.38 -21.62Z" fill="#ffffff" opacity="0.9"/>
+    <path d="M-17.68 -8.56L-17.74 -8.38L-17.92 -8.22L-18.2 -8.07L-18.59 -7.94L-19.05 -7.85L-19.56 -7.79L-20.1 -7.77L-20.64 -7.79L-21.15 -7.85L-21.61 -7.94L-21.99 -8.07L-22.28 -8.22L-22.46 -8.38L-22.52 -8.56L-22.46 -8.74L-22.28 -8.9L-21.99 -9.05L-21.61 -9.18L-21.15 -9.27L-20.64 -9.33L-20.1 -9.35L-19.56 -9.33L-19.05 -9.27L-18.59 -9.18L-18.2 -9.05L-17.92 -8.9L-17.74 -8.74Z" fill="#000000" opacity="0.2"/>
+    <path d="M-21.82 -9L-22.52 -8.6L-22.52 -10.35L-21.82 -10.75Z" fill="#7d5a34"/>
+    <path d="M-23.21 -9L-22.52 -8.6L-22.52 -10.35L-23.21 -10.75Z" fill="#a77e4c"/>
+    <path d="M-24.72 -10.4L-20.32 -10.4L-22.52 -14.25Z" fill="#3f8a55"/>
+    <path d="M-22.19 -10.18L-20.32 -10.4L-22.52 -14.25Z" fill="#2b663f"/>
+    <path d="M-24.72 -10.4L-23.73 -10.4L-22.52 -14.25Z" fill="#5fb071" opacity="0.8"/>
+    <path d="M-24.1 -12.5L-20.93 -12.5L-22.52 -16Z" fill="#3f8a55"/>
+    <path d="M-22.28 -12.34L-20.93 -12.5L-22.52 -16Z" fill="#2b663f"/>
+    <path d="M-24.1 -12.5L-23.39 -12.5L-22.52 -16Z" fill="#5fb071" opacity="0.8"/>
+    <path d="M-19.41 -3.56L-19.47 -3.38L-19.65 -3.22L-19.94 -3.07L-20.32 -2.94L-20.78 -2.85L-21.29 -2.79L-21.83 -2.77L-22.37 -2.79L-22.88 -2.85L-23.34 -2.94L-23.72 -3.07L-24.01 -3.22L-24.19 -3.38L-24.25 -3.56L-24.19 -3.74L-24.01 -3.9L-23.72 -4.05L-23.34 -4.18L-22.88 -4.27L-22.37 -4.33L-21.83 -4.35L-21.29 -4.33L-20.78 -4.27L-20.32 -4.18L-19.94 -4.05L-19.65 -3.9L-19.47 -3.74Z" fill="#000000" opacity="0.2"/>
+    <path d="M-23.56 -4L-24.25 -3.6L-24.25 -5.35L-23.56 -5.75Z" fill="#7d5a34"/>
+    <path d="M-24.94 -4L-24.25 -3.6L-24.25 -5.35L-24.94 -5.75Z" fill="#a77e4c"/>
+    <path d="M-26.45 -5.4L-22.05 -5.4L-24.25 -9.25Z" fill="#3f8a55"/>
+    <path d="M-23.92 -5.18L-22.05 -5.4L-24.25 -9.25Z" fill="#2b663f"/>
+    <path d="M-26.45 -5.4L-25.46 -5.4L-24.25 -9.25Z" fill="#5fb071" opacity="0.8"/>
+    <path d="M-25.83 -7.5L-22.66 -7.5L-24.25 -11Z" fill="#3f8a55"/>
+    <path d="M-24.01 -7.34L-22.66 -7.5L-24.25 -11Z" fill="#2b663f"/>
+    <path d="M-25.83 -7.5L-25.12 -7.5L-24.25 -11Z" fill="#5fb071" opacity="0.8"/>
+    <path d="M-0.36 9.44L-0.42 9.62L-0.6 9.78L-0.88 9.93L-1.27 10.06L-1.73 10.15L-2.24 10.21L-2.78 10.23L-3.31 10.21L-3.83 10.15L-4.28 10.06L-4.67 9.93L-4.96 9.78L-5.14 9.62L-5.2 9.44L-5.14 9.26L-4.96 9.1L-4.67 8.95L-4.28 8.82L-3.83 8.73L-3.31 8.67L-2.78 8.65L-2.24 8.67L-1.73 8.73L-1.27 8.82L-0.88 8.95L-0.6 9.1L-0.42 9.26Z" fill="#000000" opacity="0.2"/>
+    <path d="M-4.5 9L-5.2 9.4L-5.2 7.65L-4.5 7.25Z" fill="#7d5a34"/>
+    <path d="M-5.89 9L-5.2 9.4L-5.2 7.65L-5.89 7.25Z" fill="#a77e4c"/>
+    <path d="M-7.4 7.6L-3 7.6L-5.2 3.75Z" fill="#3f8a55"/>
+    <path d="M-4.87 7.82L-3 7.6L-5.2 3.75Z" fill="#2b663f"/>
+    <path d="M-7.4 7.6L-6.41 7.6L-5.2 3.75Z" fill="#5fb071" opacity="0.8"/>
+    <path d="M-6.78 5.5L-3.61 5.5L-5.2 2Z" fill="#3f8a55"/>
+    <path d="M-4.96 5.66L-3.61 5.5L-5.2 2Z" fill="#2b663f"/>
+    <path d="M-6.78 5.5L-6.07 5.5L-5.2 2Z" fill="#5fb071" opacity="0.8"/>
+    <path d="M11.77 8.44L11.71 8.62L11.53 8.78L11.24 8.93L10.86 9.06L10.4 9.15L9.89 9.21L9.35 9.23L8.81 9.21L8.3 9.15L7.84 9.06L7.46 8.93L7.17 8.78L6.99 8.62L6.93 8.44L6.99 8.26L7.17 8.1L7.46 7.95L7.84 7.82L8.3 7.73L8.81 7.67L9.35 7.65L9.89 7.67L10.4 7.73L10.86 7.82L11.24 7.95L11.53 8.1L11.71 8.26Z" fill="#000000" opacity="0.2"/>
+    <path d="M7.62 8L6.93 8.4L6.93 6.65L7.62 6.25Z" fill="#7d5a34"/>
+    <path d="M6.24 8L6.93 8.4L6.93 6.65L6.24 6.25Z" fill="#a77e4c"/>
+    <path d="M4.73 6.6L9.13 6.6L6.93 2.75Z" fill="#3f8a55"/>
+    <path d="M7.26 6.82L9.13 6.6L6.93 2.75Z" fill="#2b663f"/>
+    <path d="M4.73 6.6L5.72 6.6L6.93 2.75Z" fill="#5fb071" opacity="0.8"/>
+    <path d="M5.34 4.5L8.51 4.5L6.93 1Z" fill="#3f8a55"/>
+    <path d="M7.17 4.66L8.51 4.5L6.93 1Z" fill="#2b663f"/>
+    <path d="M5.34 4.5L6.06 4.5L6.93 1Z" fill="#5fb071" opacity="0.8"/>
+    <path d="M-14.21 3.44L-14.27 3.62L-14.45 3.78L-14.74 3.93L-15.12 4.06L-15.58 4.15L-16.09 4.21L-16.63 4.23L-17.17 4.21L-17.68 4.15L-18.14 4.06L-18.52 3.93L-18.81 3.78L-18.99 3.62L-19.05 3.44L-18.99 3.26L-18.81 3.1L-18.52 2.95L-18.14 2.82L-17.68 2.73L-17.17 2.67L-16.63 2.65L-16.09 2.67L-15.58 2.73L-15.12 2.82L-14.74 2.95L-14.45 3.1L-14.27 3.26Z" fill="#000000" opacity="0.2"/>
+    <path d="M-18.36 3L-19.05 3.4L-19.05 1.65L-18.36 1.25Z" fill="#7d5a34"/>
+    <path d="M-19.75 3L-19.05 3.4L-19.05 1.65L-19.75 1.25Z" fill="#a77e4c"/>
+    <path d="M-21.25 1.6L-16.85 1.6L-19.05 -2.25Z" fill="#3f8a55"/>
+    <path d="M-18.72 1.82L-16.85 1.6L-19.05 -2.25Z" fill="#2b663f"/>
+    <path d="M-21.25 1.6L-20.26 1.6L-19.05 -2.25Z" fill="#5fb071" opacity="0.8"/>
+    <path d="M-20.64 -0.5L-17.47 -0.5L-19.05 -4Z" fill="#3f8a55"/>
+    <path d="M-18.81 -0.34L-17.47 -0.5L-19.05 -4Z" fill="#2b663f"/>
+    <path d="M-20.64 -0.5L-19.92 -0.5L-19.05 -4Z" fill="#5fb071" opacity="0.8"/>
+    <path d="M-5.2 7L-7.79 8.5L-7.79 5.5L-5.2 4Z" fill="#5a3f28"/>
+    <path d="M-11.26 6.5L-7.79 8.5L-7.79 5.5L-11.26 3.5Z" fill="#7d5a3a"/>
+    <path d="M-8.66 2L-5.2 4L-7.79 5.5L-11.26 3.5Z" fill="#a37a52"/>
+    <path d="M-11.95 3.5L-8.66 1.6L-8.23 1.35Z" fill="#e8775a"/>
+    <path d="M-8.66 1.6L-4.5 4L-8.23 1.35Z" fill="#e8775a"/>
+    <path d="M-7.79 5.9L-11.95 3.5L-8.23 1.35Z" fill="#c8563c"/>
+    <path d="M-4.5 4L-7.79 5.9L-8.23 1.35Z" fill="#94402c"/>
+    <g opacity=".9"><animateTransform attributeName="transform" type="translate" values="-6 0;10 -1;-6 0" dur="12s" repeatCount="indefinite"/><ellipse cx="5.20" cy="-27.00" rx="6" ry="1.8" fill="#ffffff"/><ellipse cx="3.20" cy="-28.20" rx="3" ry="1.6" fill="#ffffff"/><ellipse cx="7.20" cy="-26.60" rx="4" ry="1.2" fill="#e8eef6"/></g>
+    <g opacity=".9"><animateTransform attributeName="transform" type="translate" values="-6 0;10 -1;-6 0" dur="16s" repeatCount="indefinite"/><ellipse cx="5.20" cy="-17.00" rx="6" ry="1.8" fill="#ffffff"/><ellipse cx="3.20" cy="-18.20" rx="3" ry="1.6" fill="#ffffff"/><ellipse cx="7.20" cy="-16.60" rx="4" ry="1.2" fill="#e8eef6"/></g>
+  </g>
 </svg>
