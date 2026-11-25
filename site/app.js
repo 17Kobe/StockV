@@ -1702,40 +1702,41 @@
         { src: 'critters/qinghai-lake.svg', lon: 100.2, lat: 36.9, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 中國：青海湖
         { src: 'critters/canton-tower.svg', lon: 113.32, lat: 23.11, mode: 'still', face: 'F', iso: 'tower', isoK: 0.8, sea: true, deco: true, landmark: true }, // 中國：廣州塔（跟古達明納塔形狀相近，isoK 0.8 讓高瘦塔身跟其他地標差不多大）
         // ---- 2026-11 新增地標（第二批）：位置跟既有地標太近的，依慣例往旁邊錯開，註解寫明真實位置 ----
-        { src: 'critters/el-nido.svg', lon: 119.39, lat: 11.18, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 菲律賓：巴拉望愛妮島
-        { src: 'critters/otaru-canal.svg', lon: 141.0, lat: 43.2, mode: 'still', face: 'F', iso: 'building', sea: true, deco: true, landmark: true }, // 日本：北海道小樽運河
-        { src: 'critters/farm-tomita.svg', lon: 142.44, lat: 43.42, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 日本：北海道富良野富田農場
-        { src: 'critters/yilan-traditional-arts.svg', lon: 121.83, lat: 24.69, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 台灣：宜蘭國立傳統藝術中心
-        { src: 'critters/kaohsiung-music-center.svg', lon: 120.5, lat: 22.64, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 台灣：高雄流行音樂中心（真實位置 120.30, 22.62 跟駁二幾乎重疊，往東拉開約 0.2 度）
-        { src: 'critters/liushidan-daylily.svg', lon: 121.38, lat: 23.2, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 台灣：花蓮六十石山金針花海（真實位置 121.28, 23.06，跟台灣黑熊、伯朗大道太近，往東北挪）
-        { src: 'critters/mr-brown-avenue.svg', lon: 121.18, lat: 22.82, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 台灣：台東池上伯朗大道（真實位置 121.21, 23.11，跟六十石山只差 0.1 度，往南挪）
-        { src: 'critters/anping-fort.svg', lon: 120.12, lat: 23.0, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 台灣：台南安平古堡
-        { src: 'critters/chihkan-tower.svg', lon: 120.38, lat: 23.14, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 台灣：台南赤崁樓（真實位置 120.20, 23.00 跟安平古堡只差 0.04 度，往東北拉開約 0.25 度）
-        { src: 'critters/cingjing-farm.svg', lon: 121.12, lat: 24.2, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 台灣：南投清境農場（真實位置 121.16, 24.05，跟梅花鹿、日月潭太近，往北挪）
-        { src: 'critters/penghu-bridge.svg', lon: 119.58, lat: 23.65, mode: 'still', face: 'F', iso: 'building', sea: true, deco: true, landmark: true }, // 台灣：澎湖跨海大橋
-        { src: 'critters/qimei-twin-hearts.svg', lon: 119.42, lat: 23.2, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 台灣：澎湖七美雙心石滬
-        { src: 'critters/kinmen-deyue-tower.svg', lon: 118.3, lat: 24.41, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 台灣：金門得月樓
-        { src: 'critters/matsu-qinbi.svg', lon: 119.96, lat: 26.22, mode: 'still', face: 'F', iso: 'building', sea: true, deco: true, landmark: true }, // 台灣：馬祖北竿芹壁聚落
-        { src: 'critters/provence-lavender.svg', lon: 5.98, lat: 43.84, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 法國：普羅旺斯薰衣草田
-        { src: 'critters/dutch-tulips.svg', lon: 5.75, lat: 52.7, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 荷蘭：東北圩田鬱金香花田（庫肯霍夫一帶跟荷蘭風車太近，改放荷蘭最大的鬱金香產區）
-        { src: 'critters/algonquin-maple.svg', lon: -78.4, lat: 45.6, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 加拿大：阿岡昆省立公園楓紅
-        { src: 'critters/general-sherman-tree.svg', lon: -118.75, lat: 36.58, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 美國：紅杉國家公園謝爾曼將軍樹
-        { src: 'critters/maori-haka.svg', lon: 176.25, lat: -38.14, mode: 'still', face: 'F', iso: 'person', deco: true, landmark: true }, // 紐西蘭：毛利戰舞 Haka（羅托魯瓦）
-        { src: 'critters/ganges-diyas.svg', lon: 78.16, lat: 29.95, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 印度：恆河河燈（哈里德瓦 Har Ki Pauri 夜祭；瓦拉納西已有河階圖示，改放上游的哈里德瓦）
-        { src: 'critters/bangkok-floating-market.svg', lon: 99.95, lat: 13.52, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 泰國：曼谷丹嫩莎朵水上市場
-        { src: 'critters/ethiopia-coffee-ceremony.svg', lon: 38.75, lat: 9.0, mode: 'still', face: 'F', iso: 'person', deco: true, landmark: true }, // 衣索比亞：咖啡儀式
-        { src: 'critters/great-zimbabwe.svg', lon: 30.93, lat: -20.27, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 辛巴威：大辛巴威遺址
-        { src: 'critters/icebreaker.svg', lon: 75, lat: 75.5, mode: 'boat', face: 'L', iso: 'vehicle', sea: true, deco: true, maxDeg: 3 }, // 北冰洋航道：破冰船（喀拉海）
-        { src: 'critters/dome-of-the-rock.svg', lon: 34.85, lat: 31.4, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 耶路撒冷：圓頂清真寺（真實位置 35.235, 31.778 跟西牆完全重疊，往西南拉開約 0.5 度）
-        { src: 'critters/isfahan-shah-mosque.svg', lon: 51.68, lat: 32.66, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 伊朗：伊斯法罕王侯清真寺（伊瑪目清真寺）
-        { src: 'critters/oman-frankincense.svg', lon: 54.0, lat: 17.1, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 阿曼：佐法爾乳香樹
-        { src: 'critters/inner-mongolia-horses.svg', lon: 116.1, lat: 43.9, mode: 'trek', face: 'L', iso: 'animal', deco: true, noShadow: true, maxDeg: 2, rock: 2.5, bounce: 0.05 }, // 中國：內蒙古錫林郭勒草原駿馬
-        { src: 'critters/hukou-waterfall.svg', lon: 110.45, lat: 36.15, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 中國：黃河壺口瀑布
-        { src: 'critters/hzmb-bridge.svg', lon: 113.8, lat: 21.95, mode: 'still', face: 'F', iso: 'building', sea: true, deco: true, landmark: true }, // 中國：港珠澳大橋（真實位置在香港、澳門之間，跟大三巴、香港天際線太近，往南移到海上）
-        { src: 'critters/miao-stilt-houses.svg', lon: 108.17, lat: 26.49, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 中國：貴州西江千戶苗寨吊腳樓
-        { src: 'critters/spilled-blood-church.svg', lon: 30.33, lat: 59.94, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 俄羅斯：聖彼得堡救世主滴血大教堂
-        { src: 'critters/yak.svg', lon: 88.5, lat: 31.8, mode: 'wander', gait: 'heavy', iso: 'animal', deco: true, maxDeg: 2 }, // 西藏：犛牛
-        { src: 'critters/inle-fisherman.svg', lon: 96.91, lat: 20.55, mode: 'bob', face: 'F', iso: 'person', deco: true, landmark: true }, // 緬甸：茵萊湖獨腳划船漁夫
+        // 以下 34 個是這批新增的地標：使用者實際在地圖上看覺得整批都偏大，統一加 isoK 0.7 收斂（跟玉山 0.6、太魯閣/日月潭 0.66 同一套修正手法）
+        { src: 'critters/el-nido.svg', lon: 119.39, lat: 11.18, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, sea: true, deco: true, landmark: true }, // 菲律賓：巴拉望愛妮島
+        { src: 'critters/otaru-canal.svg', lon: 141.0, lat: 43.2, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, sea: true, deco: true, landmark: true }, // 日本：北海道小樽運河
+        { src: 'critters/farm-tomita.svg', lon: 142.44, lat: 43.42, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 日本：北海道富良野富田農場
+        { src: 'critters/yilan-traditional-arts.svg', lon: 121.83, lat: 24.69, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, deco: true, landmark: true }, // 台灣：宜蘭國立傳統藝術中心
+        { src: 'critters/kaohsiung-music-center.svg', lon: 120.5, lat: 22.64, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, deco: true, landmark: true }, // 台灣：高雄流行音樂中心（真實位置 120.30, 22.62 跟駁二幾乎重疊，往東拉開約 0.2 度）
+        { src: 'critters/liushidan-daylily.svg', lon: 121.38, lat: 23.2, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 台灣：花蓮六十石山金針花海（真實位置 121.28, 23.06，跟台灣黑熊、伯朗大道太近，往東北挪）
+        { src: 'critters/mr-brown-avenue.svg', lon: 121.18, lat: 22.82, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 台灣：台東池上伯朗大道（真實位置 121.21, 23.11，跟六十石山只差 0.1 度，往南挪）
+        { src: 'critters/anping-fort.svg', lon: 120.12, lat: 23.0, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, deco: true, landmark: true }, // 台灣：台南安平古堡
+        { src: 'critters/chihkan-tower.svg', lon: 120.38, lat: 23.14, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, deco: true, landmark: true }, // 台灣：台南赤崁樓（真實位置 120.20, 23.00 跟安平古堡只差 0.04 度，往東北拉開約 0.25 度）
+        { src: 'critters/cingjing-farm.svg', lon: 121.12, lat: 24.2, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 台灣：南投清境農場（真實位置 121.16, 24.05，跟梅花鹿、日月潭太近，往北挪）
+        { src: 'critters/penghu-bridge.svg', lon: 119.58, lat: 23.65, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, sea: true, deco: true, landmark: true }, // 台灣：澎湖跨海大橋
+        { src: 'critters/qimei-twin-hearts.svg', lon: 119.42, lat: 23.2, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, sea: true, deco: true, landmark: true }, // 台灣：澎湖七美雙心石滬
+        { src: 'critters/kinmen-deyue-tower.svg', lon: 118.3, lat: 24.41, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, deco: true, landmark: true }, // 台灣：金門得月樓
+        { src: 'critters/matsu-qinbi.svg', lon: 119.96, lat: 26.22, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, sea: true, deco: true, landmark: true }, // 台灣：馬祖北竿芹壁聚落
+        { src: 'critters/provence-lavender.svg', lon: 5.98, lat: 43.84, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 法國：普羅旺斯薰衣草田
+        { src: 'critters/dutch-tulips.svg', lon: 5.75, lat: 52.7, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 荷蘭：東北圩田鬱金香花田（庫肯霍夫一帶跟荷蘭風車太近，改放荷蘭最大的鬱金香產區）
+        { src: 'critters/algonquin-maple.svg', lon: -78.4, lat: 45.6, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 加拿大：阿岡昆省立公園楓紅
+        { src: 'critters/general-sherman-tree.svg', lon: -118.75, lat: 36.58, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 美國：紅杉國家公園謝爾曼將軍樹
+        { src: 'critters/maori-haka.svg', lon: 176.25, lat: -38.14, mode: 'still', face: 'F', iso: 'person', isoK: 0.7, deco: true, landmark: true }, // 紐西蘭：毛利戰舞 Haka（羅托魯瓦）
+        { src: 'critters/ganges-diyas.svg', lon: 78.16, lat: 29.95, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, sea: true, deco: true, landmark: true }, // 印度：恆河河燈（哈里德瓦 Har Ki Pauri 夜祭；瓦拉納西已有河階圖示，改放上游的哈里德瓦）
+        { src: 'critters/bangkok-floating-market.svg', lon: 99.95, lat: 13.52, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, sea: true, deco: true, landmark: true }, // 泰國：曼谷丹嫩莎朵水上市場
+        { src: 'critters/ethiopia-coffee-ceremony.svg', lon: 38.75, lat: 9.0, mode: 'still', face: 'F', iso: 'person', isoK: 0.7, deco: true, landmark: true }, // 衣索比亞：咖啡儀式
+        { src: 'critters/great-zimbabwe.svg', lon: 30.93, lat: -20.27, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, deco: true, landmark: true }, // 辛巴威：大辛巴威遺址
+        { src: 'critters/icebreaker.svg', lon: 75, lat: 75.5, mode: 'boat', face: 'L', iso: 'vehicle', isoK: 0.7, sea: true, deco: true, maxDeg: 3 }, // 北冰洋航道：破冰船（喀拉海）
+        { src: 'critters/dome-of-the-rock.svg', lon: 34.85, lat: 31.4, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, deco: true, landmark: true }, // 耶路撒冷：圓頂清真寺（真實位置 35.235, 31.778 跟西牆完全重疊，往西南拉開約 0.5 度）
+        { src: 'critters/isfahan-shah-mosque.svg', lon: 51.68, lat: 32.66, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, deco: true, landmark: true }, // 伊朗：伊斯法罕王侯清真寺（伊瑪目清真寺）
+        { src: 'critters/oman-frankincense.svg', lon: 54.0, lat: 17.1, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 阿曼：佐法爾乳香樹
+        { src: 'critters/inner-mongolia-horses.svg', lon: 116.1, lat: 43.9, mode: 'trek', face: 'L', iso: 'animal', isoK: 0.7, deco: true, noShadow: true, maxDeg: 2, rock: 2.5, bounce: 0.05 }, // 中國：內蒙古錫林郭勒草原駿馬
+        { src: 'critters/hukou-waterfall.svg', lon: 110.45, lat: 36.15, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 中國：黃河壺口瀑布
+        { src: 'critters/hzmb-bridge.svg', lon: 113.8, lat: 21.95, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, sea: true, deco: true, landmark: true }, // 中國：港珠澳大橋（真實位置在香港、澳門之間，跟大三巴、香港天際線太近，往南移到海上）
+        { src: 'critters/miao-stilt-houses.svg', lon: 108.17, lat: 26.49, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, deco: true, landmark: true }, // 中國：貴州西江千戶苗寨吊腳樓
+        { src: 'critters/spilled-blood-church.svg', lon: 30.33, lat: 59.94, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, deco: true, landmark: true }, // 俄羅斯：聖彼得堡救世主滴血大教堂
+        { src: 'critters/yak.svg', lon: 88.5, lat: 31.8, mode: 'wander', gait: 'heavy', iso: 'animal', isoK: 0.7, deco: true, maxDeg: 2 }, // 西藏：犛牛
+        { src: 'critters/inle-fisherman.svg', lon: 96.91, lat: 20.55, mode: 'bob', face: 'F', iso: 'person', isoK: 0.7, deco: true, landmark: true }, // 緬甸：茵萊湖獨腳划船漁夫
         {
             src: 'critters/wall-street-bull.svg',
             lon: -74.25,
