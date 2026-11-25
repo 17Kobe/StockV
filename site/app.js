@@ -329,7 +329,6 @@
         { src: 'critters/eiffel-tower.svg', lon: 2.3, lat: 48.3, mode: 'still', face: 'F', iso: 'tower', deco: true, landmark: true }, // 艾菲爾鐵塔
         { src: 'critters/big-ben.svg', lon: 0.8, lat: 51.0, mode: 'still', face: 'F', iso: 'tower', deco: true, landmark: true }, // 大笨鐘
         { src: 'critters/leaning-tower.svg', lon: 10.4, lat: 42.8, mode: 'still', face: 'F', iso: 'tower', deco: true, landmark: true }, // 比薩斜塔
-        { src: 'critters/colosseum.svg', lon: 12.5, lat: 41.9, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 羅馬競技場
         { src: 'critters/greek-house.svg', lon: 25.4, lat: 36.4, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 希臘聖托里尼
         { src: 'critters/pyramid.svg', lon: 31.1, lat: 29.97, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 吉薩金字塔
         { src: 'critters/hot-balloon.svg', lon: 36.6, lat: 38.2, mode: 'still', iso: 'nature', deco: true, landmark: true }, // 卡帕多奇亞熱氣球
@@ -1905,6 +1904,7 @@
             landmark: true,
         }, // 匈牙利：布達佩斯國會大廈
         { src: 'critters/pantheon-rome.svg', lon: 11.4, lat: 42.5, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 義大利：萬神殿：真實位置和羅馬競技場只差 0.02 度、完全疊在一起，往西北拉開約 1.2 度（也和佛羅倫斯的穹頂、達文西保持距離）
+        { src: 'critters/colosseum.svg', lon: 12.5, lat: 41.9, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 羅馬競技場（緯度比萬神殿更南，搬到這裡排在它後面，陣列順序後面＝畫在上層，才會蓋住萬神殿而不是被蓋住）
         {
             src: 'critters/hagia-sophia.svg',
             lon: 28.9802,
