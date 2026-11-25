@@ -1481,7 +1481,7 @@
             landmark: true,
         }, // 中國：桂林山水與竹筏
         // ── 第十四批補充（11-20 用戶列的清單：北韓、澳洲、印度，全部 2.5D 統一風格） ──
-        { src: 'critters/juche-tower.svg', lon: 125.77, lat: 39.02, mode: 'still', face: 'F', iso: 'tower', deco: true, landmark: true }, // 北韓：平壤主體思想塔
+        { src: 'critters/juche-tower.svg', lon: 125.77, lat: 39.02, mode: 'still', face: 'F', iso: 'tower', isoK: 0.6, deco: true, landmark: true }, // 北韓：平壤主體思想塔（170m，比樂天世界塔 555m 矮很多，isoK 0.6 縮小）
         { src: 'critters/sydney-harbour-bridge.svg', lon: 151.6, lat: -34.0, mode: 'still', face: 'F', iso: 'building', sea: true, deco: true, landmark: true }, // 澳洲：雪梨港灣大橋（歌劇院在東南外海，兩個錯開）
         { src: 'critters/twelve-apostles.svg', lon: 143.1, lat: -38.9, mode: 'still', face: 'F', iso: 'nature', isoK: 0.8, sea: true, deco: true, landmark: true }, // 澳洲：大洋路十二使徒岩
         { src: 'critters/amber-fort.svg', lon: 75.5, lat: 27.4, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 印度：齋浦爾琥珀堡（往西北拉開，跟風之宮錯開）
@@ -1636,7 +1636,7 @@
             deco: true,
             landmark: true,
         }, // 南韓：樂天世界塔：原座標跟首爾一帶地標太近，實測要放到 k>=9.5 才會出現，拉開距離修正
-        { src: 'critters/kpop-concert.svg', lon: 126.0, lat: 36.2, mode: 'still', face: 'F', iso: 'building', deco: true }, // 南韓：K-pop 演唱會
+        { src: 'critters/kpop-concert.svg', lon: 126.0, lat: 36.2, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, deco: true }, // 南韓：K-pop 演唱會（isoK 0.7 縮小）
         {
             src: 'critters/mogao-crescent-lake.svg',
             lon: 94.66,
@@ -1836,10 +1836,11 @@
             mode: 'still',
             face: 'F',
             iso: 'nature',
+            isoK: 0.7,
             sea: true,
             deco: true,
             landmark: true,
-        }, // 函館山夜景纜車
+        }, // 函館山夜景纜車（isoK 0.7 縮小）
         {
             src: 'critters/harbin-ice-world.svg',
             lon: 126.6,
