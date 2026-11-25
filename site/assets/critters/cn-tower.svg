@@ -1,19 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <defs>
-    <linearGradient id="cn" x1="0" x2="1"><stop offset="0" stop-color="#f4f4f1"/><stop offset=".5" stop-color="#cfd0cc"/><stop offset="1" stop-color="#8f9490"/></linearGradient>
-    <linearGradient id="gb" x1="0" x2="1"><stop offset="0" stop-color="#9ccae0"/><stop offset="1" stop-color="#4f86a6"/></linearGradient>
-  </defs>
-  <!-- 加拿大多倫多西恩塔（CN Tower）：細長塔身、大圓盤觀景艙、頂端天線，湖邊與天際線 -->
-  <rect x="0" y="108" width="128" height="20" fill="#4b7fae"/>
-  <path d="M0 112 Q16 109 32 112 T64 112 T96 112 T128 112" stroke="#cfe8f8" stroke-width="1.2" fill="none"/>
-  <g fill="url(#gb)" stroke="#3a6a88" stroke-width=".8"><rect x="4" y="82" width="14" height="28"/><rect x="20" y="92" width="10" height="18"/><rect x="92" y="76" width="14" height="34"/><rect x="108" y="88" width="14" height="22"/></g>
-  <path d="M64 0 V70" stroke="#aab0b4" stroke-width="2"/>
-  <path d="M64 70 L61.5 74 L59 112 H69 L66.5 74Z" fill="url(#cn)" stroke="#8f9490" stroke-width=".8"/>
-  <path d="M63 70 L61 100 M65 70 L67 100" stroke="#e6e7e4" stroke-width=".8"/>
-  <path d="M58 56 L70 56 L68 66 H60Z" fill="#c8cbc6" stroke="#8f9490" stroke-width=".8"/>
-  <ellipse cx="64" cy="72" rx="16" ry="5" fill="url(#cn)" stroke="#8f9490" stroke-width="1"/>
-  <ellipse cx="64" cy="68" rx="13" ry="4" fill="#7aa4be" stroke="#4f6e86" stroke-width=".8"/>
-  <path d="M51 72 L77 72 L72 78 H56Z" fill="#d7d9d5" stroke="#8f9490" stroke-width=".8"/>
-  <circle cx="64" cy="28" r="1.8" fill="#ff5a4a"><animate attributeName="opacity" values="1;.2;1" dur="1.8s" repeatCount="indefinite"/></circle>
-  <rect x="62.6" y="26" width="2.8" height="44" fill="#cfd0cc"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 西恩塔（2.5D）：加拿大多倫多的米白色混凝土電視塔，塔身往上收細，中段是圓盤形的玻璃觀景台（燈光閃爍），頂上是紅白天線與閃爍的航空燈，塔腳旁是多倫多巨蛋與幾棟玻璃大樓（動畫）。光源左上，不描邊 -->
+  <g transform="translate(40.94 64) scale(0.89)">
+    <path d="M-6.93 0L0 -4L6.93 0L12.61 4.72L5.68 8.72L-1.25 4.72Z" fill="#000000" opacity="0.2"/>
+    <path d="M5.89 0L0 3.4L0 -38.4L2.77 -40Z" fill="#9a9480"/>
+    <path d="M-5.89 0L0 3.4L0 -38.4L-2.77 -40Z" fill="#c8c2b0"/>
+    <path d="M0 -41.6L2.77 -40L0 -38.4L-2.77 -40Z" fill="#ece8dc"/>
+    <path d="M-3.29 0.5L-2.6 0.9L-2.68 -36.15L-3.2 -36.45Z" fill="#6a7488" opacity="0.6"/>
+    <path d="M3.29 0.5L2.6 0.9L2.68 -36.15L3.2 -36.45Z" fill="#5a6478" opacity="0.6"/>
+    <path d="M-2.4 -37.72L-2.4 -38.28L-6.49 -40.74L-6.49 -39.26Z" fill="#ece8dc"/>
+    <path d="M2.4 -38.28L2.4 -37.72L6.49 -39.26L6.49 -40.74Z" fill="#9a9480"/>
+    <path d="M2.4 -37.72L2.04 -37.21L5.5 -37.88L6.49 -39.26Z" fill="#9a9480"/>
+    <path d="M-2.04 -37.21L-2.4 -37.72L-6.49 -39.26L-5.5 -37.88Z" fill="#ece8dc"/>
+    <path d="M2.04 -37.21L1.36 -36.82L3.67 -36.83L5.5 -37.88Z" fill="#9a9480"/>
+    <path d="M-1.36 -36.82L-2.04 -37.21L-5.5 -37.88L-3.67 -36.83Z" fill="#c8c2b0"/>
+    <path d="M-0.48 -36.61L-1.36 -36.82L-3.67 -36.83L-1.29 -36.25Z" fill="#c8c2b0"/>
+    <path d="M1.36 -36.82L0.48 -36.61L1.29 -36.25L3.67 -36.83Z" fill="#9a9480"/>
+    <path d="M0.48 -36.61L-0.48 -36.61L-1.29 -36.25L1.29 -36.25Z" fill="#c8c2b0"/>
+    <path d="M3.67 -36.83L1.29 -36.25L-1.29 -36.25L-3.67 -36.83L-5.5 -37.88L-6.49 -39.26L-6.49 -40.74L-5.5 -42.12L-3.67 -43.17L-1.29 -43.75L1.29 -43.75L3.67 -43.17L5.5 -42.12L6.49 -40.74L6.49 -39.26L5.5 -37.88Z" fill="#ece8dc"/>
+    <path d="M-6.49 -39.26L-6.49 -40.74L-6.49 -43.74L-6.49 -42.26Z" fill="#4a6a88"/>
+    <path d="M6.49 -40.74L6.49 -39.26L6.49 -42.26L6.49 -43.74Z" fill="#34506e"/>
+    <path d="M6.49 -39.26L5.5 -37.88L5.5 -40.88L6.49 -42.26Z" fill="#34506e"/>
+    <path d="M-5.5 -37.88L-6.49 -39.26L-6.49 -42.26L-5.5 -40.88Z" fill="#4a6a88"/>
+    <path d="M5.5 -37.88L3.67 -36.83L3.67 -39.83L5.5 -40.88Z" fill="#34506e"/>
+    <path d="M-3.67 -36.83L-5.5 -37.88L-5.5 -40.88L-3.67 -39.83Z" fill="#4a6a88"/>
+    <path d="M3.67 -36.83L1.29 -36.25L1.29 -39.25L3.67 -39.83Z" fill="#34506e"/>
+    <path d="M-1.29 -36.25L-3.67 -36.83L-3.67 -39.83L-1.29 -39.25Z" fill="#4a6a88"/>
+    <path d="M1.29 -36.25L-1.29 -36.25L-1.29 -39.25L1.29 -39.25Z" fill="#4a6a88"/>
+    <path d="M3.67 -39.83L1.29 -39.25L-1.29 -39.25L-3.67 -39.83L-5.5 -40.88L-6.49 -42.26L-6.49 -43.74L-5.5 -45.12L-3.67 -46.17L-1.29 -46.75L1.29 -46.75L3.67 -46.17L5.5 -45.12L6.49 -43.74L6.49 -42.26L5.5 -40.88Z" fill="#6a8aa8"/>
+    <path d="M-6.49 -42.26L-6.49 -43.74L-2.4 -45.28L-2.4 -44.72Z" fill="#ece8dc"/>
+    <path d="M6.49 -43.74L6.49 -42.26L2.4 -44.72L2.4 -45.28Z" fill="#9a9480"/>
+    <path d="M6.49 -42.26L5.5 -40.88L2.04 -44.21L2.4 -44.72Z" fill="#9a9480"/>
+    <path d="M-5.5 -40.88L-6.49 -42.26L-2.4 -44.72L-2.04 -44.21Z" fill="#ece8dc"/>
+    <path d="M5.5 -40.88L3.67 -39.83L1.36 -43.82L2.04 -44.21Z" fill="#9a9480"/>
+    <path d="M-3.67 -39.83L-5.5 -40.88L-2.04 -44.21L-1.36 -43.82Z" fill="#c8c2b0"/>
+    <path d="M3.67 -39.83L1.29 -39.25L0.48 -43.61L1.36 -43.82Z" fill="#9a9480"/>
+    <path d="M-1.29 -39.25L-3.67 -39.83L-1.36 -43.82L-0.48 -43.61Z" fill="#c8c2b0"/>
+    <path d="M1.29 -39.25L-1.29 -39.25L-0.48 -43.61L0.48 -43.61Z" fill="#c8c2b0"/>
+    <path d="M1.36 -43.82L0.48 -43.61L-0.48 -43.61L-1.36 -43.82L-2.04 -44.21L-2.4 -44.72L-2.4 -45.28L-2.04 -45.79L-1.36 -46.18L-0.48 -46.39L0.48 -46.39L1.36 -46.18L2.04 -45.79L2.4 -45.28L2.4 -44.72L2.04 -44.21Z" fill="#ece8dc"/>
+    <path d="M1.69 -45.15L1.53 -44.55L1.53 -50.55L1.69 -51.15Z" fill="#9a9480"/>
+    <path d="M-1.21 -44.3L-1.69 -44.85L-1.69 -50.85L-1.21 -50.3Z" fill="#c8c2b0"/>
+    <path d="M1.53 -44.55L0.78 -44.12L0.78 -50.12L1.53 -50.55Z" fill="#9a9480"/>
+    <path d="M-0.27 -44.02L-1.21 -44.3L-1.21 -50.3L-0.27 -50.02Z" fill="#c8c2b0"/>
+    <path d="M0.78 -44.12L-0.27 -44.02L-0.27 -50.02L0.78 -50.12Z" fill="#9a9480"/>
+    <path d="M0.78 -50.12L-0.27 -50.02L-1.21 -50.3L-1.69 -50.85L-1.53 -51.45L-0.78 -51.88L0.27 -51.98L1.21 -51.7L1.69 -51.15L1.53 -50.55Z" fill="#ece8dc"/>
+    <path d="M2.69 -51L2.33 -50.22L2.33 -51.82L2.69 -52.6Z" fill="#34506e"/>
+    <path d="M-2.33 -50.22L-2.69 -51L-2.69 -52.6L-2.33 -51.82Z" fill="#4a6a88"/>
+    <path d="M2.33 -50.22L1.35 -49.65L1.35 -51.25L2.33 -51.82Z" fill="#34506e"/>
+    <path d="M-1.35 -49.65L-2.33 -50.22L-2.33 -51.82L-1.35 -51.25Z" fill="#4a6a88"/>
+    <path d="M0 -49.44L-1.35 -49.65L-1.35 -51.25L0 -51.04Z" fill="#4a6a88"/>
+    <path d="M1.35 -49.65L0 -49.44L0 -51.04L1.35 -51.25Z" fill="#34506e"/>
+    <path d="M1.35 -51.25L0 -51.04L-1.35 -51.25L-2.33 -51.82L-2.69 -52.6L-2.33 -53.38L-1.35 -53.95L-0 -54.16L1.35 -53.95L2.33 -53.38L2.69 -52.6L2.33 -51.82Z" fill="#6a8aa8"/>
+    <path d="M1.13 -52.87L1.13 -52.33L0.23 -65.95L0.23 -66.05Z" fill="#962620"/>
+    <path d="M-1.13 -52.33L-1.13 -52.87L-0.23 -66.05L-0.23 -65.95Z" fill="#e04a3a"/>
+    <path d="M1.13 -52.33L0.47 -51.95L0.09 -65.87L0.23 -65.95Z" fill="#962620"/>
+    <path d="M-0.47 -51.95L-1.13 -52.33L-0.23 -65.95L-0.09 -65.87Z" fill="#c8342a"/>
+    <path d="M0.47 -51.95L-0.47 -51.95L-0.09 -65.87L0.09 -65.87Z" fill="#c8342a"/>
+    <path d="M0.09 -65.87L-0.09 -65.87L-0.23 -65.95L-0.23 -66.05L-0.09 -66.13L0.09 -66.13L0.23 -66.05L0.23 -65.95Z" fill="#e04a3a"/>
+    <circle cx="0.00" cy="-66.00" r=".8" fill="#ff5a4a"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle>
+    <circle cx="5.51" cy="-39.39" r="0.40" fill="#fff3b0"><animate attributeName="opacity" values="1;0.25;1" dur="2s" begin="0.0s" repeatCount="indefinite"/></circle>
+    <circle cx="2.49" cy="-37.96" r="0.40" fill="#fff3b0"><animate attributeName="opacity" values="1;0.25;1" dur="2s" begin="0.4s" repeatCount="indefinite"/></circle>
+    <circle cx="-1.41" cy="-37.77" r="0.40" fill="#fff3b0"><animate attributeName="opacity" values="1;0.25;1" dur="2s" begin="0.8s" repeatCount="indefinite"/></circle>
+    <circle cx="-4.81" cy="-38.88" r="0.40" fill="#fff3b0"><animate attributeName="opacity" values="1;0.25;1" dur="2s" begin="1.2000000000000002s" repeatCount="indefinite"/></circle>
+    <path d="M-3.53 7.5C-3.53 2.06 8.72 2.06 8.72 7.5Q2.6 14.57 -3.53 7.5Z" fill="#c8d0dc"/>
+    <path d="M3.52 10.96C5.35 5.5 5.05 3.7 2.9 3.58C6.88 3.5 8.72 5.1 8.72 7.5Q6.88 10.68 3.52 10.96Z" fill="#8e98a8"/>
+    <path d="M-2.91 7.1C-2.91 4.3 0.15 3.5 2.29 3.62C-0.77 4.5 -1.2 5.9 -0.77 8.91Z" fill="#f2f4f8" opacity="0.75"/>
+    <path d="M-9.53 -1.5L-12.12 0L-12.12 -12L-9.53 -13.5Z" fill="#5a80c2"/>
+    <path d="M-14.72 -1.5L-12.12 0L-12.12 -12L-14.72 -13.5Z" fill="#8fb4ee"/>
+    <path d="M-12.12 -15L-9.53 -13.5L-12.12 -12L-14.72 -13.5Z" fill="#d2e4ff"/>
+    <path d="M-9.53 2.5L-12.12 4L-12.12 -4L-9.53 -5.5Z" fill="#4c9c98"/>
+    <path d="M-14.72 2.5L-12.12 4L-12.12 -4L-14.72 -5.5Z" fill="#7fd0c6"/>
+    <path d="M-12.12 -7L-9.53 -5.5L-12.12 -4L-14.72 -5.5Z" fill="#c4f2ea"/>
+    <path d="M-6.06 -5.5L-8.66 -4L-8.66 -20L-6.06 -21.5Z" fill="#c48f4c"/>
+    <path d="M-11.26 -5.5L-8.66 -4L-8.66 -20L-11.26 -21.5Z" fill="#f3c47e"/>
+    <path d="M-8.66 -23L-6.06 -21.5L-8.66 -20L-11.26 -21.5Z" fill="#ffe9c4"/>
+  </g>
 </svg>

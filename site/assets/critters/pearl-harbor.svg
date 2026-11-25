@@ -1,95 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-<defs>
-  <linearGradient id="hillDarkGrad" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#5a9a4a"/>
-    <stop offset="100%" stop-color="#28521f"/>
-  </linearGradient>
-  <linearGradient id="hillLightGrad" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#8ac96a"/>
-    <stop offset="100%" stop-color="#4a8a34"/>
-  </linearGradient>
-  <linearGradient id="oceanGrad" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#5aa3e0"/>
-    <stop offset="100%" stop-color="#1d5a94"/>
-  </linearGradient>
-  <linearGradient id="memorialGrad" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#ffffff"/>
-    <stop offset="100%" stop-color="#d8dde0"/>
-  </linearGradient>
-  <linearGradient id="platformGrad" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#f2f5f6"/>
-    <stop offset="100%" stop-color="#c7ccd0"/>
-  </linearGradient>
-  <linearGradient id="hullGrad" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#9298a0"/>
-    <stop offset="100%" stop-color="#5c6168"/>
-  </linearGradient>
-  <linearGradient id="hullShadowGrad" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#767a80"/>
-    <stop offset="100%" stop-color="#3f4348"/>
-  </linearGradient>
-  <linearGradient id="bridgeGrad" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#b4b8c0"/>
-    <stop offset="100%" stop-color="#7a8088"/>
-  </linearGradient>
-  <linearGradient id="funnelGrad" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#848a90"/>
-    <stop offset="100%" stop-color="#4f5458"/>
-  </linearGradient>
-  <linearGradient id="flagGrad" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0%" stop-color="#e85a5a"/>
-    <stop offset="100%" stop-color="#9c1f1f"/>
-  </linearGradient>
-</defs>
-<!-- 背景山丘（深綠） -->
-<path d="M8,34 Q16,16 26,28 Q34,18 44,27 Q52,17 62,27 Q68,20 72,30 L72,46 L8,46 Z" fill="url(#hillDarkGrad)" stroke="#1f3f18" stroke-width="0.5"/>
-<!-- 背景山丘（淺綠，前景層） -->
-<path d="M8,38 Q18,24 30,34 Q40,25 50,34 Q60,25 72,36 L72,50 L8,50 Z" fill="url(#hillLightGrad)" stroke="#305f22" stroke-width="0.5"/>
-
-<!-- 港灣海水 -->
-<ellipse cx="40" cy="55" rx="32" ry="18" fill="url(#oceanGrad)" stroke="#123f66" stroke-width="0.6"/>
-
-<!-- 海面波浪紋 -->
-<path d="M12,62 Q18,59 24,62 Q30,65 36,62" fill="none" stroke="white" stroke-width="1.3" opacity="0.5"/>
-<path d="M40,67 Q46,64 52,67 Q58,70 64,67" fill="none" stroke="white" stroke-width="1.3" opacity="0.5"/>
-<path d="M14,70 Q20,67 26,70" fill="none" stroke="white" stroke-width="1.3" opacity="0.45"/>
-
-<!-- 亞利桑那紀念館風格白色建築（漂浮於水面） -->
-<g>
-  <path d="M15,54 L15,47 Q17,43 20,44.5 Q23,46.5 26,44.5 Q29,43 32,47 L32,54 Z" fill="url(#memorialGrad)" stroke="#aab2b8" stroke-width="0.5"/>
-  <rect x="18.5" y="46" width="1.8" height="7" fill="#2f80c9"/>
-  <rect x="22.5" y="46" width="1.8" height="7" fill="#2f80c9"/>
-  <rect x="26.5" y="46" width="1.8" height="7" fill="#2f80c9"/>
-  <rect x="13" y="54" width="21" height="2.2" fill="url(#platformGrad)" stroke="#a7acb0" stroke-width="0.5"/>
-</g>
-
-<!-- 戰艦主體群組：整體上下微幅漂浮動畫 -->
-<g>
-  <animateTransform attributeName="transform" type="translate" values="0,0; 0,-1.6; 0,0" dur="2.6s" repeatCount="indefinite"/>
-
-  <!-- 船體（戰艦灰） -->
-  <path d="M34,58 L41,49 L62,49 L68,54 L68,61 L34,61 Z" fill="url(#hullGrad)" stroke="#434850" stroke-width="0.6"/>
-  <!-- 船體吃水線陰影 -->
-  <path d="M34,61 L68,61 L68,58.5 L34,58.5 Z" fill="url(#hullShadowGrad)" stroke="#2c2f33" stroke-width="0.5"/>
-
-  <!-- 艦橋塔 -->
-  <rect x="47" y="36" width="10" height="13" rx="1.5" fill="url(#bridgeGrad)" stroke="#5c6168" stroke-width="0.5"/>
-  <!-- 煙囪 -->
-  <rect x="58" y="33" width="4" height="7" rx="0.8" fill="url(#funnelGrad)" stroke="#3a3e42" stroke-width="0.4"/>
-
-  <!-- 主炮塔 -->
-  <circle cx="40" cy="47" r="3.6" fill="url(#hullShadowGrad)" stroke="#2c2f33" stroke-width="0.5"/>
-  <rect x="34.5" y="45.6" width="6" height="2.6" fill="url(#hullShadowGrad)" stroke="#2c2f33" stroke-width="0.4"/>
-  <circle cx="63" cy="47" r="3.6" fill="url(#hullShadowGrad)" stroke="#2c2f33" stroke-width="0.5"/>
-  <rect x="61.5" y="45.6" width="6" height="2.6" fill="url(#hullShadowGrad)" stroke="#2c2f33" stroke-width="0.4"/>
-
-  <!-- 船桅 -->
-  <line x1="52" y1="36" x2="52" y2="24" stroke="#5f6369" stroke-width="1.8"/>
-
-  <!-- 旗子：以船桅頂點為軸心小幅擺動 -->
-  <g transform-origin="52 24">
-    <animateTransform attributeName="transform" type="rotate" values="-6 52 24; 10 52 24; -6 52 24" dur="1.8s" repeatCount="indefinite"/>
-    <path d="M52,24 L60,26.5 L52,29 Z" fill="url(#flagGrad)" stroke="#6e1414" stroke-width="0.5"/>
+  <!-- 珍珠港（2.5D）：夏威夷珍珠港的亞利桑那號紀念館，橫跨在沉沒戰艦上方的白色紀念館中間下凹、兩端隆起，牆上一排窗，水面下隱約看得到戰艦輪廓，美國國旗飄揚，花圈在水上漂、水波擴散（動畫）。光源左上，不描邊 -->
+  <g transform="translate(40 55.64) scale(1.26)">
+    <path d="M-5.2 -17L29.44 3L5.2 17L-29.44 -3Z" fill="#52c3dc"/>
+    <path d="M-4.12 -12.62L20.13 1.38L4.12 10.62L-20.13 -3.38Z" fill="#9be3ea" opacity="0.4"/>
+    <path d="M-4.76 -10.33L-3.56 -10.68L-2.36 -10.33L-3.56 -9.98Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="2.2s" begin="0.0s" repeatCount="indefinite"/></path>
+    <path d="M7.74 -2.05L8.94 -2.40L10.14 -2.05L8.94 -1.70Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="2.7s" begin="0.6s" repeatCount="indefinite"/></path>
+    <path d="M-10.69 -6.28L-9.49 -6.63L-8.29 -6.28L-9.49 -5.93Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="3.2s" begin="1.2s" repeatCount="indefinite"/></path>
+    <path d="M2.08 -4.53L3.28 -4.88L4.48 -4.53L3.28 -4.18Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="3.7s" begin="1.8s" repeatCount="indefinite"/></path>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-1.00 6.00a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM-0.82 6.00a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z"><animate attributeName="d" values="M-1.00 6.00a1.00 0.50 0 1 0 2.00 0a1.00 0.50 0 1 0 -2.00 0ZM-0.82 6.00a0.82 0.41 0 1 0 1.64 0a0.82 0.41 0 1 0 -1.64 0Z;M-5.00 6.00a5.00 2.50 0 1 0 10.00 0a5.00 2.50 0 1 0 -10.00 0ZM-4.10 6.00a4.10 2.05 0 1 0 8.20 0a4.10 2.05 0 1 0 -8.20 0Z" dur="3s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0" dur="3s" begin="0s" repeatCount="indefinite"/></path>
+    <path d="M-12.12 -9.01L12.12 4.99L13.86 7.99L8.66 6.99L-15.59 -7.01Z" fill="#2a5a7a" opacity="0.45"/>
+    <path d="M-6.06 -4.52L-3.46 -3.02L-5.2 -2.02L-7.79 -3.52Z" fill="#1f4a64" opacity="0.5"/>
+    <path d="M2.6 0.48L5.2 1.98L3.46 2.98L0.87 1.48Z" fill="#1f4a64" opacity="0.5"/>
+    <path d="M-10.39 -12L-8.66 -10.38L-6.93 -8.8L-5.2 -7.3L-3.46 -5.92L-1.73 -4.68L0 -3.6L1.73 -2.68L3.46 -1.92L5.2 -1.3L6.93 -0.8L8.66 -0.38L10.39 0L10.39 4L8.66 2.64L6.93 1.3L5.2 0.01L3.46 -1.21L1.73 -2.35L0 -3.4L-1.73 -4.35L-3.46 -5.21L-5.2 -5.99L-6.93 -6.7L-8.66 -7.36L-10.39 -8Z" fill="#e8edf4"/>
+    <path d="M-10.39 -12L-8.66 -10.38L-6.93 -8.8L-5.2 -7.3L-3.46 -5.92L-1.73 -4.68L0 -3.6L1.73 -2.68L3.46 -1.92L5.2 -1.3L6.93 -0.8L8.66 -0.38L10.39 0L7.45 1.7L5.72 1.32L3.98 0.9L2.25 0.4L0.52 -0.22L-1.21 -0.98L-2.94 -1.9L-4.68 -2.98L-6.41 -4.22L-8.14 -5.6L-9.87 -7.1L-11.6 -8.68L-13.34 -10.3Z" fill="#ffffff"/>
+    <path d="M10.39 0L7.45 1.7L7.45 5.7L10.39 4Z" fill="#b8c2d0"/>
+    <path d="M-11.34 -6.34L-10.14 -6.34L-10.14 -7.94L-11.34 -7.94Z" fill="#5a6a84"/>
+    <path d="M-8.74 -5.29L-7.54 -5.29L-7.54 -6.89L-8.74 -6.89Z" fill="#5a6a84"/>
+    <path d="M-6.14 -4.09L-4.94 -4.09L-4.94 -5.69L-6.14 -5.69Z" fill="#5a6a84"/>
+    <path d="M-3.54 -2.7L-2.34 -2.7L-2.34 -4.3L-3.54 -4.3Z" fill="#5a6a84"/>
+    <path d="M-0.95 -1.09L0.25 -1.09L0.25 -2.69L-0.95 -2.69Z" fill="#5a6a84"/>
+    <path d="M1.65 0.71L2.85 0.71L2.85 -0.89L1.65 -0.89Z" fill="#5a6a84"/>
+    <path d="M4.25 2.66L5.45 2.66L5.45 1.06L4.25 1.06Z" fill="#5a6a84"/>
+    <path d="M-8.14 -4.3L-10.39 -3L-10.39 -5L-8.14 -6.3Z" fill="#b9c0cc"/>
+    <path d="M-12.12 -4L-10.39 -3L-10.39 -5L-12.12 -6Z" fill="#e3e7ee"/>
+    <path d="M-9.87 -7.3L-8.14 -6.3L-10.39 -5L-12.12 -6Z" fill="#ffffff"/>
+    <path d="M9.18 5.7L6.93 7L6.93 5L9.18 3.7Z" fill="#b9c0cc"/>
+    <path d="M5.2 6L6.93 7L6.93 5L5.2 4Z" fill="#e3e7ee"/>
+    <path d="M7.45 2.7L9.18 3.7L6.93 5L5.2 4Z" fill="#ffffff"/>
+    <path d="M-1.62 -3.75L-1.32 -3.75L-1.32 -11.75L-1.62 -11.75Z" fill="#d8dde3"/>
+    <g transform="translate(-1.32 -11.75)"><g><animateTransform attributeName="transform" type="skewY" values="0;-7;0;6;0" dur="1.6s" repeatCount="indefinite"/><path d="M0 0.00L4.4 0.00L4.4 0.50L0 0.50Z" fill="#d8342a"/><path d="M0 0.50L4.4 0.50L4.4 1.00L0 1.00Z" fill="#ffffff"/><path d="M0 1.00L4.4 1.00L4.4 1.50L0 1.50Z" fill="#d8342a"/><path d="M0 1.50L4.4 1.50L4.4 2.00L0 2.00Z" fill="#ffffff"/><path d="M0 2.00L4.4 2.00L4.4 2.50L0 2.50Z" fill="#d8342a"/><path d="M0 2.50L4.4 2.50L4.4 3.00L0 3.00Z" fill="#ffffff"/><path d="M0 3.00L4.4 3.00L4.4 3.50L0 3.50Z" fill="#d8342a"/><path d="M0 0L1.98 0L1.98 1.9L0 1.9Z" fill="#2b4a9a"/></g></g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;-1 .6;0 0" dur="4s" repeatCount="indefinite"/><circle cx="0.73" cy="8.50" r=".7" fill="#e04a3a"/><circle cx="0.27" cy="9.07" r=".7" fill="#ffffff"/><circle cx="-0.86" cy="9.30" r=".7" fill="#ffd45a"/><circle cx="-2.00" cy="9.07" r=".7" fill="#e04a3a"/><circle cx="-2.47" cy="8.50" r=".7" fill="#ffffff"/><circle cx="-2.00" cy="7.94" r=".7" fill="#ffd45a"/><circle cx="-0.87" cy="7.70" r=".7" fill="#e04a3a"/><circle cx="0.26" cy="7.93" r=".7" fill="#ffffff"/></g>
   </g>
-</g>
 </svg>

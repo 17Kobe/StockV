@@ -104,7 +104,7 @@
             maxDeg: 1.1,
         }, // 澳洲：猴子米亞野生海豚
         { src: 'critters/shark.svg', lon: 19.42, lat: -34.75, mode: 'dolphin', iso: 'animal', isoK: 0.8, sea: true, maxDeg: 1.1 }, // 南非甘斯拜：大白鯊之都
-        { src: 'critters/seal.png', lon: -27, lat: 66, mode: 'bob', s: 0.75, sea: true },
+        { src: 'critters/seal.svg', lon: -27, lat: 66, mode: 'still', iso: 'small', sea: true },
         // 南島民族（由台灣出發往太平洋、印度洋拓展）：蘭嶼達悟族拼板舟，和往太平洋、馬達加斯加遠航的拼板舟
         {
             src: 'critters/tatara-yami.svg',
@@ -197,10 +197,10 @@
         { src: 'critters/leopard.svg', lon: 26, lat: 3, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 非洲豹
         { src: 'critters/rhinoceros.svg', lon: 22, lat: -19, mode: 'wander', gait: 'heavy', iso: 'animal', deco: true, maxDeg: 2 }, // 犀牛
         // 北極：因紐特（愛斯基摩）人在冰屋旁走來走去
-        { src: 'people/igloo.svg', lon: -74, lat: 68.5, mode: 'still', face: 'F', s: 1 },
-        { src: 'people/eskimo.svg', lon: -69, lat: 67.6, mode: 'wander', face: 'F', gait: 'waddle', s: 0.85, maxDeg: 2 }, // 原本沒設 maxDeg
+        { src: 'people/igloo.svg', lon: -74, lat: 68.5, mode: 'still', face: 'F', iso: 'building', },
+        { src: 'people/eskimo.svg', lon: -69, lat: 67.6, mode: 'wander', face: 'F', gait: 'waddle', iso: 'person', maxDeg: 2 }, // 原本沒設 maxDeg
         // 其他特別的人
-        { src: 'critters/rower.png', lon: -62, lat: -3.3, mode: 'boat', face: 'F', s: 0.9 }, // 亞馬遜河划船
+        { src: 'critters/rower.svg', lon: -62, lat: -3.3, mode: 'boat', face: 'F', iso: 'vehicle', }, // 亞馬遜河划船
         { src: 'critters/surfer.svg', lon: 155.8, lat: -30, mode: 'surf', face: 'R', iso: 'person', isoK: 0.6, sea: true }, // 澳洲黃金海岸外海衝浪
         // 澳洲東南部：無尾熊抱著尤加利樹幹慢慢往上爬、停下來啃葉子，再爬下來
         { src: 'critters/eucalyptus.svg', lon: 147.5, lat: -36, mode: 'still', face: 'F', iso: 'nature', deco: true },
@@ -272,7 +272,7 @@
             deco: true,
         },
         // 美國西海岸外海的大白鯊：只露出背鰭，拖著水痕在海面上慢慢巡游
-        { src: 'critters/shark-fin.svg', lon: -127.5, lat: 36.8, mode: 'fin', s: 1.15, sea: true, deco: true },
+        { src: 'critters/shark-fin.svg', lon: -127.5, lat: 36.8, mode: 'fin', iso: 'animal', isoK: 0.8, sea: true, deco: true },
         // ── 世界地標 ──────────────────────────────────────────────────
         { src: 'critters/jellyfish.svg', lon: 134.6, lat: 8.4, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 帛琉水母（帛琉三個景點真實位置只差 0.4 度，會被地標重疊檢查收起，往北、西、東三向拉開）
         { src: 'critters/fuji.svg', lon: 138.3, lat: 34.4, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 富士山
@@ -302,7 +302,7 @@
             lat: 40.8,
             mode: 'still',
             face: 'F',
-            s: 1.0,
+            iso: 'tower',
             deco: true,
             landmark: true,
         }, // 自由女神像
@@ -353,7 +353,7 @@
             deco: true,
             landmark: true,
         }, // 聖瓦西里主教座堂
-        { src: 'critters/moose.svg', lon: -88, lat: 51.5, mode: 'wander', gait: 'heavy', s: 1.2, deco: true, maxDeg: 2 }, // 加拿大駝鹿
+        { src: 'critters/moose.svg', lon: -88, lat: 51.5, mode: 'wander', gait: 'heavy', iso: 'animal', deco: true, maxDeg: 2 }, // 加拿大駝鹿
         {
             src: 'critters/siberian-train.svg',
             lon: 90,
@@ -390,7 +390,7 @@
             lat: -15.5,
             mode: 'still',
             face: 'F',
-            s: 1.0,
+            iso: 'person',
             deco: true,
             noShadow: true,
         }, // 巴西足球員
@@ -437,19 +437,19 @@
         }, // 深海鮟鱇魚
         { src: 'critters/arctic-fox.svg', lon: 88, lat: 72.5, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 俄國北極狐
         { src: 'critters/mammoth.svg', lon: 120, lat: 66.5, mode: 'wander', gait: 'heavy', iso: 'animal', deco: true, maxDeg: 2 }, // 西伯利亞長毛象
-        { src: 'critters/golden-gate.svg', lon: -122.5, lat: 37.8, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 金門大橋
+        { src: 'critters/golden-gate.svg', lon: -122.5, lat: 37.8, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 金門大橋
         {
             src: 'critters/grand-canyon.svg',
             lon: -112.1,
             lat: 36.2,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'nature',
             deco: true,
             landmark: true,
         }, // 大峽谷
-        { src: 'critters/yellowstone.svg', lon: -110.6, lat: 44.5, mode: 'still', face: 'F', s: 1.2, deco: true, landmark: true }, // 黃石公園
-        { src: 'critters/rushmore.svg', lon: -103.5, lat: 43.85, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 拉什莫爾山
+        { src: 'critters/yellowstone.svg', lon: -110.6, lat: 44.5, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 黃石公園
+        { src: 'critters/rushmore.svg', lon: -103.5, lat: 43.85, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 拉什莫爾山
         { src: 'critters/acropolis.svg', lon: 22.4, lat: 38.6, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 雅典衛城
         {
             src: 'critters/milan-cathedral.svg',
@@ -461,8 +461,8 @@
             deco: true,
             landmark: true,
         }, // 米蘭大教堂
-        { src: 'critters/yosemite.svg', lon: -119.55, lat: 37.75, mode: 'still', face: 'F', s: 1.2, deco: true, landmark: true }, // 優勝美地
-        { src: 'critters/banff.svg', lon: -115.57, lat: 51.18, mode: 'still', face: 'F', s: 1.2, deco: true, landmark: true }, // 班夫
+        { src: 'critters/yosemite.svg', lon: -119.55, lat: 37.75, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 優勝美地
+        { src: 'critters/banff.svg', lon: -115.57, lat: 51.18, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 班夫
         {
             src: 'critters/serengeti.svg',
             lon: 34.85,
@@ -538,7 +538,7 @@
             lat: 29.5,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 休士頓太空中心
@@ -549,11 +549,11 @@
             lat: 30.3,
             mode: 'launch',
             face: 'F',
-            s: 1.3,
+            iso: 'tower',
             deco: true,
             noShadow: true,
         }, // 火箭發射
-        { src: 'critters/ufo-aliens.svg', lon: -116.5, lat: 35, mode: 'ufo', face: 'F', s: 1.4, deco: true, noShadow: true }, // 加州沙漠的 UFO 和外星人
+        { src: 'critters/ufo-aliens.svg', lon: -116.5, lat: 35, mode: 'ufo', face: 'F', iso: 'vehicle', deco: true, noShadow: true }, // 加州沙漠的 UFO 和外星人
         { src: 'critters/troy-horse.svg', lon: 26.24, lat: 39.96, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 特洛伊木馬
         { src: 'critters/pompeii.svg', lon: 15.6, lat: 40.4, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 龐貝古城
         {
@@ -576,7 +576,7 @@
             deco: true,
             landmark: true,
         }, // 奇琴伊茲
-        { src: 'critters/cn-tower.svg', lon: -79.39, lat: 43.64, mode: 'still', face: 'F', s: 1.2, deco: true, landmark: true }, // 多倫多西恩塔
+        { src: 'critters/cn-tower.svg', lon: -79.39, lat: 43.64, mode: 'still', face: 'F', iso: 'tower', deco: true, landmark: true }, // 多倫多西恩塔
         {
             src: 'critters/hanging-gardens.svg',
             lon: 44.42,
@@ -595,7 +595,7 @@
             mode: 'wander',
             gait: 'heavy',
             maxDeg: 3,
-            s: 1.0,
+            iso: 'animal',
             deco: true,
             landmark: true,
         }, // 格陵蘭北極熊
@@ -611,7 +611,7 @@
             deco: true,
             landmark: true,
         }, // 蒙古包
-        { src: 'critters/tipi.svg', lon: -105.0, lat: 45.0, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 北美 Tipi
+        { src: 'critters/tipi.svg', lon: -105.0, lat: 45.0, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 北美 Tipi
         {
             src: 'critters/gassho-house.svg',
             lon: 136.9,
@@ -856,8 +856,8 @@
             src: 'critters/pearl-harbor.svg',
             lon: -157.95,
             lat: 21.37,
-            mode: 'bob',
-            s: 1.0,
+            mode: 'still',
+            iso: 'building',
             sea: true,
             deco: true,
             landmark: true,
@@ -998,7 +998,7 @@
             lat: 43.08,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'nature',
             sea: true,
             deco: true,
             landmark: true,
@@ -1037,7 +1037,7 @@
         { src: 'critters/cow.svg', lon: 8.6, lat: 46.9, mode: 'wander', gait: 'heavy', iso: 'animal', deco: true, maxDeg: 2 }, // 瑞士：瑞士乳牛
         { src: 'critters/rabbit.svg', lon: 5.3, lat: 52.1, mode: 'wander', iso: 'small', deco: true, maxDeg: 2 }, // 荷蘭：歐洲穴兔
         { src: 'critters/turkey.svg', lon: 34.0, lat: 39.0, mode: 'wander', iso: 'small', deco: true, maxDeg: 2 }, // 土耳其：火雞
-        { src: 'animals/eagle.png', lon: -100.0, lat: 40.0, mode: 'wander', s: 1.0, deco: true, maxDeg: 2 }, // 美國：白頭鷹
+        { src: 'critters/eagle.svg', lon: -100.0, lat: 40.0, mode: 'wander', iso: 'small', deco: true, maxDeg: 2 }, // 美國：白頭鷹
         { src: 'animals/toucan.svg', lon: -58.0, lat: -8.0, mode: 'still', face: 'F', s: 0.85, deco: true }, // 巴西：巨嘴鳥
         { src: 'animals/axolotl.svg', lon: -99.5, lat: 19.3, mode: 'wander', s: 0.9, deco: true, maxDeg: 1.5 }, // 墨西哥：六角恐龍（墨西哥市近郊湖泊）
         { src: 'animals/penguin.png', lon: -68.0, lat: -45.0, mode: 'wander', gait: 'waddle', s: 0.85, deco: true, maxDeg: 2 }, // 阿根廷：企鵝（巴塔哥尼亞海岸）
@@ -1106,7 +1106,7 @@
             lat: 58.6,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'nature',
             sea: true,
             deco: true,
             landmark: true,
@@ -1195,9 +1195,9 @@
             deco: true,
             landmark: true,
         }, // 伊朗：波斯波利斯
-        { src: 'critters/bigfoot.svg', lon: -122.5, lat: 48.0, mode: 'wander', s: 1.1, deco: true, maxDeg: 2 }, // 北美森林：大腳怪
+        { src: 'critters/bigfoot.svg', lon: -122.5, lat: 48.0, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 北美森林：大腳怪
         { src: 'critters/mermaid.svg', lon: 5.0, lat: 61.0, mode: 'still', face: 'F', iso: 'person', sea: true, deco: true }, // 北歐海域：美人魚
-        { src: 'critters/chupacabra.svg', lon: -66.5, lat: 18.2, mode: 'wander', s: 0.95, deco: true, maxDeg: 2 }, // 波多黎各：卓柏卡布拉
+        { src: 'critters/chupacabra.svg', lon: -66.5, lat: 18.2, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 波多黎各：卓柏卡布拉
         {
             src: 'critters/kiwi-bird.svg',
             lon: 173.5,
@@ -1271,7 +1271,7 @@
             lat: 40.7484,
             mode: 'still',
             face: 'F',
-            s: 1.2,
+            iso: 'tower',
             deco: true,
             landmark: true,
         }, // 美國：帝國大廈
@@ -1281,7 +1281,7 @@
             lat: 38.8895,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'tower',
             deco: true,
             landmark: true,
         }, // 美國：華盛頓紀念碑（素材本來就有畫，之前漏了放進地圖清單，一直沒有顯示）
@@ -1291,7 +1291,7 @@
             lat: 34.1341,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'nature',
             deco: true,
             landmark: true,
         }, // 美國：好萊塢標誌
@@ -1375,7 +1375,7 @@
             lat: 36.9983,
             mode: 'still',
             face: 'F',
-            s: 1.2,
+            iso: 'nature',
             deco: true,
             landmark: true,
         }, // 美國：紀念碑谷
@@ -1465,8 +1465,8 @@
             landmark: true,
         }, // 中國：天壇：上次修正後離紫禁城仍只差 0.64 度，實測要縮放到跟長城/紫禁城同框後再深縮 8 格才會冒出來，再拉大到確實跟兩者都有安全距離（實測一放大就會一起出現）
         { src: 'critters/dragon-dance.svg', lon: 108.0, lat: 30.0, mode: 'still', face: 'F', iso: 'building', deco: true }, // 中國：舞龍
-        { src: 'critters/beaver.svg', lon: -95.0, lat: 54.0, mode: 'bob', s: 1.0, sea: true, deco: true }, // 加拿大：海狸
-        { src: 'critters/mountie.svg', lon: -106.0, lat: 50.45, mode: 'still', face: 'F', s: 1.0, deco: true }, // 加拿大：皇家騎警
+        { src: 'critters/beaver.svg', lon: -95.0, lat: 54.0, mode: 'still', iso: 'small', sea: true, deco: true }, // 加拿大：海狸
+        { src: 'critters/mountie.svg', lon: -106.0, lat: 50.45, mode: 'still', face: 'F', iso: 'person', deco: true }, // 加拿大：皇家騎警
         { src: 'critters/montgolfier-balloon.svg', lon: 2.5, lat: 47.0, mode: 'bob', iso: 'vehicle', deco: true, landmark: true }, // 法國：蒙格菲熱氣球
         { src: 'critters/oktoberfest.svg', lon: 11.55, lat: 48.14, mode: 'still', face: 'F', iso: 'building', deco: true }, // 德國：慕尼黑啤酒節
         { src: 'critters/tuk-tuk.svg', lon: 77.0, lat: 20.5, mode: 'wander', iso: 'vehicle', deco: true, maxDeg: 2 }, // 印度：嘟嘟車
@@ -1701,19 +1701,54 @@
         { src: 'critters/jiayuguan-pass.svg', lon: 98.3, lat: 39.81, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 中國：甘肅嘉峪關
         { src: 'critters/qinghai-lake.svg', lon: 100.2, lat: 36.9, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 中國：青海湖
         { src: 'critters/canton-tower.svg', lon: 113.32, lat: 23.11, mode: 'still', face: 'F', iso: 'tower', isoK: 0.8, sea: true, deco: true, landmark: true }, // 中國：廣州塔（跟古達明納塔形狀相近，isoK 0.8 讓高瘦塔身跟其他地標差不多大）
+        // ---- 2026-11 新增地標（第二批）：位置跟既有地標太近的，依慣例往旁邊錯開，註解寫明真實位置 ----
+        { src: 'critters/el-nido.svg', lon: 119.39, lat: 11.18, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 菲律賓：巴拉望愛妮島
+        { src: 'critters/otaru-canal.svg', lon: 141.0, lat: 43.2, mode: 'still', face: 'F', iso: 'building', sea: true, deco: true, landmark: true }, // 日本：北海道小樽運河
+        { src: 'critters/farm-tomita.svg', lon: 142.44, lat: 43.42, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 日本：北海道富良野富田農場
+        { src: 'critters/yilan-traditional-arts.svg', lon: 121.83, lat: 24.69, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 台灣：宜蘭國立傳統藝術中心
+        { src: 'critters/kaohsiung-music-center.svg', lon: 120.5, lat: 22.64, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 台灣：高雄流行音樂中心（真實位置 120.30, 22.62 跟駁二幾乎重疊，往東拉開約 0.2 度）
+        { src: 'critters/liushidan-daylily.svg', lon: 121.38, lat: 23.2, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 台灣：花蓮六十石山金針花海（真實位置 121.28, 23.06，跟台灣黑熊、伯朗大道太近，往東北挪）
+        { src: 'critters/mr-brown-avenue.svg', lon: 121.18, lat: 22.82, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 台灣：台東池上伯朗大道（真實位置 121.21, 23.11，跟六十石山只差 0.1 度，往南挪）
+        { src: 'critters/anping-fort.svg', lon: 120.12, lat: 23.0, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 台灣：台南安平古堡
+        { src: 'critters/chihkan-tower.svg', lon: 120.38, lat: 23.14, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 台灣：台南赤崁樓（真實位置 120.20, 23.00 跟安平古堡只差 0.04 度，往東北拉開約 0.25 度）
+        { src: 'critters/cingjing-farm.svg', lon: 121.12, lat: 24.2, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 台灣：南投清境農場（真實位置 121.16, 24.05，跟梅花鹿、日月潭太近，往北挪）
+        { src: 'critters/penghu-bridge.svg', lon: 119.58, lat: 23.65, mode: 'still', face: 'F', iso: 'building', sea: true, deco: true, landmark: true }, // 台灣：澎湖跨海大橋
+        { src: 'critters/qimei-twin-hearts.svg', lon: 119.42, lat: 23.2, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 台灣：澎湖七美雙心石滬
+        { src: 'critters/kinmen-deyue-tower.svg', lon: 118.3, lat: 24.41, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 台灣：金門得月樓
+        { src: 'critters/matsu-qinbi.svg', lon: 119.96, lat: 26.22, mode: 'still', face: 'F', iso: 'building', sea: true, deco: true, landmark: true }, // 台灣：馬祖北竿芹壁聚落
+        { src: 'critters/provence-lavender.svg', lon: 5.98, lat: 43.84, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 法國：普羅旺斯薰衣草田
+        { src: 'critters/dutch-tulips.svg', lon: 5.75, lat: 52.7, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 荷蘭：東北圩田鬱金香花田（庫肯霍夫一帶跟荷蘭風車太近，改放荷蘭最大的鬱金香產區）
+        { src: 'critters/algonquin-maple.svg', lon: -78.4, lat: 45.6, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 加拿大：阿岡昆省立公園楓紅
+        { src: 'critters/general-sherman-tree.svg', lon: -118.75, lat: 36.58, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 美國：紅杉國家公園謝爾曼將軍樹
+        { src: 'critters/maori-haka.svg', lon: 176.25, lat: -38.14, mode: 'still', face: 'F', iso: 'person', deco: true, landmark: true }, // 紐西蘭：毛利戰舞 Haka（羅托魯瓦）
+        { src: 'critters/ganges-diyas.svg', lon: 78.16, lat: 29.95, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 印度：恆河河燈（哈里德瓦 Har Ki Pauri 夜祭；瓦拉納西已有河階圖示，改放上游的哈里德瓦）
+        { src: 'critters/bangkok-floating-market.svg', lon: 99.95, lat: 13.52, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 泰國：曼谷丹嫩莎朵水上市場
+        { src: 'critters/ethiopia-coffee-ceremony.svg', lon: 38.75, lat: 9.0, mode: 'still', face: 'F', iso: 'person', deco: true, landmark: true }, // 衣索比亞：咖啡儀式
+        { src: 'critters/great-zimbabwe.svg', lon: 30.93, lat: -20.27, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 辛巴威：大辛巴威遺址
+        { src: 'critters/icebreaker.svg', lon: 75, lat: 75.5, mode: 'boat', face: 'L', iso: 'vehicle', sea: true, deco: true, maxDeg: 3 }, // 北冰洋航道：破冰船（喀拉海）
+        { src: 'critters/dome-of-the-rock.svg', lon: 34.85, lat: 31.4, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 耶路撒冷：圓頂清真寺（真實位置 35.235, 31.778 跟西牆完全重疊，往西南拉開約 0.5 度）
+        { src: 'critters/isfahan-shah-mosque.svg', lon: 51.68, lat: 32.66, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 伊朗：伊斯法罕王侯清真寺（伊瑪目清真寺）
+        { src: 'critters/oman-frankincense.svg', lon: 54.0, lat: 17.1, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 阿曼：佐法爾乳香樹
+        { src: 'critters/inner-mongolia-horses.svg', lon: 116.1, lat: 43.9, mode: 'trek', face: 'L', iso: 'animal', deco: true, noShadow: true, maxDeg: 2, rock: 2.5, bounce: 0.05 }, // 中國：內蒙古錫林郭勒草原駿馬
+        { src: 'critters/hukou-waterfall.svg', lon: 110.45, lat: 36.15, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 中國：黃河壺口瀑布
+        { src: 'critters/hzmb-bridge.svg', lon: 113.8, lat: 21.95, mode: 'still', face: 'F', iso: 'building', sea: true, deco: true, landmark: true }, // 中國：港珠澳大橋（真實位置在香港、澳門之間，跟大三巴、香港天際線太近，往南移到海上）
+        { src: 'critters/miao-stilt-houses.svg', lon: 108.17, lat: 26.49, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 中國：貴州西江千戶苗寨吊腳樓
+        { src: 'critters/spilled-blood-church.svg', lon: 30.33, lat: 59.94, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 俄羅斯：聖彼得堡救世主滴血大教堂
+        { src: 'critters/yak.svg', lon: 88.5, lat: 31.8, mode: 'wander', gait: 'heavy', iso: 'animal', deco: true, maxDeg: 2 }, // 西藏：犛牛
+        { src: 'critters/inle-fisherman.svg', lon: 96.91, lat: 20.55, mode: 'bob', face: 'F', iso: 'person', deco: true, landmark: true }, // 緬甸：茵萊湖獨腳划船漁夫
         {
             src: 'critters/wall-street-bull.svg',
             lon: -74.25,
             lat: 40.5,
             mode: 'still',
             face: 'F',
-            s: 1.0,
+            iso: 'animal',
             deco: true,
             landmark: true,
         }, // 美國：華爾街銅牛
-        { src: 'critters/mississippi-steamboat.svg', lon: -90.07, lat: 29.95, mode: 'bob', s: 1.1, sea: true, deco: true }, // 美國：密西西比河蒸汽船
-        { src: 'critters/american-bison.svg', lon: -101.0, lat: 43.5, mode: 'wander', s: 1.1, deco: true, maxDeg: 2 }, // 美國：美洲野牛
-        { src: 'critters/messi-football.svg', lon: -58.4, lat: -35.0, mode: 'still', face: 'F', s: 1.0, deco: true }, // 阿根廷：梅西足球
+        { src: 'critters/mississippi-steamboat.svg', lon: -90.07, lat: 29.95, mode: 'still', iso: 'vehicle', sea: true, deco: true }, // 美國：密西西比河蒸汽船
+        { src: 'critters/american-bison.svg', lon: -101.0, lat: 43.5, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 美國：美洲野牛
+        { src: 'critters/messi-football.svg', lon: -58.4, lat: -35.0, mode: 'still', face: 'F', iso: 'person', deco: true }, // 阿根廷：梅西足球
         {
             src: 'critters/buenos-aires-obelisk.svg',
             lon: -58.3816,
@@ -1724,7 +1759,7 @@
             deco: true,
             landmark: true,
         }, // 阿根廷：布宜諾斯艾利斯方尖碑
-        { src: 'critters/gaucho.svg', lon: -64.5, lat: -37.5, mode: 'still', face: 'F', s: 1.0, deco: true }, // 阿根廷：高卓人
+        { src: 'critters/gaucho.svg', lon: -64.5, lat: -37.5, mode: 'still', face: 'F', iso: 'person', deco: true }, // 阿根廷：高卓人
         {
             src: 'critters/moscow-red-square.svg',
             lon: 38.3,
@@ -1816,7 +1851,7 @@
         { src: 'critters/red-crowned-crane.svg', lon: 144.3, lat: 43.3, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 丹頂鶴
         { src: 'critters/siberian-tiger.svg', lon: 130.5, lat: 45, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 東北虎
         { src: 'critters/genghis-khan.svg', lon: 102.5, lat: 46.0, mode: 'still', face: 'F', iso: 'person', deco: true }, // 成吉思汗：原座標跟蒙古包完全重疊，往西南移開
-        { src: 'critters/abraham-lincoln.svg', lon: -77, lat: 38.9, mode: 'still', face: 'F', s: 1.0, deco: true }, // 亞伯拉罕·林肯
+        { src: 'critters/abraham-lincoln.svg', lon: -77, lat: 38.9, mode: 'still', face: 'F', iso: 'person', deco: true }, // 亞伯拉罕·林肯
         { src: 'critters/marco-polo.svg', lon: 11, lat: 44.5, mode: 'still', face: 'F', iso: 'person', deco: true }, // 馬可·波羅
         { src: 'critters/napoleon-bonaparte.svg', lon: 1.5, lat: 48, mode: 'still', face: 'F', iso: 'person', deco: true }, // 拿破崙·波拿巴
         { src: 'critters/william-shakespeare.svg', lon: -1.7, lat: 52.2, mode: 'still', face: 'F', iso: 'person', deco: true }, // 威廉·莎士比亞
@@ -1827,20 +1862,20 @@
         { src: 'critters/michelangelo.svg', lon: 14.2, lat: 41.6, mode: 'still', face: 'F', iso: 'person', deco: true }, // 米開朗基羅：原座標和羅馬競技場完全重疊，往東南（羅馬到拿坡里之間）拉開約 1.7 度
         { src: 'critters/isaac-newton.svg', lon: -0.63, lat: 52.8, mode: 'still', face: 'F', iso: 'person', deco: true }, // 伊薩克·牛頓
         { src: 'critters/albert-einstein.svg', lon: 9.99, lat: 48.4, mode: 'still', face: 'F', iso: 'person', deco: true }, // 愛因斯坦
-        { src: 'critters/thomas-edison.svg', lon: -74.5, lat: 41, mode: 'still', face: 'F', s: 1.0, deco: true }, // 湯瑪斯·愛迪生
-        { src: 'critters/nikola-tesla.svg', lon: -104.82, lat: 38.83, mode: 'still', face: 'F', s: 1.0, deco: true }, // 尼古拉·特斯拉：改放到他著名的科羅拉多泉實驗站，避開與帝國大廈重疊
-        { src: 'critters/michael-jordan.svg', lon: -87.65, lat: 41.88, mode: 'still', face: 'F', s: 1.0, deco: true }, // 麥可·喬丹
-        { src: 'critters/babe-ruth.svg', lon: -76.6, lat: 39.28, mode: 'still', face: 'F', s: 1.0, deco: true }, // 貝比·魯斯
+        { src: 'critters/thomas-edison.svg', lon: -74.5, lat: 41, mode: 'still', face: 'F', iso: 'person', deco: true }, // 湯瑪斯·愛迪生
+        { src: 'critters/nikola-tesla.svg', lon: -104.82, lat: 38.83, mode: 'still', face: 'F', iso: 'person', deco: true }, // 尼古拉·特斯拉：改放到他著名的科羅拉多泉實驗站，避開與帝國大廈重疊
+        { src: 'critters/michael-jordan.svg', lon: -87.65, lat: 41.88, mode: 'still', face: 'F', iso: 'person', deco: true }, // 麥可·喬丹
+        { src: 'critters/babe-ruth.svg', lon: -76.6, lat: 39.28, mode: 'still', face: 'F', iso: 'person', deco: true }, // 貝比·魯斯
         { src: 'critters/shohei-ohtani.svg', lon: 141.13, lat: 39.14, mode: 'still', face: 'F', iso: 'person', deco: true }, // 大谷翔平
-        { src: 'critters/muhammad-ali.svg', lon: -85.76, lat: 38.25, mode: 'still', face: 'F', s: 1.0, deco: true }, // 穆罕默德·阿里
+        { src: 'critters/muhammad-ali.svg', lon: -85.76, lat: 38.25, mode: 'still', face: 'F', iso: 'person', deco: true }, // 穆罕默德·阿里
         { src: 'critters/michael-schumacher.svg', lon: 6.65, lat: 50.87, mode: 'still', face: 'F', iso: 'person', deco: true }, // 麥可·舒馬赫
-        { src: 'critters/wright-brothers.svg', lon: -75.67, lat: 36.02, mode: 'still', face: 'F', s: 1.0, deco: true }, // 萊特兄弟
+        { src: 'critters/wright-brothers.svg', lon: -75.67, lat: 36.02, mode: 'still', face: 'F', iso: 'vehicle', deco: true }, // 萊特兄弟
         { src: 'critters/jesus-christ.svg', lon: 35.3, lat: 32.7, mode: 'still', face: 'F', iso: 'person', deco: true }, // 耶穌
         { src: 'critters/buddha-siddhartha.svg', lon: 83.28, lat: 27.47, mode: 'still', face: 'F', iso: 'person', deco: true }, // 釋迦牟尼
         { src: 'critters/plato-aristotle.svg', lon: 23.73, lat: 37.98, mode: 'still', face: 'F', iso: 'person', deco: true }, // 柏拉圖與亞里斯多德
         { src: 'critters/beethoven.svg', lon: 16.37, lat: 48.21, mode: 'still', face: 'F', iso: 'person', deco: true }, // 貝多芬
-        { src: 'critters/steve-jobs.svg', lon: -122.03, lat: 37.33, mode: 'still', face: 'F', s: 1.0, deco: true }, // 史蒂夫‧賈伯斯
-        { src: 'critters/bill-gates.svg', lon: -122.12, lat: 47.67, mode: 'still', face: 'F', s: 1.0, deco: true }, // 比爾‧蓋茲
+        { src: 'critters/steve-jobs.svg', lon: -122.03, lat: 37.33, mode: 'still', face: 'F', iso: 'person', deco: true }, // 史蒂夫‧賈伯斯
+        { src: 'critters/bill-gates.svg', lon: -122.12, lat: 47.67, mode: 'still', face: 'F', iso: 'person', deco: true }, // 比爾‧蓋茲
         { src: 'critters/hokkaido-king-crab.svg', lon: 141.5, lat: 43.8, mode: 'still', iso: 'small', sea: true, deco: true }, // 北海道帝王蟹
         { src: 'critters/dalai-lama.svg', lon: 76.32, lat: 32.22, mode: 'still', face: 'F', iso: 'person', deco: true }, // 達賴喇嘛：原座標跟布達拉宮完全重疊，改放到他流亡後長居的印度達蘭薩拉
         // ── 第十一批補充（世界地標，不用在前 80 名額內，只要畫出來、放大能看到就好） ──────────
@@ -1913,7 +1948,7 @@
             lat: 39.908,
             mode: 'still',
             face: 'F',
-            s: 1.0,
+            iso: 'building',
             sea: true,
             deco: true,
             landmark: true,
@@ -1934,7 +1969,7 @@
             lat: 40.7829,
             mode: 'still',
             face: 'F',
-            s: 1.0,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 美國：古根漢美術館（紐約）
@@ -2005,7 +2040,7 @@
             lat: 37.1853,
             mode: 'still',
             face: 'F',
-            s: 1.0,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 美國：梅薩維德國家公園崖居
@@ -3837,6 +3872,7 @@
                 c.y = c.d.run[1] * k;
                 c.dir = 1;
                 op = Math.min(1, u / 0.12, (1 - u) / 0.12);
+                wake = op;
                 hop = -Math.abs(Math.sin((t + c.ph) * 9)) * R * 0.006;
             } else if (m === 'race') {
                 // 賽艇在南大洋來回疊式航行，轉向時調頭，船頭略抬、船身傾斜
@@ -6724,7 +6760,7 @@
         for (const x of [-17, -14, 13.5, 16.5]) box(x, -8, 2, 3.4, '#7f93b5');
     }
     // 已經改成 2.5D 統一風格的地緣地標（gen_geo.py 產生 SVG），其餘的仍用 emoji PNG
-    const LM_SVG = new Set(['dove', 'crossed_swords']);
+    const LM_SVG = new Set(['dove', 'crossed_swords', 'whitehouse', 'classical_building']);
     function buildLandmarks() {
         gLm.selectAll('*').remove();
         for (const lm of state.landmarks) {
@@ -6739,7 +6775,7 @@
             lm.el = g.node();
             g.append('ellipse').attr('class', 'lm-sh');
             const i = g.append('g').attr('class', 'lm-i');
-            if (lm.icon === 'whitehouse') drawWhiteHouse(i.append('g').attr('class', 'wh'));
+            if (false) drawWhiteHouse(i.append('g').attr('class', 'wh'));
             else
                 i.append('image')
                     .attr('class', 'lm-img')
@@ -7976,7 +8012,7 @@
             'critters/cow.svg',
             'critters/rabbit.svg',
             'critters/turkey.svg',
-            'animals/eagle.png',
+            'critters/eagle.svg',
             'animals/toucan.svg',
             'animals/axolotl.svg',
             'animals/alpaca.svg',

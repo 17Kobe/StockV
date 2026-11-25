@@ -16,6 +16,9 @@
   const lerp = (a, b, t) => a + (b - a) * t;
   // 局勢顏色：緩和綠 / 緊張橘 / 衝突紅（和地緣卡片的色帶同一組色系）
   const TONE = { ok: '#3ddc84', warn: '#ffb02e', bad: '#ff5148' };
+  // 2.5D 零件依局勢換色用的亮／中／暗三階（船的腰線與煙囪、收費站招牌）
+  const TONE3 = { ok: ['#7af0b0', '#3ddc84', '#23a35c'], warn: ['#ffd27a', '#ffb02e', '#c87e12'], bad: ['#ff8a80', '#ff5148', '#c42e26'] };
+  const ROLE_IX = { acL: 0, acM: 1, acD: 2, sgL: 0, sgM: 1, sgD: 2, bc: 1 };
   const FONT =
     'font-family:var(--font);font-weight:800;text-anchor:middle;paint-order:stroke;stroke:rgba(5,10,22,.88);stroke-width:2.6px;stroke-linejoin:round;fill:#fff;pointer-events:none';
 
@@ -133,65 +136,48 @@
     return { x0, y0, x1, y1 };
   };
 
-  /* ---------- 圖形（座標單位：船長約 24，原點在水線正中央，船頭朝右）---------- */
-  function buildTanker(parent, laden) {
+  /* ---------- 圖形（座標單位：船長約 32，原點在水線正中央，船頭朝右）----------
+   * 2.5D 零件（光源左上、三階明暗、不描邊）在 geosprites.js（gen_geosprites.py 產生）；
+   * data-r 標記的面依局勢換色：acL/acM/acD 船的腰線與煙囪、bc 信號燈、sgL/sgM/sgD 招牌、char 油庫燒焦 */
+  function sprite(parent, key) {
     const g = el(parent, 'g');
-    el(g, 'path', { d: 'M-13,1 L-32,-0.4 L-32,2.9 Z', fill: '#fff', 'fill-opacity': 0.42 });
-    el(g, 'path', { d: 'M-13,-1.6 H13 L15.8,-1.6 L11,3.9 H-11.6 Z', fill: '#27324a', stroke: '#0b1220', 'stroke-width': 0.6 });
-    const ac = el(g, 'rect', { x: -12.4, y: 1.5, width: 23.4, height: 1.3, fill: TONE.ok });
-    // 甲板上的油艙與管線
-    const tank = laden ? '#4a3a33' : '#c9d2de';
-    for (let i = 0; i < 3; i++)
-      el(g, 'rect', { x: -4.2 + i * 5.4, y: -3.7, width: 4.6, height: 2.2, rx: 1, fill: tank, stroke: '#0b1220', 'stroke-width': 0.4 });
-    el(g, 'line', { x1: -4.5, y1: -4.2, x2: 12.5, y2: -4.2, stroke: '#8795ab', 'stroke-width': 0.6 });
-    // 船尾的駕駛艙與煙囪
-    el(g, 'rect', { x: -12.4, y: -7.6, width: 6.4, height: 6, rx: 0.6, fill: '#f2f4f8', stroke: '#6f7c93', 'stroke-width': 0.5 });
-    el(g, 'rect', { x: -11.6, y: -6.5, width: 4.8, height: 1.1, fill: '#3b5b8c' });
-    const fn = el(g, 'rect', { x: -10.2, y: -10, width: 2.4, height: 2.5, fill: TONE.ok });
-    const bc = el(g, 'circle', { cx: -9, cy: -11.3, r: 1.1, fill: TONE.ok });
-    // 起火（平常隱藏）
+    g.innerHTML = (window.GEO_SPRITES || {})[key] || '';
+    return g;
+  }
+  // 這個零件裡要換色的面：[[元素, 三階的第幾階], ...]
+  const roleEls = (g, names) => [...g.querySelectorAll('[data-r]')].filter((e) => names.includes(e.dataset.r)).map((e) => [e, ROLE_IX[e.dataset.r]]);
+  function paint(list, tone) {
+    const c = TONE3[tone] || TONE3.warn;
+    for (const [e, i] of list) e.setAttribute('fill', c[i]);
+  }
+  function buildFlames(g, xs, y) {
     const fl = el(g, 'g', { style: 'display:none' });
-    for (const x of [1, 6.5]) {
+    for (const x of xs) {
       const f = el(fl, 'g');
-      f.setAttribute('transform', `translate(${x} -4)`);
+      f.setAttribute('transform', `translate(${x} ${y})`);
       el(f, 'path', { d: 'M0,0 C-2.6,-2.2 -1.4,-5 0,-8 C1.4,-5 2.6,-2.2 0,0Z', fill: '#ff8a1f' });
       el(f, 'path', { d: 'M0,0 C-1.2,-1.2 -0.6,-3 0,-4.4 C0.6,-3 1.2,-1.2 0,0Z', fill: '#ffe066' });
     }
-    return { g, accents: [ac, fn], bc, flames: fl };
+    return fl;
   }
-  const BOX = ['#e4572e', '#2e86de', '#f6c026', '#27ae60', '#8e44ad', '#ecf0f1', '#e67e22'];
+  function buildTanker(parent, laden) {
+    const g = sprite(parent, laden ? 'tankerLaden' : 'tanker');
+    const bc = g.querySelector('[data-r="bc"]');
+    return { g, accents: roleEls(g, ['acL', 'acM', 'acD']), bc, flames: buildFlames(g, [1, 6.5], -3) };
+  }
   function buildContainerShip(parent, rand) {
-    const g = el(parent, 'g');
-    el(g, 'path', { d: 'M-14,1 L-33,-0.4 L-33,2.9 Z', fill: '#fff', 'fill-opacity': 0.42 });
-    el(g, 'path', { d: 'M-14.4,-1.5 H14 L17.2,-1.5 L12,4 H-12.8 Z', fill: '#1c2b45', stroke: '#0b1220', 'stroke-width': 0.6 });
-    const ac = el(g, 'rect', { x: -13.6, y: 1.5, width: 25.2, height: 1.3, fill: TONE.ok });
-    // 貨櫃堆：每一欄 1～3 層，顏色隨機
-    for (let c = 0; c < 5; c++) {
-      const rows = 1 + Math.floor(rand() * 3);
-      for (let r = 0; r < rows; r++)
-        el(g, 'rect', { x: -7.6 + c * 4.3, y: -1.5 - (r + 1) * 2.2, width: 4, height: 2.1, fill: BOX[Math.floor(rand() * BOX.length)], stroke: '#0b1220', 'stroke-width': 0.35 });
-    }
-    el(g, 'rect', { x: -14.4, y: -8.6, width: 5.4, height: 7.1, rx: 0.6, fill: '#f2f4f8', stroke: '#6f7c93', 'stroke-width': 0.5 });
-    el(g, 'rect', { x: -13.6, y: -7.5, width: 3.8, height: 1.1, fill: '#3b5b8c' });
-    const fn = el(g, 'rect', { x: -12.4, y: -11, width: 2.4, height: 2.5, fill: TONE.ok });
-    return { g, accents: [ac, fn], bc: null, flames: null };
+    const g = sprite(parent, 'container' + Math.floor(rand() * 3));
+    return { g, accents: roleEls(g, ['acL', 'acM', 'acD']), bc: null, flames: null };
   }
-  // 油庫：兩座儲油槽 + 管線；起火時冒火焰與黑煙
+  // 油庫：兩座儲油槽 + 管線；起火時冒火焰與黑煙，燒過的地方蓋上一層黑（char 透明度跟著熱度）
   function buildDepot(parent) {
     const g = el(parent, 'g');
-    el(g, 'ellipse', { cx: 0, cy: 0.5, rx: 10, ry: 2.4, fill: '#0f1a08', opacity: 0.4 });
-    const scorch = el(g, 'ellipse', { cx: 0, cy: 0, rx: 9, ry: 2.2, fill: '#15110d', opacity: 0 });
-    const tanks = [];
-    for (const [x, w, h] of [[-6, 6, 5.5], [2, 7, 6.5]]) {
-      const t = el(g, 'g');
-      const body = el(t, 'rect', { x, y: -h, width: w, height: h, fill: '#b7c0cd', stroke: '#2a3340', 'stroke-width': 0.6 });
-      const top = el(t, 'ellipse', { cx: x + w / 2, cy: -h, rx: w / 2, ry: 1.3, fill: '#dde3ea', stroke: '#2a3340', 'stroke-width': 0.5 });
-      el(t, 'rect', { x, y: -h * 0.55, width: w, height: 0.9, fill: '#e0453a', opacity: 0.85 });
-      tanks.push({ body, top, x: x + w / 2, y: -h });
-    }
-    el(g, 'line', { x1: -0.5, y1: -2, x2: 2, y2: -2, stroke: '#4a5566', 'stroke-width': 0.9 });
+    const scorch = el(g, 'ellipse', { cx: 1, cy: 0.4, rx: 10, ry: 2.4, fill: '#15110d', opacity: 0 });
+    const body = sprite(g, 'depot');
+    const char = body.querySelector('[data-r="char"]');
+    const tanks = [{ x: -3, y: -5.5 }, { x: 5.5, y: -6.5 }];
     const fire = el(g, 'g', { style: 'display:none' });
-    const flames = tanks.map((t, i) => {
+    const flames = tanks.map((t) => {
       const f = el(fire, 'g');
       f.setAttribute('transform', `translate(${t.x} ${t.y})`);
       el(f, 'path', { d: 'M0,0 C-3.2,-2.4 -1.6,-5.8 0,-9.5 C1.6,-5.8 3.2,-2.4 0,0Z', fill: '#ff7a1a' });
@@ -200,15 +186,23 @@
     });
     const smoke = [];
     for (let i = 0; i < 6; i++) smoke.push(el(g, 'circle', { r: 1, fill: '#262a31', opacity: 0, style: 'display:none' }));
-    return { g, scorch, tanks, fire, flames, smoke };
+    return { g, scorch, char, tanks, fire, flames, smoke };
   }
   function buildDrone(parent, side) {
-    const g = el(parent, 'g');
-    const col = side === 'ua' ? '#ffd23f' : '#d6dde8';
-    el(g, 'path', { d: 'M7.5,0 L-5.5,-6 L-3.5,0 L-5.5,6 Z', fill: col, stroke: '#171c26', 'stroke-width': 0.8, 'stroke-linejoin': 'round' });
-    el(g, 'line', { x1: -3.5, y1: 0, x2: 4.5, y2: 0, stroke: '#171c26', 'stroke-width': 0.8 });
-    el(g, 'circle', { cx: -6.6, cy: 0, r: 1.5, fill: '#ff8a1f' });
-    return g;
+    return sprite(parent, side === 'ua' ? 'droneUa' : 'droneRu');
+  }
+  // 海峽封鎖標記：一圈虛線環（用色塊組成，不描邊）＋斜槓
+  function chokeMarker(g) {
+    const disc = el(g, 'circle', { r: 7, fill: 'rgba(255,60,50,.14)' });
+    let d = '';
+    for (let i = 0; i < 10; i++) {
+      const a0 = (i / 10) * TAU, a1 = a0 + TAU / 10 * 0.62, r0 = 6.2, r1 = 7.8;
+      const p = (r, a) => `${f1(Math.cos(a) * r)} ${f1(Math.sin(a) * r)}`;
+      d += `M${p(r1, a0)}A${r1} ${r1} 0 0 1 ${p(r1, a1)}L${p(r0, a1)}A${r0} ${r0} 0 0 0 ${p(r0, a0)}Z`;
+    }
+    const ring = el(g, 'path', { d, fill: TONE.bad });
+    const bar = el(g, 'rect', { x: -6.4, y: -1, width: 12.8, height: 2, rx: 1, fill: TONE.bad, transform: 'rotate(-45)' });
+    return { disc, ring, bar };
   }
 
   /* ---------- 爆炸 / 飛彈軌跡（所有場景共用的小特效，座標是螢幕座標）---------- */
@@ -300,21 +294,18 @@
     for (const gd of def.gates) {
       const gt = { ...gd, d: {}, x: 0, y: 0, open: true, busy: false, g: el(g, 'g', { style: 'display:none' }) };
       if (gd.type === 'choke') {
-        gt.ring = el(gt.g, 'circle', { r: 7, fill: 'rgba(255,60,50,.14)', stroke: TONE.bad, 'stroke-width': 1.5, 'stroke-dasharray': '3 2.2' });
-        gt.bar = el(gt.g, 'line', { x1: -4.6, y1: 4.6, x2: 4.6, y2: -4.6, stroke: TONE.bad, 'stroke-width': 1.9, 'stroke-linecap': 'round' });
+        Object.assign(gt, chokeMarker(gt.g));
         gt.lab = el(gt.g, 'text', { y: 15, 'font-size': 8.5, style: FONT });
       } else {
-        // 收費站：小屋 + 招牌 + 柵欄
-        const b = el(gt.g, 'g');
-        el(b, 'rect', { x: -5, y: -6, width: 10, height: 8, rx: 1, fill: '#e9edf3', stroke: '#4a5566', 'stroke-width': 0.7 });
-        el(b, 'rect', { x: -6, y: -8.6, width: 12, height: 3, rx: 1, fill: '#d8453a', stroke: '#4a5566', 'stroke-width': 0.7 });
-        el(b, 'rect', { x: -3, y: -4.2, width: 6, height: 2.6, fill: '#3b5b8c' });
+        // 收費站：2.5D 小屋 + 依局勢變色的招牌 + 紅白柵欄（零件在 geosprites.js）
+        sprite(gt.g, 'booth');
         gt.sign = el(gt.g, 'g');
-        gt.signBg = el(gt.sign, 'rect', { x: -12, y: -4.8, width: 24, height: 9.6, rx: 2.4, fill: '#10182b', stroke: TONE.ok, 'stroke-width': 1.3 });
+        const sg = sprite(gt.sign, 'sign');
+        gt.signFaces = roleEls(sg, ['sgL', 'sgM', 'sgD']);
         gt.signT = el(gt.sign, 'text', { y: 2.6, 'font-size': 7.5, style: 'font-family:var(--font);font-weight:800;text-anchor:middle;fill:#fff;pointer-events:none' });
         gt.arm = el(gt.g, 'g');
-        el(gt.arm, 'line', { x1: 0, y1: 0, x2: 17, y2: 0, stroke: '#f4f4f4', 'stroke-width': 2.6, 'stroke-linecap': 'round' });
-        el(gt.arm, 'line', { x1: 3, y1: 0, x2: 17, y2: 0, stroke: '#d8453a', 'stroke-width': 2.6, 'stroke-dasharray': '3.4 3.4' });
+        sprite(gt.arm, 'arm');
+        sprite(gt.g, 'post');
         gt.armOpen = 0; // 0 = 放下，1 = 抬起
       }
       sc.gates.push(gt);
@@ -332,15 +323,14 @@
     def.in.forEach((r, i) => mkShip(r, -1, i, def.in.length));
     if (def.kind === 'container') for (let i = 0; i < 16; i++) {
       const c = el(g, 'g', { style: 'display:none' });
-      el(c, 'circle', { r: 3.6, fill: '#ffd23f', stroke: '#9a6a00', 'stroke-width': 0.9 });
-      el(c, 'text', { y: 2.2, 'font-size': 5.6, style: 'font-family:var(--font);font-weight:800;text-anchor:middle;fill:#7a4f00;pointer-events:none' }).textContent = '$';
+      sprite(c, 'coin');
       sc.coins.push({ g: c, t: 99, delay: 0, sx: 0, sy: 0 });
     }
     if (def.attack) {
       for (let i = 0; i < 2; i++) {
         const m = el(g, 'g', { style: 'display:none' });
         const trail = makeTrail(m, '#fff1c9', 1.6);
-        const head = el(m, 'circle', { r: 2.1, fill: '#ff8a1f', stroke: '#fff', 'stroke-width': 0.8 });
+        const head = sprite(m, 'missile');
         sc.missiles.push({ g: m, trail, head, on: false, t: 0, dur: 1, x0: 0, y0: 0, ship: null });
       }
     }
@@ -414,15 +404,18 @@
         show(gt.g, showG);
         if (showG) {
           const shut = !gt.open;
-          gt.ring.setAttribute('stroke', shut ? TONE.bad : TONE.warn);
-          gt.ring.setAttribute('fill', shut ? 'rgba(255,60,50,.16)' : 'rgba(255,176,46,.14)');
+          gt.ring.setAttribute('fill', shut ? TONE.bad : TONE.warn);
+          gt.disc.setAttribute('fill', shut ? 'rgba(255,60,50,.16)' : 'rgba(255,176,46,.14)');
           gt.bar.setAttribute('opacity', shut ? 1 : 0);
           gt.g.setAttribute('opacity', (0.72 + Math.sin(t * 4) * 0.28).toFixed(2));
           gt.lab.textContent = shut ? T(tone === 'bad' ? '封鎖' : '通行受限') : '';
         }
       } else {
         show(gt.g, true);
-        gt.signBg.setAttribute('stroke', col);
+        if (gt.signTone !== tone) {
+          gt.signTone = tone;
+          paint(gt.signFaces, tone);
+        }
         gt.signT.textContent = T('關稅');
         const a = lerp(gt.ang0, gt.ang1, gt.armOpen);
         gt.arm.setAttribute('transform', `rotate(${(a * 180 / Math.PI).toFixed(1)})`);
@@ -447,7 +440,11 @@
       const edge = sc.size * 1.2;
       const fade = clamp(Math.min(sh.s, P.L - sh.s) / edge, 0, 1);
       sh.outer.setAttribute('opacity', fade.toFixed(2));
-      for (const ac of sh.body.accents) ac.setAttribute('fill', sh.fire > 0 ? TONE.bad : col);
+      const ac = sh.fire > 0 ? 'bad' : tone;
+      if (sh.acTone !== ac) {
+        sh.acTone = ac;
+        paint(sh.body.accents, ac);
+      }
       if (sh.body.bc) {
         const blink = sh.stuck || sh.fire > 0 ? (Math.sin(t * 9 + sh.ph) > 0 ? 1 : 0.15) : 1;
         sh.body.bc.setAttribute('fill', sh.fire > 0 ? TONE.bad : col);
@@ -457,7 +454,7 @@
         show(sh.body.flames, sh.fire > 0);
         if (sh.fire > 0) {
           const fl = sh.body.flames.childNodes;
-          fl.forEach((f, i) => f.setAttribute('transform', `translate(${i ? 6.5 : 1} -4) scale(${(0.8 + Math.sin(t * 15 + i * 2) * 0.22).toFixed(2)} ${(0.9 + Math.sin(t * 11 + i) * 0.3).toFixed(2)})`));
+          fl.forEach((f, i) => f.setAttribute('transform', `translate(${i ? 6.5 : 1} -3) scale(${(0.8 + Math.sin(t * 15 + i * 2) * 0.22).toFixed(2)} ${(0.9 + Math.sin(t * 11 + i) * 0.3).toFixed(2)})`));
         }
       }
       // 黑煙：4 團循環往上飄、變大變淡
@@ -651,8 +648,7 @@
       const tg = m.ship.o, p = clamp(m.t, 0, 1);
       // 飛彈弧線：先往上拉一點再俯衝
       const x = lerp(m.x0, tg.x, p), y = lerp(m.y0, tg.y, p) - Math.sin(p * Math.PI) * sc.size * 1.6;
-      m.head.setAttribute('cx', f1(x));
-      m.head.setAttribute('cy', f1(y));
+      place(m.head, x, y);
       m.trail.push(x, y);
       if (m.t >= 1) {
         m.on = false;
@@ -687,8 +683,7 @@
     // 停火時的白旗
     const fg = el(g, 'g', { style: 'display:none' });
     sc.flagG = fg;
-    el(fg, 'ellipse', { cx: 0, cy: 0.5, rx: 6, ry: 1.6, fill: '#0f1a08', opacity: 0.4 });
-    sc.flagImg = el(fg, 'image', { href: 'assets/icons/white_flag.png', preserveAspectRatio: 'xMidYMax meet' });
+    sc.flagImg = el(fg, 'image', { href: 'assets/icons/white_flag.svg', preserveAspectRatio: 'xMidYMax meet' });
     sc.layout = layoutDrone;
     sc.step = stepDrone;
     scenes.push(sc);
@@ -740,12 +735,10 @@
       const d = tg.d;
       place(d.g, tg.x, tg.y, 0, u);
       const burning = tg.burn > 0;
-      // 燒焦痕跡：起火時變深，之後 10 秒慢慢恢復
-      d.scorch.setAttribute('opacity', clamp(tg.heat, 0, 1).toFixed(2) * 0.75);
-      for (const tk of d.tanks) {
-        const hot = clamp(tg.heat, 0, 1);
-        tk.body.setAttribute('fill', hot > 0.05 ? `rgb(${Math.round(183 - hot * 100)},${Math.round(192 - hot * 112)},${Math.round(205 - hot * 120)})` : '#b7c0cd');
-      }
+      // 燒焦痕跡：起火時變深，之後 10 秒慢慢恢復（地上的焦痕＋儲油槽蓋上一層黑）
+      const hot = clamp(tg.heat, 0, 1);
+      d.scorch.setAttribute('opacity', (hot * 0.75).toFixed(2));
+      if (d.char) d.char.setAttribute('opacity', (hot * 0.7).toFixed(2));
       show(d.fire, burning);
       if (burning) {
         const fade = clamp(tg.burn / 1.5, 0, 1);

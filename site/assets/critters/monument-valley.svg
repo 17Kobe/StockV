@@ -1,63 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-  <defs>
-    <linearGradient id="mv-butte1" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d9713f"/>
-      <stop offset="60%" stop-color="#b8502a"/>
-      <stop offset="100%" stop-color="#8a3a22"/>
-    </linearGradient>
-    <linearGradient id="mv-butte2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e2854e"/>
-      <stop offset="60%" stop-color="#c25f34"/>
-      <stop offset="100%" stop-color="#93421f"/>
-    </linearGradient>
-    <linearGradient id="mv-sand" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d79a55"/>
-      <stop offset="100%" stop-color="#b9793c"/>
-    </linearGradient>
-    <linearGradient id="mv-sky-glow" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffb46a" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#ffb46a" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-
-  <!-- warm haze glow just behind the buttes, kept tight to the subject -->
-  <ellipse cx="40" cy="30" rx="30" ry="14" fill="url(#mv-sky-glow)"/>
-
-  <!-- distant small butte -->
-  <path d="M4 66 L10 42 L16 42 L22 66 Z" fill="url(#mv-butte2)" stroke="#6e2f18" stroke-width="0.5" opacity="0.85"/>
-  <path d="M10 42 H16 L17 46 H9 Z" fill="#8a3a22" opacity="0.85"/>
-
-  <!-- the Mittens: two tall rectangular buttes -->
-  <g>
-    <path d="M22 72 L26 24 Q28 20 32 20 L34 20 Q38 20 40 24 L44 72 Z" fill="url(#mv-butte1)" stroke="#6e2f18" stroke-width="0.6" stroke-linejoin="round"/>
-    <path d="M26 24 Q28 20 32 20 L34 20 L35 34 L27 34 Z" fill="#c8693a"/>
-    <!-- horizontal rock strata -->
-    <g stroke="#8a3a22" stroke-width="0.6" opacity="0.5">
-      <line x1="25" y1="40" x2="43" y2="40"/>
-      <line x1="24" y1="50" x2="44" y2="50"/>
-      <line x1="23" y1="60" x2="44" y2="60"/>
-    </g>
-    <!-- shadow face -->
-    <path d="M34 20 Q38 20 40 24 L44 72 L38 72 L35 24 Z" fill="#7a3220" opacity="0.5"/>
+  <!-- 紀念碑谷（2.5D）：美國猶他州與亞利桑那州交界的紅色砂岩孤峰，兩座平頂方山旁各立著一根細高的岩柱（像一對連指手套），一條公路筆直地通向遠方，禿鷹盤旋（動畫）。光源左上，不描邊 -->
+  <g transform="translate(40 54.69) scale(1.31)">
+    <path d="M22.52 13L18.7 14.7L14.17 15.84L9.1 16.36L3.67 16.26L-1.89 15.54L-7.39 14.21L-12.59 12.34L-17.32 10L-21.38 7.27L-24.62 4.26L-26.91 1.09L-28.17 -2.12L-28.34 -5.25L-27.43 -8.18L-25.46 -10.8L-22.52 -13L-18.7 -14.7L-14.17 -15.84L-9.1 -16.36L-3.67 -16.26L1.89 -15.54L7.39 -14.21L12.59 -12.34L17.32 -10L21.38 -7.27L24.62 -4.26L26.91 -1.09L28.17 2.12L28.34 5.25L27.43 8.18L25.46 10.8Z" fill="#e8a070"/>
+    <path d="M15.59 5L13.09 6.1L10.09 6.8L6.71 7.09L3.06 6.96L-0.7 6.4L-4.44 5.45L-8 4.13L-11.26 2.5L-14.08 0.62L-16.37 -1.44L-18.02 -3.6L-18.98 -5.77L-19.22 -7.87L-18.71 -9.83L-17.49 -11.56L-15.59 -13L-13.09 -14.1L-10.09 -14.8L-6.71 -15.09L-3.06 -14.96L0.7 -14.4L4.44 -13.45L8 -12.13L11.26 -10.5L14.08 -8.62L16.37 -6.56L18.02 -4.4L18.98 -2.23L19.22 -0.13L18.71 1.83L17.49 3.56Z" fill="#f0b888" opacity="0.6"/>
+    <path d="M6.49 -12.38L5.04 -7.97L1.99 -11.7L2.53 -14.43Z" fill="#94502f"/>
+    <path d="M-13.24 -7.66L-13.42 -12.38L-9.46 -14.43L-9.39 -11.58Z" fill="#e89a6a"/>
+    <path d="M-6.99 -5.09L-13.24 -7.66L-9.39 -11.58L-5.72 -9.85Z" fill="#c8704a"/>
+    <path d="M5.04 -7.97L0.66 -4.25L-0.98 -9.54L1.99 -11.7Z" fill="#94502f"/>
+    <path d="M0.66 -4.25L-6.99 -5.09L-5.72 -9.85L-0.98 -9.54Z" fill="#c8704a"/>
+    <path d="M-0.98 -9.54L-5.72 -9.85L-9.39 -11.58L-9.46 -14.43L-5.72 -16.15L-1.01 -16.42L2.53 -14.43L1.99 -11.7Z" fill="#e89a6a"/>
+    <path d="M-1.73 -9L-10.22 -13.6L-10.22 -27.6L-1.73 -23Z" fill="#c8704a"/>
+    <path d="M2.86 -12.65L-1.73 -9L-1.73 -23L2.86 -26.65Z" fill="#94502f"/>
+    <path d="M-5.2 -31L2.86 -26.65L-1.73 -23L-10.22 -27.6Z" fill="#e89a6a"/>
+    <path d="M1.79 -6.43L1.53 -5.63L0.98 -8.77L1.08 -9.26Z" fill="#94502f"/>
+    <path d="M-1.76 -5.58L-1.79 -6.43L-1.08 -9.26L-1.07 -8.74Z" fill="#e89a6a"/>
+    <path d="M-0.63 -5.12L-1.76 -5.58L-1.07 -8.74L-0.41 -8.43Z" fill="#c8704a"/>
+    <path d="M1.53 -5.63L0.74 -4.97L0.45 -8.38L0.98 -8.77Z" fill="#94502f"/>
+    <path d="M0.74 -4.97L-0.63 -5.12L-0.41 -8.43L0.45 -8.38Z" fill="#c8704a"/>
+    <path d="M0.45 -8.38L-0.41 -8.43L-1.07 -8.74L-1.08 -9.26L-0.41 -9.57L0.44 -9.62L1.08 -9.26L0.98 -8.77Z" fill="#e89a6a"/>
+    <path d="M0.39 -9.04L0.08 -8.78L0.08 -20.77L0.39 -21.05Z" fill="#94502f"/>
+    <path d="M0.08 -8.78L-0.39 -8.96L-0.39 -20.95L0.08 -20.77Z" fill="#c8704a"/>
+    <path d="M-0.08 -21.23L0.39 -21.05L0.08 -20.77L-0.39 -20.95Z" fill="#e89a6a"/>
+    <path d="M26.08 -2.1L24.81 1.79L22.12 -1.85L22.6 -4.26Z" fill="#94502f"/>
+    <path d="M8.72 2.06L8.56 -2.1L12.04 -4.26L12.1 -1.75Z" fill="#e89a6a"/>
+    <path d="M14.22 4.32L8.72 2.06L12.1 -1.75L15.33 -0.23Z" fill="#c8704a"/>
+    <path d="M24.81 1.79L20.95 5.06L19.51 0.05L22.12 -1.85Z" fill="#94502f"/>
+    <path d="M20.95 5.06L14.22 4.32L15.33 -0.23L19.51 0.05Z" fill="#c8704a"/>
+    <path d="M19.51 0.05L15.33 -0.23L12.1 -1.75L12.04 -4.26L15.33 -5.77L19.48 -6.01L22.6 -4.26L22.12 -1.85Z" fill="#e89a6a"/>
+    <path d="M18.53 0.7L11.03 -3.33L11.03 -15.33L18.53 -11.3Z" fill="#c8704a"/>
+    <path d="M23.23 -2.89L18.53 0.7L18.53 -11.3L23.23 -14.89Z" fill="#94502f"/>
+    <path d="M16.11 -18.7L23.23 -14.89L18.53 -11.3L11.03 -15.33Z" fill="#e89a6a"/>
+    <path d="M19.98 4.07L19.72 4.87L19.17 1.73L19.27 1.24Z" fill="#94502f"/>
+    <path d="M16.43 4.92L16.39 4.07L17.11 1.24L17.12 1.76Z" fill="#e89a6a"/>
+    <path d="M17.55 5.38L16.43 4.92L17.12 1.76L17.78 2.07Z" fill="#c8704a"/>
+    <path d="M19.72 4.87L18.93 5.53L18.63 2.12L19.17 1.73Z" fill="#94502f"/>
+    <path d="M18.93 5.53L17.55 5.38L17.78 2.07L18.63 2.12Z" fill="#c8704a"/>
+    <path d="M18.63 2.12L17.78 2.07L17.12 1.76L17.11 1.24L17.78 0.93L18.63 0.88L19.27 1.24L19.17 1.73Z" fill="#e89a6a"/>
+    <path d="M18.58 1.46L18.26 1.72L18.26 -8.28L18.58 -8.54Z" fill="#94502f"/>
+    <path d="M18.26 1.72L17.8 1.54L17.8 -8.46L18.26 -8.28Z" fill="#c8704a"/>
+    <path d="M18.11 -8.72L18.58 -8.54L18.26 -8.28L17.8 -8.46Z" fill="#e89a6a"/>
+    <path d="M-0.16 4.38L-1.14 7.38L-3.22 3.89L-2.85 2.02Z" fill="#94502f"/>
+    <path d="M-13.58 7.59L-13.7 4.38L-11.01 2.02L-10.96 3.96Z" fill="#e89a6a"/>
+    <path d="M-9.32 9.34L-13.58 7.59L-10.96 3.96L-8.46 5.14Z" fill="#c8704a"/>
+    <path d="M-1.14 7.38L-4.12 9.91L-5.24 5.35L-3.22 3.89Z" fill="#94502f"/>
+    <path d="M-4.12 9.91L-9.32 9.34L-8.46 5.14L-5.24 5.35Z" fill="#c8704a"/>
+    <path d="M-5.24 5.35L-8.46 5.14L-10.96 3.96L-11.01 2.02L-8.46 0.86L-5.26 0.67L-2.85 2.02L-3.22 3.89Z" fill="#e89a6a"/>
+    <path d="M-6.06 5.9L-11.86 2.79L-11.86 -6.21L-6.06 -3.1Z" fill="#c8704a"/>
+    <path d="M-2.29 3.04L-6.06 5.9L-6.06 -3.1L-2.29 -5.96Z" fill="#94502f"/>
+    <path d="M-7.79 -8.9L-2.29 -5.96L-6.06 -3.1L-11.86 -6.21Z" fill="#e89a6a"/>
+    <path d="M-20.78 9.98L-17.32 11.98L14.72 -7.52L13.86 -8.02Z" fill="#5a5a62"/>
+    <path d="M-19.14 10.92L-18.88 11.07L14.33 -7.75L14.25 -7.81Z" fill="#ffd45a"/>
+    <path d="M-27.37 -2.2L-27.87 -3.29L-25.98 -4.4L-25.98 -4.4Z" fill="#a6c86a"/>
+    <path d="M-24.09 -2.71L-25.47 -1.91L-25.98 -4.4L-25.98 -4.4Z" fill="#5a8034"/>
+    <path d="M-25.47 -1.91L-27.37 -2.2L-25.98 -4.4L-25.98 -4.4Z" fill="#7ea84a"/>
+    <path d="M2.08 16.8L1.57 15.71L3.46 14.6L3.46 14.6Z" fill="#a6c86a"/>
+    <path d="M5.36 16.29L3.97 17.09L3.46 14.6L3.46 14.6Z" fill="#5a8034"/>
+    <path d="M3.97 17.09L2.08 16.8L3.46 14.6L3.46 14.6Z" fill="#7ea84a"/>
+    <path d="M-16.97 -10.2L-17.48 -11.29L-15.59 -12.4L-15.59 -12.4Z" fill="#a6c86a"/>
+    <path d="M-13.7 -10.71L-15.08 -9.91L-15.59 -12.4L-15.59 -12.4Z" fill="#5a8034"/>
+    <path d="M-15.08 -9.91L-16.97 -10.2L-15.59 -12.4L-15.59 -12.4Z" fill="#7ea84a"/>
+    <g><animateMotion dur="9s" begin="0s" repeatCount="indefinite" path="M-10.00 -24.00a10 3 0 1 0 20 0a10 3 0 1 0 -20 0"/><path d="M-1.6 0Q-.8 -1.2 0 0Q.8 -1.2 1.6 0Q.8 -.4 0 .4Q-.8 -.4 -1.6 0Z" fill="#2a2a33"><animate attributeName="d" values="M-1.6 0Q-.8 -1.2 0 0Q.8 -1.2 1.6 0Q.8 -.4 0 .4Q-.8 -.4 -1.6 0Z;M-1.6 -.8Q-.8 .4 0 0Q.8 .4 1.6 -.8Q.8 .2 0 .6Q-.8 .2 -1.6 -.8Z;M-1.6 0Q-.8 -1.2 0 0Q.8 -1.2 1.6 0Q.8 -.4 0 .4Q-.8 -.4 -1.6 0Z" dur=".5s" repeatCount="indefinite"/></path></g>
+    <g><animateMotion dur="10s" begin="-2s" repeatCount="indefinite" path="M-10.00 -22.00a10 3 0 1 0 20 0a10 3 0 1 0 -20 0"/><path d="M-1.6 0Q-.8 -1.2 0 0Q.8 -1.2 1.6 0Q.8 -.4 0 .4Q-.8 -.4 -1.6 0Z" fill="#2a2a33"><animate attributeName="d" values="M-1.6 0Q-.8 -1.2 0 0Q.8 -1.2 1.6 0Q.8 -.4 0 .4Q-.8 -.4 -1.6 0Z;M-1.6 -.8Q-.8 .4 0 0Q.8 .4 1.6 -.8Q.8 .2 0 .6Q-.8 .2 -1.6 -.8Z;M-1.6 0Q-.8 -1.2 0 0Q.8 -1.2 1.6 0Q.8 -.4 0 .4Q-.8 -.4 -1.6 0Z" dur=".5s" repeatCount="indefinite"/></path></g>
   </g>
-
-  <g>
-    <path d="M44 72 L49 30 Q51 26 55 26 L58 26 Q62 26 64 30 L70 72 Z" fill="url(#mv-butte2)" stroke="#6e2f18" stroke-width="0.6" stroke-linejoin="round"/>
-    <path d="M49 30 Q51 26 55 26 L58 26 L59 38 L50 38 Z" fill="#d9713f"/>
-    <g stroke="#8a3a22" stroke-width="0.6" opacity="0.5">
-      <line x1="48" y1="46" x2="66" y2="46"/>
-      <line x1="47" y1="56" x2="67" y2="56"/>
-      <line x1="46" y1="66" x2="68" y2="66"/>
-    </g>
-    <path d="M58 26 Q62 26 64 30 L70 72 L64 72 L59 30 Z" fill="#8a3a22" opacity="0.5"/>
-  </g>
-
-  <!-- circling hawk, subtle motion -->
-  <path d="M0 0 Q2 -1.5 4 0 Q2 0.6 0 0 Z" fill="#2c1c12" opacity="0.8">
-    <animateMotion path="M10,12 Q40,2 62,14 Q40,24 10,12 Z" dur="9s" repeatCount="indefinite"/>
-  </path>
-
-  <!-- desert floor -->
-  <path d="M0 68 Q20 64 40 68 Q60 64 80 68 L80 80 L0 80 Z" fill="url(#mv-sand)"/>
-  <path d="M6 72 Q16 70 26 72 M48 71 Q60 69 72 72" stroke="#9c6b36" stroke-width="1" opacity="0.5" fill="none" stroke-linecap="round"/>
 </svg>

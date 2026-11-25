@@ -1,19 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <defs>
-    <linearGradient id="fin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9aa6b4"/><stop offset=".55" stop-color="#667384"/><stop offset="1" stop-color="#3f4a58"/></linearGradient>
-    <linearGradient id="wk" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-  </defs>
-  <!-- 水面下的黑影（身體） -->
-  <ellipse cx="68" cy="112" rx="50" ry="8" fill="#12304d" opacity=".4"/>
-  <!-- 背鰭後面拖出的 V 形水痕 -->
-  <path d="M58 110 L124 98" stroke="url(#wk)" stroke-width="3" stroke-linecap="round" fill="none"/>
-  <path d="M58 112 L124 124" stroke="url(#wk)" stroke-width="3" stroke-linecap="round" fill="none"/>
-  <!-- 尾鰭尖端 -->
-  <path d="M100 111 L110 90 C112 98 118 105 124 111 Z" fill="url(#fin)"/>
-  <!-- 背鰭：前緣微凸、後緣凹，尖端往後傾 -->
-  <path d="M26 111 C38 90 50 58 62 28 C64 62 78 92 92 111 Z" fill="url(#fin)"/>
-  <path d="M30 108 C42 86 52 60 61 34" stroke="#c9d2dc" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".7"/>
-  <!-- 鰭根部的白色浪花 -->
-  <ellipse cx="59" cy="111" rx="38" ry="4.2" fill="#fff" opacity=".78"/>
-  <ellipse cx="36" cy="111" rx="9" ry="3" fill="#fff" opacity=".9"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 大白鯊背鰭（2.5D，朝左）：美國西海岸外海的大白鯊，只露出灰色的三角背鰭劃過海面，鰭前方推出白色浪花、後面拖著白色水痕，鰭輕輕左右晃、水波擴散（動畫；巡游由地圖的 fin 模式負責）。光源左上，不描邊 -->
+  <g transform="translate(35.06 71.07) scale(1.65)">
+    <path d="M18 0.6L17.6 1.27L16.42 1.9L14.51 2.47L11.98 2.95L8.94 3.3L5.56 3.52L2 3.6L-1.56 3.52L-4.94 3.3L-7.98 2.95L-10.51 2.47L-12.42 1.9L-13.6 1.27L-14 0.6L-13.6 -0.07L-12.42 -0.7L-10.51 -1.27L-7.98 -1.75L-4.94 -2.1L-1.56 -2.32L2 -2.4L5.56 -2.32L8.94 -2.1L11.98 -1.75L14.51 -1.27L16.42 -0.7L17.6 -0.07Z" fill="#52c3dc" opacity="0.55"/>
+    <path d="M2 0L20 -1.4L20 1.6Z" fill="#ffffff" opacity=".55"><animate attributeName="opacity" values=".6;.3;.6" dur="1.4s" repeatCount="indefinite"/></path>
+    <g><animateTransform attributeName="transform" type="rotate" values="-4 2.00 0.00;4 2.00 0.00;-4 2.00 0.00" dur="1.6s" begin="0s" repeatCount="indefinite"/>
+    <path d="M-6 0Q-3 -10 5 -16Q3 -8 6 0Z" fill="#7c8a9e"/>
+    <path d="M1 0Q2 -8 5 -16Q3 -8 6 0Z" fill="#56627a"/>
+    <path d="M-6 0Q-3 -10 5 -16Q-2 -8 -4 0Z" fill="#a8b4c4" opacity="0.7"/>
+    </g>
+    <path d="M-9 .4Q-7 -1 -5 .4Q-7 1.2 -9 .4Z" fill="#ffffff" opacity=".8"/>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-3.00 0.00a3.00 1.50 0 1 0 6.00 0a3.00 1.50 0 1 0 -6.00 0ZM-2.46 0.00a2.46 1.23 0 1 0 4.92 0a2.46 1.23 0 1 0 -4.92 0Z"><animate attributeName="d" values="M-3.00 0.00a3.00 1.50 0 1 0 6.00 0a3.00 1.50 0 1 0 -6.00 0ZM-2.46 0.00a2.46 1.23 0 1 0 4.92 0a2.46 1.23 0 1 0 -4.92 0Z;M-10.00 0.00a10.00 5.00 0 1 0 20.00 0a10.00 5.00 0 1 0 -20.00 0ZM-8.20 0.00a8.20 4.10 0 1 0 16.40 0a8.20 4.10 0 1 0 -16.40 0Z" dur="2.6s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0" dur="2.6s" begin="0s" repeatCount="indefinite"/></path>
+  </g>
 </svg>

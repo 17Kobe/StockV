@@ -1,97 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-<defs>
-  <linearGradient id="tipiG" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#e0c58c"/>
-    <stop offset="1" stop-color="#a8835a"/>
-  </linearGradient>
-</defs>
-<!-- Ground shadow -->
-<ellipse cx="40" cy="74" rx="22" ry="5" fill="#5a8a3a"/>
-
-<!-- Campfire base logs -->
-<ellipse cx="40" cy="70" rx="7" ry="2.5" fill="#8B4513" stroke="#4a2308" stroke-width="0.4"/>
-
-<!-- Campfire flames - animated -->
-<g>
-  <!-- Main flame -->
-  <polygon points="40,57 36,70 44,70" fill="#FF8C00" stroke="#b34a00" stroke-width="0.3">
-    <animate attributeName="points"
-      values="40,57 36,70 44,70; 39,55 35,70 44,70; 41,56 36,70 45,70; 40,57 36,70 44,70"
-      dur="0.8s" repeatCount="indefinite"/>
-    <animate attributeName="fill" values="#FF8C00;#FFD700;#FF4500;#FF8C00" dur="0.8s" repeatCount="indefinite"/>
-  </polygon>
-  <!-- Left small flame -->
-  <polygon points="37,60 34,70 40,70" fill="#FFD700" stroke="none">
-    <animate attributeName="points"
-      values="37,60 34,70 40,70; 36,58 33,70 40,70; 38,61 34,70 41,70; 37,60 34,70 40,70"
-      dur="0.6s" repeatCount="indefinite"/>
-    <animate attributeName="fill" values="#FFD700;#FF8C00;#FFD700" dur="0.6s" repeatCount="indefinite"/>
-  </polygon>
-  <!-- Right small flame -->
-  <polygon points="43,61 40,70 46,70" fill="#FF6600" stroke="none">
-    <animate attributeName="points"
-      values="43,61 40,70 46,70; 44,59 40,70 47,70; 42,62 39,70 45,70; 43,61 40,70 46,70"
-      dur="0.7s" repeatCount="indefinite"/>
-  </polygon>
-</g>
-
-<!-- Tipi main body -->
-<polygon points="40,8 18,68 62,68" fill="url(#tipiG)" stroke="#6b4e22" stroke-width="0.6"/>
-
-<!-- Tipi vertical stripe decorations -->
-<line x1="33" y1="20" x2="24" y2="68" stroke="#7a5c2a" stroke-width="1.2"/>
-<line x1="37" y1="12" x2="32" y2="68" stroke="#7a5c2a" stroke-width="1.2"/>
-<line x1="43" y1="12" x2="48" y2="68" stroke="#7a5c2a" stroke-width="1.2"/>
-<line x1="47" y1="20" x2="56" y2="68" stroke="#7a5c2a" stroke-width="1.2"/>
-
-<!-- Tipi geometric pattern band (middle) -->
-<g fill="#7a5c2a">
-  <!-- Diamond shapes around the middle -->
-  <polygon points="35,42 37,38 39,42 37,46"/>
-  <polygon points="40,40 42,36 44,40 42,44"/>
-  <polygon points="45,42 47,38 49,42 47,46"/>
-  <!-- Dots -->
-  <circle cx="37" cy="52" r="1.5"/>
-  <circle cx="40" cy="50" r="1.5"/>
-  <circle cx="43" cy="52" r="1.5"/>
-</g>
-
-<!-- Tipi entrance (dark triangle at bottom) -->
-<polygon points="40,68 36,68 38,60" fill="#5a3a1a"/>
-<polygon points="40,68 44,68 42,60" fill="#5a3a1a"/>
-
-<!-- Top wooden poles extending out -->
-<line x1="40" y1="8" x2="34" y2="2" stroke="#7a5c2a" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="40" y1="8" x2="40" y2="1" stroke="#7a5c2a" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="40" y1="8" x2="46" y2="2" stroke="#7a5c2a" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="40" y1="8" x2="37" y2="1" stroke="#8B6914" stroke-width="1" stroke-linecap="round"/>
-<line x1="40" y1="8" x2="43" y2="1" stroke="#8B6914" stroke-width="1" stroke-linecap="round"/>
-
-<!-- Smoke puffs - animated -->
-<!-- Smoke 1 (left) -->
-<ellipse cx="37" cy="10" rx="3" ry="2" fill="white" fill-opacity="0.7">
-  <animateTransform attributeName="transform" type="translate"
-    values="0,0; -2,-8; -3,-16"
-    dur="3s" repeatCount="indefinite"/>
-  <animate attributeName="fill-opacity" values="0.7;0.4;0" dur="3s" repeatCount="indefinite"/>
-  <animate attributeName="rx" values="3;4;5" dur="3s" repeatCount="indefinite"/>
-</ellipse>
-
-<!-- Smoke 2 (center) -->
-<ellipse cx="40" cy="8" rx="2.5" ry="1.8" fill="white" fill-opacity="0.75">
-  <animateTransform attributeName="transform" type="translate"
-    values="0,0; 0,-8; 0,-16"
-    dur="3s" begin="1s" repeatCount="indefinite"/>
-  <animate attributeName="fill-opacity" values="0.75;0.45;0" dur="3s" begin="1s" repeatCount="indefinite"/>
-  <animate attributeName="rx" values="2.5;3.5;5" dur="3s" begin="1s" repeatCount="indefinite"/>
-</ellipse>
-
-<!-- Smoke 3 (right) -->
-<ellipse cx="43" cy="10" rx="3" ry="2" fill="white" fill-opacity="0.65">
-  <animateTransform attributeName="transform" type="translate"
-    values="0,0; 2,-8; 3,-16"
-    dur="3s" begin="2s" repeatCount="indefinite"/>
-  <animate attributeName="fill-opacity" values="0.65;0.35;0" dur="3s" begin="2s" repeatCount="indefinite"/>
-  <animate attributeName="rx" values="3;4.5;6" dur="3s" begin="2s" repeatCount="indefinite"/>
-</ellipse>
+  <!-- 北美原住民帳篷（2.5D）：北美平原印第安人的圓錐形帳篷（Tipi），米色獸皮帳面畫著紅藍、綠橘的色帶，頂端露出交叉的木桿，前方的營火跳動、白煙裊裊往上飄（動畫）。光源左上，不描邊 -->
+  <g transform="translate(40 55.64) scale(1.88)">
+    <path d="M15.59 9L12.92 10.19L9.76 10.99L6.23 11.37L2.45 11.31L-1.42 10.82L-5.24 9.91L-8.85 8.62L-12.12 7L-14.93 5.11L-17.17 3.02L-18.74 0.82L-19.6 -1.41L-19.7 -3.59L-19.04 -5.64L-17.65 -7.46L-15.59 -9L-12.92 -10.19L-9.76 -10.99L-6.23 -11.37L-2.45 -11.31L1.42 -10.82L5.24 -9.91L8.85 -8.62L12.12 -7L14.93 -5.11L17.17 -3.02L18.74 -0.82L19.6 1.41L19.7 3.59L19.04 5.64L17.65 7.46Z" fill="#a6c86a" opacity="0.6"/>
+    <path d="M7.35 -6L6.36 -3.88L0 -22L0 -22Z" fill="#a8906a"/>
+    <path d="M-6.36 -3.88L-7.35 -6L0 -22L0 -22Z" fill="#f0dcb4"/>
+    <path d="M6.36 -3.88L3.67 -2.33L0 -22L0 -22Z" fill="#a8906a"/>
+    <path d="M-3.67 -2.33L-6.36 -3.88L0 -22L0 -22Z" fill="#d4bc90"/>
+    <path d="M0 -1.76L-3.67 -2.33L0 -22L0 -22Z" fill="#d4bc90"/>
+    <path d="M3.67 -2.33L0 -1.76L0 -22L0 -22Z" fill="#a8906a"/>
+    <path d="M-0.64 -22L-0.34 -22L-1.94 -26L-2.24 -26Z" fill="#7d5a3a"/>
+    <path d="M-0.24 -22L0.06 -22L-0.54 -26L-0.84 -26Z" fill="#7d5a3a"/>
+    <path d="M0.24 -22L0.54 -22L1.14 -26L0.84 -26Z" fill="#7d5a3a"/>
+    <path d="M0.64 -22L0.94 -22L2.54 -26L2.24 -26Z" fill="#7d5a3a"/>
+    <path d="M5.49 -9.72L5.24 -9.02L4.72 -8.36L3.96 -7.79L3 -7.33L1.88 -7.01L0.67 -6.84L-0.58 -6.84L-1.79 -6.99L-2.92 -7.3L-3.9 -7.75L-4.67 -8.31L-5.21 -8.96L-5.48 -9.67L-5.21 -10.68L-4.95 -10.02L-4.44 -9.4L-3.7 -8.86L-2.77 -8.44L-1.7 -8.14L-0.55 -7.99L0.64 -8L1.79 -8.16L2.85 -8.46L3.77 -8.9L4.49 -9.44L4.98 -10.07L5.22 -10.74Z" fill="#c8402e"/>
+    <path d="M3.29 -14.63L3.14 -14.21L2.83 -13.82L2.38 -13.47L1.8 -13.2L1.13 -13.01L0.4 -12.91L-0.35 -12.9L-1.08 -12.99L-1.75 -13.18L-2.34 -13.45L-2.8 -13.79L-3.13 -14.18L-3.29 -14.6L-3.12 -15.61L-2.97 -15.21L-2.66 -14.84L-2.22 -14.52L-1.66 -14.26L-1.02 -14.09L-0.33 -14L0.38 -14L1.07 -14.1L1.71 -14.28L2.26 -14.54L2.69 -14.87L2.99 -15.24L3.13 -15.64Z" fill="#3a6ac4"/>
+    <path d="M-1.6 -2.4L1.6 -2.4L0 -9.8Z" fill="#4a3424"/>
+    <path d="M14.78 3L13.96 4.77L8.66 -10L8.66 -10Z" fill="#b09c74"/>
+    <path d="M3.36 4.77L2.54 3L8.66 -10L8.66 -10Z" fill="#f4e4c4"/>
+    <path d="M13.96 4.77L11.72 6.06L8.66 -10L8.66 -10Z" fill="#b09c74"/>
+    <path d="M5.6 6.06L3.36 4.77L8.66 -10L8.66 -10Z" fill="#dcc8a0"/>
+    <path d="M11.72 6.06L8.66 6.54L8.66 -10L8.66 -10Z" fill="#b09c74"/>
+    <path d="M8.66 6.54L5.6 6.06L8.66 -10L8.66 -10Z" fill="#dcc8a0"/>
+    <path d="M8.02 -10L8.32 -10L6.72 -14L6.42 -14Z" fill="#7d5a3a"/>
+    <path d="M8.42 -10L8.72 -10L8.12 -14L7.82 -14Z" fill="#7d5a3a"/>
+    <path d="M8.9 -10L9.2 -10L9.8 -14L9.5 -14Z" fill="#7d5a3a"/>
+    <path d="M9.3 -10L9.6 -10L11.2 -14L10.9 -14Z" fill="#7d5a3a"/>
+    <path d="M13.24 -0.02L13.03 0.57L12.6 1.12L11.96 1.59L11.16 1.97L10.23 2.24L9.22 2.38L8.18 2.39L7.16 2.26L6.23 2L5.41 1.62L4.77 1.16L4.32 0.61L4.09 0.03L4.32 -0.99L4.53 -0.43L4.96 0.08L5.58 0.53L6.35 0.89L7.24 1.13L8.2 1.26L9.19 1.25L10.15 1.12L11.04 0.86L11.8 0.5L12.4 0.05L12.81 -0.47L13.01 -1.03Z" fill="#3a8a5a"/>
+    <path d="M11.41 -4.01L11.28 -3.66L11.02 -3.33L10.64 -3.04L10.16 -2.82L9.6 -2.65L9 -2.57L8.37 -2.57L7.76 -2.65L7.2 -2.8L6.71 -3.03L6.32 -3.31L6.05 -3.63L5.92 -3.98L6.06 -4.99L6.18 -4.66L6.44 -4.35L6.81 -4.08L7.27 -3.87L7.81 -3.72L8.39 -3.65L8.98 -3.65L9.56 -3.73L10.09 -3.88L10.54 -4.1L10.9 -4.37L11.15 -4.68L11.27 -5.02Z" fill="#e8a03a"/>
+    <path d="M7.06 6L10.26 6L8.66 -0.05Z" fill="#4a3424"/>
+    <path d="M-4.13 4L-4.15 4.11L-4.21 4.22L-4.3 4.31L-4.43 4.39L-4.58 4.45L-4.75 4.49L-4.93 4.5L-5.11 4.49L-5.28 4.45L-5.43 4.39L-5.55 4.31L-5.65 4.22L-5.71 4.11L-5.73 4L-5.71 3.89L-5.65 3.78L-5.55 3.69L-5.43 3.61L-5.28 3.55L-5.11 3.51L-4.93 3.5L-4.75 3.51L-4.58 3.55L-4.43 3.61L-4.3 3.69L-4.21 3.78L-4.15 3.89Z" fill="#8a8690"/>
+    <path d="M-5.51 4.95L-5.53 5.06L-5.59 5.17L-5.68 5.26L-5.81 5.34L-5.96 5.4L-6.13 5.44L-6.31 5.45L-6.49 5.44L-6.66 5.4L-6.81 5.34L-6.93 5.26L-7.03 5.17L-7.09 5.06L-7.11 4.95L-7.09 4.84L-7.03 4.73L-6.93 4.64L-6.81 4.56L-6.66 4.5L-6.49 4.46L-6.31 4.45L-6.13 4.46L-5.96 4.5L-5.81 4.56L-5.68 4.64L-5.59 4.73L-5.53 4.84Z" fill="#8a8690"/>
+    <path d="M-7.74 4.59L-7.76 4.7L-7.82 4.81L-7.92 4.9L-8.05 4.98L-8.2 5.04L-8.37 5.08L-8.54 5.09L-8.72 5.08L-8.89 5.04L-9.04 4.98L-9.17 4.9L-9.27 4.81L-9.32 4.7L-9.34 4.59L-9.32 4.48L-9.27 4.37L-9.17 4.28L-9.04 4.2L-8.89 4.14L-8.72 4.1L-8.54 4.09L-8.37 4.1L-8.2 4.14L-8.05 4.2L-7.92 4.28L-7.82 4.37L-7.76 4.48Z" fill="#8a8690"/>
+    <path d="M-7.75 3.41L-7.77 3.53L-7.83 3.63L-7.92 3.73L-8.05 3.8L-8.2 3.86L-8.37 3.9L-8.55 3.91L-8.73 3.9L-8.9 3.86L-9.05 3.8L-9.17 3.73L-9.27 3.63L-9.33 3.53L-9.35 3.41L-9.33 3.3L-9.27 3.2L-9.17 3.1L-9.05 3.02L-8.9 2.96L-8.73 2.93L-8.55 2.91L-8.37 2.93L-8.2 2.96L-8.05 3.02L-7.92 3.1L-7.83 3.2L-7.77 3.3Z" fill="#8a8690"/>
+    <path d="M-5.52 3.05L-5.54 3.16L-5.59 3.27L-5.69 3.36L-5.82 3.44L-5.97 3.5L-6.14 3.54L-6.32 3.55L-6.49 3.54L-6.66 3.5L-6.81 3.44L-6.94 3.36L-7.04 3.27L-7.09 3.16L-7.12 3.05L-7.09 2.94L-7.04 2.83L-6.94 2.74L-6.81 2.66L-6.66 2.6L-6.49 2.56L-6.32 2.55L-6.14 2.56L-5.97 2.6L-5.82 2.66L-5.69 2.74L-5.59 2.83L-5.54 2.94Z" fill="#8a8690"/>
+    <path d="M-8.53 4L-5.33 3.4L-5.53 4L-8.33 4.6Z" fill="#7d5a3a"/>
+    <g transform="translate(-6.93 4.00)"><path d="M-1.28 0Q-1.28 -2.40 0 -4.00Q1.28 -2.40 1.28 0Z" fill="#ff8a3a"><animateTransform attributeName="transform" type="scale" values="1 1;1.1 1.25;.95 .9;1 1" dur="0.50s" begin="0s" repeatCount="indefinite"/></path></g>
+    <g transform="translate(-6.93 4.00)"><path d="M-0.77 0Q-0.77 -1.44 0 -2.40Q0.77 -1.44 0.77 0Z" fill="#ffd45a"><animateTransform attributeName="transform" type="scale" values="1 1;1.1 1.25;.95 .9;1 1" dur="0.65s" begin="0s" repeatCount="indefinite"/></path></g>
+    <circle cx="-6.93" cy="3.00" r="1.40" fill="#c8c4bc" opacity="0"><animate attributeName="opacity" values="0;0.6;0" dur="4s" begin="0.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;4.2 -14.0" dur="4s" begin="0.0s" repeatCount="indefinite"/></circle>
+    <circle cx="-6.75" cy="3.10" r="1.40" fill="#c8c4bc" opacity="0"><animate attributeName="opacity" values="0;0.6;0" dur="4s" begin="1.3s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;4.2 -14.0" dur="4s" begin="1.3s" repeatCount="indefinite"/></circle>
+    <circle cx="-6.58" cy="3.20" r="1.40" fill="#c8c4bc" opacity="0"><animate attributeName="opacity" values="0;0.6;0" dur="4s" begin="2.6s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;4.2 -14.0" dur="4s" begin="2.6s" repeatCount="indefinite"/></circle>
+  </g>
 </svg>

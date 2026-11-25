@@ -1,53 +1,76 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-  <defs>
-    <linearGradient id="wrSand" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e8d6a8"/><stop offset="100%" stop-color="#c9ab6e"/>
-    </linearGradient>
-    <linearGradient id="wrWing" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#f3ead2"/><stop offset="100%" stop-color="#d6c296"/>
-    </linearGradient>
-    <linearGradient id="wrWood" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#a97847"/><stop offset="100%" stop-color="#6e4726"/>
-    </linearGradient>
-  </defs>
-
-  <!-- 北卡羅萊納小鷹鎮沙丘，萊特飛行者一號起飛的地方 -->
-  <path d="M0,74 Q20,66 40,72 Q60,76 80,70 L80,80 L0,80 Z" fill="url(#wrSand)" stroke="#a9875a" stroke-width="0.4"/>
-
-  <!-- 機身骨架與尾翼 -->
-  <path d="M8,56 L62,52" stroke="url(#wrWood)" stroke-width="2" stroke-linecap="round"/>
-  <path d="M60,46 L70,44 L70,50 L62,52 Z" fill="url(#wrWing)" stroke="#8a6a3c" stroke-width="0.5"/>
-  <path d="M60,52 L70,50 L70,56 L62,56 Z" fill="url(#wrWing)" stroke="#8a6a3c" stroke-width="0.5"/>
-
-  <!-- 雙層主機翼（上下兩片，木製支柱相連，萊特飛行者的招牌造型） -->
-  <path d="M10,46 L50,42 L50,48 L10,52 Z" fill="url(#wrWing)" stroke="#8a6a3c" stroke-width="0.6"/>
-  <path d="M10,58 L50,54 L50,60 L10,64 Z" fill="url(#wrWing)" stroke="#8a6a3c" stroke-width="0.6"/>
-  <g stroke="url(#wrWood)" stroke-width="1.6" stroke-linecap="round">
-    <line x1="14" y1="49" x2="14" y2="61"/>
-    <line x1="24" y1="47.5" x2="24" y2="59.5"/>
-    <line x1="34" y1="46" x2="34" y2="58"/>
-    <line x1="44" y1="44.5" x2="44" y2="56.5"/>
-  </g>
-
-  <!-- 滑橇式起落架，貼地支撐 -->
-  <path d="M16,64 L16,72 M44,60 L44,72" stroke="url(#wrWood)" stroke-width="1.4"/>
-  <path d="M10,73 L50,70" stroke="url(#wrWood)" stroke-width="1.6" stroke-linecap="round"/>
-
-  <!-- 螺旋槳與引擎，轉動動畫 -->
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="0 7 54;360 7 54" dur="0.6s" repeatCount="indefinite"/>
-    <line x1="7" y1="47" x2="7" y2="61" stroke="#3a2a18" stroke-width="2.2" stroke-linecap="round"/>
-  </g>
-  <circle cx="7" cy="54" r="2" fill="#3a2a18"/>
-
-  <!-- 駕駛員俯臥操控，貼在下翼上 -->
-  <ellipse cx="22" cy="57" rx="7" ry="2.6" fill="#2a2a2a" opacity="0.85"/>
-  <circle cx="16" cy="56.5" r="2.2" fill="#caa06a" stroke="#8a6a3c" stroke-width="0.3"/>
-
-  <!-- 風中揚起的沙塵 -->
-  <g stroke="#e8d6a8" stroke-width="0.6" opacity="0.5" fill="none">
-    <path d="M2,70 Q6,68 10,70">
-      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite"/>
-    </path>
+  <!-- 萊特兄弟（2.5D）：1903 年在小鷹鎮的飛行者一號，米色帆布的上下兩層長機翼由木支柱撐起，前方是升降舵、後方是方向舵，兩具木螺旋槳轉動，一位兄弟趴在下翼上駕駛、整架飛機輕輕起伏，另一位兄弟在地上跟著跑（動畫）。光源左上，不描邊 -->
+  <g transform="translate(43.58 56.59) scale(1.19)">
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="2.4s" repeatCount="indefinite"/>
+    <path d="M-26 0L22 -4L26 -2L-22 2Z" fill="#e8dec8"/>
+    <path d="M-22 2L26 -2L26 -1.4L-22 2.6Z" fill="#c4b89c"/>
+    <path d="M-22 2L-21.7 2L-18.2 -2.4L-18.5 -2.4Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M-18 1.67L-17.7 1.67L-14.2 -2.73L-14.5 -2.73Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M-14 1.34L-13.7 1.34L-10.2 -3.06L-10.5 -3.06Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M-10 1.01L-9.7 1.01L-6.2 -3.39L-6.5 -3.39Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M-6 0.68L-5.7 0.68L-2.2 -3.72L-2.5 -3.72Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M-2 0.35L-1.7 0.35L1.8 -4.05L1.5 -4.05Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M2 0.02L2.3 0.02L5.8 -4.38L5.5 -4.38Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M6 -0.31L6.3 -0.31L9.8 -4.71L9.5 -4.71Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M10 -0.64L10.3 -0.64L13.8 -5.04L13.5 -5.04Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M14 -0.97L14.3 -0.97L17.8 -5.37L17.5 -5.37Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M18 -1.3L18.3 -1.3L21.8 -5.7L21.5 -5.7Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M22 -1.63L22.3 -1.63L25.8 -6.03L25.5 -6.03Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M-26 -9L22 -13L26 -11L-22 -7Z" fill="#e8dec8"/>
+    <path d="M-22 -7L26 -11L26 -10.4L-22 -6.4Z" fill="#c4b89c"/>
+    <path d="M-22 -7L-21.7 -7L-18.2 -11.4L-18.5 -11.4Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M-18 -7.33L-17.7 -7.33L-14.2 -11.73L-14.5 -11.73Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M-14 -7.66L-13.7 -7.66L-10.2 -12.06L-10.5 -12.06Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M-10 -7.99L-9.7 -7.99L-6.2 -12.39L-6.5 -12.39Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M-6 -8.32L-5.7 -8.32L-2.2 -12.72L-2.5 -12.72Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M-2 -8.65L-1.7 -8.65L1.8 -13.05L1.5 -13.05Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M2 -8.98L2.3 -8.98L5.8 -13.38L5.5 -13.38Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M6 -9.31L6.3 -9.31L9.8 -13.71L9.5 -13.71Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M10 -9.64L10.3 -9.64L13.8 -14.04L13.5 -14.04Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M14 -9.97L14.3 -9.97L17.8 -14.37L17.5 -14.37Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M18 -10.3L18.3 -10.3L21.8 -14.7L21.5 -14.7Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M22 -10.63L22.3 -10.63L25.8 -15.03L25.5 -15.03Z" fill="#fbf6ea" opacity="0.5"/>
+    <path d="M-18 -7.4L-17.6 -7.4L-17.6 1.4L-18 1.4Z" fill="#7d5a3a"/>
+    <path d="M-11.6 -7.7L-11.2 -7.7L-11.2 1.1L-11.6 1.1Z" fill="#7d5a3a"/>
+    <path d="M-5.2 -8L-4.8 -8L-4.8 0.8L-5.2 0.8Z" fill="#7d5a3a"/>
+    <path d="M1.2 -8.3L1.6 -8.3L1.6 0.5L1.2 0.5Z" fill="#7d5a3a"/>
+    <path d="M7.6 -8.6L8 -8.6L8 0.2L7.6 0.2Z" fill="#7d5a3a"/>
+    <path d="M14 -8.9L14.4 -8.9L14.4 -0.1L14 -0.1Z" fill="#7d5a3a"/>
+    <path d="M20.4 -9.2L20.8 -9.2L20.8 -0.4L20.4 -0.4Z" fill="#7d5a3a"/>
+    <path d="M-34 -4L-28 -5L-26 -4L-32 -3Z" fill="#e8dec8"/>
+    <path d="M-34 0L-28 -1L-26 0L-32 1Z" fill="#e8dec8"/>
+    <path d="M-30 -4L-29.6 -4L-29.6 0L-30 0Z" fill="#5a3f28"/>
+    <path d="M-28 -2L-22 -2L-22 -1.6L-28 -1.6Z" fill="#5a3f28"/>
+    <path d="M26 -10L28 -10.6L28 1L26 1.6Z" fill="#c4b89c"/>
+    <g transform="translate(10 -3.6)"><g><animateTransform attributeName="transform" type="scale" values="1 1;1 -1;1 1" dur=".25s" repeatCount="indefinite"/><path d="M-.5 -5L.5 -5L.5 5L-.5 5Z" fill="#7d5a3a"/></g></g>
+    <g transform="translate(16 -3.6)"><g><animateTransform attributeName="transform" type="scale" values="1 1;1 -1;1 1" dur=".25s" repeatCount="indefinite"/><path d="M-.5 -5L.5 -5L.5 5L-.5 5Z" fill="#7d5a3a"/></g></g>
+    <path d="M-2 -0.6L6 -1.6L6 0L-2 1Z" fill="#4a4e5c"/>
+    <path d="M-1.6 -0.6L-1.64 -0.33L-1.74 -0.08L-1.91 0.15L-2.13 0.34L-2.39 0.48L-2.69 0.57L-3 0.6L-3.31 0.57L-3.61 0.48L-3.87 0.34L-4.09 0.15L-4.26 -0.08L-4.36 -0.33L-4.4 -0.6L-4.36 -0.87L-4.26 -1.12L-4.09 -1.35L-3.87 -1.54L-3.61 -1.68L-3.31 -1.77L-3 -1.8L-2.69 -1.77L-2.39 -1.68L-2.13 -1.54L-1.91 -1.35L-1.74 -1.12L-1.64 -0.87Z" fill="#d39d76"/>
+    <path d="M-1.96 -0.74L-1.99 -0.51L-2.08 -0.3L-2.23 -0.1L-2.42 0.06L-2.65 0.19L-2.9 0.26L-3.17 0.29L-3.44 0.26L-3.69 0.19L-3.92 0.06L-4.11 -0.1L-4.25 -0.3L-4.34 -0.51L-4.37 -0.74L-4.34 -0.97L-4.25 -1.19L-4.11 -1.39L-3.92 -1.55L-3.69 -1.67L-3.44 -1.75L-3.17 -1.78L-2.9 -1.75L-2.65 -1.67L-2.42 -1.55L-2.23 -1.39L-2.08 -1.19L-1.99 -0.97Z" fill="#f2c39c"/>
+    <path d="M-3.03 -1.08L-3.04 -0.99L-3.08 -0.9L-3.14 -0.83L-3.22 -0.76L-3.31 -0.71L-3.42 -0.68L-3.53 -0.67L-3.64 -0.68L-3.75 -0.71L-3.85 -0.76L-3.93 -0.83L-3.99 -0.9L-4.02 -0.99L-4.04 -1.08L-4.02 -1.17L-3.99 -1.26L-3.93 -1.33L-3.85 -1.4L-3.75 -1.45L-3.64 -1.48L-3.53 -1.49L-3.42 -1.48L-3.31 -1.45L-3.22 -1.4L-3.14 -1.33L-3.08 -1.26L-3.04 -1.17Z" fill="#ffe0c2"/>
+    <path d="M-4.4 -1Q-3 -3 -1.6 -1Z" fill="#2a2d36"/>
+    </g>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -.8;0 0" dur=".4s" repeatCount="indefinite"/>
+    <path d="M10 16.4L9.93 16.56L9.74 16.7L9.43 16.84L9.02 16.95L8.53 17.03L7.98 17.08L7.4 17.1L6.82 17.08L6.27 17.03L5.78 16.95L5.37 16.84L5.06 16.7L4.87 16.56L4.8 16.4L4.87 16.24L5.06 16.1L5.37 15.96L5.78 15.85L6.27 15.77L6.82 15.72L7.4 15.7L7.98 15.72L8.53 15.77L9.02 15.85L9.43 15.96L9.74 16.1L9.93 16.24Z" fill="#000000" opacity="0.2"/>
+    <g><animateTransform attributeName="transform" type="rotate" values="30 5.20 12.00;-30 5.20 12.00;30 5.20 12.00" dur="0.4s" begin="0s" repeatCount="indefinite"/>
+    <path d="M4.6 12L4.7 16L5.7 16L5.8 12Z" fill="#2e3240"/>
+    <path d="M5.8 12L5.78 12.13L5.74 12.26L5.67 12.37L5.57 12.47L5.46 12.54L5.33 12.58L5.2 12.6L5.07 12.58L4.94 12.54L4.83 12.47L4.73 12.37L4.66 12.26L4.62 12.13L4.6 12L4.62 11.87L4.66 11.74L4.73 11.63L4.83 11.53L4.94 11.46L5.07 11.42L5.2 11.4L5.33 11.42L5.46 11.46L5.57 11.53L5.67 11.63L5.74 11.74L5.78 11.87Z" fill="#2e3240"/>
+    <path d="M5.7 16L5.69 16.11L5.65 16.22L5.59 16.31L5.51 16.39L5.42 16.45L5.31 16.49L5.2 16.5L5.09 16.49L4.98 16.45L4.89 16.39L4.81 16.31L4.75 16.22L4.71 16.11L4.7 16L4.71 15.89L4.75 15.78L4.81 15.69L4.89 15.61L4.98 15.55L5.09 15.51L5.2 15.5L5.31 15.51L5.42 15.55L5.51 15.61L5.59 15.69L5.65 15.78L5.69 15.89Z" fill="#2e3240"/>
+    </g>
+    <g><animateTransform attributeName="transform" type="rotate" values="-30 6.80 12.00;30 6.80 12.00;-30 6.80 12.00" dur="0.4s" begin="0s" repeatCount="indefinite"/>
+    <path d="M6.2 12L6.3 16L7.3 16L7.4 12Z" fill="#3a3e48"/>
+    <path d="M7.4 12L7.38 12.13L7.34 12.26L7.27 12.37L7.17 12.47L7.06 12.54L6.93 12.58L6.8 12.6L6.67 12.58L6.54 12.54L6.43 12.47L6.33 12.37L6.26 12.26L6.22 12.13L6.2 12L6.22 11.87L6.26 11.74L6.33 11.63L6.43 11.53L6.54 11.46L6.67 11.42L6.8 11.4L6.93 11.42L7.06 11.46L7.17 11.53L7.27 11.63L7.34 11.74L7.38 11.87Z" fill="#3a3e48"/>
+    <path d="M7.3 16L7.29 16.11L7.25 16.22L7.19 16.31L7.11 16.39L7.02 16.45L6.91 16.49L6.8 16.5L6.69 16.49L6.58 16.45L6.49 16.39L6.41 16.31L6.35 16.22L6.31 16.11L6.3 16L6.31 15.89L6.35 15.78L6.41 15.69L6.49 15.61L6.58 15.55L6.69 15.51L6.8 15.5L6.91 15.51L7.02 15.55L7.11 15.61L7.19 15.69L7.25 15.78L7.29 15.89Z" fill="#3a3e48"/>
+    </g>
+    <path d="M4.4 12L7.6 12L7.4 8L4.6 8Z" fill="#4a4e5c"/>
+    <path d="M7.2 6.8L7.17 7.07L7.08 7.32L6.94 7.55L6.75 7.74L6.52 7.88L6.27 7.97L6 8L5.73 7.97L5.48 7.88L5.25 7.74L5.06 7.55L4.92 7.32L4.83 7.07L4.8 6.8L4.83 6.53L4.92 6.28L5.06 6.05L5.25 5.86L5.48 5.72L5.73 5.63L6 5.6L6.27 5.63L6.52 5.72L6.75 5.86L6.94 6.05L7.08 6.28L7.17 6.53Z" fill="#d39d76"/>
+    <path d="M6.89 6.66L6.86 6.89L6.79 7.1L6.66 7.3L6.5 7.46L6.3 7.59L6.09 7.66L5.86 7.69L5.63 7.66L5.41 7.59L5.21 7.46L5.05 7.3L4.93 7.1L4.85 6.89L4.82 6.66L4.85 6.43L4.93 6.21L5.05 6.01L5.21 5.85L5.41 5.73L5.63 5.65L5.86 5.62L6.09 5.65L6.3 5.73L6.5 5.85L6.66 6.01L6.79 6.21L6.86 6.43Z" fill="#f2c39c"/>
+    <path d="M5.98 6.32L5.97 6.41L5.93 6.5L5.88 6.57L5.81 6.64L5.73 6.69L5.64 6.72L5.54 6.73L5.45 6.72L5.36 6.69L5.27 6.64L5.21 6.57L5.15 6.5L5.12 6.41L5.11 6.32L5.12 6.23L5.15 6.14L5.21 6.07L5.27 6L5.36 5.95L5.45 5.92L5.54 5.91L5.64 5.92L5.73 5.95L5.81 6L5.88 6.07L5.93 6.14L5.97 6.23Z" fill="#ffe0c2"/>
+    <path d="M4.6 6.4Q6 4.6 7.4 6.4Z" fill="#2a2d36"/>
+    <path d="M8.2 6.2L8.14 6.29L7.98 6.37L7.72 6.45L7.37 6.51L6.95 6.56L6.49 6.59L6 6.6L5.51 6.59L5.05 6.56L4.63 6.51L4.28 6.45L4.02 6.37L3.86 6.29L3.8 6.2L3.86 6.11L4.02 6.03L4.28 5.95L4.63 5.89L5.05 5.84L5.51 5.81L6 5.8L6.49 5.81L6.95 5.84L7.37 5.89L7.72 5.95L7.98 6.03L8.14 6.11Z" fill="#2a2d36"/>
+    <path d="M5.12 8.28L2.88 6.12L2.32 6.68L4.48 8.92Z" fill="#4a4e5c"/>
+    <path d="M5.25 8.6L5.24 8.7L5.21 8.8L5.15 8.88L5.08 8.95L5 9.01L4.9 9.04L4.8 9.05L4.7 9.04L4.6 9.01L4.52 8.95L4.45 8.88L4.39 8.8L4.36 8.7L4.35 8.6L4.36 8.5L4.39 8.4L4.45 8.32L4.52 8.25L4.6 8.19L4.7 8.16L4.8 8.15L4.9 8.16L5 8.19L5.08 8.25L5.15 8.32L5.21 8.4L5.24 8.5Z" fill="#4a4e5c"/>
+    <path d="M3 6.4L2.99 6.49L2.96 6.57L2.91 6.65L2.85 6.71L2.77 6.76L2.69 6.79L2.6 6.8L2.51 6.79L2.43 6.76L2.35 6.71L2.29 6.65L2.24 6.57L2.21 6.49L2.2 6.4L2.21 6.31L2.24 6.23L2.29 6.15L2.35 6.09L2.43 6.04L2.51 6.01L2.6 6L2.69 6.01L2.77 6.04L2.85 6.09L2.91 6.15L2.96 6.23L2.99 6.31Z" fill="#4a4e5c"/>
+    </g>
   </g>
 </svg>

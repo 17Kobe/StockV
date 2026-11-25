@@ -1,48 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <defs>
-    <linearGradient id="wmStone" x1="0" x2="1">
-      <stop offset="0" stop-color="#f5f3ec"/>
-      <stop offset=".55" stop-color="#e3dfd3"/>
-      <stop offset="1" stop-color="#b8b2a1"/>
-    </linearGradient>
-    <linearGradient id="wmStoneDk" x1="0" x2="1">
-      <stop offset="0" stop-color="#d8d3c4"/>
-      <stop offset="1" stop-color="#9b9583"/>
-    </linearGradient>
-    <linearGradient id="wmGrass" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#8fbf6a"/>
-      <stop offset="1" stop-color="#5c9440"/>
-    </linearGradient>
-  </defs>
-  <!-- 美國：華盛頓紀念碑（National Mall 大草坪上的白色方尖碑） -->
-  <rect x="0" y="112" width="128" height="16" fill="url(#wmGrass)"/>
-  <path d="M0 114 Q32 110 64 114 T128 114" stroke="#aee08a" stroke-width="1.2" fill="none" opacity=".7"/>
-  <!-- 碑身主體（略帶透視的四面方尖碑） -->
-  <path d="M50 112 L55 20 L73 20 L78 112 Z" fill="url(#wmStone)" stroke="#8f8974" stroke-width="1"/>
-  <path d="M55 20 L50 112 L58 112 L61 20 Z" fill="url(#wmStoneDk)" opacity=".55"/>
-  <!-- 頂端金字塔尖 -->
-  <path d="M55 20 L64 4 L73 20 Z" fill="url(#wmStone)" stroke="#8f8974" stroke-width="1"/>
-  <path d="M55 20 L64 4 L61 20 Z" fill="url(#wmStoneDk)" opacity=".6"/>
-  <!-- 碑身接縫線，營造石塊堆疊感 -->
-  <g stroke="#b7b19d" stroke-width=".6" opacity=".6">
-    <path d="M52 92 L76 92"/>
-    <path d="M52.6 72 L77 72"/>
-    <path d="M53.2 52 L77.6 52"/>
-    <path d="M54 34 L78 34"/>
-  </g>
-  <!-- 基座 -->
-  <rect x="46" y="110" width="36" height="6" rx="1" fill="url(#wmStoneDk)" stroke="#8f8974" stroke-width=".8"/>
-  <!-- 周圍小小的美國國旗，暗示環形旗陣 -->
-  <g>
-    <line x1="20" y1="118" x2="20" y2="104" stroke="#8f8974" stroke-width="1"/>
-    <path d="M20 104 L30 107 L20 110 Z" fill="#c23b3b">
-      <animate attributeName="d" values="M20 104 L30 107 L20 110 Z;M20 104 L29 106 L20 109 Z;M20 104 L30 107 L20 110 Z" dur="2.4s" repeatCount="indefinite"/>
-    </path>
-  </g>
-  <g>
-    <line x1="108" y1="118" x2="108" y2="105" stroke="#8f8974" stroke-width="1"/>
-    <path d="M108 105 L98 108 L108 111 Z" fill="#3c5aa6">
-      <animate attributeName="d" values="M108 105 L98 108 L108 111 Z;M108 105 L99 107 L108 110 Z;M108 105 L98 108 L108 111 Z" dur="2.6s" repeatCount="indefinite"/>
-    </path>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 華盛頓紀念碑（2.5D）：美國首都的白色大理石方尖碑，碑身在三分之一高度有一道深淺分界，頂端是小金字塔與閃爍的航空燈，碑腳一圈美國國旗迎風飄揚，前方是倒影池（動畫）。光源左上，不描邊 -->
+  <g transform="translate(45.39 58.71) scale(1.22)">
+    <path d="M12.12 7L9.53 8.23L6.56 9.15L3.35 9.71L0 9.9L-3.35 9.71L-6.56 9.15L-9.53 8.23L-12.12 7L-14.26 5.5L-15.84 3.79L-16.82 1.93L-17.15 0L-16.82 -1.93L-15.84 -3.79L-14.26 -5.5L-12.12 -7L-9.53 -8.23L-6.56 -9.15L-3.35 -9.71L-0 -9.9L3.35 -9.71L6.56 -9.15L9.53 -8.23L12.12 -7L14.26 -5.5L15.84 -3.79L16.82 -1.93L17.15 -0L16.82 1.93L15.84 3.79L14.26 5.5Z" fill="#7cb955"/>
+    <path d="M-12.12 2.98L-5.2 6.98L-19.05 14.98L-25.98 10.98Z" fill="#52c3dc"/>
+    <path d="M-13.44 3.94L-8.59 6.74L-17.74 12.02L-22.59 9.22Z" fill="#9be3ea" opacity="0.4"/>
+    <path d="M-14.84 5.38L-13.64 5.03L-12.44 5.38L-13.64 5.73Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="2.2s" begin="0.0s" repeatCount="indefinite"/></path>
+    <path d="M-12.68 7.23L-11.48 6.88L-10.28 7.23L-11.48 7.58Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="2.7s" begin="0.6s" repeatCount="indefinite"/></path>
+    <path d="M-18.43 7.57L-17.23 7.22L-16.03 7.57L-17.23 7.92Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="3.2s" begin="1.2s" repeatCount="indefinite"/></path>
+    <path d="M-14.07 6.88L-12.87 6.53L-11.67 6.88L-12.87 7.23Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="3.7s" begin="1.8s" repeatCount="indefinite"/></path>
+    <path d="M-4.5 0L0 -2.6L4.5 0L8.76 3.54L4.26 6.14L-0.24 3.54Z" fill="#000000" opacity="0.2"/>
+    <path d="M4.85 0L0 2.8L0 -38.1L3.29 -40Z" fill="#b8b0a0"/>
+    <path d="M-4.85 0L0 2.8L0 -38.1L-3.29 -40Z" fill="#e2dccd"/>
+    <path d="M0 -41.9L3.29 -40L0 -38.1L-3.29 -40Z" fill="#fbf8f1"/>
+    <path d="M-4.5 -10L0 -7.4L-0.09 -7.75L-4.42 -10.25Z" fill="#c4bca8" opacity="0.6"/>
+    <path d="M0 -41.9L3.29 -40L0 -44Z" fill="#fbf8f1"/>
+    <path d="M-3.29 -40L0 -41.9L0 -44Z" fill="#fbf8f1"/>
+    <path d="M3.29 -40L0 -38.1L0 -44Z" fill="#b8b0a0"/>
+    <path d="M0 -38.1L-3.29 -40L0 -44Z" fill="#e2dccd"/>
+    <circle cx="0.00" cy="-44.00" r=".6" fill="#ff5a4a"><animate attributeName="opacity" values="1;.2;1" dur="1.4s" repeatCount="indefinite"/></circle>
+    <path d="M7.62 2.09L7.92 2.09L7.92 -3.91L7.62 -3.91Z" fill="#d8dde3"/>
+    <g transform="translate(7.92 -3.91)"><g><animateTransform attributeName="transform" type="skewY" values="0;-7;0;6;0" dur="1.4s" repeatCount="indefinite"/><path d="M0 0.00L3 0.00L3 0.50L0 0.50Z" fill="#d8342a"/><path d="M0 0.50L3 0.50L3 1.00L0 1.00Z" fill="#ffffff"/><path d="M0 1.00L3 1.00L3 1.50L0 1.50Z" fill="#d8342a"/><path d="M0 1.50L3 1.50L3 2.00L0 2.00Z" fill="#ffffff"/><path d="M0 2.00L3 2.00L3 2.50L0 2.50Z" fill="#d8342a"/><path d="M0 2.50L3 2.50L3 3.00L0 3.00Z" fill="#ffffff"/><path d="M0 3.00L3 3.00L3 3.50L0 3.50Z" fill="#d8342a"/><path d="M0 0L1.35 0L1.35 1.9L0 1.9Z" fill="#2b4a9a"/></g></g>
+    <path d="M5.91 3.5L6.21 3.5L6.21 -2.5L5.91 -2.5Z" fill="#d8dde3"/>
+    <g transform="translate(6.21 -2.50)"><g><animateTransform attributeName="transform" type="skewY" values="0;-7;0;6;0" dur="1.5999999999999999s" repeatCount="indefinite"/><path d="M0 0.00L3 0.00L3 0.50L0 0.50Z" fill="#d8342a"/><path d="M0 0.50L3 0.50L3 1.00L0 1.00Z" fill="#ffffff"/><path d="M0 1.00L3 1.00L3 1.50L0 1.50Z" fill="#d8342a"/><path d="M0 1.50L3 1.50L3 2.00L0 2.00Z" fill="#ffffff"/><path d="M0 2.00L3 2.00L3 2.50L0 2.50Z" fill="#d8342a"/><path d="M0 2.50L3 2.50L3 3.00L0 3.00Z" fill="#ffffff"/><path d="M0 3.00L3 3.00L3 3.50L0 3.50Z" fill="#d8342a"/><path d="M0 0L1.35 0L1.35 1.9L0 1.9Z" fill="#2b4a9a"/></g></g>
+    <path d="M3.47 4.49L3.77 4.49L3.77 -1.51L3.47 -1.51Z" fill="#d8dde3"/>
+    <g transform="translate(3.77 -1.51)"><g><animateTransform attributeName="transform" type="skewY" values="0;-7;0;6;0" dur="1.7999999999999998s" repeatCount="indefinite"/><path d="M0 0.00L3 0.00L3 0.50L0 0.50Z" fill="#d8342a"/><path d="M0 0.50L3 0.50L3 1.00L0 1.00Z" fill="#ffffff"/><path d="M0 1.00L3 1.00L3 1.50L0 1.50Z" fill="#d8342a"/><path d="M0 1.50L3 1.50L3 2.00L0 2.00Z" fill="#ffffff"/><path d="M0 2.00L3 2.00L3 2.50L0 2.50Z" fill="#d8342a"/><path d="M0 2.50L3 2.50L3 3.00L0 3.00Z" fill="#ffffff"/><path d="M0 3.00L3 3.00L3 3.50L0 3.50Z" fill="#d8342a"/><path d="M0 0L1.35 0L1.35 1.9L0 1.9Z" fill="#2b4a9a"/></g></g>
+    <path d="M0.6 4.93L0.9 4.93L0.9 -1.07L0.6 -1.07Z" fill="#d8dde3"/>
+    <g transform="translate(0.90 -1.07)"><g><animateTransform attributeName="transform" type="skewY" values="0;-7;0;6;0" dur="1.4s" repeatCount="indefinite"/><path d="M0 0.00L3 0.00L3 0.50L0 0.50Z" fill="#d8342a"/><path d="M0 0.50L3 0.50L3 1.00L0 1.00Z" fill="#ffffff"/><path d="M0 1.00L3 1.00L3 1.50L0 1.50Z" fill="#d8342a"/><path d="M0 1.50L3 1.50L3 2.00L0 2.00Z" fill="#ffffff"/><path d="M0 2.00L3 2.00L3 2.50L0 2.50Z" fill="#d8342a"/><path d="M0 2.50L3 2.50L3 3.00L0 3.00Z" fill="#ffffff"/><path d="M0 3.00L3 3.00L3 3.50L0 3.50Z" fill="#d8342a"/><path d="M0 0L1.35 0L1.35 1.9L0 1.9Z" fill="#2b4a9a"/></g></g>
+    <path d="M-2.37 4.78L-2.07 4.78L-2.07 -1.22L-2.37 -1.22Z" fill="#d8dde3"/>
+    <g transform="translate(-2.07 -1.22)"><g><animateTransform attributeName="transform" type="skewY" values="0;-7;0;6;0" dur="1.5999999999999999s" repeatCount="indefinite"/><path d="M0 0.00L3 0.00L3 0.50L0 0.50Z" fill="#d8342a"/><path d="M0 0.50L3 0.50L3 1.00L0 1.00Z" fill="#ffffff"/><path d="M0 1.00L3 1.00L3 1.50L0 1.50Z" fill="#d8342a"/><path d="M0 1.50L3 1.50L3 2.00L0 2.00Z" fill="#ffffff"/><path d="M0 2.00L3 2.00L3 2.50L0 2.50Z" fill="#d8342a"/><path d="M0 2.50L3 2.50L3 3.00L0 3.00Z" fill="#ffffff"/><path d="M0 3.00L3 3.00L3 3.50L0 3.50Z" fill="#d8342a"/><path d="M0 0L1.35 0L1.35 1.9L0 1.9Z" fill="#2b4a9a"/></g></g>
+    <path d="M-5.07 4.05L-4.77 4.05L-4.77 -1.95L-5.07 -1.95Z" fill="#d8dde3"/>
+    <g transform="translate(-4.77 -1.95)"><g><animateTransform attributeName="transform" type="skewY" values="0;-7;0;6;0" dur="1.7999999999999998s" repeatCount="indefinite"/><path d="M0 0.00L3 0.00L3 0.50L0 0.50Z" fill="#d8342a"/><path d="M0 0.50L3 0.50L3 1.00L0 1.00Z" fill="#ffffff"/><path d="M0 1.00L3 1.00L3 1.50L0 1.50Z" fill="#d8342a"/><path d="M0 1.50L3 1.50L3 2.00L0 2.00Z" fill="#ffffff"/><path d="M0 2.00L3 2.00L3 2.50L0 2.50Z" fill="#d8342a"/><path d="M0 2.50L3 2.50L3 3.00L0 3.00Z" fill="#ffffff"/><path d="M0 3.00L3 3.00L3 3.50L0 3.50Z" fill="#d8342a"/><path d="M0 0L1.35 0L1.35 1.9L0 1.9Z" fill="#2b4a9a"/></g></g>
+    <path d="M-7.17 2.84L-6.87 2.84L-6.87 -3.16L-7.17 -3.16Z" fill="#d8dde3"/>
+    <g transform="translate(-6.87 -3.16)"><g><animateTransform attributeName="transform" type="skewY" values="0;-7;0;6;0" dur="1.4s" repeatCount="indefinite"/><path d="M0 0.00L3 0.00L3 0.50L0 0.50Z" fill="#d8342a"/><path d="M0 0.50L3 0.50L3 1.00L0 1.00Z" fill="#ffffff"/><path d="M0 1.00L3 1.00L3 1.50L0 1.50Z" fill="#d8342a"/><path d="M0 1.50L3 1.50L3 2.00L0 2.00Z" fill="#ffffff"/><path d="M0 2.00L3 2.00L3 2.50L0 2.50Z" fill="#d8342a"/><path d="M0 2.50L3 2.50L3 3.00L0 3.00Z" fill="#ffffff"/><path d="M0 3.00L3 3.00L3 3.50L0 3.50Z" fill="#d8342a"/><path d="M0 0L1.35 0L1.35 1.9L0 1.9Z" fill="#2b4a9a"/></g></g>
+    <path d="M-8.43 1.28L-8.13 1.28L-8.13 -4.72L-8.43 -4.72Z" fill="#d8dde3"/>
+    <g transform="translate(-8.13 -4.72)"><g><animateTransform attributeName="transform" type="skewY" values="0;-7;0;6;0" dur="1.5999999999999999s" repeatCount="indefinite"/><path d="M0 0.00L3 0.00L3 0.50L0 0.50Z" fill="#d8342a"/><path d="M0 0.50L3 0.50L3 1.00L0 1.00Z" fill="#ffffff"/><path d="M0 1.00L3 1.00L3 1.50L0 1.50Z" fill="#d8342a"/><path d="M0 1.50L3 1.50L3 2.00L0 2.00Z" fill="#ffffff"/><path d="M0 2.00L3 2.00L3 2.50L0 2.50Z" fill="#d8342a"/><path d="M0 2.50L3 2.50L3 3.00L0 3.00Z" fill="#ffffff"/><path d="M0 3.00L3 3.00L3 3.50L0 3.50Z" fill="#d8342a"/><path d="M0 0L1.35 0L1.35 1.9L0 1.9Z" fill="#2b4a9a"/></g></g>
+    <path d="M-8.69 -0.43L-8.39 -0.43L-8.39 -6.43L-8.69 -6.43Z" fill="#d8dde3"/>
+    <g transform="translate(-8.39 -6.43)"><g><animateTransform attributeName="transform" type="skewY" values="0;-7;0;6;0" dur="1.7999999999999998s" repeatCount="indefinite"/><path d="M0 0.00L3 0.00L3 0.50L0 0.50Z" fill="#d8342a"/><path d="M0 0.50L3 0.50L3 1.00L0 1.00Z" fill="#ffffff"/><path d="M0 1.00L3 1.00L3 1.50L0 1.50Z" fill="#d8342a"/><path d="M0 1.50L3 1.50L3 2.00L0 2.00Z" fill="#ffffff"/><path d="M0 2.00L3 2.00L3 2.50L0 2.50Z" fill="#d8342a"/><path d="M0 2.50L3 2.50L3 3.00L0 3.00Z" fill="#ffffff"/><path d="M0 3.00L3 3.00L3 3.50L0 3.50Z" fill="#d8342a"/><path d="M0 0L1.35 0L1.35 1.9L0 1.9Z" fill="#2b4a9a"/></g></g>
+    <path d="M-7.92 -2.09L-7.62 -2.09L-7.62 -8.09L-7.92 -8.09Z" fill="#d8dde3"/>
+    <g transform="translate(-7.62 -8.09)"><g><animateTransform attributeName="transform" type="skewY" values="0;-7;0;6;0" dur="1.4s" repeatCount="indefinite"/><path d="M0 0.00L3 0.00L3 0.50L0 0.50Z" fill="#d8342a"/><path d="M0 0.50L3 0.50L3 1.00L0 1.00Z" fill="#ffffff"/><path d="M0 1.00L3 1.00L3 1.50L0 1.50Z" fill="#d8342a"/><path d="M0 1.50L3 1.50L3 2.00L0 2.00Z" fill="#ffffff"/><path d="M0 2.00L3 2.00L3 2.50L0 2.50Z" fill="#d8342a"/><path d="M0 2.50L3 2.50L3 3.00L0 3.00Z" fill="#ffffff"/><path d="M0 3.00L3 3.00L3 3.50L0 3.50Z" fill="#d8342a"/><path d="M0 0L1.35 0L1.35 1.9L0 1.9Z" fill="#2b4a9a"/></g></g>
   </g>
 </svg>
