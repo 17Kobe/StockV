@@ -837,7 +837,6 @@
         { src: 'critters/miharu-takizakura.svg', lon: 140.48, lat: 37.43, mode: 'still', face: 'F', iso: 'nature', isoK: 0.55, deco: true, landmark: true }, // 日本：福島三春瀧櫻（花冠是密實的圓形色塊，跟其他 nature 類比視覺上大很多，isoK 縮小）
         { src: 'critters/mekong-floating-market.svg', lon: 105.75, lat: 10.03, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 越南：湄公河水上浮市
         { src: 'critters/bromo-volcano.svg', lon: 112.95, lat: -7.94, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 印尼：東爪哇布羅莫火山
-        { src: 'critters/puerto-princesa-underground-river.svg', lon: 118.92, lat: 10.19, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 菲律賓：巴拉望地下河
         { src: 'critters/golden-bridge-danang.svg', lon: 107.99, lat: 16.0, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 越南：峴港巴拿山黃金橋
         { src: 'critters/phuket-longtail.svg', lon: 98.3, lat: 7.9, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 泰國：普吉島
         { src: 'critters/pamukkale.svg', lon: 29.12, lat: 37.92, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 棉堡
@@ -1677,10 +1676,11 @@
             lat: 30.23,
             mode: 'still',
             iso: 'nature',
+            isoK: 0.7,
             sea: true,
             deco: true,
             landmark: true,
-        }, // 中國：杭州西湖三潭印月
+        }, // 中國：杭州西湖三潭印月（isoK 0.7 縮小）
         {
             src: 'critters/three-gorges-dam.svg',
             lon: 111.0,
@@ -1704,6 +1704,7 @@
         // ---- 2026-11 新增地標（第二批）：位置跟既有地標太近的，依慣例往旁邊錯開，註解寫明真實位置 ----
         // 以下 34 個是這批新增的地標：使用者實際在地圖上看覺得整批都偏大，統一加 isoK 0.7 收斂（跟玉山 0.6、太魯閣/日月潭 0.66 同一套修正手法）
         { src: 'critters/el-nido.svg', lon: 119.39, lat: 11.18, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, sea: true, deco: true, landmark: true }, // 菲律賓：巴拉望愛妮島
+        { src: 'critters/puerto-princesa-underground-river.svg', lon: 118.92, lat: 10.19, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 菲律賓：巴拉望地下河（緯度比愛妮島更南，搬到這裡排在它後面，陣列順序後面＝畫在上層，才不會被愛妮島蓋住）
         { src: 'critters/otaru-canal.svg', lon: 141.0, lat: 43.2, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, sea: true, deco: true, landmark: true }, // 日本：北海道小樽運河
         { src: 'critters/farm-tomita.svg', lon: 142.44, lat: 43.42, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 日本：北海道富良野富田農場
         { src: 'critters/yilan-traditional-arts.svg', lon: 121.83, lat: 24.69, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, deco: true, landmark: true }, // 台灣：宜蘭國立傳統藝術中心
