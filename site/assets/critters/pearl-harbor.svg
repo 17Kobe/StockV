@@ -1,8 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
   <!-- 珍珠港（2.5D）：夏威夷珍珠港的亞利桑那號紀念館，橫跨在沉沒戰艦上方的白色紀念館中間下凹、兩端隆起，牆上一排窗，水面下隱約看得到戰艦輪廓，美國國旗飄揚，花圈在水上漂、水波擴散（動畫）。光源左上，不描邊 -->
   <g transform="translate(40 55.64) scale(1.26)">
-    <path d="M-5.2 -17L29.44 3L5.2 17L-29.44 -3Z" fill="#52c3dc"/>
-    <path d="M-4.12 -12.62L20.13 1.38L4.12 10.62L-20.13 -3.38Z" fill="#9be3ea" opacity="0.4"/>
     <path d="M-4.76 -10.33L-3.56 -10.68L-2.36 -10.33L-3.56 -9.98Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="2.2s" begin="0.0s" repeatCount="indefinite"/></path>
     <path d="M7.74 -2.05L8.94 -2.40L10.14 -2.05L8.94 -1.70Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="2.7s" begin="0.6s" repeatCount="indefinite"/></path>
     <path d="M-10.69 -6.28L-9.49 -6.63L-8.29 -6.28L-9.49 -5.93Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="3.2s" begin="1.2s" repeatCount="indefinite"/></path>

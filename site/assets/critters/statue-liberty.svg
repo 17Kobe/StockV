@@ -1,8 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
   <!-- 自由女神像（2.5D）：紐約港自由島上的銅綠色女神像，站在花崗岩台座與星形堡壘底座上，身穿長袍、頭戴七芒冠、左手抱著法典，右手高舉的火炬火焰跳動、發出光暈，海面水波擴散、海鷗繞飛（動畫）。光源左上，不描邊 -->
   <g transform="translate(40 63.74) scale(0.95)">
-    <path d="M0 -14L24.25 0L0 14L-24.25 0Z" fill="#52c3dc"/>
-    <path d="M-0.48 -10.52L16.49 -0.72L0.48 8.52L-16.49 -1.28Z" fill="#9be3ea" opacity="0.4"/>
     <path d="M-1.55 -8.47L-0.35 -8.82L0.85 -8.47L-0.35 -8.12Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="2.2s" begin="0.0s" repeatCount="indefinite"/></path>
     <path d="M6.93 -2.52L8.13 -2.87L9.33 -2.52L8.13 -2.17Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="2.7s" begin="0.6s" repeatCount="indefinite"/></path>
     <path d="M-7.63 -4.52L-6.43 -4.87L-5.23 -4.52L-6.43 -4.17Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="3.2s" begin="1.2s" repeatCount="indefinite"/></path>

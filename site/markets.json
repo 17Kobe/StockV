@@ -2114,6 +2114,8 @@
       "lon": -77.04,
       "lat": 38.9,
       "dx": -18,
+      "s": 1.8,
+      "noShadow": true,
       "card": "rt-wh"
     },
     {
@@ -2123,6 +2125,8 @@
       "lon": -82.5,
       "lat": 38,
       "dx": 18,
+      "s": 1.8,
+      "noShadow": true,
       "card": "rt-us"
     },
     {

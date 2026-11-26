@@ -183,6 +183,7 @@
             mode: 'trek',
             face: 'L',
             iso: 'vehicle',
+            isoK: 1.3,
             deco: true,
             noShadow: true,
             maxDeg: 4,
@@ -329,9 +330,8 @@
         }, // 馬丘比丘
         { src: 'critters/eiffel-tower.svg', lon: 2.3, lat: 48.3, mode: 'still', face: 'F', iso: 'tower', deco: true, landmark: true }, // 艾菲爾鐵塔
         { src: 'critters/big-ben.svg', lon: 0.8, lat: 51.0, mode: 'still', face: 'F', iso: 'tower', deco: true, landmark: true }, // 大笨鐘
-        { src: 'critters/leaning-tower.svg', lon: 10.4, lat: 42.8, mode: 'still', face: 'F', iso: 'tower', deco: true, landmark: true }, // 比薩斜塔
         { src: 'critters/greek-house.svg', lon: 25.4, lat: 36.4, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 希臘聖托里尼
-        { src: 'critters/pyramid.svg', lon: 31.1, lat: 29.97, mode: 'still', face: 'F', iso: 'building', isoK: 1.6, deco: true, landmark: true }, // 吉薩金字塔（isoK 1.6 放大，上次 1.3 還不夠大）
+        { src: 'critters/pyramid.svg', lon: 31.1, lat: 28.6, mode: 'still', face: 'F', iso: 'building', isoK: 1.6, deco: true, landmark: true }, // 吉薩金字塔（isoK 1.6 放大，上次 1.3 還不夠大；放大後某些縮放層級會蓋到地中海岸的海面，緯度從 29.97 往南移到 28.6）
         { src: 'critters/hot-balloon.svg', lon: 36.6, lat: 38.2, mode: 'still', iso: 'nature', isoK: 1.3, deco: true, landmark: true }, // 卡帕多奇亞熱氣球（isoK 1.3 放大）
         {
             src: 'critters/kremlin-moscow.svg',
@@ -451,7 +451,6 @@
             landmark: true,
         }, // 大峽谷
         { src: 'critters/yellowstone.svg', lon: -110.6, lat: 44.5, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 黃石公園
-        { src: 'critters/rushmore.svg', lon: -103.5, lat: 43.85, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 拉什莫爾山
         { src: 'critters/acropolis.svg', lon: 22.4, lat: 38.6, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 雅典衛城
         {
             src: 'critters/milan-cathedral.svg',
@@ -542,9 +541,10 @@
             mode: 'still',
             face: 'F',
             iso: 'building',
+            isoK: 1.3,
             deco: true,
             landmark: true,
-        }, // 休士頓太空中心
+        }, // 休士頓太空中心（isoK 1.3 放大）
         {
             src: 'critters/rocket-pad.svg',
             alt: 'critters/rocket-launch.svg',
@@ -557,7 +557,6 @@
             deco: true,
             noShadow: true,
         }, // 火箭發射（isoK 1.3 放大）
-        { src: 'critters/ufo-aliens.svg', lon: -116.5, lat: 35, mode: 'ufo', face: 'F', iso: 'vehicle', isoK: 1.3, deco: true, noShadow: true }, // 加州沙漠的 UFO 和外星人（isoK 1.3 放大）
         { src: 'critters/troy-horse.svg', lon: 26.24, lat: 39.96, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 特洛伊木馬
         { src: 'critters/pompeii.svg', lon: 15.6, lat: 40.4, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 龐貝古城
         {
@@ -616,6 +615,7 @@
             landmark: true,
         }, // 蒙古包
         { src: 'critters/tipi.svg', lon: -105.0, lat: 45.0, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 北美 Tipi
+        { src: 'critters/rushmore.svg', lon: -103.5, lat: 43.85, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 拉什莫爾山（緯度比北美原住民帳篷更南，搬到這裡排在後面才會蓋在帳篷上面）
         {
             src: 'critters/gassho-house.svg',
             lon: 136.9,
@@ -690,16 +690,6 @@
             deco: true,
             landmark: true,
         }, // 兵馬俑
-        {
-            src: 'critters/zhangjiajie.svg',
-            lon: 110.5,
-            lat: 29.1,
-            mode: 'still',
-            face: 'F',
-            iso: 'nature',
-            deco: true,
-            landmark: true,
-        }, // 張家界
         {
             src: 'critters/gyeongbokgung.svg',
             lon: 126.98,
@@ -946,16 +936,6 @@
             deco: true,
             landmark: true,
         }, // 聖家堂
-        {
-            src: 'critters/neuschwanstein.svg',
-            lon: 10.75,
-            lat: 47.56,
-            mode: 'still',
-            face: 'F',
-            iso: 'building',
-            deco: true,
-            landmark: true,
-        }, // 新天鵝堡
         {
             src: 'critters/mont-saint-michel.svg',
             lon: -1.51,
@@ -1464,10 +1444,20 @@
             landmark: true,
         }, // 中國：天壇：上次修正後離紫禁城仍只差 0.64 度，實測要縮放到跟長城/紫禁城同框後再深縮 8 格才會冒出來，再拉大到確實跟兩者都有安全距離（實測一放大就會一起出現）
         { src: 'critters/dragon-dance.svg', lon: 108.0, lat: 30.0, mode: 'still', face: 'F', iso: 'building', deco: true }, // 中國：舞龍
-        { src: 'critters/beaver.svg', lon: -95.0, lat: 54.0, mode: 'still', iso: 'small', isoK: 1.3, sea: true, deco: true }, // 加拿大：海狸（isoK 1.3 放大）
+        { src: 'critters/beaver.svg', lon: -95.0, lat: 54.0, mode: 'still', iso: 'small', isoK: 2.2, sea: true, deco: true }, // 加拿大：海狸（1.8 還是不夠大，調到 2.2）
         { src: 'critters/mountie.svg', lon: -106.0, lat: 50.45, mode: 'still', face: 'F', iso: 'person', isoK: 1.3, deco: true }, // 加拿大：皇家騎警（isoK 1.3 放大）
         { src: 'critters/montgolfier-balloon.svg', lon: 2.5, lat: 47.0, mode: 'bob', iso: 'vehicle', deco: true, landmark: true }, // 法國：蒙格菲熱氣球
         { src: 'critters/oktoberfest.svg', lon: 11.55, lat: 48.14, mode: 'still', face: 'F', iso: 'building', deco: true }, // 德國：慕尼黑啤酒節
+        {
+            src: 'critters/neuschwanstein.svg',
+            lon: 10.75,
+            lat: 47.56,
+            mode: 'still',
+            face: 'F',
+            iso: 'building',
+            deco: true,
+            landmark: true,
+        }, // 新天鵝堡（緯度比慕尼黑啤酒節更南，搬到這裡排在後面才會蓋在啤酒節上面）
         { src: 'critters/tuk-tuk.svg', lon: 77.0, lat: 20.5, mode: 'wander', iso: 'vehicle', deco: true, maxDeg: 2 }, // 印度：嘟嘟車
         // ── 第十一批補充 ──────────────────────────────────────────────
         {
@@ -1693,6 +1683,16 @@
             deco: true,
             landmark: true,
         }, // 中國：三峽大壩
+        {
+            src: 'critters/zhangjiajie.svg',
+            lon: 110.5,
+            lat: 29.1,
+            mode: 'still',
+            face: 'F',
+            iso: 'nature',
+            deco: true,
+            landmark: true,
+        }, // 張家界（緯度比三峽大壩更南，搬到這裡排在後面才會蓋在大壩上面）
         { src: 'critters/summer-palace.svg', lon: 114.4, lat: 40.0, mode: 'still', face: 'F', iso: 'building', sea: true, deco: true, landmark: true }, // 中國：北京頤和園（真實位置離紫禁城僅 0.16 度會重疊，仿鳥巢做法往西拉開約 1.9 度）
         { src: 'critters/shaolin-temple.svg', lon: 112.94, lat: 34.51, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 中國：河南少林寺
         { src: 'critters/emei-mountain.svg', lon: 103.33, lat: 29.52, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 中國：四川峨眉山金頂
@@ -1706,9 +1706,7 @@
         // 以下 34 個是這批新增的地標：使用者實際在地圖上看覺得整批都偏大，統一加 isoK 0.7 收斂（跟玉山 0.6、太魯閣/日月潭 0.66 同一套修正手法）
         { src: 'critters/el-nido.svg', lon: 119.39, lat: 11.18, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, sea: true, deco: true, landmark: true }, // 菲律賓：巴拉望愛妮島
         { src: 'critters/puerto-princesa-underground-river.svg', lon: 118.92, lat: 10.19, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, sea: true, deco: true, landmark: true }, // 菲律賓：巴拉望地下河（緯度比愛妮島更南，搬到這裡排在它後面，陣列順序後面＝畫在上層，才不會被愛妮島蓋住；isoK 0.7 縮小）
-        { src: 'critters/otaru-canal.svg', lon: 141.0, lat: 43.2, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, sea: true, deco: true, landmark: true }, // 日本：北海道小樽運河
         { src: 'critters/farm-tomita.svg', lon: 142.44, lat: 43.42, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 日本：北海道富良野富田農場
-        { src: 'critters/yilan-traditional-arts.svg', lon: 121.83, lat: 24.69, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, deco: true, landmark: true }, // 台灣：宜蘭國立傳統藝術中心
         { src: 'critters/kaohsiung-music-center.svg', lon: 120.5, lat: 22.64, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, deco: true, landmark: true }, // 台灣：高雄流行音樂中心（真實位置 120.30, 22.62 跟駁二幾乎重疊，往東拉開約 0.2 度）
         { src: 'critters/liushidan-daylily.svg', lon: 121.38, lat: 23.2, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 台灣：花蓮六十石山金針花海（真實位置 121.28, 23.06，跟台灣黑熊、伯朗大道太近，往東北挪）
         { src: 'critters/mr-brown-avenue.svg', lon: 121.18, lat: 22.82, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 台灣：台東池上伯朗大道（真實位置 121.21, 23.11，跟六十石山只差 0.1 度，往南挪）
@@ -1723,8 +1721,8 @@
         { src: 'critters/dutch-tulips.svg', lon: 5.75, lat: 52.7, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 荷蘭：東北圩田鬱金香花田（庫肯霍夫一帶跟荷蘭風車太近，改放荷蘭最大的鬱金香產區）
         { src: 'critters/algonquin-maple.svg', lon: -78.4, lat: 45.6, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 加拿大：阿岡昆省立公園楓紅
         { src: 'critters/general-sherman-tree.svg', lon: -118.75, lat: 36.58, mode: 'still', face: 'F', iso: 'nature', isoK: 1.1, deco: true, landmark: true }, // 美國：紅杉國家公園謝爾曼將軍樹（isoK 從 0.7 調到 1.1 放大）
+        { src: 'critters/ufo-aliens.svg', lon: -116.5, lat: 35, mode: 'ufo', face: 'F', iso: 'vehicle', isoK: 1.3, deco: true, noShadow: true }, // 加州沙漠的 UFO 和外星人（isoK 1.3 放大；緯度比謝爾曼將軍樹更南，搬到這裡排在後面才會蓋在樹上面）
         { src: 'critters/maori-haka.svg', lon: 176.25, lat: -38.14, mode: 'still', face: 'F', iso: 'person', isoK: 0.7, deco: true, landmark: true }, // 紐西蘭：毛利戰舞 Haka（羅托魯瓦）
-        { src: 'critters/ganges-diyas.svg', lon: 83.0, lat: 25.3, mode: 'still', face: 'F', iso: 'nature', isoK: 1.1, sea: true, deco: true, landmark: true }, // 印度：恆河河燈——跟瓦拉納西（已移除）畫的是同一件事，改放在瓦拉納西真實位置（isoK 從 0.7 調到 1.1 放大）
         { src: 'critters/bangkok-floating-market.svg', lon: 99.95, lat: 13.52, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, sea: true, deco: true, landmark: true }, // 泰國：曼谷丹嫩莎朵水上市場
         { src: 'critters/ethiopia-coffee-ceremony.svg', lon: 38.75, lat: 9.0, mode: 'still', face: 'F', iso: 'person', isoK: 1.1, deco: true, landmark: true }, // 衣索比亞：咖啡儀式（isoK 從 0.7 調到 1.1 放大）
         { src: 'critters/great-zimbabwe.svg', lon: 30.93, lat: -20.27, mode: 'still', face: 'F', iso: 'building', isoK: 1.1, deco: true, landmark: true }, // 辛巴威：大辛巴威遺址（isoK 從 0.7 調到 1.1 放大）
@@ -1736,7 +1734,7 @@
         { src: 'critters/hukou-waterfall.svg', lon: 110.45, lat: 36.15, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 中國：黃河壺口瀑布
         { src: 'critters/hzmb-bridge.svg', lon: 113.8, lat: 21.95, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, sea: true, deco: true, landmark: true }, // 中國：港珠澳大橋（真實位置在香港、澳門之間，跟大三巴、香港天際線太近，往南移到海上）
         { src: 'critters/miao-stilt-houses.svg', lon: 108.17, lat: 26.49, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, deco: true, landmark: true }, // 中國：貴州西江千戶苗寨吊腳樓
-        { src: 'critters/spilled-blood-church.svg', lon: 30.33, lat: 59.94, mode: 'still', face: 'F', iso: 'building', isoK: 1.8, deco: true, landmark: true }, // 俄羅斯：聖彼得堡救世主滴血大教堂（之前 0.7 太小，使用者反饋要大更多，調到 1.8）
+        { src: 'critters/spilled-blood-church.svg', lon: 30.33, lat: 59.94, mode: 'still', face: 'F', iso: 'building', isoK: 1.0, deco: true, landmark: true }, // 俄羅斯：聖彼得堡救世主滴血大教堂（0.7 太小、1.8 又太大，調到 1.0）
         { src: 'critters/yak.svg', lon: 88.5, lat: 31.8, mode: 'wander', gait: 'heavy', iso: 'animal', isoK: 0.7, deco: true, maxDeg: 2 }, // 西藏：犛牛
         { src: 'critters/inle-fisherman.svg', lon: 96.91, lat: 20.55, mode: 'bob', face: 'F', iso: 'person', isoK: 0.7, deco: true, landmark: true }, // 緬甸：茵萊湖獨腳划船漁夫
         {
@@ -1877,11 +1875,13 @@
         { src: 'critters/wright-brothers.svg', lon: -75.67, lat: 36.02, mode: 'still', face: 'F', iso: 'vehicle', deco: true }, // 萊特兄弟
         { src: 'critters/jesus-christ.svg', lon: 35.3, lat: 32.7, mode: 'still', face: 'F', iso: 'person', deco: true }, // 耶穌
         { src: 'critters/buddha-siddhartha.svg', lon: 83.28, lat: 27.47, mode: 'still', face: 'F', iso: 'person', deco: true }, // 釋迦牟尼
+        { src: 'critters/ganges-diyas.svg', lon: 83.0, lat: 25.3, mode: 'still', face: 'F', iso: 'nature', isoK: 0.8, sea: true, deco: true, landmark: true }, // 印度：恆河河燈——跟瓦拉納西（已移除）畫的是同一件事，改放在瓦拉納西真實位置（isoK 從 1.1 調降到 0.8；緯度比釋迦牟尼更南，搬到這裡排在後面才會蓋在釋迦牟尼上面）
         { src: 'critters/plato-aristotle.svg', lon: 23.73, lat: 37.98, mode: 'still', face: 'F', iso: 'person', deco: true }, // 柏拉圖與亞里斯多德
         { src: 'critters/beethoven.svg', lon: 16.37, lat: 48.21, mode: 'still', face: 'F', iso: 'person', deco: true }, // 貝多芬
         { src: 'critters/steve-jobs.svg', lon: -122.03, lat: 37.33, mode: 'still', face: 'F', iso: 'person', isoK: 1.3, deco: true }, // 史蒂夫‧賈伯斯（isoK 1.3 放大）
         { src: 'critters/bill-gates.svg', lon: -122.12, lat: 47.67, mode: 'still', face: 'F', iso: 'person', isoK: 1.3, deco: true }, // 比爾‧蓋茲（isoK 1.3 放大）
         { src: 'critters/hokkaido-king-crab.svg', lon: 141.5, lat: 43.8, mode: 'still', iso: 'small', sea: true, deco: true }, // 北海道帝王蟹
+        { src: 'critters/otaru-canal.svg', lon: 141.0, lat: 43.2, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, sea: true, deco: true, landmark: true }, // 日本：北海道小樽運河（緯度比富田農場、北海道帝王蟹都更南，搬到兩者後面才會都蓋在上面）
         { src: 'critters/dalai-lama.svg', lon: 76.32, lat: 32.22, mode: 'still', face: 'F', iso: 'person', deco: true }, // 達賴喇嘛：原座標跟布達拉宮完全重疊，改放到他流亡後長居的印度達蘭薩拉
         // ── 第十一批補充（世界地標，不用在前 80 名額內，只要畫出來、放大能看到就好） ──────────
         { src: 'critters/parthenon.svg', lon: 22.44, lat: 37.98, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 希臘：帕德嫩神廟（素材本來就有畫，之前漏了放進地圖清單；跟雅典衛城拉開一點距離）
@@ -1948,6 +1948,7 @@
             deco: true,
             landmark: true,
         }, // 義大利：布魯內萊斯基穹頂（佛羅倫斯大教堂）
+        { src: 'critters/leaning-tower.svg', lon: 10.4, lat: 42.8, mode: 'still', face: 'F', iso: 'tower', deco: true, landmark: true }, // 比薩斜塔（緯度比布魯內萊斯基穹頂更南，搬到這裡排在後面才會蓋在穹頂上面）
         {
             src: 'critters/fallingwater.svg',
             lon: -79.47,
@@ -2083,6 +2084,7 @@
             deco: true,
             landmark: true,
         }, // 台北 101
+        { src: 'critters/yilan-traditional-arts.svg', lon: 121.83, lat: 24.69, mode: 'still', face: 'F', iso: 'building', isoK: 0.7, deco: true, landmark: true }, // 台灣：宜蘭國立傳統藝術中心（緯度比台北101更南，搬到這裡排在後面才會蓋在101上面）
         {
             src: 'critters/taiwan-presidential-office.svg',
             lon: 121.3,
@@ -6797,8 +6799,9 @@
     // 地標不論哪個篩選都在地圖上（被概況卡、篩選列蓋住或在畫面外就先收起來）
     function layoutLandmarks(rects, ui) {
         const k = state.t.k,
-            z = Math.max(22, Math.min(36, 16 + k * 3.2));
+            z0 = Math.max(22, Math.min(36, 16 + k * 3.2));
         for (const lm of state.landmarks) {
+            const z = z0 * (lm.s || 1); // lm.s：個別地標的縮放倍率（markets.json 裡沒寫就是 1），例如白宮、聯準會比例調整
             const [sx, sy] = screenXY(lm.lon, lm.lat),
                 x = sx + (lm.dx || 0),
                 y = sy,
@@ -6809,7 +6812,8 @@
             g.attrQ('transform', `translate(${x},${y})`);
             g.select('.lm-sh')
                 .attrQ('rx', z * 0.5)
-                .attrQ('ry', z * 0.16);
+                .attrQ('ry', z * 0.16)
+                .styleQ('opacity', lm.noShadow ? 0 : null); // lm.noShadow：這個地標不要圓形陰影（例如白宮、聯準會的圖示本身底部帶陰影，另外疊一個圓影子看起來像浮空）
             g.select('.lm-img')
                 .attrQ('x', -z / 2)
                 .attrQ('y', -z)
@@ -6823,7 +6827,7 @@
                 .attrQ('height', z * 0.6);
             g.select('.lm-t')
                 .attrQ('y', z * 0.5)
-                .styleQ('font-size', `${Math.max(9, Math.min(11.5, z * 0.38)).toFixed(1)}px`);
+                .styleQ('font-size', `${Math.max(9, Math.min(11.5, z0 * 0.38)).toFixed(1)}px`);
             rects.push(r);
         }
     }
