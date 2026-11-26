@@ -8624,10 +8624,7 @@
         }
         if (q && q.t)
             meta += `<div><b>${$t('最後成交')}</b>　${new Date(q.t * 1000).toLocaleString(I18n.intl, { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false })}${q.stale ? '　⚠️ ' + $t('本輪抓取失敗，沿用舊資料') : ''}</div>`;
-        const beast = isMap ? animalOf(m.a) : null;
-        const bigIcon = beast
-            ? `<img class="beast3d" src="${beast.src}" alt="${m.a}">`
-            : flagHtml(isMap ? m.a : m.e, 'flg big-flg');
+        const bigIcon = flagHtml(isMap ? m.flag : m.e, 'flg big-flg');
         const chg = q ? `${arrow(q.pct)} ${q.c >= 0 ? '+' : '−'}${fmtN(Math.abs(q.c))}（${fmtPct(q.pct)}）` : $t('暫無資料');
         // 多指數國家：卡片上方一排分頁，點一下切換到該指數
         const grp = host && host.group && host.group.length > 1 ? host.group : null;
