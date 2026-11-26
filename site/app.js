@@ -1957,7 +1957,7 @@
             deco: true,
             landmark: true,
         }, // 義大利：布魯內萊斯基穹頂（佛羅倫斯大教堂）
-        { src: 'critters/leaning-tower.svg', lon: 10.4, lat: 42.8, mode: 'still', face: 'F', iso: 'tower', deco: true, landmark: true }, // 比薩斜塔（緯度比布魯內萊斯基穹頂更南，搬到這裡排在後面才會蓋在穹頂上面）
+        { src: 'critters/leaning-tower.svg', lon: 10.4, lat: 42.8, mode: 'still', face: 'F', iso: 'tower', isoK: 0.8, deco: true, landmark: true }, // 比薩斜塔（緯度比布魯內萊斯基穹頂更南，搬到這裡排在後面才會蓋在穹頂上面；isoK 0.8 縮小）
         {
             src: 'critters/fallingwater.svg',
             lon: -79.47,
