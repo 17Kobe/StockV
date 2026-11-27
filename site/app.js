@@ -861,7 +861,7 @@
             landmark: true,
         }, // 諾曼第登陸
         { src: 'critters/berlin-wall.svg', lon: 13.39, lat: 52.52, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 柏林圍牆
-        { src: 'critters/okavango.svg', lon: 22.9, lat: -19.3, mode: 'still', face: 'F', iso: 'nature', isoK: 1.3, deco: true, landmark: true }, // 奧卡萬戈三角洲（isoK 1.3 放大）
+        { src: 'critters/okavango.svg', lon: 22.9, lat: -19.3, mode: 'still', face: 'F', iso: 'nature', isoK: 0.9, deco: true, landmark: true }, // 奧卡萬戈三角洲（1.3 太大，調到 0.9）
         { src: 'critters/rhinoceros.svg', lon: 22, lat: -19, mode: 'wander', gait: 'heavy', iso: 'animal', isoK: 1.8, deco: true, maxDeg: 2 }, // 犀牛（搬到奧卡萬戈三角洲後面，陣列順序後面＝畫在上層，犀牛才會站在三角洲上面而不是被蓋住；isoK 從 1.3 再調到 1.8）
         {
             src: 'critters/waitomo-caves.svg',
