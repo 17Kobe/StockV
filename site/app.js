@@ -127,7 +127,7 @@
         { src: 'critters/galleon-manila.svg', lon: -118, lat: 14, mode: 'boat', face: 'F', iso: 'vehicle', sea: true },
         { src: 'critters/treasure-ship.svg', lon: 84, lat: 4, mode: 'boat', face: 'F', iso: 'vehicle', sea: true },
         // 地理大發現：哥倉布（1492）、達伽馬（1498）、麥哲倫（1519~1522）；阿拉伯三角帆船、Vendée Globe 環球賽艇
-        { src: 'critters/fleet-columbus.svg', lon: -66, lat: 22, mode: 'boat', face: 'F', iso: 'vehicle', isoK: 1.9, sea: true }, // isoK 從 1.6 再調到 1.9 放大
+        { src: 'critters/fleet-columbus.svg', lon: -66, lat: 22, mode: 'boat', face: 'F', iso: 'vehicle', isoK: 2.2, sea: true }, // isoK 從 1.9 再調到 2.2 放大
         { src: 'critters/caravel-dias.svg', lon: 21, lat: -40.5, mode: 'boat', face: 'F', iso: 'vehicle', isoK: 1.3, sea: true, maxDeg: 1.5 }, // 迪亞士 1488 繞過好望角（isoK 1.3 放大）
         { src: 'critters/ship-dagama.svg', lon: 71, lat: 11, mode: 'boat', face: 'F', iso: 'vehicle', sea: true }, // 達伽馬 1498 抵達印度
         { src: 'critters/ship-victoria.svg', lon: -86, lat: -52, mode: 'boat', face: 'F', iso: 'vehicle', isoK: 1.3, sea: true }, // 麥哲倫船隊的維多利亞號環球航行（isoK 1.3 放大）
@@ -277,7 +277,6 @@
         { src: 'critters/shark-fin.svg', lon: -127.5, lat: 36.8, mode: 'fin', iso: 'animal', isoK: 0.8, sea: true, deco: true },
         // ── 世界地標 ──────────────────────────────────────────────────
         { src: 'critters/jellyfish.svg', lon: 134.6, lat: 8.4, mode: 'still', face: 'F', iso: 'nature', sea: true, deco: true, landmark: true }, // 帛琉水母（帛琉三個景點真實位置只差 0.4 度，會被地標重疊檢查收起，往北、西、東三向拉開）
-        { src: 'critters/fuji.svg', lon: 138.3, lat: 34.4, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 富士山
         {
             src: 'critters/great-wall.svg',
             lon: 112,
@@ -404,7 +403,7 @@
         { src: 'critters/baobab.svg', lon: 37.5, lat: -9.5, mode: 'still', face: 'F', iso: 'nature', isoK: 1.1, deco: true, landmark: true }, // 非洲猴麵包樹（isoK 從 0.8 調到 1.1 放大）
         { src: 'critters/uluru.svg', lon: 131, lat: -25.3, mode: 'still', face: 'F', iso: 'nature', isoK: 1.3, deco: true, landmark: true }, // 烏魯魯巨岩（isoK 1.3 放大）
         { src: 'critters/danxia.svg', lon: 100, lat: 38.9, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 七彩丹霞
-        { src: 'critters/iceland-volcano.svg', lon: -19, lat: 64.8, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 冰島戴雪帽的小火山（已加進 LOD_FORCE，一般縮小視角也強制顯示）
+        { src: 'critters/iceland-volcano.svg', lon: -19, lat: 64.8, mode: 'still', face: 'F', iso: 'nature', isoK: 1.3, deco: true, landmark: true }, // 冰島戴雪帽的小火山（isoK 1.3 放大；已加進 LOD_FORCE，一般縮小視角也強制顯示）
         { src: 'critters/ring-tailed-lemur.svg', lon: 46.5, lat: -19.5, mode: 'wander', iso: 'animal', deco: true, maxDeg: 1.5 }, // 馬達加斯加環尾狐猴
         {
             src: 'critters/bermuda.svg',
@@ -538,6 +537,7 @@
             deco: true,
             landmark: true,
         }, // 東京鐵塔
+        { src: 'critters/fuji.svg', lon: 138.3, lat: 34.4, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 富士山（緯度比東京鐵塔更南，移到這裡排在它後面，陣列順序後面＝畫在上層，富士山才會蓋在東京鐵塔上面）
         {
             src: 'critters/houston-space.svg',
             lon: -95.1,
@@ -1347,10 +1347,21 @@
             mode: 'still',
             face: 'F',
             iso: 'nature',
-            isoK: 1.4,
+            isoK: 1.2,
             deco: true,
             landmark: true,
-        }, // 瑞士/義大利：馬特洪峰（isoK 1.4 放大）
+        }, // 瑞士/義大利：馬特洪峰（isoK 從 1.4 調到 1.2 縮小；緯度比白朗峰更北，陣列順序排在白朗峰前面，畫在下層，南邊的白朗峰才會蓋在它上面，跟其他地標的「緯度南排後面＝畫在上層」規則一致）
+        {
+            src: 'critters/mont-blanc.svg',
+            lon: 4.3,
+            lat: 45.2,
+            mode: 'still',
+            face: 'F',
+            iso: 'nature',
+            isoK: 1.2,
+            deco: true,
+            landmark: true,
+        }, // 法國／義大利：白朗峰（阿爾卑斯最高峰；isoK 從 1.4 調到 1.2 縮小；跟馬特洪峰重疊到視覺出問題，再往西南拉開到離馬特洪峰約 3.6 度；緯度比馬特洪峰更南，陣列順序排在馬特洪峰後面，才會畫在上層蓋住馬特洪峰，不會互相穿插；兩者都在 LOD_FORCE 保證同時顯示，使用者若之後發現仍會被重疊判定擠掉一個，要再優先保留白朗峰的話要另外調整）
         {
             src: 'critters/kilimanjaro.svg',
             lon: 37.3556,
@@ -1358,21 +1369,21 @@
             mode: 'still',
             face: 'F',
             iso: 'nature',
-            isoK: 1.4,
+            isoK: 2.0,
             deco: true,
             landmark: true,
-        }, // 坦尚尼亞：吉力馬札羅山（isoK 1.4 放大）
+        }, // 坦尚尼亞：吉力馬札羅山（isoK 從 1.7 再調到 2.0 放大）
         {
             src: 'critters/aconcagua.svg',
-            lon: -70.0109,
+            lon: -67.0,
             lat: -32.6532,
             mode: 'still',
             face: 'F',
             iso: 'nature',
-            isoK: 1.4,
+            isoK: 1.7,
             deco: true,
             landmark: true,
-        }, // 阿根廷：阿空加瓜山（美洲最高峰；isoK 1.4 放大）
+        }, // 阿根廷：阿空加瓜山（美洲最高峰；isoK 從 1.4 再調到 1.7 放大；真實經度 -70.0109 太靠近智利海岸，放大後圖示底部會蓋到海裡，再往東挪到 -67.0，離海岸更遠一點）
         {
             src: 'critters/denali.svg',
             lon: -151.0074,
@@ -1380,21 +1391,10 @@
             mode: 'still',
             face: 'F',
             iso: 'nature',
-            isoK: 1.4,
+            isoK: 1.7,
             deco: true,
             landmark: true,
-        }, // 美國阿拉斯加：德納利山（北美最高峰；isoK 1.4 放大）
-        {
-            src: 'critters/mont-blanc.svg',
-            lon: 5.9,
-            lat: 45.75,
-            mode: 'still',
-            face: 'F',
-            iso: 'nature',
-            isoK: 1.4,
-            deco: true,
-            landmark: true,
-        }, // 法國／義大利：白朗峰（阿爾卑斯最高峰；isoK 1.4 放大；真實位置 6.8652,45.8326 跟馬特洪峰只差 0.8 度，放大後會疊到，往西拉開約 1 度）
+        }, // 美國阿拉斯加：德納利山（北美最高峰；isoK 從 1.4 再調到 1.7 放大）
         {
             src: 'critters/monument-valley.svg',
             lon: -110.0046,
@@ -8074,6 +8074,11 @@
             // 阿空加瓜山、德納利山：同樣原本只是一般世界地標，使用者反饋一般解析度（縮小視角）看不到，改成強制顯示
             'critters/aconcagua.svg',
             'critters/denali.svg',
+            // 馬特洪峰、白朗峰：使用者希望兩座山在一般情況能同時看到，原本都是第 3 層一般地標，可能其中一個被名額擠掉，改成強制顯示
+            'critters/matterhorn.svg',
+            'critters/mont-blanc.svg',
+            // 吉力馬札羅山：使用者反饋預設（一般縮小視角）也要看到，改成強制顯示
+            'critters/kilimanjaro.svg',
             'critters/greek-house.svg',
             'critters/hanging-gardens.svg',
             'critters/persepolis.svg',
