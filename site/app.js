@@ -8130,6 +8130,15 @@
             '傳說生物',
         ]);
         const lodTips = window.CRITTER_TIPS || {};
+        // 手機版特定地標縮小：這幾座山放大 isoK 後在小螢幕上比例明顯過大（桌機看起來還好，是因為同樣的 px 大小在窄螢幕占比更高），只對這幾個額外乘一個手機限定的縮小係數
+        const MOBILE_SHRINK = new Set([
+            'critters/everest.svg',
+            'critters/kilimanjaro.svg',
+            'critters/table-mountain.svg',
+            'critters/aconcagua.svg',
+            'critters/denali.svg',
+        ]);
+        const MOBILE_SHRINK_K = 0.65;
         const critterPri = (c) => {
             if (LOD_DEMOTE.has(c.d.src)) return 0;
             if (LOD_FORCE.has(c.d.src)) return 5;
@@ -8145,7 +8154,7 @@
             // 小人如果陸地放不下，會縮小（fs[2]）並把三個人往中間靠攏（fs[3]）到放得下
             const size = folk && fs ? csz * fs[2] : csz,
                 sp = folk && fs ? fs[3] : 1,
-                z = size * c.d.s;
+                z = size * c.d.s * (!desktopMQ.matches && MOBILE_SHRINK.has(c.d.src) ? MOBILE_SHRINK_K : 1);
             const [x0, y0] = screenXY(c.d.lon, c.d.lat);
             // 原住民小人以位置點為中心，各自往旁邊挪開一點，三個人才不會疊在一起
             const x = x0 + (folk && fs ? ((c.d.ox || 0) * sp + fs[0]) * size : 0),
