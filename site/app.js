@@ -7435,6 +7435,9 @@
                 // 電腦版有十大市值清單的旗幟：動物旁邊擠不下時，沿整個畫面找最近的空位（旗幟會畫引線連回國家），
                 // 還是放不下才縮小到 0.86 倍（名稱要盡量維持清楚）
                 const smaller = hasList && desktopMQ.matches ? [{ grid: true }, { s: 0.86, grid: true }] : [];
+                // 電腦版篩選區域裡只有單一指數的國家（例如亞太的泰國、澳洲）：動物旁邊擠不下時同樣沿整個畫面找空位（畫引線），
+                // 不要直接縮成迷你版或消失；否則這一兩個小國會讓整區的卡片都放不大
+                const farFull = desktopMQ.matches && m.r === state.activeRegion ? [{ grid: true }] : [];
                 const modes = (
                     hasRows(m, n)
                         ? [
@@ -7445,6 +7448,7 @@
                           ]
                         : [
                               { w: Math.max(118, headNeedW(m, 0)), h: FULL_H, mode: 'full' },
+                              ...farFull.map((v) => ({ w: Math.max(118, headNeedW(m, 0)), h: FULL_H, mode: 'full', ...v })),
                               { w: 80, h: 22, mode: 'mini' },
                           ]
                 ).map((md) => ({
@@ -7624,10 +7628,16 @@
                         }
                         return true;
                     };
-                    // 倍率由大到小試：全球檢視步階較細（約 0.08），才不會一格都過不了就整個退回 1 倍
+                    // 倍率由大到小試：全球檢視步階較細（約 0.08），才不會一格都過不了就整個退回 1 倍。
+                    // 各區域原本只試 4 段（1、¾、½、¼）：亞太國家多，大倍率常因一兩個小國（澳洲、泰國）擠不下而失敗，
+                    // 步階太粗會一路掉到最小那一格，卡片明顯比美洲小。改成 4 的倍數段（每段不超過 0.07），
+                    // 原本那 4 個倍率都還在，其它區域不會因此變小
                     const tryUs = [];
                     if (isAll) for (let u = uMax; u > 1.03; u -= 0.08) tryUs.push(u);
-                    else tryUs.push(uMax, 1 + (uMax - 1) * 0.75, 1 + (uMax - 1) * 0.5, 1 + (uMax - 1) * 0.25);
+                    else {
+                        const n = 4 * Math.ceil((uMax - 1) / 0.28);
+                        for (let i = 0; i < n; i++) tryUs.push(uMax - ((uMax - 1) * i) / n);
+                    }
                     for (const u of tryUs) {
                         U = u;
                         const t = solve();
