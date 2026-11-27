@@ -127,14 +127,14 @@
         { src: 'critters/galleon-manila.svg', lon: -118, lat: 14, mode: 'boat', face: 'F', iso: 'vehicle', sea: true },
         { src: 'critters/treasure-ship.svg', lon: 84, lat: 4, mode: 'boat', face: 'F', iso: 'vehicle', sea: true },
         // 地理大發現：哥倉布（1492）、達伽馬（1498）、麥哲倫（1519~1522）；阿拉伯三角帆船、Vendée Globe 環球賽艇
-        { src: 'critters/fleet-columbus.svg', lon: -66, lat: 22, mode: 'boat', face: 'F', iso: 'vehicle', sea: true },
+        { src: 'critters/fleet-columbus.svg', lon: -66, lat: 22, mode: 'boat', face: 'F', iso: 'vehicle', isoK: 1.3, sea: true }, // isoK 1.3 放大
         { src: 'critters/caravel-dias.svg', lon: 21, lat: -40.5, mode: 'boat', face: 'F', iso: 'vehicle', sea: true, maxDeg: 1.5 }, // 迪亞士 1488 繞過好望角
         { src: 'critters/ship-dagama.svg', lon: 71, lat: 11, mode: 'boat', face: 'F', iso: 'vehicle', sea: true }, // 達伽馬 1498 抵達印度
         { src: 'critters/ship-victoria.svg', lon: -86, lat: -52, mode: 'boat', face: 'F', iso: 'vehicle', sea: true }, // 麥哲倫船隊的維多利亞號環球航行
         { src: 'critters/dhow.svg', lon: 64, lat: 22, mode: 'boat', face: 'F', iso: 'vehicle', sea: true },
         { src: 'critters/yacht-vendee.svg', lon: 40, lat: -47, mode: 'race', face: 'R', iso: 'vehicle', sea: true },
         // 北大西洋：鐵達尼號沉了一半（1912 年撞冰山的海域）
-        { src: 'critters/titanic.svg', lon: -49.9, lat: 41.7, mode: 'still', face: 'F', iso: 'vehicle', sea: true, deco: true },
+        { src: 'critters/titanic.svg', lon: -49.9, lat: 41.7, mode: 'still', face: 'F', iso: 'vehicle', isoK: 1.3, sea: true, deco: true }, // isoK 1.3 放大
         // 哥斯大黎加外海的海龜
         { src: 'critters/sea-turtle.svg', lon: -86.8, lat: 8.8, mode: 'turtle', iso: 'small', sea: true, deco: true },
         // 傳說生物：水怪週期性浮出水面（emerge）、幽靈船半透明漂移（ghost）
@@ -317,9 +317,10 @@
             mode: 'still',
             face: 'F',
             iso: 'tower',
+            isoK: 1.3,
             deco: true,
             landmark: true,
-        }, // 基督像
+        }, // 基督像（isoK 1.3 放大）
         {
             src: 'critters/machu-picchu.svg',
             lon: -72.5,
@@ -782,10 +783,10 @@
             mode: 'still',
             face: 'F',
             iso: 'nature',
-            isoK: 1.3,
+            isoK: 1.8,
             deco: true,
             landmark: true,
-        }, // 聖母峰（isoK 1.3 放大）
+        }, // 聖母峰（isoK 從 1.3 再調到 1.8 放大）
         {
             src: 'critters/bagan.svg',
             lon: 94.86,
@@ -986,10 +987,10 @@
         // ── 新增動物（世界各地代表物種） ──────────────────────────────
         { src: 'critters/bengal-tiger.svg', lon: 79.0, lat: 21.0, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 印度：老虎在森林漫步
         { src: 'critters/wombat.svg', lon: 146.0, lat: -42.0, mode: 'still', face: 'F', iso: 'animal', deco: true }, // 澳洲：袋熊鑽洞
-        { src: 'critters/jaguar.svg', lon: -65.0, lat: -6.0, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 南美：美洲豹穿越雨林（素材已重畫為朝左）
+        { src: 'critters/jaguar.svg', lon: -65.0, lat: -6.0, mode: 'wander', iso: 'animal', isoK: 1.3, deco: true, maxDeg: 2 }, // 南美：美洲豹穿越雨林（素材已重畫為朝左；isoK 1.3 放大）
         { src: 'critters/hippo.svg', lon: 31.0, lat: 1.0, mode: 'still', iso: 'animal', isoK: 1.3, sea: true, deco: true }, // 非洲：河馬探頭（isoK 1.3 放大）
         { src: 'critters/african-elephant.svg', lon: 37.5, lat: -3.0, mode: 'wander', gait: 'heavy', iso: 'animal', isoK: 1.6, deco: true, maxDeg: 2 }, // 非洲：象群遷徙（isoK 從 1.3 再調到 1.6 放大）
-        { src: 'critters/penguin.svg', lon: -60.0, lat: -62.0, mode: 'wander', gait: 'waddle', iso: 'small', deco: true, maxDeg: 2 }, // 南極：企鵝冰上搖擺
+        { src: 'critters/penguin.svg', lon: -60.0, lat: -62.0, mode: 'wander', gait: 'waddle', iso: 'small', isoK: 1.3, deco: true, maxDeg: 2 }, // 南極：企鵝冰上搖擺（isoK 1.3 放大）
         { src: 'critters/japanese-macaque-onsen.svg', lon: 138.5, lat: 36.7, mode: 'still', face: 'F', iso: 'small', deco: true }, // 日本：獼猴泡溫泉
         { src: 'critters/golden-monkey.svg', lon: 103.0, lat: 31.0, mode: 'wander', iso: 'small', isoK: 1.3, deco: true, maxDeg: 2 }, // 中國：金絲猴森林跳躍（素材朝右畫；isoK 1.3 放大）
         { src: 'critters/chameleon.svg', lon: 49.0, lat: -17.0, mode: 'still', face: 'F', iso: 'animal', isoK: 1.8, deco: true }, // 馬達加斯加：變色龍伸舌頭（原本 0.8 太小，跟耳廓狐一樣調到 1.8）
@@ -1018,10 +1019,10 @@
         { src: 'critters/rabbit.svg', lon: 5.3, lat: 52.1, mode: 'wander', iso: 'small', isoK: 1.3, deco: true, maxDeg: 2 }, // 荷蘭：歐洲穴兔（isoK 1.3 放大）
         { src: 'critters/turkey.svg', lon: 34.0, lat: 39.0, mode: 'wander', iso: 'small', isoK: 1.3, deco: true, maxDeg: 2 }, // 土耳其：火雞（isoK 1.3 放大）
         { src: 'critters/eagle.svg', lon: -100.0, lat: 40.0, mode: 'wander', iso: 'small', isoK: 1.6, deco: true, maxDeg: 2 }, // 美國：白頭鷹（isoK 從 1.3 再調到 1.6 放大）
-        { src: 'animals/toucan.svg', lon: -58.0, lat: -8.0, mode: 'still', face: 'F', iso: 'small', deco: true }, // 巴西：巨嘴鳥
-        { src: 'animals/axolotl.svg', lon: -99.5, lat: 19.3, mode: 'wander', iso: 'small', deco: true, maxDeg: 1.5 }, // 墨西哥：六角恐龍（墨西哥市近郊湖泊）
+        { src: 'animals/toucan.svg', lon: -58.0, lat: -8.0, mode: 'still', face: 'F', iso: 'small', isoK: 1.3, deco: true }, // 巴西：巨嘴鳥（isoK 1.3 放大）
+        { src: 'animals/axolotl.svg', lon: -99.5, lat: 19.3, mode: 'wander', iso: 'small', isoK: 1.3, deco: true, maxDeg: 1.5 }, // 墨西哥：六角恐龍（墨西哥市近郊湖泊；isoK 1.3 放大）
         { src: 'critters/penguin.svg', lon: -68.0, lat: -45.0, mode: 'wander', gait: 'waddle', iso: 'small', deco: true, maxDeg: 2 }, // 阿根廷：企鵝（巴塔哥尼亞海岸）
-        { src: 'animals/alpaca.svg', lon: -69.5, lat: -27.0, mode: 'wander', iso: 'animal', deco: true, maxDeg: 1.5 }, // 智利：草泥馬（安地斯山區）
+        { src: 'animals/alpaca.svg', lon: -69.5, lat: -27.0, mode: 'wander', iso: 'animal', isoK: 1.3, deco: true, maxDeg: 1.5 }, // 智利：草泥馬（安地斯山區；isoK 1.3 放大）
         { src: 'critters/racehorse.svg', lon: 114.15, lat: 22.25, mode: 'wander', iso: 'animal', deco: true, maxDeg: 1 }, // 香港：賽馬（原本掛在卡片上，脫鉤成獨立裝飾項目）
         { src: 'critters/long-tailed-macaque.svg', lon: 101.5, lat: 4.5, mode: 'wander', iso: 'small', isoK: 1.3, deco: true, maxDeg: 2 }, // 馬來西亞：猴子（原本掛在卡片上，脫鉤成獨立裝飾項目，跟雙峰塔、婆羅洲長鼻猴拉開距離；isoK 1.3 放大）
         // 以下原本是國家指數卡片的代表動物（markets.json 的 "a"），現在脫鉤成跟其他動物一樣的獨立裝飾項目，不再跟著卡片走；直接沿用原本的 Fluent Emoji PNG 素材，沒有重畫
@@ -1345,9 +1346,10 @@
             mode: 'still',
             face: 'F',
             iso: 'nature',
+            isoK: 1.4,
             deco: true,
             landmark: true,
-        }, // 瑞士/義大利：馬特洪峰
+        }, // 瑞士/義大利：馬特洪峰（isoK 1.4 放大）
         {
             src: 'critters/kilimanjaro.svg',
             lon: 37.3556,
@@ -1365,9 +1367,10 @@
             mode: 'still',
             face: 'F',
             iso: 'nature',
+            isoK: 1.4,
             deco: true,
             landmark: true,
-        }, // 阿根廷：阿空加瓜山（美洲最高峰）
+        }, // 阿根廷：阿空加瓜山（美洲最高峰；isoK 1.4 放大）
         {
             src: 'critters/denali.svg',
             lon: -151.0074,
@@ -1380,14 +1383,15 @@
         }, // 美國阿拉斯加：德納利山（北美最高峰）
         {
             src: 'critters/mont-blanc.svg',
-            lon: 6.8652,
-            lat: 45.8326,
+            lon: 5.9,
+            lat: 45.75,
             mode: 'still',
             face: 'F',
             iso: 'nature',
+            isoK: 1.4,
             deco: true,
             landmark: true,
-        }, // 法國／義大利：白朗峰（阿爾卑斯最高峰）
+        }, // 法國／義大利：白朗峰（阿爾卑斯最高峰；isoK 1.4 放大；真實位置 6.8652,45.8326 跟馬特洪峰只差 0.8 度，放大後會疊到，往西拉開約 1 度）
         {
             src: 'critters/monument-valley.svg',
             lon: -110.0046,
@@ -1612,10 +1616,10 @@
             mode: 'still',
             face: 'F',
             iso: 'nature',
-            isoK: 0.6,
+            isoK: 0.85,
             deco: true,
             landmark: true,
-        }, // 台灣：玉山（台灣圖示多，縮小一點）
+        }, // 台灣：玉山（isoK 從 0.6 調到 0.85 放大）
         {
             src: 'critters/jiuzhaigou.svg',
             lon: 103.9,
@@ -1759,7 +1763,7 @@
         { src: 'critters/qimei-twin-hearts.svg', lon: 119.42, lat: 23.2, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, sea: true, deco: true, landmark: true }, // 台灣：澎湖七美雙心石滬
         { src: 'critters/kinmen-deyue-tower.svg', lon: 118.3, lat: 24.41, mode: 'still', face: 'F', iso: 'building', isoK: 0.9, deco: true, landmark: true }, // 台灣：金門得月樓（1.3 太大，調到 0.9）
         { src: 'critters/matsu-qinbi.svg', lon: 119.96, lat: 26.22, mode: 'still', face: 'F', iso: 'building', isoK: 0.9, sea: true, deco: true, landmark: true }, // 台灣：馬祖北竿芹壁聚落（1.3 太大，調到 0.9）
-        { src: 'critters/provence-lavender.svg', lon: 5.98, lat: 43.84, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 法國：普羅旺斯薰衣草田
+        { src: 'critters/provence-lavender.svg', lon: 5.98, lat: 43.84, mode: 'still', face: 'F', iso: 'nature', isoK: 1.0, deco: true, landmark: true }, // 法國：普羅旺斯薰衣草田（isoK 從 0.7 調到 1.0 放大）
         { src: 'critters/dutch-tulips.svg', lon: 5.75, lat: 52.7, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 荷蘭：東北圩田鬱金香花田（庫肯霍夫一帶跟荷蘭風車太近，改放荷蘭最大的鬱金香產區）
         { src: 'critters/algonquin-maple.svg', lon: -78.4, lat: 45.6, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 加拿大：阿岡昆省立公園楓紅
         { src: 'critters/general-sherman-tree.svg', lon: -118.75, lat: 36.58, mode: 'still', face: 'F', iso: 'nature', isoK: 1.1, deco: true, landmark: true }, // 美國：紅杉國家公園謝爾曼將軍樹（isoK 從 0.7 調到 1.1 放大）
@@ -1799,9 +1803,10 @@
             mode: 'still',
             face: 'F',
             iso: 'tower',
+            isoK: 1.3,
             deco: true,
             landmark: true,
-        }, // 阿根廷：布宜諾斯艾利斯方尖碑
+        }, // 阿根廷：布宜諾斯艾利斯方尖碑（isoK 1.3 放大）
         { src: 'critters/gaucho.svg', lon: -64.5, lat: -37.5, mode: 'still', face: 'F', iso: 'person', deco: true }, // 阿根廷：高卓人
         {
             src: 'critters/moscow-red-square.svg',
