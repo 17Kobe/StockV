@@ -127,7 +127,7 @@
         { src: 'critters/galleon-manila.svg', lon: -118, lat: 14, mode: 'boat', face: 'F', iso: 'vehicle', sea: true },
         { src: 'critters/treasure-ship.svg', lon: 84, lat: 4, mode: 'boat', face: 'F', iso: 'vehicle', sea: true },
         // 地理大發現：哥倉布（1492）、達伽馬（1498）、麥哲倫（1519~1522）；阿拉伯三角帆船、Vendée Globe 環球賽艇
-        { src: 'critters/fleet-columbus.svg', lon: -66, lat: 22, mode: 'boat', face: 'F', iso: 'vehicle', isoK: 1.6, sea: true }, // isoK 從 1.3 再調到 1.6 放大
+        { src: 'critters/fleet-columbus.svg', lon: -66, lat: 22, mode: 'boat', face: 'F', iso: 'vehicle', isoK: 1.9, sea: true }, // isoK 從 1.6 再調到 1.9 放大
         { src: 'critters/caravel-dias.svg', lon: 21, lat: -40.5, mode: 'boat', face: 'F', iso: 'vehicle', isoK: 1.3, sea: true, maxDeg: 1.5 }, // 迪亞士 1488 繞過好望角（isoK 1.3 放大）
         { src: 'critters/ship-dagama.svg', lon: 71, lat: 11, mode: 'boat', face: 'F', iso: 'vehicle', sea: true }, // 達伽馬 1498 抵達印度
         { src: 'critters/ship-victoria.svg', lon: -86, lat: -52, mode: 'boat', face: 'F', iso: 'vehicle', isoK: 1.3, sea: true }, // 麥哲倫船隊的維多利亞號環球航行（isoK 1.3 放大）
@@ -317,10 +317,10 @@
             mode: 'still',
             face: 'F',
             iso: 'tower',
-            isoK: 1.3,
+            isoK: 1.6,
             deco: true,
             landmark: true,
-        }, // 基督像（isoK 1.3 放大）
+        }, // 基督像（isoK 從 1.3 再調到 1.6 放大）
         {
             src: 'critters/machu-picchu.svg',
             lon: -72.5,
@@ -402,9 +402,9 @@
         }, // 巴西足球員
         { src: 'critters/cactus-mexico.svg', lon: -102, lat: 24.5, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 墨西哥仙人掌
         { src: 'critters/baobab.svg', lon: 37.5, lat: -9.5, mode: 'still', face: 'F', iso: 'nature', isoK: 1.1, deco: true, landmark: true }, // 非洲猴麵包樹（isoK 從 0.8 調到 1.1 放大）
-        { src: 'critters/uluru.svg', lon: 131, lat: -25.3, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 烏魯魯巨岩
+        { src: 'critters/uluru.svg', lon: 131, lat: -25.3, mode: 'still', face: 'F', iso: 'nature', isoK: 1.3, deco: true, landmark: true }, // 烏魯魯巨岩（isoK 1.3 放大）
         { src: 'critters/danxia.svg', lon: 100, lat: 38.9, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 七彩丹霞
-        { src: 'critters/iceland-volcano.svg', lon: -19, lat: 64.8, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 冰島戴雪帽的小火山
+        { src: 'critters/iceland-volcano.svg', lon: -19, lat: 64.8, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 冰島戴雪帽的小火山（已加進 LOD_FORCE，一般縮小視角也強制顯示）
         { src: 'critters/ring-tailed-lemur.svg', lon: 46.5, lat: -19.5, mode: 'wander', iso: 'animal', deco: true, maxDeg: 1.5 }, // 馬達加斯加環尾狐猴
         {
             src: 'critters/bermuda.svg',
@@ -467,7 +467,7 @@
             landmark: true,
         }, // 米蘭大教堂
         { src: 'critters/yosemite.svg', lon: -119.55, lat: 37.75, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 優勝美地
-        { src: 'critters/banff.svg', lon: -115.57, lat: 51.18, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 班夫
+        { src: 'critters/banff.svg', lon: -115.57, lat: 51.18, mode: 'still', face: 'F', iso: 'nature', isoK: 1.3, deco: true, landmark: true }, // 班夫（isoK 1.3 放大）
         {
             src: 'critters/serengeti.svg',
             lon: 34.85,
@@ -1380,9 +1380,10 @@
             mode: 'still',
             face: 'F',
             iso: 'nature',
+            isoK: 1.4,
             deco: true,
             landmark: true,
-        }, // 美國阿拉斯加：德納利山（北美最高峰）
+        }, // 美國阿拉斯加：德納利山（北美最高峰；isoK 1.4 放大）
         {
             src: 'critters/mont-blanc.svg',
             lon: 5.9,
@@ -1853,7 +1854,7 @@
             deco: true,
             maxDeg: 0.5,
         }, // 長榮海運貨櫃輪：原座標（120.3, 24）離台中海岸只有 0.3 度、又沒有 maxDeg 限制，會漂到台灣陸地上；移到高雄外海西南方，並限制漂動範圍
-        { src: 'critters/rms-olympic.svg', lon: -40, lat: 48, mode: 'boat', face: 'F', iso: 'vehicle', sea: true, deco: true }, // 奧林匹克號
+        { src: 'critters/rms-olympic.svg', lon: -40, lat: 48, mode: 'boat', face: 'F', iso: 'vehicle', isoK: 1.3, sea: true, deco: true }, // 奧林匹克號（isoK 1.3 放大）
         { src: 'critters/venice-gondola.svg', lon: 12.5, lat: 45.5, mode: 'boat', iso: 'vehicle', sea: true, deco: true }, // 威尼斯貢多拉
         { src: 'critters/nile-felucca.svg', lon: 32.64, lat: 25.69, mode: 'boat', face: 'R', iso: 'vehicle', sea: true, deco: true }, // 尼羅河路卡索帆船
         { src: 'critters/greek-trireme.svg', lon: 24, lat: 37.5, mode: 'boat', face: 'R', iso: 'vehicle', sea: true, deco: true }, // 希臘三列槳座戰船
@@ -8068,6 +8069,11 @@
             'critters/pamukkale.svg',
             // 聖母峰：原本只是一般世界地標（第 3 層），全球縮小視角常被雜湊名額擠掉，使用者反饋一般情況看不到，改成強制顯示
             'critters/everest.svg',
+            // 冰島小火山：同樣原本只是一般世界地標，使用者反饋一般情況看不到，改成強制顯示
+            'critters/iceland-volcano.svg',
+            // 阿空加瓜山、德納利山：同樣原本只是一般世界地標，使用者反饋一般解析度（縮小視角）看不到，改成強制顯示
+            'critters/aconcagua.svg',
+            'critters/denali.svg',
             'critters/greek-house.svg',
             'critters/hanging-gardens.svg',
             'critters/persepolis.svg',
