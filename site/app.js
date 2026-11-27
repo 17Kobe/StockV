@@ -1359,6 +1359,36 @@
             landmark: true,
         }, // 坦尚尼亞：吉力馬札羅山
         {
+            src: 'critters/aconcagua.svg',
+            lon: -70.0109,
+            lat: -32.6532,
+            mode: 'still',
+            face: 'F',
+            iso: 'nature',
+            deco: true,
+            landmark: true,
+        }, // 阿根廷：阿空加瓜山（美洲最高峰）
+        {
+            src: 'critters/denali.svg',
+            lon: -151.0074,
+            lat: 63.0695,
+            mode: 'still',
+            face: 'F',
+            iso: 'nature',
+            deco: true,
+            landmark: true,
+        }, // 美國阿拉斯加：德納利山（北美最高峰）
+        {
+            src: 'critters/mont-blanc.svg',
+            lon: 6.8652,
+            lat: 45.8326,
+            mode: 'still',
+            face: 'F',
+            iso: 'nature',
+            deco: true,
+            landmark: true,
+        }, // 法國／義大利：白朗峰（阿爾卑斯最高峰）
+        {
             src: 'critters/monument-valley.svg',
             lon: -110.0046,
             lat: 36.9983,
