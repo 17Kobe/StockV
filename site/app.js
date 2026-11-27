@@ -127,14 +127,14 @@
         { src: 'critters/galleon-manila.svg', lon: -118, lat: 14, mode: 'boat', face: 'F', iso: 'vehicle', sea: true },
         { src: 'critters/treasure-ship.svg', lon: 84, lat: 4, mode: 'boat', face: 'F', iso: 'vehicle', sea: true },
         // 地理大發現：哥倉布（1492）、達伽馬（1498）、麥哲倫（1519~1522）；阿拉伯三角帆船、Vendée Globe 環球賽艇
-        { src: 'critters/fleet-columbus.svg', lon: -66, lat: 22, mode: 'boat', face: 'F', iso: 'vehicle', isoK: 1.3, sea: true }, // isoK 1.3 放大
-        { src: 'critters/caravel-dias.svg', lon: 21, lat: -40.5, mode: 'boat', face: 'F', iso: 'vehicle', sea: true, maxDeg: 1.5 }, // 迪亞士 1488 繞過好望角
+        { src: 'critters/fleet-columbus.svg', lon: -66, lat: 22, mode: 'boat', face: 'F', iso: 'vehicle', isoK: 1.6, sea: true }, // isoK 從 1.3 再調到 1.6 放大
+        { src: 'critters/caravel-dias.svg', lon: 21, lat: -40.5, mode: 'boat', face: 'F', iso: 'vehicle', isoK: 1.3, sea: true, maxDeg: 1.5 }, // 迪亞士 1488 繞過好望角（isoK 1.3 放大）
         { src: 'critters/ship-dagama.svg', lon: 71, lat: 11, mode: 'boat', face: 'F', iso: 'vehicle', sea: true }, // 達伽馬 1498 抵達印度
-        { src: 'critters/ship-victoria.svg', lon: -86, lat: -52, mode: 'boat', face: 'F', iso: 'vehicle', sea: true }, // 麥哲倫船隊的維多利亞號環球航行
+        { src: 'critters/ship-victoria.svg', lon: -86, lat: -52, mode: 'boat', face: 'F', iso: 'vehicle', isoK: 1.3, sea: true }, // 麥哲倫船隊的維多利亞號環球航行（isoK 1.3 放大）
         { src: 'critters/dhow.svg', lon: 64, lat: 22, mode: 'boat', face: 'F', iso: 'vehicle', sea: true },
         { src: 'critters/yacht-vendee.svg', lon: 40, lat: -47, mode: 'race', face: 'R', iso: 'vehicle', sea: true },
         // 北大西洋：鐵達尼號沉了一半（1912 年撞冰山的海域）
-        { src: 'critters/titanic.svg', lon: -49.9, lat: 41.7, mode: 'still', face: 'F', iso: 'vehicle', isoK: 1.3, sea: true, deco: true }, // isoK 1.3 放大
+        { src: 'critters/titanic.svg', lon: -49.9, lat: 41.7, mode: 'still', face: 'F', iso: 'vehicle', isoK: 1.6, sea: true, deco: true }, // isoK 從 1.3 再調到 1.6 放大
         // 哥斯大黎加外海的海龜
         { src: 'critters/sea-turtle.svg', lon: -86.8, lat: 8.8, mode: 'turtle', iso: 'small', sea: true, deco: true },
         // 傳說生物：水怪週期性浮出水面（emerge）、幽靈船半透明漂移（ghost）
@@ -151,7 +151,7 @@
             cyc: 16,
             vis: 0.5,
         }, // 挪威克拉肯
-        { src: 'critters/flying-dutchman.svg', lon: 11, lat: -39, mode: 'ghost', face: 'R', iso: 'vehicle', sea: true, maxDeg: 2 }, // 好望角飛翔的荷蘭人
+        { src: 'critters/flying-dutchman.svg', lon: 11, lat: -39, mode: 'ghost', face: 'R', iso: 'vehicle', isoK: 1.3, sea: true, maxDeg: 2 }, // 好望角飛翔的荷蘭人（isoK 1.3 放大）
         {
             src: 'critters/nessie.svg',
             lon: -4.45,
@@ -328,9 +328,10 @@
             mode: 'still',
             face: 'F',
             iso: 'building',
+            isoK: 1.3,
             deco: true,
             landmark: true,
-        }, // 馬丘比丘
+        }, // 馬丘比丘（isoK 1.3 放大）
         { src: 'critters/eiffel-tower.svg', lon: 2.3, lat: 48.3, mode: 'still', face: 'F', iso: 'tower', deco: true, landmark: true }, // 艾菲爾鐵塔
         { src: 'critters/big-ben.svg', lon: 0.8, lat: 51.0, mode: 'still', face: 'F', iso: 'tower', deco: true, landmark: true }, // 大笨鐘
         { src: 'critters/greek-house.svg', lon: 25.4, lat: 36.4, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 希臘聖托里尼
@@ -605,7 +606,7 @@
             deco: true,
             landmark: true,
         }, // 格陵蘭北極熊
-        { src: 'critters/moai.svg', lon: -109.4, lat: -27.1, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 復活島摩艾
+        { src: 'critters/moai.svg', lon: -109.4, lat: -27.1, mode: 'still', face: 'F', iso: 'building', isoK: 1.3, deco: true, landmark: true }, // 復活島摩艾（isoK 1.3 放大）
         // ── 第二批地標 ────────────────────────────────────────────────
         {
             src: 'critters/mongolian-ger.svg',
@@ -814,7 +815,7 @@
         }, // 科莫多巨蜥（素材朝右畫）：原本漏了 maxDeg，長時間開著頁面會不設限亂走，難怪跑到墨西哥那邊去（isoK 1.3 放大）
         { src: 'critters/socotra.svg', lon: 53.87, lat: 12.47, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 索科特拉島（isoK 0.7 縮小）
         { src: 'critters/maasai.svg', lon: 36.8, lat: -2.5, mode: 'still', face: 'F', iso: 'person', deco: true, landmark: true }, // 馬賽族
-        { src: 'critters/angel-falls.svg', lon: -62.54, lat: 5.97, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 安赫爾瀑布
+        { src: 'critters/angel-falls.svg', lon: -62.54, lat: 5.97, mode: 'still', face: 'F', iso: 'nature', isoK: 1.3, deco: true, landmark: true }, // 安赫爾瀑布（isoK 1.3 放大）
         {
             src: 'critters/halong-bay.svg',
             lon: 107.08,
@@ -1357,9 +1358,10 @@
             mode: 'still',
             face: 'F',
             iso: 'nature',
+            isoK: 1.4,
             deco: true,
             landmark: true,
-        }, // 坦尚尼亞：吉力馬札羅山
+        }, // 坦尚尼亞：吉力馬札羅山（isoK 1.4 放大）
         {
             src: 'critters/aconcagua.svg',
             lon: -70.0109,
@@ -1410,6 +1412,7 @@
             mode: 'still',
             face: 'F',
             iso: 'nature',
+            isoK: 1.3,
             deco: true,
             landmark: true,
         }, // 南非：桌山
@@ -8063,6 +8066,8 @@
             'critters/grand-palace.svg',
             'critters/pompeii.svg',
             'critters/pamukkale.svg',
+            // 聖母峰：原本只是一般世界地標（第 3 層），全球縮小視角常被雜湊名額擠掉，使用者反饋一般情況看不到，改成強制顯示
+            'critters/everest.svg',
             'critters/greek-house.svg',
             'critters/hanging-gardens.svg',
             'critters/persepolis.svg',
