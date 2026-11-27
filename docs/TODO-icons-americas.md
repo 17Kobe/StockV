@@ -1,18 +1,13 @@
 # 地圖圖示 2.5D 化：進度（2026-11-27）
 
 ## 已完成
-- 美洲全部完成（美國、加拿大、中南美洲的地標、動物、人物），白宮與聯準會地標改用 2.5D 圖示，美國、加拿大居民改成 2.5D。
-- 海上全部完成：鯨魚（噴水 ↔ 舉尾輪流）、馬尼拉大帆船、哥倫布船隊、維多利亞號、鐵達尼號、奧林匹克號、百慕達三角、冰山。
-- 非美洲的 4 艘船也完成：迪亞士帆船、幽靈船、旺代帆船、前進號。
-- `docs/icons.html` 已重產（美洲這輪標成「第 7 輪」）。
+- 地圖上所有圖示（app.js 的 CRITTERS）都已改成 2.5D 等角投影（從斜上方約 30° 往下看），沒有剩下的 Fluent Emoji 點陣圖。
+- 美洲、海上、非美洲的 4 艘船：見 `gen_am1.py`～`gen_am6.py`。
+- 視角修正（原本是正面平視或一點透視）：道頓堀固力果看板、普羅旺斯薰衣草、羅馬競技場、伊斯法罕伊瑪目清真寺、布達拉宮、芹壁聚落（`gen_fix30.py`；舊版備份在 `%TEMP%\bak30\`）。
+- 最後 6 隻動物：印度孔雀、紅大袋鼠、紅毛猩猩、亞洲象（critters/asian-elephant.svg）、西班牙鬥牛（critters/spanish-bull.svg）、阿拉伯單峰駱駝（`gen_ani6.py`）。
+- `docs/icons.html` 已重產。
 
-產生器在 `%TEMP%`：`gen_am1.py`～`gen_am6.py`、`gen_folk3.py`（居民）、`wire_am.py`（把新圖接上 app.js／tips.js、調整版本號，可重跑）。
+產生器都在 `%TEMP%`（共用工具 `iso25d.py`、`gen_w_common.py`），清理暫存資料夾後可能會不見。
 
-## 尚未統一（仍是 Fluent Emoji 點陣圖、用 `s:`）
-不在原本的美洲清單裡，是之後檢查 app.js 時發現的 6 隻動物：
-- animals/peacock.png（印度孔雀）
-- animals/kangaroo.png（澳洲袋鼠）
-- animals/orangutan.png（印尼紅毛猩猩）
-- animals/elephant.png（泰國大象；非洲象已另有 critters/african-elephant.svg）
-- animals/ox.png（西班牙公牛）
-- animals/camel.png（沙烏地駱駝）
+## 可能還要再看的
+- 其他早期畫的圖示若也有「正面平視」的問題，可以用 `prev25.py` 做對照表找出來，再用 `gen_fix30.py` 的寫法重畫。

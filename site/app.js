@@ -1025,12 +1025,12 @@
         { src: 'critters/racehorse.svg', lon: 114.15, lat: 22.25, mode: 'wander', iso: 'animal', deco: true, maxDeg: 1 }, // 香港：賽馬（原本掛在卡片上，脫鉤成獨立裝飾項目）
         { src: 'critters/long-tailed-macaque.svg', lon: 101.5, lat: 4.5, mode: 'wander', iso: 'small', isoK: 1.3, deco: true, maxDeg: 2 }, // 馬來西亞：猴子（原本掛在卡片上，脫鉤成獨立裝飾項目，跟雙峰塔、婆羅洲長鼻猴拉開距離；isoK 1.3 放大）
         // 以下原本是國家指數卡片的代表動物（markets.json 的 "a"），現在脫鉤成跟其他動物一樣的獨立裝飾項目，不再跟著卡片走；直接沿用原本的 Fluent Emoji PNG 素材，沒有重畫
-        { src: 'animals/peacock.png', lon: 78.5, lat: 22.5, mode: 'wander', face: 'F', gait: 'bird', s: 1.0, deco: true, maxDeg: 2 }, // 印度：孔雀
-        { src: 'animals/kangaroo.png', lon: 134, lat: -25.5, mode: 'wander', face: 'L', gait: 'hop', s: 1.1, deco: true, maxDeg: 2 }, // 澳洲：袋鼠
-        { src: 'animals/orangutan.png', lon: 110, lat: -7, mode: 'wander', face: 'F', s: 1.0, deco: true, maxDeg: 2 }, // 印尼：紅毛猩猩
-        { src: 'animals/elephant.png', lon: 101, lat: 15.5, mode: 'wander', face: 'L', gait: 'heavy', s: 0.9, deco: true, maxDeg: 2 }, // 泰國：象（1.1 再小一點，調到 0.9）
-        { src: 'animals/ox.png', lon: -3.7, lat: 40, mode: 'wander', face: 'L', gait: 'heavy', s: 1.1, deco: true, maxDeg: 2 }, // 西班牙：鬥牛（0.95 再加大一點，調到 1.1）
-        { src: 'animals/camel.png', lon: 45, lat: 24, mode: 'wander', face: 'L', gait: 'heavy', s: 0.95, deco: true, maxDeg: 2 }, // 沙烏地：阿拉伯單峰駱駝（0.8 再加大一點點）
+        { src: 'critters/peacock.svg', lon: 78.5, lat: 22.5, mode: 'wander', face: 'F', gait: 'bird', iso: 'animal', deco: true, maxDeg: 2 }, // 印度：孔雀
+        { src: 'critters/kangaroo.svg', lon: 134, lat: -25.5, mode: 'wander', face: 'L', gait: 'hop', iso: 'animal', deco: true, maxDeg: 2 }, // 澳洲：袋鼠
+        { src: 'critters/orangutan.svg', lon: 110, lat: -7, mode: 'wander', face: 'F', iso: 'animal', deco: true, maxDeg: 2 }, // 印尼：紅毛猩猩
+        { src: 'critters/asian-elephant.svg', lon: 101, lat: 15.5, mode: 'wander', face: 'L', gait: 'heavy', iso: 'animal', deco: true, maxDeg: 2 }, // 泰國：象（1.1 再小一點，調到 0.9）
+        { src: 'critters/spanish-bull.svg', lon: -3.7, lat: 40, mode: 'wander', face: 'L', gait: 'heavy', iso: 'animal', deco: true, maxDeg: 2 }, // 西班牙：鬥牛（0.95 再加大一點，調到 1.1）
+        { src: 'critters/camel.svg', lon: 45, lat: 24, mode: 'wander', face: 'L', gait: 'heavy', iso: 'animal', deco: true, maxDeg: 2 }, // 沙烏地：阿拉伯單峰駱駝（0.8 再加大一點點）
         // ── 第五批補充（地標 + 動物） ──────────────────────────────────
         {
             src: 'critters/atlantis.svg',
