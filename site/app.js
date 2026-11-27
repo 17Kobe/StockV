@@ -92,7 +92,7 @@
     //       surf 衝浪 / ski 滑雪 / chase 繞圈追逐（lag 是落後的角度）/ fin 只露背鰭在海面巡游 / flyfish 飛魚 / still 不動
     // sea：在海上（影子改成水波）
     const CRITTERS = [
-        { src: 'critters/whale-spout.png', alt: 'critters/whale.png', lon: -38, lat: 38, mode: 'whale', s: 1.15, sea: true },
+        { src: 'critters/whale-spout.svg', alt: 'critters/whale.svg', lon: -38, lat: 38, mode: 'whale', iso: 'animal', sea: true },
         {
             src: 'critters/dolphin.svg',
             lon: 112.7,
@@ -115,26 +115,28 @@
             iso: 'vehicle',
             sea: true,
             maxDeg: 1.2,
+            noShadow: true,
+            axisDeg: 30, // 船身素材本身就畫成斜的（不會轉向、不會翻面），只能沿著這條線前後移動，尾流方向才會跟船身一致
         },
-        { src: 'critters/tatara-yami.svg', lon: -146, lat: 14, mode: 'boat', face: 'F', iso: 'vehicle', sea: true },
-        { src: 'critters/tatara-yami.svg', lon: 163, lat: 7, mode: 'boat', face: 'F', iso: 'vehicle', sea: true },
-        { src: 'critters/tatara-yami.svg', lon: 56, lat: -14, mode: 'boat', face: 'F', iso: 'vehicle', sea: true },
+        { src: 'critters/tatara-yami.svg', lon: -146, lat: 14, mode: 'boat', face: 'F', iso: 'vehicle', sea: true, noShadow: true, axisDeg: 30 },
+        { src: 'critters/tatara-yami.svg', lon: 163, lat: 7, mode: 'boat', face: 'F', iso: 'vehicle', sea: true, noShadow: true, axisDeg: 30 },
+        { src: 'critters/tatara-yami.svg', lon: 56, lat: -14, mode: 'boat', face: 'F', iso: 'vehicle', sea: true, noShadow: true, axisDeg: 30 },
         // 日本黑船（1853 年培里艦隊開進浦賀、逼日本開國）
         { src: 'critters/black-ship.svg', lon: 146, lat: 30, mode: 'boat', face: 'F', iso: 'vehicle', sea: true, maxDeg: 1 }, // 原座標跟東京鐵塔、迪士尼太近（全球視角互相遮擋，一直沒顯示），拉遠到太平洋上
         // 大航海時代的船隊：馬尼拉大帆船（太平洋）、鄭和寶船（印度洋）
-        { src: 'critters/galleon-manila.svg', lon: -118, lat: 14, mode: 'boat', face: 'F', s: 1.3, sea: true },
+        { src: 'critters/galleon-manila.svg', lon: -118, lat: 14, mode: 'boat', face: 'F', iso: 'vehicle', sea: true },
         { src: 'critters/treasure-ship.svg', lon: 84, lat: 4, mode: 'boat', face: 'F', iso: 'vehicle', sea: true },
         // 地理大發現：哥倉布（1492）、達伽馬（1498）、麥哲倫（1519~1522）；阿拉伯三角帆船、Vendée Globe 環球賽艇
-        { src: 'critters/fleet-columbus.svg', lon: -66, lat: 22, mode: 'boat', face: 'F', s: 1.9, sea: true },
-        { src: 'critters/caravel-dias.svg', lon: 21, lat: -40.5, mode: 'boat', face: 'F', s: 1.3, sea: true, maxDeg: 1.5 }, // 迪亞士 1488 繞過好望角
+        { src: 'critters/fleet-columbus.svg', lon: -66, lat: 22, mode: 'boat', face: 'F', iso: 'vehicle', sea: true },
+        { src: 'critters/caravel-dias.svg', lon: 21, lat: -40.5, mode: 'boat', face: 'F', iso: 'vehicle', sea: true, maxDeg: 1.5 }, // 迪亞士 1488 繞過好望角
         { src: 'critters/ship-dagama.svg', lon: 71, lat: 11, mode: 'boat', face: 'F', iso: 'vehicle', sea: true }, // 達伽馬 1498 抵達印度
-        { src: 'critters/ship-victoria.svg', lon: -86, lat: -52, mode: 'boat', face: 'F', s: 1.3, sea: true }, // 麥哲倫船隊的維多利亞號環球航行
+        { src: 'critters/ship-victoria.svg', lon: -86, lat: -52, mode: 'boat', face: 'F', iso: 'vehicle', sea: true }, // 麥哲倫船隊的維多利亞號環球航行
         { src: 'critters/dhow.svg', lon: 64, lat: 22, mode: 'boat', face: 'F', iso: 'vehicle', sea: true },
-        { src: 'critters/yacht-vendee.svg', lon: 40, lat: -47, mode: 'race', face: 'R', s: 1.4, sea: true },
+        { src: 'critters/yacht-vendee.svg', lon: 40, lat: -47, mode: 'race', face: 'R', iso: 'vehicle', sea: true },
         // 北大西洋：鐵達尼號沉了一半（1912 年撞冰山的海域）
-        { src: 'critters/titanic.svg', lon: -49.9, lat: 41.7, mode: 'bob', face: 'F', s: 1.3, sea: true, deco: true },
+        { src: 'critters/titanic.svg', lon: -49.9, lat: 41.7, mode: 'still', face: 'F', iso: 'vehicle', sea: true, deco: true },
         // 哥斯大黎加外海的海龜
-        { src: 'critters/sea-turtle.svg', lon: -86.8, lat: 8.8, mode: 'turtle', s: 0.8, sea: true, deco: true },
+        { src: 'critters/sea-turtle.svg', lon: -86.8, lat: 8.8, mode: 'turtle', iso: 'small', sea: true, deco: true },
         // 傳說生物：水怪週期性浮出水面（emerge）、幽靈船半透明漂移（ghost）
         {
             src: 'critters/kraken.svg',
@@ -149,7 +151,7 @@
             cyc: 16,
             vis: 0.5,
         }, // 挪威克拉肯
-        { src: 'critters/flying-dutchman.svg', lon: 11, lat: -39, mode: 'ghost', face: 'R', s: 1.4, sea: true, maxDeg: 2 }, // 好望角飛翔的荷蘭人
+        { src: 'critters/flying-dutchman.svg', lon: 11, lat: -39, mode: 'ghost', face: 'R', iso: 'vehicle', sea: true, maxDeg: 2 }, // 好望角飛翔的荷蘭人
         {
             src: 'critters/nessie.svg',
             lon: -4.45,
@@ -314,7 +316,7 @@
             lat: -22.95,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'tower',
             deco: true,
             landmark: true,
         }, // 基督像
@@ -324,7 +326,7 @@
             lat: -13.2,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 馬丘比丘
@@ -384,8 +386,8 @@
             rock: 3,
             bounce: 0.06,
         }, // 芬蘭聖誕老人（isoK 從 1.3 調到 1.6 放大）
-        { src: 'critters/sloth.svg', lon: -70, lat: -3, mode: 'still', face: 'F', s: 0.9, deco: true, noShadow: true }, // 南美樹懶
-        { src: 'critters/amazon-boat.svg', lon: -57.5, lat: -2.3, mode: 'boat', face: 'F', s: 1.2, sea: true, maxDeg: 0.8 }, // 亞馬遜河探險船
+        { src: 'critters/sloth.svg', lon: -70, lat: -3, mode: 'still', face: 'F', iso: 'small', deco: true, noShadow: true }, // 南美樹懶
+        { src: 'critters/amazon-boat.svg', lon: -57.5, lat: -2.3, mode: 'boat', face: 'F', iso: 'vehicle', sea: true, maxDeg: 0.8 }, // 亞馬遜河探險船
         {
             src: 'critters/footballer-brazil.svg',
             lon: -48,
@@ -396,7 +398,7 @@
             deco: true,
             noShadow: true,
         }, // 巴西足球員
-        { src: 'critters/cactus-mexico.svg', lon: -102, lat: 24.5, mode: 'still', face: 'F', s: 1.0, deco: true, landmark: true }, // 墨西哥仙人掌
+        { src: 'critters/cactus-mexico.svg', lon: -102, lat: 24.5, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 墨西哥仙人掌
         { src: 'critters/baobab.svg', lon: 37.5, lat: -9.5, mode: 'still', face: 'F', iso: 'nature', isoK: 1.1, deco: true, landmark: true }, // 非洲猴麵包樹（isoK 從 0.8 調到 1.1 放大）
         { src: 'critters/uluru.svg', lon: 131, lat: -25.3, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 烏魯魯巨岩
         { src: 'critters/danxia.svg', lon: 100, lat: 38.9, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 七彩丹霞
@@ -408,7 +410,7 @@
             lat: 26,
             mode: 'still',
             face: 'F',
-            s: 1.9,
+            iso: 'nature',
             sea: true,
             deco: true,
             noShadow: true,
@@ -481,11 +483,11 @@
             lat: -50.95,
             mode: 'still',
             face: 'F',
-            s: 1.2,
+            iso: 'nature',
             deco: true,
             landmark: true,
         }, // 百內
-        { src: 'critters/iguazu.svg', lon: -54.44, lat: -25.69, mode: 'still', face: 'F', s: 1.2, deco: true, landmark: true }, // 伊瓜蘇
+        { src: 'critters/iguazu.svg', lon: -54.44, lat: -25.69, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 伊瓜蘇
         {
             src: 'critters/fiordland.svg',
             lon: 167.9,
@@ -508,7 +510,7 @@
             landmark: true,
             noShadow: true,
         }, // 克留格爾（isoK 1.3 放大）
-        { src: 'critters/galapagos.svg', lon: -90.5, lat: -0.6, mode: 'still', face: 'F', s: 1.2, deco: true, landmark: true }, // 加拉巴哥
+        { src: 'critters/galapagos.svg', lon: -90.5, lat: -0.6, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 加拉巴哥
         { src: 'critters/noah-ark.svg', lon: 44.3, lat: 39.7, mode: 'still', face: 'F', iso: 'building', isoK: 1.3, deco: true, landmark: true }, // 諾亞方舟（亞拉臘山）（isoK 1.3 放大）
         { src: 'critters/louvre.svg', lon: 4.6, lat: 48.7, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 羅浮宮
         { src: 'critters/stonehenge.svg', lon: -3.0, lat: 51.3, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 巨石陣
@@ -575,7 +577,7 @@
             lat: 20.68,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 奇琴伊茲
@@ -602,7 +604,7 @@
             deco: true,
             landmark: true,
         }, // 格陵蘭北極熊
-        { src: 'critters/moai.svg', lon: -109.4, lat: -27.1, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 復活島摩艾
+        { src: 'critters/moai.svg', lon: -109.4, lat: -27.1, mode: 'still', face: 'F', iso: 'building', deco: true, landmark: true }, // 復活島摩艾
         // ── 第二批地標 ────────────────────────────────────────────────
         {
             src: 'critters/mongolian-ger.svg',
@@ -665,7 +667,7 @@
             lat: 17.3,
             mode: 'still',
             face: 'F',
-            s: 1.2,
+            iso: 'nature',
             sea: true,
             deco: true,
             landmark: true,
@@ -758,7 +760,7 @@
             lat: -20.1,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'nature',
             deco: true,
             landmark: true,
         }, // 天空之鏡
@@ -811,7 +813,7 @@
         }, // 科莫多巨蜥（素材朝右畫）：原本漏了 maxDeg，長時間開著頁面會不設限亂走，難怪跑到墨西哥那邊去（isoK 1.3 放大）
         { src: 'critters/socotra.svg', lon: 53.87, lat: 12.47, mode: 'still', face: 'F', iso: 'nature', isoK: 0.7, deco: true, landmark: true }, // 索科特拉島（isoK 0.7 縮小）
         { src: 'critters/maasai.svg', lon: 36.8, lat: -2.5, mode: 'still', face: 'F', iso: 'person', deco: true, landmark: true }, // 馬賽族
-        { src: 'critters/angel-falls.svg', lon: -62.54, lat: 5.97, mode: 'still', face: 'F', s: 1.1, deco: true, landmark: true }, // 安赫爾瀑布
+        { src: 'critters/angel-falls.svg', lon: -62.54, lat: 5.97, mode: 'still', face: 'F', iso: 'nature', deco: true, landmark: true }, // 安赫爾瀑布
         {
             src: 'critters/halong-bay.svg',
             lon: 107.08,
@@ -956,7 +958,7 @@
             lat: 19.69,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'building',
             deco: true,
             landmark: true,
         }, // 特奧蒂瓦坎太陽金字塔
@@ -966,7 +968,7 @@
             lat: -14.74,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'nature',
             deco: true,
             landmark: true,
         }, // 納斯卡線
@@ -984,14 +986,14 @@
         // ── 新增動物（世界各地代表物種） ──────────────────────────────
         { src: 'critters/bengal-tiger.svg', lon: 79.0, lat: 21.0, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 印度：老虎在森林漫步
         { src: 'critters/wombat.svg', lon: 146.0, lat: -42.0, mode: 'still', face: 'F', iso: 'animal', deco: true }, // 澳洲：袋熊鑽洞
-        { src: 'critters/jaguar.svg', lon: -65.0, lat: -6.0, mode: 'wander', s: 1.0, deco: true, maxDeg: 2 }, // 南美：美洲豹穿越雨林（素材已重畫為朝左）
+        { src: 'critters/jaguar.svg', lon: -65.0, lat: -6.0, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 南美：美洲豹穿越雨林（素材已重畫為朝左）
         { src: 'critters/hippo.svg', lon: 31.0, lat: 1.0, mode: 'still', iso: 'animal', isoK: 1.3, sea: true, deco: true }, // 非洲：河馬探頭（isoK 1.3 放大）
         { src: 'critters/african-elephant.svg', lon: 37.5, lat: -3.0, mode: 'wander', gait: 'heavy', iso: 'animal', isoK: 1.6, deco: true, maxDeg: 2 }, // 非洲：象群遷徙（isoK 從 1.3 再調到 1.6 放大）
-        { src: 'animals/penguin.png', lon: -60.0, lat: -62.0, mode: 'wander', gait: 'waddle', s: 0.85, deco: true, maxDeg: 2 }, // 南極：企鵝冰上搖擺
+        { src: 'critters/penguin.svg', lon: -60.0, lat: -62.0, mode: 'wander', gait: 'waddle', iso: 'small', deco: true, maxDeg: 2 }, // 南極：企鵝冰上搖擺
         { src: 'critters/japanese-macaque-onsen.svg', lon: 138.5, lat: 36.7, mode: 'still', face: 'F', iso: 'small', deco: true }, // 日本：獼猴泡溫泉
         { src: 'critters/golden-monkey.svg', lon: 103.0, lat: 31.0, mode: 'wander', iso: 'small', isoK: 1.3, deco: true, maxDeg: 2 }, // 中國：金絲猴森林跳躍（素材朝右畫；isoK 1.3 放大）
         { src: 'critters/chameleon.svg', lon: 49.0, lat: -17.0, mode: 'still', face: 'F', iso: 'animal', isoK: 1.8, deco: true }, // 馬達加斯加：變色龍伸舌頭（原本 0.8 太小，跟耳廓狐一樣調到 1.8）
-        { src: 'critters/piranha.svg', lon: -60.0, lat: -2.0, mode: 'swim', face: 'R', s: 0.8, sea: true, deco: true }, // 南美：食人魚群游（素材朝右畫）
+        { src: 'critters/piranha.svg', lon: -60.0, lat: -2.0, mode: 'swim', face: 'R', iso: 'small', sea: true, deco: true }, // 南美：食人魚群游（素材朝右畫）
         // ── 國家代表動物改成獨立裝飾項目（原本掛在旗幟卡片上，跟旗幟卡片脫勾）：跟其它裝飾動物
         // 一樣受全球視角名額限制（見 LOD_DEMOTE），markets.json 對應的 "a" 欄位已拿掉 ──────────
         { src: 'critters/formosan-sika-deer.svg', lon: 121.3, lat: 23.9, mode: 'wander', iso: 'animal', deco: true, maxDeg: 2 }, // 台灣：梅花鹿（台灣特有亞種，原本用一般的鹿）
@@ -1016,10 +1018,10 @@
         { src: 'critters/rabbit.svg', lon: 5.3, lat: 52.1, mode: 'wander', iso: 'small', isoK: 1.3, deco: true, maxDeg: 2 }, // 荷蘭：歐洲穴兔（isoK 1.3 放大）
         { src: 'critters/turkey.svg', lon: 34.0, lat: 39.0, mode: 'wander', iso: 'small', isoK: 1.3, deco: true, maxDeg: 2 }, // 土耳其：火雞（isoK 1.3 放大）
         { src: 'critters/eagle.svg', lon: -100.0, lat: 40.0, mode: 'wander', iso: 'small', isoK: 1.6, deco: true, maxDeg: 2 }, // 美國：白頭鷹（isoK 從 1.3 再調到 1.6 放大）
-        { src: 'animals/toucan.svg', lon: -58.0, lat: -8.0, mode: 'still', face: 'F', s: 0.85, deco: true }, // 巴西：巨嘴鳥
-        { src: 'animals/axolotl.svg', lon: -99.5, lat: 19.3, mode: 'wander', s: 0.9, deco: true, maxDeg: 1.5 }, // 墨西哥：六角恐龍（墨西哥市近郊湖泊）
-        { src: 'animals/penguin.png', lon: -68.0, lat: -45.0, mode: 'wander', gait: 'waddle', s: 0.85, deco: true, maxDeg: 2 }, // 阿根廷：企鵝（巴塔哥尼亞海岸）
-        { src: 'animals/alpaca.svg', lon: -69.5, lat: -27.0, mode: 'wander', s: 0.9, deco: true, maxDeg: 1.5 }, // 智利：草泥馬（安地斯山區）
+        { src: 'animals/toucan.svg', lon: -58.0, lat: -8.0, mode: 'still', face: 'F', iso: 'small', deco: true }, // 巴西：巨嘴鳥
+        { src: 'animals/axolotl.svg', lon: -99.5, lat: 19.3, mode: 'wander', iso: 'small', deco: true, maxDeg: 1.5 }, // 墨西哥：六角恐龍（墨西哥市近郊湖泊）
+        { src: 'critters/penguin.svg', lon: -68.0, lat: -45.0, mode: 'wander', gait: 'waddle', iso: 'small', deco: true, maxDeg: 2 }, // 阿根廷：企鵝（巴塔哥尼亞海岸）
+        { src: 'animals/alpaca.svg', lon: -69.5, lat: -27.0, mode: 'wander', iso: 'animal', deco: true, maxDeg: 1.5 }, // 智利：草泥馬（安地斯山區）
         { src: 'critters/racehorse.svg', lon: 114.15, lat: 22.25, mode: 'wander', iso: 'animal', deco: true, maxDeg: 1 }, // 香港：賽馬（原本掛在卡片上，脫鉤成獨立裝飾項目）
         { src: 'critters/long-tailed-macaque.svg', lon: 101.5, lat: 4.5, mode: 'wander', iso: 'small', isoK: 1.3, deco: true, maxDeg: 2 }, // 馬來西亞：猴子（原本掛在卡片上，脫鉤成獨立裝飾項目，跟雙峰塔、婆羅洲長鼻猴拉開距離；isoK 1.3 放大）
         // 以下原本是國家指數卡片的代表動物（markets.json 的 "a"），現在脫鉤成跟其他動物一樣的獨立裝飾項目，不再跟著卡片走；直接沿用原本的 Fluent Emoji PNG 素材，沒有重畫
@@ -1058,7 +1060,7 @@
             lat: 9.08,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'building',
             sea: true,
             deco: true,
             landmark: true,
@@ -1102,7 +1104,7 @@
             lat: -8.0,
             mode: 'still',
             face: 'F',
-            s: 1.8,
+            iso: 'nature',
             deco: true,
             landmark: true,
         }, // 亞馬遜雨林
@@ -1366,7 +1368,7 @@
             deco: true,
             landmark: true,
         }, // 美國：紀念碑谷
-        { src: 'critters/iceberg.svg', lon: -30.0, lat: -65.0, mode: 'bob', s: 1.1, sea: true, deco: true, landmark: true }, // 南大洋：漂浮冰山
+        { src: 'critters/iceberg.svg', lon: -30.0, lat: -65.0, mode: 'still', iso: 'nature', sea: true, deco: true, landmark: true }, // 南大洋：漂浮冰山
         {
             src: 'critters/table-mountain.svg',
             lon: 18.4232,
@@ -1441,7 +1443,8 @@
             sea: true,
             deco: true,
             landmark: true,
-        }, // 南韓：李舜臣龜船（移到濟州島北側外海，離任何海岸線至少 0.9 度，確實在開闊海面上）
+            noShadow: true,
+        }, // 南韓：李舜臣龜船（移到濟州島北側外海，離任何海岸線至少 0.9 度，確實在開闊海面上；使用者反饋船下的白影不需要，拿掉）
         {
             src: 'critters/temple-of-heaven.svg',
             lon: 114.0,
@@ -1765,7 +1768,7 @@
             lat: -34.6037,
             mode: 'still',
             face: 'F',
-            s: 1.1,
+            iso: 'tower',
             deco: true,
             landmark: true,
         }, // 阿根廷：布宜諾斯艾利斯方尖碑
@@ -1801,7 +1804,7 @@
             deco: true,
             landmark: true,
         }, // 俄羅斯：貝加爾湖與結冰鐵道
-        { src: 'critters/fram-polar-ship.svg', lon: 15, lat: 78, mode: 'bob', s: 1.0, sea: true, deco: true }, // 極地探險船・前進號
+        { src: 'critters/fram-polar-ship.svg', lon: 15, lat: 78, mode: 'still', iso: 'vehicle', sea: true, deco: true }, // 極地探險船・前進號
         {
             src: 'critters/evergreen-container-ship.svg',
             lon: 119.6,
@@ -1812,7 +1815,7 @@
             deco: true,
             maxDeg: 0.5,
         }, // 長榮海運貨櫃輪：原座標（120.3, 24）離台中海岸只有 0.3 度、又沒有 maxDeg 限制，會漂到台灣陸地上；移到高雄外海西南方，並限制漂動範圍
-        { src: 'critters/rms-olympic.svg', lon: -40, lat: 48, mode: 'boat', s: 1.0, sea: true, deco: true }, // 奧林匹克號
+        { src: 'critters/rms-olympic.svg', lon: -40, lat: 48, mode: 'boat', face: 'F', iso: 'vehicle', sea: true, deco: true }, // 奧林匹克號
         { src: 'critters/venice-gondola.svg', lon: 12.5, lat: 45.5, mode: 'boat', iso: 'vehicle', sea: true, deco: true }, // 威尼斯貢多拉
         { src: 'critters/nile-felucca.svg', lon: 32.64, lat: 25.69, mode: 'boat', face: 'R', iso: 'vehicle', sea: true, deco: true }, // 尼羅河路卡索帆船
         { src: 'critters/greek-trireme.svg', lon: 24, lat: 37.5, mode: 'boat', face: 'R', iso: 'vehicle', sea: true, deco: true }, // 希臘三列槳座戰船
@@ -2878,10 +2881,14 @@
             const z = c.size,
                 sp = Math.hypot(c.vx || 0, c.vy || 0),
                 mv = Math.min(1, sp / (z * 0.1));
+            // 完全靜止（mode:'still'，從沒移動過）時沒有真正的速度向量可用，
+            // 原本固定退回 dx:1（朝右），跟船身實際畫的朝向（face + dir 決定左右翻面）無關，
+            // 才會出現航向跟水面光束方向對不上的情況；改成照船身實際朝向退回
+            const faceDx = c.face === 'F' ? 1 : c.face === 'R' ? c.dir : -c.dir;
             out.push({
                 x: c.sx + c.x,
                 y: c.sy + c.y - z * 0.02,
-                dx: sp > 0 ? c.vx / sp : 1,
+                dx: sp > 0 ? c.vx / sp : faceDx,
                 dy: sp > 0 ? c.vy / sp : 0,
                 size: z * 0.45,
                 speed: mv < 0.05 ? 0 : mv,
@@ -3621,13 +3628,18 @@
         if (d < 0.6) {
             c.wait -= dt;
             if (c.wait <= 0) {
-                const a = Math.random() * Math.PI * 2,
-                    r = 0.35 + Math.sqrt(Math.random()) * 0.65;
+                // c.d.axisDeg：素材本身畫死了固定朝向（例如達悟族拼板舟船身斜斜畫在 30°，船頭船尾不會轉向也不會翻面），
+                // 這種船只能沿著畫的那條線前後移動，不然尾流（照真實移動方向算）跟船身畫的角度會對不上
+                const hasAxis = c.d.axisDeg != null;
+                const a = hasAxis
+                    ? (c.d.axisDeg * Math.PI) / 180 + (Math.random() < 0.5 ? 0 : Math.PI) + (Math.random() - 0.5) * (Math.PI / 9)
+                    : Math.random() * Math.PI * 2;
+                const r = 0.35 + Math.sqrt(Math.random()) * 0.65;
                 // maxDeg：活動範圍不超過幾度經度，縮小地圖時才不會走到海上
                 const md = c.d.maxDeg ?? (c.d.mode === 'boat' ? 2 : 0);
                 const rr = Math.min(r * c.base * span, md && c.ppd ? md * c.ppd : Infinity);
                 c.tx = Math.cos(a) * rr;
-                c.ty = Math.sin(a) * rr * sq;
+                c.ty = Math.sin(a) * rr * (hasAxis ? 1 : sq); // 沿固定軸線走時不套用 sq 橢圓壓縮，否則角度會被拉偏離軸線
                 c.wait = 1 + Math.random() * 3;
             }
             return false;
@@ -8016,7 +8028,7 @@
         const LOD_DEMOTE = new Set([
             'critters/beaver.svg',
             'critters/red-crowned-crane.svg',
-            'animals/penguin.png',
+            'critters/penguin.svg',
             'critters/rms-olympic.svg',
             'critters/dhow.svg',
             // 原本掛在旗幟卡片上的國家代表動物，現在獨立成裝飾項目，一樣排在最低優先度

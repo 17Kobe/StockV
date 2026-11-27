@@ -1,83 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-<!-- Great Blue Hole -->
-<defs>
-  <radialGradient id="gbhReef" cx="45%" cy="40%" r="60%">
-    <stop offset="0" stop-color="#5de0b8"/>
-    <stop offset="1" stop-color="#2a9a7e"/>
-  </radialGradient>
-  <radialGradient id="gbhRing" cx="45%" cy="40%" r="60%">
-    <stop offset="0" stop-color="#2cc2a0"/>
-    <stop offset="1" stop-color="#157a66"/>
-  </radialGradient>
-  <radialGradient id="gbhWater" cx="42%" cy="35%" r="65%">
-    <stop offset="0" stop-color="#2f66c0"/>
-    <stop offset="1" stop-color="#0d2f7a"/>
-  </radialGradient>
-  <radialGradient id="gbhDeep" cx="42%" cy="35%" r="65%">
-    <stop offset="0" stop-color="#143a8a"/>
-    <stop offset="1" stop-color="#071d5a"/>
-  </radialGradient>
-  <radialGradient id="gbhDeeper" cx="42%" cy="35%" r="65%">
-    <stop offset="0" stop-color="#0d1f60"/>
-    <stop offset="1" stop-color="#0a1540"/>
-  </radialGradient>
-  <radialGradient id="gbhCore" cx="42%" cy="35%" r="65%">
-    <stop offset="0" stop-color="#0a1440"/>
-    <stop offset="1" stop-color="#050f30"/>
-  </radialGradient>
-</defs>
-<!-- Outer coral reef ring -->
-<ellipse cx="40" cy="40" rx="36" ry="36" fill="url(#gbhReef)" stroke="#1d7a62" stroke-width="0.5"/>
-<!-- Reef ring inner cutout -->
-<ellipse cx="40" cy="40" rx="28" ry="28" fill="url(#gbhRing)" stroke="#0e5447" stroke-width="0.5"/>
-<!-- Deep blue water -->
-<ellipse cx="40" cy="40" rx="24" ry="24" fill="url(#gbhWater)" stroke="#092259" stroke-width="0.4"/>
-<!-- Deeper blue -->
-<ellipse cx="40" cy="40" rx="18" ry="18" fill="url(#gbhDeep)" stroke="#071a45" stroke-width="0.4"/>
-<!-- Even deeper -->
-<ellipse cx="40" cy="40" rx="13" ry="13" fill="url(#gbhDeeper)" stroke="#060f30" stroke-width="0.4"/>
-<!-- Deepest center -->
-<ellipse cx="40" cy="40" rx="8" ry="8" fill="url(#gbhCore)" stroke="#040b24" stroke-width="0.4"/>
-<!-- Darkest core -->
-<ellipse cx="40" cy="40" rx="4" ry="4" fill="#050f30" stroke="none"/>
-
-<!-- Light shimmer animation on water surface -->
-<ellipse cx="34" cy="36" rx="3" ry="1.5" fill="#dff0ff" opacity="0.0">
-  <animate attributeName="opacity" values="0;0.25;0" dur="3s" repeatCount="indefinite" begin="0s"/>
-</ellipse>
-<ellipse cx="46" cy="44" rx="2.5" ry="1.2" fill="#dff0ff" opacity="0.0">
-  <animate attributeName="opacity" values="0;0.2;0" dur="3.5s" repeatCount="indefinite" begin="1.2s"/>
-</ellipse>
-<ellipse cx="40" cy="33" rx="2" ry="1" fill="#dff0ff" opacity="0.0">
-  <animate attributeName="opacity" values="0;0.22;0" dur="2.8s" repeatCount="indefinite" begin="0.7s"/>
-</ellipse>
-
-<!-- Small island/reef outcrops around the hole -->
-<!-- Top-left islet -->
-<ellipse cx="12" cy="15" rx="5" ry="3" fill="#3aaa72" stroke="#246b48" stroke-width="0.5"/>
-<ellipse cx="12" cy="15" rx="3" ry="1.8" fill="#2d8a5a" stroke="none"/>
-
-<!-- Top-right islet -->
-<ellipse cx="64" cy="13" rx="4.5" ry="2.5" fill="#3aaa72" stroke="#246b48" stroke-width="0.5"/>
-<ellipse cx="64" cy="13" rx="2.8" ry="1.5" fill="#2d8a5a" stroke="none"/>
-
-<!-- Bottom-right islet -->
-<ellipse cx="68" cy="62" rx="5" ry="2.8" fill="#3aaa72" stroke="#246b48" stroke-width="0.5"/>
-<ellipse cx="68" cy="62" rx="3" ry="1.6" fill="#2d8a5a" stroke="none"/>
-
-<!-- Bottom-left islet -->
-<ellipse cx="11" cy="60" rx="4" ry="2.4" fill="#3aaa72" stroke="#246b48" stroke-width="0.5"/>
-<ellipse cx="11" cy="60" rx="2.5" ry="1.4" fill="#2d8a5a" stroke="none"/>
-
-<!-- Small coral details on reef ring -->
-<circle cx="40" cy="12.5" r="1.2" fill="#ff8c60" stroke="#c45a38" stroke-width="0.4"/>
-<circle cx="56" cy="18" r="1" fill="#ff6b6b" stroke="#b03e3e" stroke-width="0.4"/>
-<circle cx="24" cy="18" r="1" fill="#ff8c60" stroke="#c45a38" stroke-width="0.4"/>
-<circle cx="65" cy="38" r="1.2" fill="#ffb347" stroke="#c4791f" stroke-width="0.4"/>
-<circle cx="15" cy="42" r="1" fill="#ff6b6b" stroke="#b03e3e" stroke-width="0.4"/>
-<circle cx="40" cy="67" r="1.2" fill="#ff8c60" stroke="#c45a38" stroke-width="0.4"/>
-
-<!-- Ocean surrounding fill at corners (subtle) -->
-<ellipse cx="40" cy="40" rx="36" ry="36" fill="none" stroke="#2ad4b0" stroke-width="0.5" opacity="0.5"/>
-
+  <!-- 貝里斯大藍洞（2.5D）：加勒比海珊瑚礁中央的巨大圓形海底天坑，外圈是淺藍綠色的礁湖與白色珊瑚環，中間一圈圈由淺藍變成深藍、深不見底，海面閃閃發亮，一艘潛水船繞著藍洞航行（動畫）。光源左上，不描邊 -->
+  <g transform="translate(40 55.64) scale(1.24)">
+    <path d="M24.25 14L20.4 15.68L15.77 16.76L10.54 17.2L4.9 16.97L-0.93 16.09L-6.72 14.6L-12.26 12.54L-17.32 10L-21.72 7.08L-25.28 3.88L-27.87 0.54L-29.39 -2.83L-29.78 -6.08L-29.03 -9.11L-27.16 -11.78L-24.25 -14L-20.4 -15.68L-15.77 -16.76L-10.54 -17.2L-4.9 -16.97L0.93 -16.09L6.72 -14.6L12.26 -12.54L17.32 -10L21.72 -7.08L25.28 -3.88L27.87 -0.54L29.39 2.83L29.78 6.08L29.03 9.11L27.16 11.78Z" fill="#52c8d8"/>
+    <path d="M17.32 9.99L14.62 11.16L11.36 11.91L7.67 12.19L3.67 12.01L-0.46 11.37L-4.57 10.28L-8.51 8.81L-12.12 6.99L-15.27 4.9L-17.83 2.63L-19.7 0.25L-20.82 -2.13L-21.14 -4.44L-20.64 -6.57L-19.35 -8.45L-17.32 -10.01L-14.62 -11.18L-11.36 -11.93L-7.67 -12.21L-3.67 -12.03L0.46 -11.39L4.57 -10.3L8.51 -8.83L12.12 -7.01L15.27 -4.92L17.83 -2.65L19.7 -0.27L20.82 2.11L21.14 4.42L20.64 6.55L19.35 8.43Z" fill="#9af0e8"/>
+    <path d="M13.86 7.98L11.66 8.94L9.02 9.55L6.04 9.8L2.82 9.67L-0.51 9.16L-3.82 8.31L-6.98 7.13L-9.87 5.68L-12.39 4.01L-14.42 2.18L-15.91 0.27L-16.78 -1.65L-17.01 -3.51L-16.58 -5.23L-15.52 -6.75L-13.86 -8.02L-11.66 -8.98L-9.02 -9.59L-6.04 -9.84L-2.82 -9.71L0.51 -9.2L3.82 -8.35L6.98 -7.17L9.87 -5.72L12.39 -4.05L14.42 -2.22L15.91 -0.31L16.78 1.61L17.01 3.47L16.58 5.19L15.52 6.71Z" fill="#e8f4c8" opacity="0.6"/>
+    <path d="M11.26 6.47L8.85 7.61L6.09 8.46L3.11 8.99L0 9.16L-3.11 8.99L-6.09 8.46L-8.85 7.61L-11.26 6.47L-13.24 5.08L-14.71 3.49L-15.62 1.76L-15.92 -0.03L-15.62 -1.82L-14.71 -3.55L-13.24 -5.14L-11.26 -6.53L-8.85 -7.67L-6.09 -8.52L-3.11 -9.05L-0 -9.22L3.11 -9.05L6.09 -8.52L8.85 -7.67L11.26 -6.53L13.24 -5.14L14.71 -3.55L15.62 -1.82L15.92 -0.03L15.62 1.76L14.71 3.49L13.24 5.08Z" fill="#3aa8d0"/>
+    <path d="M9.87 5.67L7.76 6.67L5.34 7.42L2.72 7.88L0 8.03L-2.72 7.88L-5.34 7.42L-7.76 6.67L-9.87 5.67L-11.61 4.45L-12.9 3.05L-13.69 1.54L-13.96 -0.03L-13.69 -1.6L-12.9 -3.11L-11.61 -4.51L-9.87 -5.73L-7.76 -6.73L-5.34 -7.48L-2.72 -7.94L-0 -8.09L2.72 -7.94L5.34 -7.48L7.76 -6.73L9.87 -5.73L11.61 -4.51L12.9 -3.11L13.69 -1.6L13.96 -0.03L13.69 1.54L12.9 3.05L11.61 4.45Z" fill="#1f78b8"/>
+    <path d="M8.14 4.67L6.4 5.5L4.41 6.11L2.25 6.49L0 6.62L-2.25 6.49L-4.41 6.11L-6.4 5.5L-8.14 4.67L-9.57 3.66L-10.64 2.51L-11.29 1.27L-11.51 -0.03L-11.29 -1.33L-10.64 -2.57L-9.57 -3.72L-8.14 -4.73L-6.4 -5.56L-4.41 -6.17L-2.25 -6.55L-0 -6.68L2.25 -6.55L4.41 -6.17L6.4 -5.56L8.14 -4.73L9.57 -3.72L10.64 -2.57L11.29 -1.33L11.51 -0.03L11.29 1.27L10.64 2.51L9.57 3.66Z" fill="#165a9a"/>
+    <path d="M6.06 3.47L4.76 4.09L3.28 4.54L1.67 4.82L0 4.92L-1.67 4.82L-3.28 4.54L-4.76 4.09L-6.06 3.47L-7.13 2.72L-7.92 1.86L-8.41 0.94L-8.57 -0.03L-8.41 -1L-7.92 -1.92L-7.13 -2.78L-6.06 -3.53L-4.76 -4.15L-3.28 -4.6L-1.67 -4.88L-0 -4.98L1.67 -4.88L3.28 -4.6L4.76 -4.15L6.06 -3.53L7.13 -2.78L7.92 -1.92L8.41 -1L8.57 -0.03L8.41 0.94L7.92 1.86L7.13 2.72Z" fill="#0e3e78"/>
+    <path d="M-15.59 -0.44L-15.27 0.69L-14.15 1.00L-15.27 1.31L-15.59 2.44L-15.90 1.31L-17.03 1.00L-15.90 0.69Z" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2.4s" begin="0.0s" repeatCount="indefinite"/></path>
+    <path d="M-8.66 0.56L-8.35 1.69L-7.22 2.00L-8.35 2.31L-8.66 3.44L-8.98 2.31L-10.10 2.00L-8.98 1.69Z" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2.6999999999999997s" begin="0.6s" repeatCount="indefinite"/></path>
+    <path d="M-1.73 1.56L-1.42 2.69L-0.29 3.00L-1.42 3.31L-1.73 4.44L-2.05 3.31L-3.17 3.00L-2.05 2.69Z" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="3.0s" begin="1.2s" repeatCount="indefinite"/></path>
+    <path d="M5.20 2.56L5.51 3.69L6.64 4.00L5.51 4.32L5.20 5.44L4.88 4.32L3.76 4.00L4.88 3.69Z" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="3.3s" begin="1.7999999999999998s" repeatCount="indefinite"/></path>
+    <g><animateMotion dur="14s" repeatCount="indefinite" rotate="auto" path="M16.00 0.00A16 9.6 0 1 1 -16.00 0.00A16 9.6 0 1 1 16.00 0.00Z"/><path d="M-3 -.6L2.4 -.6L3.4 0L2.4 .6L-3 .6Z" fill="#ffffff"/><path d="M-1.4 -.4L.6 -.4L.6 .4L-1.4 .4Z" fill="#3a82d6"/><path d="M-6 -.2L-3 -.3L-3 .3L-6 .2Z" fill="#ffffff" opacity=".6"/></g>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-7.00 0.00a7.00 3.50 0 1 0 14.00 0a7.00 3.50 0 1 0 -14.00 0ZM-5.74 0.00a5.74 2.87 0 1 0 11.48 0a5.74 2.87 0 1 0 -11.48 0Z"><animate attributeName="d" values="M-7.00 0.00a7.00 3.50 0 1 0 14.00 0a7.00 3.50 0 1 0 -14.00 0ZM-5.74 0.00a5.74 2.87 0 1 0 11.48 0a5.74 2.87 0 1 0 -11.48 0Z;M-14.00 0.00a14.00 7.00 0 1 0 28.00 0a14.00 7.00 0 1 0 -28.00 0ZM-11.48 0.00a11.48 5.74 0 1 0 22.96 0a11.48 5.74 0 1 0 -22.96 0Z" dur="4s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.35;0" dur="4s" begin="0s" repeatCount="indefinite"/></path>
+  </g>
 </svg>

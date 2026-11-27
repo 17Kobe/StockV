@@ -1,1 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><defs><linearGradient id="framSea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfe8f2"/><stop offset="1" stop-color="#4f93b3"/></linearGradient><linearGradient id="framHull" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a97847"/><stop offset="1" stop-color="#6e4726"/></linearGradient><linearGradient id="framSail" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbf4e2"/><stop offset="1" stop-color="#e3d5ac"/></linearGradient></defs><path d="M0 56 L9 61 L18 55 L27 61 L36 55 L45 61 L54 55 L63 61 L72 55 L80 60 L80 80 L0 80 Z" fill="#eef7fb" stroke="#bfe1ec" stroke-width="0.4"/><path d="M0 64 Q10 60 20 64 T40 64 T60 64 T80 64 L80 80 L0 80 Z" fill="url(#framSea)"><animate attributeName="d" dur="4s" repeatCount="indefinite" values="M0 64 Q10 60 20 64 T40 64 T60 64 T80 64 L80 80 L0 80 Z;M0 65 Q10 62 20 65 T40 65 T60 65 T80 65 L80 80 L0 80 Z;M0 64 Q10 60 20 64 T40 64 T60 64 T80 64 L80 80 L0 80 Z"/></path><path d="M17 76 L19 63 Q21 59 27 59 L53 59 Q59 59 61 63 L63 76 Q40 80 17 76 Z" fill="url(#framHull)" stroke="#432c14" stroke-width="0.4"/><rect x="19" y="56" width="42" height="4" fill="#7a5530" stroke="#432c14" stroke-width="0.3"/><line x1="28" y1="22" x2="28" y2="59" stroke="#5a3a1e" stroke-width="1"/><line x1="40" y1="16" x2="40" y2="59" stroke="#5a3a1e" stroke-width="1.3"/><line x1="52" y1="22" x2="52" y2="59" stroke="#5a3a1e" stroke-width="1"/><path d="M29 26 L27 36 L39 36 L39 26 Z" fill="url(#framSail)" stroke="#cdbb8d" stroke-width="0.3"/><path d="M41 20 L39 34 L51 34 L51 20 Z" fill="url(#framSail)" stroke="#cdbb8d" stroke-width="0.3"/><path d="M53 26 L51 36 L63 36 L63 26 Z" fill="url(#framSail)" stroke="#cdbb8d" stroke-width="0.3"/><path d="M40 16 L47 19 L40 22 Z" fill="#b5342a"><animateTransform attributeName="transform" type="rotate" values="0 40 16;10 40 16;0 40 16" dur="2.5s" repeatCount="indefinite"/></path></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 前進號（2.5D）：南森與阿蒙森使用的挪威極地探險船，圓胖耐冰壓的黑色船身、甲板積著雪，三根桅杆掛著縱帆，中間的煙囪冒著白煙，船尾的挪威國旗飄揚，船身在浮冰之間輕輕起伏、雪花飄落（動畫）。光源左上，不描邊 -->
+  <g transform="translate(42.54 52.22) scale(1.3)">
+    <path d="M22.52 13L19.38 14.31L15.5 15.07L11.02 15.25L6.12 14.85L0.99 13.87L-4.18 12.37L-9.2 10.38L-13.86 8L-17.98 5.31L-21.42 2.42L-24.03 -0.57L-25.72 -3.54L-26.42 -6.36L-26.11 -8.95L-24.79 -11.19L-22.52 -13L-19.38 -14.31L-15.5 -15.07L-11.02 -15.25L-6.12 -14.85L-0.99 -13.87L4.18 -12.37L9.2 -10.38L13.86 -8L17.98 -5.31L21.42 -2.42L24.03 0.57L25.72 3.54L26.42 6.36L26.11 8.95L24.79 11.19Z" fill="#52c3dc"/>
+    <path d="M14.9 7L12.81 7.86L10.2 8.33L7.16 8.4L3.81 8.07L0.29 7.35L-3.28 6.26L-6.76 4.85L-10.01 3.18L-12.91 1.3L-15.35 -0.7L-17.23 -2.77L-18.48 -4.8L-19.05 -6.73L-18.93 -8.49L-18.11 -10L-16.63 -11.2L-14.54 -12.06L-11.93 -12.53L-8.89 -12.6L-5.54 -12.27L-2.02 -11.55L1.55 -10.46L5.03 -9.05L8.28 -7.38L11.18 -5.5L13.61 -3.5L15.49 -1.43L16.75 0.6L17.32 2.53L17.2 4.29L16.38 5.8Z" fill="#9be3ea" opacity="0.45"/>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-7.80 0.00a7.80 3.90 0 1 0 15.60 0a7.80 3.90 0 1 0 -15.60 0ZM-6.40 0.00a6.40 3.20 0 1 0 12.79 0a6.40 3.20 0 1 0 -12.79 0Z"><animate attributeName="d" values="M-7.80 0.00a7.80 3.90 0 1 0 15.60 0a7.80 3.90 0 1 0 -15.60 0ZM-6.40 0.00a6.40 3.20 0 1 0 12.79 0a6.40 3.20 0 1 0 -12.79 0Z;M-24.70 0.00a24.70 12.35 0 1 0 49.40 0a24.70 12.35 0 1 0 -49.40 0ZM-20.25 0.00a20.25 10.13 0 1 0 40.51 0a20.25 10.13 0 1 0 -40.51 0Z" dur="3s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0" dur="3s" begin="0s" repeatCount="indefinite"/></path>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-7.80 0.00a7.80 3.90 0 1 0 15.60 0a7.80 3.90 0 1 0 -15.60 0ZM-6.40 0.00a6.40 3.20 0 1 0 12.79 0a6.40 3.20 0 1 0 -12.79 0Z"><animate attributeName="d" values="M-7.80 0.00a7.80 3.90 0 1 0 15.60 0a7.80 3.90 0 1 0 -15.60 0ZM-6.40 0.00a6.40 3.20 0 1 0 12.79 0a6.40 3.20 0 1 0 -12.79 0Z;M-24.70 0.00a24.70 12.35 0 1 0 49.40 0a24.70 12.35 0 1 0 -49.40 0ZM-20.25 0.00a20.25 10.13 0 1 0 40.51 0a20.25 10.13 0 1 0 -40.51 0Z" dur="3s" begin="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0" dur="3s" begin="1.5s" repeatCount="indefinite"/></path>
+    <path d="M-1.73 -13L-6.93 -8L-6.93 -9.4L-1.73 -14.4Z" fill="#86c3df"/>
+    <path d="M-6.93 -8L-17.32 -12L-17.32 -13.4L-6.93 -9.4Z" fill="#b9e6f5"/>
+    <path d="M-12.12 -18.4L-1.73 -14.4L-6.93 -9.4L-17.32 -13.4Z" fill="#e8fbff"/>
+    <path d="M17.32 14L12.12 19L12.12 17.8L17.32 12.8Z" fill="#86c3df"/>
+    <path d="M12.12 19L1.73 15L1.73 13.8L12.12 17.8Z" fill="#b9e6f5"/>
+    <path d="M6.93 8.8L17.32 12.8L12.12 17.8L1.73 13.8Z" fill="#e8fbff"/>
+    <path d="M-22.52 1L-30.31 -4.5L-30.31 -5.5L-22.52 0Z" fill="#b9e6f5"/>
+    <path d="M-14.72 -1.5L-22.52 1L-22.52 0L-14.72 -2.5Z" fill="#86c3df"/>
+    <path d="M-24.25 -7L-14.72 -2.5L-22.52 0L-30.31 -5.5Z" fill="#e8fbff"/>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -.6;0 0" dur="3.6s" repeatCount="indefinite"/>
+    <path d="M3.81 6.8L-14.38 -3.7L-14.38 -7.7L3.81 2.8Z" fill="#22252c"/>
+    <path d="M11.78 2.2L11.26 6.5L11.26 2.5L11.78 -1.8Z" fill="#121418"/>
+    <path d="M11.26 6.5L3.81 6.8L3.81 2.8L11.26 2.5Z" fill="#22252c"/>
+    <path d="M-6.41 -11.7L11.09 -1.6L10.39 2L4.16 2.4L-13.34 -7.7L-11.09 -10.4Z" fill="#121418"/>
+    <path d="M-1.91 -9.7L-9.87 -5.1L-9.87 -6.7L-1.91 -11.3Z" fill="#121418"/>
+    <path d="M-15.07 -8.1L-9.87 -5.1L-9.87 -6.7L-15.07 -9.7Z" fill="#22252c"/>
+    <path d="M-7.1 -14.3L-1.91 -11.3L-9.87 -6.7L-15.07 -9.7Z" fill="#3a3e48"/>
+    <path d="M-6.41 -11.32L10.05 -1.82L3.81 1.78L-12.64 -7.72Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M2.08 -5.2L-2.08 -2.8L-2.08 -5L2.08 -7.4Z" fill="#74522e"/>
+    <path d="M-7.27 -5.8L-2.08 -2.8L-2.08 -5L-7.27 -8Z" fill="#a07848"/>
+    <path d="M-3.12 -10.4L2.08 -7.4L-2.08 -5L-7.27 -8Z" fill="#c8a074"/>
+    <path d="M-2.41 -7.04L-2.41 -7.36L-2.41 -10.36L-2.41 -10.04Z" fill="#3a3e4a"/>
+    <path d="M-1.05 -7.04L-1.45 -6.81L-1.45 -9.81L-1.05 -10.04Z" fill="#23262e"/>
+    <path d="M-2.01 -6.81L-2.41 -7.04L-2.41 -10.04L-2.01 -9.81Z" fill="#3a3e4a"/>
+    <path d="M-1.45 -6.81L-2.01 -6.81L-2.01 -9.81L-1.45 -9.81Z" fill="#3a3e4a"/>
+    <path d="M-1.45 -9.81L-2.01 -9.81L-2.41 -10.04L-2.41 -10.36L-2.01 -10.59L-1.45 -10.59L-1.05 -10.36L-1.05 -10.04Z" fill="#5a5f6e"/>
+    <circle cx="-1.73" cy="-10.40" r="1.40" fill="#c8c4bc" opacity="0"><animate attributeName="opacity" values="0;0.6;0" dur="3.6s" begin="0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;2.4 -8.0" dur="3.6s" begin="0s" repeatCount="indefinite"/></circle>
+    <path d="M-7.28 -8L-6.58 -8L-6.68 -28L-7.18 -28Z" fill="#5a3f28"/>
+    <path d="M0.52 -3.5L1.22 -3.5L1.12 -27.5L0.62 -27.5Z" fill="#5a3f28"/>
+    <path d="M7.44 0.5L8.14 0.5L8.04 -17.5L7.54 -17.5Z" fill="#5a3f28"/>
+    <path d="M-6.93 -10L-6.93 -22L-11.26 -22.5Q-10.48 -12.45 -11.26 -12.5Z" fill="#eee4cf"/>
+    <path d="M0.87 -5.5L0.87 -21.5L-5.2 -23Q-3.55 -8.45 -5.2 -9Z" fill="#eee4cf"/>
+    <path d="M7.79 -1.5L7.79 -12.5L2.6 -13.5Q3.81 -4.2 2.6 -4.5Z" fill="#eee4cf"/>
+    <path d="M-10.51 -15L-10.27 -15L-10.27 -19L-10.51 -19Z" fill="#d8dde3"/>
+    <g><animateTransform attributeName="transform" type="skewY" values="0;-6;0;6;0" dur="1.6s" repeatCount="indefinite"/><path d="M-10.27 -19.00h4v2.6h-4Z" fill="#ba0c2f"/><path d="M-9.19 -19.00h.8v2.6h-.8ZM-10.27 -18.00h4v.6h-4Z" fill="#ffffff"/><path d="M-8.99 -19.00h.4v2.6h-.4ZM-10.27 -17.90h4v.3h-4Z" fill="#00205b"/></g>
+    </g>
+    <circle cx="-18" cy="-34" r=".6" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="4s" begin="0.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;2 14" dur="4s" begin="0.0s" repeatCount="indefinite"/></circle>
+    <circle cx="-9" cy="-28" r=".6" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="5s" begin="0.8s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;2 14" dur="5s" begin="0.8s" repeatCount="indefinite"/></circle>
+    <circle cx="0" cy="-34" r=".6" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="4s" begin="1.6s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;2 14" dur="4s" begin="1.6s" repeatCount="indefinite"/></circle>
+    <circle cx="9" cy="-28" r=".6" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="5s" begin="2.4s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;2 14" dur="5s" begin="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="18" cy="-34" r=".6" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="4s" begin="3.2s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;2 14" dur="4s" begin="3.2s" repeatCount="indefinite"/></circle>
+  </g>
+</svg>

@@ -1,36 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <defs>
-    <linearGradient id="h" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a3326"/><stop offset="1" stop-color="#1f130c"/></linearGradient>
-    <radialGradient id="g" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#7fc0ff"/><stop offset="1" stop-color="#1f5fb0"/></radialGradient>
-  </defs>
-  <!-- 麥哲倫船隊的維多利亞號（1519~1522，繞地球一圈）：帆被海風吹得破爛補丁，桅頂掛著地球旗 -->
-  <g fill="#3b2614">
-    <rect x="26" y="30" width="3" height="54"/>
-    <rect x="60" y="12" width="3.4" height="72"/>
-    <rect x="94" y="36" width="3" height="40"/>
-    <path d="M4 80 L24 72 L24 75 L5 84Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 維多利亞號（2.5D）：1519 到 1522 年麥哲倫船隊中唯一完成環球航行的西班牙克拉克帆船，船身有紅色腰線，前兩根桅杆掛米白色方帆（主帆畫紅十字）、後桅掛三角帆，桅頂西班牙旗飄揚，在南美洲南端的海上搖晃前進、拖出航跡（動畫）。光源左上，不描邊 -->
+  <g transform="translate(45.2 58.64) scale(1.43)">
+    <path d="M20.78 12L18.86 12.65L16.22 12.81L12.95 12.48L9.19 11.67L5.07 10.41L0.75 8.75L-3.59 6.75L-7.79 4.5L-11.7 2.07L-15.15 -0.43L-18.03 -2.93L-20.21 -5.3L-21.61 -7.48L-22.19 -9.36L-21.91 -10.89L-20.78 -12L-18.86 -12.65L-16.22 -12.81L-12.95 -12.48L-9.19 -11.67L-5.07 -10.41L-0.75 -8.75L3.59 -6.75L7.79 -4.5L11.7 -2.07L15.15 0.43L18.03 2.93L20.21 5.3L21.61 7.48L22.19 9.36L21.91 10.89Z" fill="#52c3dc" opacity="0.6"/>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-13.52 -3.00a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM-13.27 -3.00a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z"><animate attributeName="d" values="M-13.52 -3.00a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM-13.27 -3.00a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z;M-18.12 -3.00a6.00 3.00 0 1 0 12.00 0a6.00 3.00 0 1 0 -12.00 0ZM-17.04 -3.00a4.92 2.46 0 1 0 9.84 0a4.92 2.46 0 1 0 -9.84 0Z" dur="3s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.45;0" dur="3s" begin="0s" repeatCount="indefinite"/></path>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-22.18 -8.00a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM-21.93 -8.00a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z"><animate attributeName="d" values="M-22.18 -8.00a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM-21.93 -8.00a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z;M-26.78 -8.00a6.00 3.00 0 1 0 12.00 0a6.00 3.00 0 1 0 -12.00 0ZM-25.70 -8.00a4.92 2.46 0 1 0 9.84 0a4.92 2.46 0 1 0 -9.84 0Z" dur="3s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.45;0" dur="3s" begin="1s" repeatCount="indefinite"/></path>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-30.84 -13.00a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM-30.59 -13.00a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z"><animate attributeName="d" values="M-30.84 -13.00a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM-30.59 -13.00a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z;M-35.44 -13.00a6.00 3.00 0 1 0 12.00 0a6.00 3.00 0 1 0 -12.00 0ZM-34.36 -13.00a4.92 2.46 0 1 0 9.84 0a4.92 2.46 0 1 0 -9.84 0Z" dur="3s" begin="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.45;0" dur="3s" begin="2s" repeatCount="indefinite"/></path>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -.8;0 0" dur="3.4s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="rotate" additive="sum" values="-3 0 0;3 0 0;-3 0 0" dur="4.4s" repeatCount="indefinite"/>
+    <path d="M4.33 6.5L-13.86 -4L-13.86 -8.4L4.33 2.1Z" fill="#7d5a3a"/>
+    <path d="M11.26 6.5L4.33 6.5L4.33 2.1L11.26 2.1Z" fill="#7d5a3a"/>
+    <path d="M-6.93 -11.8L10.57 -1.7L10.39 1.6L4.68 1.7L-12.82 -8.4L-11.09 -10.8Z" fill="#5a3f28"/>
+    <path d="M-2.42 -9.8L-9.35 -5.8L-9.35 -9.8L-2.42 -13.8Z" fill="#5a3f28"/>
+    <path d="M-14.55 -8.8L-9.35 -5.8L-9.35 -9.8L-14.55 -12.8Z" fill="#7d5a3a"/>
+    <path d="M-7.62 -16.8L-2.42 -13.8L-9.35 -9.8L-14.55 -12.8Z" fill="#a37a52"/>
+    <path d="M10.39 -1.8L4.5 1.6L4.5 0L10.39 -3.4Z" fill="#5a3f28"/>
+    <path d="M1.39 -0.2L4.5 1.6L4.5 0L1.39 -1.8Z" fill="#7d5a3a"/>
+    <path d="M7.27 -5.2L10.39 -3.4L4.5 0L1.39 -1.8Z" fill="#a37a52"/>
+    <path d="M-13.86 -7.2L5.2 3.8L5.2 3.2L-13.86 -7.8Z" fill="#c8342a" opacity="0.9"/>
+    <path d="M-5.55 -7.4L-4.85 -7.4L-4.95 -27.4L-5.45 -27.4Z" fill="#5a3f28"/>
+    <path d="M1.38 -3.4L2.08 -3.4L1.98 -27.4L1.48 -27.4Z" fill="#5a3f28"/>
+    <path d="M7.44 0.1L8.14 0.1L8.04 -16.9L7.54 -16.9Z" fill="#5a3f28"/>
+    <path d="M-1.73 -19Q-0.35 -15.4 5.2 -15L5.2 -5Q-0.35 -6.4 -1.73 -9Z" fill="#e4d2aa"/>
+    <path d="M-1.73 -19Q-0.35 -15.4 0.12 -15.57L0.12 -6.17Q-0.35 -6.4 -1.73 -9Z" fill="#f6ead0" opacity="0.8"/>
+    <path d="M-1.18 -8.08L0.48 -7.12L0.48 -13.52L-1.18 -14.48Z" fill="#c8342a"/>
+    <path d="M-3.39 -11.6L2.7 -8.08L2.7 -10L-3.39 -13.52Z" fill="#c8342a"/>
+    <path d="M-0.87 -25.5Q0.35 -22.8 4.33 -22.5L4.33 -16.5Q0.35 -17.8 -0.87 -19.5Z" fill="#e4d2aa"/>
+    <path d="M-0.87 -25.5Q0.35 -22.8 0.74 -22.93L0.74 -17.53Q0.35 -17.8 -0.87 -19.5Z" fill="#f6ead0" opacity="0.8"/>
+    <path d="M5.54 -12.8Q6.24 -10.2 10.05 -10.2L10.05 -2.2Q6.24 -3.2 5.54 -4.8Z" fill="#e4d2aa"/>
+    <path d="M5.54 -12.8Q6.24 -10.2 6.65 -10.34L6.65 -2.94Q6.24 -3.2 5.54 -4.8Z" fill="#f6ead0" opacity="0.8"/>
+    <path d="M-2.6 -8.5Q-7.88 -15.95 -10.39 -26L-9.22 -11.32Z" fill="#e4d2aa"/>
+    <path d="M-2.6 -8.5Q-7.88 -15.95 -10.39 -26L-7.47 -15.19Z" fill="#f6ead0" opacity="0.7"/>
+    <path d="M-2.6 -8.7L-10.39 -26.2L-10.39 -25.8L-2.6 -8.3Z" fill="#5a3f28"/>
+    <g><animateTransform attributeName="transform" type="skewY" values="0;-6;0;6;0" dur="1.6s" repeatCount="indefinite"/><rect x="1.73" y="-27.40" width="4.6" height="0.62" fill="#c8342a"/><rect x="1.73" y="-26.80" width="4.6" height="0.62" fill="#ffc72c"/><rect x="1.73" y="-26.20" width="4.6" height="0.62" fill="#ffc72c"/><rect x="1.73" y="-25.60" width="4.6" height="0.62" fill="#c8342a"/></g>
+    </g>
   </g>
-  <!-- 艏斜帆 -->
-  <path d="M4 78 L22 60 L22 76Z" fill="#d9c796" stroke="#a89466" stroke-width="1"/>
-  <!-- 破損的方帆（下緣呈鋸齒狀） -->
-  <g fill="#dccb9b" stroke="#a89466" stroke-width="1.2">
-    <path d="M10 36 Q27 42 44 36 L46 62 L41 66 L36 61 L30 67 L24 61 L18 66 L12 62 L9 64Z"/>
-    <path d="M34 14 Q62 24 90 14 L94 68 L88 73 L81 66 L73 74 L65 67 L57 75 L49 67 L41 73 L36 66 L32 70Z"/>
-    <path d="M98 40 L118 70 L98 70Z"/>
-  </g>
-  <!-- 補丁 -->
-  <g fill="#b99f68" opacity=".8"><rect x="68" y="30" width="10" height="9" transform="rotate(4 73 34)"/><rect x="42" y="52" width="9" height="8"/><rect x="16" y="46" width="8" height="7"/></g>
-  <!-- 聖地牙哥十字：紅十字，下端尖如劍 -->
-  <path d="M57 22 H65 V30 H72 V37 H65 V54 L61 58 L57 54 V37 H50 V30 H57Z" fill="#b8231d"/>
-  <path d="M23 44 H29 V50 H34 V55 H29 V60 L26 63 L23 60 V55 H18 V50 H23Z" fill="#b8231d"/>
-  <!-- 桅頂的地球旗 -->
-  <circle cx="62" cy="7" r="6.5" fill="url(#g)" stroke="#e9f3ff" stroke-width="1"/>
-  <path d="M57 5 Q60 3 62 6 Q60 9 58 9Z M63 9 Q66 7 67 10 Q65 12 63 11Z" fill="#6fbf6a"/>
-  <path d="M96 36 L110 33 L96 30Z" fill="#b8231d"/>
-  <!-- 船身 -->
-  <path d="M6 84 L24 82 L104 82 L122 68 L122 90 Q114 112 92 116 L32 116 Q12 110 6 84Z" fill="url(#h)"/>
-  <rect x="96" y="60" width="26" height="22" rx="2" fill="#2e1d12"/>
-  <rect x="104" y="66" width="9" height="10" rx="1.5" fill="#ffd877"/>
-  <path d="M8 94 L120 94" stroke="#f3ecd8" stroke-width="3.2"/>
-  <g fill="#f3ecd8"><circle cx="34" cy="104" r="2.4"/><circle cx="52" cy="104" r="2.4"/><circle cx="70" cy="104" r="2.4"/><circle cx="88" cy="104" r="2.4"/></g>
 </svg>

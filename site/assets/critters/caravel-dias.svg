@@ -1,25 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 128 128">
-  <defs>
-    <linearGradient id="h" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a5a2c"/><stop offset="1" stop-color="#4a2f16"/></linearGradient>
-    <path id="cp" d="M-4 -11 L4 -11 L2 -2 L11 -4 L11 4 L2 2 L4 11 L-4 11 L-2 2 L-11 4 L-11 -4 L-2 -2Z" fill="#c4312b"/>
-  </defs>
-  <!-- 迪亞士的輕快帆船（1488 年第一個繞過好望角）：全是三角帆，帆上畫著基督騎士團十字 -->
-  <g fill="#4a2f17">
-    <rect x="30" y="16" width="2.6" height="70"/>
-    <rect x="62" y="6" width="3" height="80"/>
-    <rect x="94" y="30" width="2.6" height="54"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 迪亞士的卡拉維爾帆船（2.5D）：1488 年第一個繞過非洲南端好望角的葡萄牙輕快帆船，修長的木造船身配金色腰線，三根桅杆掛著畫有紅色基督騎士團十字的白色三角帆，桅頂旗飄揚，船身隨浪搖晃、拖出航跡（動畫）。光源左上，不描邊 -->
+  <g transform="translate(46.55 59.42) scale(1.48)">
+    <path d="M19.05 11L17.17 11.67L14.62 11.88L11.51 11.65L7.96 10.96L4.1 9.85L0.09 8.37L-3.93 6.56L-7.79 4.5L-11.36 2.27L-14.49 -0.05L-17.07 -2.37L-18.98 -4.6L-20.17 -6.65L-20.58 -8.44L-20.21 -9.91L-19.05 -11L-17.17 -11.67L-14.62 -11.88L-11.51 -11.65L-7.96 -10.96L-4.1 -9.85L-0.09 -8.37L3.93 -6.56L7.79 -4.5L11.36 -2.27L14.49 0.05L17.07 2.37L18.98 4.6L20.17 6.65L20.58 8.44L20.21 9.91Z" fill="#52c3dc" opacity="0.6"/>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-13.52 -3.00a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM-13.27 -3.00a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z"><animate attributeName="d" values="M-13.52 -3.00a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM-13.27 -3.00a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z;M-18.12 -3.00a6.00 3.00 0 1 0 12.00 0a6.00 3.00 0 1 0 -12.00 0ZM-17.04 -3.00a4.92 2.46 0 1 0 9.84 0a4.92 2.46 0 1 0 -9.84 0Z" dur="3s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.45;0" dur="3s" begin="0s" repeatCount="indefinite"/></path>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-22.18 -8.00a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM-21.93 -8.00a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z"><animate attributeName="d" values="M-22.18 -8.00a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM-21.93 -8.00a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z;M-26.78 -8.00a6.00 3.00 0 1 0 12.00 0a6.00 3.00 0 1 0 -12.00 0ZM-25.70 -8.00a4.92 2.46 0 1 0 9.84 0a4.92 2.46 0 1 0 -9.84 0Z" dur="3s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.45;0" dur="3s" begin="1s" repeatCount="indefinite"/></path>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-30.84 -13.00a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM-30.59 -13.00a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z"><animate attributeName="d" values="M-30.84 -13.00a1.40 0.70 0 1 0 2.80 0a1.40 0.70 0 1 0 -2.80 0ZM-30.59 -13.00a1.15 0.57 0 1 0 2.30 0a1.15 0.57 0 1 0 -2.30 0Z;M-35.44 -13.00a6.00 3.00 0 1 0 12.00 0a6.00 3.00 0 1 0 -12.00 0ZM-34.36 -13.00a4.92 2.46 0 1 0 9.84 0a4.92 2.46 0 1 0 -9.84 0Z" dur="3s" begin="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.45;0" dur="3s" begin="2s" repeatCount="indefinite"/></path>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -.8;0 0" dur="3s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="rotate" additive="sum" values="-3 0 0;3 0 0;-3 0 0" dur="3.9s" repeatCount="indefinite"/>
+    <path d="M3.81 5.8L-13.51 -4.2L-13.51 -8.2L3.81 1.8Z" fill="#7d5a3a"/>
+    <path d="M10.39 6L3.81 5.8L3.81 1.8L10.39 2Z" fill="#7d5a3a"/>
+    <path d="M-7.27 -11.2L9.35 -1.6L9.53 1.5L4.16 1.4L-12.47 -8.2L-11.09 -10.4Z" fill="#5a3f28"/>
+    <path d="M-2.77 -9.2L-9.01 -5.6L-9.01 -9L-2.77 -12.6Z" fill="#5a3f28"/>
+    <path d="M-14.2 -8.6L-9.01 -5.6L-9.01 -9L-14.2 -12Z" fill="#7d5a3a"/>
+    <path d="M-7.97 -15.6L-2.77 -12.6L-9.01 -9L-14.2 -12Z" fill="#a37a52"/>
+    <path d="M-13.51 -7L4.68 3.5L4.68 3L-13.51 -7.5Z" fill="#e6b84a" opacity="0.8"/>
+    <path d="M-4.68 -6.5L-3.98 -6.5L-4.08 -25.5L-4.58 -25.5Z" fill="#5a3f28"/>
+    <path d="M2.25 -2.5L2.95 -2.5L2.85 -25.5L2.35 -25.5Z" fill="#5a3f28"/>
+    <path d="M7.44 0.5L8.14 0.5L8.04 -14.5L7.54 -14.5Z" fill="#5a3f28"/>
+    <path d="M9.53 -0.5Q3.29 -10.9 0.87 -24.5L2.17 -3.75Z" fill="#eee4cf"/>
+    <path d="M9.53 -0.5Q3.29 -10.9 0.87 -24.5L3.86 -10.23Z" fill="#fffaf0" opacity="0.7"/>
+    <path d="M9.53 -0.7L0.87 -24.7L0.87 -24.3L9.53 -0.3Z" fill="#5a3f28"/>
+    <path d="M2.11 -7.22L3.15 -6.62L3.15 -13.02L2.11 -13.62Z" fill="#c8342a"/>
+    <path d="M-0.14 -11.12L5.4 -7.92L5.4 -9.12L-0.14 -12.32Z" fill="#c8342a"/>
+    <path d="M1.73 -5Q-4.33 -14 -6.93 -26L-5.63 -8.25Z" fill="#eee4cf"/>
+    <path d="M1.73 -5Q-4.33 -14 -6.93 -26L-3.81 -13.3Z" fill="#fffaf0" opacity="0.7"/>
+    <path d="M1.73 -5.2L-6.93 -26.2L-6.93 -25.8L1.73 -4.8Z" fill="#5a3f28"/>
+    <path d="M-5.54 -11.02L-4.5 -10.42L-4.5 -15.86L-5.54 -16.46Z" fill="#c8342a"/>
+    <path d="M-7.38 -14.2L-2.67 -11.48L-2.67 -12.68L-7.38 -15.4Z" fill="#c8342a"/>
+    <path d="M-4.33 -8.5Q-9.01 -14.3 -11.26 -22.5L-10.22 -10.9Z" fill="#eee4cf"/>
+    <path d="M-4.33 -8.5Q-9.01 -14.3 -11.26 -22.5L-8.64 -13.51Z" fill="#fffaf0" opacity="0.7"/>
+    <path d="M-4.33 -8.7L-11.26 -22.7L-11.26 -22.3L-4.33 -8.3Z" fill="#5a3f28"/>
+    <g><animateTransform attributeName="transform" type="skewY" values="0;-6;0;6;0" dur="1.6s" repeatCount="indefinite"/><rect x="2.60" y="-25.50" width="4.6" height="0.82" fill="#ffffff"/><rect x="2.60" y="-24.70" width="4.6" height="0.82" fill="#2f5fb0"/><rect x="2.60" y="-23.90" width="4.6" height="0.82" fill="#ffffff"/></g>
+    </g>
   </g>
-  <path d="M30 16 L2 84 L58 84Z" fill="#faf6e8" stroke="#b9a87a" stroke-width="1.2"/>
-  <path d="M63 6 L32 82 L96 82Z" fill="#fbf8ec" stroke="#b9a87a" stroke-width="1.2"/>
-  <path d="M95 30 L72 82 L120 82Z" fill="#faf6e8" stroke="#b9a87a" stroke-width="1.2"/>
-  <path d="M63 6 L32 82" stroke="#6b4a2a" stroke-width="2.4"/>
-  <path d="M30 16 L2 84" stroke="#6b4a2a" stroke-width="2.2"/>
-  <path d="M95 30 L72 82" stroke="#6b4a2a" stroke-width="2.2"/>
-  <use xlink:href="#cp" transform="translate(30 62) scale(.9)"/>
-  <use xlink:href="#cp" transform="translate(63 52) scale(1.2)"/>
-  <use xlink:href="#cp" transform="translate(95 62) scale(.9)"/>
-  <path d="M63 6 L82 2 L63 -2Z" fill="#c4312b"/>
-  <path d="M10 86 L22 84 L108 84 L122 76 L120 92 Q112 110 88 114 L34 114 Q14 108 10 86Z" fill="url(#h)"/>
-  <path d="M12 94 L118 94" stroke="#f2e6c0" stroke-width="2.6"/>
-  <g fill="#2a1a0c"><circle cx="36" cy="103" r="2.4"/><circle cx="54" cy="103" r="2.4"/><circle cx="72" cy="103" r="2.4"/><circle cx="90" cy="103" r="2.4"/></g>
 </svg>

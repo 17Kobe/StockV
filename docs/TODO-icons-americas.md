@@ -1,30 +1,18 @@
-# 美洲圖示 2.5D 化：未完成清單（2026-11-25）
+# 地圖圖示 2.5D 化：進度（2026-11-27）
 
-已完成並接上地圖（app.js 改 `iso:`、tips.js／index.html 版本已更新、icons.html 已重產）：
-美國／加拿大地標、動物、人物共 49 項 + 白宮、聯準會地標圖示 + 美國／加拿大居民。
+## 已完成
+- 美洲全部完成（美國、加拿大、中南美洲的地標、動物、人物），白宮與聯準會地標改用 2.5D 圖示，美國、加拿大居民改成 2.5D。
+- 海上全部完成：鯨魚（噴水 ↔ 舉尾輪流）、馬尼拉大帆船、哥倫布船隊、維多利亞號、鐵達尼號、奧林匹克號、百慕達三角、冰山。
+- 非美洲的 4 艘船也完成：迪亞士帆船、幽靈船、旺代帆船、前進號。
+- `docs/icons.html` 已重產（美洲這輪標成「第 7 輪」）。
 
-產生器在 `%TEMP%`：`gen_am1.py`（美國地標）、`gen_am2.py`（太空／動物／加拿大）、`gen_am3.py`（人物）、
-`gen_folk3.py`（居民）、`wire_am.py`（接線，可重跑：只處理 lon < −25 且尚未 `iso:` 的項目）。
+產生器在 `%TEMP%`：`gen_am1.py`～`gen_am6.py`、`gen_folk3.py`（居民）、`wire_am.py`（把新圖接上 app.js／tips.js、調整版本號，可重跑）。
 
-## 尚未畫（仍是舊圖、仍用 `s:`）
-
-### 中南美洲地標
-christ-redeemer、machu-picchu、chichen-itza、teotihuacan、nazca-lines、panama-canal、iguazu、angel-falls、
-salar-de-uyuni、torres-del-paine、galapagos、great-blue-hole、moai、buenos-aires-obelisk、amazon-rainforest、cactus-mexico
-
-### 中南美洲動物／船
-- sloth、jaguar（wander，朝左）、piranha（swim，face R → 朝右畫）、sea-turtle（turtle，朝左）
-- animals/toucan.svg、animals/axolotl.svg、animals/alpaca.svg（原地覆寫；genicons.py 的 ISO25 regex 要加 `animals/`）
-- animals/penguin.png → critters/penguin.svg（兩筆都要改路徑）
-- amazon-boat（boat）
-
-### 海上
-- critters/whale-spout.png → critters/whale-spout.svg，alt critters/whale.png → critters/whale.svg（mode whale，朝左）
-- galleon-manila、fleet-columbus、ship-victoria（boat face F）、titanic（bob→still）、rms-olympic（boat，需補 face）、
-  bermuda、iceberg（bob→still）
-
-### 非美洲但仍未統一的船
-caravel-dias、flying-dutchman、yacht-vendee、fram-polar-ship
-
-## 未驗證
-圖示都看過預覽圖，但接線後的地圖實際畫面（含白宮／聯準會地標、美加居民）沒有在瀏覽器裡檢查過。
+## 尚未統一（仍是 Fluent Emoji 點陣圖、用 `s:`）
+不在原本的美洲清單裡，是之後檢查 app.js 時發現的 6 隻動物：
+- animals/peacock.png（印度孔雀）
+- animals/kangaroo.png（澳洲袋鼠）
+- animals/orangutan.png（印尼紅毛猩猩）
+- animals/elephant.png（泰國大象；非洲象已另有 critters/african-elephant.svg）
+- animals/ox.png（西班牙公牛）
+- animals/camel.png（沙烏地駱駝）

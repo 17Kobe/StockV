@@ -1,36 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <defs>
-    <radialGradient id="vx" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#0a0f2a" stop-opacity=".95"/><stop offset=".6" stop-color="#2a1a6a" stop-opacity=".7"/><stop offset="1" stop-color="#2a1a6a" stop-opacity="0"/></radialGradient>
-  </defs>
-  <!-- 百慕達三角：旋轉的漩渦與閃電，飛機和船被吸進去後消失，再從別處重新出現 -->
-  <circle cx="64" cy="70" r="58" fill="url(#vx)"/>
-  <g>
-    <animateTransform attributeName="transform" type="rotate" values="0 64 70;360 64 70" dur="7s" repeatCount="indefinite"/>
-    <path d="M64 70 Q78 58 90 70 Q96 92 64 96 Q30 92 30 64 Q32 36 64 32 Q100 34 104 68" stroke="#7fe8ff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"/>
-    <path d="M64 70 Q50 82 38 70 Q32 48 64 44 Q96 46 98 72 Q94 100 60 104" stroke="#b58cff" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".8"/>
-    <path d="M64 70 Q70 64 76 70 Q74 80 64 80 Q54 78 54 68" stroke="#bdf0ff" stroke-width="1.6" fill="none" opacity=".8"/>
-  </g>
-  <!-- 發光的三角形邊界 -->
-  <path d="M64 14 L116 110 L12 110Z" fill="none" stroke="#5dffb0" stroke-width="2.2" stroke-dasharray="6 4" opacity=".9"><animate attributeName="stroke-dashoffset" values="0;20" dur="1.6s" repeatCount="indefinite"/></path>
-  <!-- 閃電 -->
-  <g fill="#fff6a8" stroke="#ffd24d" stroke-width=".8">
-    <path d="M30 16 L24 34 L31 33 L26 50 L40 28 L32 29 L38 16Z"><animate attributeName="opacity" values="0;0;1;0;1;0;0;0" dur="3.2s" repeatCount="indefinite"/></path>
-    <path d="M100 20 L94 36 L101 35 L96 52 L110 30 L102 31 L108 20Z"><animate attributeName="opacity" values="0;0;0;0;1;0;1;0" dur="3.2s" repeatCount="indefinite"/></path>
-  </g>
-  <!-- 被吸進去的飛機（繞圈、縮小、消失） -->
-  <g>
-    <animateMotion dur="6s" repeatCount="indefinite" path="M104 40 C112 80 80 108 50 96 C24 84 34 52 56 56 C72 60 66 72 64 70"/>
-    <g><animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;.5;.8;.92;1" dur="6s" repeatCount="indefinite"/>
-      <animateTransform attributeName="transform" type="scale" values="1;1;.8;.3;.1" keyTimes="0;.4;.6;.85;1" dur="6s" repeatCount="indefinite"/>
-      <path d="M-8 0 L6 -1.6 L9 0 L6 1.6Z M-1 0 L-5 -7 L-2 -7 L3 0 L-2 7 L-5 7Z M-8 0 L-9 -3 L-7 -3 L-5 0 L-7 3 L-9 3Z" fill="#f4f6fa" stroke="#7a8496" stroke-width=".8"/>
-    </g>
-  </g>
-  <!-- 被吸進去的小船 -->
-  <g>
-    <animateMotion dur="6s" begin="3s" repeatCount="indefinite" path="M22 96 C30 120 78 118 96 92 C108 66 80 44 60 52 C48 58 56 70 64 70"/>
-    <g><animate attributeName="opacity" values="1;1;1;0;0" keyTimes="0;.5;.8;.92;1" dur="6s" begin="3s" repeatCount="indefinite"/>
-      <animateTransform attributeName="transform" type="scale" values="1;1;.8;.3;.1" keyTimes="0;.4;.6;.85;1" dur="6s" begin="3s" repeatCount="indefinite"/>
-      <path d="M-8 2 L8 2 L5 7 L-5 7Z" fill="#8a5a2c"/><path d="M0 2 V-8 L6 0Z" fill="#fff"/>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 百慕達三角（2.5D）：北大西洋上傳說中船隻與飛機會神祕失蹤的海域，深藍色的海面上用三顆閃燈浮標與白色虛線圈出三角形，中央的漩渦一圈圈往中心收縮，一架小飛機飛進三角區後就慢慢消失不見（動畫）。光源左上，不描邊 -->
+  <g transform="translate(42.3 56.97) scale(1.17)">
+    <path d="M24.25 14L20.4 15.68L15.77 16.76L10.54 17.2L4.9 16.97L-0.93 16.09L-6.72 14.6L-12.26 12.54L-17.32 10L-21.72 7.08L-25.28 3.88L-27.87 0.54L-29.39 -2.83L-29.78 -6.08L-29.03 -9.11L-27.16 -11.78L-24.25 -14L-20.4 -15.68L-15.77 -16.76L-10.54 -17.2L-4.9 -16.97L0.93 -16.09L6.72 -14.6L12.26 -12.54L17.32 -10L21.72 -7.08L25.28 -3.88L27.87 -0.54L29.39 2.83L29.78 6.08L29.03 9.11L27.16 11.78Z" fill="#52c3dc"/>
+    <path d="M16.28 7.4L13.72 8.5L10.61 9.18L7.07 9.42L3.23 9.2L-0.77 8.53L-4.76 7.45L-8.59 5.99L-12.12 4.2L-15.22 2.16L-17.75 -0.05L-19.63 -2.36L-20.78 -4.66L-21.16 -6.88L-20.75 -8.93L-19.57 -10.72L-17.67 -12.2L-15.11 -13.3L-12 -13.98L-8.46 -14.22L-4.61 -14L-0.62 -13.33L3.37 -12.25L7.21 -10.79L10.74 -9L13.83 -6.96L16.36 -4.75L18.24 -2.44L19.39 -0.14L19.77 2.08L19.36 4.13L18.19 5.92Z" fill="#9be3ea" opacity="0.45"/>
+    <path d="M17.32 9.99L14.62 11.16L11.36 11.91L7.67 12.19L3.67 12.01L-0.46 11.37L-4.57 10.28L-8.51 8.81L-12.12 6.99L-15.27 4.9L-17.83 2.63L-19.7 0.25L-20.82 -2.13L-21.14 -4.44L-20.64 -6.57L-19.35 -8.45L-17.32 -10.01L-14.62 -11.18L-11.36 -11.93L-7.67 -12.21L-3.67 -12.03L0.46 -11.39L4.57 -10.3L8.51 -8.83L12.12 -7.01L15.27 -4.92L17.83 -2.65L19.7 -0.27L20.82 2.11L21.14 4.42L20.64 6.55L19.35 8.43Z" fill="#2e6a9a" opacity="0.6"/>
+    <path d="M-22.75 -2.91L-21.05 -1.79L-20.59 -2.03L-22.29 -3.15Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M-19.72 -0.91L-18.02 0.21L-17.56 -0.03L-19.26 -1.15Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M-16.68 1.09L-14.99 2.21L-14.53 1.97L-16.22 0.85Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M-13.65 3.09L-11.96 4.21L-11.5 3.97L-13.19 2.85Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M-10.62 5.09L-8.93 6.21L-8.46 5.97L-10.16 4.85Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M-7.59 7.09L-5.89 8.21L-5.43 7.97L-7.13 6.85Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M-4.56 9.09L-2.86 10.21L-2.4 9.97L-4.1 8.85Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M-1.53 11.09L0.17 12.21L0.63 11.97L-1.07 10.85Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M2.02 13.04L2.99 11.64L2.42 11.5L1.45 12.9Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M3.75 10.54L4.72 9.14L4.15 9L3.18 10.4Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M5.48 8.04L6.45 6.64L5.88 6.5L4.91 7.9Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M7.21 5.54L8.18 4.14L7.61 4L6.64 5.4Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M8.94 3.04L9.91 1.64L9.35 1.5L8.38 2.9Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M10.68 0.54L11.65 -0.86L11.08 -1L10.11 0.4Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M12.41 -1.96L13.38 -3.36L12.81 -3.5L11.84 -2.1Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M14.14 -4.46L15.11 -5.86L14.54 -6L13.57 -4.6Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M15.53 -7.2L12.87 -6.92L12.98 -6.58L15.64 -6.86Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M10.77 -6.7L8.1 -6.42L8.21 -6.08L10.88 -6.36Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M6.01 -6.2L3.34 -5.92L3.45 -5.58L6.12 -5.86Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M1.24 -5.7L-1.42 -5.42L-1.31 -5.08L1.35 -5.36Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M-3.52 -5.2L-6.19 -4.92L-6.08 -4.58L-3.41 -4.86Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M-8.28 -4.7L-10.95 -4.42L-10.84 -4.08L-8.17 -4.36Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M-13.05 -4.2L-15.71 -3.92L-15.6 -3.58L-12.94 -3.86Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M-17.81 -3.7L-20.48 -3.42L-20.37 -3.08L-17.7 -3.36Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M-21.43 -3.1L-21.53 -2.71L-21.53 -5.11L-21.43 -5.5Z" fill="#a82a1c"/>
+    <path d="M-23.3 -2.55L-23.61 -2.9L-23.61 -5.3L-23.3 -4.95Z" fill="#e8402a"/>
+    <path d="M-21.53 -2.71L-22.02 -2.43L-22.02 -4.83L-21.53 -5.11Z" fill="#a82a1c"/>
+    <path d="M-22.69 -2.37L-23.3 -2.55L-23.3 -4.95L-22.69 -4.77Z" fill="#e8402a"/>
+    <path d="M-22.02 -2.43L-22.69 -2.37L-22.69 -4.77L-22.02 -4.83Z" fill="#a82a1c"/>
+    <path d="M-22.02 -4.83L-22.69 -4.77L-23.3 -4.95L-23.61 -5.3L-23.5 -5.69L-23.02 -5.97L-22.34 -6.03L-21.74 -5.85L-21.43 -5.5L-21.53 -5.11Z" fill="#ff6a5a"/>
+    <path d="M-21.4 -4.1L-21.51 -3.7L-21.51 -4.3L-21.4 -4.7Z" fill="#b9c0cc"/>
+    <path d="M-23.31 -3.54L-23.63 -3.9L-23.63 -4.5L-23.31 -4.14Z" fill="#e3e7ee"/>
+    <path d="M-21.51 -3.7L-22.01 -3.42L-22.01 -4.02L-21.51 -4.3Z" fill="#b9c0cc"/>
+    <path d="M-22.69 -3.36L-23.31 -3.54L-23.31 -4.14L-22.69 -3.96Z" fill="#e3e7ee"/>
+    <path d="M-22.01 -3.42L-22.69 -3.36L-22.69 -3.96L-22.01 -4.02Z" fill="#b9c0cc"/>
+    <path d="M-22.01 -4.02L-22.69 -3.96L-23.31 -4.14L-23.63 -4.5L-23.52 -4.9L-23.03 -5.18L-22.34 -5.24L-21.72 -5.06L-21.4 -4.7L-21.51 -4.3Z" fill="#ffffff"/>
+    <circle cx="-22.52" cy="-5.60" r=".6" fill="#ffd45a"><animate attributeName="opacity" values="1;.2;1" dur="1.4s" repeatCount="indefinite"/></circle>
+    <path d="M2.82 12.9L2.71 13.29L2.71 10.89L2.82 10.5Z" fill="#a82a1c"/>
+    <path d="M0.95 13.45L0.64 13.1L0.64 10.7L0.95 11.05Z" fill="#e8402a"/>
+    <path d="M2.71 13.29L2.23 13.57L2.23 11.17L2.71 10.89Z" fill="#a82a1c"/>
+    <path d="M1.56 13.63L0.95 13.45L0.95 11.05L1.56 11.23Z" fill="#e8402a"/>
+    <path d="M2.23 13.57L1.56 13.63L1.56 11.23L2.23 11.17Z" fill="#a82a1c"/>
+    <path d="M2.23 11.17L1.56 11.23L0.95 11.05L0.64 10.7L0.75 10.31L1.23 10.03L1.9 9.97L2.51 10.15L2.82 10.5L2.71 10.89Z" fill="#ff6a5a"/>
+    <path d="M2.84 11.9L2.74 12.3L2.74 11.7L2.84 11.3Z" fill="#b9c0cc"/>
+    <path d="M0.94 12.46L0.62 12.1L0.62 11.5L0.94 11.86Z" fill="#e3e7ee"/>
+    <path d="M2.74 12.3L2.24 12.58L2.24 11.98L2.74 11.7Z" fill="#b9c0cc"/>
+    <path d="M1.56 12.64L0.94 12.46L0.94 11.86L1.56 12.04Z" fill="#e3e7ee"/>
+    <path d="M2.24 12.58L1.56 12.64L1.56 12.04L2.24 11.98Z" fill="#b9c0cc"/>
+    <path d="M2.24 11.98L1.56 12.04L0.94 11.86L0.62 11.5L0.73 11.1L1.22 10.82L1.91 10.76L2.53 10.94L2.84 11.3L2.74 11.7Z" fill="#ffffff"/>
+    <circle cx="1.73" cy="10.40" r=".6" fill="#ffd45a"><animate attributeName="opacity" values="1;.2;1" dur="1.4s" repeatCount="indefinite"/></circle>
+    <path d="M16.68 -7.1L16.57 -6.71L16.57 -9.11L16.68 -9.5Z" fill="#a82a1c"/>
+    <path d="M14.81 -6.55L14.5 -6.9L14.5 -9.3L14.81 -8.95Z" fill="#e8402a"/>
+    <path d="M16.57 -6.71L16.09 -6.43L16.09 -8.83L16.57 -9.11Z" fill="#a82a1c"/>
+    <path d="M15.42 -6.37L14.81 -6.55L14.81 -8.95L15.42 -8.77Z" fill="#e8402a"/>
+    <path d="M16.09 -6.43L15.42 -6.37L15.42 -8.77L16.09 -8.83Z" fill="#a82a1c"/>
+    <path d="M16.09 -8.83L15.42 -8.77L14.81 -8.95L14.5 -9.3L14.61 -9.69L15.09 -9.97L15.76 -10.03L16.37 -9.85L16.68 -9.5L16.57 -9.11Z" fill="#ff6a5a"/>
+    <path d="M16.7 -8.1L16.59 -7.7L16.59 -8.3L16.7 -8.7Z" fill="#b9c0cc"/>
+    <path d="M14.79 -7.54L14.48 -7.9L14.48 -8.5L14.79 -8.14Z" fill="#e3e7ee"/>
+    <path d="M16.59 -7.7L16.1 -7.42L16.1 -8.02L16.59 -8.3Z" fill="#b9c0cc"/>
+    <path d="M15.41 -7.36L14.79 -7.54L14.79 -8.14L15.41 -7.96Z" fill="#e3e7ee"/>
+    <path d="M16.1 -7.42L15.41 -7.36L15.41 -7.96L16.1 -8.02Z" fill="#b9c0cc"/>
+    <path d="M16.1 -8.02L15.41 -7.96L14.79 -8.14L14.48 -8.5L14.58 -8.9L15.08 -9.18L15.76 -9.24L16.39 -9.06L16.7 -8.7L16.59 -8.3Z" fill="#ffffff"/>
+    <circle cx="15.59" cy="-9.60" r=".6" fill="#ffd45a"><animate attributeName="opacity" values="1;.2;1" dur="1.4s" repeatCount="indefinite"/></circle>
+    <ellipse cx="-1.73" cy="1.00" rx="10" ry="5.8" fill="#9be3ea" opacity="0"><animate attributeName="rx" values="10;0" dur="2.4s" begin="0.0s" repeatCount="indefinite"/><animate attributeName="ry" values="5.8;0" dur="2.4s" begin="0.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.6;0" dur="2.4s" begin="0.0s" repeatCount="indefinite"/></ellipse>
+    <ellipse cx="-1.73" cy="1.00" rx="10" ry="5.8" fill="#9be3ea" opacity="0"><animate attributeName="rx" values="10;0" dur="2.4s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="ry" values="5.8;0" dur="2.4s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.6;0" dur="2.4s" begin="0.6s" repeatCount="indefinite"/></ellipse>
+    <ellipse cx="-1.73" cy="1.00" rx="10" ry="5.8" fill="#9be3ea" opacity="0"><animate attributeName="rx" values="10;0" dur="2.4s" begin="1.2s" repeatCount="indefinite"/><animate attributeName="ry" values="5.8;0" dur="2.4s" begin="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.6;0" dur="2.4s" begin="1.2s" repeatCount="indefinite"/></ellipse>
+    <ellipse cx="-1.73" cy="1.00" rx="10" ry="5.8" fill="#9be3ea" opacity="0"><animate attributeName="rx" values="10;0" dur="2.4s" begin="1.7999999999999998s" repeatCount="indefinite"/><animate attributeName="ry" values="5.8;0" dur="2.4s" begin="1.7999999999999998s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.6;0" dur="2.4s" begin="1.7999999999999998s" repeatCount="indefinite"/></ellipse>
+    <path d="M0.27 1L0.22 1.27L0.07 1.52L-0.17 1.75L-0.49 1.94L-0.86 2.08L-1.29 2.17L-1.73 2.2L-2.18 2.17L-2.6 2.08L-2.98 1.94L-3.3 1.75L-3.53 1.52L-3.68 1.27L-3.73 1L-3.68 0.73L-3.53 0.48L-3.3 0.25L-2.98 0.06L-2.6 -0.08L-2.18 -0.17L-1.73 -0.2L-1.29 -0.17L-0.86 -0.08L-0.49 0.06L-0.17 0.25L0.07 0.48L0.22 0.73Z" fill="#123a5a"/>
+    <g><animateMotion dur="7s" repeatCount="indefinite" rotate="auto" path="M-31.73 -25.00Q-7.73 -23.00 -1.73 -11.00"/><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.6;.85;1" dur="7s" repeatCount="indefinite"/><path d="M-3 -.5L3 -.5L4 0L3 .5L-3 .5Z" fill="#e8edf4"/><path d="M-.6 -4L.6 -4L1 4L-1 4Z" fill="#a8b4c4"/><path d="M-3 -1.6L-2.2 -1.6L-2 1.6L-3 1.6Z" fill="#a8b4c4"/></g>
   </g>
 </svg>

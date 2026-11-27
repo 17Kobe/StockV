@@ -6,7 +6,7 @@ window.CRITTER_TIPS = {
     // 排在前面的才會被配對到，不然泰國會顯示成「非洲象群」的說明
     'animals/thai-elephant': ['🐘', '亞洲象', '動物', '泰國的國家象徵與吉祥動物，過去是皇室交通工具與勞動幫手，現在是泰國文化、節慶與觀光的代表性角色。'],
     // ── 海洋生物 ──
-    'critters/whale-spout.png': [
+    'critters/whale-spout.svg': [
         '🐋',
         '鯨魚',
         '海洋生物',
@@ -797,7 +797,7 @@ window.CRITTER_TIPS = {
         '動物',
         '陸地上最大的動物，每年會隨季節進行長途遷徙尋找水源與食物，象群以母系社會為中心，記憶力和情感連結都相當豐富。',
     ],
-    'animals/penguin.png': [
+    'critters/penguin.svg': [
         '🐧',
         '南極企鵝',
         '動物',

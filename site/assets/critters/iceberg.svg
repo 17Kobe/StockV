@@ -1,70 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-  <defs>
-    <linearGradient id="ib-ice" x1="0.2" y1="0" x2="0.8" y2="1">
-      <stop offset="0%" stop-color="#eaf8ff"/>
-      <stop offset="45%" stop-color="#aee3f0"/>
-      <stop offset="100%" stop-color="#5bb4d4"/>
-    </linearGradient>
-    <linearGradient id="ib-shade" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#2d6c87" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#2d6c87" stop-opacity="0.5"/>
-    </linearGradient>
-    <linearGradient id="ib-sea" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2f8fa8"/>
-      <stop offset="100%" stop-color="#145a72"/>
-    </linearGradient>
-    <linearGradient id="ib-glow" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#eafcff" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#eafcff" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-
-  <!-- submerged ice base glowing through the water -->
-  <path d="M8 58 Q20 68 40 68 Q60 68 70 56 L68 72 Q50 80 30 80 Q14 80 10 70 Z" fill="url(#ib-glow)" opacity="0.6"/>
-
-  <!-- sea surrounding the berg -->
-  <rect x="0" y="56" width="80" height="24" fill="url(#ib-sea)"/>
-
-  <!-- main iceberg mass, jagged crystalline silhouette -->
-  <path d="M10 58 L16 34 L24 40 L30 18 L40 32 L48 14 L58 36 L66 30 L72 56 Q74 60 68 60 L14 60 Q8 60 10 58 Z"
-    fill="url(#ib-ice)" stroke="#2d6c87" stroke-width="0.6" stroke-linejoin="round"/>
-
-  <!-- shaded right flank -->
-  <path d="M48 14 L58 36 L66 30 L72 56 Q74 60 68 60 L52 60 L50 32 Z" fill="url(#ib-shade)"/>
-
-  <!-- crystalline facets -->
-  <path d="M24 40 L30 18 M40 32 L48 14 M30 18 L40 32 M58 36 L52 60" stroke="#ffffff" stroke-width="0.6" opacity="0.5" fill="none" stroke-linecap="round"/>
-  <path d="M16 34 L24 40 L22 60" stroke="#2d6c87" stroke-width="0.5" opacity="0.4" fill="none"/>
-
-  <!-- bright highlight catching the sun -->
-  <path d="M30 18 L34 22 L26 30 Z" fill="#ffffff" opacity="0.7"/>
-
-  <!-- waterline ripple -->
-  <ellipse cx="40" cy="59" rx="34" ry="3.2" fill="#eafcff" opacity="0.4">
-    <animate attributeName="rx" values="34;36;34" dur="3.4s" repeatCount="indefinite"/>
-  </ellipse>
-
-  <!-- gentle sparkle -->
-  <circle cx="44" cy="24" r="1.2" fill="#ffffff">
-    <animate attributeName="opacity" values="0.2;0.9;0.2" dur="2.4s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="20" cy="46" r="1" fill="#ffffff">
-    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.8s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- small lapping waves at the base -->
-  <g stroke="#bdeef6" stroke-width="0.9" fill="none" opacity="0.5">
-    <path d="M4 66 Q14 64 24 66 T44 66">
-      <animate attributeName="d" dur="3.2s" repeatCount="indefinite"
-        values="M4 66 Q14 64 24 66 T44 66;
-                M4 67 Q14 69 24 67 T44 67;
-                M4 66 Q14 64 24 66 T44 66"/>
-    </path>
-    <path d="M38 72 Q50 70 62 72 T82 72">
-      <animate attributeName="d" dur="3.6s" repeatCount="indefinite"
-        values="M38 72 Q50 70 62 72 T82 72;
-                M38 73 Q50 75 62 73 T82 73;
-                M38 72 Q50 70 62 72 T82 72"/>
-    </path>
+  <!-- 南大洋冰山（2.5D）：從南極冰棚斷裂、漂在南大洋上的巨大冰山，白色與淡藍色的冰面有好幾座尖峰，水面下隱約透出更巨大的冰山本體，冰上閃著光、兩隻企鵝搖搖擺擺，整座冰山在海上緩緩起伏、水波擴散（動畫）。光源左上，不描邊 -->
+  <g transform="translate(40 55.64) scale(1.4)">
+    <path d="M22.52 13L19.38 14.31L15.5 15.07L11.02 15.25L6.12 14.85L0.99 13.87L-4.18 12.37L-9.2 10.38L-13.86 8L-17.98 5.31L-21.42 2.42L-24.03 -0.57L-25.72 -3.54L-26.42 -6.36L-26.11 -8.95L-24.79 -11.19L-22.52 -13L-19.38 -14.31L-15.5 -15.07L-11.02 -15.25L-6.12 -14.85L-0.99 -13.87L4.18 -12.37L9.2 -10.38L13.86 -8L17.98 -5.31L21.42 -2.42L24.03 0.57L25.72 3.54L26.42 6.36L26.11 8.95L24.79 11.19Z" fill="#52c3dc"/>
+    <path d="M14.9 7L12.81 7.86L10.2 8.33L7.16 8.4L3.81 8.07L0.29 7.35L-3.28 6.26L-6.76 4.85L-10.01 3.18L-12.91 1.3L-15.35 -0.7L-17.23 -2.77L-18.48 -4.8L-19.05 -6.73L-18.93 -8.49L-18.11 -10L-16.63 -11.2L-14.54 -12.06L-11.93 -12.53L-8.89 -12.6L-5.54 -12.27L-2.02 -11.55L1.55 -10.46L5.03 -9.05L8.28 -7.38L11.18 -5.5L13.61 -3.5L15.49 -1.43L16.75 0.6L17.32 2.53L17.2 4.29L16.38 5.8Z" fill="#9be3ea" opacity="0.45"/>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-7.80 0.00a7.80 3.90 0 1 0 15.60 0a7.80 3.90 0 1 0 -15.60 0ZM-6.40 0.00a6.40 3.20 0 1 0 12.79 0a6.40 3.20 0 1 0 -12.79 0Z"><animate attributeName="d" values="M-7.80 0.00a7.80 3.90 0 1 0 15.60 0a7.80 3.90 0 1 0 -15.60 0ZM-6.40 0.00a6.40 3.20 0 1 0 12.79 0a6.40 3.20 0 1 0 -12.79 0Z;M-24.70 0.00a24.70 12.35 0 1 0 49.40 0a24.70 12.35 0 1 0 -49.40 0ZM-20.25 0.00a20.25 10.13 0 1 0 40.51 0a20.25 10.13 0 1 0 -40.51 0Z" dur="3s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0" dur="3s" begin="0s" repeatCount="indefinite"/></path>
+    <path fill="#ffffff" fill-rule="evenodd" opacity="0" d="M-7.80 0.00a7.80 3.90 0 1 0 15.60 0a7.80 3.90 0 1 0 -15.60 0ZM-6.40 0.00a6.40 3.20 0 1 0 12.79 0a6.40 3.20 0 1 0 -12.79 0Z"><animate attributeName="d" values="M-7.80 0.00a7.80 3.90 0 1 0 15.60 0a7.80 3.90 0 1 0 -15.60 0ZM-6.40 0.00a6.40 3.20 0 1 0 12.79 0a6.40 3.20 0 1 0 -12.79 0Z;M-24.70 0.00a24.70 12.35 0 1 0 49.40 0a24.70 12.35 0 1 0 -49.40 0ZM-20.25 0.00a20.25 10.13 0 1 0 40.51 0a20.25 10.13 0 1 0 -40.51 0Z" dur="3s" begin="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0" dur="3s" begin="1.5s" repeatCount="indefinite"/></path>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -1;0 0" dur="4s" repeatCount="indefinite"/>
+    <path d="M20 0L19.5 1.56L18.02 3.04L15.64 4.36L12.47 5.47L8.68 6.31L4.45 6.82L0 7L-4.45 6.82L-8.68 6.31L-12.47 5.47L-15.64 4.36L-18.02 3.04L-19.5 1.56L-20 0L-19.5 -1.56L-18.02 -3.04L-15.64 -4.36L-12.47 -5.47L-8.68 -6.31L-4.45 -6.82L-0 -7L4.45 -6.82L8.68 -6.31L12.47 -5.47L15.64 -4.36L18.02 -3.04L19.5 -1.56Z" fill="#bfefff" opacity="0.45"/>
+    <path d="M15.59 -3L13.86 6L13.86 0L15.59 -9Z" fill="#9cc4dc"/>
+    <path d="M0 8L-15.59 1L-15.59 -5L0 2Z" fill="#dceef8"/>
+    <path d="M13.86 6L0 8L0 2L13.86 0Z" fill="#9cc4dc"/>
+    <path d="M-5.2 -17L15.59 -9L13.86 0L0 2L-15.59 -5L-15.59 -13Z" fill="#ffffff"/>
+    <path d="M6.85 -12.11L9.3 -6.77L-0.53 -22.76L-0.74 -23.36Z" fill="#9cc4dc"/>
+    <path d="M-7.13 -4.04L-13.34 -8.24L-2.99 -22.92L-2.35 -22.43Z" fill="#ffffff"/>
+    <path d="M9.3 -6.77L2.27 -2.39L-1.3 -22.29L-0.53 -22.76Z" fill="#9cc4dc"/>
+    <path d="M2.27 -2.39L-7.13 -4.04L-2.35 -22.43L-1.3 -22.29Z" fill="#dceef8"/>
+    <path d="M-1.3 -22.29L-2.35 -22.43L-2.99 -22.92L-2.55 -23.47L-1.59 -23.74L-0.74 -23.36L-0.53 -22.76Z" fill="#ffffff"/>
+    <path d="M0.31 -0.18L-2.47 -4.19L3.71 -11.23L4.19 -10.42Z" fill="#ffffff"/>
+    <path d="M11.87 -1.97L7.25 1.43L5.59 -10.14L6.56 -10.79Z" fill="#9cc4dc"/>
+    <path d="M7.25 1.43L0.31 -0.18L4.19 -10.42L5.59 -10.14Z" fill="#dceef8"/>
+    <path d="M5.59 -10.14L4.19 -10.42L3.71 -11.23L4.83 -11.79L6.29 -11.63L6.56 -10.79Z" fill="#ffffff"/>
+    <path d="M-15.59 -7L-16.86 -9.73L-13.31 -13.18L-12.99 -12.5Z" fill="#ffffff"/>
+    <path d="M-7.39 -8.27L-10.86 -6.27L-11.81 -12.32L-10.94 -12.82Z" fill="#9cc4dc"/>
+    <path d="M-10.86 -6.27L-15.59 -7L-12.99 -12.5L-11.81 -12.32Z" fill="#dceef8"/>
+    <path d="M-11.81 -12.32L-12.99 -12.5L-13.31 -13.18L-12.44 -13.68L-11.26 -13.5L-10.94 -12.82Z" fill="#ffffff"/>
+    <path d="M-1.73 7L13.86 6L13.86 3L-1.73 4Z" fill="#6ab4d8" opacity="0.35"/>
+    <path d="M-8.66 -12.44L-8.35 -11.31L-7.22 -11.00L-8.35 -10.69L-8.66 -9.56L-8.98 -10.69L-10.10 -11.00L-8.98 -11.31Z" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2.4s" begin="0.0s" repeatCount="indefinite"/></path>
+    <path d="M-3.46 -9.44L-3.15 -8.31L-2.02 -8.00L-3.15 -7.68L-3.46 -6.56L-3.78 -7.68L-4.90 -8.00L-3.78 -8.31Z" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2.4s" begin="0.6s" repeatCount="indefinite"/></path>
+    <path d="M1.73 -6.44L2.05 -5.32L3.17 -5.00L2.05 -4.68L1.73 -3.56L1.42 -4.68L0.29 -5.00L1.42 -5.32Z" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2.4s" begin="1.2s" repeatCount="indefinite"/></path>
+    <g><animateTransform attributeName="transform" type="rotate" values="-8 -6.93 -4.00;8 -6.93 -4.00;-8 -6.93 -4.00" dur="0.8s" begin="0.0s" repeatCount="indefinite"/>
+    <path d="M-5.73 -6L-5.76 -5.51L-5.85 -5.05L-5.99 -4.63L-6.18 -4.28L-6.41 -4.02L-6.66 -3.86L-6.93 -3.8L-7.2 -3.86L-7.45 -4.02L-7.68 -4.28L-7.87 -4.63L-8.01 -5.05L-8.1 -5.51L-8.13 -6L-8.1 -6.49L-8.01 -6.95L-7.87 -7.37L-7.68 -7.72L-7.45 -7.98L-7.2 -8.14L-6.93 -8.2L-6.66 -8.14L-6.41 -7.98L-6.18 -7.72L-5.99 -7.37L-5.85 -6.95L-5.76 -6.49Z" fill="#2a2d36"/>
+    <path d="M-6.53 -5.8L-6.55 -5.44L-6.61 -5.11L-6.7 -4.8L-6.83 -4.55L-6.98 -4.36L-7.15 -4.24L-7.33 -4.2L-7.51 -4.24L-7.68 -4.36L-7.83 -4.55L-7.95 -4.8L-8.05 -5.11L-8.11 -5.44L-8.13 -5.8L-8.11 -6.16L-8.05 -6.49L-7.95 -6.8L-7.83 -7.05L-7.68 -7.24L-7.51 -7.36L-7.33 -7.4L-7.15 -7.36L-6.98 -7.24L-6.83 -7.05L-6.7 -6.8L-6.61 -6.49L-6.55 -6.16Z" fill="#ffffff"/>
+    <path d="M-6.03 -8.4L-6.05 -8.2L-6.12 -8.01L-6.22 -7.84L-6.37 -7.7L-6.54 -7.59L-6.73 -7.52L-6.93 -7.5L-7.13 -7.52L-7.32 -7.59L-7.49 -7.7L-7.63 -7.84L-7.74 -8.01L-7.81 -8.2L-7.83 -8.4L-7.81 -8.6L-7.74 -8.79L-7.63 -8.96L-7.49 -9.1L-7.32 -9.21L-7.13 -9.28L-6.93 -9.3L-6.73 -9.28L-6.54 -9.21L-6.37 -9.1L-6.22 -8.96L-6.12 -8.79L-6.05 -8.6Z" fill="#2a2d36"/>
+    <path d="M-7.73 -8.4L-8.73 -8.2L-7.73 -8Z" fill="#ffa030"/>
+    </g>
+    <g><animateTransform attributeName="transform" type="rotate" values="-8 -3.98 -2.30;8 -3.98 -2.30;-8 -3.98 -2.30" dur="0.8s" begin="0.3s" repeatCount="indefinite"/>
+    <path d="M-2.78 -4.3L-2.81 -3.81L-2.9 -3.35L-3.05 -2.93L-3.24 -2.58L-3.46 -2.32L-3.72 -2.16L-3.98 -2.1L-4.25 -2.16L-4.5 -2.32L-4.73 -2.58L-4.92 -2.93L-5.06 -3.35L-5.15 -3.81L-5.18 -4.3L-5.15 -4.79L-5.06 -5.25L-4.92 -5.67L-4.73 -6.02L-4.5 -6.28L-4.25 -6.44L-3.98 -6.5L-3.72 -6.44L-3.46 -6.28L-3.24 -6.02L-3.05 -5.67L-2.9 -5.25L-2.81 -4.79Z" fill="#2a2d36"/>
+    <path d="M-3.58 -4.1L-3.6 -3.74L-3.66 -3.41L-3.76 -3.1L-3.88 -2.85L-4.04 -2.66L-4.21 -2.54L-4.38 -2.5L-4.56 -2.54L-4.73 -2.66L-4.88 -2.85L-5.01 -3.1L-5.1 -3.41L-5.16 -3.74L-5.18 -4.1L-5.16 -4.46L-5.1 -4.79L-5.01 -5.1L-4.88 -5.35L-4.73 -5.54L-4.56 -5.66L-4.38 -5.7L-4.21 -5.66L-4.04 -5.54L-3.88 -5.35L-3.76 -5.1L-3.66 -4.79L-3.6 -4.46Z" fill="#ffffff"/>
+    <path d="M-3.08 -6.7L-3.11 -6.5L-3.17 -6.31L-3.28 -6.14L-3.42 -6L-3.59 -5.89L-3.78 -5.82L-3.98 -5.8L-4.18 -5.82L-4.37 -5.89L-4.54 -6L-4.69 -6.14L-4.79 -6.31L-4.86 -6.5L-4.88 -6.7L-4.86 -6.9L-4.79 -7.09L-4.69 -7.26L-4.54 -7.4L-4.37 -7.51L-4.18 -7.58L-3.98 -7.6L-3.78 -7.58L-3.59 -7.51L-3.42 -7.4L-3.28 -7.26L-3.17 -7.09L-3.11 -6.9Z" fill="#2a2d36"/>
+    <path d="M-4.78 -6.7L-5.78 -6.5L-4.78 -6.3Z" fill="#ffa030"/>
+    </g>
+    </g>
   </g>
 </svg>

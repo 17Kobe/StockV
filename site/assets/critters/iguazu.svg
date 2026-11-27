@@ -1,134 +1,93 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <!-- 伊瓜蘇瀑布：紅褐色河水沿新月形崖壁分成數十道白色瀑布，上下兩層，瀑布之間隔著亞熱帶雨林小島；中央是霧氣瀰漫的「魔鬼咽喉」U 形深淵，水霧中浮現彩虹，右側有一隻巨嘴鳥 -->
-  <defs>
-    <linearGradient id="igRiver" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#c48a5a"/>
-      <stop offset="1" stop-color="#9a6238"/>
-    </linearGradient>
-    <linearGradient id="igFall" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#e8d2b8"/>
-      <stop offset=".25" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#d8eef6"/>
-    </linearGradient>
-    <linearGradient id="igCliff" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#7a5a40"/>
-      <stop offset="1" stop-color="#4a3424"/>
-    </linearGradient>
-    <linearGradient id="igPool" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#b98a62"/>
-      <stop offset="1" stop-color="#7e5434"/>
-    </linearGradient>
-    <radialGradient id="igLeaf" cx="35%" cy="30%" r="75%">
-      <stop offset="0" stop-color="#9ad460"/>
-      <stop offset=".6" stop-color="#3f9a3a"/>
-      <stop offset="1" stop-color="#1f5a26"/>
-    </radialGradient>
-    <radialGradient id="igMist" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#ffffff"/>
-      <stop offset=".65" stop-color="#ffffff" stop-opacity=".9"/>
-      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-
-  <!-- 遠岸雨林 -->
-  <g fill="url(#igLeaf)" stroke="#1a4a20" stroke-width=".8">
-    <circle cx="14" cy="34" r="10"/><circle cx="30" cy="26" r="10"/><circle cx="48" cy="22" r="9"/>
-    <circle cx="66" cy="20" r="10"/><circle cx="84" cy="22" r="9"/><circle cx="100" cy="26" r="10"/><circle cx="116" cy="34" r="10"/>
-  </g>
-
-  <!-- 上游紅褐河面 -->
-  <path d="M2,46 Q10,32 40,30 Q64,26 88,30 Q118,32 126,46 Q100,40 82,42 Q64,38 46,42 Q24,40 2,46 Z" fill="url(#igRiver)" stroke="#6e4426" stroke-width=".8"/>
-
-  <!-- 魔鬼咽喉：中央 U 形深淵 -->
-  <path d="M46,42 Q64,36 82,42 L80,72 Q64,66 48,72 Z" fill="url(#igFall)" stroke="#8cb8c8" stroke-width=".7"/>
-  <g stroke="#bcdcea" stroke-width=".7" fill="none">
-    <path d="M52,41 V70"/><path d="M58,39.5 V68"/><path d="M64,39 V67"/><path d="M70,39.5 V68"/><path d="M76,41 V70"/>
-    <animate attributeName="opacity" values="1;.4;1" dur="1.5s" repeatCount="indefinite"/>
-  </g>
-
-  <!-- 左翼崖壁：上層 -->
-  <path d="M2,46 Q24,40 46,42 L48,62 Q26,60 4,66 Z" fill="url(#igCliff)" stroke="#3a2618" stroke-width=".8"/>
-  <!-- 右翼崖壁：上層 -->
-  <path d="M126,46 Q104,40 82,42 L80,62 Q102,60 124,66 Z" fill="url(#igCliff)" stroke="#3a2618" stroke-width=".8"/>
-  <!-- 上層瀑布（左） -->
-  <g fill="url(#igFall)" stroke="#8cb8c8" stroke-width=".5">
-    <path d="M5,45.5 L10,44.5 L11,64.5 L6,65.5 Z"/>
-    <path d="M14,43.6 L19,42.8 L19.6,63 L14.6,63.8 Z"/>
-    <path d="M23,42.2 L29,41.6 L29.4,61.6 L23.4,62.2 Z"/>
-    <path d="M33,41.4 L37,41.3 L37.4,61 L33.4,61.2 Z"/>
-    <path d="M40,41.4 L45,41.8 L46.6,61.6 L41,61.2 Z"/>
-  </g>
-  <!-- 上層瀑布（右） -->
-  <g fill="url(#igFall)" stroke="#8cb8c8" stroke-width=".5">
-    <path d="M123,45.5 L118,44.5 L117,64.5 L122,65.5 Z"/>
-    <path d="M114,43.6 L109,42.8 L108.4,63 L113.4,63.8 Z"/>
-    <path d="M105,42.2 L99,41.6 L98.6,61.6 L104.6,62.2 Z"/>
-    <path d="M95,41.4 L91,41.3 L90.6,61 L94.6,61.2 Z"/>
-    <path d="M88,41.4 L83,41.8 L81.4,61.6 L87,61.2 Z"/>
-  </g>
-
-  <!-- 中段雨林台地 -->
-  <path d="M0,68 Q24,60 48,64 L50,74 Q26,72 0,80 Z" fill="url(#igLeaf)" stroke="#1a4a20" stroke-width=".8"/>
-  <path d="M128,68 Q104,60 80,64 L78,74 Q102,72 128,80 Z" fill="url(#igLeaf)" stroke="#1a4a20" stroke-width=".8"/>
-  <g fill="url(#igLeaf)" stroke="#1a4a20" stroke-width=".6">
-    <circle cx="12" cy="44" r="3"/><circle cx="21" cy="42" r="2.6"/><circle cx="31" cy="41" r="2.6"/><circle cx="39" cy="41" r="2.2"/>
-    <circle cx="116" cy="44" r="3"/><circle cx="107" cy="42" r="2.6"/><circle cx="97" cy="41" r="2.6"/><circle cx="89" cy="41" r="2.2"/>
-  </g>
-
-  <!-- 下層崖壁 -->
-  <path d="M0,78 Q26,70 50,73 L52,94 Q26,94 0,100 Z" fill="url(#igCliff)" stroke="#3a2618" stroke-width=".8"/>
-  <path d="M128,78 Q102,70 78,73 L76,94 Q102,94 128,100 Z" fill="url(#igCliff)" stroke="#3a2618" stroke-width=".8"/>
-  <!-- 下層瀑布 -->
-  <g fill="url(#igFall)" stroke="#8cb8c8" stroke-width=".5">
-    <path d="M3,77.5 L10,75.6 L10.6,96.6 L3.6,98.4 Z"/>
-    <path d="M14,74.6 L20,73.6 L20.4,95.2 L14.4,96 Z"/>
-    <path d="M25,73 L33,72.4 L33.4,94.4 L25.4,94.8 Z"/>
-    <path d="M37,72.4 L42,72.5 L42.4,94.2 L37.4,94.2 Z"/>
-    <path d="M45,72.8 L50,73.2 L51.6,94 L46,94 Z"/>
-    <path d="M125,77.5 L118,75.6 L117.4,96.6 L124.4,98.4 Z"/>
-    <path d="M114,74.6 L108,73.6 L107.6,95.2 L113.6,96 Z"/>
-    <path d="M103,73 L95,72.4 L94.6,94.4 L102.6,94.8 Z"/>
-    <path d="M91,72.4 L86,72.5 L85.6,94.2 L90.6,94.2 Z"/>
-    <path d="M83,72.8 L78,73.2 L76.4,94 L82,94 Z"/>
-  </g>
-
-  <!-- 下游河面 -->
-  <path d="M0,98 Q64,88 128,98 L128,116 Q64,124 0,116 Z" fill="url(#igPool)" stroke="#5e3a20" stroke-width=".8"/>
-
-  <!-- 彩虹 -->
-  <g fill="none" stroke-width="1.6" opacity=".65">
-    <path d="M30,92 Q64,40 98,92" stroke="#ff6b6b"/>
-    <path d="M32,92 Q64,43.4 96,92" stroke="#ffd25a"/>
-    <path d="M34,92 Q64,46.8 94,92" stroke="#6fd36f"/>
-    <path d="M36,92 Q64,50.2 92,92" stroke="#6aa8ff"/>
-  </g>
-
-  <!-- 魔鬼咽喉水霧與各瀑布底部水花 -->
-  <g fill="url(#igMist)">
-    <ellipse cx="64" cy="72" rx="22" ry="12"/>
-    <ellipse cx="64" cy="86" rx="20" ry="10"/>
-    <ellipse cx="24" cy="98" rx="24" ry="6"/>
-    <ellipse cx="104" cy="98" rx="24" ry="6"/>
-    <ellipse cx="64" cy="98" rx="18" ry="7"/>
-    <animateTransform attributeName="transform" type="translate" values="0,0;0,-1.5;0,0" dur="3.2s" repeatCount="indefinite"/>
-  </g>
-  <g fill="#fff" opacity=".85">
-    <circle cx="56" cy="60" r="4"/><circle cx="70" cy="58" r="3.5"/><circle cx="62" cy="54" r="2.6"/>
-    <animate attributeName="opacity" values=".85;.35;.85" dur="2.4s" repeatCount="indefinite"/>
-  </g>
-  <g fill="#fff" opacity=".8">
-    <ellipse cx="22" cy="64" rx="18" ry="2.2"/>
-    <ellipse cx="106" cy="64" rx="18" ry="2.2"/>
-  </g>
-
-  <!-- 巨嘴鳥 -->
-  <g transform="translate(112,58)">
-    <path d="M-1,10 L0,15" stroke="#3a2618" stroke-width="1"/>
-    <ellipse cx="0" cy="4" rx="4" ry="6.5" fill="#1c1c22" stroke="#000" stroke-width=".5"/>
-    <ellipse cx="-1.4" cy="1" rx="2.4" ry="2.6" fill="#fff6c8"/>
-    <circle cx="-1.2" cy="-1.4" r="1" fill="#3a8ad8"/><circle cx="-1.2" cy="-1.4" r=".45" fill="#000"/>
-    <path d="M-2.2,-2.6 Q-10,-3.4 -12,0.4 Q-7,1.8 -2.2,0.6 Z" fill="#ff9a1a" stroke="#a04a10" stroke-width=".5"/>
-    <path d="M-11.6,0.2 Q-12.4,-1.4 -10.6,-2" fill="#e8301a"/>
-    <path d="M-2.4,8 Q0,9.6 2.4,8" fill="none" stroke="#e8301a" stroke-width=".9"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- 伊瓜蘇瀑布（2.5D）：阿根廷與巴西交界的大瀑布群，U 形的「魔鬼咽喉」斷崖上一段段白色水簾同時往下沖，崖頂與小島長滿熱帶雨林，水霧翻騰、掛著一道彩虹，雨燕在瀑布上空飛（動畫）。光源左上，不描邊 -->
+  <g transform="translate(34.16 55.64) scale(1.12)">
+    <path d="M24.25 10L-17.32 -14L-17.32 -26L24.25 -2Z" fill="#93836e"/>
+    <path d="M38.11 2L24.25 10L24.25 -2L38.11 -10Z" fill="#6c5f4f"/>
+    <path d="M-8.66 -9L-19.05 -3L-19.05 -15L-8.66 -21Z" fill="#6c5f4f"/>
+    <path d="M-19.05 -3L-27.71 -8L-27.71 -20L-19.05 -15Z" fill="#93836e"/>
+    <path d="M3.46 -28.02L34.64 -10.02L22.52 -3.02L-8.66 -21.02Z" fill="#52c3dc"/>
+    <path d="M6.08 -25.13L27.9 -12.53L19.9 -7.91L-1.92 -20.51Z" fill="#9be3ea" opacity="0.4"/>
+    <path d="M4.03 -23.21L5.23 -23.56L6.43 -23.21L5.23 -22.86Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="2.2s" begin="0.0s" repeatCount="indefinite"/></path>
+    <path d="M3.00 -16.11L4.20 -16.46L5.40 -16.11L4.20 -15.76Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="2.7s" begin="0.6s" repeatCount="indefinite"/></path>
+    <path d="M9.56 -14.34L10.76 -14.69L11.96 -14.34L10.76 -13.99Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="3.2s" begin="1.2s" repeatCount="indefinite"/></path>
+    <path d="M1.73 -21.23L2.93 -21.58L4.13 -21.23L2.93 -20.88Z" fill="#ffffff" opacity=".8"><animate attributeName="opacity" values=".85;.15;.85" dur="3.7s" begin="1.8s" repeatCount="indefinite"/></path>
+    <path d="M-3.46 -34.02L5.2 -29.02L-19.05 -15.02L-27.71 -20.02Z" fill="#59a94c"/>
+    <path d="M-10.39 -20L-14.72 -17.5L-14.72 -5.5L-10.39 -8Z" fill="#e8fbff" opacity="0.92"/>
+    <rect x="-11.56" y="-19.58" width=".9" height="2" fill="#9be3ea" opacity=".75"><animate attributeName="y" values="-19.58;-9.58" dur="0.70s" begin="0.00s" repeatCount="indefinite"/></rect>
+    <rect x="-13.01" y="-18.75" width=".9" height="2" fill="#9be3ea" opacity=".75"><animate attributeName="y" values="-18.75;-8.75" dur="0.82s" begin="0.13s" repeatCount="indefinite"/></rect>
+    <rect x="-14.45" y="-17.92" width=".9" height="2" fill="#9be3ea" opacity=".75"><animate attributeName="y" values="-17.92;-7.92" dur="0.94s" begin="0.26s" repeatCount="indefinite"/></rect>
+    <path d="M-15.59 -17L-18.19 -15.5L-18.19 -3.5L-15.59 -5Z" fill="#e8fbff" opacity="0.92"/>
+    <rect x="-16.47" y="-16.75" width=".9" height="2" fill="#9be3ea" opacity=".75"><animate attributeName="y" values="-16.75;-6.75" dur="0.70s" begin="0.00s" repeatCount="indefinite"/></rect>
+    <rect x="-17.34" y="-16.25" width=".9" height="2" fill="#9be3ea" opacity=".75"><animate attributeName="y" values="-16.25;-6.25" dur="0.82s" begin="0.13s" repeatCount="indefinite"/></rect>
+    <rect x="-18.20" y="-15.75" width=".9" height="2" fill="#9be3ea" opacity=".75"><animate attributeName="y" values="-15.75;-5.75" dur="0.94s" begin="0.26s" repeatCount="indefinite"/></rect>
+    <path d="M-6.93 -20L-1.73 -17L-1.73 -5L-6.93 -8Z" fill="#e8fbff" opacity="0.92"/>
+    <rect x="-6.51" y="-19.50" width=".9" height="2" fill="#9be3ea" opacity=".75"><animate attributeName="y" values="-19.50;-9.50" dur="0.75s" begin="0.00s" repeatCount="indefinite"/></rect>
+    <rect x="-4.78" y="-18.50" width=".9" height="2" fill="#9be3ea" opacity=".75"><animate attributeName="y" values="-18.50;-8.50" dur="0.85s" begin="0.20s" repeatCount="indefinite"/></rect>
+    <rect x="-3.05" y="-17.50" width=".9" height="2" fill="#9be3ea" opacity=".75"><animate attributeName="y" values="-17.50;-7.50" dur="0.95s" begin="0.40s" repeatCount="indefinite"/></rect>
+    <path d="M0 -16L6.93 -12L6.93 0L0 -4Z" fill="#e8fbff" opacity="0.92"/>
+    <rect x="0.70" y="-15.33" width=".9" height="2" fill="#9be3ea" opacity=".75"><animate attributeName="y" values="-15.33;-5.33" dur="0.75s" begin="0.24s" repeatCount="indefinite"/></rect>
+    <rect x="3.01" y="-14.00" width=".9" height="2" fill="#9be3ea" opacity=".75"><animate attributeName="y" values="-14.00;-4.00" dur="0.85s" begin="0.44s" repeatCount="indefinite"/></rect>
+    <rect x="5.32" y="-12.67" width=".9" height="2" fill="#9be3ea" opacity=".75"><animate attributeName="y" values="-12.67;-2.67" dur="0.95s" begin="0.64s" repeatCount="indefinite"/></rect>
+    <path d="M8.66 -11L14.72 -7.5L14.72 4.5L8.66 1Z" fill="#e8fbff" opacity="0.92"/>
+    <rect x="9.22" y="-10.42" width=".9" height="2" fill="#9be3ea" opacity=".75"><animate attributeName="y" values="-10.42;-0.42" dur="0.75s" begin="0.54s" repeatCount="indefinite"/></rect>
+    <rect x="11.24" y="-9.25" width=".9" height="2" fill="#9be3ea" opacity=".75"><animate attributeName="y" values="-9.25;0.75" dur="0.85s" begin="0.74s" repeatCount="indefinite"/></rect>
+    <rect x="13.26" y="-8.08" width=".9" height="2" fill="#9be3ea" opacity=".75"><animate attributeName="y" values="-8.08;1.92" dur="0.95s" begin="0.94s" repeatCount="indefinite"/></rect>
+    <path d="M16.45 -6.5L21.65 -3.5L21.65 8.5L16.45 5.5Z" fill="#e8fbff" opacity="0.92"/>
+    <rect x="16.87" y="-6.00" width=".9" height="2" fill="#9be3ea" opacity=".75"><animate attributeName="y" values="-6.00;4.00" dur="0.75s" begin="0.81s" repeatCount="indefinite"/></rect>
+    <rect x="18.60" y="-5.00" width=".9" height="2" fill="#9be3ea" opacity=".75"><animate attributeName="y" values="-5.00;5.00" dur="0.85s" begin="1.01s" repeatCount="indefinite"/></rect>
+    <rect x="20.33" y="-4.00" width=".9" height="2" fill="#9be3ea" opacity=".75"><animate attributeName="y" values="-4.00;6.00" dur="0.95s" begin="1.21s" repeatCount="indefinite"/></rect>
+    <path d="M5.11 -19.5L4.33 -19.05L4.33 -21.45L5.11 -21.9Z" fill="#7d5a34"/>
+    <path d="M3.55 -19.5L4.33 -19.05L4.33 -21.45L3.55 -21.9Z" fill="#a77e4c"/>
+    <path d="M9.01 -19.03L8.95 -18.85L8.78 -18.67L8.5 -18.51L8.13 -18.38L7.69 -18.28L7.19 -18.22L6.67 -18.2L6.15 -18.22L5.65 -18.28L5.21 -18.38L4.84 -18.51L4.56 -18.67L4.39 -18.85L4.33 -19.03L4.39 -19.22L4.56 -19.39L4.84 -19.55L5.21 -19.68L5.65 -19.78L6.15 -19.84L6.67 -19.86L7.19 -19.84L7.69 -19.78L8.13 -19.68L8.5 -19.55L8.78 -19.39L8.95 -19.22Z" fill="#000000" opacity="0.2"/>
+    <path d="M6.93 -23.5L6.86 -22.92L6.67 -22.37L6.36 -21.88L5.95 -21.47L5.46 -21.16L4.91 -20.97L4.33 -20.9L3.75 -20.97L3.2 -21.16L2.71 -21.47L2.3 -21.88L1.99 -22.37L1.8 -22.92L1.73 -23.5L1.8 -24.08L1.99 -24.63L2.3 -25.12L2.71 -25.53L3.2 -25.84L3.75 -26.03L4.33 -26.1L4.91 -26.03L5.46 -25.84L5.95 -25.53L6.36 -25.12L6.67 -24.63L6.86 -24.08Z" fill="#3e8138"/>
+    <path d="M6.15 -23.86L6.1 -23.38L5.93 -22.92L5.67 -22.5L5.33 -22.16L4.91 -21.9L4.45 -21.73L3.97 -21.68L3.48 -21.73L3.02 -21.9L2.6 -22.16L2.26 -22.5L2 -22.92L1.84 -23.38L1.78 -23.86L1.84 -24.35L2 -24.81L2.26 -25.23L2.6 -25.57L3.02 -25.83L3.48 -25.99L3.97 -26.05L4.45 -25.99L4.91 -25.83L5.33 -25.57L5.67 -25.23L5.93 -24.81L6.1 -24.35Z" fill="#59a94c"/>
+    <path d="M4.49 -24.49L4.46 -24.25L4.38 -24.01L4.25 -23.81L4.07 -23.63L3.87 -23.5L3.64 -23.42L3.39 -23.4L3.15 -23.42L2.92 -23.5L2.71 -23.63L2.54 -23.81L2.41 -24.01L2.33 -24.25L2.3 -24.49L2.33 -24.73L2.41 -24.96L2.54 -25.17L2.71 -25.34L2.92 -25.47L3.15 -25.55L3.39 -25.58L3.64 -25.55L3.87 -25.47L4.07 -25.34L4.25 -25.17L4.38 -24.96L4.46 -24.73Z" fill="#82cf6c"/>
+    <path d="M15.5 -15.5L14.72 -15.05L14.72 -17.93L15.5 -18.38Z" fill="#7d5a34"/>
+    <path d="M13.94 -15.5L14.72 -15.05L14.72 -17.93L13.94 -18.38Z" fill="#a77e4c"/>
+    <path d="M18.5 -15.12L18.46 -14.97L18.32 -14.83L18.09 -14.7L17.79 -14.6L17.43 -14.52L17.03 -14.47L16.61 -14.45L16.19 -14.47L15.79 -14.52L15.43 -14.6L15.13 -14.7L14.91 -14.83L14.77 -14.97L14.72 -15.12L14.77 -15.27L14.91 -15.41L15.13 -15.54L15.43 -15.65L15.79 -15.73L16.19 -15.78L16.61 -15.79L17.03 -15.78L17.43 -15.73L17.79 -15.65L18.09 -15.54L18.32 -15.41L18.46 -15.27Z" fill="#000000" opacity="0.2"/>
+    <path d="M16.82 -20.3L16.77 -19.83L16.61 -19.39L16.36 -18.99L16.03 -18.66L15.63 -18.41L15.19 -18.25L14.72 -18.2L14.26 -18.25L13.81 -18.41L13.41 -18.66L13.08 -18.99L12.83 -19.39L12.68 -19.83L12.62 -20.3L12.68 -20.77L12.83 -21.21L13.08 -21.61L13.41 -21.94L13.81 -22.19L14.26 -22.35L14.72 -22.4L15.19 -22.35L15.63 -22.19L16.03 -21.94L16.36 -21.61L16.61 -21.21L16.77 -20.77Z" fill="#3d8433"/>
+    <path d="M16.19 -20.59L16.15 -20.2L16.02 -19.83L15.81 -19.49L15.53 -19.21L15.19 -19L14.82 -18.87L14.43 -18.83L14.04 -18.87L13.66 -19L13.33 -19.21L13.05 -19.49L12.84 -19.83L12.71 -20.2L12.66 -20.59L12.71 -20.99L12.84 -21.36L13.05 -21.69L13.33 -21.97L13.66 -22.18L14.04 -22.31L14.43 -22.36L14.82 -22.31L15.19 -22.18L15.53 -21.97L15.81 -21.69L16.02 -21.36L16.15 -20.99Z" fill="#5aae45"/>
+    <path d="M14.85 -21.1L14.83 -20.9L14.76 -20.72L14.66 -20.55L14.52 -20.41L14.35 -20.3L14.16 -20.24L13.97 -20.22L13.77 -20.24L13.58 -20.3L13.42 -20.41L13.28 -20.55L13.17 -20.72L13.11 -20.9L13.08 -21.1L13.11 -21.29L13.17 -21.48L13.28 -21.65L13.42 -21.79L13.58 -21.89L13.77 -21.96L13.97 -21.98L14.16 -21.96L14.35 -21.89L14.52 -21.79L14.66 -21.65L14.76 -21.48L14.83 -21.29Z" fill="#86d25e"/>
+    <path d="M21.56 -10L20.78 -9.55L20.78 -12.91L21.56 -13.36Z" fill="#7d5a34"/>
+    <path d="M20.01 -10L20.78 -9.55L20.78 -12.91L20.01 -13.36Z" fill="#a77e4c"/>
+    <path d="M25.46 -9.53L25.41 -9.35L25.23 -9.17L24.95 -9.01L24.58 -8.88L24.14 -8.78L23.65 -8.72L23.12 -8.7L22.6 -8.72L22.11 -8.78L21.67 -8.88L21.3 -9.01L21.02 -9.17L20.84 -9.35L20.78 -9.53L20.84 -9.72L21.02 -9.89L21.3 -10.05L21.67 -10.18L22.11 -10.28L22.6 -10.34L23.12 -10.36L23.65 -10.34L24.14 -10.28L24.58 -10.18L24.95 -10.05L25.23 -9.89L25.41 -9.72Z" fill="#000000" opacity="0.2"/>
+    <path d="M23.38 -15.6L23.32 -15.02L23.13 -14.47L22.82 -13.98L22.41 -13.57L21.91 -13.26L21.36 -13.07L20.78 -13L20.21 -13.07L19.66 -13.26L19.16 -13.57L18.75 -13.98L18.44 -14.47L18.25 -15.02L18.18 -15.6L18.25 -16.18L18.44 -16.73L18.75 -17.22L19.16 -17.63L19.66 -17.94L20.21 -18.13L20.78 -18.2L21.36 -18.13L21.91 -17.94L22.41 -17.63L22.82 -17.22L23.13 -16.73L23.32 -16.18Z" fill="#2a6e50"/>
+    <path d="M22.6 -15.96L22.55 -15.48L22.39 -15.02L22.13 -14.6L21.78 -14.26L21.37 -14L20.91 -13.83L20.42 -13.78L19.93 -13.83L19.47 -14L19.06 -14.26L18.71 -14.6L18.45 -15.02L18.29 -15.48L18.24 -15.96L18.29 -16.45L18.45 -16.91L18.71 -17.33L19.06 -17.67L19.47 -17.93L19.93 -18.09L20.42 -18.15L20.91 -18.09L21.37 -17.93L21.78 -17.67L22.13 -17.33L22.39 -16.91L22.55 -16.45Z" fill="#3f9a72"/>
+    <path d="M20.94 -16.59L20.91 -16.35L20.83 -16.11L20.7 -15.91L20.53 -15.73L20.32 -15.6L20.09 -15.52L19.85 -15.5L19.61 -15.52L19.37 -15.6L19.17 -15.73L18.99 -15.91L18.86 -16.11L18.78 -16.35L18.76 -16.59L18.78 -16.83L18.86 -17.06L18.99 -17.27L19.17 -17.44L19.37 -17.57L19.61 -17.65L19.85 -17.68L20.09 -17.65L20.32 -17.57L20.53 -17.44L20.7 -17.27L20.83 -17.06L20.91 -16.83Z" fill="#6fc49a"/>
+    <path d="M-16.54 -22L-17.32 -21.55L-17.32 -23.95L-16.54 -24.4Z" fill="#7d5a34"/>
+    <path d="M-18.1 -22L-17.32 -21.55L-17.32 -23.95L-18.1 -24.4Z" fill="#a77e4c"/>
+    <path d="M-13.54 -21.62L-13.59 -21.47L-13.73 -21.33L-13.95 -21.2L-14.25 -21.1L-14.61 -21.02L-15.01 -20.97L-15.43 -20.95L-15.85 -20.97L-16.25 -21.02L-16.61 -21.1L-16.91 -21.2L-17.13 -21.33L-17.27 -21.47L-17.32 -21.62L-17.27 -21.77L-17.13 -21.91L-16.91 -22.04L-16.61 -22.15L-16.25 -22.23L-15.85 -22.28L-15.43 -22.29L-15.01 -22.28L-14.61 -22.23L-14.25 -22.15L-13.95 -22.04L-13.73 -21.91L-13.59 -21.77Z" fill="#000000" opacity="0.2"/>
+    <path d="M-15.22 -26L-15.27 -25.53L-15.43 -25.09L-15.68 -24.69L-16.01 -24.36L-16.41 -24.11L-16.85 -23.95L-17.32 -23.9L-17.79 -23.95L-18.23 -24.11L-18.63 -24.36L-18.96 -24.69L-19.21 -25.09L-19.37 -25.53L-19.42 -26L-19.37 -26.47L-19.21 -26.91L-18.96 -27.31L-18.63 -27.64L-18.23 -27.89L-17.79 -28.05L-17.32 -28.1L-16.85 -28.05L-16.41 -27.89L-16.01 -27.64L-15.68 -27.31L-15.43 -26.91L-15.27 -26.47Z" fill="#24927e"/>
+    <path d="M-15.85 -26.29L-15.89 -25.9L-16.03 -25.53L-16.24 -25.19L-16.51 -24.91L-16.85 -24.7L-17.22 -24.57L-17.61 -24.53L-18.01 -24.57L-18.38 -24.7L-18.71 -24.91L-18.99 -25.19L-19.2 -25.53L-19.33 -25.9L-19.38 -26.29L-19.33 -26.69L-19.2 -27.06L-18.99 -27.39L-18.71 -27.67L-18.38 -27.88L-18.01 -28.01L-17.61 -28.06L-17.22 -28.01L-16.85 -27.88L-16.51 -27.67L-16.24 -27.39L-16.03 -27.06L-15.89 -26.69Z" fill="#3cc4aa"/>
+    <path d="M-17.19 -26.8L-17.22 -26.6L-17.28 -26.42L-17.39 -26.25L-17.53 -26.11L-17.69 -26L-17.88 -25.94L-18.08 -25.92L-18.27 -25.94L-18.46 -26L-18.63 -26.11L-18.77 -26.25L-18.87 -26.42L-18.94 -26.6L-18.96 -26.8L-18.94 -26.99L-18.87 -27.18L-18.77 -27.35L-18.63 -27.49L-18.46 -27.59L-18.27 -27.66L-18.08 -27.68L-17.88 -27.66L-17.69 -27.59L-17.53 -27.49L-17.39 -27.35L-17.28 -27.18L-17.22 -26.99Z" fill="#8fe8d4"/>
+    <path d="M-6.15 -28L-6.93 -27.55L-6.93 -30.43L-6.15 -30.88Z" fill="#7d5a34"/>
+    <path d="M-7.71 -28L-6.93 -27.55L-6.93 -30.43L-7.71 -30.88Z" fill="#a77e4c"/>
+    <path d="M-2.25 -27.53L-2.31 -27.35L-2.48 -27.17L-2.76 -27.01L-3.13 -26.88L-3.57 -26.78L-4.07 -26.72L-4.59 -26.7L-5.11 -26.72L-5.6 -26.78L-6.05 -26.88L-6.42 -27.01L-6.7 -27.17L-6.87 -27.35L-6.93 -27.53L-6.87 -27.72L-6.7 -27.89L-6.42 -28.05L-6.05 -28.18L-5.6 -28.28L-5.11 -28.34L-4.59 -28.36L-4.07 -28.34L-3.57 -28.28L-3.13 -28.18L-2.76 -28.05L-2.48 -27.89L-2.31 -27.72Z" fill="#000000" opacity="0.2"/>
+    <path d="M-4.33 -32.8L-4.39 -32.22L-4.59 -31.67L-4.9 -31.18L-5.31 -30.77L-5.8 -30.46L-6.35 -30.27L-6.93 -30.2L-7.51 -30.27L-8.06 -30.46L-8.55 -30.77L-8.96 -31.18L-9.27 -31.67L-9.46 -32.22L-9.53 -32.8L-9.46 -33.38L-9.27 -33.93L-8.96 -34.42L-8.55 -34.83L-8.06 -35.14L-7.51 -35.33L-6.93 -35.4L-6.35 -35.33L-5.8 -35.14L-5.31 -34.83L-4.9 -34.42L-4.59 -33.93L-4.39 -33.38Z" fill="#3e8138"/>
+    <path d="M-5.11 -33.16L-5.16 -32.68L-5.32 -32.22L-5.58 -31.8L-5.93 -31.46L-6.34 -31.2L-6.81 -31.03L-7.29 -30.98L-7.78 -31.03L-8.24 -31.2L-8.65 -31.46L-9 -31.8L-9.26 -32.22L-9.42 -32.68L-9.48 -33.16L-9.42 -33.65L-9.26 -34.11L-9 -34.53L-8.65 -34.87L-8.24 -35.13L-7.78 -35.29L-7.29 -35.35L-6.81 -35.29L-6.34 -35.13L-5.93 -34.87L-5.58 -34.53L-5.32 -34.11L-5.16 -33.65Z" fill="#59a94c"/>
+    <path d="M-6.77 -33.79L-6.8 -33.55L-6.88 -33.31L-7.01 -33.11L-7.18 -32.93L-7.39 -32.8L-7.62 -32.72L-7.86 -32.7L-8.11 -32.72L-8.34 -32.8L-8.55 -32.93L-8.72 -33.11L-8.85 -33.31L-8.93 -33.55L-8.96 -33.79L-8.93 -34.03L-8.85 -34.26L-8.72 -34.47L-8.55 -34.64L-8.34 -34.77L-8.11 -34.85L-7.86 -34.88L-7.62 -34.85L-7.39 -34.77L-7.18 -34.64L-7.01 -34.47L-6.88 -34.26L-6.8 -34.03Z" fill="#82cf6c"/>
+    <path d="M30.22 -9L29.44 -8.55L29.44 -11.91L30.22 -12.36Z" fill="#7d5a34"/>
+    <path d="M28.67 -9L29.44 -8.55L29.44 -11.91L28.67 -12.36Z" fill="#a77e4c"/>
+    <path d="M33.22 -8.62L33.18 -8.47L33.04 -8.33L32.81 -8.2L32.51 -8.1L32.15 -8.02L31.76 -7.97L31.33 -7.95L30.91 -7.97L30.51 -8.02L30.16 -8.1L29.86 -8.2L29.63 -8.33L29.49 -8.47L29.44 -8.62L29.49 -8.77L29.63 -8.91L29.86 -9.04L30.16 -9.15L30.51 -9.23L30.91 -9.28L31.33 -9.29L31.76 -9.28L32.15 -9.23L32.51 -9.15L32.81 -9.04L33.04 -8.91L33.18 -8.77Z" fill="#000000" opacity="0.2"/>
+    <path d="M31.54 -14.6L31.49 -14.13L31.34 -13.69L31.09 -13.29L30.75 -12.96L30.36 -12.71L29.91 -12.55L29.44 -12.5L28.98 -12.55L28.53 -12.71L28.14 -12.96L27.8 -13.29L27.55 -13.69L27.4 -14.13L27.34 -14.6L27.4 -15.07L27.55 -15.51L27.8 -15.91L28.14 -16.24L28.53 -16.49L28.98 -16.65L29.44 -16.7L29.91 -16.65L30.36 -16.49L30.75 -16.24L31.09 -15.91L31.34 -15.51L31.49 -15.07Z" fill="#3d8433"/>
+    <path d="M30.91 -14.89L30.87 -14.5L30.74 -14.13L30.53 -13.79L30.25 -13.51L29.92 -13.3L29.54 -13.17L29.15 -13.13L28.76 -13.17L28.39 -13.3L28.05 -13.51L27.77 -13.79L27.56 -14.13L27.43 -14.5L27.39 -14.89L27.43 -15.29L27.56 -15.66L27.77 -15.99L28.05 -16.27L28.39 -16.48L28.76 -16.61L29.15 -16.66L29.54 -16.61L29.92 -16.48L30.25 -16.27L30.53 -15.99L30.74 -15.66L30.87 -15.29Z" fill="#5aae45"/>
+    <path d="M29.57 -15.4L29.55 -15.2L29.48 -15.02L29.38 -14.85L29.24 -14.71L29.07 -14.6L28.89 -14.54L28.69 -14.52L28.49 -14.54L28.31 -14.6L28.14 -14.71L28 -14.85L27.89 -15.02L27.83 -15.2L27.81 -15.4L27.83 -15.59L27.89 -15.78L28 -15.95L28.14 -16.09L28.31 -16.19L28.49 -16.26L28.69 -16.28L28.89 -16.26L29.07 -16.19L29.24 -16.09L29.38 -15.95L29.48 -15.78L29.55 -15.59Z" fill="#86d25e"/>
+    <path d="M-8.66 -9L24.25 10L8.66 19L-24.25 0Z" fill="#52c3dc"/>
+    <path d="M-6.37 -5.62L16.66 7.68L6.37 13.62L-16.66 0.32Z" fill="#9be3ea" opacity="0.4"/>
+    <circle cx="-6.93" cy="-6.00" r="3.00" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.7;0" dur="3.4s" begin="0.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;3.6 -12.0" dur="3.4s" begin="0.0s" repeatCount="indefinite"/></circle>
+    <circle cx="-2.60" cy="-3.50" r="3.00" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.7;0" dur="3.4s" begin="0.6s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;3.6 -12.0" dur="3.4s" begin="0.6s" repeatCount="indefinite"/></circle>
+    <circle cx="1.73" cy="-1.00" r="3.00" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.7;0" dur="3.4s" begin="1.2s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;3.6 -12.0" dur="3.4s" begin="1.2s" repeatCount="indefinite"/></circle>
+    <circle cx="6.06" cy="1.50" r="3.00" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.7;0" dur="3.4s" begin="1.7999999999999998s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;3.6 -12.0" dur="3.4s" begin="1.7999999999999998s" repeatCount="indefinite"/></circle>
+    <circle cx="10.39" cy="4.00" r="3.00" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.7;0" dur="3.4s" begin="2.4s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;3.6 -12.0" dur="3.4s" begin="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="14.72" cy="6.50" r="3.00" fill="#ffffff" opacity="0"><animate attributeName="opacity" values="0;0.7;0" dur="3.4s" begin="3.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 0;3.6 -12.0" dur="3.4s" begin="3.0s" repeatCount="indefinite"/></circle>
+    <path d="M-10.27 -1.00A12.00 8.40 0 0 1 13.73 -1.00L13.13 -1.00A11.40 7.98 0 0 0 -9.67 -1.00Z" fill="#ff6a5a" opacity=".45"><animate attributeName="opacity" values=".2;.5;.2" dur="5s" repeatCount="indefinite"/></path>
+    <path d="M-9.67 -1.00A11.40 7.98 0 0 1 13.13 -1.00L12.53 -1.00A10.80 7.56 0 0 0 -9.07 -1.00Z" fill="#ffb347" opacity=".45"><animate attributeName="opacity" values=".2;.5;.2" dur="5s" repeatCount="indefinite"/></path>
+    <path d="M-9.07 -1.00A10.80 7.56 0 0 1 12.53 -1.00L11.93 -1.00A10.20 7.14 0 0 0 -8.47 -1.00Z" fill="#ffe27a" opacity=".45"><animate attributeName="opacity" values=".2;.5;.2" dur="5s" repeatCount="indefinite"/></path>
+    <path d="M-8.47 -1.00A10.20 7.14 0 0 1 11.93 -1.00L11.33 -1.00A9.60 6.72 0 0 0 -7.87 -1.00Z" fill="#7fd88a" opacity=".45"><animate attributeName="opacity" values=".2;.5;.2" dur="5s" repeatCount="indefinite"/></path>
+    <path d="M-7.87 -1.00A9.60 6.72 0 0 1 11.33 -1.00L10.73 -1.00A9.00 6.30 0 0 0 -7.27 -1.00Z" fill="#6aa8ff" opacity=".45"><animate attributeName="opacity" values=".2;.5;.2" dur="5s" repeatCount="indefinite"/></path>
+    <path d="M-7.27 -1.00A9.00 6.30 0 0 1 10.73 -1.00L10.13 -1.00A8.40 5.88 0 0 0 -6.67 -1.00Z" fill="#a88aff" opacity=".45"><animate attributeName="opacity" values=".2;.5;.2" dur="5s" repeatCount="indefinite"/></path>
+    <g><animateMotion dur="7s" begin="0s" repeatCount="indefinite" path="M-5.07 -26.00a12 3 0 1 0 24 0a12 3 0 1 0 -24 0"/><path d="M-1.6 0Q-.8 -1.2 0 0Q.8 -1.2 1.6 0Q.8 -.4 0 .4Q-.8 -.4 -1.6 0Z" fill="#2a2a33"><animate attributeName="d" values="M-1.6 0Q-.8 -1.2 0 0Q.8 -1.2 1.6 0Q.8 -.4 0 .4Q-.8 -.4 -1.6 0Z;M-1.6 -.8Q-.8 .4 0 0Q.8 .4 1.6 -.8Q.8 .2 0 .6Q-.8 .2 -1.6 -.8Z;M-1.6 0Q-.8 -1.2 0 0Q.8 -1.2 1.6 0Q.8 -.4 0 .4Q-.8 -.4 -1.6 0Z" dur=".5s" repeatCount="indefinite"/></path></g>
+    <g><animateMotion dur="8s" begin="-2s" repeatCount="indefinite" path="M-5.07 -24.00a12 3 0 1 0 24 0a12 3 0 1 0 -24 0"/><path d="M-1.6 0Q-.8 -1.2 0 0Q.8 -1.2 1.6 0Q.8 -.4 0 .4Q-.8 -.4 -1.6 0Z" fill="#2a2a33"><animate attributeName="d" values="M-1.6 0Q-.8 -1.2 0 0Q.8 -1.2 1.6 0Q.8 -.4 0 .4Q-.8 -.4 -1.6 0Z;M-1.6 -.8Q-.8 .4 0 0Q.8 .4 1.6 -.8Q.8 .2 0 .6Q-.8 .2 -1.6 -.8Z;M-1.6 0Q-.8 -1.2 0 0Q.8 -1.2 1.6 0Q.8 -.4 0 .4Q-.8 -.4 -1.6 0Z" dur=".5s" repeatCount="indefinite"/></path></g>
+    <g><animateMotion dur="9s" begin="-4s" repeatCount="indefinite" path="M-5.07 -22.00a12 3 0 1 0 24 0a12 3 0 1 0 -24 0"/><path d="M-1.6 0Q-.8 -1.2 0 0Q.8 -1.2 1.6 0Q.8 -.4 0 .4Q-.8 -.4 -1.6 0Z" fill="#2a2a33"><animate attributeName="d" values="M-1.6 0Q-.8 -1.2 0 0Q.8 -1.2 1.6 0Q.8 -.4 0 .4Q-.8 -.4 -1.6 0Z;M-1.6 -.8Q-.8 .4 0 0Q.8 .4 1.6 -.8Q.8 .2 0 .6Q-.8 .2 -1.6 -.8Z;M-1.6 0Q-.8 -1.2 0 0Q.8 -1.2 1.6 0Q.8 -.4 0 .4Q-.8 -.4 -1.6 0Z" dur=".5s" repeatCount="indefinite"/></path></g>
   </g>
 </svg>
