@@ -503,7 +503,7 @@
             mode: 'still',
             face: 'F',
             iso: 'nature',
-            isoK: 1.3,
+            isoK: 0.9,
             deco: true,
             landmark: true,
             noShadow: true,
